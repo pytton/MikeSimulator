@@ -1,0 +1,95 @@
+# data file for the Fltk User Interface Designer (fluid)
+version 1.0303 
+header_name {.h} 
+code_name {.cxx}
+class FluidInterface {open
+} {
+  Function {FluidInterface()} {open
+  } {
+    Fl_Window m_window1 {
+      label window1 open
+      xywh {2559 -698 997 656} type Double visible
+    } {
+      Fl_Button m_btn_load_data {
+        label {Load historical data}
+        xywh {350 510 75 55} align 128
+      }
+      Fl_Value_Input m_starting_bid {
+        label {Starting Bid}
+        xywh {700 510 45 20} labelsize 10 textsize 10
+      }
+      Fl_Value_Input m_curr_ask {
+        label {Current Ask}
+        xywh {700 535 45 20}
+      }
+      Fl_Value_Input m_top_limit {
+        label {Top Limit}
+        xywh {915 510 45 20}
+      }
+      Fl_Value_Input m_top_profit {
+        label {Profit at top lim}
+        xywh {915 560 45 20}
+      }
+      Fl_Table m_table {open
+        xywh {65 0 940 495} labelsize 10
+      } {}
+      Fl_Value_Input m_curr_bid {
+        label {Current Bid}
+        xywh {700 560 45 20}
+      }
+      Fl_Value_Input m_bottom_limit {
+        label {Bottom Limit}
+        xywh {915 535 45 20}
+      }
+      Fl_Value_Input m_bottom_profit {
+        label {Profit at bottom lim}
+        xywh {915 585 45 20}
+      }
+      Fl_Button m_btn_up {
+        label Up
+        xywh {545 510 65 40}
+      }
+      Fl_Button m_btn_down {
+        label Down
+        xywh {545 565 65 40}
+      }
+      Fl_Button m_btn_next {
+        label Next
+        xywh {445 510 80 55}
+      }
+      Fl_Button m_btn_initAlgo {
+        label {Initialize Algo}
+        xywh {350 575 80 55} align 128
+      }
+      Fl_Button m_set_startBid {
+        label Set
+        xywh {750 510 40 20}
+      }
+      Fl_Button m_set_topLimit {
+        label Set
+        xywh {965 510 40 20}
+      }
+      Fl_Button m_set_btmLimit {
+        label Set
+        xywh {965 535 40 20}
+      }
+      Fl_Value_Slider m_slider1 {
+        label m_slider1
+        xywh {5 0 35 650} minimum 200 maximum 0 step 1 value 100
+      }
+      Fl_Button m_btn_extra {
+        label Extra
+        xywh {190 575 80 55}
+      }
+    }
+    Fl_Window m_window2 {
+      label window2 open
+      xywh {2128 -384 502 336} type Double visible
+    } {
+      Fl_Text_Display text_display {
+        label text selected
+        xywh {80 40 325 255}
+      }
+    }
+  }
+} 
