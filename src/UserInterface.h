@@ -26,6 +26,17 @@ class Display;
 class MikeSimulator;
 class Control;
 
+enum BtnPressed	//used for callbacks from UserInterface and WidgetTable
+				//to Control class
+{
+	UPBTN,
+	DOWNBTN,
+	EXTRABTN,
+	SLIDER1,
+	NEXTBTN,
+	PREVBTN,
+};
+
 class UserInterface : public FluidInterface
 {	//elements of FluidInterface:
 	
@@ -69,17 +80,18 @@ public:
 	UserInterface(MikeSimulator * p, Display * ptr_t_display);
 
 	//GETTERS / SETTERS:
+	
+	//NEED TO GET RID OF FOLLOWING THREE:
+	///////////////////////////////////////////////////////////////
 	Display * GetDisplay();
 	void SetDisplay(Display * ptr_t_display);
 	MikeSimulator* GetMikeSim() { return ptr_to_mikesimulator; }
-	inline WidgetTable *GetTable()
-	{
-		return m_pTable;
-	}
-	inline void SetTable(WidgetTable * pTable)
-	{
-		m_pTable = pTable;
-	}
+	///////////////////////////////////////////////////////////////
+
+	Control * GetControl() { return m_pControl; }
+	Fl_Value_Slider * Getm_slider1(){ return m_slider1; }
+	inline WidgetTable *GetTable(){return m_pTable;}
+	inline void SetTable(WidgetTable * pTable){m_pTable = pTable;}
 
 	//helper functions
 	void show();
@@ -89,15 +101,18 @@ public:
 //CALLBACKS
 private:
 	static void m_down_btn_cb(Fl_Widget *w, void * p);
+	static void refactored_m_down_btn_cb(Fl_Widget *w, void * p);
 	static void m_up_btn_cb(Fl_Widget *w, void * p);
+	static void refactored_m_up_btn_cb(Fl_Widget *w, void * p);
 	static void m_slider1_cb(Fl_Widget *w, void * p);
+	static void refactored_m_slider1_cb(Fl_Widget *w, void * p);
 
 	//OLD CALLBACKS FOR REFERENCE:
 	static void experimental2_cb(Fl_Widget *w, void * p);
 	static void experimental_cb(Fl_Widget *w, void * p);
 	static void experim3(Fl_Widget *w, void * p);	//THIS FUNCTION CHANGES SIZE OF WIDGETTABLE
 	static void rePriceWidTable(Fl_Widget *w, void*p);	//UNDER CONSTRUCTION
-	static void rePriceWidTable2(Fl_Widget *w, void*p);
+	static void rePriceWidTable2(Fl_Widget *w, void*p);	//this version takes the 'this' pointer instead of MikeSimulator as the void *p parameter
 };
 
 

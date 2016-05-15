@@ -1,4 +1,0 @@
-﻿  Data.cpp
-e:\michael\documents\visual studio 2015\projects\mikesimulator\src\data.cpp(241): warning C4018: '<': signed/unsigned mismatch
-e:\michael\documents\visual studio 2015\projects\mikesimulator\src\data.cpp(255): warning C4018: '<': signed/unsigned mismatch
-  MikeSimulator.vcxproj -> E:\Michael\Documents\Visual Studio 2015\Projects\MikeSimulator\Debug\MikeSimulator.exe

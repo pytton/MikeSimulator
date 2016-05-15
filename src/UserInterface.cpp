@@ -22,7 +22,7 @@ UserInterface::UserInterface(Control * control,
 	delete m_table;	//deleting old table supplied by fluid
 	
 	//m_pTable = new WidgetTable(this, 65, 0, 920, 495, "widgettable");
-	m_pTable = new WidgetTable(this, 800, 200, 65, 0, 920, 495, "widgettable");
+	m_pTable = new WidgetTable(this, bid_price +100, 200, 65, 0, 920, 495, "widgettable");
 	//setting up the textdisplay with textbuffer (in window2):
 	textBuffer = new Fl_Text_Buffer();
 	text_display->buffer(textBuffer);
@@ -36,11 +36,11 @@ UserInterface::UserInterface(Control * control,
 
 	//SETTING CALLBACKS:
 	m_btn_up->callback(m_up_btn_cb, (void*)this);
-	m_btn_down->callback(m_down_btn_cb, (void*) this);
-	m_slider1->callback(m_slider1_cb, (void*) this);
-	m_btn_next->callback(experimental_cb, (void*)this);
+	m_btn_down->callback(m_down_btn_cb, (void*) this);	//changed
+	m_slider1->callback(m_slider1_cb, (void*) this);	//changed - works?
+	//m_btn_next->callback(experimental_cb, (void*)this);
 
-	m_btn_extra->callback(rePriceWidTable, (void*) this);	//this changes size of Widgettable
+	m_btn_extra->callback(rePriceWidTable2, (void*) this);	//this changes size of Widgettable
 
 	m_window1->hide();
 	m_window1->redraw();
@@ -79,16 +79,16 @@ UserInterface::UserInterface(MikeSimulator * p, Display * ptr_t_display)	//const
 	
 
 	//SETTING CALLBACKS:
-	m_btn_up->callback(m_up_btn_cb, (void*)this);
-	m_btn_down->callback(m_down_btn_cb, (void*) this);
-	m_slider1->callback(m_slider1_cb, (void*) this);
-	m_btn_next->callback(experimental_cb, (void*)this);
+	//m_btn_up->callback(m_up_btn_cb, (void*)this);
+	//m_btn_down->callback(m_down_btn_cb, (void*) this);
+	//m_slider1->callback(m_slider1_cb, (void*) this);
+	//m_btn_next->callback(experimental_cb, (void*)this);
 
 	//m_myExtraBtn = new Fl_Button(250, 510, 75, 55, "Extra");
 	//m_myExtraBtn->callback(experim3, (void*) ptr_to_mikesimulator);
 	
 	//m_btn_extra->callback(experim3, (void*)ptr_to_mikesimulator);	//this changes size of Widgettable
-	m_btn_extra->callback(rePriceWidTable, (void*)ptr_to_mikesimulator);	//this changes size of Widgettable
+//	m_btn_extra->callback(rePriceWidTable, (void*)ptr_to_mikesimulator);	//this changes size of Widgettable
 
 	m_window1->hide();
 	m_window1->redraw();
@@ -103,6 +103,78 @@ void UserInterface::show()
 	m_window1->show();
 //	m_window2->show();
 }
+
+
+
+//CALLBACKS:
+void UserInterface::m_slider1_cb(Fl_Widget *w, void * p)
+{	// void *p should be 'this' of UserInterface - it should be set up in
+	//UserInterface constructor
+	UserInterface * myUserInt = (UserInterface*)p;
+
+	myUserInt->m_pControl->CallbkUserInt(myUserInt, SLIDER1);
+}
+void UserInterface::m_up_btn_cb(Fl_Widget *w, void * p)
+{
+	UserInterface * myUserInt = (UserInterface*)p;
+
+//	myUserInt->m_pControl->m_up_btn_cb(myUserInt);
+
+	myUserInt->m_pControl->CallbkUserInt(myUserInt, UPBTN);
+	//REFACTORING COMPLETE!!
+}
+void UserInterface::m_down_btn_cb(Fl_Widget *w, void * p)
+{
+	UserInterface * myUserInt = (UserInterface*)p;
+
+	//myUserInt->m_pControl->m_down_btn_cb(myUserInt);
+	myUserInt->m_pControl->CallbkUserInt(myUserInt, DOWNBTN);
+	//REFACTORING COMPLETE!!
+}
+
+
+//BELOW CODE NOT REFATORED YET - DO NOT USE!!!!!
+//BELOW FUNCTION CHANGES SIZE OF WIDGETTABLE:
+void UserInterface::experim3(Fl_Widget *w, void*p)
+{
+	MikeSimulator * mikesimulator = (MikeSimulator*)p;
+
+	UserInterface* pUI = mikesimulator->GetDisplay()->GetUInterface();
+
+	WidgetTable * pTable = pUI->GetTable();
+
+	//delete pTable;
+	//pTable = NULL;
+
+	//pTable = new WidgetTable(pUI, 350, 15, 350, 200, "New table");	//size and location of table
+	//creating cells inside table:
+	////GetCurrentAsk
+	//pTable->SetUserInterface(pUI);
+	//table->ptr_to_UserInterface = this;	//tells WidgetTable the location of Userinterface - for callbacks in WidgetTable
+	//	delete table->ptr_to_UserInterface = NULL; newUI;
+	//BELOW CODE SET NEW SIZE OF WIDGETTABLE:
+
+	pTable->clear();
+
+	//first - make sure that the TopRowPrice is set to 100 above current bid price:
+	Data * myData = mikesimulator->GetData();
+	pTable->SetTopRowPrice(myData->GetBidPrice() + 100);
+	//draw the new widget table:
+	pTable->SetSize(pTable->GetRows(), pTable->GetCols(), pTable);		//this needs to be called to construct all the cells of WidgetTable																					
+																		//pUI->SetTable(pTable);
+	pUI->m_window1->hide();
+	pUI->m_window1->redraw();
+	pUI->m_window1->show();
+
+	//populate price column with prices:
+	mikesimulator->GetDisplay()->GetUInterface()->GetTable()->PopPriceCol(/*mikesimulator->GetDisplay()->GetWindow()->GetTable()*/);
+	//update the slider minimum and maximum settings:
+	//setting initial Slider max/min values to that of bid/ask - offset:
+	pUI->m_slider1->minimum((double)mikesimulator->GetData()->GetBidPrice() + ((pTable->GetRows()) / 2) - 3 /* 3 offset for safety*/);
+	pUI->m_slider1->maximum((double)mikesimulator->GetData()->GetBidPrice() - ((pTable->GetRows()) / 2) + 3 /* 3 offset for safety*/);
+	pUI->m_slider1->value((double)mikesimulator->GetData()->GetBidPrice());
+}
+
 Display * UserInterface::GetDisplay()
 {
 	return m_pDisplay;
@@ -110,71 +182,6 @@ Display * UserInterface::GetDisplay()
 void UserInterface::SetDisplay(Display * ptr_t_display)
 {
 	m_pDisplay = ptr_t_display;
-}
-//CALLBACKS:
-void UserInterface::m_slider1_cb(Fl_Widget *w, void * p)
-{
-	Fl_Value_Slider * mySlider = (Fl_Value_Slider*)w;
-	UserInterface * myUserInt = (UserInterface*)p;
-	Data * myData = myUserInt->ptr_to_mikesimulator->GetData();
-	Control * myControl = myUserInt->ptr_to_mikesimulator->GetControl();
-	double sliderVal = mySlider->value();
-
-	//change bid ask prices:
-	myData->SetPrevAskPrice(myData->GetAskPrice());
-	myData->SetPrevBidPrice(myData->GetBidPrice());
-	long differenceBidAsk;	//preserve bid ask spread
-	differenceBidAsk = myData->GetAskPrice() - myData->GetBidPrice();
-	myData->SetAskPrice((long)sliderVal + differenceBidAsk);
-	myData->SetBidPrice((long)sliderVal);
-	//do something:
-	myControl->MainLoop();
-}
-void UserInterface::m_up_btn_cb(Fl_Widget *w, void * p)
-{
-	UserInterface * myUserInt = (UserInterface*)p;
-	Data * myData = myUserInt->ptr_to_mikesimulator->GetData();
-	Control * myControl = myUserInt->ptr_to_mikesimulator->GetControl();
-
-	//change bid ask prices:
-	if (myUserInt)
-	{
-		myData->SetPrevAskPrice(myData->GetAskPrice());
-		myData->SetPrevBidPrice(myData->GetBidPrice());
-		myData->SetAskPrice(myData->GetAskPrice() + 1);
-		myData->SetBidPrice(myData->GetBidPrice() + 1);
-		std::cout << "price change" << std::endl;
-
-	}
-	else
-	{
-		std::cout << "Missing a pointer" << std::endl;
-	}
-	
-
-
-	//update slider value:
-	myUserInt->m_slider1->value((double)myData->GetBidPrice());
-	//do something:
-	myControl->MainLoop();
-}
-void UserInterface::m_down_btn_cb(Fl_Widget *w, void * p)
-{
-	UserInterface * myUserInt = (UserInterface*)p;
-	Data * myData = myUserInt->ptr_to_mikesimulator->GetData();
-	Control * myControl = myUserInt->ptr_to_mikesimulator->GetControl();
-
-	//change bid ask prices:
-	myData->SetPrevAskPrice(myData->GetAskPrice());
-	myData->SetPrevBidPrice(myData->GetBidPrice());
-	myData->SetAskPrice(myData->GetAskPrice() - 1);
-//	myData->ask_price--;
-	myData->SetBidPrice(myData->GetBidPrice() - 1);
-//	myData->bid_price--;
-	//update slider value:
-	myUserInt->m_slider1->value((double)myData->GetBidPrice());
-	//do something:
-	myControl->MainLoop();
 }
 void UserInterface::experimental2_cb(Fl_Widget *w, void*p)
 {
@@ -193,47 +200,7 @@ void UserInterface::experimental_cb(Fl_Widget *w, void * p)
 	int col = 25;
 
 	myTable->printInTable(row, col, trythis/*, myTable*/);
-	myInterface->ptr_to_mikesimulator->GetControl()->printCurrentAll();
-}
-//BELOW FUNCTION CHANGES SIZE OF WIDGETTABLE:
-void UserInterface::experim3(Fl_Widget *w, void*p)
-{
-	MikeSimulator * mikesimulator = (MikeSimulator*)p;
-
-	UserInterface* pUI = mikesimulator->GetDisplay()->GetUInterface();
-
-	WidgetTable * pTable = pUI->GetTable();
-
-	//delete pTable;
-	//pTable = NULL;
-
-	//pTable = new WidgetTable(pUI, 350, 15, 350, 200, "New table");	//size and location of table
-	//creating cells inside table:
-	////GetCurrentAsk
-	//pTable->SetUserInterface(pUI);
-	//table->ptr_to_UserInterface = this;	//tells WidgetTable the location of Userinterface - for callbacks in WidgetTable
-//	delete table->ptr_to_UserInterface = NULL; newUI;
-	//BELOW CODE SET NEW SIZE OF WIDGETTABLE:
-
-	pTable->clear();
-
-	//first - make sure that the TopRowPrice is set to 100 above current bid price:
-	Data * myData = mikesimulator->GetData();
-	pTable->SetTopRowPrice(myData->GetBidPrice() + 100);
-	//draw the new widget table:
-	pTable->SetSize(pTable->GetRows(), pTable->GetCols(), pTable);		//this needs to be called to construct all the cells of WidgetTable																					
-	//pUI->SetTable(pTable);
-	pUI->m_window1->hide();
-	pUI->m_window1->redraw();
-	pUI->m_window1->show();
-
-	//populate price column with prices:
-	mikesimulator->GetDisplay()->GetUInterface()->GetTable()->PopPriceCol(/*mikesimulator->GetDisplay()->GetWindow()->GetTable()*/);
-	//update the slider minimum and maximum settings:
-	//setting initial Slider max/min values to that of bid/ask - offset:
-	pUI->m_slider1->minimum((double)mikesimulator->GetData()->GetBidPrice() + ((pTable->GetRows()) / 2) - 3 /* 3 offset for safety*/);
-	pUI->m_slider1->maximum((double)mikesimulator->GetData()->GetBidPrice() - ((pTable->GetRows()) / 2) + 3 /* 3 offset for safety*/);
-	pUI->m_slider1->value((double)mikesimulator->GetData()->GetBidPrice());
+	myInterface->GetControl()->printCurrentAll();
 }
 
 void UserInterface::rePriceWidTable(Fl_Widget *w, void*p)	//UNDER CONSTRUCTION
@@ -255,7 +222,7 @@ void UserInterface::rePriceWidTable(Fl_Widget *w, void*p)	//UNDER CONSTRUCTION
 	//Data * myData = mikesimulator->GetData();
 	pTable->SetTopRowPrice(mikesimulator->GetData()->GetBidPrice() + 100);
 	//draw the new widget table:
-	//pTable->SetSize(pTable->GetRows(), pTable->GetCols(), pTable);		//this needs to be called to construct all the cells of WidgetTable																					
+	//pTable->SetSize(pTable->GetRows(), pTable->GetCols(), pTable);	//this needs to be called to construct all the cells of WidgetTable																					
 																		//pUI->SetTable(pTable);
 	pUI->m_window1->hide();
 	pUI->m_window1->redraw();
@@ -270,7 +237,6 @@ void UserInterface::rePriceWidTable(Fl_Widget *w, void*p)	//UNDER CONSTRUCTION
 	pUI->m_slider1->maximum((double)mikesimulator->GetData()->GetBidPrice() - ((pTable->GetRows()) / 2) + 3 /* 3 offset for safety*/);
 	pUI->m_slider1->value((double)mikesimulator->GetData()->GetBidPrice());
 }
-
 void UserInterface::rePriceWidTable2(Fl_Widget *w, void*p)	//UNDER CONSTRUCTION
 															//Updates prices displayed in WidgetTable to between 100 above and below
 															//current bid price in Data class
@@ -886,4 +852,76 @@ void UserInterface::rePriceWidTable2(Fl_Widget *w, void*p)	//UNDER CONSTRUCTION
 //		window->m_window1->label(buffer.str().c_str() );
 //		Fl::add_timeout(/*TIMER_TIMEOUT*/1.0, timer_event, window);
 //	}
+//}
+
+//void UserInterface::m_down_btn_cb(Fl_Widget *w, void * p)
+//{
+//	//UserInterface * myUserInt = (UserInterface*)p;
+//
+//
+//	//REFACTOR THIS:
+//
+//	UserInterface * myUserInt = (UserInterface*)p;
+//	Data * myData = myUserInt->ptr_to_mikesimulator->GetData();
+//	Control * myControl = myUserInt->ptr_to_mikesimulator->GetControl();
+//
+//	//change bid ask prices:
+//	myData->SetPrevAskPrice(myData->GetAskPrice());
+//	myData->SetPrevBidPrice(myData->GetBidPrice());
+//	myData->SetAskPrice(myData->GetAskPrice() - 1);
+////	myData->ask_price--;
+//	myData->SetBidPrice(myData->GetBidPrice() - 1);
+////	myData->bid_price--;
+//	//update slider value:
+//	myUserInt->m_slider1->value((double)myData->GetBidPrice());
+//	//do something:
+//	myControl->MainLoop();
+//}
+
+//void UserInterface::m_up_btn_cb(Fl_Widget *w, void * p)
+//{
+//	UserInterface * myUserInt = (UserInterface*)p;
+//	Data * myData = myUserInt->ptr_to_mikesimulator->GetData();
+//	Control * myControl = myUserInt->ptr_to_mikesimulator->GetControl();
+//
+//	//change bid ask prices:
+//	if (myUserInt)
+//	{
+//		myData->SetPrevAskPrice(myData->GetAskPrice());
+//		myData->SetPrevBidPrice(myData->GetBidPrice());
+//		myData->SetAskPrice(myData->GetAskPrice() + 1);
+//		myData->SetBidPrice(myData->GetBidPrice() + 1);
+//		std::cout << "price change" << std::endl;
+//
+//	}
+//	else
+//	{
+//		std::cout << "Missing a pointer" << std::endl;
+//	}
+//	
+//
+//
+//	//update slider value:
+//	myUserInt->m_slider1->value((double)myData->GetBidPrice());
+//	//do something:
+//	myControl->MainLoop();
+//}
+
+//void UserInterface::m_slider1_cb(Fl_Widget *w, void * p)
+//{
+//	Fl_Value_Slider * mySlider = (Fl_Value_Slider*)w;
+//	UserInterface * myUserInt = (UserInterface*)p;
+//	Data * myData = myUserInt->ptr_to_mikesimulator->GetData();
+//	Control * myControl = myUserInt->ptr_to_mikesimulator->GetControl();
+//	double sliderVal = mySlider->value();
+//
+//	//change bid ask prices:
+//	myData->SetPrevAskPrice(myData->GetAskPrice());
+//	myData->SetPrevBidPrice(myData->GetBidPrice());
+//	long differenceBidAsk;	//preserve bid ask spread
+//	differenceBidAsk = myData->GetAskPrice() - myData->GetBidPrice();
+//	myData->SetAskPrice((long)sliderVal + differenceBidAsk);
+//	myData->SetBidPrice((long)sliderVal);
+//	//do something:
+//	myControl->MainLoop();
 //}

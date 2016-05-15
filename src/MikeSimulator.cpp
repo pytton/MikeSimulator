@@ -15,8 +15,8 @@ MikeSimulator::MikeSimulator(int starting_bid) //: control(this), data(this), di
 {
 	std::cout << "Constructor with starting bid called." << std::endl;
 	m_pControl = new Control(this, starting_bid);
-	m_pData = new Data(this);
-	m_pDisplay = new Display(this);
+//	m_pData = new Data(this);
+//	m_pDisplay = new Display(this);
 }
 
 MikeSimulator::~MikeSimulator() //: control(this), data(this), display(this)

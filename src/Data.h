@@ -16,7 +16,7 @@ class Data	//stores all data used by program
 public:
 	//constructors:
 	Data(MikeSimulator * p);
-	Data(Control * p);
+	Data(Control * p, int starting_bid);
 
 	MikeSimulator * ptr_to_mikesimulator;	//pointer to class creating this class
 	//member functions:

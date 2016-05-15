@@ -31,16 +31,12 @@ public:
 
 	//THIS IS WHAT I NEED TO REFACTOR!!!
 	//CALLBACK FUNCTIONS FOR USERINTERFACE:
-	void m_down_btn_cb(Fl_Widget *w, void * p);
-	 void m_up_btn_cb(Fl_Widget *w, void * p);
-	 void m_slider1_cb(Fl_Widget *w, void * p);
+	 void CallbkUserInt(UserInterface * p,
+		 BtnPressed btn,
+		 int parameter1 = 0,
+		 int parameter2 = 0,
+		 double parameter3 = 0.0);
 
-	//OLD CALLBACKS FOR REFERENCE:
-	 void experimental2_cb(Fl_Widget *w, void * p);
-	 void experimental_cb(Fl_Widget *w, void * p);
-	 void experim3(Fl_Widget *w, void * p);	//THIS FUNCTION CHANGES SIZE OF WIDGETTABLE
-	 void rePriceWidTable(Fl_Widget *w, void*p);	//UNDER CONSTRUCTION
-	 void rePriceWidTable2(Fl_Widget *w, void*p);
 
 	 //CALLBACKS FROM WIDGETTABLE:
 	 static void button_cb(Fl_Widget *w, void * p);

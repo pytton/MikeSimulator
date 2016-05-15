@@ -19,4 +19,14 @@ of mikesimulator pointers.
 
 Currently working on:
 moving callback from WidgetTable to Control.
-add Control class pointer to UserInterface constructor.
+
+void UserInterface::rePriceWidTable(Fl_Widget *w, void*p) has to be moved from 
+UserInterface to Control
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+this->MainLoop(); inside void Control::m_up_btn_cb(UserInterface * p)
+is throwing an unhandled exception;
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Continue by refactoring refactored_m_slider1_cb in UserInterface - DONE
+moving void UserInterface::m_down_btn_cb(Fl_Widget *w, void * p) to Control. - DONE
+add Control class pointer to UserInterface constructor. - DONE

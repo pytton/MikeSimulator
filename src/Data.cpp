@@ -28,14 +28,14 @@ Data::Data(MikeSimulator * p)
 }
 
 
-Data::Data(Control * p)	//THIS IS THE NEW REFACTORED CONSTRUCTOR - FINISH THIS
+Data::Data(Control * p, int starting_bid)	//THIS IS THE NEW REFACTORED CONSTRUCTOR - FINISH THIS
 {
 	//MikeSimulator * ptr_to_mikesimulator = p;
 //	Order = new MikeOrder(p);
-	ask_price = 701;
-	bid_price = 700;
-	prev_ask_price = 701;
-	prev_bid_price = 700;
+	ask_price = starting_bid + 1;
+	bid_price = starting_bid;
+	prev_ask_price = ask_price;
+	prev_bid_price = bid_price;
 	ask_volume = 10;
 	bid_volume = 10;
 	top_limit = 0;

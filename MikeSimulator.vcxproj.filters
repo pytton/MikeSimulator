@@ -86,9 +86,6 @@
     <ClCompile Include="src\WidgetTable.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Refactoring.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="README.txt">

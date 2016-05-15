@@ -5,6 +5,8 @@
 #include "Display.h"
 #include "WidgetTable.h"
 
+using namespace std;
+
 Control::Control(MikeSimulator * p)
 {
 	ptr_to_mikesimulator = p;
@@ -16,7 +18,7 @@ Control::Control(MikeSimulator * p, int starting_bid)
 	ptr_to_mikesimulator = p;
 	std::cout << "Control constructed. Starting bid: " << starting_bid << std::endl;
 	userInterface = new UserInterface(this, p, starting_bid);
-	data = new Data(this);
+	data = new Data(this, starting_bid);
 }
 
 void Control::MainLoop()
@@ -39,49 +41,33 @@ void Control::MainLoop()
 
 void Control::printCurrentAll()
 {
-	Data * myData = ptr_to_mikesimulator->GetData();
-	Display * myDisplay = ptr_to_mikesimulator->GetDisplay();
+	Data * myData = data;
+	//Display * myDisplay = ptr_to_mikesimulator->GetDisplay();
 
-	long bid_price = ptr_to_mikesimulator->GetData()->GetBidPrice();
-	long ask_price = ptr_to_mikesimulator->GetData()->GetAskPrice();
-	//std::stringstream buffer;
-	//buffer << bid_price;
-	//std::cout << buffer.str();
-	//buffer.str("newstring");
-	//std::cout << buffer.str();
-	//std::cout << "\nPrintCurrent All";
-	//buffer.str("");
-	//buffer << bid_price;
+	long bid_price = myData->GetBidPrice();
+	long ask_price = myData->GetAskPrice();
+
 
 	//print current bid/ask prices inside UserInterface window1:
-	ptr_to_mikesimulator->GetDisplay()->GetUInterface()->m_curr_bid->value((double)bid_price);
-	ptr_to_mikesimulator->GetDisplay()->GetUInterface()->m_curr_ask->value((double)ask_price);
+	userInterface->m_curr_bid->value((double)bid_price);
+	userInterface->m_curr_ask->value((double)ask_price);
 
 	//experimenting:
 	using namespace std;
-	//	cout << "\nget prices/check fills/make decisions/send orders/print results" << endl;
-	//	cout << " " << myDisplay->GetUInterface()->m_slider1->value();
-	//	string myString;
-	//	myString = "BID";
-		//myString + bid_price;
-		//myString.append();
-	//	const char * ch = myString.c_str();
-	//	cout << ch[233];	//HACK	- this should not have worked :D
 
-	int TopRowPrice = myDisplay->GetUInterface()->GetTable()->GetTopRowPrice();
+
+	int TopRowPrice = userInterface->GetTable()->GetTopRowPrice();
 	//printing BID and ASK in WidgetTable:
-	myDisplay->GetUInterface()->GetTable()->printInTable(TopRowPrice - bid_price, 6, "BID");
-	myDisplay->GetUInterface()->GetTable()->printInTable(TopRowPrice - myData->GetPrevBidPrice(), 6, "");
-	myDisplay->GetUInterface()->GetTable()->printInTable(TopRowPrice - ask_price, 7, "ASK");
-	myDisplay->GetUInterface()->GetTable()->printInTable(TopRowPrice - myData->GetPrevAskPrice(), 7, "");
-
-//	myDisplay->GetUInterface()->GetTable()->PopPriceCol(/*myDisplay->GetUInterface()->GetTable()*/);
+	userInterface->GetTable()->printInTable(TopRowPrice - bid_price, 6, "BID");
+	userInterface->GetTable()->printInTable(TopRowPrice - myData->GetPrevBidPrice(), 6, "");
+	userInterface->GetTable()->printInTable(TopRowPrice - ask_price, 7, "ASK");
+	userInterface->GetTable()->printInTable(TopRowPrice - myData->GetPrevAskPrice(), 7, "");
 
 	//ROW POSITION:
 	//determine row which holds the price corresponding to current bid:
-	int scrollposition = myDisplay->GetUInterface()->GetTable()->GetTopRowPrice() - myData->GetBidPrice();
+	int scrollposition = userInterface->GetTable()->GetTopRowPrice() - myData->GetBidPrice();
 	//scroll the table to current bid with a 15 row offset:
-	myDisplay->GetUInterface()->GetTable()->row_position(scrollposition - 15);
+	userInterface->GetTable()->row_position(scrollposition - 15);
 }
 
 void Control::ManualOrder(int type, long price) 
@@ -99,6 +85,62 @@ void Control::ManualOrder(int type, long price)
 }
 
 //CALLBACKS FROM USERINTERFACE HANDLED HERE:
+//btn chooses what to do, UserInterface *p
+//provides the data, parameters optional
+void Control::CallbkUserInt(UserInterface * p, BtnPressed btn,
+	int parameter1,	int parameter2,	double parameter3)
+{
+	if (btn == UPBTN)
+	{
+		cout << "enum type callback called" << endl;
+		UserInterface * myUserInt = (UserInterface*)p;
+		Data * myData = data;
+		//change bid ask prices:
+		myData->SetPrevAskPrice(myData->GetAskPrice());
+		myData->SetPrevBidPrice(myData->GetBidPrice());
+		myData->SetAskPrice(myData->GetAskPrice() + 1);
+		myData->SetBidPrice(myData->GetBidPrice() + 1);
+		//update slider value:
+		myUserInt->Getm_slider1()->value((double)myData->GetBidPrice());
+		//do something:
+		//MainLoop() crashes due to bad pointers - has to be fixed
+		this->MainLoop();
+
+	}
+	if (btn == DOWNBTN) {
+		//REFACTORING COMPLETE!
+		cout << "refactored  m_down_btn_cb called" << endl;
+		UserInterface * myUserInt = (UserInterface*)p;
+		Data * myData = data;
+		//change bid ask prices:
+		myData->SetPrevAskPrice(myData->GetAskPrice());
+		myData->SetPrevBidPrice(myData->GetBidPrice());
+		myData->SetAskPrice(myData->GetAskPrice() - 1);
+		myData->SetBidPrice(myData->GetBidPrice() - 1);
+		//update slider value:
+		myUserInt->Getm_slider1()->value((double)myData->GetBidPrice());
+		//do something:
+		this->MainLoop();
+	}
+	if (btn == SLIDER1)
+	{
+		UserInterface * myUserInt = (UserInterface*)p;
+		Fl_Value_Slider * mySlider = myUserInt->Getm_slider1();
+		Data * myData = data;
+		Control * myControl = this;
+		double sliderVal = mySlider->value();
+
+		//change bid ask prices:
+		myData->SetPrevAskPrice(myData->GetAskPrice());
+		myData->SetPrevBidPrice(myData->GetBidPrice());
+		long differenceBidAsk;	//preserve bid ask spread
+		differenceBidAsk = myData->GetAskPrice() - myData->GetBidPrice();
+		myData->SetAskPrice((long)sliderVal + differenceBidAsk);
+		myData->SetBidPrice((long)sliderVal);
+		//do something:
+		myControl->MainLoop();
+	}
+}
 
 void Control::CallbkWidTable(){
 	std::cout << "\ncbkOne called" << std::endl;
@@ -123,7 +165,22 @@ void Control::CallbkWidTable(){
 
 //Helpler functions for other classes:
 
-//int Control::GetCurrentBid()
-//{
-//	return 800;
-//}
+
+//std::stringstream buffer;
+//buffer << bid_price;
+//std::cout << buffer.str();
+//buffer.str("newstring");
+//std::cout << buffer.str();
+//std::cout << "\nPrintCurrent All";
+//buffer.str("");
+//buffer << bid_price;
+
+//	cout << "\nget prices/check fills/make decisions/send orders/print results" << endl;
+//	cout << " " << myDisplay->GetUInterface()->m_slider1->value();
+//	string myString;
+//	myString = "BID";
+//myString + bid_price;
+//myString.append();
+//	const char * ch = myString.c_str();
+//	cout << ch[233];	//HACK	- this should not have worked :D
+
