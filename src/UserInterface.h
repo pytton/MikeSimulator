@@ -11,6 +11,8 @@
 #include <iostream>
 #include <sstream>
 #include <stdio.h>
+#include <vector>
+#include <string>
 
 #include <FL/Fl.H>
 #include <FL/Fl_Window.H>
@@ -64,6 +66,18 @@ class UserInterface : public FluidInterface
 	//Fl_Text_Display *text_display;
 
 public:
+	//constructors/destructor:
+	UserInterface(Control * control,/* MikeSimulator * p,*/ double bid_price = 700);
+
+	//GETTERS / SETTERS:
+	Control * GetControl() { return m_pControl; }
+	Fl_Value_Slider * Getm_slider1(){ return m_slider1; }
+	inline WidgetTable *GetTable(){return m_pTable;}
+
+	//helper functions
+	void show();
+
+private:
 	//members:
 	WidgetTable *m_pTable;		//this replaces regular Fl_Table with my custom one	
 	Control * m_pControl;
@@ -75,44 +89,22 @@ public:
 	std::stringstream textDisplayString;
 	int bid_price;
 
-	//constructors/destructor:
-	UserInterface(Control * control, MikeSimulator * p, double bid_price = 700);
-	UserInterface(MikeSimulator * p, Display * ptr_t_display);
+	//std::vector <std::string> col_names;// = { "" };
+	//std::vector <std::string> button_names;// = { "" };
 
-	//GETTERS / SETTERS:
-	
-	//NEED TO GET RID OF FOLLOWING THREE:
-	///////////////////////////////////////////////////////////////
-	Display * GetDisplay();
-	void SetDisplay(Display * ptr_t_display);
-	MikeSimulator* GetMikeSim() { return ptr_to_mikesimulator; }
-	///////////////////////////////////////////////////////////////
-
-	Control * GetControl() { return m_pControl; }
-	Fl_Value_Slider * Getm_slider1(){ return m_slider1; }
-	inline WidgetTable *GetTable(){return m_pTable;}
-	inline void SetTable(WidgetTable * pTable){m_pTable = pTable;}
-
-	//helper functions
-	void show();
-
-	
-
-//CALLBACKS
-private:
+	//CALLBACKS
 	static void m_down_btn_cb(Fl_Widget *w, void * p);
-	static void refactored_m_down_btn_cb(Fl_Widget *w, void * p);
+	static void m_extra_btn_cb(Fl_Widget * w, void * p);
 	static void m_up_btn_cb(Fl_Widget *w, void * p);
-	static void refactored_m_up_btn_cb(Fl_Widget *w, void * p);
 	static void m_slider1_cb(Fl_Widget *w, void * p);
-	static void refactored_m_slider1_cb(Fl_Widget *w, void * p);
 
-	//OLD CALLBACKS FOR REFERENCE:
-	static void experimental2_cb(Fl_Widget *w, void * p);
-	static void experimental_cb(Fl_Widget *w, void * p);
-	static void experim3(Fl_Widget *w, void * p);	//THIS FUNCTION CHANGES SIZE OF WIDGETTABLE
-	static void rePriceWidTable(Fl_Widget *w, void*p);	//UNDER CONSTRUCTION
-	static void rePriceWidTable2(Fl_Widget *w, void*p);	//this version takes the 'this' pointer instead of MikeSimulator as the void *p parameter
+	//helpers:
+	//sets the names of column headers and buttons inside WidgetTable:
+	void SetColButNames(std::vector <std::string> &col_names, std::vector <std::string> &button_names);
+	
+	//OLD CALLBACK FOR REFERENCE:
+	static void experimental_cb(Fl_Widget *w, void * p);	//THIS NEEDS WORK!
+
 };
 
 

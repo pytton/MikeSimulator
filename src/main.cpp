@@ -124,7 +124,7 @@ int main()
 {
 
 	int starting_bid = 500;
-	std::cin >> starting_bid;
+	//std::cin >> starting_bid;
 	MikeSimulator * mikesimulator = new MikeSimulator(starting_bid);
 
 //	mikesimulator->GetControl()->tryout1();	//trying out if things work

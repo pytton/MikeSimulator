@@ -10,27 +10,21 @@
 //WIDGETTABLE:
 //CONSTRUCTOR:
 WidgetTable::WidgetTable(
-	UserInterface * pUserInterface, 
+	int x, int y, int w, int h, const char *l,
+	UserInterface * pUserInterface,
 	int top_row_price,
-	int number_rows,
-	int x, 
-	int y, 
-	int w, 
-	int h, 
-	const char *l = 0
+	int number_rows
+
 	) : Fl_Table_Row(x, y, w, h, l)
 {
-	//this is the new constructor
 	ptr_to_UserInterface = pUserInterface;
 
 	ButtonColsNumber = 5;	//how many columns of buttons?
 	TopRowPrice = top_row_price;
-	table_rows, table_cols = 20;
-
+//	table_rows, table_cols = 20;
 	col_header(1);
 	col_resize(1);
 	col_header_height(40);
-
 	row_header(1);
 	row_resize(0);
 	row_header_width(40);
@@ -41,41 +35,66 @@ WidgetTable::WidgetTable(
 	SetSize(GetRows(), GetCols(), this);		//this needs to be called to construct all the cells of WidgetTable
 }
 
-WidgetTable::WidgetTable(UserInterface * pUserInterface, int x, int y, int w, int h, const char *l = 0) : Fl_Table_Row(x, y, w, h, l)
+WidgetTable::WidgetTable(
+	int x, int y, int w, int h, const char *l,
+	UserInterface * pUserInterface,
+	int top_row_price,
+	int number_rows,
+
+	int number_cols,	/*how many columns in the table?*/
+	int how_many_cols_are_buttons,	/*how many columns are buttons?*/
+	std::vector <std::string> col_names,	/*names of col headers*/
+	std::vector <std::string> button_names	//names of buttons
+
+
+	) : Fl_Table_Row(x, y, w, h, l)
 {
-	//this is the old constructor I want to change:
 	ptr_to_UserInterface = pUserInterface;
+	TopRowPrice = top_row_price;
+	ButtonColsNumber = how_many_cols_are_buttons;	//how many columns of buttons?
+	this->col_names = col_names;
 
-	ButtonColsNumber = 5;	//how many columns of buttons?
-	TopRowPrice = 800;
-	table_rows, table_cols = 20;
-
+	//	table_rows, table_cols = 20;
 	col_header(1);
 	col_resize(1);
 	col_header_height(40);
-
 	row_header(1);
 	row_resize(0);
 	row_header_width(40);
 	end();
 
-	SetCols(15);
-	SetRows(200);
-	SetSize(GetRows(), GetCols(), this);		//this needs to be called to construct all the cells of WidgetTable
+
+	SetCols(number_cols);
+	SetRows(number_rows);
+	SetSize(GetRows(), GetCols(), this, col_names, button_names);		//this needs to be called to construct all the cells of WidgetTable
 }
 
 //below fills the table with objects:
 //TODO: make sure old Fl_Input and My_fl_button objects are destroyed
 //when this is called more than once
-void WidgetTable::SetSize(int newrows, int newcols, WidgetTable * mytable)
+void WidgetTable::SetSize(int newrows, int newcols, WidgetTable * mytable, std::vector<std::string> col_names, std::vector<std::string> button_names)
 {
 	//this is code that was taken from an example found online.
 	//not sure 100% how all of this works but modified it to
 	//do what I want it to do.
+	using namespace std;
 	rows(newrows);
 	cols(newcols);
 	mytable->SetRows(newrows);
 	mytable->SetCols(newcols);
+
+	//find out for how many button and column names have been provided:
+	int amount_button_names = button_names.size();
+	int amount_col_names = col_names.size();
+	cout << endl << "button names amount: " << amount_button_names << endl;
+	cout << endl << "column names amount: " << amount_col_names << endl;
+
+	//testing - print out all the column names:
+
+	//for (int i = 0; i < amount_col_names; ++i)
+	//{
+	//	cout << col_names[i] << endl;
+	//}
 
 	begin();		// start adding widgets to group
 	{
@@ -123,6 +142,27 @@ void WidgetTable::SetSize(int newrows, int newcols, WidgetTable * mytable)
 	//	PopPriceCol();	//populate price column with prices
 
 }
+
+//ERASE THIS - FAILED EXPERIMENT
+void WidgetTable::draw_cell(TableContext context,
+	int R, int C, int X, int Y, int W, int H, std::vector<std::string> col_names)
+{
+	using namespace std;
+	cout << endl << "testing" << endl;
+
+	
+	int amount_col_names = col_names.size();
+
+	cout << endl << "column names amount: " << amount_col_names << endl;
+
+	//testing - print out all the column names:
+
+	for (int i = 0; i < amount_col_names; ++i)
+	{
+		cout << col_names[i] << endl;
+	}
+}
+
 void WidgetTable::draw_cell(TableContext context,
 	int R, int C, int X, int Y, int W, int H)
 {
@@ -174,19 +214,22 @@ void WidgetTable::draw_cell(TableContext context,
 			//	Fl::redraw();
 			//}
 
+			//experimenting:
+//			std::cout << "draw cell called" << std::endl;
+
 			fl_font(FL_HELVETICA, 11);
 			static char s[40];
 			//below decide what is printed in column headers:
 			ColHeaderText(s, C);	//this function performs commented out code below
 
-									//if (C == 0)
-									//{
-									//	sprintf(s, "BUY");
-									//}
-									//else
-									//{
-									//	sprintf(s, "Col %d", C);
-									//}
+			//if (C == 0)
+			//{
+			//	sprintf(s, "BUY");
+			//}
+			//else
+			//{
+			//	sprintf(s, "Col %d", C);
+			//}
 
 			fl_draw_box(FL_THIN_UP_BOX, X, Y, W, H, col_header_color());
 			fl_color(FL_BLACK);
@@ -205,68 +248,96 @@ void WidgetTable::draw_cell(TableContext context,
 }
 void WidgetTable::ColHeaderText(char * s, int C)	//defines text of column headers
 {
-	switch (C)
+	//this function is called by 'draw_cell' - which is part of FLTK
+	//I cannot alter the way draw_cell is called to pass parameters
+	//that is why this function REQUIRES that the following things be set
+	//inside the WidgetTable class before it is called:
+	//
+	//std::vector <std::string> col_names
+	//int table_cols
+	//
+	//it pulls that data from WidgetTable!!!!!!
+
+	static bool errorcheck = 0;
+
+
+	using namespace std;
+	//first, check that we have col_names:
+	//cout << endl;
+	if (col_names.size() > 0)
 	{
-	case 0:
-		sprintf(s, "CANCEL\nORDER");
-		break;
-	case 1:
-		sprintf(s, "BUY");
-		break;
-	case 2:
-		sprintf(s, "BUY");
-		break;
-	case 3:
-		sprintf(s, "SELL");
-		break;
-	case 4:
-		sprintf(s, "SELL");
-		break;
-	case 5:
-		sprintf(s, "PRICE");
-		break;
-	case 6:
-		sprintf(s, "BID");
-		break;
-	case 7:
-		sprintf(s, "ASK");
-		break;
-	case 8:
-		sprintf(s, "ORDER\nSIZE");
-		break;
-	case 9:
-		sprintf(s, "ORDER\nTYPE");
-		break;
-	case 10:
-		sprintf(s, "ORDER\nPRICE");
-		break;
-	case 11:
-		sprintf(s, "OPEN\nPOSITION");
-		break;
-	case 12:
-		sprintf(s, "OPEN\nP/L");
-		break;
-	case 13:
-		sprintf(s, "CLOSED\nP/L");
-		break;
-	case 14:
-		sprintf(s, "TOTAL\nP/L");
-		break;
-	default:
-		sprintf(s, "Col %d", C);
+	//	cout << "Working on this function - finish it!" << endl;
+
+		if(C< col_names.size()) sprintf(s, (col_names[C]).c_str());
+		else 
+		{ 			
+			sprintf(s, "Col %d", C);
+
+			if (!errorcheck)
+			{
+				cout << "Names not provided for all columns! Using default." << endl;
+				errorcheck = 1;
+			}
+		}
+
 	}
-	//if (C == 0)
-	//{
-	//	sprintf(s, "BUY");
-	//}
-	//else
-	//{
-	//	sprintf(s, "my %d", C);
-	//}
+	else
+	{	//old code kept as a fallback - in case col_names
+		//vector is empty
+		switch (C)
+		{
+		case 0:
+			sprintf(s, "CANCEL\nORDER");
+			break;
+		case 1:
+			sprintf(s, "BUY");
+			break;
+		case 2:
+			sprintf(s, "BUY");
+			break;
+		case 3:
+			sprintf(s, "SELL");
+			break;
+		case 4:
+			sprintf(s, "SELL");
+			break;
+		case 5:
+			sprintf(s, "PRICE");
+			break;
+		case 6:
+			sprintf(s, "BID");
+			break;
+		case 7:
+			sprintf(s, "ASK");
+			break;
+		case 8:
+			sprintf(s, "ORDER\nSIZE");
+			break;
+		case 9:
+			sprintf(s, "ORDER\nTYPE");
+			break;
+		case 10:
+			sprintf(s, "ORDER\nPRICE");
+			break;
+		case 11:
+			sprintf(s, "OPEN\nPOSITION");
+			break;
+		case 12:
+			sprintf(s, "OPEN\nP/L");
+			break;
+		case 13:
+			sprintf(s, "CLOSED\nP/L");
+			break;
+		case 14:
+			sprintf(s, "TOTAL\nP/L");
+			break;
+		default:
+			sprintf(s, "Col %d", C);
+		}
+	}
 }
 
 //constructor for My_fl_button. These are buttons used inside WidgetTable which know what their position is
-
 My_fl_button::My_fl_button(int x, int y, int w, int h, const char *l = 0)
 	: Fl_Button(x, y, w, h, l), x_pos(0), y_pos(0)
 {
@@ -281,20 +352,20 @@ void WidgetTable::button_cb(Fl_Widget *w, void * p)
 	My_fl_button * myButton = (My_fl_button*)w;		//myButton is the button that was pressed
 	WidgetTable * thisTable = (WidgetTable*)p;		//thisTable is the table in which the button was pressed
 	UserInterface * myUI = thisTable->GetUserInterface();	//myUI is the UserInterface in which the table is created
-	MikeSimulator * mySimulator = myUI->GetMikeSim();
 
-	mySimulator->GetControl()->CallbkWidTable();
+	thisTable->ptr_to_UserInterface->GetControl()->CallbkWidTable();
+
 	//send the information to Control:
 	//What price level was pressed?:
 	int rowPressed = myButton->y_pos;		//this is the row in which the button was pressed
 	long price = thisTable->PriceOfRow(rowPressed);
 	int OrderType = myButton->x_pos;
-	mySimulator->GetControl()->ManualOrder(OrderType, price);
+	thisTable->ptr_to_UserInterface->GetControl()->ManualOrder(OrderType, price);
 	//send the information to Control
 	//below - print out the price corresponding to the row in which the button was pressed:
 
-//std::cout << "\nRow pressed: " << rowPressed << std::endl;
-//std::cout << "\nCorresponding price: " << thisTable->PriceOfRow(rowPressed) << std::endl;
+std::cout << "\nRow pressed: " << rowPressed << std::endl;
+std::cout << "\nCorresponding price: " << thisTable->PriceOfRow(rowPressed) << std::endl;
 //	std::cout << '\n' << sizeof(long) << " " << sizeof(long long) << " " << sizeof(double);
 
 
@@ -380,10 +451,6 @@ long WidgetTable::PriceOfRow(int row)
 
 	return price;
 }	 //given the row - returns what price is currently printed in that row
-MikeSimulator * WidgetTable::GetMikeSim()
-{
-	return ptr_to_UserInterface->GetMikeSim();
-}
 void WidgetTable::PopPriceCol(/*WidgetTable * myTable*/) //populates the Price column with prices based on current TopRowPrice
 {
 

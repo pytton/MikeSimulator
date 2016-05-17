@@ -17,7 +17,7 @@ Control::Control(MikeSimulator * p, int starting_bid)
 {
 	ptr_to_mikesimulator = p;
 	std::cout << "Control constructed. Starting bid: " << starting_bid << std::endl;
-	userInterface = new UserInterface(this, p, starting_bid);
+	userInterface = new UserInterface(this, /*p,*/ starting_bid);
 	data = new Data(this, starting_bid);
 }
 
@@ -140,6 +140,11 @@ void Control::CallbkUserInt(UserInterface * p, BtnPressed btn,
 		//do something:
 		myControl->MainLoop();
 	}
+	if (btn == EXTRABTN)
+	{
+		cout << "Extra button pressed - implement this!!!!" << endl;
+		rePriceWidTable();
+	}
 }
 
 void Control::CallbkWidTable(){
@@ -164,6 +169,46 @@ void Control::CallbkWidTable(){
 }
 
 //Helpler functions for other classes:
+
+void Control::rePriceWidTable()
+//UNDER CONSTRUCTION
+//Updates prices displayed in WidgetTable to between 100 above and below
+//current bid price in Data class
+//Updates slider in UserInterface to current Bid price
+{
+	UserInterface* pUI = userInterface;
+
+	WidgetTable * pTable = pUI->GetTable();
+
+	//BELOW CODE SET NEW SIZE OF WIDGETTABLE:
+
+	//pTable->clear();
+	//this commented out because not sure if old table gets destroyed and worried
+	//about memory leak.
+	//leaving this commented out leaves old BID/ASK still printed - could fix this
+
+	//first - make sure that the TopRowPrice is set to 100 above current bid price:
+	//Data * myData = mikesimulator->GetData();
+	pTable->SetTopRowPrice(data->GetBidPrice() + 100);
+	//draw the new widget table:
+	//pTable->SetSize(pTable->GetRows(), pTable->GetCols(), pTable);	//this needs to be called to construct all the cells of WidgetTable																					
+	//pUI->SetTable(pTable);
+	pUI->m_window1->hide();
+	pUI->m_window1->redraw();
+	pUI->m_window1->show();
+
+	//populate price column with prices:
+	pUI->GetTable()->PopPriceCol(/*mikesimulator->GetDisplay()->GetWindow()->GetTable()*/);
+	//modify slider in UserInterface:
+	//update the slider minimum and maximum settings:
+	//setting initial Slider max/min values to that of bid/ask - offset:
+	pUI->m_slider1->minimum((double)data->GetBidPrice() + ((pTable->GetRows()) / 2) - 3 /* 3 offset for safety*/);
+	pUI->m_slider1->maximum((double)data->GetBidPrice() - ((pTable->GetRows()) / 2) + 3 /* 3 offset for safety*/);
+	pUI->m_slider1->value((double)data->GetBidPrice());
+}
+
+
+
 
 
 //std::stringstream buffer;

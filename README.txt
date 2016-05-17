@@ -1,3 +1,13 @@
+2016/05/16
+Refactoring (almost?) finished.
+Added new constructor for WidgetTable that enables to provide
+column header names as a vector<string>,
+button names as vector<string>,
+number of columns and button columns as a parameter of the constructor.
+
+finish writing SetSize so that button names are named as in the
+provided vector.
+
 2016/05/09
 REFACTORING:
 FROM 
