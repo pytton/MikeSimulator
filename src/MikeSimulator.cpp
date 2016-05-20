@@ -5,9 +5,9 @@
 MikeSimulator::MikeSimulator() //: control(this), data(this), display(this)
 {
 
-	m_pControl = new Control(this);
-	m_pData = new Data(this);
-	m_pDisplay = new Display(this);
+	//m_pControl = new Control(this);
+	//m_pData = new Data(this);
+	////m_pDisplay = new Display(this);
 }
 
 
@@ -27,8 +27,8 @@ MikeSimulator::~MikeSimulator() //: control(this), data(this), display(this)
 	if (!m_pData) delete m_pData;
 	m_pData = NULL;
 
-	if (!m_pDisplay) delete m_pDisplay;
-	m_pDisplay = NULL;
+//	if (!m_pDisplay) delete m_pDisplay;
+//	m_pDisplay = NULL;
 }
 
 
@@ -50,10 +50,10 @@ MikeSimulator * MikeSimulator::getPointer()
 	}
 
 
-	Display *MikeSimulator::GetDisplay()
-	{
-		return m_pDisplay;
-	}
+	//Display *MikeSimulator::GetDisplay()
+	//{
+	//	return m_pDisplay;
+	//}
 
 	void MikeSimulator::SetControl(Control *pCtrl)
 	{
@@ -66,10 +66,10 @@ MikeSimulator * MikeSimulator::getPointer()
 		m_pData = pData;
 	}
 
-	void MikeSimulator::SetDisplay(Display *pDisplay)
-	{
-		m_pDisplay = pDisplay;
-	}
+	//void MikeSimulator::SetDisplay(Display *pDisplay)
+	//{
+	//	m_pDisplay = pDisplay;
+	//}
 
 
 void MikeSimulator::callToData(void *p)

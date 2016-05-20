@@ -5,10 +5,12 @@
 #include "MikeSimulator.h"
 #include "WidgetTable.h"
 
+#define PRICECOLUMN 5 //in which column should the price be printed? Used by PopPriceCol
 
 
 //WIDGETTABLE:
 //CONSTRUCTOR:
+
 WidgetTable::WidgetTable(
 	int x, int y, int w, int h, const char *l,
 	UserInterface * pUserInterface,
@@ -45,14 +47,12 @@ WidgetTable::WidgetTable(
 	int how_many_cols_are_buttons,	/*how many columns are buttons?*/
 	std::vector <std::string> col_names,	/*names of col headers*/
 	std::vector <std::string> button_names	//names of buttons
-
-
 	) : Fl_Table_Row(x, y, w, h, l)
 {
 	ptr_to_UserInterface = pUserInterface;
 	TopRowPrice = top_row_price;
 	ButtonColsNumber = how_many_cols_are_buttons;	//how many columns of buttons?
-	this->col_names = col_names;
+	this->col_names = col_names;	//this has to be set for SetSize and ColHeaderText functions
 
 	//	table_rows, table_cols = 20;
 	col_header(1);
@@ -63,16 +63,22 @@ WidgetTable::WidgetTable(
 	row_header_width(40);
 	end();
 
+	//using namespace std;
+	//string buf;
+	//cin >> buf;
+	//button_names[2] = buf;
 
 	SetCols(number_cols);
 	SetRows(number_rows);
-	SetSize(GetRows(), GetCols(), this, col_names, button_names);		//this needs to be called to construct all the cells of WidgetTable
+	SetSize(GetRows(), GetCols(), this, /*col_names,*/ button_names);		//this needs to be called to construct all the cells of WidgetTable
+	//Sleep(1000);
+	//PopPriceCol(this);	//fill the price column with prices
 }
 
 //below fills the table with objects:
 //TODO: make sure old Fl_Input and My_fl_button objects are destroyed
 //when this is called more than once
-void WidgetTable::SetSize(int newrows, int newcols, WidgetTable * mytable, std::vector<std::string> col_names, std::vector<std::string> button_names)
+void WidgetTable::SetSize(int newrows, int newcols, WidgetTable * mytable, /*std::vector<std::string> col_names,*/ std::vector<std::string> button_names)
 {
 	//this is code that was taken from an example found online.
 	//not sure 100% how all of this works but modified it to
@@ -89,12 +95,12 @@ void WidgetTable::SetSize(int newrows, int newcols, WidgetTable * mytable, std::
 	cout << endl << "button names amount: " << amount_button_names << endl;
 	cout << endl << "column names amount: " << amount_col_names << endl;
 
-	//testing - print out all the column names:
+	//testing - print out all the button names:
 
-	//for (int i = 0; i < amount_col_names; ++i)
-	//{
-	//	cout << col_names[i] << endl;
-	//}
+	for (int i = 0; i < amount_button_names; ++i)
+	{
+		cout << button_names[i] << endl;
+	}
 
 	begin();		// start adding widgets to group
 	{
@@ -118,17 +124,34 @@ void WidgetTable::SetSize(int newrows, int newcols, WidgetTable * mytable, std::
 				else
 				{
 					// Create the light buttons
-					sprintf(s, "%d/%d ", r, c);
+		
+					//naming buttons using supplied button_names vector:
+					string buf;
+					buf = button_names[c];
+					snprintf(s, 39, buf.c_str());
+
+					//use this tested way if the above way gives trouble:
+					//stringstream tempText;
+					//if (button_names.size() >= c){tempText << button_names[c]; }
+					//else { tempText << "noName"; }
+					//snprintf(s, 39, tempText.str().c_str());
+					//
+					//original way of naming buttons:
+					//sprintf(s, "%d/%d ", r, c);
+
+					//create the button:
 					My_fl_button *butt = new My_fl_button(X, Y, W, H, strdup(s));
 					//Fl_Light_Button *butt = new Fl_Light_Button(X, Y, W, H, strdup(s));
 					butt->align(FL_ALIGN_CENTER | FL_ALIGN_INSIDE);
 					butt->callback(button_cb, (void*)mytable);
 					//butt->value(((r + c * 2) & 4) ? 1 : 0);	//this sets the light on or off for Fl_Light_Button
-					if (c == 0) butt->label("CXL");
-					if (c == 1) butt->label("B LMT");
-					if (c == 2) butt->label("B STP");
-					if (c == 3) butt->label("S LMT");
-					if (c == 4) butt->label("S STP");
+					
+					//old way of assigning labels - before being provided with button_names vector
+					//if (c == 0) butt->label("CXL");
+					//if (c == 1) butt->label("B LMT");
+					//if (c == 2) butt->label("B STP");
+					//if (c == 3) butt->label("S LMT");
+					//if (c == 4) butt->label("S STP");
 					butt->x_pos = c;	//set the col
 					butt->y_pos = r;	//set the row
 				}
@@ -144,24 +167,24 @@ void WidgetTable::SetSize(int newrows, int newcols, WidgetTable * mytable, std::
 }
 
 //ERASE THIS - FAILED EXPERIMENT
-void WidgetTable::draw_cell(TableContext context,
-	int R, int C, int X, int Y, int W, int H, std::vector<std::string> col_names)
-{
-	using namespace std;
-	cout << endl << "testing" << endl;
-
-	
-	int amount_col_names = col_names.size();
-
-	cout << endl << "column names amount: " << amount_col_names << endl;
-
-	//testing - print out all the column names:
-
-	for (int i = 0; i < amount_col_names; ++i)
-	{
-		cout << col_names[i] << endl;
-	}
-}
+//void WidgetTable::draw_cell(TableContext context,
+//	int R, int C, int X, int Y, int W, int H, std::vector<std::string> col_names)
+//{
+//	using namespace std;
+//	cout << endl << "testing" << endl;
+//
+//	
+//	int amount_col_names = col_names.size();
+//
+//	cout << endl << "column names amount: " << amount_col_names << endl;
+//
+//	//testing - print out all the column names:
+//
+//	for (int i = 0; i < amount_col_names; ++i)
+//	{
+//		cout << col_names[i] << endl;
+//	}
+//}
 
 void WidgetTable::draw_cell(TableContext context,
 	int R, int C, int X, int Y, int W, int H)
@@ -345,6 +368,7 @@ My_fl_button::My_fl_button(int x, int y, int w, int h, const char *l = 0)
 	y_pos = 0;
 	//x_pos and y_pos are being set inside WidgetTable::SetSize function
 }
+
 //CALLBACKS:
 void WidgetTable::button_cb(Fl_Widget *w, void * p)
 {
@@ -353,19 +377,23 @@ void WidgetTable::button_cb(Fl_Widget *w, void * p)
 	WidgetTable * thisTable = (WidgetTable*)p;		//thisTable is the table in which the button was pressed
 	UserInterface * myUI = thisTable->GetUserInterface();	//myUI is the UserInterface in which the table is created
 
-	thisTable->ptr_to_UserInterface->GetControl()->CallbkWidTable();
+
 
 	//send the information to Control:
 	//What price level was pressed?:
 	int rowPressed = myButton->y_pos;		//this is the row in which the button was pressed
 	long price = thisTable->PriceOfRow(rowPressed);
-	int OrderType = myButton->x_pos;
-	thisTable->ptr_to_UserInterface->GetControl()->ManualOrder(OrderType, price);
+	int colPressed = myButton->x_pos;
+	
+	thisTable->ptr_to_UserInterface->GetControl()->CallbkWidTable(rowPressed, colPressed, price);
+	
+	
+//	thisTable->ptr_to_UserInterface->GetControl()->ManualOrder(OrderType, price);
 	//send the information to Control
 	//below - print out the price corresponding to the row in which the button was pressed:
 
-std::cout << "\nRow pressed: " << rowPressed << std::endl;
-std::cout << "\nCorresponding price: " << thisTable->PriceOfRow(rowPressed) << std::endl;
+//std::cout << "\nRow pressed: " << rowPressed << std::endl;
+//std::cout << "\nCorresponding price: " << thisTable->PriceOfRow(rowPressed) << std::endl;
 //	std::cout << '\n' << sizeof(long) << " " << sizeof(long long) << " " << sizeof(double);
 
 
@@ -394,6 +422,7 @@ std::cout << "\nCorresponding price: " << thisTable->PriceOfRow(rowPressed) << s
 	//	myTable->printInTable(6, 6, "text"/*, myTable*/);
 
 }
+
 //HELPLERS:
 void WidgetTable::printInTable(int row, int col, std::string text)//row = 0 is first row!
 {
@@ -402,10 +431,9 @@ void WidgetTable::printInTable(int row, int col, std::string text)//row = 0 is f
 	//	WidgetTable * myTable = myWidgetPointer;
 
 	//first, make sure row and col are not bigger than the size of the table:
+	//if they are - it will be printed at the edgeusing this line:
+	//row = myTable->GetRows() - 1; etc...
 
-	//std::cout << myWidgetPointer->rows() << std::endl
-	//	<< myWidgetPointer->table_rows << std::endl 
-	//	<< row;
 
 	if (row >= myTable->GetRows()) {
 		std::cout << "\nPrint attempt in row outside of WidgetTable";
@@ -421,7 +449,7 @@ void WidgetTable::printInTable(int row, int col, std::string text)//row = 0 is f
 	}
 	if (col < myTable->ButtonColsNumber) {
 		std::cout << "\nPrint attempt in col outside of WidgetTable";
-		col = myTable->ButtonColsNumber;
+		col = myTable->ButtonColsNumber;	//make sure we are not printing in rows meant for buttons!
 	}
 	//find the cell:
 	Fl_Widget * myWidget = (Fl_Widget*)(myTable->GetElement(row, col));
@@ -435,6 +463,7 @@ void WidgetTable::printInTable(int row, int col, std::string text)//row = 0 is f
 Fl_Widget * WidgetTable::GetElement(int nRow, int nCol)
 {//used to get a pointer to an element of WidgetTable with X Y coordinates nRow nCol
  //nRow = 0 -> points to FIRST row; nCol = 0 -> points to col number 1!
+ //remember the first columns are for buttons, not Fl_Input!
  //watch for off by one errors
 	int numCol = this->cols();
 	int nIndex = nRow * numCol + nCol;
@@ -454,7 +483,7 @@ long WidgetTable::PriceOfRow(int row)
 void WidgetTable::PopPriceCol(/*WidgetTable * myTable*/) //populates the Price column with prices based on current TopRowPrice
 {
 
-	int PriceCol = 5;	//indicates in which column prices are to be printed - 
+	int PriceCol = PRICECOLUMN;	//indicates in which column prices are to be printed - 
 						//change this as neccessary if design changes made to WidgetTable
 	int PriceToPrint;
 	//print prices in rows from 0 to last
@@ -462,10 +491,43 @@ void WidgetTable::PopPriceCol(/*WidgetTable * myTable*/) //populates the Price c
 	for (int row = 0; row < table_rows; row++)
 	{
 		PriceToPrint = TopRowPrice - row;
+
 		Fl_Input * myCell = (Fl_Input*)GetElement(row, PriceCol);
 		char ch[40];
-		sprintf(ch, "%d", PriceToPrint);
-		myCell->value(ch);
+
+		std::stringstream buffer;
+		buffer << PriceToPrint;
+		myCell->value(buffer.str().c_str());
+		//myCell->label(buffer.str().c_str());
+
+		//sprintf(ch, "%d", PriceToPrint);
+		//myCell->value(ch);
+		//myCell->label(ch);
+		//myCell->redraw();
 	}
 
+}
+
+void WidgetTable::ClearColumn(int column)
+{
+	int howManyRows = GetRows();
+	for (int i = 0; i < howManyRows; ++i)
+	{
+		Fl_Input * myCell = (Fl_Input*)GetElement(i, column);
+
+		myCell->value("");
+	}
+}
+
+void WidgetTable::ClearRow(int row)
+{
+	int startCol = ButtonColsNumber - 1; //first column is zero. ButtonColsNumber gives number of Cols that are buttons
+	int endCol = GetCols();
+
+	for (int i = startCol; i < endCol; ++i)
+	{
+		Fl_Input * myCell = (Fl_Input*)GetElement(row, i);
+
+		myCell->value("");
+	}
 }

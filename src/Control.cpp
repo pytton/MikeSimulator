@@ -2,7 +2,7 @@
 #include <iostream>
 #include "MikeSimulator.h"
 #include "Data.h"
-#include "Display.h"
+//#include "Display.h"
 #include "WidgetTable.h"
 
 using namespace std;
@@ -19,6 +19,7 @@ Control::Control(MikeSimulator * p, int starting_bid)
 	std::cout << "Control constructed. Starting bid: " << starting_bid << std::endl;
 	userInterface = new UserInterface(this, /*p,*/ starting_bid);
 	data = new Data(this, starting_bid);
+	this->rePriceWidTable();	//this works just here. calling it in the WidgetTable or UserInterface constructor throws exception
 }
 
 void Control::MainLoop()
@@ -150,6 +151,14 @@ void Control::CallbkUserInt(UserInterface * p, BtnPressed btn,
 void Control::CallbkWidTable(){
 	std::cout << "\ncbkOne called" << std::endl;
 	
+	
+
+
+	
+	
+	
+	
+	
 	//below copied from WidgeTable - has to be refactored:
 	/*
 	//this callback is set inside the WidgetTable::SetSize function!!
@@ -168,7 +177,44 @@ void Control::CallbkWidTable(){
 	*/
 }
 
-//Helpler functions for other classes:
+void Control::CallbkWidTable(int row, int col, long price) {
+	
+	using namespace std;
+
+	cout << "\n Manual Order Entered!\n";
+	cout << "Implement this!" << endl;
+	cout << "Price: " << price << "\n Order Type: " << col << endl;
+	cout << "Row: " << row << endl;
+	
+//	std::cout << "\ncbkOne called" << std::endl;
+
+
+
+
+
+
+
+
+
+	//below copied from WidgeTable - has to be refactored:
+	/*
+	//this callback is set inside the WidgetTable::SetSize function!!
+	My_fl_button * myButton = (My_fl_button*)w;		//myButton is the button that was pressed
+	WidgetTable * thisTable = (WidgetTable*)p;		//thisTable is the table in which the button was pressed
+	UserInterface * myUI = thisTable->GetUserInterface();	//myUI is the UserInterface in which the table is created
+	MikeSimulator * mySimulator = myUI->GetMikeSim();
+
+	mySimulator->GetControl()->CallbkWidTable();
+	//send the information to Control:
+	//What price level was pressed?:
+	int rowPressed = myButton->y_pos;		//this is the row in which the button was pressed
+	long price = thisTable->PriceOfRow(rowPressed);
+	int OrderType = myButton->x_pos;
+	mySimulator->GetControl()->ManualOrder(OrderType, price);
+	*/
+}
+
+//Helpler functions for other+ classes:
 
 void Control::rePriceWidTable()
 //UNDER CONSTRUCTION
@@ -198,13 +244,23 @@ void Control::rePriceWidTable()
 	pUI->m_window1->show();
 
 	//populate price column with prices:
+	
+	pUI->GetTable()->ClearColumn(6);	//clear the bid and ask columns
+	pUI->GetTable()->ClearColumn(7);
 	pUI->GetTable()->PopPriceCol(/*mikesimulator->GetDisplay()->GetWindow()->GetTable()*/);
+
+	//trying out if function works:
+	//pUI->GetTable()->ClearRow(100);
+	
+	
 	//modify slider in UserInterface:
 	//update the slider minimum and maximum settings:
 	//setting initial Slider max/min values to that of bid/ask - offset:
 	pUI->m_slider1->minimum((double)data->GetBidPrice() + ((pTable->GetRows()) / 2) - 3 /* 3 offset for safety*/);
 	pUI->m_slider1->maximum((double)data->GetBidPrice() - ((pTable->GetRows()) / 2) + 3 /* 3 offset for safety*/);
 	pUI->m_slider1->value((double)data->GetBidPrice());
+
+	
 }
 
 

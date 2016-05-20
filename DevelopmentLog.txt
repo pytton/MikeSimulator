@@ -1,3 +1,9 @@
+Currently working on:
+
+
+
+
+
 TODO:
 
 1.Move callback function details from UserInterface and WidgetTable to Control.
@@ -13,17 +19,20 @@ Clean up the mess that the current solution is.
 	one to connect to IB API
 	second to pull and display in console bid/ask of SPY.
 
-4.Change UserInterface so that it is created from Control class instead of
-mikeSimulator. Create a new constructor taking Data and Control pointers instead
-of mikesimulator pointers. - DONE
+5. Move slider and up/down controls from UserInterface to separate window.
+UserInterface to be used in conjunction with WidgetTable only.
 
-Currently working on:
-moving callback from WidgetTable to Control.
-DO THIS NOW:
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+DONE:
+
+moving callback from WidgetTable to Control. - DONE
+change callback so that WidgetTable passes some data to Control: - DONE
 void UserInterface::rePriceWidTable(Fl_Widget *w, void*p) has to be moved from 
 UserInterface to Control - DONE
 
+4.Change UserInterface so that it is created from Control class instead of
+mikeSimulator. Create a new constructor taking Data and Control pointers instead
+of mikesimulator pointers. - DONE
 
 this->MainLoop(); inside void Control::m_up_btn_cb(UserInterface * p) is throwing an unhandled exception;
 problem was in void Control::printCurrentAll() - fixed now - DONE

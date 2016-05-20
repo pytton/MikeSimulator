@@ -24,7 +24,7 @@
 
 
 class WidgetTable;	//forward declaration
-class Display;
+//class Display;
 class MikeSimulator;
 class Control;
 
@@ -82,7 +82,7 @@ private:
 	WidgetTable *m_pTable;		//this replaces regular Fl_Table with my custom one	
 	Control * m_pControl;
 	MikeSimulator * ptr_to_mikesimulator;
-	Display * m_pDisplay;	//points to object creating this object
+//	Display * m_pDisplay;	//points to object creating this object
 	Fl_Button* m_myExtraBtn;
 	Fl_Text_Buffer * textBuffer;
 	Fl_Text_Display * text;

@@ -40,11 +40,7 @@ public:
 		int number_rows
 		
 		);
-	//WidgetTable(
-	//	UserInterface * pUserInterface,
-	//	int top_row_price,
-	//	int number_rows,
-	//	int x, int y, int w, int h, const char *l);
+
 	WidgetTable(
 		int x, int y, int w, int h, const char *l,
 		UserInterface * pUserInterface,
@@ -65,8 +61,11 @@ public:
 	
 	void printInTable(int row, int col, std::string text);	//row = 0 is first row!
 	Fl_Widget * GetElement(int nRow, int nCol);	//returns a pointer to the cell in the table at nRow nCol
-	void SetSize(int newrows, int newcols, WidgetTable * mytable, std::vector <std::string> col_names = { "" }, std::vector<std::string> button_names = { "" });	//fills the table with cells:
+	void SetSize(int newrows, int newcols, WidgetTable * mytable, /*std::vector <std::string> col_names = { "" },*/ std::vector<std::string> button_names = { "" });	//fills the table with cells:
 	void WidgetTable::PopPriceCol(/*WidgetTable * myTable*/); //populates the Price column with prices based on current TopRowPrice
+	void ClearColumn(int column);	//clears provided column of all text that might have been left behind by the previous draw - for use with Control::rePriceWidTable
+	void ClearRow(int row);	//as above, but for clearing a row
+	
 	int RowOfPrice(long price);	//given price - returns the row in which that price is displayed in WidgetTable
 	long PriceOfRow(int row);	//given the row - returns what price is currently printed in that row
 

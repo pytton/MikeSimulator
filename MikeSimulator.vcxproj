@@ -21,9 +21,13 @@
   <ItemGroup>
     <ClInclude Include="src\Control.h" />
     <ClInclude Include="src\Data.h" />
-    <ClInclude Include="src\Display.h" />
+    <ClInclude Include="src\Display.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="src\FLUID\FluidInterface.h" />
-    <ClInclude Include="src\MikeOrder.h" />
+    <ClInclude Include="src\MikeOrder.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="src\MikeOrderBook.h" />
     <ClInclude Include="src\MikeSimulator.h" />
     <ClInclude Include="src\MktSnapshot.h" />
@@ -35,10 +39,14 @@
   <ItemGroup>
     <ClCompile Include="src\Control.cpp" />
     <ClCompile Include="src\Data.cpp" />
-    <ClCompile Include="src\Display.cpp" />
+    <ClCompile Include="src\Display.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="src\FLUID\FluidInterface.cxx" />
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\MikeOrder.cpp" />
+    <ClCompile Include="src\MikeOrder.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="src\MikeOrderBook.cpp" />
     <ClCompile Include="src\MikeSimulator.cpp" />
     <ClCompile Include="src\UserInterface.cpp" />

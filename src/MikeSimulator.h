@@ -3,11 +3,11 @@
 
 #include "Data.h"
 #include "Control.h"
-#include "Display.h"
+//#include "Display.h"
 
 class Control;
 class Data;
-class Display;
+//class Display;
 
 class MikeSimulator
 {
@@ -26,17 +26,17 @@ public:
 
 	Control *GetControl();
 	Data *GetData();
-	Display *GetDisplay();
+//	Display *GetDisplay();
 
 	void SetControl(Control *pCtrl);
 	void SetData(Data *pData);
-	void SetDisplay(Display *pDisplay);
+//	void SetDisplay(Display *pDisplay);
 
 private:
 	
 	Control *m_pControl;
 	Data *m_pData;
-	Display *m_pDisplay;
+//	Display *m_pDisplay;
 
 };
 

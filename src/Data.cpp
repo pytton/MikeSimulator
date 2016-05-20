@@ -13,7 +13,7 @@ long StringToLong(std::string Input);
 Data::Data(MikeSimulator * p)
 {
 	MikeSimulator * ptr_to_mikesimulator = p;
-	Order = new MikeOrder(p);
+//	Order = new MikeOrder(p);
 	ask_price = 701;
 	bid_price = 700;
 	prev_ask_price = 701;

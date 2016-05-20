@@ -6,7 +6,7 @@ button names as vector<string>,
 number of columns and button columns as a parameter of the constructor.
 
 finish writing SetSize so that button names are named as in the
-provided vector.
+provided vector. - DONE
 
 2016/05/09
 REFACTORING:

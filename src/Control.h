@@ -26,6 +26,7 @@ public:
 	void MainLoop();
 	void ManualOrder(int type, long price);
 	void CallbkWidTable();
+	void CallbkWidTable(int row, int col, long price);
 	void rePriceWidTable();
 	//THIS NEEDS TO BE DONE!!! CURRENTLY JUST COPY/PASTE FROM uSERINTERFACE!!!
 	//updates WidgetTable so that it shows prices around current bid/ask pulled from Data * data

@@ -2,7 +2,7 @@
 //#include <string>
 //#include <vector>
 #include "UserInterface.h"
-#include "Display.h"
+//#include "Display.h"
 #include "MikeSimulator.h"
 #include "WidgetTable.h"
 
@@ -52,6 +52,7 @@ UserInterface::UserInterface(Control * control,
 
 	m_btn_extra->callback(m_extra_btn_cb, (void*) this);	//this changes size of Widgettable
 
+//	m_pTable->PopPriceCol();
 	m_window1->hide();
 	m_window1->redraw();
 	m_window1->show();
@@ -72,9 +73,9 @@ void UserInterface::SetColButNames(std::vector <std::string> &col_names, std::ve
 	col_names.push_back("ORDER\nTYPE");
 	col_names.push_back("ORDER\nPRICE");
 	col_names.push_back("OPEN\nPOSITION");
-	//col_names.push_back("OPEN\nP/L");
-	//col_names.push_back("CLOSED\nP/L");
-	//col_names.push_back("TOTAL\nP/L");
+	col_names.push_back("OPEN\nP/L");
+	col_names.push_back("CLOSED\nP/L");
+	col_names.push_back("TOTAL\nP/L");
 
 	button_names.push_back("CXL");
 	button_names.push_back("B LMT");

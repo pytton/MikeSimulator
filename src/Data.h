@@ -3,12 +3,17 @@
 
 #include "MktSnapshot.h"	//for Price and MktSnapshot
 //#include "Pointers.h"
-#include "Display.h"
-#include "MikeOrder.h"
-
+//#include "Display.h"
+//#include "MikeOrder.h"
+#include "MikeSimulator.h"
+#include "UserInterface.h"
 
 class Control;
 class MikeOrder;
+class Data;
+class Control;
+//class Pointers;
+class MikeSimulator;
 
 class Data	//stores all data used by program
 {
