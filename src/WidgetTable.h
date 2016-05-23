@@ -1,8 +1,10 @@
 #ifndef _WidgetTable_H_INCLUDED_
 #define _WidgetTable_H_INCLUDED_
 
-#include "FLUID/FluidInterface.h"
+//#include "FLUID/FluidInterface.h"
 //#include "Pointers.h"
+
+#include "UserInterface.h"
 
 #include <iostream>
 #include <sstream>
@@ -31,15 +33,14 @@ protected:
 public:
 	//constructor:
 
-	WidgetTable(
-		
-
-		int x,int y,int w,int h,const char *l,
-		UserInterface * pUserInterface,
-		int top_row_price,
-		int number_rows
-		
-		);
+	//WidgetTable(
+	//	
+	//	int x,int y,int w,int h,const char *l,
+	//	UserInterface * pUserInterface,
+	//	int top_row_price,
+	//	int number_rows
+	//	
+	//	);
 
 	WidgetTable(
 		int x, int y, int w, int h, const char *l,

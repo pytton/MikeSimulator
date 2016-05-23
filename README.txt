@@ -1,3 +1,5 @@
+THIS COPY OF WHOLE SOLUTION FOR TRYING OUT IDEAS BEFORE MOVING THEM TO THE REAL PROJECT
+
 2016/05/16
 Refactoring (almost?) finished.
 Added new constructor for WidgetTable that enables to provide

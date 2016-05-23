@@ -1,5 +1,8 @@
 Currently working on:
-
+Move slider and up/down buttons as well as mostly everything
+out of UserInterface into a separate window. possibly window2.
+or create new one in FLUID.
+have WidgetTable have its very own window.
 
 
 

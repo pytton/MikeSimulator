@@ -1,8 +1,8 @@
 #include <sstream> //replaces cout
 #include <string>
 #include "UserInterface.h"
-#include "Display.h"
-#include "MikeSimulator.h"
+//#include "Display.h"
+//#include "MikeSimulator.h"
 #include "WidgetTable.h"
 
 #define PRICECOLUMN 5 //in which column should the price be printed? Used by PopPriceCol
@@ -11,31 +11,31 @@
 //WIDGETTABLE:
 //CONSTRUCTOR:
 
-WidgetTable::WidgetTable(
-	int x, int y, int w, int h, const char *l,
-	UserInterface * pUserInterface,
-	int top_row_price,
-	int number_rows
-
-	) : Fl_Table_Row(x, y, w, h, l)
-{
-	ptr_to_UserInterface = pUserInterface;
-
-	ButtonColsNumber = 5;	//how many columns of buttons?
-	TopRowPrice = top_row_price;
-//	table_rows, table_cols = 20;
-	col_header(1);
-	col_resize(1);
-	col_header_height(40);
-	row_header(1);
-	row_resize(0);
-	row_header_width(40);
-	end();
-
-	SetCols(15);
-	SetRows(number_rows);
-	SetSize(GetRows(), GetCols(), this);		//this needs to be called to construct all the cells of WidgetTable
-}
+//WidgetTable::WidgetTable(
+//	int x, int y, int w, int h, const char *l,
+//	UserInterface * pUserInterface,
+//	int top_row_price,
+//	int number_rows
+//
+//	) : Fl_Table_Row(x, y, w, h, l)
+//{
+//	ptr_to_UserInterface = pUserInterface;
+//
+//	ButtonColsNumber = 5;	//how many columns of buttons?
+//	TopRowPrice = top_row_price;
+////	table_rows, table_cols = 20;
+//	col_header(1);
+//	col_resize(1);
+//	col_header_height(40);
+//	row_header(1);
+//	row_resize(0);
+//	row_header_width(40);
+//	end();
+//
+//	SetCols(15);
+//	SetRows(number_rows);
+//	SetSize(GetRows(), GetCols(), this);		//this needs to be called to construct all the cells of WidgetTable
+//}
 
 WidgetTable::WidgetTable(
 	int x, int y, int w, int h, const char *l,
@@ -385,7 +385,7 @@ void WidgetTable::button_cb(Fl_Widget *w, void * p)
 	long price = thisTable->PriceOfRow(rowPressed);
 	int colPressed = myButton->x_pos;
 	
-	thisTable->ptr_to_UserInterface->GetControl()->CallbkWidTable(rowPressed, colPressed, price);
+	thisTable->ptr_to_UserInterface->CallbkWidTable(rowPressed, colPressed, price);
 	
 	
 //	thisTable->ptr_to_UserInterface->GetControl()->ManualOrder(OrderType, price);

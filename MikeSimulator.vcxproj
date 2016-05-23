@@ -25,14 +25,16 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="src\FLUID\FluidInterface.h" />
+    <ClInclude Include="src\FLUID\FluidPriceControl.h" />
     <ClInclude Include="src\MikeOrder.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClInclude>
-    <ClInclude Include="src\MikeOrderBook.h" />
     <ClInclude Include="src\MikeSimulator.h" />
-    <ClInclude Include="src\MktSnapshot.h" />
-    <ClInclude Include="src\Pointers.h" />
-    <ClInclude Include="src\resource.h" />
+    <ClInclude Include="src\MktSnapshot.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="src\PositionBook.h" />
+    <ClInclude Include="src\PriceControlUI.h" />
     <ClInclude Include="src\UserInterface.h" />
     <ClInclude Include="src\WidgetTable.h" />
   </ItemGroup>
@@ -43,24 +45,30 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="src\FLUID\FluidInterface.cxx" />
+    <ClCompile Include="src\FLUID\FluidPriceControl.cxx" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\MikeOrder.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="src\MikeOrderBook.cpp" />
     <ClCompile Include="src\MikeSimulator.cpp" />
+    <ClCompile Include="src\PositionBook.cpp" />
+    <ClCompile Include="src\PriceControlUI.cpp" />
     <ClCompile Include="src\UserInterface.cpp" />
     <ClCompile Include="src\WidgetTable.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="DevelopmentLog.txt" />
+    <Text Include="Old Code.txt" />
     <Text Include="README.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StructureOfCode.ppt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{E37299F4-9F31-4641-98B7-4EEE53301711}</ProjectGuid>
     <RootNamespace>MikeSimulator</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
-    <ProjectName>MikeSimulator</ProjectName>
+    <ProjectName>MikeSimulator-experiment</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

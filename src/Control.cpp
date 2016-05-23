@@ -1,17 +1,12 @@
 #include "Control.h"
-#include <iostream>
-#include "MikeSimulator.h"
-#include "Data.h"
-//#include "Display.h"
-#include "WidgetTable.h"
 
 using namespace std;
 
-Control::Control(MikeSimulator * p)
-{
-	ptr_to_mikesimulator = p;
-//	userInterface = new UserInterface(this, ptr_to_mikesimulator);
-}
+//Control::Control(MikeSimulator * p)
+//{
+//	ptr_to_mikesimulator = p;
+////	userInterface = new UserInterface(this, ptr_to_mikesimulator);
+//}
 
 Control::Control(MikeSimulator * p, int starting_bid)
 {
@@ -20,6 +15,9 @@ Control::Control(MikeSimulator * p, int starting_bid)
 	userInterface = new UserInterface(this, /*p,*/ starting_bid);
 	data = new Data(this, starting_bid);
 	this->rePriceWidTable();	//this works just here. calling it in the WidgetTable or UserInterface constructor throws exception
+
+	m_pPriceControlUI = new PriceControlUI(this, starting_bid);
+
 }
 
 void Control::MainLoop()
@@ -85,7 +83,9 @@ void Control::ManualOrder(int type, long price)
 
 }
 
-//CALLBACKS FROM USERINTERFACE HANDLED HERE:
+//CALLBACKS 
+
+//USERINTERFACE HANDLED HERE:
 //btn chooses what to do, UserInterface *p
 //provides the data, parameters optional
 void Control::CallbkUserInt(UserInterface * p, BtnPressed btn,
@@ -93,8 +93,79 @@ void Control::CallbkUserInt(UserInterface * p, BtnPressed btn,
 {
 	if (btn == UPBTN)
 	{
+		//cout << "enum type callback called" << endl;
+		//UserInterface * myUserInt = (UserInterface*)p;
+		//Data * myData = data;
+		////change bid ask prices:
+		//myData->SetPrevAskPrice(myData->GetAskPrice());
+		//myData->SetPrevBidPrice(myData->GetBidPrice());
+		//myData->SetAskPrice(myData->GetAskPrice() + 1);
+		//myData->SetBidPrice(myData->GetBidPrice() + 1);
+		////update slider value:
+		//myUserInt->Getm_slider1()->value((double)myData->GetBidPrice());
+		////do something:
+		////MainLoop() crashes due to bad pointers - has to be fixed
+		//this->MainLoop();
+
+	}
+	if (btn == DOWNBTN) {
+		//REFACTORING COMPLETE!
+		//cout << "refactored  m_down_btn_cb called" << endl;
+		//UserInterface * myUserInt = (UserInterface*)p;
+		//Data * myData = data;
+		////change bid ask prices:
+		//myData->SetPrevAskPrice(myData->GetAskPrice());
+		//myData->SetPrevBidPrice(myData->GetBidPrice());
+		//myData->SetAskPrice(myData->GetAskPrice() - 1);
+		//myData->SetBidPrice(myData->GetBidPrice() - 1);
+		////update slider value:
+		//myUserInt->Getm_slider1()->value((double)myData->GetBidPrice());
+		////do something:
+		//this->MainLoop();
+	}
+	if (btn == SLIDER1)
+	{
+		//UserInterface * myUserInt = (UserInterface*)p;
+		//Fl_Value_Slider * mySlider = myUserInt->Getm_slider1();
+		//Data * myData = data;
+		//Control * myControl = this;
+		//double sliderVal = mySlider->value();
+
+		////change bid ask prices:
+		//myData->SetPrevAskPrice(myData->GetAskPrice());
+		//myData->SetPrevBidPrice(myData->GetBidPrice());
+		//long differenceBidAsk;	//preserve bid ask spread
+		//differenceBidAsk = myData->GetAskPrice() - myData->GetBidPrice();
+		//myData->SetAskPrice((long)sliderVal + differenceBidAsk);
+		//myData->SetBidPrice((long)sliderVal);
+		////do something:
+		//myControl->MainLoop();
+	}
+	if (btn == EXTRABTN)
+	{
+		cout << "Extra button pressed - implement this!!!!" << endl;
+		rePriceWidTable();
+	}
+}
+//WIDGETTABLE:
+void Control::CallbkWidTable(int row, int col, long price) 
+{	
+	using namespace std;
+
+	cout << "\n Manual Order Entered!\n";
+	cout << "Implement this!" << endl;
+	cout << "Price: " << price << "\n Order Type: " << col << endl;
+	cout << "Row: " << row << endl;
+}
+//PRICECONTROLUI
+void Control::CallbkPriceControlUI(PriceControlUI * p, BtnPressed btn, Fl_Widget * widgetPressed, int parameter1, int parameter2, double parameter3)
+{
+	if (btn == UPBTN)
+	{
+		//REFACTOR THIS:
+
 		cout << "enum type callback called" << endl;
-		UserInterface * myUserInt = (UserInterface*)p;
+		PriceControlUI * myPriceControl = (PriceControlUI*)p;
 		Data * myData = data;
 		//change bid ask prices:
 		myData->SetPrevAskPrice(myData->GetAskPrice());
@@ -102,31 +173,34 @@ void Control::CallbkUserInt(UserInterface * p, BtnPressed btn,
 		myData->SetAskPrice(myData->GetAskPrice() + 1);
 		myData->SetBidPrice(myData->GetBidPrice() + 1);
 		//update slider value:
-		myUserInt->Getm_slider1()->value((double)myData->GetBidPrice());
+		myPriceControl->Getm_slider1()->value((double)myData->GetBidPrice());
 		//do something:
 		//MainLoop() crashes due to bad pointers - has to be fixed
 		this->MainLoop();
 
 	}
 	if (btn == DOWNBTN) {
-		//REFACTORING COMPLETE!
+		//REFACTOR THIS:
+
 		cout << "refactored  m_down_btn_cb called" << endl;
-		UserInterface * myUserInt = (UserInterface*)p;
+		PriceControlUI * myPriceControl = (PriceControlUI*)p;
 		Data * myData = data;
 		//change bid ask prices:
 		myData->SetPrevAskPrice(myData->GetAskPrice());
 		myData->SetPrevBidPrice(myData->GetBidPrice());
 		myData->SetAskPrice(myData->GetAskPrice() - 1);
 		myData->SetBidPrice(myData->GetBidPrice() - 1);
-		//update slider value:
-		myUserInt->Getm_slider1()->value((double)myData->GetBidPrice());
+		//update slider value:		
+		myPriceControl->Getm_slider1()->value((double)myData->GetBidPrice());
 		//do something:
 		this->MainLoop();
 	}
 	if (btn == SLIDER1)
 	{
-		UserInterface * myUserInt = (UserInterface*)p;
-		Fl_Value_Slider * mySlider = myUserInt->Getm_slider1();
+		//REFACTOR COMPLETE
+
+		PriceControlUI * myPriceControl = (PriceControlUI*)p;
+		Fl_Value_Slider * mySlider = (Fl_Value_Slider*) widgetPressed;
 		Data * myData = data;
 		Control * myControl = this;
 		double sliderVal = mySlider->value();
@@ -141,77 +215,7 @@ void Control::CallbkUserInt(UserInterface * p, BtnPressed btn,
 		//do something:
 		myControl->MainLoop();
 	}
-	if (btn == EXTRABTN)
-	{
-		cout << "Extra button pressed - implement this!!!!" << endl;
-		rePriceWidTable();
-	}
-}
 
-void Control::CallbkWidTable(){
-	std::cout << "\ncbkOne called" << std::endl;
-	
-	
-
-
-	
-	
-	
-	
-	
-	//below copied from WidgeTable - has to be refactored:
-	/*
-	//this callback is set inside the WidgetTable::SetSize function!!
-	My_fl_button * myButton = (My_fl_button*)w;		//myButton is the button that was pressed
-	WidgetTable * thisTable = (WidgetTable*)p;		//thisTable is the table in which the button was pressed
-	UserInterface * myUI = thisTable->GetUserInterface();	//myUI is the UserInterface in which the table is created
-	MikeSimulator * mySimulator = myUI->GetMikeSim();
-
-	mySimulator->GetControl()->CallbkWidTable();
-	//send the information to Control:
-	//What price level was pressed?:
-	int rowPressed = myButton->y_pos;		//this is the row in which the button was pressed
-	long price = thisTable->PriceOfRow(rowPressed);
-	int OrderType = myButton->x_pos;
-	mySimulator->GetControl()->ManualOrder(OrderType, price);
-	*/
-}
-
-void Control::CallbkWidTable(int row, int col, long price) {
-	
-	using namespace std;
-
-	cout << "\n Manual Order Entered!\n";
-	cout << "Implement this!" << endl;
-	cout << "Price: " << price << "\n Order Type: " << col << endl;
-	cout << "Row: " << row << endl;
-	
-//	std::cout << "\ncbkOne called" << std::endl;
-
-
-
-
-
-
-
-
-
-	//below copied from WidgeTable - has to be refactored:
-	/*
-	//this callback is set inside the WidgetTable::SetSize function!!
-	My_fl_button * myButton = (My_fl_button*)w;		//myButton is the button that was pressed
-	WidgetTable * thisTable = (WidgetTable*)p;		//thisTable is the table in which the button was pressed
-	UserInterface * myUI = thisTable->GetUserInterface();	//myUI is the UserInterface in which the table is created
-	MikeSimulator * mySimulator = myUI->GetMikeSim();
-
-	mySimulator->GetControl()->CallbkWidTable();
-	//send the information to Control:
-	//What price level was pressed?:
-	int rowPressed = myButton->y_pos;		//this is the row in which the button was pressed
-	long price = thisTable->PriceOfRow(rowPressed);
-	int OrderType = myButton->x_pos;
-	mySimulator->GetControl()->ManualOrder(OrderType, price);
-	*/
 }
 
 //Helpler functions for other+ classes:
@@ -256,9 +260,19 @@ void Control::rePriceWidTable()
 	//modify slider in UserInterface:
 	//update the slider minimum and maximum settings:
 	//setting initial Slider max/min values to that of bid/ask - offset:
-	pUI->m_slider1->minimum((double)data->GetBidPrice() + ((pTable->GetRows()) / 2) - 3 /* 3 offset for safety*/);
-	pUI->m_slider1->maximum((double)data->GetBidPrice() - ((pTable->GetRows()) / 2) + 3 /* 3 offset for safety*/);
-	pUI->m_slider1->value((double)data->GetBidPrice());
+	GetPriceControlUI()->Getm_slider1()->minimum((double)data->GetBidPrice() + ((pTable->GetRows()) / 2) - 3 /* 3 offset for safety*/);
+	GetPriceControlUI()->Getm_slider1()->maximum((double)data->GetBidPrice() - ((pTable->GetRows()) / 2) + 3 /* 3 offset for safety*/);
+	GetPriceControlUI()->Getm_slider1()->value((double)data->GetBidPrice());
+	
+	
+	
+	//*************************************************************************
+	//this commented out after moving slider to seperate window - kept for reference
+	//pUI->m_slider1->minimum((double)data->GetBidPrice() + ((pTable->GetRows()) / 2) - 3 /* 3 offset for safety*/);
+	//pUI->m_slider1->maximum((double)data->GetBidPrice() - ((pTable->GetRows()) / 2) + 3 /* 3 offset for safety*/);
+	//pUI->m_slider1->value((double)data->GetBidPrice());
+	//*****************************************************************************
+
 
 	
 }

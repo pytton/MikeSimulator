@@ -30,24 +30,24 @@ UserInterface::UserInterface(Control * control,
 	cout << col_names[0] << endl;
 	cout << button_names[3] << endl;
 
-//	m_pTable = new WidgetTable(this, (bid_price +100), 200, 65, 0, 920, 495, "widgettable");
-//	m_pTable = new WidgetTable(65, 0, 920, 495, "widgettable", this, (bid_price + 100), 200);
+
 	m_pTable = new WidgetTable(65, 0, 920, 495, "widgettable", this, (bid_price + 100), 200, 15, 5, col_names, button_names);
 	//setting up the textdisplay with textbuffer (in window2):
-	textBuffer = new Fl_Text_Buffer();
-	text_display->buffer(textBuffer);
+	//textBuffer = new Fl_Text_Buffer();
+	//text_display->buffer(textBuffer);
+
 	//setting initial Slider max/min values to that of bid/ask - offset:
-	m_slider1->minimum(bid_price + ((m_pTable->GetRows()) / 2));
-	m_slider1->maximum(bid_price - ((m_pTable->GetRows()) / 2));
-	m_slider1->value(bid_price);
+	//m_slider1->minimum(bid_price + ((m_pTable->GetRows()) / 2));
+	//m_slider1->maximum(bid_price - ((m_pTable->GetRows()) / 2));
+	//m_slider1->value(bid_price);
 	//below just playing with creating new widgets outside of fluid:
 
 	m_window1->end();
 
 	//SETTING CALLBACKS:
-	m_btn_up->callback(m_up_btn_cb, (void*)this);
-	m_btn_down->callback(m_down_btn_cb, (void*) this);	//changed
-	m_slider1->callback(m_slider1_cb, (void*) this);	//changed - works?
+	//m_btn_up->callback(m_up_btn_cb, (void*)this);
+	//m_btn_down->callback(m_down_btn_cb, (void*) this);	//changed
+	//m_slider1->callback(m_slider1_cb, (void*) this);	//changed - works?
 	m_btn_next->callback(experimental_cb, (void*)this);
 
 	m_btn_extra->callback(m_extra_btn_cb, (void*) this);	//this changes size of Widgettable
@@ -89,35 +89,43 @@ void UserInterface::show()
 //	m_window2->show();
 }
 
+
+
 //CALLBACKS:
 void UserInterface::m_slider1_cb(Fl_Widget *w, void * p)
 {	// void *p should be 'this' of UserInterface - it should be set up in
 	//UserInterface constructor
-	UserInterface * myUserInt = (UserInterface*)p;
+	//UserInterface * myUserInt = (UserInterface*)p;
 
-	myUserInt->m_pControl->CallbkUserInt(myUserInt, SLIDER1);
+	//myUserInt->m_pControl->CallbkUserInt(myUserInt, SLIDER1);
 }
 void UserInterface::m_up_btn_cb(Fl_Widget *w, void * p)
 {
-	UserInterface * myUserInt = (UserInterface*)p;
-
-//	myUserInt->m_pControl->m_up_btn_cb(myUserInt);
-
-	myUserInt->m_pControl->CallbkUserInt(myUserInt, UPBTN);
+//	UserInterface * myUserInt = (UserInterface*)p;
+//
+////	myUserInt->m_pControl->m_up_btn_cb(myUserInt);
+//
+//	myUserInt->m_pControl->CallbkUserInt(myUserInt, UPBTN);
 	//REFACTORING COMPLETE!!
 }
 void UserInterface::m_down_btn_cb(Fl_Widget *w, void * p)
 {
-	UserInterface * myUserInt = (UserInterface*)p;
+	//UserInterface * myUserInt = (UserInterface*)p;
 
-	//myUserInt->m_pControl->m_down_btn_cb(myUserInt);
-	myUserInt->m_pControl->CallbkUserInt(myUserInt, DOWNBTN);
+	////myUserInt->m_pControl->m_down_btn_cb(myUserInt);
+	//myUserInt->m_pControl->CallbkUserInt(myUserInt, DOWNBTN);
 	//REFACTORING COMPLETE!!
 }
 void UserInterface::m_extra_btn_cb(Fl_Widget *w, void * p)
 {
 	UserInterface * myUserInt = (UserInterface*)p;
 	myUserInt->m_pControl->CallbkUserInt(myUserInt, EXTRABTN);
+}
+
+//WidgetTable callback:
+void UserInterface::CallbkWidTable(int rowPressed, int colPressed, long price)
+{
+	GetControl()->CallbkWidTable(rowPressed, colPressed, price);
 }
 
 //old callback kept for reference:

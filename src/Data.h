@@ -8,14 +8,16 @@
 #include "MikeSimulator.h"
 #include "UserInterface.h"
 
+#include "PositionBook.h"
+
 class Control;
 class MikeOrder;
 class Data;
-class Control;
-//class Pointers;
 class MikeSimulator;
 
-class Data	//stores all data used by program
+
+
+class Data	//stores Market data used by program
 {
 
 public:
@@ -25,7 +27,7 @@ public:
 
 	MikeSimulator * ptr_to_mikesimulator;	//pointer to class creating this class
 	//member functions:
-	void MktSnapshot();	//loads historical data into memory (from Sample2.txt)
+//	void MktSnapshot();	//loads historical data into memory (from Sample2.txt)
 	void Data::LiveData();	//empty now - TODO	
 	
 
@@ -40,10 +42,10 @@ public:
 	inline void SetPrevAskPrice(long value) { prev_ask_price = value; }
 	inline void SetPrevBidPrice(long value) { prev_bid_price = value; }
 
-	inline MikeOrder * GetMikeOrder() { return Order; }
-	inline void SetMikeOrder(MikeOrder * NewOrder) { Order = NewOrder; }
+//	inline MikeOrder * GetMikeOrder() { return Order; }
+//	inline void SetMikeOrder(MikeOrder * NewOrder) { Order = NewOrder; }
 	//put all marketdata here
-	std::vector<MktSnap>  histSavedData;	//holds historical data saved in a file called "Sample2.txt"
+//	std::vector<MktSnap>  histSavedData;	//holds historical data saved in a file called "Sample2.txt"
 
 private:
 	long ask_price;
@@ -61,15 +63,7 @@ private:
 	MikeOrder * Order;
 };
 
-class MikePosition
-{
-public:
-	long price;
-	long open_amount;
-	long open_pl;
-	long closed_pl;
-	long total_pl;
-};
+
 
 
 

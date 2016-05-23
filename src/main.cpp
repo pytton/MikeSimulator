@@ -117,7 +117,7 @@ Algo - make decisions here (one algo? more algos?)
 
 */
 
-
+#include "PositionBook.h"
 
 
 int main()
@@ -126,6 +126,16 @@ int main()
 	int starting_bid = 500;
 	//std::cin >> starting_bid;
 	MikeSimulator * mikesimulator = new MikeSimulator(starting_bid);
+
+
+	PositionBook myTryoutBook("Tryout", 300, 600);
+
+	MikePosition temp;
+	temp = myTryoutBook.getPosition(350);
+
+	using namespace std;
+
+	cout << "postionbook: " << temp.open_amount << endl;
 
 //	mikesimulator->GetControl()->tryout1();	//trying out if things work
 	

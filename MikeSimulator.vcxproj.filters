@@ -30,19 +30,10 @@
     <ClInclude Include="src\MikeOrder.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\MikeOrderBook.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\MikeSimulator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\MktSnapshot.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Pointers.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\UserInterface.h">
@@ -52,6 +43,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\WidgetTable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FLUID\FluidPriceControl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PriceControlUI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PositionBook.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -71,9 +71,6 @@
     <ClCompile Include="src\MikeOrder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\MikeOrderBook.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\MikeSimulator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -86,6 +83,15 @@
     <ClCompile Include="src\WidgetTable.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\FLUID\FluidPriceControl.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PriceControlUI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PositionBook.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="README.txt">
@@ -94,5 +100,13 @@
     <Text Include="DevelopmentLog.txt">
       <Filter>Documentation</Filter>
     </Text>
+    <Text Include="Old Code.txt">
+      <Filter>Documentation</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StructureOfCode.ppt">
+      <Filter>Documentation</Filter>
+    </None>
   </ItemGroup>
 </Project>

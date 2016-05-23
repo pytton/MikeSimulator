@@ -67,25 +67,28 @@ class UserInterface : public FluidInterface
 
 public:
 	//constructors/destructor:
-	UserInterface(Control * control,/* MikeSimulator * p,*/ double bid_price = 700);
+	UserInterface(Control * control, double starting_bid_price = 700);
 
 	//GETTERS / SETTERS:
 	Control * GetControl() { return m_pControl; }
-	Fl_Value_Slider * Getm_slider1(){ return m_slider1; }
+//	Fl_Value_Slider * Getm_slider1(){ return m_slider1; }
 	inline WidgetTable *GetTable(){return m_pTable;}
 
 	//helper functions
 	void show();
 
+	//WidgetTable callback:
+	void CallbkWidTable(int rowPressed, int colPressed, long price);
+
 private:
 	//members:
 	WidgetTable *m_pTable;		//this replaces regular Fl_Table with my custom one	
 	Control * m_pControl;
-	MikeSimulator * ptr_to_mikesimulator;
+//	MikeSimulator * ptr_to_mikesimulator;
 //	Display * m_pDisplay;	//points to object creating this object
 	Fl_Button* m_myExtraBtn;
-	Fl_Text_Buffer * textBuffer;
-	Fl_Text_Display * text;
+	//Fl_Text_Buffer * textBuffer;
+	//Fl_Text_Display * text;
 	std::stringstream textDisplayString;
 	int bid_price;
 
@@ -97,6 +100,8 @@ private:
 	static void m_extra_btn_cb(Fl_Widget * w, void * p);
 	static void m_up_btn_cb(Fl_Widget *w, void * p);
 	static void m_slider1_cb(Fl_Widget *w, void * p);
+
+
 
 	//helpers:
 	//sets the names of column headers and buttons inside WidgetTable:
