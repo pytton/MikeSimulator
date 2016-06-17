@@ -8,7 +8,7 @@ class FluidInterface {open
   } {
     Fl_Window m_window1 {
       label window1 open
-      xywh {2582 167 989 648} type Double visible
+      xywh {367 78 981 640} type Double visible
     } {
       Fl_Value_Input m_starting_bid {
         label {Starting Bid}
@@ -74,13 +74,21 @@ class FluidInterface {open
         xywh {495 501 45 24} labelsize 10 textsize 12
       }
       Fl_Output m_TotPL {
-        label {Total P/L:} selected
+        label {Total P/L:}
         xywh {600 501 45 24} labelsize 10 textsize 12
+      }
+      Fl_Button m_btn_printOrders {
+        label {Print Orders}
+        xywh {685 500 45 30} labelsize 10 align 128
+      }
+      Fl_Button m_btn_checkFills {
+        label {Check Fillls} selected
+        xywh {685 540 45 30} labelsize 10 align 128
       }
     }
     Fl_Window m_window2 {
       label window2 open
-      xywh {2027 103 494 328} type Double visible
+      xywh {-32000 -32000 486 320} type Double hide
     } {
       Fl_Text_Display text_display {
         label text

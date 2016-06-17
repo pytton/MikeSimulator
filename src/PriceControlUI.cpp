@@ -1,3 +1,4 @@
+#include "FLUID\FluidPriceControl.h"
 #include "PriceControlUI.h"
 #include "Control.h"
 
@@ -32,9 +33,20 @@ PriceControlUI::PriceControlUI(Control * control, double starting_bid_price, int
 
 }
 
+void PriceControlUI::setSlider(int value, int max, int min)
+{
+	m_slider1->value(value);
+	m_slider1->maximum(max);
+	m_slider1->minimum(min);
+
+	m_slider1->redraw();
+}
+
 void PriceControlUI::m_down_btn_cb(Fl_Widget * buttonPressed, void * p)
 {
 	PriceControlUI * myPriceControlUI = (PriceControlUI*)p;
+
+	//Fl_Widget * widgetToPass = buttonPressed;
 
 	myPriceControlUI->getControl()->CallbkPriceControlUI(myPriceControlUI, DOWNBTN, buttonPressed);
 }
@@ -54,6 +66,6 @@ void PriceControlUI::m_slider1_cb(Fl_Widget * slider1Pointer, void * p)
 	PriceControlUI * myPriceControlUI = (PriceControlUI*)p;
 
 
-//	myPriceControlUI->m_pControl->CallbkPriceControlUI(myPriceControlUI, SLIDER1, slider1Pointer);
+	myPriceControlUI->m_pControl->CallbkPriceControlUI(myPriceControlUI, SLIDER1, slider1Pointer);
 
 }

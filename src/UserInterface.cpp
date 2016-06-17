@@ -1,3 +1,9 @@
+//WidgetTable callback: void CallbkWidTable(int rowPressed, int colPressed, long price);
+//THIS IS WHERE THE ORDER TYPE IS DETERMINED
+//BASED ON WHICH COLUMN HAS BEEN PRESSED IN WIDGETTABLE
+
+
+
 #include <sstream> //replaces cout
 //#include <string>
 //#include <vector>
@@ -10,9 +16,11 @@ class Control;
 
 //USERINTERFACE:
 
-UserInterface::UserInterface(Control * control, 
-	/*MikeSimulator * p,*/ 
-	double starting_bid_price)	//constructor
+UserInterface::UserInterface(
+	Control * control, 	 
+	double starting_bid_price/*700*/,
+	int numberOfColumns/*15*/,
+	int numberOfButtoncolumns/*5*/)	//constructor
 
 {
 	using namespace std;
@@ -20,37 +28,36 @@ UserInterface::UserInterface(Control * control,
 	bid_price = starting_bid_price;
 	//add remove elements below:
 	m_window1->begin();
+
+	//******************************************************************************************
+	//creating WidgetTable:
 	delete m_table;	//deleting old table supplied by fluid
 	
 	//name the column headers and button names in WidgetTable:
-	std::vector <std::string> col_names;// = { "price" };
-	std::vector <std::string> button_names;// = { "CXL" };
 	SetColButNames(col_names, button_names);
+	//construct new WidgetTable:
+	int top_row_price = bid_price +100, 
+		number_rows = 200, 
+		number_cols = numberOfColumns,
+		how_many_cols_are_buttons = numberOfButtoncolumns;
+	
+	m_pTable = new WidgetTable(65, 0, 920, 495, "widgettable", this, top_row_price, number_rows, 
+		number_cols, how_many_cols_are_buttons, col_names, button_names);
 
-	cout << col_names[0] << endl;
-	cout << button_names[3] << endl;
-
-
-	m_pTable = new WidgetTable(65, 0, 920, 495, "widgettable", this, (bid_price + 100), 200, 15, 5, col_names, button_names);
-	//setting up the textdisplay with textbuffer (in window2):
-	//textBuffer = new Fl_Text_Buffer();
-	//text_display->buffer(textBuffer);
-
-	//setting initial Slider max/min values to that of bid/ask - offset:
-	//m_slider1->minimum(bid_price + ((m_pTable->GetRows()) / 2));
-	//m_slider1->maximum(bid_price - ((m_pTable->GetRows()) / 2));
-	//m_slider1->value(bid_price);
-	//below just playing with creating new widgets outside of fluid:
 
 	m_window1->end();
+	//******************************************************************************************
 
+	//******************
 	//SETTING CALLBACKS:
-	//m_btn_up->callback(m_up_btn_cb, (void*)this);
-	//m_btn_down->callback(m_down_btn_cb, (void*) this);	//changed
-	//m_slider1->callback(m_slider1_cb, (void*) this);	//changed - works?
-	m_btn_next->callback(experimental_cb, (void*)this);
-
+	//******************
+//	m_btn_next->callback(experimental_cb, (void*)this);
 	m_btn_extra->callback(m_extra_btn_cb, (void*) this);	//this changes size of Widgettable
+	m_btn_printOrders->callback(m_printOrders_btn_cb, (void*) this);
+	m_btn_checkFills->callback(m_checkFills_btn_cb, (void*) this);
+
+
+
 
 //	m_pTable->PopPriceCol();
 	m_window1->hide();
@@ -60,6 +67,9 @@ UserInterface::UserInterface(Control * control,
 }
 void UserInterface::SetColButNames(std::vector <std::string> &col_names, std::vector <std::string> &button_names)
 {
+	using namespace std;
+	cout << "UserInterface SetColButNames called" << endl;
+
 	col_names.push_back("CANCEL\nORDER");
 	col_names.push_back("BUY");
 	col_names.push_back("BUY");
@@ -89,33 +99,110 @@ void UserInterface::show()
 //	m_window2->show();
 }
 
+void UserInterface::rePriceWidTable(long bidprice)
+//UNDER CONSTRUCTION
+//Updates prices displayed in WidgetTable to between 100 above and below
+//current bid price in Data class
+//Updates slider in UserInterface to current Bid price
+{
+	UserInterface* pUI = this;
+
+	WidgetTable * pTable = pUI->GetTable();
+
+	//first - make sure that the TopRowPrice is set to 100 above current bid price:
+	
+	pTable->SetTopRowPrice(bidprice + 100);
+	//draw the new widget table:
+	//pTable->SetSize(pTable->GetRows(), pTable->GetCols(), pTable);	//this needs to be called to construct all the cells of WidgetTable																					
+	//pUI->SetTable(pTable);
+	pUI->m_window1->hide();
+	pUI->m_window1->redraw();
+	pUI->m_window1->show();
+
+	//populate price column with prices:
+
+	pUI->GetTable()->ClearColumn(6);	//clear the bid and ask columns
+	pUI->GetTable()->ClearColumn(7);
+	pUI->GetTable()->PopPriceCol();
+
+
+
+	//modify slider in UserInterface:
+	//update the slider minimum and maximum settings:
+	//setting initial Slider max/min values to that of bid/ask - offset:
+
+
+
+	//REFACTOR THIS: (MOVE IT TO CONTROL?)
+
+	//int value, max, min;
+	//value = (int)data->GetBidPrice();
+	//min = (int)data->GetBidPrice() + ((pTable->GetRows()) / 2) - 3 /* 3 offset for safety*/;
+	//max = (int)data->GetBidPrice() - ((pTable->GetRows()) / 2) + 3 /* 3 offset for safety*/;
+
+	//m_pPriceControlUI->setSlider(value, max, min);
+
+
+
+
+
+
+
+
+	//GetPriceControlUI()->Getm_slider1()->minimum((double)data->GetBidPrice() + ((pTable->GetRows()) / 2) - 3 /* 3 offset for safety*/);
+	//GetPriceControlUI()->Getm_slider1()->maximum((double)data->GetBidPrice() - ((pTable->GetRows()) / 2) + 3 /* 3 offset for safety*/);
+	//GetPriceControlUI()->Getm_slider1()->value((double)data->GetBidPrice());
+
+
+
+	//*************************************************************************
+	//this commented out after moving slider to seperate window - kept for reference
+	//pUI->m_slider1->minimum((double)data->GetBidPrice() + ((pTable->GetRows()) / 2) - 3 /* 3 offset for safety*/);
+	//pUI->m_slider1->maximum((double)data->GetBidPrice() - ((pTable->GetRows()) / 2) + 3 /* 3 offset for safety*/);
+	//pUI->m_slider1->value((double)data->GetBidPrice());
+	//*****************************************************************************
+
+
+
+}
 
 
 //CALLBACKS:
-void UserInterface::m_slider1_cb(Fl_Widget *w, void * p)
-{	// void *p should be 'this' of UserInterface - it should be set up in
-	//UserInterface constructor
-	//UserInterface * myUserInt = (UserInterface*)p;
-
-	//myUserInt->m_pControl->CallbkUserInt(myUserInt, SLIDER1);
-}
-void UserInterface::m_up_btn_cb(Fl_Widget *w, void * p)
+//void UserInterface::m_slider1_cb(Fl_Widget *w, void * p)
+//{	// void *p should be 'this' of UserInterface - it should be set up in
+//	//UserInterface constructor
+//	//UserInterface * myUserInt = (UserInterface*)p;
+//
+//	//myUserInt->m_pControl->CallbkUserInt(myUserInt, SLIDER1);
+//}
+void UserInterface::m_printOrders_btn_cb(Fl_Widget * w, void * p)
 {
+	UserInterface * myUserInt = (UserInterface*)p;
+	myUserInt->m_pControl->CallbkUserInt(myUserInt, PRINTORDERSBTN);
+
+}
+void UserInterface::m_checkFills_btn_cb(Fl_Widget * w, void * p)
+{
+	UserInterface * myUserInt = (UserInterface*)p;
+	myUserInt->m_pControl->CallbkUserInt(myUserInt, CHECKFILLS);
+}
+//void UserInterface::m_up_btn_cb(Fl_Widget *w, void * p)
+//{
+////	UserInterface * myUserInt = (UserInterface*)p;
+////
+//////	myUserInt->m_pControl->m_up_btn_cb(myUserInt);
+////
+////	myUserInt->m_pControl->CallbkUserInt(myUserInt, UPBTN);
+//	//REFACTORING COMPLETE!!
+//}
+//void UserInterface::m_down_btn_cb(Fl_Widget *w, void * p)
+//{
 //	UserInterface * myUserInt = (UserInterface*)p;
 //
-////	myUserInt->m_pControl->m_up_btn_cb(myUserInt);
-//
-//	myUserInt->m_pControl->CallbkUserInt(myUserInt, UPBTN);
-	//REFACTORING COMPLETE!!
-}
-void UserInterface::m_down_btn_cb(Fl_Widget *w, void * p)
-{
-	//UserInterface * myUserInt = (UserInterface*)p;
-
-	////myUserInt->m_pControl->m_down_btn_cb(myUserInt);
-	//myUserInt->m_pControl->CallbkUserInt(myUserInt, DOWNBTN);
-	//REFACTORING COMPLETE!!
-}
+//	//myUserInt->m_pControl->m_down_btn_cb(myUserInt);
+//	myUserInt->m_pControl->CallbkUserInt(myUserInt, DOWNBTN);
+//	//REFACTORING COMPLETE!!
+//}
 void UserInterface::m_extra_btn_cb(Fl_Widget *w, void * p)
 {
 	UserInterface * myUserInt = (UserInterface*)p;
@@ -123,28 +210,61 @@ void UserInterface::m_extra_btn_cb(Fl_Widget *w, void * p)
 }
 
 //WidgetTable callback:
+//THIS IS WHERE THE ORDER TYPE IS DETERMINED
+//BASED ON WHICH COLUMN HAS BEEN PRESSED IN WIDGETTABLE
 void UserInterface::CallbkWidTable(int rowPressed, int colPressed, long price)
 {
-	GetControl()->CallbkWidTable(rowPressed, colPressed, price);
+	//FIRST DETERMINE WHAT THE BUTTON PRESSED IN WIDGETTABLE WILL DO:
+	//Currently:
+	//col 0 = cxl, 1 = buylmt, 2 = buystp, 3 = selllmt, 4 =  sellstp
+	MikeOrderType tempOrderType;
+	bool checkForValidOrderType = 1;
+	switch (colPressed)
+	{case 0:
+		tempOrderType = CXLORDER;
+		break;
+	case 1:
+		tempOrderType = BUYLMT;
+		break;
+	case 2:
+		tempOrderType = BUYSTP;
+		break;
+	case 3:
+		tempOrderType = SELLLMT;
+		break;
+	case 4:
+		tempOrderType = SELLSTP;
+		break;
+
+	default:
+		checkForValidOrderType = 0;
+	}
+
+	if (checkForValidOrderType)
+	{
+		GetControl()->CallbkWidTable(rowPressed, colPressed, price, tempOrderType);
+	}
+	else std::cout << "Unhandled type of button pressed!!!" << std::endl;
+	
 }
 
 //old callback kept for reference:
-void UserInterface::experimental_cb(Fl_Widget *w, void * p)
-{
-	using namespace std;
-	cout << "experimental called!" << endl;
-	UserInterface * myInterface = (UserInterface*)p;
-	WidgetTable * myTable = myInterface->GetTable();
-	
-	//	WidgetTable * myTable =(WidgetTable*) p;
-
-	std::string trythis = "mess";
-	int row = 25;
-	int col = 7;
-
-	myTable->printInTable(row, col, trythis/*, myTable*/);
-	myInterface->GetControl()->printCurrentAll();
-}
+//void UserInterface::experimental_cb(Fl_Widget *w, void * p)
+//{
+//	using namespace std;
+//	cout << "experimental called!" << endl;
+//	UserInterface * myInterface = (UserInterface*)p;
+//	WidgetTable * myTable = myInterface->GetTable();
+//	
+//	//	WidgetTable * myTable =(WidgetTable*) p;
+//
+//	std::string trythis = "mess";
+//	int row = 25;
+//	int col = 7;
+//
+//	myTable->printInTable(row, col, trythis/*, myTable*/);
+//	myInterface->GetControl()->printCurrentAll();
+//}
 
 
 

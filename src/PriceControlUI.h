@@ -29,6 +29,10 @@ public:
 	PriceControlUI(Control * control, double starting_bid_price = 700 , int displayedRows = 200);
 
 	Fl_Value_Slider * Getm_slider1() { return m_slider1; }
+
+
+	void setSlider(int value, int max, int min);
+
 private:
 	Control * m_pControl;
 	int bid_price;

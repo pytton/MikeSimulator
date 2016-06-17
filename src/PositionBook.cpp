@@ -1,16 +1,24 @@
 #include "PositionBook.h"
 
-PositionBook::PositionBook(std::string name, long startprice, long endprice)
+//create a <vector> containg all the MikePositions
+//with an index to keep track which positions are active
+//and which empty and never used - for quick access
+//
+PositionBook::PositionBook(std::string name, long highestPrice)
 {
 	positionBook.clear();
-	//MikePosition temp;
-	//temp.open_amount = 0;
 	nameOfBook = name;
 
-	if (startprice < 0) startprice = 0;
-	if (endprice < startprice) endprice = startprice;
-	positionBook.resize(endprice - startprice + 1);
-
+	//create a vector that is big enough to fit all the prices
+	//eg price of 234.73 will be stored in
+	//positionBook[23473]
+	
+	
+	positionBook.resize(highestPrice + 1);
+	for (long i = 0; i <= highestPrice; ++i)
+	{
+		positionBook[i].price = i;
+	}
 
 }
 
@@ -18,15 +26,8 @@ MikePosition PositionBook::getPosition(long priceRequested)
 {
 	MikePosition returnPosition;
 
-	for (long i = 0; i < positionBook.size(); ++i)
-	{
-		if (positionBook[i].price = priceRequested)
-		{
-			returnPosition = positionBook[i];
-		}
-
-
-	}
+	positionBook[priceRequested].isActive = true;
+	returnPosition = positionBook[priceRequested];
 
 
 

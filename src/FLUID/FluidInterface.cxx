@@ -25,18 +25,18 @@ FluidInterface::FluidInterface() {
     } // Fl_Value_Input* m_bottom_limit
     { m_bottom_profit = new Fl_Value_Input(575, 615, 45, 20, "Profit at bottom lim");
     } // Fl_Value_Input* m_bottom_profit
-    //{ m_btn_up = new Fl_Button(255, 540, 65, 40, "Up");
-    //} // Fl_Button* m_btn_up
-    //{ m_btn_down = new Fl_Button(255, 595, 65, 40, "Down");
-    //} // Fl_Button* m_btn_down
+    { m_btn_up = new Fl_Button(255, 540, 65, 40, "Up");
+    } // Fl_Button* m_btn_up
+    { m_btn_down = new Fl_Button(255, 595, 65, 40, "Down");
+    } // Fl_Button* m_btn_down
     { m_btn_next = new Fl_Button(75, 580, 80, 55, "Next");
     } // Fl_Button* m_btn_next
-    //{ m_slider1 = new Fl_Value_Slider(5, 0, 35, 650, "m_slider1");
-    //  m_slider1->minimum(200);
-    //  m_slider1->maximum(0);
-    //  m_slider1->step(1);
-    //  m_slider1->value(100);
-    //} // Fl_Value_Slider* m_slider1
+    { m_slider1 = new Fl_Value_Slider(5, 0, 35, 650, "m_slider1");
+      m_slider1->minimum(200);
+      m_slider1->maximum(0);
+      m_slider1->step(1);
+      m_slider1->value(100);
+    } // Fl_Value_Slider* m_slider1
     { m_btn_extra = new Fl_Button(165, 580, 80, 55, "Extra");
     } // Fl_Button* m_btn_extra
     { m_TotOpenPos = new Fl_Output(240, 501, 45, 24, "Total Open Pos:");
@@ -55,12 +55,20 @@ FluidInterface::FluidInterface() {
       m_TotPL->labelsize(10);
       m_TotPL->textsize(12);
     } // Fl_Output* m_TotPL
+    { m_btn_printOrders = new Fl_Button(685, 500, 45, 30, "Print Orders");
+      m_btn_printOrders->labelsize(10);
+      m_btn_printOrders->align(Fl_Align(FL_ALIGN_WRAP));
+    } // Fl_Button* m_btn_printOrders
+    { m_btn_checkFills = new Fl_Button(685, 540, 45, 30, "Check Fillls");
+      m_btn_checkFills->labelsize(10);
+      m_btn_checkFills->align(Fl_Align(FL_ALIGN_WRAP));
+    } // Fl_Button* m_btn_checkFills
     m_window1->end();
   } // Fl_Double_Window* m_window1
-  //{ m_window2 = new Fl_Double_Window(486, 320, "window2");
-  //  m_window2->user_data((void*)(this));
-  //  { text_display = new Fl_Text_Display(80, 40, 325, 255, "text");
-  //  } // Fl_Text_Display* text_display
-  //  m_window2->end();
-  //} // Fl_Double_Window* m_window2
+  { m_window2 = new Fl_Double_Window(486, 320, "window2");
+    m_window2->user_data((void*)(this));
+    { text_display = new Fl_Text_Display(80, 40, 325, 255, "text");
+    } // Fl_Text_Display* text_display
+    m_window2->end();
+  } // Fl_Double_Window* m_window2
 }

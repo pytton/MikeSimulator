@@ -1,12 +1,9 @@
 #ifndef _UserInterface_H_INCLUDED_
 #define _UserInterface_H_INCLUDED_
 
-//Include only once
-
-//#pragma once
 
 #include "FLUID/FluidInterface.h"
-//#include "Pointers.h"
+
 
 #include <iostream>
 #include <sstream>
@@ -22,30 +19,20 @@
 #include <FL/Fl_Table_Row.H>
 #include <FL/Fl_Text_Display.H>
 
+#include "MikeEnums.h"
 
 class WidgetTable;	//forward declaration
 //class Display;
 class MikeSimulator;
 class Control;
 
-enum BtnPressed	//used for callbacks from UserInterface and WidgetTable
-				//to Control class
-{
-	UPBTN,
-	DOWNBTN,
-	EXTRABTN,
-	SLIDER1,
-	NEXTBTN,
-	PREVBTN,
-};
+
+
 
 class UserInterface : public FluidInterface
 {	//elements of FluidInterface:
 	
 	//Fl_Double_Window *m_window1;
-	//Fl_Double_Window *m_window2;
-
-	//Fl_Button *m_btn_load_data;
 	//Fl_Value_Input *m_starting_bid;
 	//Fl_Value_Input *m_curr_ask;
 	//Fl_Value_Input *m_top_limit;
@@ -54,77 +41,68 @@ class UserInterface : public FluidInterface
 	//Fl_Value_Input *m_curr_bid;
 	//Fl_Value_Input *m_bottom_limit;
 	//Fl_Value_Input *m_bottom_profit;
-	//Fl_Button *m_btn_up;
-	//Fl_Button *m_btn_down;
-	//Fl_Button *m_btn_next;
-	//Fl_Button *m_btn_initAlgo;
-	//Fl_Button *m_set_startBid;
-	//Fl_Button *m_set_topLimit;
-	//Fl_Button *m_set_btmLimit;
-	//Fl_Value_Slider *m_slider1;
-	//Fl_Button *m_btn_extra;	
-	//Fl_Text_Display *text_display;
+	//Fl_Button *m_btn_next;	
+	//Fl_Button *m_btn_extra;
+	//Fl_Output *m_TotOpenPos;
+	//Fl_Output *m_TotOpenPL;
+	//Fl_Output *m_TotClosedPL;
+	//Fl_Output *m_TotPL;
 
 public:
 	//constructors/destructor:
-	UserInterface(Control * control, double starting_bid_price = 700);
+	UserInterface(Control * control,
+		double starting_bid_price = 700,
+		int numberOfColumns = 15,
+		int numberOfButtoncolumns = 5);
 
 	//GETTERS / SETTERS:
 	Control * GetControl() { return m_pControl; }
-//	Fl_Value_Slider * Getm_slider1(){ return m_slider1; }
 	inline WidgetTable *GetTable(){return m_pTable;}
 
 	//helper functions
 	void show();
+	void rePriceWidTable(long bidprice);
 
 	//WidgetTable callback:
-	void CallbkWidTable(int rowPressed, int colPressed, long price);
+	//THIS IS WHERE THE ORDER TYPE IS DETERMINED
+	//BASED ON WHICH COLUMN HAS BEEN PRESSED IN WIDGETTABLE
+	virtual void CallbkWidTable(int rowPressed, int colPressed, long price);
 
-private:
+protected:
 	//members:
 	WidgetTable *m_pTable;		//this replaces regular Fl_Table with my custom one	
 	Control * m_pControl;
-//	MikeSimulator * ptr_to_mikesimulator;
-//	Display * m_pDisplay;	//points to object creating this object
 	Fl_Button* m_myExtraBtn;
-	//Fl_Text_Buffer * textBuffer;
-	//Fl_Text_Display * text;
 	std::stringstream textDisplayString;
 	int bid_price;
 
-	//std::vector <std::string> col_names;// = { "" };
-	//std::vector <std::string> button_names;// = { "" };
+	//these two store the names of columns and buttons:
+	std::vector <std::string> col_names;// = { "" };
+	std::vector <std::string> button_names;// = { "" };
 
 	//CALLBACKS
-	static void m_down_btn_cb(Fl_Widget *w, void * p);
+
 	static void m_extra_btn_cb(Fl_Widget * w, void * p);
-	static void m_up_btn_cb(Fl_Widget *w, void * p);
-	static void m_slider1_cb(Fl_Widget *w, void * p);
+	static void m_printOrders_btn_cb(Fl_Widget *w, void * p);
+	static void m_checkFills_btn_cb(Fl_Widget *w, void * p);
 
-
+	//	static void m_down_btn_cb(Fl_Widget *w, void * p);
+	//	static void m_up_btn_cb(Fl_Widget *w, void * p);
+	//	static void m_slider1_cb(Fl_Widget *w, void * p);
 
 	//helpers:
 	//sets the names of column headers and buttons inside WidgetTable:
-	void SetColButNames(std::vector <std::string> &col_names, std::vector <std::string> &button_names);
+	virtual void SetColButNames(std::vector <std::string> &col_names, std::vector <std::string> &button_names);
+	
 	
 	//OLD CALLBACK FOR REFERENCE:
-	static void experimental_cb(Fl_Widget *w, void * p);	//THIS NEEDS WORK!
+//	static void experimental_cb(Fl_Widget *w, void * p);	//THIS NEEDS WORK!
 
+//	friend class ManualInterface;
+//	friend class Control;
 };
 
 
-//class My_fl_button : public Fl_Button  //with location of button in Fl_Table
-//{
-//public:
-//	//below determines where in the Fl_Table the button is located
-//	//needs to be set inside WidgetTable::SetSize function
-//	int x_pos;	//column of button -> 0 is the first
-//	int y_pos;	//row of button -> 0 is the first
-//
-//	//constructor:
-//	My_fl_button(int x, int y, int w, int h, const char *l);	//x_pos y_pos set to 0 by default
-//
-//};
 
 
 

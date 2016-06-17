@@ -24,12 +24,6 @@
     <ClInclude Include="src\Data.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Display.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\MikeOrder.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\MikeSimulator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -54,6 +48,18 @@
     <ClInclude Include="src\PositionBook.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\MikeOrderBook.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MikeEnums.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ManualInterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MikePositionsOrders.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Control.cpp">
@@ -62,13 +68,7 @@
     <ClCompile Include="src\Data.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Display.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\MikeOrder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\MikeSimulator.cpp">
@@ -92,6 +92,12 @@
     <ClCompile Include="src\PositionBook.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\MikeOrderBook.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ManualInterface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="README.txt">
@@ -108,5 +114,6 @@
     <None Include="StructureOfCode.ppt">
       <Filter>Documentation</Filter>
     </None>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>

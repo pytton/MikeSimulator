@@ -1,57 +1,55 @@
 #ifndef _MIKEORDERBOOK_H_INCLUDED_
 #define _MIKEORDERBOOK_H_INCLUDED_
 
-/*
-	TODO:
-Stores all positions
-Make it so that multiple OrderBooks can exist - each for one strategy
-
-METHODS:
-New Order
-Cancel Order
-
-Check fills -> all positions or in a range (prev bid/ask - current bid/ask)
-Calculate total P/L Position closed P/L etc
-Print in display?
-Cancel All Orders? Flatten Position? - do that later
-
-
-*/
-
-#include "UserInterface.h"
 #include <vector>
 
-struct MikePosition
-{
-	long price;
+#include "MikeEnums.h"
 
-	int order_type;
-	long order_size;
-	long order_price;
-	double open_pl;
-	double closed_pl;
-	double total_pl;
+
+class MikeOrder
+{
+public:
+	MikeOrder();
+	~MikeOrder();
+
+
+	//for future use - for passing orders into outside API
+	long orderId;
+	//BUYLMT, SELLLMT, BUYSTP, SELLSTP
+	MikeOrderType ordertype;
+	long assignedToPosition = 0;
+	long price =0;
+	long amount=0;
+	
 };
 
 class MikeOrderBook
-{//private:
-	std::vector <MikePosition> Orders;
-
+{
 public:
-	//constructors:
-	MikeOrderBook();	
+	MikeOrderBook();
+	~MikeOrderBook();
 
-	void NewOrder();	//adds a new order to the Orderbook
-	void CancelOrder();	//cancels order
-	void CheckFills();	//check fills -> all positions or in a range (prev bid/ask - current bid/ask)
-	void PrintInTable(WidgetTable * table);	//printsout all oreders/positions
+	void newOrder(MikeOrderType type, long orderPrice, long orderAmount);
+	void checkFills(long bidPrice, long askPrice);
+	
+	//prototype function to print out all orders in the console:
+	void printoutAllOrders();
 
-	MikePosition position(int price);
+	//MikeOrder getOrder(long price);
+	//void modifyOrder();
 
-	int ReturnPrice(int pos);
-	int ReturnSomething();
+private:
+	//this array stores all the orders.
+	//figure out how to design this
+	std::vector <MikeOrder> openOrderBook;
+
+	//for generating unique orderIds:
+	long generateID();
 
 };
+
+
+
 
 
 

@@ -21,14 +21,12 @@
   <ItemGroup>
     <ClInclude Include="src\Control.h" />
     <ClInclude Include="src\Data.h" />
-    <ClInclude Include="src\Display.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClInclude>
     <ClInclude Include="src\FLUID\FluidInterface.h" />
     <ClInclude Include="src\FLUID\FluidPriceControl.h" />
-    <ClInclude Include="src\MikeOrder.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClInclude>
+    <ClInclude Include="src\ManualInterface.h" />
+    <ClInclude Include="src\MikeEnums.h" />
+    <ClInclude Include="src\MikeOrderBook.h" />
+    <ClInclude Include="src\MikePositionsOrders.h" />
     <ClInclude Include="src\MikeSimulator.h" />
     <ClInclude Include="src\MktSnapshot.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
@@ -41,15 +39,11 @@
   <ItemGroup>
     <ClCompile Include="src\Control.cpp" />
     <ClCompile Include="src\Data.cpp" />
-    <ClCompile Include="src\Display.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
     <ClCompile Include="src\FLUID\FluidInterface.cxx" />
     <ClCompile Include="src\FLUID\FluidPriceControl.cxx" />
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\MikeOrder.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-    </ClCompile>
+    <ClCompile Include="src\ManualInterface.cpp" />
+    <ClCompile Include="src\MikeOrderBook.cpp" />
     <ClCompile Include="src\MikeSimulator.cpp" />
     <ClCompile Include="src\PositionBook.cpp" />
     <ClCompile Include="src\PriceControlUI.cpp" />
@@ -62,13 +56,14 @@
     <Text Include="README.txt" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram.cd" />
     <None Include="StructureOfCode.ppt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{E37299F4-9F31-4641-98B7-4EEE53301711}</ProjectGuid>
     <RootNamespace>MikeSimulator</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
-    <ProjectName>MikeSimulator-experiment</ProjectName>
+    <ProjectName>MikeSimulator</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -116,8 +111,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>E:\Michael\Documents\Visual Studio 2015\ExternalLibraries\fltk-1.3.3;C:\VisualStudioLibs\fltk-1.3.3;C:\Users\Michael\Code\fltk-1.3.3;$(IncludePath)</IncludePath>
-    <LibraryPath>E:\Michael\Documents\Visual Studio 2015\ExternalLibraries\fltk-1.3.3\lib;C:\VisualStudioLibs\fltk-1.3.3\lib;C:\Users\Michael\Code\fltk-1.3.3 - Copy\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>E:\Michael\Documents\Visual Studio 2015\ExternalLibraries\fltk-1.3.3;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\Michael\Documents\Visual Studio 2015\ExternalLibraries\fltk-1.3.3\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -129,6 +124,7 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>fltkd.lib;wsock32.lib;comctl32.lib;fltkjpegd.lib;fltkimagesd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <FullProgramDatabaseFile>true</FullProgramDatabaseFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

@@ -128,22 +128,6 @@ int main()
 	MikeSimulator * mikesimulator = new MikeSimulator(starting_bid);
 
 
-	PositionBook myTryoutBook("Tryout", 300, 600);
-
-	MikePosition temp;
-	temp = myTryoutBook.getPosition(350);
-
-	using namespace std;
-
-	cout << "postionbook: " << temp.open_amount << endl;
-
-//	mikesimulator->GetControl()->tryout1();	//trying out if things work
-	
-//	mikesimulator->GetControl()->printCurrentAll();
-
-//populate price column with prices:
-//	mikesimulator->GetDisplay()->GetWindow()->GetTable()->PopPriceCol(/*mikesimulator->GetDisplay()->GetWindow()->GetTable()*/);
-
 
 	return Fl::run();
 }

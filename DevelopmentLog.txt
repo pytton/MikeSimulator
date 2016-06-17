@@ -1,4 +1,22 @@
+OBJECTIVES:
+
+1. Make classes reusable - Control class will be unique - the rest - try to make them reusable.
+2. Create a simulator for trading a single instrument.
+3. Make it so that price can be either changed by user at will,
+fed from live market data, or fed fromm historical data.
+4. Make manual trading possible.
+5. Make algo trading possible.
+6. Make it simple to develop and test algos after initial code is written.
+
 Currently working on:
+
+6/4/2016
+in Control.h and Control.cpp - switched UserInterface * userInterface
+for ManualInterface * userInterface. This needs to be looked through and finished
+
+
+MikeOrderbook - how do I want to do this?12
+
 Move slider and up/down buttons as well as mostly everything
 out of UserInterface into a separate window. possibly window2.
 or create new one in FLUID.

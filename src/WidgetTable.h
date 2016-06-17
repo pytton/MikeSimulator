@@ -33,14 +33,6 @@ protected:
 public:
 	//constructor:
 
-	//WidgetTable(
-	//	
-	//	int x,int y,int w,int h,const char *l,
-	//	UserInterface * pUserInterface,
-	//	int top_row_price,
-	//	int number_rows
-	//	
-	//	);
 
 	WidgetTable(
 		int x, int y, int w, int h, const char *l,
@@ -69,6 +61,9 @@ public:
 	
 	int RowOfPrice(long price);	//given price - returns the row in which that price is displayed in WidgetTable
 	long PriceOfRow(int row);	//given the row - returns what price is currently printed in that row
+
+	//print the bid and ask prices if such columns exist:
+//	virtual void printBidAsk(long bidPrice, long askPrice);
 
 	//GETTERS:
 	inline int GetRows(){return table_rows;}

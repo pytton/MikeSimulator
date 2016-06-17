@@ -23,16 +23,18 @@ public:
   Fl_Value_Input *m_curr_bid;
   Fl_Value_Input *m_bottom_limit;
   Fl_Value_Input *m_bottom_profit;
-  //Fl_Button *m_btn_up;
-  //Fl_Button *m_btn_down;
+  Fl_Button *m_btn_up;
+  Fl_Button *m_btn_down;
   Fl_Button *m_btn_next;
-  //Fl_Value_Slider *m_slider1;
+  Fl_Value_Slider *m_slider1;
   Fl_Button *m_btn_extra;
   Fl_Output *m_TotOpenPos;
   Fl_Output *m_TotOpenPL;
   Fl_Output *m_TotClosedPL;
   Fl_Output *m_TotPL;
-  //Fl_Double_Window *m_window2;
-  //Fl_Text_Display *text_display;
+  Fl_Button *m_btn_printOrders;
+  Fl_Button *m_btn_checkFills;
+  Fl_Double_Window *m_window2;
+  Fl_Text_Display *text_display;
 };
 #endif
