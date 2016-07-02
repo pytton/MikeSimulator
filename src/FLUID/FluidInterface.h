@@ -7,7 +7,6 @@
 #include <FL/Fl_Value_Input.H>
 #include <FL/Fl_Table.H>
 #include <FL/Fl_Button.H>
-#include <FL/Fl_Value_Slider.H>
 #include <FL/Fl_Output.H>
 #include <FL/Fl_Text_Display.H>
 
@@ -15,7 +14,6 @@ class FluidInterface {
 public:
   FluidInterface();
   Fl_Double_Window *m_window1;
-  Fl_Value_Input *m_starting_bid;
   Fl_Value_Input *m_curr_ask;
   Fl_Value_Input *m_top_limit;
   Fl_Value_Input *m_top_profit;
@@ -23,10 +21,6 @@ public:
   Fl_Value_Input *m_curr_bid;
   Fl_Value_Input *m_bottom_limit;
   Fl_Value_Input *m_bottom_profit;
-  Fl_Button *m_btn_up;
-  Fl_Button *m_btn_down;
-  Fl_Button *m_btn_next;
-  Fl_Value_Slider *m_slider1;
   Fl_Button *m_btn_extra;
   Fl_Output *m_TotOpenPos;
   Fl_Output *m_TotOpenPL;
@@ -34,6 +28,7 @@ public:
   Fl_Output *m_TotPL;
   Fl_Button *m_btn_printOrders;
   Fl_Button *m_btn_checkFills;
+  Fl_Button *m_btn_printPos;
   Fl_Double_Window *m_window2;
   Fl_Text_Display *text_display;
 };

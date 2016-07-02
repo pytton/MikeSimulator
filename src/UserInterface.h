@@ -20,6 +20,7 @@
 #include <FL/Fl_Text_Display.H>
 
 #include "MikeEnums.h"
+#include "MikePositionsOrders.h"
 
 class WidgetTable;	//forward declaration
 //class Display;
@@ -33,7 +34,6 @@ class UserInterface : public FluidInterface
 {	//elements of FluidInterface:
 	
 	//Fl_Double_Window *m_window1;
-	//Fl_Value_Input *m_starting_bid;
 	//Fl_Value_Input *m_curr_ask;
 	//Fl_Value_Input *m_top_limit;
 	//Fl_Value_Input *m_top_profit;
@@ -41,12 +41,16 @@ class UserInterface : public FluidInterface
 	//Fl_Value_Input *m_curr_bid;
 	//Fl_Value_Input *m_bottom_limit;
 	//Fl_Value_Input *m_bottom_profit;
-	//Fl_Button *m_btn_next;	
 	//Fl_Button *m_btn_extra;
 	//Fl_Output *m_TotOpenPos;
 	//Fl_Output *m_TotOpenPL;
 	//Fl_Output *m_TotClosedPL;
 	//Fl_Output *m_TotPL;
+	//Fl_Button *m_btn_printOrders;
+	//Fl_Button *m_btn_checkFills;
+	//Fl_Button *m_btn_printPos;
+	//Fl_Double_Window *m_window2;
+	//Fl_Text_Display *text_display;
 
 public:
 	//constructors/destructor:
@@ -67,6 +71,17 @@ public:
 	//THIS IS WHERE THE ORDER TYPE IS DETERMINED
 	//BASED ON WHICH COLUMN HAS BEEN PRESSED IN WIDGETTABLE
 	virtual void CallbkWidTable(int rowPressed, int colPressed, long price);
+	virtual void PrintBidAsk(long bid, long ask);
+	virtual void PrintAll(
+		long totalOpenPos,
+		long totalOpenPL,
+		long totalClosedPL,
+		long totalPL,
+		long askPrice,
+		long bidPrice,
+		const std::vector <MikePosition> &openPositions,
+		const std::vector <MikeOrder> &openOrders
+		);
 
 protected:
 	//members:
@@ -85,6 +100,7 @@ protected:
 	static void m_extra_btn_cb(Fl_Widget * w, void * p);
 	static void m_printOrders_btn_cb(Fl_Widget *w, void * p);
 	static void m_checkFills_btn_cb(Fl_Widget *w, void * p);
+	static void m_printPos_btn_cb(Fl_Widget *w, void * p);
 
 	//	static void m_down_btn_cb(Fl_Widget *w, void * p);
 	//	static void m_up_btn_cb(Fl_Widget *w, void * p);

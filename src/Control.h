@@ -17,8 +17,9 @@
 
 #include "PriceControlUI.h"
 #include "ManualInterface.h"
+#include "MikePositionsOrders.h"
 
-#include "MikeOrderBook.h"
+//#include "MikeOrderBook.h"
 
 class WidgetTable;
 class Data;
@@ -35,7 +36,7 @@ public:
 
 	//member functions:
 	void MainLoop();
-	void ManualOrder(int type, long price);
+//	void ManualOrder(int type, long price);
 
 	void rePriceWidTable(UserInterface * InterfaceToReprice);
 	void rePriceWidTable();
@@ -43,6 +44,14 @@ public:
 	//updates WidgetTable so that it shows prices around current bid/ask pulled from Data * data
 	//updates slider in UserInterface the same way
 	void printCurrentAll();
+	void printCurrentAll(long totalOpenPos,
+		long totalOpenPL,
+		long totalClosedPL,
+		long totalPL,
+		long askPrice,
+		long bidPrice,
+		std::vector <MikePosition> openPositions,
+		std::vector <MikeOrder> openOrders);
 
 	//THIS IS WHAT I NEED TO REFACTOR!!!
 	//CALLBACK FUNCTIONS FOR USERINTERFACE:
@@ -73,13 +82,16 @@ public:
 private:
 	//members:
 	MikeSimulator * ptr_to_mikesimulator;	
-//	ManualInterface * userInterface;
+
 	UserInterface * userInterface;
-	ManualInterface * manualInterface1;
-	Data * data;
-	MikeOrderBook * manualOrders;
-	PriceControlUI * m_pPriceControlUI;
 	
+	Data * data;
+
+	PriceControlUI * m_pPriceControlUI;
+
+	MikePositionOrders * manualPositions;
+	
+	//ManualInterface * manualInterface1;
 
 };
 

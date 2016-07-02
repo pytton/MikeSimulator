@@ -55,6 +55,7 @@ UserInterface::UserInterface(
 	m_btn_extra->callback(m_extra_btn_cb, (void*) this);	//this changes size of Widgettable
 	m_btn_printOrders->callback(m_printOrders_btn_cb, (void*) this);
 	m_btn_checkFills->callback(m_checkFills_btn_cb, (void*) this);
+	m_btn_printPos->callback(m_printPos_btn_cb, (void*) this);
 
 
 
@@ -186,6 +187,11 @@ void UserInterface::m_checkFills_btn_cb(Fl_Widget * w, void * p)
 	UserInterface * myUserInt = (UserInterface*)p;
 	myUserInt->m_pControl->CallbkUserInt(myUserInt, CHECKFILLS);
 }
+void UserInterface::m_printPos_btn_cb(Fl_Widget * w, void * p)
+{
+	UserInterface * myUserInt = (UserInterface*)p;
+	myUserInt->m_pControl->CallbkUserInt(myUserInt, PRINTPOS);
+}
 //void UserInterface::m_up_btn_cb(Fl_Widget *w, void * p)
 //{
 ////	UserInterface * myUserInt = (UserInterface*)p;
@@ -247,6 +253,68 @@ void UserInterface::CallbkWidTable(int rowPressed, int colPressed, long price)
 	else std::cout << "Unhandled type of button pressed!!!" << std::endl;
 	
 }
+
+void UserInterface::PrintBidAsk(long bid, long ask)
+{
+	//first, check if bid price is within the range now displayed by WidgetTable:
+
+	if (bid < GetTable()->GetTopRowPrice() && bid > GetTable()->GetTopRowPrice()- GetTable()->GetRows())
+	{
+		//erase everything in the BID column (so that previous bid does not show):
+		GetTable()->ClearColumn(GetTable()->GetBidCol());
+		//print "BID" in at the correct price:
+		int row = GetTable()->RowOfPrice(bid);
+		int col = GetTable()->GetBidCol();
+		GetTable()->printInTable(row, col, "BID");
+	}
+	else {
+		std::cout << "\n BID OUTSIDE OF WIDGETTABLE" << std::endl;
+	}
+	//do the same for ask:
+	if (ask < GetTable()->GetTopRowPrice() && ask > GetTable()->GetTopRowPrice() - GetTable()->GetRows())
+	{
+		//erase everything in the ASK column (so that previous bid does not show):
+		GetTable()->ClearColumn(GetTable()->GetAskCol());
+		//print "ASK" in at the correct price:
+		int row = GetTable()->RowOfPrice(ask);
+		int col = GetTable()->GetAskCol();
+		GetTable()->printInTable(row, col, "ASK");
+	}
+	else {
+		std::cout << "\n ASK OUTSIDE OF WIDGETTABLE" << std::endl;
+	}
+
+
+
+}
+
+void UserInterface::PrintAll(
+	long totalOpenPos, 
+	long totalOpenPL, 
+	long totalClosedPL, 
+	long totalPL, 
+	long askPrice, 
+	long bidPrice, 
+	const std::vector <MikePosition> &openPositions,
+	const std::vector <MikeOrder> &openOrders)
+{
+	using namespace std;
+
+	cout << "\nTotalOpenPos: " << totalOpenPos << " Others: " << totalOpenPL << " " <<
+		totalClosedPL << " " << totalPL << " " << askPrice << " " << bidPrice << endl;
+	
+	std::stringstream buffer;
+
+	buffer << totalOpenPos;
+	m_TotOpenPos->value(buffer.str().c_str());
+
+	
+	buffer.clear();
+	buffer << totalOpenPL;
+	m_TotOpenPL->value(buffer.str().c_str());
+
+}
+
 
 //old callback kept for reference:
 //void UserInterface::experimental_cb(Fl_Widget *w, void * p)

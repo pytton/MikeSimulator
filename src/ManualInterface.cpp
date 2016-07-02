@@ -26,7 +26,7 @@ ManualInterface::ManualInterface(Control * control, double starting_bid_price ) 
 	int top_row_price = bid_price + 100, number_rows = 200, 
 		number_cols = numberOfColumns,
 		how_many_cols_are_buttons = numberOfButtoncolumns;
-	m_pTable = new WidgetTable(65, 0, 920, 495, "widgettable", this, top_row_price, number_rows,
+	m_pTable = new WidgetTable(65, 0, 900, 495, "widgettable", this, top_row_price, number_rows,
 		number_cols, how_many_cols_are_buttons, col_names, button_names);
 
 
@@ -46,21 +46,21 @@ ManualInterface::~ManualInterface()
 }
 
 //UNCOMMENT AND CHANGE IF NEEDED:
-void ManualInterface::SetColButNames(std::vector<std::string>& col_names, std::vector<std::string>& button_names)
-{
-	using namespace std;
-	cout << "ManualInterface SetColeButNames called" << endl;
-
-	col_names.clear();
-
-	col_names.push_back("MANUALINTERFACE");
-	//col_names.push_back("MANUALINTERFACE");
-	//col_names.push_back("MANUALINTERFACE");
-	//col_names.push_back("MANUALINTERFACE");
-	//col_names.push_back("MANUALINTERFACE");
-
-	button_names.clear();
-
-	button_names.push_back("tryout");
-
-}
+//void ManualInterface::SetColButNames(std::vector<std::string>& col_names, std::vector<std::string>& button_names)
+//{
+//	using namespace std;
+//	cout << "ManualInterface SetColeButNames called" << endl;
+//
+//	col_names.clear();
+//
+//	col_names.push_back("MANUALINTERFACE");
+//	//col_names.push_back("MANUALINTERFACE");
+//	//col_names.push_back("MANUALINTERFACE");
+//	//col_names.push_back("MANUALINTERFACE");
+//	//col_names.push_back("MANUALINTERFACE");
+//
+//	button_names.clear();
+//
+//	button_names.push_back("tryout");
+//
+//}

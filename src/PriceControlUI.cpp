@@ -18,10 +18,12 @@ PriceControlUI::PriceControlUI(Control * control, double starting_bid_price, int
 	m_slider1->minimum(bid_price + (displayedRows / 2));
 	m_slider1->maximum(bid_price - (displayedRows / 2));
 	m_slider1->value(bid_price);
+	m_slider1->textsize(9);
 
 	m_btnUp->callback(m_up_btn_cb, (void*)this);
 	m_btnDown->callback(m_down_btn_cb, (void*) this);	
-	m_slider1->callback(m_slider1_cb, (void*) this);	
+	m_slider1->callback(m_slider1_cb, (void*) this);
+	m_btnPrint->callback(m_btnPrint_cb, (void*) this);
 	
 
 
@@ -68,4 +70,11 @@ void PriceControlUI::m_slider1_cb(Fl_Widget * slider1Pointer, void * p)
 
 	myPriceControlUI->m_pControl->CallbkPriceControlUI(myPriceControlUI, SLIDER1, slider1Pointer);
 
+}
+
+void PriceControlUI::m_btnPrint_cb(Fl_Widget * buttonPressed, void * p)
+{
+	PriceControlUI * myPriceControlUI = (PriceControlUI*)p;
+
+	myPriceControlUI->m_pControl->CallbkPriceControlUI(myPriceControlUI, PRINTBUT, buttonPressed);
 }

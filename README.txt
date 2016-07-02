@@ -1,4 +1,13 @@
+2016/7/1
+working on void Control::printCurrentAll()
 
+2016/6/30
+working on openPosIndex in MikePositionOrders.
+
+lot of work done.
+buying works.
+selling doesn't.
+I don't know why? FIX THIS!!!!
 
 2016/05/16
 Refactoring (almost?) finished.

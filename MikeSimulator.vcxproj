@@ -25,13 +25,11 @@
     <ClInclude Include="src\FLUID\FluidPriceControl.h" />
     <ClInclude Include="src\ManualInterface.h" />
     <ClInclude Include="src\MikeEnums.h" />
-    <ClInclude Include="src\MikeOrderBook.h" />
     <ClInclude Include="src\MikePositionsOrders.h" />
     <ClInclude Include="src\MikeSimulator.h" />
     <ClInclude Include="src\MktSnapshot.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClInclude>
-    <ClInclude Include="src\PositionBook.h" />
     <ClInclude Include="src\PriceControlUI.h" />
     <ClInclude Include="src\UserInterface.h" />
     <ClInclude Include="src\WidgetTable.h" />
@@ -43,9 +41,8 @@
     <ClCompile Include="src\FLUID\FluidPriceControl.cxx" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ManualInterface.cpp" />
-    <ClCompile Include="src\MikeOrderBook.cpp" />
+    <ClCompile Include="src\MikePositionsOrders.cpp" />
     <ClCompile Include="src\MikeSimulator.cpp" />
-    <ClCompile Include="src\PositionBook.cpp" />
     <ClCompile Include="src\PriceControlUI.cpp" />
     <ClCompile Include="src\UserInterface.cpp" />
     <ClCompile Include="src\WidgetTable.cpp" />

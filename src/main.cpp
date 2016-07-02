@@ -117,13 +117,13 @@ Algo - make decisions here (one algo? more algos?)
 
 */
 
-#include "PositionBook.h"
+//#include "PositionBook.h"
 
 
 int main()
 {
 
-	int starting_bid = 500;
+	int starting_bid = 20415;
 	//std::cin >> starting_bid;
 	MikeSimulator * mikesimulator = new MikeSimulator(starting_bid);
 

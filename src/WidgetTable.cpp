@@ -45,8 +45,11 @@ WidgetTable::WidgetTable(
 	SetCols(number_cols);
 	SetRows(number_rows);
 	SetSize(GetRows(), GetCols(), this, /*col_names,*/ button_names);		//this needs to be called to construct all the cells of WidgetTable
-	//Sleep(1000);
-	//PopPriceCol(this);	//fill the price column with prices
+	
+
+	//set the bid column and ask columns. virtual function:
+	setBidAskColumns();
+
 }
 
 
@@ -257,7 +260,7 @@ void WidgetTable::SetSize(int newrows, int newcols, WidgetTable * mytable, /*std
 					//sprintf(s, "%d/%d", r, c);
 					Fl_Input *in = new Fl_Input(X, Y, W, H);
 					//in->value(s);
-					in->textsize(10);	//sets the size of the font					
+					in->textsize(9);//sets the size of the font					
 				}
 				else
 				{
@@ -345,6 +348,7 @@ void WidgetTable::draw_cell(TableContext context,
 			fl_draw_box(FL_THIN_UP_BOX, X, Y, W, H, row_header_color());
 			fl_color(FL_BLACK);
 			fl_draw(s, X, Y, W, H, FL_ALIGN_CENTER);
+			fl_font(FL_HELVETICA, 9);
 		}
 		fl_pop_clip();
 		return;
@@ -363,7 +367,7 @@ void WidgetTable::draw_cell(TableContext context,
 			//experimenting:
 			//			std::cout << "draw cell called" << std::endl;
 
-			fl_font(FL_HELVETICA, 11);
+			fl_font(FL_HELVETICA, 9);
 			static char s[40];
 			//below decide what is printed in column headers:
 			ColHeaderText(s, C);	//this function performs commented out code below
@@ -391,6 +395,14 @@ void WidgetTable::draw_cell(TableContext context,
 	default:
 		return;
 	}
+}
+
+
+void WidgetTable::setBidAskColumns()
+{
+
+	bidColumn = 6;
+	askColumn = 7;
 }
 void WidgetTable::ColHeaderText(char * s, int C)	//defines text of column headers
 {
@@ -482,6 +494,8 @@ void WidgetTable::ColHeaderText(char * s, int C)	//defines text of column header
 		}
 	}
 }
+
+
 
 //constructor for My_fl_button. These are buttons used inside WidgetTable which know what their position is
 My_fl_button::My_fl_button(int x, int y, int w, int h, const char *l = 0)

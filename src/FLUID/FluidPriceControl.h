@@ -17,5 +17,6 @@ public:
   Fl_Output *m_BidDisplay;
   Fl_Output *m_AskDisplay;
   Fl_Value_Slider *m_slider1;
+  Fl_Button *m_btnPrint;
 };
 #endif

@@ -70,6 +70,8 @@ public:
 	inline int GetCols(){return table_cols;}
 	inline int GetTopRowPrice() { return TopRowPrice; }
 	inline void SetTopRowPrice(int value) { TopRowPrice = value; }
+	virtual inline int GetBidCol(){ return bidColumn; }
+	virtual inline int GetAskCol(){ return askColumn; }
 
 private:
 	//members:
@@ -78,7 +80,15 @@ private:
 	int TopRowPrice;		//the price at the first row on top - used to determine which positions to display
 	UserInterface * ptr_to_UserInterface;	//stores a pointer to window in which table is constructed. null at first. has to be set from outside.
 	std::vector <std::string> col_names;	//needed by void ColHeaderText(char * s, int C)
+	
+	//for printing out bid/ask in the right column:
+	virtual void setBidAskColumns();
+	int bidColumn;//which column is the bid column?
+	int askColumn;//in which column is ask displayed?
+
 //	bool ColHeaderErrorCheck = 0;	//for use by ColHeaderText - to display error only once
+
+
 
 	//helper functions:
 	UserInterface * GetUserInterface() { return	ptr_to_UserInterface; }	//stores a pointer to window in which table is constructed. null at first. has to be set from outside.

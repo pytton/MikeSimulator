@@ -7,8 +7,8 @@ class FluidPriceControlUI {open
   Function {FluidPriceControlUI()} {open
   } {
     Fl_Window m_window1 {
-      label {Price Control} open selected
-      xywh {993 90 201 626} type Double visible
+      label {Price Control} open
+      xywh {997 94 193 618} type Double visible
     } {
       Fl_Button m_btnUp {
         label Up
@@ -29,6 +29,10 @@ class FluidPriceControlUI {open
       Fl_Value_Slider m_slider1 {
         label {Bid/Ask}
         xywh {10 15 35 585} minimum 200 maximum 0 step 1 value 100 textsize 14
+      }
+      Fl_Button m_btnPrint {
+        label Print selected
+        xywh {120 500 60 50}
       }
     }
   }

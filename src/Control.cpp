@@ -13,16 +13,15 @@ Control::Control(MikeSimulator * p, int starting_bid)
 	ptr_to_mikesimulator = p;
 	std::cout << "Control constructed. Starting bid: " << starting_bid << std::endl;
 
-//	userInterface = new ManualInterface(this, /*p,*/ starting_bid);
-	userInterface = new UserInterface(this, /*p,*/ starting_bid);
+	userInterface = new ManualInterface(this, /*p,*/ starting_bid);
+//	userInterface = new UserInterface(this, /*p,*/ starting_bid);
+	
 	data = new Data(this, starting_bid);
 	m_pPriceControlUI = new PriceControlUI(this, starting_bid);
 	
-	manualOrders = new MikeOrderBook();
-
-
-	//experimenting with new ManualInterface class:
-	manualInterface1 = new ManualInterface(this, starting_bid);
+	
+	manualPositions = new MikePositionOrders("Manual", 1000000);
+	rePriceWidTable(userInterface);
 }
 
 void Control::MainLoop()
@@ -43,7 +42,7 @@ void Control::MainLoop()
 	
 	//add other functions as needed
 	//5 send orders		-- for algos - nothing now
-
+	userInterface->PrintBidAsk(data->GetBidPrice(), data->GetAskPrice());
 
 
 }
@@ -51,47 +50,39 @@ void Control::MainLoop()
 void Control::printCurrentAll()
 {
 	Data * myData = data;
-	//Display * myDisplay = ptr_to_mikesimulator->GetDisplay();
-
-	long bid_price = myData->GetBidPrice();
-	long ask_price = myData->GetAskPrice();
+	UserInterface * myInterface = userInterface;
+	MikePositionOrders * myPositionOrders = manualPositions;
 
 
-	//print current bid/ask prices inside UserInterface window1:
-	userInterface->m_curr_bid->value((double)bid_price);
-	userInterface->m_curr_ask->value((double)ask_price);
+	myPositionOrders->positionBook.at(20415);
 
-	
-	using namespace std;
+	const std::vector <MikePosition>  myPositions = myPositionOrders->positionBook;
 
-	//printing BID and ASK in WidgetTable:
-	int TopRowPrice = userInterface->GetTable()->GetTopRowPrice();
+//	std::vector<MikePosition> mypositionBook =  myPositionOrders->GetMikePositions();
 
-	userInterface->GetTable()->printInTable(TopRowPrice - bid_price, 6, "BID");
-	userInterface->GetTable()->printInTable(TopRowPrice - myData->GetPrevBidPrice(), 6, "");
-	userInterface->GetTable()->printInTable(TopRowPrice - ask_price, 7, "ASK");
-	userInterface->GetTable()->printInTable(TopRowPrice - myData->GetPrevAskPrice(), 7, "");
+	cout << "Printing (almost) all " << endl;
 
-	//ROW POSITION:
-	//determine row which holds the price corresponding to current bid:
-	int scrollposition = userInterface->GetTable()->GetTopRowPrice() - myData->GetBidPrice();
-	//scroll the table to current bid with a 15 row offset:
-	userInterface->GetTable()->row_position(scrollposition - 15);
-}
+//	cout << mypositionBook.at(20415).open_amount << endl;
 
-void Control::ManualOrder(int type, long price) 
-{
-	using namespace std;
+	//myPositions->
 
-	cout << "\n Manual Order Entered!\n";
-	cout << "Price: " << price << "\n Order Type: " << type;
-
-	//enter new order into Data:
-//	ptr_to_mikesimulator->GetData()->GetMikeOrder()->NewOrder(type, price);
-	//printout the new order in WidgetTable:
-//	ptr_to_mikesimulator->GetData()->GetMikeOrder()->PrintOrder();
+	//myInterface->PrintAll(0, 0, 0, 0, 0, 0, vector, vector);
 
 }
+
+//void Control::ManualOrder(int type, long price) 
+//{
+//	using namespace std;
+//
+//	cout << "\n Manual Order Entered!\n";
+//	cout << "Price: " << price << "\n Order Type: " << type;
+//
+//	//enter new order into Data:
+////	ptr_to_mikesimulator->GetData()->GetMikeOrder()->NewOrder(type, price);
+//	//printout the new order in WidgetTable:
+////	ptr_to_mikesimulator->GetData()->GetMikeOrder()->PrintOrder();
+//
+//}
 
 //CALLBACKS 
 
@@ -120,6 +111,8 @@ void Control::CallbkUserInt(UserInterface * p, BtnPressed btn,
 	}
 	if (btn == PRINTORDERSBTN)
 	{
+
+		manualPositions->printoutAllOrders();
 	//	manualOrders->printoutAllOrders();
 		//TODO: Print orders in WidgetTable
 	}
@@ -129,7 +122,13 @@ void Control::CallbkUserInt(UserInterface * p, BtnPressed btn,
 		bidPrice = data->GetBidPrice();
 		askPrice = data->GetAskPrice();
 
-		manualOrders->checkFills(bidPrice, askPrice);
+		manualPositions->checkFills(bidPrice, askPrice);
+	}
+	if (btn == PRINTPOS)
+	{
+		long bidprice = data->GetBidPrice();
+		long askprice = data->GetAskPrice();
+		manualPositions->printoutActivePositions(bidprice, askprice);
 	}
 }
 //WIDGETTABLE:
@@ -156,13 +155,9 @@ void Control::CallbkWidTable(int row, int col, long price, MikeOrderType OrderTy
 {
 	using namespace std;
 
-	//OLD:
-	cout << "\n Manual Order Entered!\n";
-	cout << "Order type: " << OrderTypePressed;
-
 	//send order to OrderBook
 	//finish this so that the amount of order is passed through
-//	manualOrders->newOrder(OrderTypePressed, price);
+	manualPositions->newOrder(OrderTypePressed, price,100);
 	
 
 }
@@ -173,7 +168,7 @@ void Control::CallbkPriceControlUI(PriceControlUI * p, BtnPressed btn, Fl_Widget
 	{
 		//REFACTOR THIS:
 
-		cout << "enum type callback called" << endl;
+		//cout << "enum type callback called" << endl;
 		PriceControlUI * myPriceControl = (PriceControlUI*)p;
 		Data * myData = data;
 		//change bid ask prices:
@@ -184,14 +179,14 @@ void Control::CallbkPriceControlUI(PriceControlUI * p, BtnPressed btn, Fl_Widget
 		//update slider value:
 		myPriceControl->Getm_slider1()->value((double)myData->GetBidPrice());
 		//do something:
-		//MainLoop() crashes due to bad pointers - has to be fixed
+		
 		this->MainLoop();
 
 	}
 	if (btn == DOWNBTN) {
 		//REFACTOR THIS:
 
-		cout << "refactored  m_down_btn_cb called" << endl;
+	//	cout << "refactored  m_down_btn_cb called" << endl;
 		PriceControlUI * myPriceControl = (PriceControlUI*)p;
 		Data * myData = data;
 		//change bid ask prices:
@@ -224,6 +219,12 @@ void Control::CallbkPriceControlUI(PriceControlUI * p, BtnPressed btn, Fl_Widget
 		//do something:
 		myControl->MainLoop();
 	}
+	if (btn == PRINTBUT)
+	{
+		
+		printCurrentAll();
+
+	}
 
 }
 
@@ -237,13 +238,14 @@ void Control::rePriceWidTable(UserInterface * InterfaceToReprice)
 	cout << "new rePriceWidTable called" << endl;
 
 	UserInterface* pUI = InterfaceToReprice;
-
-	//	WidgetTable * pTable = pUI->GetTable();
-
+	
 	//update prices shown in UserInterface:
-
 	pUI->rePriceWidTable(data->GetBidPrice());
 
+	//determine row which holds the price corresponding to current bid:
+	int scrollposition = pUI->GetTable()->GetTopRowPrice() - data->GetBidPrice();
+	//scroll the table to current bid with a 15 row offset:
+	pUI->GetTable()->row_position(scrollposition - 15);
 
 	//modify slider in PriceControlUI:
 	//update the slider minimum and maximum settings:
@@ -255,6 +257,10 @@ void Control::rePriceWidTable(UserInterface * InterfaceToReprice)
 	max = (int)data->GetBidPrice() - 95 /* 3 offset for safety*/;
 
 	m_pPriceControlUI->setSlider(value, max, min);
+
+
+
+
 }
 void Control::rePriceWidTable()
 
@@ -306,3 +312,34 @@ void Control::rePriceWidTable()
 //	const char * ch = myString.c_str();
 //	cout << ch[233];	//HACK	- this should not have worked :D
 
+
+//void Control::printCurrentAll()
+//{
+//	Data * myData = data;
+//	//Display * myDisplay = ptr_to_mikesimulator->GetDisplay();
+//
+//	long bid_price = myData->GetBidPrice();
+//	long ask_price = myData->GetAskPrice();
+//
+//
+//	//print current bid/ask prices inside UserInterface window1:
+//	userInterface->m_curr_bid->value((double)bid_price);
+//	userInterface->m_curr_ask->value((double)ask_price);
+//
+//
+//	using namespace std;
+//
+//	//printing BID and ASK in WidgetTable:
+//	int TopRowPrice = userInterface->GetTable()->GetTopRowPrice();
+//
+//	userInterface->GetTable()->printInTable(TopRowPrice - bid_price, 6, "BID");
+//	userInterface->GetTable()->printInTable(TopRowPrice - myData->GetPrevBidPrice(), 6, "");
+//	userInterface->GetTable()->printInTable(TopRowPrice - ask_price, 7, "ASK");
+//	userInterface->GetTable()->printInTable(TopRowPrice - myData->GetPrevAskPrice(), 7, "");
+//
+//	//ROW POSITION:
+//	//determine row which holds the price corresponding to current bid:
+//	int scrollposition = userInterface->GetTable()->GetTopRowPrice() - myData->GetBidPrice();
+//	//scroll the table to current bid with a 15 row offset:
+//	userInterface->GetTable()->row_position(scrollposition - 15);
+//}

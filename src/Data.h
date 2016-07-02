@@ -8,7 +8,7 @@
 #include "MikeSimulator.h"
 #include "UserInterface.h"
 
-#include "PositionBook.h"
+//#include "PositionBook.h"
 
 class Control;
 class MikeOrder;
