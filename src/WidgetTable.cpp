@@ -4,8 +4,9 @@
 //#include "Display.h"
 //#include "MikeSimulator.h"
 #include "WidgetTable.h"
+#include "MikeTimer.h"
 
-#define PRICECOLUMN 5 //in which column should the price be printed? Used by PopPriceCol
+//#define PRICECOLUMN 5 //in which column should the price be printed? Used by PopPriceCol
 
 
 //WIDGETTABLE:
@@ -44,8 +45,9 @@ WidgetTable::WidgetTable(
 
 	SetCols(number_cols);
 	SetRows(number_rows);
+
 	SetSize(GetRows(), GetCols(), this, /*col_names,*/ button_names);		//this needs to be called to construct all the cells of WidgetTable
-	
+//	SetSize(number_rows, number_cols, this, /*col_names,*/ button_names);		//this needs to be called to construct all the cells of WidgetTable	
 
 	//set the bid column and ask columns. virtual function:
 	setBidAskColumns();
@@ -115,7 +117,7 @@ void WidgetTable::printInTable(int row, int col, std::string text)//row = 0 is f
 	//	WidgetTable * myTable = myWidgetPointer;
 
 	//first, make sure row and col are not bigger than the size of the table:
-	//if they are - it will be printed at the edgeusing this line:
+	//if they are - it will be printed at the edge using this line:
 	//row = myTable->GetRows() - 1; etc...
 
 
@@ -140,9 +142,118 @@ void WidgetTable::printInTable(int row, int col, std::string text)//row = 0 is f
 	Fl_Input * myCell = (Fl_Input*)(myWidget);
 	//print into the cell:
 	myCell->textsize(12);	//sets the size of the font
+	
+	
 	std::stringstream buffer;
 	buffer << text;
 	myCell->value(buffer.str().c_str());
+
+	//is this faster??
+	//char  buffer[21];
+
+	//snprintf(buffer, 20, "%d", totalOpenPos);
+	//m_TotOpenPos->value(buffer);
+
+
+
+}
+void WidgetTable::printPositions(const std::vector <MikePosition> *openPositions, const std::vector <MikeOrdersAtPrice> *openOrdersAtPrice)
+{
+	using namespace std;
+
+	Mike::Timer timer;
+	timer.reset();	//time this function
+
+	openPosCol;
+	openPLCol;
+	closedPLCol;
+	totalPLCol;
+
+	//int PriceCol = this->priceCol;	//indicates in which column prices are to be printed - 
+	//								//change this as neccessary if design changes made to WidgetTable
+	//int PriceToPrint;
+	////print prices in rows from 0 to last
+	//for (int row = 0; row < table_rows; row++)
+	//{
+	//	PriceToPrint = TopRowPrice - row;
+	//	Fl_Input * myCell = (Fl_Input*)GetElement(row, PriceCol);
+	//	char ch[40];
+	//	std::stringstream buffer;
+	//	buffer << PriceToPrint;
+	//	myCell->value(buffer.str().c_str());
+	//	//myCell->label(buffer.str().c_str());
+	//	//sprintf(ch, "%d", PriceToPrint);
+	//	//myCell->value(ch);
+	//	//myCell->label(ch);
+	//	//myCell->redraw();
+	//}
+
+
+	//print elements of openPositions vector into rows of WidgetTable that are currently displayed
+
+	int TopDisplayedPrice = GetTopRowPrice();		//this is the highest price currently displayed in WidgetTable
+	int BottomDisplayedPrice = GetBottomRowPrice();	//this is the lowest as above
+
+	cout << "toprowprice: " << GetTopRowPrice()<< endl;
+	cout << "bottomrowprice: " << GetBottomRowPrice()<< endl;
+
+	//populate the cells in WidgetTable with values:
+	for (int displayPrice = BottomDisplayedPrice; displayPrice <= TopDisplayedPrice; displayPrice++) 
+	{
+		//FLTK requires that I pass what I want to print into the cells as a char *:
+		char buffer[50];
+		//find the cell displaying OPEN POSITION at displayprice:
+		Fl_Input * openPosCell = (Fl_Input*)GetElement(RowOfPrice(displayPrice), openPosCol);
+		//print the open postion for displayPrice from openPositions vector to this cell:	
+		char buf1[41];	snprintf(buf1, 40, "%d", (openPositions->at(displayPrice).open_amount));
+		openPosCell->value(buf1);
+
+		//same for OPEN PL at displayprice:
+		Fl_Input * openPLCell = (Fl_Input*)GetElement(RowOfPrice(displayPrice), openPLCol);
+		char buf2[41];	snprintf(buf2, 40, "%d", (openPositions->at(displayPrice).open_pl));
+		openPLCell->value(buf2);
+		
+		//same for CLOSED PL at displayprice:
+		Fl_Input * closedPLCell = (Fl_Input*)GetElement(RowOfPrice(displayPrice), closedPLCol);
+		char buf3[41];	snprintf(buf3, 40, "%d", (openPositions->at(displayPrice).closed_pl));
+		closedPLCell->value(buf3);
+
+		//same for TOTAL PL at displayprice:
+		Fl_Input * totalPLcell= (Fl_Input*)GetElement(RowOfPrice(displayPrice), totalPLCol);
+		char buf4[41];	snprintf(buf4, 40, "%d", (openPositions->at(displayPrice).total_pl));
+		totalPLcell->value(buf4);
+
+	}
+
+	//below old version with multiple buffers
+	//for (int displayPrice = BottomDisplayedPrice; displayPrice <= TopDisplayedPrice; displayPrice++)
+	//{
+	//	//FLTK requires that I pass what I want to print into the cells as a char *:
+	//	char buffer[50];
+	//	//find the cell displaying OPEN POSITION at displayprice:
+	//	Fl_Input * openPosCell = (Fl_Input*)GetElement(RowOfPrice(displayPrice), openPosCol);
+	//	//print the open postion for displayPrice from openPositions vector to this cell:	
+	//	char buf1[41];	snprintf(buf1, 40, "%d", (openPositions->at(displayPrice).open_amount));
+	//	openPosCell->value(buf1);
+
+	//	//same for OPEN PL at displayprice:
+	//	Fl_Input * openPLCell = (Fl_Input*)GetElement(RowOfPrice(displayPrice), openPLCol);
+	//	char buf2[41];	snprintf(buf2, 40, "%d", (openPositions->at(displayPrice).open_pl));
+	//	openPLCell->value(buf2);
+
+	//	//same for CLOSED PL at displayprice:
+	//	Fl_Input * closedPLCell = (Fl_Input*)GetElement(RowOfPrice(displayPrice), closedPLCol);
+	//	char buf3[41];	snprintf(buf3, 40, "%d", (openPositions->at(displayPrice).closed_pl));
+	//	closedPLCell->value(buf3);
+
+	//	//same for TOTAL PL at displayprice:
+	//	Fl_Input * totalPLcell = (Fl_Input*)GetElement(RowOfPrice(displayPrice), totalPLCol);
+	//	char buf4[41];	snprintf(buf4, 40, "%d", (openPositions->at(displayPrice).total_pl));
+	//	totalPLcell->value(buf4);
+
+	//}
+
+
 }
 Fl_Widget * WidgetTable::GetElement(int nRow, int nCol)
 {//used to get a pointer to an element of WidgetTable with X Y coordinates nRow nCol
@@ -167,8 +278,8 @@ long WidgetTable::PriceOfRow(int row)
 void WidgetTable::PopPriceCol(/*WidgetTable * myTable*/) //populates the Price column with prices based on current TopRowPrice
 {
 
-	int PriceCol = PRICECOLUMN;	//indicates in which column prices are to be printed - 
-						//change this as neccessary if design changes made to WidgetTable
+	int PriceCol = this->priceCol;	//indicates in which column prices are to be printed - 
+									//change this as neccessary if design changes made to WidgetTable
 	int PriceToPrint;
 	//print prices in rows from 0 to last
 

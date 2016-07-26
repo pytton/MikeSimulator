@@ -15,12 +15,17 @@ TO BE USED AS A MEANS TO CONTROL ALGOS IN THE FUTURE
 class ManualInterface :   public UserInterface
 {
 public:
-	ManualInterface(Control * control, double starting_bid_price = 700);
+//	ManualInterface(Control * control, double starting_bid_price = 700);
+	ManualInterface(
+		Control * control,
+		double starting_bid_price = 700,
+		int numberOfColumns = 25,
+		int numberOfButtoncolumns = 5);
 	
 	~ManualInterface();
 	
 	//uncomment and implement this if it is needed to change column and button names
-//	virtual void SetColButNames(std::vector <std::string> &col_names, std::vector <std::string> &button_names);
+	virtual void SetColButNames(std::vector <std::string> &col_names, std::vector <std::string> &button_names);
 };
 
 

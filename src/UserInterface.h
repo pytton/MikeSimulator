@@ -56,7 +56,7 @@ public:
 	//constructors/destructor:
 	UserInterface(Control * control,
 		double starting_bid_price = 700,
-		int numberOfColumns = 15,
+		int numberOfColumns = 16,
 		int numberOfButtoncolumns = 5);
 
 	//GETTERS / SETTERS:
@@ -79,9 +79,18 @@ public:
 		long totalPL,
 		long askPrice,
 		long bidPrice,
-		const std::vector <MikePosition> &openPositions,
-		const std::vector <MikeOrder> &openOrders
-		);
+		const std::vector <MikePosition> *openPositions,
+		const std::vector <MikeOrdersAtPrice> *openOrdersAtPrice);
+	//virtual void PrintAll(
+	//	long totalOpenPos,
+	//	long totalOpenPL,
+	//	long totalClosedPL,
+	//	long totalPL,
+	//	long askPrice,
+	//	long bidPrice/*,
+	//	const std::vector <MikePosition> &openPositions
+	//	const std::vector <MikeOrder> &openOrders*/
+	//	);
 
 protected:
 	//members:
@@ -108,7 +117,7 @@ protected:
 
 	//helpers:
 	//sets the names of column headers and buttons inside WidgetTable:
-	virtual void SetColButNames(std::vector <std::string> &col_names, std::vector <std::string> &button_names);
+	/*virtual*/ void SetColButNames(std::vector <std::string> &col_names, std::vector <std::string> &button_names);
 	
 	
 	//OLD CALLBACK FOR REFERENCE:

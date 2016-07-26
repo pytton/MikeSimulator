@@ -9,9 +9,6 @@ enum MikeOrderType
 	BUYSTP,
 	SELLLMT,
 	SELLSTP,
-	
-
-
 };
 
 //used for callbacks from UserInterface and WidgetTable

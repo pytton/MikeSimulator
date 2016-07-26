@@ -35,8 +35,10 @@ position in MikePositionBook
 
 #include <vector>
 #include <string>
+#include <set>
 
 #include "MikeEnums.h"
+#include "MikeTimer.h"
 
 
 class MikeOrder
@@ -69,6 +71,25 @@ public:
 };
 
 
+//this class aggregates all the open orders by price. there can be multiple orders of
+//multiple kind and amount for a single price. this class keeps track of the total
+//b lmt, b stp, s lmt, s stp orders for a single price point.
+class MikeOrdersAtPrice
+{
+public:
+	long price = 0;
+	long buyLimitAmount = 0;
+	long buyStopAmount = 0;
+	long sellLimitAmount = 0;
+	long sellStopAmount = 0;
+
+	void eraseall();
+
+	//returns true if all orders are empty at this price
+	bool checkifempty();
+
+	
+};
 
 
 class MikePosition
@@ -109,9 +130,11 @@ public:
 		{
 			open_pl = 0;
 			//if position is 'long':
-			if (open_amount > 0) open_pl = (bidprice - price) * open_amount;
+			if (open_amount >= 0) open_pl = (bidprice - price) * open_amount;
 			//if position is 'short':
 			if (open_amount < 0) open_pl = (askprice - price) * open_amount;
+
+			//update total_pl with new open_pl
 			total_pl = closed_pl + open_pl;
 		}
 	}
@@ -145,7 +168,6 @@ public:
 
 	//MikeOrder getOrder(long price);
 	//void modifyOrder();
-
 	//	PositionBook(std::string name, long highestPrice);
 
 	void newPosition(long price, long position);
@@ -166,26 +188,37 @@ public:
 	//calculates the total aggregate position for all active positions of the whole book
 	long TotalOpenPos();
 
+	//calculate individual P/L for each position that is stored in the openPosIndex
+	//this should be done before attempting to print out the positions
+	void calculateIndividualPLs(long bidprice, long askprice);
+
 	//not implemented yet. gives the total open position above a certain price level:
 	long totalOpenAbove(long price);
 
 	//not implemented yet. gives the total open position below a certain price level:
 	long totalOpenBelow(long price);
 
-//	std::vector <MikePosition> * GetMikePositions() const { return   &positionBook; }
+	//used for printing open positions in WidgetTable
+	const std::vector <MikePosition> * GetMikePositions()  { return   &positionBook; }
 
+	//goes through all the open orders stored in openOrderBook and updates openOrdersByPrice:
+	void updateOpenOrdersByPrice();
+	//used for printing open orders in WidgetTable
+	const std::vector <MikeOrdersAtPrice> * GetOpOrdersbyPrice (){  return &openOrdersByPrice;	}
 
-
-
+//	const std::vector <MikePosition> & GetMikePosRefrence() { return positionBook; }
 private:
 
-	friend class Control;
+//	friend class Control;
 	//this array stores all the orders.
 	//figure out how to design this
 	std::vector <MikeOrder> openOrderBook;
 
 	//this array stores all closed orders:
 	std::vector<MikeOrder> closedOrderBook;
+
+	//how do I do this???
+	std::vector<MikeOrdersAtPrice> openOrdersByPrice;
 
 	//stores all the positions
 	//the vector number reflects the price in cents - eg positionBook[10073]
@@ -214,18 +247,9 @@ private:
 	std::string nameOfBook;
 	//for generating unique orderIds:
 	long generateID();
-	
-	//for prototyping - simple clocks for telling how long opererations take
-	clock_t timer1;
-	clock_t timer2;
 
-
-	int frequency_of_primes(int n) {
-		int i, j;
-		int freq = n - 1;
-		for (i = 2; i <= n; ++i) for (j = sqrt(i); j>1; --j) if (i%j == 0) { --freq; break; }
-		return freq;
-	}
+	//simple timer for testing purposes:
+	Mike::Timer timer;
 
 };
 

@@ -1,6 +1,8 @@
 #include "MikePositionsOrders.h"
 #include <iostream>
 
+#include "MikeTimer.h"
+
 MikePositionOrders::MikePositionOrders(std::string name, long highestPrice)
 {
 	//positionBook is a vector of MikePosition classes that stores all positions
@@ -18,11 +20,15 @@ MikePositionOrders::MikePositionOrders(std::string name, long highestPrice)
 	//how big is the positionBook? This is defined by PositionBookmaxPrice
 	 
 	PositionBookmaxPrice = highestPrice;
-
+	//create the postionbook:
 	positionBook.resize(PositionBookmaxPrice + 1);
+	//create the openOrdersByPrice index:
+	openOrdersByPrice.resize(PositionBookmaxPrice + 1);
+	//initialize both with prices:
 	for (long i = 0; i <= PositionBookmaxPrice; ++i)
 	{
 		positionBook[i].price = i;
+		openOrdersByPrice[i].price = i;
 	}
 
 	//clear the open positions index
@@ -47,7 +53,28 @@ void MikePositionOrders::newOrder(MikeOrderType type, long orderPrice, long orde
 	string tempOrderType;
 	//if (type == BUYLMT) tempOrderType = "Buy Limit";
 
-	cout << "new order received. Type: " << /*tempOrderType<<*/ " " << type << " Price: " <<
+	switch (type)
+	{
+	case CXLORDER:
+		tempOrderType = "CANCEL";
+		break;
+	case BUYLMT:
+		tempOrderType = "BUY LIMIT";
+		break;
+	case BUYSTP:
+		tempOrderType = "BUY STOP";
+		break;
+	case SELLLMT:
+		tempOrderType = "SELL LIMIT";
+		break;
+	case SELLSTP:
+		tempOrderType = "SELL STOP";
+		break;
+	default:
+		break;
+	}
+
+	cout << "new order received. Type: " << tempOrderType << " Price: " <<
 		orderPrice << " Size: " << orderAmount << " Order ID: " << newOrderId << endl;
 
 	MikeOrder tempOrder;
@@ -61,6 +88,8 @@ void MikePositionOrders::newOrder(MikeOrderType type, long orderPrice, long orde
 
 	openOrderBook.push_back(tempOrder);
 
+	//TODO: update the openOrdersByPrice vector!!!!
+
 }
 
 void MikePositionOrders::checkFills(long bidPrice, long askPrice)
@@ -69,10 +98,11 @@ void MikePositionOrders::checkFills(long bidPrice, long askPrice)
 	//WORK IN PROGRESS BELOW:
 	//Go through all open orders and check for fills.
 
-	timer1 = clock();
-	timer2 = clock();//time this operation
+	//Mike::Timer timer;
+	timer.reset();
 
-	cout << "\nChecking fills. openOrderBook.size(): " << openOrderBook.size() << endl;	
+
+	cout << "\nChecking fills. Open orders: " << openOrderBook.size() << endl;	
 	for (unsigned int i = 0; i < openOrderBook.size(); i++)
 	{
 		MikeOrder order;
@@ -98,6 +128,8 @@ void MikePositionOrders::checkFills(long bidPrice, long askPrice)
 					openOrderBook.at(i).isFilled = true;
 					//copy the order to closedOrderBook:
 					closedOrderBook.push_back(order);
+
+					//TODO: update the openOrdersByPrice vector!!!!
 
 					cout << " Order ID: " << order.orderId << " Filled at price: " << askPrice << endl;
 				}
@@ -181,15 +213,14 @@ void MikePositionOrders::checkFills(long bidPrice, long askPrice)
 		i++;
 	}
 
-
-	timer2 = clock();
-	cout << "Checking fills took : " << ((timer2 - timer1) /*/ CLOCKS_PER_SEC*/) << endl;
+	cout << "Checking fills took : " << timer.elapsed() << endl;
 }
 
+//this for testing purposes only.
 void MikePositionOrders::printoutAllOrders()
 {
 	using namespace std;
-	cout << "Print orders button pressed - implement this!!!!" << endl;
+	cout << "Print orders button pressed. " << endl;
 	MikeOrder temp;
 	for (unsigned int i = 0; i < openOrderBook.size(); ++i)
 	{
@@ -206,8 +237,10 @@ void MikePositionOrders::printoutActivePositions(long bidprice, long askprice)
 	using namespace std;
 	if (openPosIndex.size() == 0)	cout << "\nNo active positions." << endl;
 	
-	timer1 = clock();
-	timer2 = clock();//time this operation
+//	Mike::Timer timer;
+
+	timer.reset();
+
 	/*
 	Go through all active positions and print them out.
 	To do this, I require an index that stores only active positions so that I do not need to
@@ -239,9 +272,8 @@ void MikePositionOrders::printoutActivePositions(long bidprice, long askprice)
 		checkIfStillActive(openPosIndex.at(i));
 	}
 
-	timer2 = clock();
-	cout << "Printing positions took : " << ((timer2 - timer1) /*/ CLOCKS_PER_SEC*/) 
-		<< "Clocks per sec: " << CLOCKS_PER_SEC << endl;
+
+	cout << "Printing positions took : " << timer.elapsed() << endl;
 
 }
 
@@ -250,10 +282,7 @@ MikePosition MikePositionOrders::getPosition(long priceRequested)
 {
 	MikePosition returnPosition;
 
-
 	returnPosition = positionBook[priceRequested];
-
-
 
 	return returnPosition;
 }
@@ -266,7 +295,6 @@ bool MikePositionOrders::changePostion(long price, long amount)
 
 	//update the active positions index:
 	checkIfStillActive(price);
-
 
 	return true;
 }
@@ -288,7 +316,10 @@ long MikePositionOrders::AllOpenPL(long bidprice, long askprice)
 			positionBook.at(price).calculatePL(bidprice, askprice);
 			allOpenPL = allOpenPL + positionBook.at(price).open_pl;
 		}
+		prevaskprice = askprice;
+		prevbidprice = bidprice;
 	}
+
 
 
 
@@ -312,6 +343,8 @@ long MikePositionOrders::AllClosedPL(long bidprice, long askprice)
 			positionBook.at(price).calculatePL(bidprice, askprice);
 			allClosedPL = allClosedPL + positionBook.at(price).closed_pl;
 		}
+		prevaskprice = askprice;
+		prevbidprice = bidprice;
 	}
 
 	return allClosedPL;
@@ -328,12 +361,16 @@ long MikePositionOrders::AllTotalPL(long bidprice, long askprice)
 	{
 		allTotalPL = 0;//allTotalPL is static!
 
-						//go through every position in the openPosIndex and calculate each individual position's openPL:
+		//go through every position in the openPosIndex and calculate each individual position's openPL:
 		for (long price : openPosIndex)
 		{
 			positionBook.at(price).calculatePL(bidprice, askprice);
 			allTotalPL = allTotalPL + positionBook.at(price).total_pl ;
 		}
+
+		////update previous bid/ask prices for future checks:
+		prevbidprice = bidprice;
+		prevaskprice = askprice;
 	}
 
 	return allTotalPL;
@@ -352,10 +389,89 @@ long MikePositionOrders::TotalOpenPos()
 	return totalOpenPosition ;
 }
 
+void MikePositionOrders::calculateIndividualPLs(long bidprice, long askprice)
+{
+	for (long price : openPosIndex)
+	{
+		positionBook.at(price).calculatePL(bidprice, askprice);
+	}
+}
 
+void MikePositionOrders::updateOpenOrdersByPrice()
+{
+	//this is how this works. the internal static index stores prices at which there have ever
+	//been any open orders. at first pass, it erases every entry in the openOrdersByPrice vecor
+	//with a price stored in the index. Then, it goes through all of the open orders stored in
+	//the openOrderBook vector and updates entiries in the openOrdersByPrice vector.
+	//finally, after this is done, it goes through all of the index and checks if any of the
+	//openOrdersByPrice entries corresponding to the prices stored in the index have been zeroed
+	//out. if they have been zeroed out it means there are no longer any open orders corresponding
+	//to that price. it then removes that price which no longer holds any open orders from the index
 
+	//index for storing prices to iterate through:
+//	static std::vector<long> index;
+	using namespace std;
 
+	static std::set<long> index;
 
+	cout << " Checking problem index " << endl;
+
+//	MikeOrdersAtPrice temp;
+
+	//erase all entries in openOrdersByPrice for prices stored in the index:
+	if (index.size()>0) {
+		for (long price : index)
+		{
+			std::cout << " problem index: " << price << std::endl;
+
+			//below for testing:
+			cout << openOrdersByPrice.at(price).price << endl;
+			cout << openOrdersByPrice.at(price).buyLimitAmount << endl;
+
+			//THE FOLLOWING LINE OF CODE CRASHES. WILL COMPILE BUT CRASHES:
+			//COMMENT OUT TO MAKE IT WORK
+			//WHY?!?!?!?!?
+			openOrdersByPrice.at(price).eraseall();
+		}
+	}
+
+	//go through all the open orders in openOrderBook and update entries in OpenOrdersByPrice
+	for (MikeOrder order : openOrderBook)
+	{
+		//update entries in openOrdersByPrice:
+		switch (order.ordertype)
+		{
+		case BUYLMT:
+			openOrdersByPrice.at(order.price).buyLimitAmount += order.amount;
+			break;
+		case BUYSTP:
+			openOrdersByPrice.at(order.price).buyStopAmount += order.amount;
+			break;
+		case SELLLMT:
+			openOrdersByPrice.at(order.price).sellLimitAmount += order.amount;
+			break;
+		case SELLSTP:
+			openOrdersByPrice.at(order.price).sellStopAmount += order.amount;
+			break;
+		default:
+			std::cout << " ERROR in MikePositionOrders::updateOpenOrdersByPrice()" << std::endl;
+			break;
+		}
+
+		//update the index with the price:
+		index.insert(order.price);
+	}
+
+	//THE BELOW WILL CRASH TOO:
+	//remove empty entries from index:
+	if (index.size()) {
+		for (long price : index)
+		{
+			if (openOrdersByPrice.at(price).checkifempty()) { index.erase(price); }
+		}
+	}
+
+}
 
 bool MikePositionOrders::checkIfStillActive(long price)
 {
@@ -437,3 +553,20 @@ long MikePositionOrders::generateID()
 	static long s_itemID = 0;
 	return s_itemID++;
 }
+
+void MikeOrdersAtPrice::eraseall()
+{
+		buyLimitAmount = 0;
+		buyStopAmount = 0;
+		sellLimitAmount = 0;
+		sellStopAmount = 0;
+}
+
+bool MikeOrdersAtPrice::checkifempty()
+{
+		if (buyLimitAmount == 0 && buyStopAmount == 0 && sellLimitAmount == 0 && sellStopAmount == 0)
+			return true;
+		else
+			return false;
+}
+

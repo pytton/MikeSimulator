@@ -13,8 +13,8 @@ Control::Control(MikeSimulator * p, int starting_bid)
 	ptr_to_mikesimulator = p;
 	std::cout << "Control constructed. Starting bid: " << starting_bid << std::endl;
 
-	userInterface = new ManualInterface(this, /*p,*/ starting_bid);
-//	userInterface = new UserInterface(this, /*p,*/ starting_bid);
+//	userInterface = new ManualInterface(this, /*p,*/ starting_bid);
+	userInterface = new UserInterface(this, /*p,*/ starting_bid);
 	
 	data = new Data(this, starting_bid);
 	m_pPriceControlUI = new PriceControlUI(this, starting_bid);
@@ -31,12 +31,16 @@ void Control::MainLoop()
 	//1 check prices	-- this is done by manual up/down now
 
 	//2 check fills
+
+	manualPositions->checkFills(data->GetBidPrice(), data->GetAskPrice());
+	manualPositions->updateOpenOrdersByPrice();
+	//manualPositions->printoutActivePositions(data->GetBidPrice(), data->GetAskPrice());
 	//2a check/print current position, profit/loss, etc
 	//3 make decisions	-- now just manual orders
 	//4 display results/decisions
 
 	
-	//	printCurrentAll();
+		printCurrentAll();
 	
 	
 	
@@ -44,6 +48,7 @@ void Control::MainLoop()
 	//5 send orders		-- for algos - nothing now
 	userInterface->PrintBidAsk(data->GetBidPrice(), data->GetAskPrice());
 
+	//printCurrentAll();
 
 }
 
@@ -53,20 +58,57 @@ void Control::printCurrentAll()
 	UserInterface * myInterface = userInterface;
 	MikePositionOrders * myPositionOrders = manualPositions;
 
+//	const std::vector <MikePosition>  myPositions = myPositionOrders->positionBook;
 
-	myPositionOrders->positionBook.at(20415);
+//	const std::vector<MikePosition> mypositionBook =  myPositionOrders->GetMikePositions();
 
-	const std::vector <MikePosition>  myPositions = myPositionOrders->positionBook;
+	const std::vector<MikePosition> *constPositions = myPositionOrders->GetMikePositions();
 
-//	std::vector<MikePosition> mypositionBook =  myPositionOrders->GetMikePositions();
+	const std::vector<MikeOrdersAtPrice> *ordersAtPrice = myPositionOrders->GetOpOrdersbyPrice();
 
-	cout << "Printing (almost) all " << endl;
+	//cout << "Postition at ask price: " << constPositions->at(myData->GetAskPrice()).open_amount << endl;
+
+
+
+
+
+	//cout << "Printing (almost) all " << endl;
+
+	//cout << myPositions.at(20415).open_amount << endl;
+
+	//cout << myPositions.at(20415).closed_pl  << endl;
 
 //	cout << mypositionBook.at(20415).open_amount << endl;
 
-	//myPositions->
+//	//myPositions->
 
-	//myInterface->PrintAll(0, 0, 0, 0, 0, 0, vector, vector);
+	long 
+		totalOpenPos,
+		totalOpenPL,
+		totalClosedPL,
+		totalPL,
+		askPrice,
+		bidPrice;
+
+	askPrice = myData->GetAskPrice();
+	bidPrice = myData->GetBidPrice();
+	totalOpenPos = myPositionOrders->TotalOpenPos();
+	totalOpenPL = myPositionOrders->AllOpenPL(bidPrice, askPrice);
+	totalClosedPL = myPositionOrders->AllClosedPL(bidPrice, askPrice);
+	totalPL = myPositionOrders->AllTotalPL(bidPrice, askPrice);
+
+
+
+	myInterface->PrintAll(
+		totalOpenPos,
+		totalOpenPL,
+		totalClosedPL,
+		totalPL,
+		askPrice,
+		bidPrice,
+		constPositions,
+		ordersAtPrice
+		);
 
 }
 
@@ -92,18 +134,18 @@ void Control::printCurrentAll()
 void Control::CallbkUserInt(UserInterface * p, BtnPressed btn,
 	long parameter1,	long parameter2,	double parameter3)
 {
-	if (btn == UPBTN)
-	{
-		//MOVED TO CallbkPriceControlUI
-	}
-	if (btn == DOWNBTN) 
-	{
-		//MOVED TO CallbkPriceControlUI
-	}
-	if (btn == SLIDER1)
-	{
-		//MOVED TO CallbkPriceControlUI
-	}
+	//if (btn == UPBTN)
+	//{
+	//	//MOVED TO CallbkPriceControlUI
+	//}
+	//if (btn == DOWNBTN) 
+	//{
+	//	//MOVED TO CallbkPriceControlUI
+	//}
+	//if (btn == SLIDER1)
+	//{
+	//	//MOVED TO CallbkPriceControlUI
+	//}
 	if (btn == EXTRABTN)
 	{
 		cout << "Extra button pressed - implement this!!!!" << endl;
@@ -158,6 +200,8 @@ void Control::CallbkWidTable(int row, int col, long price, MikeOrderType OrderTy
 	//send order to OrderBook
 	//finish this so that the amount of order is passed through
 	manualPositions->newOrder(OrderTypePressed, price,100);
+	manualPositions->checkFills(data->GetBidPrice(), data->GetAskPrice());
+	printCurrentAll();
 	
 
 }

@@ -27,6 +27,7 @@
     <ClInclude Include="src\MikeEnums.h" />
     <ClInclude Include="src\MikePositionsOrders.h" />
     <ClInclude Include="src\MikeSimulator.h" />
+    <ClInclude Include="src\MikeTimer.h" />
     <ClInclude Include="src\MktSnapshot.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClInclude>
@@ -43,6 +44,7 @@
     <ClCompile Include="src\ManualInterface.cpp" />
     <ClCompile Include="src\MikePositionsOrders.cpp" />
     <ClCompile Include="src\MikeSimulator.cpp" />
+    <ClCompile Include="src\MikeTimer.cpp" />
     <ClCompile Include="src\PriceControlUI.cpp" />
     <ClCompile Include="src\UserInterface.cpp" />
     <ClCompile Include="src\WidgetTable.cpp" />
@@ -110,6 +112,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IncludePath>E:\Michael\Documents\Visual Studio 2015\ExternalLibraries\fltk-1.3.3;$(IncludePath)</IncludePath>
     <LibraryPath>E:\Michael\Documents\Visual Studio 2015\ExternalLibraries\fltk-1.3.3\lib;$(LibraryPath)</LibraryPath>
+    <CodeAnalysisRuleSet>MixedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -117,6 +121,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <EnablePREfast>false</EnablePREfast>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>

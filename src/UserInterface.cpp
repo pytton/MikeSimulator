@@ -11,6 +11,7 @@
 //#include "Display.h"
 #include "MikeSimulator.h"
 #include "WidgetTable.h"
+#include "MikeTimer.h"
 
 class Control;
 
@@ -41,7 +42,7 @@ UserInterface::UserInterface(
 		number_cols = numberOfColumns,
 		how_many_cols_are_buttons = numberOfButtoncolumns;
 	
-	m_pTable = new WidgetTable(65, 0, 920, 495, "widgettable", this, top_row_price, number_rows, 
+	m_pTable = new WidgetTable(65, 0, 960, 495, "widgettable", this, top_row_price, number_rows, 
 		number_cols, how_many_cols_are_buttons, col_names, button_names);
 
 
@@ -71,22 +72,26 @@ void UserInterface::SetColButNames(std::vector <std::string> &col_names, std::ve
 	using namespace std;
 	cout << "UserInterface SetColButNames called" << endl;
 
+	col_names.clear();
+
 	col_names.push_back("CANCEL\nORDER");
 	col_names.push_back("BUY");
 	col_names.push_back("BUY");
 	col_names.push_back("SELL");
 	col_names.push_back("SELL");
-	//col_names.push_back("ERROR!!!!");
 	col_names.push_back("PRICE");
 	col_names.push_back("BID");
 	col_names.push_back("ASK");
-	col_names.push_back("ORDER\nSIZE");
-	col_names.push_back("ORDER\nTYPE");
-	col_names.push_back("ORDER\nPRICE");
+	col_names.push_back("B LMT\nSIZE");
+	col_names.push_back("B STP\nSIZE");
+	col_names.push_back("S LMT\nSIZE");
+	col_names.push_back("S STP\nSIZE");
 	col_names.push_back("OPEN\nPOSITION");
 	col_names.push_back("OPEN\nP/L");
 	col_names.push_back("CLOSED\nP/L");
 	col_names.push_back("TOTAL\nP/L");
+
+	button_names.clear();
 
 	button_names.push_back("CXL");
 	button_names.push_back("B LMT");
@@ -288,32 +293,82 @@ void UserInterface::PrintBidAsk(long bid, long ask)
 
 }
 
+//void UserInterface::PrintAll(long totalOpenPos, long totalOpenPL, long totalClosedPL, long totalPL, long askPrice, long bidPrice, const std::vector<MikePosition>* openPositions)
+//{
+//	std::cout << "Postition at ask price: " << openPositions->at(askPrice).open_amount << std::endl;
+//
+//}
+
 void UserInterface::PrintAll(
 	long totalOpenPos, 
 	long totalOpenPL, 
 	long totalClosedPL, 
 	long totalPL, 
 	long askPrice, 
-	long bidPrice, 
-	const std::vector <MikePosition> &openPositions,
-	const std::vector <MikeOrder> &openOrders)
+	long bidPrice,
+	const std::vector <MikePosition> *openPositions,
+	const std::vector <MikeOrdersAtPrice> *openOrdersAtPrice)
 {
 	using namespace std;
+
+	Mike::Timer timer;
+
+	timer.reset();
 
 	cout << "\nTotalOpenPos: " << totalOpenPos << " Others: " << totalOpenPL << " " <<
 		totalClosedPL << " " << totalPL << " " << askPrice << " " << bidPrice << endl;
 	
-	std::stringstream buffer;
 
-	buffer << totalOpenPos;
-	m_TotOpenPos->value(buffer.str().c_str());
+
+	char  buffer[21];
+
+	snprintf(buffer, 20, "%d", totalOpenPos);
+	m_TotOpenPos->value(buffer);
+
+	snprintf(buffer, 20, "%d", totalOpenPL);
+	m_TotOpenPL->value(buffer);
+
+	snprintf(buffer, 20, "%d", totalClosedPL);
+	m_TotClosedPL->value(buffer);
+
+	snprintf(buffer, 20, "%d", totalPL);
+	m_TotPL->value(buffer);
+
+	snprintf(buffer, 20, "%d", askPrice);
+
+
+	m_curr_ask->value(askPrice);
+	m_curr_bid->value(bidPrice);
+
 
 	
-	buffer.clear();
-	buffer << totalOpenPL;
-	m_TotOpenPL->value(buffer.str().c_str());
+//	GetTable()->printPositions(openPositions);
+	GetTable()->printPositions(openPositions, openOrdersAtPrice);
+
+
+	//for (int i = (askPrice - 3); i < (askPrice + 3); i++) {
+
+	//	std::cout << "Postition at price: " << i << " is: " << 
+	//		openPositions->at(i).open_amount << std::endl;
+
+	//}
+
+	timer.print();
+
+
+	//snprintf(buffer, 20, "%d", bidPrice);
+	//m_TotOpenPos->value(buffer);
+	//m_pTable->printInTable(10, 8, buffer);
+	//snprintf(buffer, 20, "%d", totalPL);
+	//m_pTable->printInTable(10, 9, buffer);
+	//for (int i = 0; i < 100; i++)
+	//{
+	//	snprintf(buffer, 20, "%d", (totalPL +i) );
+	//	m_pTable->printInTable(10 + i, 9, buffer);
+	//}
 
 }
+
 
 
 //old callback kept for reference:
