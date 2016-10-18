@@ -42,7 +42,7 @@ UserInterface::UserInterface(
 		number_cols = numberOfColumns,
 		how_many_cols_are_buttons = numberOfButtoncolumns;
 	
-	m_pTable = new WidgetTable(65, 0, 960, 495, "widgettable", this, top_row_price, number_rows, 
+	m_pTable = new WidgetTable(0, 0, 1170, 965, "widgettable", this, top_row_price, number_rows,
 		number_cols, how_many_cols_are_buttons, col_names, button_names);
 
 
@@ -313,10 +313,10 @@ void UserInterface::PrintAll(
 
 	Mike::Timer timer;
 
-	timer.reset();
+//	timer.reset();
 
-	cout << "\nTotalOpenPos: " << totalOpenPos << " Others: " << totalOpenPL << " " <<
-		totalClosedPL << " " << totalPL << " " << askPrice << " " << bidPrice << endl;
+//	cout << "\nTotalOpenPos: " << totalOpenPos << " Others: " << totalOpenPL << " " <<
+//		totalClosedPL << " " << totalPL << " " << askPrice << " " << bidPrice << endl;
 	
 
 
@@ -353,7 +353,7 @@ void UserInterface::PrintAll(
 
 	//}
 
-	timer.print();
+//	timer.print();
 
 
 	//snprintf(buffer, 20, "%d", bidPrice);

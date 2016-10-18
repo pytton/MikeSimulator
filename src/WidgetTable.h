@@ -118,7 +118,11 @@ private:
 		openPosCol = 12,
 		openPLCol = 13,
 		closedPLCol = 14,
-		totalPLCol = 15;
+		totalPLCol = 15,
+		buyLimitOrderCol = 8,
+		buyStopOrderCol = 9,
+		sellLimitOrderCol = 10,
+		sellStopOrderCol = 11;
 
 
 };

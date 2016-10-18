@@ -8,71 +8,71 @@ class FluidInterface {open
   } {
     Fl_Window m_window1 {
       label window1 open
-      xywh {453 192 1110 662} type Double visible
+      xywh {379 40 1527 977} type Double visible
     } {
       Fl_Value_Input m_curr_ask {
         label {Current Ask}
-        xywh {320 500 55 20}
+        xywh {1260 105 55 20}
       }
       Fl_Value_Input m_top_limit {
         label {Top Limit}
-        xywh {500 500 60 20}
+        xywh {1440 105 60 20}
       }
       Fl_Value_Input m_top_profit {
         label {Profit at top lim}
-        xywh {500 550 60 20}
+        xywh {1440 155 60 20}
       }
-      Fl_Table m_table {open
-        xywh {0 0 940 495} labelsize 10
+      Fl_Table m_table {open selected
+        xywh {0 0 1170 965} labelsize 10
       } {}
       Fl_Value_Input m_curr_bid {
         label {Current Bid}
-        xywh {320 525 55 20}
+        xywh {1260 130 55 20}
       }
       Fl_Value_Input m_bottom_limit {
         label {Bottom Limit}
-        xywh {500 525 60 20}
+        xywh {1440 130 60 20}
       }
       Fl_Value_Input m_bottom_profit {
         label {Profit at bottom lim}
-        xywh {500 575 60 20}
+        xywh {1440 180 60 20}
       }
       Fl_Button m_btn_extra {
-        label {Reprice Table} selected
-        xywh {10 505 70 40} align 128
+        label {Reprice Table}
+        xywh {1270 15 70 40} align 128
       }
       Fl_Output m_TotOpenPos {
         label {Total Open Pos:}
-        xywh {180 501 60 24} labelsize 10 textsize 12
+        xywh {1440 11 60 24} labelsize 10 textsize 12
       }
       Fl_Output m_TotOpenPL {
         label {Total Open P/L:}
-        xywh {180 521 60 24} labelsize 10 textsize 12
+        xywh {1440 31 60 24} labelsize 10 textsize 12
       }
       Fl_Output m_TotClosedPL {
         label {Total Closed P/L:}
-        xywh {180 541 60 24} labelsize 10 textsize 12
+        xywh {1440 51 60 24} labelsize 10 textsize 12
       }
       Fl_Output m_TotPL {
         label {Total P/L:}
-        xywh {180 561 60 24} labelsize 10 textsize 12
+        xywh {1440 71 60 24} labelsize 10 textsize 12
       }
       Fl_Button m_btn_printOrders {
         label {Print Orders}
-        xywh {685 500 45 30} labelsize 10 align 128
+        xywh {1395 225 45 30} labelsize 10 align 128
       }
       Fl_Button m_btn_checkFills {
         label {Check Fillls}
-        xywh {685 540 45 30} labelsize 10 align 128
+        xywh {1395 265 45 30} labelsize 10 align 128
       }
       Fl_Button m_btn_printPos {
         label {Print Positions}
-        xywh {745 500 45 30} labelsize 10 align 128
+        xywh {1455 225 45 30} labelsize 10 align 128
       }
     }
     Fl_Window m_window2 {
       label window2 open
-      xywh {-32000 -32000 486 320} type Double hide
+      xywh {43 446 314 568} type Double visible
     } {
       Fl_Text_Display text_display {
         label text

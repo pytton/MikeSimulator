@@ -157,7 +157,8 @@ void WidgetTable::printInTable(int row, int col, std::string text)//row = 0 is f
 
 
 }
-void WidgetTable::printPositions(const std::vector <MikePosition> *openPositions, const std::vector <MikeOrdersAtPrice> *openOrdersAtPrice)
+void WidgetTable::printPositions(const std::vector <MikePosition> *openPositions, 
+	const std::vector <MikeOrdersAtPrice> *openOrdersAtPrice)
 {
 	using namespace std;
 
@@ -169,33 +170,14 @@ void WidgetTable::printPositions(const std::vector <MikePosition> *openPositions
 	closedPLCol;
 	totalPLCol;
 
-	//int PriceCol = this->priceCol;	//indicates in which column prices are to be printed - 
-	//								//change this as neccessary if design changes made to WidgetTable
-	//int PriceToPrint;
-	////print prices in rows from 0 to last
-	//for (int row = 0; row < table_rows; row++)
-	//{
-	//	PriceToPrint = TopRowPrice - row;
-	//	Fl_Input * myCell = (Fl_Input*)GetElement(row, PriceCol);
-	//	char ch[40];
-	//	std::stringstream buffer;
-	//	buffer << PriceToPrint;
-	//	myCell->value(buffer.str().c_str());
-	//	//myCell->label(buffer.str().c_str());
-	//	//sprintf(ch, "%d", PriceToPrint);
-	//	//myCell->value(ch);
-	//	//myCell->label(ch);
-	//	//myCell->redraw();
-	//}
-
 
 	//print elements of openPositions vector into rows of WidgetTable that are currently displayed
 
 	int TopDisplayedPrice = GetTopRowPrice();		//this is the highest price currently displayed in WidgetTable
 	int BottomDisplayedPrice = GetBottomRowPrice();	//this is the lowest as above
 
-	cout << "toprowprice: " << GetTopRowPrice()<< endl;
-	cout << "bottomrowprice: " << GetBottomRowPrice()<< endl;
+//	cout << "toprowprice: " << GetTopRowPrice()<< endl;
+//	cout << "bottomrowprice: " << GetBottomRowPrice()<< endl;
 
 	//populate the cells in WidgetTable with values:
 	for (int displayPrice = BottomDisplayedPrice; displayPrice <= TopDisplayedPrice; displayPrice++) 
@@ -205,54 +187,51 @@ void WidgetTable::printPositions(const std::vector <MikePosition> *openPositions
 		//find the cell displaying OPEN POSITION at displayprice:
 		Fl_Input * openPosCell = (Fl_Input*)GetElement(RowOfPrice(displayPrice), openPosCol);
 		//print the open postion for displayPrice from openPositions vector to this cell:	
-		char buf1[41];	snprintf(buf1, 40, "%d", (openPositions->at(displayPrice).open_amount));
-		openPosCell->value(buf1);
+		snprintf(buffer, 40, "%d", (openPositions->at(displayPrice).open_amount));
+		if (openPositions->at(displayPrice).open_amount != 0) {
+			openPosCell->textsize(14);
+			openPosCell->value(buffer);
+		}
+		else
+			openPosCell->value("");
+		
 
 		//same for OPEN PL at displayprice:
 		Fl_Input * openPLCell = (Fl_Input*)GetElement(RowOfPrice(displayPrice), openPLCol);
-		char buf2[41];	snprintf(buf2, 40, "%d", (openPositions->at(displayPrice).open_pl));
-		openPLCell->value(buf2);
+		snprintf(buffer, 40, "%d", (openPositions->at(displayPrice).open_pl) != 0);
+		openPLCell->value(buffer);
 		
 		//same for CLOSED PL at displayprice:
 		Fl_Input * closedPLCell = (Fl_Input*)GetElement(RowOfPrice(displayPrice), closedPLCol);
-		char buf3[41];	snprintf(buf3, 40, "%d", (openPositions->at(displayPrice).closed_pl));
-		closedPLCell->value(buf3);
+		snprintf(buffer, 40, "%d", (openPositions->at(displayPrice).closed_pl));
+		closedPLCell->value(buffer);
 
 		//same for TOTAL PL at displayprice:
 		Fl_Input * totalPLcell= (Fl_Input*)GetElement(RowOfPrice(displayPrice), totalPLCol);
-		char buf4[41];	snprintf(buf4, 40, "%d", (openPositions->at(displayPrice).total_pl));
-		totalPLcell->value(buf4);
+		snprintf(buffer, 40, "%d", (openPositions->at(displayPrice).total_pl));
+		totalPLcell->value(buffer);
 
+		//Print the open orders for this price:
+		//Buy Limit Orders:
+		Fl_Input * buyLMTOrder = (Fl_Input*)GetElement(RowOfPrice(displayPrice), buyLimitOrderCol);
+		snprintf(buffer, 40, "%d", (openOrdersAtPrice->at(displayPrice).buyLimitAmount));
+		buyLMTOrder->value(buffer);
+
+		//Buy Stop Orders:
+		Fl_Input * buySTPOrder = (Fl_Input*)GetElement(RowOfPrice(displayPrice), buyStopOrderCol);
+		snprintf(buffer, 40, "%d", (openOrdersAtPrice->at(displayPrice).buyStopAmount));
+		buySTPOrder->value(buffer);
+
+		//Sell Limit Orders:
+		Fl_Input * sellLMTOrder = (Fl_Input*)GetElement(RowOfPrice(displayPrice), sellLimitOrderCol);
+		snprintf(buffer, 40, "%d", (openOrdersAtPrice->at(displayPrice).sellLimitAmount));
+		sellLMTOrder->value(buffer);
+
+		//Sell Stop Orders:
+		Fl_Input * sellSTPOrder = (Fl_Input*)GetElement(RowOfPrice(displayPrice), sellStopOrderCol);
+		snprintf(buffer, 40, "%d", (openOrdersAtPrice->at(displayPrice).sellStopAmount));
+		sellSTPOrder->value(buffer);
 	}
-
-	//below old version with multiple buffers
-	//for (int displayPrice = BottomDisplayedPrice; displayPrice <= TopDisplayedPrice; displayPrice++)
-	//{
-	//	//FLTK requires that I pass what I want to print into the cells as a char *:
-	//	char buffer[50];
-	//	//find the cell displaying OPEN POSITION at displayprice:
-	//	Fl_Input * openPosCell = (Fl_Input*)GetElement(RowOfPrice(displayPrice), openPosCol);
-	//	//print the open postion for displayPrice from openPositions vector to this cell:	
-	//	char buf1[41];	snprintf(buf1, 40, "%d", (openPositions->at(displayPrice).open_amount));
-	//	openPosCell->value(buf1);
-
-	//	//same for OPEN PL at displayprice:
-	//	Fl_Input * openPLCell = (Fl_Input*)GetElement(RowOfPrice(displayPrice), openPLCol);
-	//	char buf2[41];	snprintf(buf2, 40, "%d", (openPositions->at(displayPrice).open_pl));
-	//	openPLCell->value(buf2);
-
-	//	//same for CLOSED PL at displayprice:
-	//	Fl_Input * closedPLCell = (Fl_Input*)GetElement(RowOfPrice(displayPrice), closedPLCol);
-	//	char buf3[41];	snprintf(buf3, 40, "%d", (openPositions->at(displayPrice).closed_pl));
-	//	closedPLCell->value(buf3);
-
-	//	//same for TOTAL PL at displayprice:
-	//	Fl_Input * totalPLcell = (Fl_Input*)GetElement(RowOfPrice(displayPrice), totalPLCol);
-	//	char buf4[41];	snprintf(buf4, 40, "%d", (openPositions->at(displayPrice).total_pl));
-	//	totalPLcell->value(buf4);
-
-	//}
-
 
 }
 Fl_Widget * WidgetTable::GetElement(int nRow, int nCol)

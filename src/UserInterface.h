@@ -81,16 +81,7 @@ public:
 		long bidPrice,
 		const std::vector <MikePosition> *openPositions,
 		const std::vector <MikeOrdersAtPrice> *openOrdersAtPrice);
-	//virtual void PrintAll(
-	//	long totalOpenPos,
-	//	long totalOpenPL,
-	//	long totalClosedPL,
-	//	long totalPL,
-	//	long askPrice,
-	//	long bidPrice/*,
-	//	const std::vector <MikePosition> &openPositions
-	//	const std::vector <MikeOrder> &openOrders*/
-	//	);
+
 
 protected:
 	//members:

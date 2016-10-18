@@ -67,7 +67,7 @@ public:
 	long amount = 0;
 
 	//for future use - for passing orders into outside API
-	int orderId;
+	long orderId;
 
 	//for checking fills - has the order been filled already?
 	bool isFilled = false;
@@ -129,7 +129,7 @@ public:
 	{
 		static long prevbidprice = 0;
 		static long prevaskprice = 0;
-		if (bidprice != prevbidprice || askprice != prevaskprice)
+	//	if (bidprice != prevbidprice || askprice != prevaskprice)
 		{
 			open_pl = 0;
 			//if position is 'long':
@@ -152,64 +152,55 @@ public:
 	MikePositionOrders(std::string name, long highestPrice);
 	~MikePositionOrders();
 
-	//POSITION METHODS:
-	//used for printing open positions in WidgetTable
-	const std::vector <MikePosition> * GetMikePositions() { return   &positionBook; }
+	void newOrder(MikeOrderType type, long orderPrice, long orderAmount);
+	//checks fills for all orders stored in the openPosIndex
+	void checkFills(long bidPrice, long askPrice);
+
+
 	void newPosition(long price, long position);
 	MikePosition getPosition(long price);
-	
-	
+	//not implemented yet
+	bool clearPosition(long price);
+	//not used at the moment. do I still need this?
+	bool changePostion(long price, long amount);
+
+
 	//calculates the total aggregate open P/L for all active positions of the whole book
 	long AllOpenPL(long bidprice, long askprice);
 	//calculates the total aggregate closed P/L for all active positions of the whole book
 	long AllClosedPL(long bidprice, long askprice);
 	//calculates the total aggregate total P/L (open+closed) for all active positions of the whole book
 	long AllTotalPL(long bidprice, long askprice);
+
 	//calculates the total aggregate position for all active positions of the whole book
 	long TotalOpenPos();
+
 	//calculate individual P/L for each position that is stored in the openPosIndex
 	//this should be done before attempting to print out the positions
 	void calculateIndividualPLs(long bidprice, long askprice);
 
-	//prototype for printing activePositions:
-	void printoutActivePositions(long bidprice, long askprice);
-
-	////not implemented yet:
-	//bool clearPosition(long price);
-	////not used at the moment. do I still need this?
-	//bool changePostion(long price, long amount);
-	////not implemented yet. gives the total open position above a certain price level:
-	//long totalOpenAbove(long price);
-	////not implemented yet. gives the total open position below a certain price level:
-	//long totalOpenBelow(long price);
 
 
-	//ORDER METHODS:
-	void newOrder(MikeOrderType type, long orderPrice, long orderAmount);
-	//checks fills for all orders stored in the openPosIndex
-	void checkFills(long bidPrice, long askPrice);
+	//used for printing open positions in WidgetTable
+	const std::vector <MikePosition> * GetMikePositions()  { return   &positionBook; }
+
 	//goes through all the open orders stored in openOrderBook and updates openOrdersByPrice:
 	void updateOpenOrdersByPrice();
 	//used for printing open orders in WidgetTable
-	const std::vector <MikeOrdersAtPrice> * GetOpOrdersbyPrice() { return &openOrdersByPrice; }
+	const std::vector <MikeOrdersAtPrice> * GetOpOrdersbyPrice (){  return &openOrdersByPrice;	}
+
+
 	//prototype function to print out all orders in the console:
 	void printoutAllOrders();
 
+	//prototype for printing activePositions:
+	void printoutActivePositions(long bidprice, long askprice);
 
-	//NEW ORDER HANDLING PROTOTYPE:
-	//for now, these are just funcions copied from previous implementation of 'Order Methods' with a 'prot' prefix. remove as neccessary after new implementation tested
-	
-	Mike::OrderbookPrototype * orderbook;
-	void protnewOrder(MikeOrderType type, long orderPrice, long orderAmount);
-	//checks fills for all orders stored in the openPosIndex
-	void protcheckFills(long bidPrice, long askPrice);
-	//goes through all the open orders stored in openOrderBook and updates openOrdersByPrice:
-	void protupdateOpenOrdersByPrice();
-	//used for printing open orders in WidgetTable
-	const std::vector <MikeOrdersAtPrice> * protGetOpOrdersbyPrice() { return &openOrdersByPrice; }
-	//prototype function to print out all orders in the console:
-	void protprintoutAllOrders();
+	//not implemented yet. gives the total open position above a certain price level:
+	long totalOpenAbove(long price);
 
+	//not implemented yet. gives the total open position below a certain price level:
+	long totalOpenBelow(long price);
 
 
 
@@ -243,7 +234,7 @@ private:
 
 	//stores the prices of active postions.
 	//for knowing which postitions are active or not - if I need to access only the 'not empty' positions. 
-//	std::vector <long> openPosIndex;	//original index
+	std::vector <long> openPosIndex;	//original index
 	std::unordered_set<long> openPosIndexSet;	//trying to implement a faster way
 	///////////////////////////////////////////////////////////
 	///////////////////////////////////////////////////////////

@@ -89,3 +89,15 @@ void ManualInterface::SetColButNames(std::vector<std::string>& col_names, std::v
 	button_names.push_back("S STP");
 
 }
+
+//experimenting:
+//void ManualInterface::printPositions(const std::vector <MikePosition> *openPositions,
+//	const std::vector <MikeOrdersAtPrice> *openOrdersAtPrice)
+//{
+//	std::cout << "Experimental printout from ManualInterface" << std::endl;
+//}
+//
+//void ManualInterface::PrintAll(long totalOpenPos, long totalOpenPL, long totalClosedPL, long totalPL, long askPrice, long bidPrice, const std::vector<MikePosition>* openPositions, const std::vector<MikeOrdersAtPrice>* openOrdersAtPrice)
+//{
+//	std::cout << "Virtual function called! No printout!" << std::endl;
+//}

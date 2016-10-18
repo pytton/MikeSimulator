@@ -5,10 +5,7 @@
 
 MikePositionOrders::MikePositionOrders(std::string name, long highestPrice)
 {
-	orderbook = new Mike::OrderbookPrototype(this);
-		
-
-//positionBook is a vector of MikePosition classes that stores all positions
+	//positionBook is a vector of MikePosition classes that stores all positions
 	positionBook.clear();
 	nameOfBook = name;
 
@@ -92,10 +89,8 @@ void MikePositionOrders::newOrder(MikeOrderType type, long orderPrice, long orde
 
 	openOrderBook.push_back(tempOrder);
 
-	//EXPERIMENTING by calling newOrder inside OrderBookPrototype class:
+	//TODO: update the openOrdersByPrice vector!!!!
 
-	orderbook->neworder(type, orderPrice, orderAmount);
-	
 }
 
 void MikePositionOrders::checkFills(long bidPrice, long askPrice)
@@ -300,17 +295,17 @@ MikePosition MikePositionOrders::getPosition(long priceRequested)
 	return returnPosition;
 }
 
-//bool MikePositionOrders::changePostion(long price, long amount)
-//{
-//	//change the open_amount by amount:
-//	long temp = positionBook.at(price).open_amount;
-//	positionBook.at(price).open_amount = temp + amount;
-//
-//	//update the active positions index:
-//	checkIfStillActive(price);
-//
-//	return true;
-//}
+bool MikePositionOrders::changePostion(long price, long amount)
+{
+	//change the open_amount by amount:
+	long temp = positionBook.at(price).open_amount;
+	positionBook.at(price).open_amount = temp + amount;
+
+	//update the active positions index:
+	checkIfStillActive(price);
+
+	return true;
+}
 
 long MikePositionOrders::AllOpenPL(long bidprice, long askprice)
 {
