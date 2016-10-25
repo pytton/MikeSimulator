@@ -74,15 +74,7 @@ above just an example. I want functions inside Data class to be able to call eve
 //first algo to write - something very very simple like a stupid scalper without any guards
 
 
-//#include "UserInterface.h"
-//#include "Pointers.h"
-//#include "Data.h"
-//#include "Control.h"
-//#include "Display.h"
-#include "MikeSimulator.h"
 
-#include <iostream>
-#include <string>
 
 /*
 
@@ -117,7 +109,10 @@ Algo - make decisions here (one algo? more algos?)
 
 */
 
-//#include "PositionBook.h"
+
+
+#include "MikeSimulator.h"
+#include "UserInterface.h"
 
 
 int main()

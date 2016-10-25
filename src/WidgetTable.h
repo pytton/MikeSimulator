@@ -4,7 +4,7 @@
 //#include "FLUID/FluidInterface.h"
 //#include "Pointers.h"
 
-#include "UserInterface.h"
+//#include "UserInterface.h"
 
 #include <iostream>
 #include <sstream>
@@ -127,7 +127,7 @@ private:
 
 };
 
-class My_fl_button : public Fl_Button  //with location of button in Fl_Table
+class My_fl_button : public  Fl_Button  //with location of button in Fl_Table
 {
 public:
 	//below determines where in the Fl_Table the button is located

@@ -1,83 +1,97 @@
 #ifndef _POSITIONBOOK_H_INCLUDED_
 #define _POSITIONBOOK_H_INCLUDED_
 
-#include <string>
+
+#include <time.h> //for clock_t, clock, CLOCKS_PER_SEC
 #include <vector>
+#include <string>
+#include <set>
+#include <unordered_set>
+
+//#include "OrderbookPrototype.h"
+//#include "MikeEnums.h"
+//#include "MikeTimer.h"
+//#include "MikePositionsOrders.h"
 
 
 
-class MikePosition
-{
-public:
-	long price;
-	long open_amount;
-	long open_pl;
-	long closed_pl;
-	long total_pl;
+
+class MikeOrder;
+class MikeOrdersAtPrice;
+class MikePositionOrders;
+class MikePosition;
 
 
-	//this is for indexing purposes - set to TRUE if position was ever
-	//accessed or changed. Mainly to avoid iterating through tens of thousands
-	//of positions
-	bool isActive = false ;
+enum BtnPressed;
+enum MikeOrderType;
 
-	MikePosition();
-};//class MikePosition
+//class Timer;
+
+
 
 class PositionBook
 {
-	
 public:
+	PositionBook(long highestPrice);
+	~PositionBook();
 
-	PositionBook(std::string name, long highestPrice);
+	//POSITION METHODS:
+	//used for printing open positions in WidgetTable
+	const std::vector <MikePosition> * GetMikePositions() { return   &positionBook; }
+	void newPosition(long price, long position);//not implemented
+	MikePosition getPosition(long priceRequested);
+	const MikePosition * getPositionPtr(long priceRequested);
 
-	void newPosition(long price, long position);
-	MikePosition getPosition(long price);
-	bool clearPosition(long price);
-	bool changePostion(long price, long amount);
-
-	//calculates the total open P/L for all active positions
-	long calculatedTotalOpenPL();
-
-	//calculates the total closed P/L for all active positions
-	long calculatedTotalClosedPL();
-
-	//calculates the total total_pl P/L for all active positions
-	long calculateTotalTotalPL();
-
-	//gives the total open position above a certain price level:
-	long totalOpenAbove(long price);
-
-	//gives the total open position below a certain price level:
-	long totalOpenBelow(long price);
-
+	//used by orderbook to update a position after an order is filled. NOT IMPLEMENTED YET
+	void fillposition(int posprice, long fillprice, long filledamount, long bidPrice, long askPrice);
 	
+	//Methods below are slow because each one iterates over all open positions in openPosIndexSet individually. So calling CalcAllOpenPL will go through the whole index, and then if you call CalcAllClosedPL it will go through the whole index again. To speed it up, consider making one method to calculate all of them at once at each iteration of accessing the postions pointed to by openPosIndexSet and then supplying all the answers as a struct:
+	
+	//TODO: MAKE BELOW FASTER
+	//calculates the total aggregate open P/L for all active positions of the whole book
+	long CalcAllOpenPL(long bidprice, long askprice);
+	//calculates the total aggregate closed P/L for all active positions of the whole book
+	long CalcAllClosedPL(long bidprice, long askprice);
+	//calculates the total aggregate total P/L (open+closed) for all active positions of the whole book
+	long CalcAllTotalPL(long bidprice, long askprice);
+	//calculates the total aggregate position for all active positions of the whole book
+	long CalcTotalOpenPos();
+	//calculate individual P/L for each position that is stored in the openPosIndex
+	//this should be done before attempting to print out the positions
+	void calculateIndividualPLs(long bidprice, long askprice);
+
+	//prototype for printing activePositions:
+	void printoutActivePositions(long bidprice, long askprice);
+
 
 private:
 	//stores all the positions
 	//the vector number reflects the price in cents - eg positionBook[10073]
 	//reflects a price of 100 dollars and 73 cents
 	std::vector <MikePosition> positionBook;
-	std::string nameOfBook;
 
-	long minPrice; //stores the price of the smallest active position - for quicker iterating through all of book
-	long maxPrice; //highest active price - for index
+	///////////////////////////////////////////////////////////
+	// INDEX:
+	//stores the prices of active postions for knowing which postitions are active or not - if I need to access only the 'not empty' positions.
+	std::unordered_set<long> openPosIndexSet;	//trying to implement a faster way
+	///////////////////////////////////////////////////////////
+
+	//this is the size of positionBook. used in constructor to determine what is the highest price position that can be stored in positionBook.
+	long PositionBookmaxPrice = 1000000;
 	
-	//for knowing which postitions are active or not - if I need to access only
-	//the 'not empty' positions
-	std::vector <long> index;
+	//check if any members of this position are other than zero if they are - designate the position as active and add to active position index if everything is zero - designate the position as not active and remove from active position index:
+	bool checkIfStillActive(long price);
+	//add position to active position index:
+	void addPosToIndex(long price);
+	//remove position from active position index:
+	void remPosFromIndex(long price);
 
+	//naming the class to enable having multiple instances of MikePositionOrders
+	//for multiple different strategies. This is done during class construction:
+//	std::string nameOfBook;
 
+	//simple timer for testing purposes:
+	Timer * timer;
 };
 
-
-
-
-
-
-
-
-
-
-
-#endif _POSITIONBOOK_H_INCLUDED_
+#endif//_POSITIONBOOK_H_INCLUDED_

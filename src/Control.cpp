@@ -1,5 +1,17 @@
 #include "Control.h"
 
+#include <iostream>
+
+#include "UserInterface.h"
+#include "MikeSimulator.h"
+#include "Data.h"
+#include "WidgetTable.h"
+#include "MikeEnums.h"
+
+#include "PriceControlUI.h"
+#include "ManualInterface.h"
+#include "MikePositionsOrders.h"
+
 using namespace std;
 
 //Control::Control(MikeSimulator * p)
@@ -13,8 +25,8 @@ Control::Control(MikeSimulator * p, int starting_bid)
 	ptr_to_mikesimulator = p;
 	std::cout << "Control constructed. Starting bid: " << starting_bid << std::endl;
 
-	userInterface = new ManualInterface(this, /*p,*/ starting_bid);
-//	userInterface = new UserInterface(this, /*p,*/ starting_bid);
+//	userInterface = new ManualInterface(this, /*p,*/ starting_bid);
+	userInterface = new UserInterface(this, /*p,*/ starting_bid);
 	
 	data = new Data(this, starting_bid);
 	m_pPriceControlUI = new PriceControlUI(this, starting_bid);
@@ -72,11 +84,16 @@ void Control::printCurrentAll()
 
 	askPrice = myData->GetAskPrice();
 	bidPrice = myData->GetBidPrice();
-	totalOpenPos = myPositionOrders->TotalOpenPos();
-	totalOpenPL = myPositionOrders->AllOpenPL(bidPrice, askPrice);
-	totalClosedPL = myPositionOrders->AllClosedPL(bidPrice, askPrice);
-	totalPL = myPositionOrders->AllTotalPL(bidPrice, askPrice);
 
+	totalOpenPos = myPositionOrders->CalcTotalOpenPos();
+	totalOpenPL = myPositionOrders->CalcAllOpenPL(bidPrice, askPrice);
+	totalClosedPL = myPositionOrders->CalcAllClosedPL(bidPrice, askPrice);
+	totalPL = myPositionOrders->CalcAllTotalPL(bidPrice, askPrice);
+
+	//totalOpenPos = 0;
+	//totalOpenPL = 0;
+	//totalClosedPL = 0;
+	//totalPL = 0;
 
 
 	myInterface->PrintAll(

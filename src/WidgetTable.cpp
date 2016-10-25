@@ -5,12 +5,15 @@
 //#include "MikeSimulator.h"
 #include "WidgetTable.h"
 #include "MikeTimer.h"
+#include "MikePositionsOrders.h"
 
 //#define PRICECOLUMN 5 //in which column should the price be printed? Used by PopPriceCol
 
 
 //WIDGETTABLE:
 //CONSTRUCTOR:
+
+class Timer;
 
 WidgetTable::WidgetTable(
 	int x, int y, int w, int h, const char *l,
@@ -162,7 +165,7 @@ void WidgetTable::printPositions(const std::vector <MikePosition> *openPositions
 {
 	using namespace std;
 
-	Mike::Timer timer;
+	Timer timer;
 	timer.reset();	//time this function
 
 	openPosCol;
@@ -182,10 +185,26 @@ void WidgetTable::printPositions(const std::vector <MikePosition> *openPositions
 	//populate the cells in WidgetTable with values:
 	for (int displayPrice = BottomDisplayedPrice; displayPrice <= TopDisplayedPrice; displayPrice++) 
 	{
+		try {openPositions->at(displayPrice).open_amount;} catch (...) {
+			std::cout << "Out of range error in: \nvoid WidgetTable::printPositions(const std::vector <MikePosition> *openPositions,	const std::vector <MikeOrdersAtPrice> *openOrdersAtPrice)" << std::endl;
+			break;
+		}
+		
+		//TODO: BELOW NOT WORKING
+		//check if that position is active. if not, clear this row
+		//if (openPositions->at(displayPrice).checkifActive());
+		if (openPositions->at(displayPrice).isActive) {
+			cout << "\n position at price: " << displayPrice << " is active. printing." << endl;
+		}
+		else {
+			ClearRow(RowOfPrice(displayPrice));
+			goto printorders; }
+		
 		//FLTK requires that I pass what I want to print into the cells as a char *:
 		char buffer[50];
 		//find the cell displaying OPEN POSITION at displayprice:
 		Fl_Input * openPosCell = (Fl_Input*)GetElement(RowOfPrice(displayPrice), openPosCol);
+		
 		//print the open postion for displayPrice from openPositions vector to this cell:	
 		snprintf(buffer, 40, "%d", (openPositions->at(displayPrice).open_amount));
 		if (openPositions->at(displayPrice).open_amount != 0) {
@@ -195,10 +214,9 @@ void WidgetTable::printPositions(const std::vector <MikePosition> *openPositions
 		else
 			openPosCell->value("");
 		
-
 		//same for OPEN PL at displayprice:
 		Fl_Input * openPLCell = (Fl_Input*)GetElement(RowOfPrice(displayPrice), openPLCol);
-		snprintf(buffer, 40, "%d", (openPositions->at(displayPrice).open_pl) != 0);
+		snprintf(buffer, 40, "%d", (openPositions->at(displayPrice).open_pl));
 		openPLCell->value(buffer);
 		
 		//same for CLOSED PL at displayprice:
@@ -211,6 +229,7 @@ void WidgetTable::printPositions(const std::vector <MikePosition> *openPositions
 		snprintf(buffer, 40, "%d", (openPositions->at(displayPrice).total_pl));
 		totalPLcell->value(buffer);
 
+printorders:
 		//Print the open orders for this price:
 		//Buy Limit Orders:
 		Fl_Input * buyLMTOrder = (Fl_Input*)GetElement(RowOfPrice(displayPrice), buyLimitOrderCol);
@@ -245,7 +264,7 @@ Fl_Widget * WidgetTable::GetElement(int nRow, int nCol)
 }
 int WidgetTable::RowOfPrice(long price)
 {
-	int rowToReturn = TopRowPrice - price;
+	int rowToReturn = GetTopRowPrice() - price;
 	return rowToReturn;
 }   //given price - returns the row in which that price is displayed in WidgetTable
 long WidgetTable::PriceOfRow(int row)
@@ -293,16 +312,40 @@ void WidgetTable::ClearColumn(int column)
 	}
 }
 
+//TODO: THIS FUNCTION KEEPS CRASHING AFTER BEING USED SEVERAL TIMES. The culprit seems to be in myCell->Value. * myCell is really a My_fl_button, not Fl_Input, but My_fl_button is derived from Fl_Input
 void WidgetTable::ClearRow(int row)
 {
 	int startCol = ButtonColsNumber - 1; //first column is zero. ButtonColsNumber gives number of Cols that are buttons
+	if (startCol < 0) startCol = 0;
 	int endCol = GetCols();
 
-	for (int i = startCol; i < endCol; ++i)
-	{
-		Fl_Input * myCell = (Fl_Input*)GetElement(row, i);
+	//char buffer[20];
+	//
+	//snprintf(buffer, 20, "%d", 0);
 
-		myCell->value("");
+	std::stringstream buffer;
+	buffer.clear();
+	buffer << "";
+//	myCell->value(buffer.str().c_str());
+
+
+	//using namespace std;
+	//cout << "\nClearRow in WidgetTable called. StartCol: " << startCol << " endCol: " << endCol << " ButtonColsNumber: " << ButtonColsNumber << endl;
+
+	for (unsigned int i = startCol; i < endCol - 1; ++i)
+	{
+//		cout << "\nStarting iteration. i= " << i << endl;
+		Fl_Input * myCell = (Fl_Input*)GetElement(row, i);
+//		cout << "\nmyCell found. i= " << i << endl;
+
+		myCell->value(buffer.str().c_str());
+
+		
+//		myCell->static_value(NULL);
+		
+//		myCell->value(buffer, 1);
+//		myCell->value((int)0);
+//		cout << "\nEnd of For loop. i= " << i << endl;
 	}
 }
 
