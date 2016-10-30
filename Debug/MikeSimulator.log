@@ -1,31 +1,6 @@
-﻿Build started 10/24/2016 22:44:18.
-     1>Project "D:\MyDocuments\Visual Studio 2015\Projects\MikeSimulator\MikeSimulator.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _CRT_SECURE_NO_WARNINGS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt src\WidgetTable.cpp
-         WidgetTable.cpp
-     1>d:\mydocuments\visual studio 2015\projects\mikesimulator\src\widgettable.cpp(289): warning C4101: 'ch': unreferenced local variable
-     1>d:\mydocuments\visual studio 2015\projects\mikesimulator\src\widgettable.cpp(335): warning C4018: '<': signed/unsigned mismatch
-     1>d:\mydocuments\visual studio 2015\projects\mikesimulator\src\widgettable.cpp(404): warning C4018: '>=': signed/unsigned mismatch
-     1>d:\mydocuments\visual studio 2015\projects\mikesimulator\src\widgettable.cpp(562): warning C4018: '<': signed/unsigned mismatch
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\MyDocuments\Visual Studio 2015\Projects\MikeSimulator\Debug\MikeSimulator.exe" /INCREMENTAL /NOLOGO fltkd.lib wsock32.lib comctl32.lib fltkjpegd.lib fltkimagesd.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"D:\MyDocuments\Visual Studio 2015\Projects\MikeSimulator\Debug\MikeSimulator.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\MyDocuments\Visual Studio 2015\Projects\MikeSimulator\Debug\MikeSimulator.lib" /MACHINE:X86 Debug\Control.obj
-         Debug\Data.obj
-         Debug\FluidInterface.obj
-         Debug\FluidPriceControl.obj
-         Debug\main.obj
-         Debug\ManualInterface.obj
-         Debug\MikePositionsOrders.obj
-         Debug\MikeSimulator.obj
-         Debug\MikeTimer.obj
-         Debug\NewPosOrders.obj
-         Debug\OrderbookPrototype.obj
-         Debug\PositionBook.obj
-         Debug\PriceControlUI.obj
-         Debug\UserInterface.obj
-         Debug\WidgetTable.obj
-         MikeSimulator.vcxproj -> D:\MyDocuments\Visual Studio 2015\Projects\MikeSimulator\Debug\MikeSimulator.exe
-     1>Done Building Project "D:\MyDocuments\Visual Studio 2015\Projects\MikeSimulator\MikeSimulator.vcxproj" (Build target(s)).
-
-Build succeeded.
-
-Time Elapsed 00:00:00.91
+﻿  WidgetTable.cpp
+e:\michael\documents\visual studio 2015\projects\mikesimulator\src\widgettable.cpp(313): warning C4101: 'ch': unreferenced local variable
+e:\michael\documents\visual studio 2015\projects\mikesimulator\src\widgettable.cpp(365): warning C4018: '<': signed/unsigned mismatch
+e:\michael\documents\visual studio 2015\projects\mikesimulator\src\widgettable.cpp(435): warning C4018: '>=': signed/unsigned mismatch
+e:\michael\documents\visual studio 2015\projects\mikesimulator\src\widgettable.cpp(593): warning C4018: '<': signed/unsigned mismatch
+  MikeSimulator.vcxproj -> E:\Michael\Documents\Visual Studio 2015\Projects\MikeSimulator\Debug\MikeSimulator.exe

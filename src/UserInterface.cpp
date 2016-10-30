@@ -46,7 +46,7 @@ UserInterface::UserInterface(
 		number_cols = numberOfColumns,
 		how_many_cols_are_buttons = numberOfButtoncolumns;
 	
-	m_pTable = new WidgetTable(0, 0, 1170, 965, "widgettable", this, top_row_price, number_rows,
+	m_pTable = new WidgetTable(5, 5, 765, 655, "widgettable", this, top_row_price, number_rows,
 		number_cols, how_many_cols_are_buttons, col_names, button_names);
 
 

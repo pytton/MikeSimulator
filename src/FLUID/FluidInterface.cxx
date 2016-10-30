@@ -3,58 +3,58 @@
 #include "FluidInterface.h"
 
 FluidInterface::FluidInterface() {
-  { m_window1 = new Fl_Double_Window(1527, 977, "window1");
+  { m_window1 = new Fl_Double_Window(1157, 661, "window1");
     m_window1->user_data((void*)(this));
-    { m_curr_ask = new Fl_Value_Input(1260, 105, 55, 20, "Current Ask");
+    { m_curr_ask = new Fl_Value_Input(895, 100, 55, 20, "Current Ask");
     } // Fl_Value_Input* m_curr_ask
-    { m_top_limit = new Fl_Value_Input(1440, 105, 60, 20, "Top Limit");
+    { m_top_limit = new Fl_Value_Input(1075, 100, 60, 20, "Top Limit");
     } // Fl_Value_Input* m_top_limit
-    { m_top_profit = new Fl_Value_Input(1440, 155, 60, 20, "Profit at top lim");
+    { m_top_profit = new Fl_Value_Input(1075, 150, 60, 20, "Profit at top lim");
     } // Fl_Value_Input* m_top_profit
-    { m_table = new Fl_Table(0, 0, 1170, 965);
+    { m_table = new Fl_Table(5, 5, 765, 655);
       m_table->labelsize(10);
       m_table->end();
     } // Fl_Table* m_table
-    { m_curr_bid = new Fl_Value_Input(1260, 130, 55, 20, "Current Bid");
+    { m_curr_bid = new Fl_Value_Input(895, 125, 55, 20, "Current Bid");
     } // Fl_Value_Input* m_curr_bid
-    { m_bottom_limit = new Fl_Value_Input(1440, 130, 60, 20, "Bottom Limit");
+    { m_bottom_limit = new Fl_Value_Input(1075, 125, 60, 20, "Bottom Limit");
     } // Fl_Value_Input* m_bottom_limit
-    { m_bottom_profit = new Fl_Value_Input(1440, 180, 60, 20, "Profit at bottom lim");
+    { m_bottom_profit = new Fl_Value_Input(1075, 175, 60, 20, "Profit at bottom lim");
     } // Fl_Value_Input* m_bottom_profit
-    { m_btn_extra = new Fl_Button(1270, 15, 70, 40, "Reprice Table");
+    { m_btn_extra = new Fl_Button(905, 10, 70, 40, "Reprice Table");
       m_btn_extra->align(Fl_Align(FL_ALIGN_WRAP));
     } // Fl_Button* m_btn_extra
-    { m_TotOpenPos = new Fl_Output(1440, 11, 60, 24, "Total Open Pos:");
+    { m_TotOpenPos = new Fl_Output(1075, 6, 60, 24, "Total Open Pos:");
       m_TotOpenPos->labelsize(10);
       m_TotOpenPos->textsize(12);
     } // Fl_Output* m_TotOpenPos
-    { m_TotOpenPL = new Fl_Output(1440, 31, 60, 24, "Total Open P/L:");
+    { m_TotOpenPL = new Fl_Output(1075, 26, 60, 24, "Total Open P/L:");
       m_TotOpenPL->labelsize(10);
       m_TotOpenPL->textsize(12);
     } // Fl_Output* m_TotOpenPL
-    { m_TotClosedPL = new Fl_Output(1440, 51, 60, 24, "Total Closed P/L:");
+    { m_TotClosedPL = new Fl_Output(1075, 46, 60, 24, "Total Closed P/L:");
       m_TotClosedPL->labelsize(10);
       m_TotClosedPL->textsize(12);
     } // Fl_Output* m_TotClosedPL
-    { m_TotPL = new Fl_Output(1440, 71, 60, 24, "Total P/L:");
+    { m_TotPL = new Fl_Output(1075, 66, 60, 24, "Total P/L:");
       m_TotPL->labelsize(10);
       m_TotPL->textsize(12);
     } // Fl_Output* m_TotPL
-    { m_btn_printOrders = new Fl_Button(1395, 225, 45, 30, "Print Orders");
+    { m_btn_printOrders = new Fl_Button(1030, 220, 45, 30, "Print Orders");
       m_btn_printOrders->labelsize(10);
       m_btn_printOrders->align(Fl_Align(FL_ALIGN_WRAP));
     } // Fl_Button* m_btn_printOrders
-    { m_btn_checkFills = new Fl_Button(1395, 265, 45, 30, "Check Fillls");
+    { m_btn_checkFills = new Fl_Button(1030, 260, 45, 30, "Check Fillls");
       m_btn_checkFills->labelsize(10);
       m_btn_checkFills->align(Fl_Align(FL_ALIGN_WRAP));
     } // Fl_Button* m_btn_checkFills
-    { m_btn_printPos = new Fl_Button(1455, 225, 45, 30, "Print Positions");
+    { m_btn_printPos = new Fl_Button(1090, 220, 45, 30, "Print Positions");
       m_btn_printPos->labelsize(10);
       m_btn_printPos->align(Fl_Align(FL_ALIGN_WRAP));
     } // Fl_Button* m_btn_printPos
     m_window1->end();
   } // Fl_Double_Window* m_window1
-  { m_window2 = new Fl_Double_Window(314, 568, "window2");
+  { m_window2 = new Fl_Double_Window(306, 560, "window2");
     m_window2->user_data((void*)(this));
     { text_display = new Fl_Text_Display(80, 40, 325, 255, "text");
     } // Fl_Text_Display* text_display

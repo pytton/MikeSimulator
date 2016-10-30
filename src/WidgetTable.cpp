@@ -1,6 +1,7 @@
 #include <sstream> //replaces cout
 #include <string>
 #include "UserInterface.h"
+#include <set>
 //#include "Display.h"
 //#include "MikeSimulator.h"
 #include "WidgetTable.h"
@@ -182,7 +183,20 @@ void WidgetTable::printPositions(const std::vector <MikePosition> *openPositions
 //	cout << "toprowprice: " << GetTopRowPrice()<< endl;
 //	cout << "bottomrowprice: " << GetBottomRowPrice()<< endl;
 
-	//populate the cells in WidgetTable with values:
+	//create a method to only print to rows which containg any data - for speed.
+	static set <long> usedprices;//this set contains prices that have been used in the previous printout. in this iteration of printPositions, I will use the function ClearRow to erase this row before printing new values.
+	static set <long> notusedprices;//contains prices that have been erased at first but not filled with new values - which means they do not need to be erased again next time. this set will be used to remove values from usedprices so that we do not erase empty rows everytime
+
+	//first, erase all values from rows that have been printed into last time:
+	if (usedprices.size() > 0)
+	{
+		for (long price : usedprices)
+		{
+			ClearRow(RowOfPrice(price));
+		}
+	}
+
+//populate the cells in WidgetTable with values:
 	for (int displayPrice = BottomDisplayedPrice; displayPrice <= TopDisplayedPrice; displayPrice++) 
 	{
 		try {openPositions->at(displayPrice).open_amount;} catch (...) {
@@ -191,15 +205,16 @@ void WidgetTable::printPositions(const std::vector <MikePosition> *openPositions
 		}
 		
 		//TODO: BELOW NOT WORKING
-		//check if that position is active. if not, clear this row
-		//if (openPositions->at(displayPrice).checkifActive());
+		//check if that position is active. if not, add this price to the notusedprices set
 		if (openPositions->at(displayPrice).isActive) {
 			cout << "\n position at price: " << displayPrice << " is active. printing." << endl;
 		}
 		else {
-			ClearRow(RowOfPrice(displayPrice));
+			notusedprices.insert(displayPrice);
 			goto printorders; }
 		
+		//add this price to usedprices set - to make sure to ClearRow next time before printing new values
+		usedprices.insert(displayPrice);
 		//FLTK requires that I pass what I want to print into the cells as a char *:
 		char buffer[50];
 		//find the cell displaying OPEN POSITION at displayprice:
@@ -252,7 +267,16 @@ printorders:
 		sellSTPOrder->value(buffer);
 	}
 
+//clean things up. go through all prices stored in notusedprices and remove those prices from usedprices:
+	if (notusedprices.size() > 0)
+	{
+		for (long price : notusedprices) usedprices.erase(price);
+	}
+
+	notusedprices.clear();
+
 }
+
 Fl_Widget * WidgetTable::GetElement(int nRow, int nCol)
 {//used to get a pointer to an element of WidgetTable with X Y coordinates nRow nCol
  //nRow = 0 -> points to FIRST row; nCol = 0 -> points to col number 1!
@@ -312,9 +336,11 @@ void WidgetTable::ClearColumn(int column)
 	}
 }
 
+//HACK: check if this works in a stable way
 //TODO: THIS FUNCTION KEEPS CRASHING AFTER BEING USED SEVERAL TIMES. The culprit seems to be in myCell->Value. * myCell is really a My_fl_button, not Fl_Input, but My_fl_button is derived from Fl_Input
 void WidgetTable::ClearRow(int row)
 {
+	using namespace std;
 	int startCol = ButtonColsNumber - 1; //first column is zero. ButtonColsNumber gives number of Cols that are buttons
 	if (startCol < 0) startCol = 0;
 	int endCol = GetCols();
@@ -323,29 +349,34 @@ void WidgetTable::ClearRow(int row)
 	//
 	//snprintf(buffer, 20, "%d", 0);
 
-	std::stringstream buffer;
-	buffer.clear();
-	buffer << "";
+	//std::stringstream buffer;
+	//buffer.clear();
+	//buffer << "";
 //	myCell->value(buffer.str().c_str());
 
 
 	//using namespace std;
 	//cout << "\nClearRow in WidgetTable called. StartCol: " << startCol << " endCol: " << endCol << " ButtonColsNumber: " << ButtonColsNumber << endl;
-
-	for (unsigned int i = startCol; i < endCol - 1; ++i)
+	const char * pChar = "";
+	if (pChar != NULL)
 	{
-//		cout << "\nStarting iteration. i= " << i << endl;
-		Fl_Input * myCell = (Fl_Input*)GetElement(row, i);
-//		cout << "\nmyCell found. i= " << i << endl;
+		//Do That
+		//cout << "\npChar not null. clearing row. " << endl;
+		for (unsigned int i = startCol; i < endCol ; ++i)
+		{
+			//		cout << "\nStarting iteration. i= " << i << endl;
+			Fl_Input * myCell = (Fl_Input*)GetElement(row, i);
+			//		cout << "\nmyCell found. i= " << i << endl;
 
-		myCell->value(buffer.str().c_str());
+			//myCell->value(buffer.str().c_str());
+			myCell->value(pChar);
 
-		
-//		myCell->static_value(NULL);
-		
-//		myCell->value(buffer, 1);
-//		myCell->value((int)0);
-//		cout << "\nEnd of For loop. i= " << i << endl;
+			//		myCell->static_value(NULL);
+
+			//		myCell->value(buffer, 1);
+			//		myCell->value((int)0);
+			//		cout << "\nEnd of For loop. i= " << i << endl;
+		}
 	}
 }
 
