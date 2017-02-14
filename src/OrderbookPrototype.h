@@ -51,6 +51,9 @@ enum MikeOrderType;
 		std::vector<MikeOrdersAtPrice> openOrdersByPrice;//this vector stores all the currently open orders sorted by their price. this is used to print out open orders in WidgetTable. Might be used by algos at later stage to eg. determine maximum possible P/L taking into account currently open orders. This has to be kept current by the implementation!
 		int newOrderId = 0;//this for generating OrderIds for new orders. Used by allOrders vector and indexes. Crucial for proper operation of indexOpenOrd. THIS IS CRUCIAL to ensure that the index of the allOrders vector matches the OrderId of the Order stored under that index. Eg. allOrders.at(234) should store an order with OrderId = 234
 
+	private:
+		//static flags etc moved here from functions:
+		std::set<long> updateOpenOrdersByPriceIndex;
 	};
 
 

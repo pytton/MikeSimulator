@@ -11,6 +11,7 @@
 #include <stdio.h>
 #include <vector>
 #include <string>
+#include <set>
 
 #include <FL/Fl.H>
 #include <FL/Fl_Window.H>
@@ -23,6 +24,9 @@
 
 class MikeSimulator;
 class UserInterface;
+class MikePosition;
+class MikeOrdersAtPrice;
+class Control;
 
 class WidgetTable : public Fl_Table_Row		//WigetTable - table with cells drawed inside it
 {
@@ -46,6 +50,8 @@ public:
 		std::vector <std::string> button_names = { "" }	//names of buttons
 		
 		);
+	WidgetTable(int x, int y, int w, int h, const char * l, void * pControl, int top_row_price, int number_rows, int number_cols, int how_many_cols_are_buttons, std::vector<std::string> col_names, std::vector<std::string> button_names, short tabletype, short windownumber);
+	WidgetTable(int x, int y, int w, int h, const char *l);//not currently used
 
 	~WidgetTable()
 	{
@@ -54,7 +60,9 @@ public:
 	
 
 	Fl_Widget * GetElement(int nRow, int nCol);	//returns a pointer to the cell in the table at nRow nCol
-	void SetSize(int newrows, int newcols, WidgetTable * mytable, /*std::vector <std::string> col_names = { "" },*/ std::vector<std::string> button_names = { "" });	//fills the table with cells:
+private:
+
+public:
 	void WidgetTable::PopPriceCol(/*WidgetTable * myTable*/); //populates the Price column with prices based on current TopRowPrice
 	void ClearColumn(int column);	//clears provided column of all text that might have been left behind by the previous draw - for use with Control::rePriceWidTable
 	void ClearRow(int row);	//as above, but for clearing a row
@@ -79,8 +87,12 @@ public:
 	inline int GetTopRowPrice() { return TopRowPrice; }
 	inline int GetBottomRowPrice() { return (GetTopRowPrice() - GetRows() + 1); }
 	inline void SetTopRowPrice(int value) { TopRowPrice = value; }
+	inline std::vector <std::string> * GetColNames() { return &col_names; }
 	virtual inline int GetBidCol(){ return bidColumn; }
 	virtual inline int GetAskCol(){ return askColumn; }
+
+	//SETTERS:
+	virtual void SetColumnnWidth(short width) { columnWidth = width; }
 
 private:
 	//members:
@@ -88,19 +100,24 @@ private:
 	int ButtonColsNumber;	//how many columns are buttons?
 	int TopRowPrice;		//the price at the first row on top - used to determine which positions to display
 	UserInterface * ptr_to_UserInterface;	//stores a pointer to window in which table is constructed. null at first. has to be set from outside.
+	Control * ptrControl;
+	short tabletype;//HACK: decides what the callback function will call to: 0 - it will use UserInterface * ptr_to_UserInterface; 1 - it will use Control * ptrControl;
 	std::vector <std::string> col_names;	//needed by void ColHeaderText(char * s, int C)
-	
+private:
 	//for printing out bid/ask in the right column:
 	virtual void setBidAskColumns();
-
-
-//	bool ColHeaderErrorCheck = 0;	//for use by ColHeaderText - to display error only once
-
-
-
+	
+	//below indexes for use by WidgetTable::printPositions. they need to be reset once Control::rePriceWidTable is called so that they remain valid:
+	std::set <long> usedprices;//this set contains prices that have been used in the previous printout. in this iteration of printPositions, I will use the function ClearRow to erase this row before printing new values.
+	std::set <long> notusedprices;//contains prices that have been erased at first but not filled with new values - which means they do not need to be erased again next time. this set will be used to remove values from usedprices so that we do not erase empty rows everytime
+public:
+	bool widgetTableNeedsClearAll = true;//this is to be set once Control::rePriceWidTable is called so that the printout does not get messed up. It tells WidgetTable to clear all the rows before printing in new data.
+private:
 	//helper functions:
 	UserInterface * GetUserInterface() { return	ptr_to_UserInterface; }	//stores a pointer to window in which table is constructed. null at first. has to be set from outside.
-	void ColHeaderText(char * s, int C);	//defines text of column headers
+	Control * GetControl() { return ptrControl; }
+	void SetSize(int newrows, int newcols, WidgetTable * mytable, /*std::vector <std::string> col_names = { "" },*/ std::vector<std::string> button_names = { "" });	//fills the table with cells:
+	virtual void ColHeaderText(char * s, int C);	//defines text of column headers
 
 	inline void SetRows(int numRows){table_rows = numRows;}
 	inline void SetCols(int numCol){table_cols = numCol;}
@@ -122,10 +139,19 @@ private:
 		buyLimitOrderCol = 8,
 		buyStopOrderCol = 9,
 		sellLimitOrderCol = 10,
-		sellStopOrderCol = 11;
+		sellStopOrderCol = 11,
+		columnWidth = 55,
+		windownumber = 0;//for callbacks sent to Control - to tell which window its coming from. must be set in constructor
 
 
 };
+
+//class SimpleTable : public WidgetTable
+//{
+//
+//};
+
+
 
 class My_fl_button : public  Fl_Button  //with location of button in Fl_Table
 {

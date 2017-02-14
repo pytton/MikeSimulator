@@ -1,16 +1,4 @@
-﻿Build started 10/31/2016 16:52:19.
-     1>Project "D:\MyDocuments\Visual Studio 2015\Projects\MikeSimulator\src\TwsApiCpp-master\TwsApiC++\Test\_win32\Test.vcxproj" on node 3 (Rebuild target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /I..\..\Api /I..\..\..\source\PosixClient\Shared /Z7 /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CRT_SECURE_NO_WARNINGS /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo".\Debug/" /Fd".\Debug/vc140.pdb" /Gd /TP /analyze- /errorReport:prompt ..\Src\APINoThread.cpp
-         APINoThread.cpp
-     1>D:\MyDocuments\Visual Studio 2015\Projects\MikeSimulator\src\TwsApiCpp-master\source\PosixClient\Shared\IBString.h(38): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
-     1>D:\MyDocuments\Visual Studio 2015\Projects\MikeSimulator\src\TwsApiCpp-master\source\PosixClient\Shared\IBString.h(47): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Debug/Test.exe" /INCREMENTAL /NOLOGO odbc32.lib odbccp32.lib Ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:".\Debug\Test.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE:NO /IMPLIB:".\Debug\Test.lib" /MACHINE:X86 /SAFESEH .\Debug/APINoThread.obj
-         "D:\MyDocuments\Visual Studio 2015\Projects\MikeSimulator\src\TwsApiCpp-master\TwsApiC++\Api\TwsApiD.lib"
-         Test.vcxproj -> D:\MyDocuments\Visual Studio 2015\Projects\MikeSimulator\src\TwsApiCpp-master\TwsApiC++\Test\_win32\.\Debug\Test.exe
-     1>Done Building Project "D:\MyDocuments\Visual Studio 2015\Projects\MikeSimulator\src\TwsApiCpp-master\TwsApiC++\Test\_win32\Test.vcxproj" (Rebuild target(s)).
-
-Build succeeded.
-
-Time Elapsed 00:00:01.59
+﻿  APINoThread.cpp
+E:\Michael\Documents\Visual Studio 2015\Projects\MikeSimulator\src\TwsApiCpp-master\source\PosixClient\Shared\IBString.h(38): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+E:\Michael\Documents\Visual Studio 2015\Projects\MikeSimulator\src\TwsApiCpp-master\source\PosixClient\Shared\IBString.h(47): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+  Test.vcxproj -> E:\Michael\Documents\Visual Studio 2015\Projects\MikeSimulator\src\TwsApiCpp-master\TwsApiC++\Test\_win32\.\Debug\Test.exe

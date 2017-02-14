@@ -3,7 +3,7 @@
 #include "FluidInterface.h"
 
 FluidInterface::FluidInterface() {
-  { m_window1 = new Fl_Double_Window(1133, 637, "window1");
+  { m_window1 = new Fl_Double_Window(1117, 621, "window1");
     m_window1->user_data((void*)(this));
     { m_curr_ask = new Fl_Value_Input(1080, 200, 55, 20, "Current Ask");
     } // Fl_Value_Input* m_curr_ask
@@ -11,7 +11,7 @@ FluidInterface::FluidInterface() {
     } // Fl_Value_Input* m_top_limit
     { m_top_profit = new Fl_Value_Input(1075, 150, 60, 20, "Profit at top lim");
     } // Fl_Value_Input* m_top_profit
-    { m_table = new Fl_Table(5, 5, 940, 655);
+    { m_table = new Fl_Table(0, 0, 940, 655);
       m_table->labelsize(10);
       m_table->end();
     } // Fl_Table* m_table
@@ -60,10 +60,4 @@ FluidInterface::FluidInterface() {
     } // Fl_Button* m_btn_resetOrdSize
     m_window1->end();
   } // Fl_Double_Window* m_window1
-  { m_window2 = new Fl_Double_Window(306, 560, "window2");
-    m_window2->user_data((void*)(this));
-    { text_display = new Fl_Text_Display(80, 40, 325, 255, "text");
-    } // Fl_Text_Display* text_display
-    m_window2->end();
-  } // Fl_Double_Window* m_window2
 }

@@ -10,6 +10,7 @@
 #include "MikeTimer.h"
 
 #include "PriceControlUI.h"
+#include "SimpleTableWindow.h"
 #include "ManualInterface.h"
 #include "MikePositionsOrders.h"
 
@@ -40,27 +41,36 @@ Control::Control(MikeSimulator * p, int starting_bid)
 	data = new Data(this, starting_bid);
 	m_pPriceControlUI = new PriceControlUI(this, starting_bid);
 	
-	
+	simpleTableWindow = new SimpleTableWindow(this, 0 );
+
 	manualPositions = new MikePositionOrders("Manual", 1000000);
 	rePriceWidTable(userInterface);
+	
+	//setting up previous static variables in Control::timeoutfunction(void*p)
+	timer.reset();
+	resetTimer = true;
+	previouselapsedtime = 0;
 }
 
 void Control::timeoutfunction(void*p)
 {
-	static Timer timer;
-	static bool resetTimer = true;
-	if (resetTimer) {
-		timer.reset(); resetTimer = false;
-	}
 	Control * control = (Control*)p;
+//	static Timer timer;
+//	static bool resetTimer = true;
+	if (control->resetTimer) {
+		control->timer.reset(); control->resetTimer = false;
+	}
+	
+
 	using namespace std;
-	static long previouselapsedtime = 0;
-	cout << "\MainLoop process time: "<< (timer.elapsed() - previouselapsedtime - 150) << endl;//150 because 0.15 in Fl::repeat_timeout(0.15, timeoutfunction,(void*) p);
-	previouselapsedtime = timer.elapsed();
+//	static long previouselapsedtime = 0;
+	cout << "\MainLoop process time: "<< (control->timer.elapsed() - control->previouselapsedtime - 150) << endl;//150 because 0.15 in Fl::repeat_timeout(0.15, timeoutfunction,(void*) p);
+	control->previouselapsedtime = control->timer.elapsed();
 	/*if(control->mainLoopfinished)*/  control->MainLoop();
 	if (!control->stopMainLoop) Fl::repeat_timeout(0.15, timeoutfunction,(void*) p);
 	
 }
+
 
 void Control::MainLoop()
 {
@@ -305,6 +315,11 @@ void Control::CallbkPriceControlUI(PriceControlUI * p, BtnPressed btn, Fl_Widget
 	}
 }
 
+void Control::CallbkSmplTableWin(int rowPressed, int colPressed, long price, short windownumber)
+{
+	cout << "Callback received in Control" << " price: " << price << " windownumber: " << windownumber << endl;
+}
+
 void Control::startloop()
 {
 	//check to see if the loop is already running. if it is not, start the loop:
@@ -333,7 +348,7 @@ void Control::stoploop()
 
 //Helpler functions for other classes:
 
-
+//TODO:this is bad code. part of it needs to be moved into WidgetTable
 void Control::rePriceWidTable(UserInterface * InterfaceToReprice)
 {
 	using namespace std;
@@ -360,8 +375,8 @@ void Control::rePriceWidTable(UserInterface * InterfaceToReprice)
 	max = (int)data->GetBidPrice() - 95 /* 3 offset for safety*/;
 
 	m_pPriceControlUI->setSlider(value, max, min);
-
-
+	//TODO: calling rePriceWidTable messes up the printout in WidgetTable - the index located now in WidgetTable::printPositions telling which rows to clear before printing fresh values - does not get cleared when rePriceWidTable is called. messes up the printout really bad
+	InterfaceToReprice->GetTable()->widgetTableNeedsClearAll = true;
 
 
 }

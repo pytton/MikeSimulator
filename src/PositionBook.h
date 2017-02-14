@@ -8,25 +8,15 @@
 #include <set>
 #include <unordered_set>
 
-//#include "OrderbookPrototype.h"
-//#include "MikeEnums.h"
-//#include "MikeTimer.h"
-//#include "MikePositionsOrders.h"
-
-
-
 
 class MikeOrder;
 class MikeOrdersAtPrice;
 class MikePositionOrders;
 class MikePosition;
-
+class Timer;
 
 enum BtnPressed;
 enum MikeOrderType;
-
-//class Timer;
-
 
 
 class PositionBook
@@ -73,7 +63,7 @@ private:
 	///////////////////////////////////////////////////////////
 	// INDEX:
 	//stores the prices of active postions for knowing which postitions are active or not - if I need to access only the 'not empty' positions.
-	std::unordered_set<long> openPosIndexSet;	//trying to implement a faster way
+	std::unordered_set<long> openPosIndexSet;	
 	///////////////////////////////////////////////////////////
 
 	//this is the size of positionBook. used in constructor to determine what is the highest price position that can be stored in positionBook.
@@ -88,7 +78,7 @@ private:
 
 	//naming the class to enable having multiple instances of MikePositionOrders
 	//for multiple different strategies. This is done during class construction:
-//	std::string nameOfBook;
+	std::string nameOfBook;
 
 	//simple timer for testing purposes:
 	Timer * timer;

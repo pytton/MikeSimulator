@@ -23,6 +23,8 @@
     <ClInclude Include="src\Data.h" />
     <ClInclude Include="src\FLUID\FluidInterface.h" />
     <ClInclude Include="src\FLUID\FluidPriceControl.h" />
+    <ClInclude Include="src\FLUID\FluidSimpleTableWindow.h" />
+    <ClInclude Include="src\FreshTWSAPI\afxwin.h" />
     <ClInclude Include="src\ManualInterface.h" />
     <ClInclude Include="src\MikeEnums.h" />
     <ClInclude Include="src\MikePositionsOrders.h" />
@@ -32,10 +34,10 @@
     <ClInclude Include="src\MktSnapshot.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClInclude>
-    <ClInclude Include="src\NewPosOrders.h" />
     <ClInclude Include="src\OrderbookPrototype.h" />
     <ClInclude Include="src\PositionBook.h" />
     <ClInclude Include="src\PriceControlUI.h" />
+    <ClInclude Include="src\SimpleTableWindow.h" />
     <ClInclude Include="src\TwsApiCpp-master\TwsApiC++\Api\Enumerations.h" />
     <ClInclude Include="src\TwsApiCpp-master\TwsApiC++\Api\TwsApiDefs.h" />
     <ClInclude Include="src\TwsApiCpp-master\TwsApiC++\Api\TwsApiL0.h" />
@@ -50,16 +52,18 @@
     <ClCompile Include="src\Data.cpp" />
     <ClCompile Include="src\FLUID\FluidInterface.cxx" />
     <ClCompile Include="src\FLUID\FluidPriceControl.cxx" />
+    <ClCompile Include="src\FLUID\FluidSimpleTableWindow.cxx" />
+    <ClCompile Include="src\FreshTWSAPI\TwsApiL0.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ManualInterface.cpp" />
     <ClCompile Include="src\MikePositionsOrders.cpp" />
     <ClCompile Include="src\MikeSimulator.cpp" />
     <ClCompile Include="src\MikeTimer.cpp" />
     <ClCompile Include="src\MikeTWSData.cpp" />
-    <ClCompile Include="src\NewPosOrders.cpp" />
     <ClCompile Include="src\OrderbookPrototype.cpp" />
     <ClCompile Include="src\PositionBook.cpp" />
     <ClCompile Include="src\PriceControlUI.cpp" />
+    <ClCompile Include="src\SimpleTableWindow.cpp" />
     <ClCompile Include="src\UserInterface.cpp" />
     <ClCompile Include="src\WidgetTable.cpp" />
   </ItemGroup>
@@ -133,8 +137,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>D:\MyDocuments\Visual Studio 2015\Projects\fltk-1.3.3;E:\Michael\Documents\Visual Studio 2015\ExternalLibraries\fltk-1.3.3;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\MyDocuments\Visual Studio 2015\Projects\fltk-1.3.3\lib;E:\Michael\Documents\Visual Studio 2015\ExternalLibraries\fltk-1.3.3\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(VisualStudioDir)\ExternalLibraries\fltk-1.3.3;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Michael\Documents\Visual Studio 2015\ExternalLibraries\fltk-1.3.3\lib;D:\MyDocuments\Visual Studio 2015\Projects\fltk-1.3.3\lib;E:\Michael\Documents\Visual Studio 2015\ExternalLibraries\fltk-1.3.3\lib;$(LibraryPath)</LibraryPath>
     <CodeAnalysisRuleSet>MixedMinimumRules.ruleset</CodeAnalysisRuleSet>
     <RunCodeAnalysis>false</RunCodeAnalysis>
   </PropertyGroup>
@@ -143,15 +147,16 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <EnablePREfast>false</EnablePREfast>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
-      <AdditionalIncludeDirectories>D:\MyDocuments\Visual Studio 2015\Projects\MikeSimulator\src\TwsApiCpp-master\source\PosixClient\Shared;D:\MyDocuments\Visual Studio 2015\Projects\MikeSimulator\src\TwsApiCpp-master\TwsApiC++\Api;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src\FreshTWSAPI;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;Ws2_32.lib;fltkd.lib;wsock32.lib;comctl32.lib;fltkjpegd.lib;fltkimagesd.lib;fltk.lib;fltkjpeg.lib;fltkimages.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <FullProgramDatabaseFile>true</FullProgramDatabaseFile>
+      <AdditionalLibraryDirectories>E:\Michael\Documents\Visual Studio 2015\Projects\MikeSimulator\src\FreshTWSAPI;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

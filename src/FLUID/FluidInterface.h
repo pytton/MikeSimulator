@@ -8,7 +8,6 @@
 #include <FL/Fl_Table.H>
 #include <FL/Fl_Button.H>
 #include <FL/Fl_Output.H>
-#include <FL/Fl_Text_Display.H>
 
 class FluidInterface {
 public:
@@ -31,7 +30,5 @@ public:
   Fl_Button *m_btn_printPos;
   Fl_Value_Input *m_order_size;
   Fl_Button *m_btn_resetOrdSize;
-  Fl_Double_Window *m_window2;
-  Fl_Text_Display *text_display;
 };
 #endif

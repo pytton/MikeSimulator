@@ -1,12 +1,13 @@
 #include <sstream> //replaces cout
 #include <string>
-#include "UserInterface.h"
 #include <set>
+#include "UserInterface.h"
 //#include "Display.h"
 //#include "MikeSimulator.h"
 #include "WidgetTable.h"
 #include "MikeTimer.h"
 #include "MikePositionsOrders.h"
+#include "Control.h"
 
 //#define PRICECOLUMN 5 //in which column should the price be printed? Used by PopPriceCol
 
@@ -41,12 +42,6 @@ WidgetTable::WidgetTable(
 	row_resize(0);
 	row_header_width(40);
 	end();
-
-	//using namespace std;
-	//string buf;
-	//cin >> buf;
-	//button_names[2] = buf;
-
 	SetCols(number_cols);
 	SetRows(number_rows);
 
@@ -58,6 +53,78 @@ WidgetTable::WidgetTable(
 
 }
 
+WidgetTable::WidgetTable(
+	int x, int y, int w, int h, const char *l,
+	void * pCallbackPtr,
+	int top_row_price,
+	int number_rows,
+	int number_cols,	/*how many columns in the table?*/
+	int how_many_cols_are_buttons,	/*how many columns are buttons?*/
+	std::vector <std::string> col_names,	/*names of col headers*/
+	std::vector <std::string> button_names,	//names of buttons
+	short tableCallbackType,//0-UserInterface, 1-Control
+	short windownumber) : Fl_Table_Row(x, y, w, h, l)
+{
+	//ptr_to_UserInterface = pUserInterface;
+	if (tableCallbackType == 0) {
+		tabletype = tableCallbackType;//tabletype is used in the callback function to determine which callback to use
+		ptr_to_UserInterface = static_cast<UserInterface*>   (pCallbackPtr);
+		ptrControl = NULL;
+		if (ptr_to_UserInterface == NULL) std::cout << "ERROR CREATING WIDGETTABLE!!!!!" << std::endl;
+	}
+	if (tableCallbackType == 1) {
+		tabletype = tableCallbackType;
+		this->windownumber = windownumber;
+		ptr_to_UserInterface = NULL;
+		ptrControl = static_cast<Control*>   (pCallbackPtr);
+		if (ptrControl == NULL) std::cout << "ERROR CREATING WIDGETTABLE!!!!!" << std::endl;
+	}
+
+
+
+
+	TopRowPrice = top_row_price;
+	ButtonColsNumber = how_many_cols_are_buttons;	//how many columns of buttons?
+	this->col_names = col_names;	//this has to be set for SetSize and ColHeaderText functions
+
+									//	table_rows, table_cols = 20;
+	col_header(1);
+	col_resize(1);
+	col_header_height(40);
+	row_header(1);
+	row_resize(0);
+	row_header_width(40);
+	end();
+	SetCols(number_cols);
+	SetRows(number_rows);
+
+	SetSize(GetRows(), GetCols(), this, /*col_names,*/ button_names);		//this needs to be called to construct all the cells of WidgetTable
+																			//	SetSize(number_rows, number_cols, this, /*col_names,*/ button_names);		//this needs to be called to construct all the cells of WidgetTable	
+
+																			//set the bid column and ask columns. virtual function:
+	setBidAskColumns();
+
+}
+
+//not currently used:
+WidgetTable::WidgetTable(int x, int y, int w, int h, const char *l) : Fl_Table_Row(x, y, w, h, l)
+{
+	col_header(1);
+	col_resize(1);
+	col_header_height(40);
+	row_header(1);
+	row_resize(0);
+	row_header_width(40);
+	end();
+	SetCols(10);
+	SetRows(10);
+
+	std::vector <std::string> col_names;	/*names of col headers*/
+	std::vector <std::string> button_names;	//names of buttons
+
+	SetSize(GetRows(), GetCols(), this, /*col_names,*/ button_names);		//this needs to be called to construct all the cells of WidgetTable
+}
+
 
 //CALLBACKS:
 void WidgetTable::button_cb(Fl_Widget *w, void * p)
@@ -65,9 +132,6 @@ void WidgetTable::button_cb(Fl_Widget *w, void * p)
 	//this callback is set inside the WidgetTable::SetSize function!!
 	My_fl_button * myButton = (My_fl_button*)w;		//myButton is the button that was pressed
 	WidgetTable * thisTable = (WidgetTable*)p;		//thisTable is the table in which the button was pressed
-//	UserInterface * myUI = thisTable->GetUserInterface();	//myUI is the UserInterface in which the table is created
-
-
 
 	//send the information to Control:
 	//What price level was pressed?:
@@ -75,51 +139,11 @@ void WidgetTable::button_cb(Fl_Widget *w, void * p)
 	int colPressed = myButton->getXpos();
 	long price = thisTable->PriceOfRow(rowPressed);
 	
-		
-	
 	std::cout << "\nColumn pressed in WidTable: " << colPressed << std::endl << "Row button pressed: " << rowPressed << std::endl;
-	
-//	int orderSize = 100;
 
-	
-	
-//	thisTable->ptr_to_UserInterface->CallbkWidTable(rowPressed, colPressed, price);
-	thisTable->ptr_to_UserInterface->CallbkWidTable(rowPressed, colPressed, price);
-	
-	
-//	thisTable->ptr_to_UserInterface->GetControl()->ManualOrder(OrderType, price);
-	//send the information to Control
-	//below - print out the price corresponding to the row in which the button was pressed:
-
-//std::cout << "\nRow pressed: " << rowPressed << std::endl;
-//std::cout << "\nCorresponding price: " << thisTable->PriceOfRow(rowPressed) << std::endl;
-//	std::cout << '\n' << sizeof(long) << " " << sizeof(long long) << " " << sizeof(double);
-
-
-	//OLD CODE:
-	////	fprintf(stderr, "BUTTON: %s\n", (const char*)w->label());
-	//	
-	//	WidgetTable * myTable = static_cast<WidgetTable*>(p);		//WidgetTable * myTable = (WidgetTable*)(p);
-	//	UserInterface * myUserInterface = static_cast<UserInterface*>(myTable->ptr_to_UserInterface);		//UserInterface * myUserInterface = (UserInterface*)(myTable->ptr_to_UserInterface);
-	//	int  myRow = 8, myColumn = 8;
-	//	Fl_Widget * myWidget = myTable->GetElement(myRow, myColumn);
-	//	Fl_Input * myCell = dynamic_cast<Fl_Input*>(myWidget);
-	//
-	//	myWidget = myTable->GetElement(myRow, myColumn);
-	//
-	//	My_fl_button * myFlButton = (My_fl_button*)w;
-	//	//printout the x y positions of the button pressed:
-	//	std::cout << std::endl << myFlButton->x_pos << std::endl;
-	//	std::cout << myFlButton->y_pos << std::endl;
-	//
-	//	myCell = dynamic_cast<Fl_Input*>(myWidget);
-	//
-	//	myCell->value("try");
-	//	myUserInterface->textDisplayString << "button pressed" << std::endl;
-	//	myUserInterface->textBuffer->text((myUserInterface->textDisplayString).str().c_str());
-	//
-	//	myTable->printInTable(6, 6, "text"/*, myTable*/);
-
+	if (thisTable->tabletype == 0) { thisTable->ptr_to_UserInterface->CallbkWidTable(rowPressed, colPressed, price); }
+	if (thisTable->tabletype == 1) { thisTable->GetControl()->CallbkSmplTableWin(rowPressed, colPressed, price, thisTable->windownumber);
+	}
 }
 
 //HELPLERS:
@@ -191,10 +215,19 @@ void WidgetTable::printPositions(const std::vector <MikePosition> *openPositions
 //	cout << "toprowprice: " << GetTopRowPrice()<< endl;
 //	cout << "bottomrowprice: " << GetBottomRowPrice()<< endl;
 
-	//create a way to only print to rows which containg any data - for speed.
-	static set <long> usedprices;//this set contains prices that have been used in the previous printout. in this iteration of printPositions, I will use the function ClearRow to erase this row before printing new values.
-	static set <long> notusedprices;//contains prices that have been erased at first but not filled with new values - which means they do not need to be erased again next time. this set will be used to remove values from usedprices so that we do not erase empty rows everytime
+	//HACK: moved to inside of function to be able to reset it. create a way to only print to rows which containg any data - for speed.
+//	static set <long> usedprices;//this set contains prices that have been used in the previous printout. in this iteration of printPositions, I will use the function ClearRow to erase this row before printing new values.
+//	static set <long> notusedprices;//contains prices that have been erased at first but not filled with new values - which means they do not need to be erased again next time. this set will be used to remove values from usedprices so that we do not erase empty rows everytime
 
+	//check if Control::rePriceWidTable has been called - if it has, erase all rows before printing anything in them:
+	if (widgetTableNeedsClearAll) {
+		for (int displayPrice = BottomDisplayedPrice; displayPrice <= TopDisplayedPrice; displayPrice++) {
+			ClearRow(RowOfPrice(displayPrice));
+			widgetTableNeedsClearAll = false;
+			usedprices.clear();
+			notusedprices.clear();
+		}
+	}
 	//first, erase all values from rows that have been printed into last time:
 	if (usedprices.size() > 0)
 	{
@@ -442,6 +475,8 @@ void WidgetTable::SetSize(int newrows, int newcols, WidgetTable * mytable, /*std
 			for (int c = 0; c<newcols; c++)
 			{
 				int X, Y, W, H;
+				////HACK: setting width of columns in WidgetTable:
+				//W = 70;
 				find_cell(CONTEXT_TABLE, r, c, X, Y, W, H);
 				char s[40];
 				//below decides what is put into table:
@@ -513,7 +548,7 @@ void WidgetTable::draw_cell(TableContext context,
 	{
 	case CONTEXT_STARTPAGE:
 		fl_font(FL_HELVETICA, 9);		// font used by all headers
-		col_width_all(55);				// sets the width of the columns
+		col_width_all(columnWidth);				//HACK: sets the width of the columns
 		row_height_all(18);
 		break;
 

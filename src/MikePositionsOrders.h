@@ -14,6 +14,11 @@ m_openOrders
 m_closedOrders
 m_positionBook
 
+//This class stores all the positions:
+PositionBook * positionbook;
+
+//This class stores all the orders:
+OrderbookPrototype * orderbook;
 
 
 For example - human presses 'buy lmt' button with a price corresponding to 547.
@@ -56,7 +61,7 @@ public:
 	//once order is filled - this tells which position is updated
 	long assignedToPosition = 0;
 
-	//the price of the order
+	//the price of the order. prices are in cents.
 	long price = 0;
 
 	//the size of the order
@@ -67,6 +72,9 @@ public:
 
 	//for checking fills - has the order been filled already?
 	bool isFilled = false;
+	
+	//for future implementation.
+	bool partialFill = false;
 };
 
 //this class aggregates all the open orders by price. there can be multiple orders of
@@ -100,6 +108,8 @@ public:
 
 private:
 	bool isActive = false;
+	long prevbidprice = 0;
+	long prevaskprice = 0;
 
 public:
 	//this is for indexing purposes - set to TRUE if position was ever
@@ -127,8 +137,8 @@ public:
 	}
 	void calculatePL(long bidprice, long askprice)
 	{
-		static long prevbidprice = 0;
-		static long prevaskprice = 0;
+	//	static long prevbidprice = 0;
+	//	static long prevaskprice = 0;
 		if (bidprice != prevbidprice || askprice != prevaskprice)
 		{
 			open_pl = 0;
@@ -181,14 +191,14 @@ public:
 	//prototype for printing activePositions:
 	void printoutActivePositions(long bidprice, long askprice);
 
-	////not implemented yet:
-	//bool clearPosition(long price);
-	////not used at the moment. do I still need this?
-	//bool changePostion(long price, long amount);
-	////not implemented yet. gives the total open position above a certain price level:
-	//long totalOpenAbove(long price);
-	////not implemented yet. gives the total open position below a certain price level:
-	//long totalOpenBelow(long price);
+	//not implemented yet:
+	bool clearPosition(long price);
+	//not used at the moment. do I still need this?
+	bool changePostion(long price, long amount);
+	//not implemented yet. gives the total open position above a certain price level:
+	long totalOpenAbove(long price);
+	//not implemented yet. gives the total open position below a certain price level:
+	long totalOpenBelow(long price);
 
 
 	//ORDER METHODS:
@@ -199,6 +209,9 @@ public:
 	void updateOpenOrdersByPrice();
 	//prototype function to print out all orders in the console:
 	void printoutAllOrders();//not implemented
+
+	void cancelOrder(long orderId);//implement this
+	void cancelAllOrdAtPrice(long price);//implement this
 
 	//REFACTORING:
 	//used for printing open orders in WidgetTable

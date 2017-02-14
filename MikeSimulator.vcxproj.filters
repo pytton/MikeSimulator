@@ -16,6 +16,15 @@
     <Filter Include="Documentation">
       <UniqueIdentifier>{9a6ec74d-b1fa-44d4-b9e1-20ad64353043}</UniqueIdentifier>
     </Filter>
+    <Filter Include="FLUID Files">
+      <UniqueIdentifier>{f652d640-110f-44c0-b0fc-e6dfd6e3aab2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UserInterface">
+      <UniqueIdentifier>{d9d088d2-f76c-4c5b-b68b-39042b0e160c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BoonenTWSAPI">
+      <UniqueIdentifier>{e5d2e577-4d0d-434d-ad48-05842b59bab8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Control.h">
@@ -30,25 +39,7 @@
     <ClInclude Include="src\MktSnapshot.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\UserInterface.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\FLUID\FluidInterface.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\WidgetTable.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\FLUID\FluidPriceControl.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\PriceControlUI.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\MikeEnums.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ManualInterface.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\MikePositionsOrders.h">
@@ -60,23 +51,47 @@
     <ClInclude Include="src\OrderbookPrototype.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\NewPosOrders.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\PositionBook.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\TwsApiCpp-master\TwsApiC++\Api\Enumerations.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\TwsApiCpp-master\TwsApiC++\Api\TwsApiDefs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\TwsApiCpp-master\TwsApiC++\Api\TwsApiL0.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\MikeTWSData.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FLUID\FluidInterface.h">
+      <Filter>FLUID Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FLUID\FluidPriceControl.h">
+      <Filter>FLUID Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FLUID\FluidSimpleTableWindow.h">
+      <Filter>FLUID Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PriceControlUI.h">
+      <Filter>UserInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ManualInterface.h">
+      <Filter>UserInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="src\UserInterface.h">
+      <Filter>UserInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="src\WidgetTable.h">
+      <Filter>UserInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SimpleTableWindow.h">
+      <Filter>UserInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="src\FreshTWSAPI\afxwin.h">
+      <Filter>BoonenTWSAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TwsApiCpp-master\TwsApiC++\Api\Enumerations.h">
+      <Filter>BoonenTWSAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TwsApiCpp-master\TwsApiC++\Api\TwsApiDefs.h">
+      <Filter>BoonenTWSAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TwsApiCpp-master\TwsApiC++\Api\TwsApiL0.h">
+      <Filter>BoonenTWSAPI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -92,24 +107,6 @@
     <ClCompile Include="src\MikeSimulator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\UserInterface.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\FLUID\FluidInterface.cxx">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\WidgetTable.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\FLUID\FluidPriceControl.cxx">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\PriceControlUI.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ManualInterface.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\MikePositionsOrders.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -117,9 +114,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\OrderbookPrototype.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\NewPosOrders.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\PositionBook.cpp">
@@ -130,6 +124,33 @@
     </ClCompile>
     <ClCompile Include="src\MikeTWSData.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FLUID\FluidInterface.cxx">
+      <Filter>FLUID Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FLUID\FluidPriceControl.cxx">
+      <Filter>FLUID Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FLUID\FluidSimpleTableWindow.cxx">
+      <Filter>FLUID Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ManualInterface.cpp">
+      <Filter>UserInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PriceControlUI.cpp">
+      <Filter>UserInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="src\UserInterface.cpp">
+      <Filter>UserInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WidgetTable.cpp">
+      <Filter>UserInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SimpleTableWindow.cpp">
+      <Filter>UserInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FreshTWSAPI\TwsApiL0.cpp">
+      <Filter>BoonenTWSAPI</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

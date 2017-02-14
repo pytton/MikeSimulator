@@ -123,7 +123,7 @@ OrderbookPrototype::OrderbookPrototype(MikePositionOrders * p_mikepositionorders
 					int filledprice = askPrice;//BUYLMT orders filled at ask price for now
 					int filledamount = ptr_ordertoprocess->amount;//filling the whole order amount for now
 
-					fill(postofill, filledprice, filledamount, bidPrice, askPrice);
+					fill(postofill, filledprice, filledamount, bidPrice, askPrice);//BUY ORDERS FILL POSITIVE AMOUNTS. SELL ORDERS FILL NEGATIVE AMOUNTS. positive open_amount in MikePosition class means the position is 'long'. negative open_amount means the position is 'short'.
 
 					//mark order as filled in orderbook vector:
 					ptr_ordertoprocess->isFilled = true;
@@ -212,106 +212,90 @@ OrderbookPrototype::OrderbookPrototype(MikePositionOrders * p_mikepositionorders
 
 	void OrderbookPrototype::updateOpenOrdersByPrice()
 	{
-			//this is how this works. the internal static index stores prices at which there have ever
-			//been any open orders. at first pass, it erases every entry in the openOrdersByPrice vector
-			//with a price stored in the index. Then, it goes through all of the open orders stored in
-			//the openOrderBook vector and updates entries in the openOrdersByPrice vector.
-			//finally, after this is done, it goes through all of the index and checks if any of the
-			//openOrdersByPrice entries corresponding to the prices stored in the index have been zeroed
-			//out. if they have been zeroed out it means there are no longer any open orders corresponding
-			//to that price. it then removes that price which no longer holds any open orders from the index
-		
-			//index for storing prices to iterate through:
-		//	static std::vector<long> index;
-			using namespace std;
-			Timer timer;
-			timer.reset();
-		
-			static std::set<long> index;
-		//	static std::set<long> indexToErase;
-		//	indexToErase.clear();
-		
-		//	cout << " Checking problem index " << endl;
-		
-		//	MikeOrdersAtPrice temp;
-		
-			//erase all entries in openOrdersByPrice for prices stored in the index:
-			
-			////failed attemt to iterate only through non-empty OpenOrdersByPrice
-			////can come back to this later if this function proves to be too slow
-			////now, just erase EVERYTHING every time and start from filling up from scratch
-			//if (indexToErase.size()) {
-			//	for (long price : indexToErase )
-			//	{
-			//		std::cout << " cued for erase: " << price << std::endl;
-			//		//below for testing:
-			//		cout << openOrdersByPrice.at(price).price << endl;
-			////		cout << openOrdersByPrice.at(price).buyLimitAmount << endl;
-			//		//THE FOLLOWING LINE OF CODE CRASHES. WILL COMPILE BUT CRASHES:
-			//		//COMMENT OUT TO MAKE IT WORK
-			//		//WHY?!?!?!?!?
-			////		openOrdersByPrice.at(price).eraseall();
-			//	}
-			//}
-		
-			if (index.size()) {
-				for (long price : index)
-				{
-				//	std::cout << " order index: " << std::endl;
-		
-				////	below for testing:
-				//	cout << openOrdersByPrice.at(price).price << endl;
-				//	cout << openOrdersByPrice.at(price).buyLimitAmount << endl;
-				//	cout << openOrdersByPrice.at(price).buyStopAmount << endl;
-				//	cout << openOrdersByPrice.at(price).sellLimitAmount << endl;
-				//	cout << openOrdersByPrice.at(price).sellStopAmount << endl;
-					//THE FOLLOWING LINE OF CODE CRASHES. WILL COMPILE BUT CRASHES:
-					//COMMENT OUT TO MAKE IT WORK
-					//WHY?!?!?!?!?
-							openOrdersByPrice.at(price).eraseall();
-				}
-			}
-	
-			//go through all the open orders in openOrderBook and update entries in OpenOrdersByPrice
-			for (int OrderId : indexOpenOrd)
+		//this is how this works. the updateOpenOrdersByPriceIndex stores prices at which there have ever
+		//been any open orders. at first pass, it erases every entry in the openOrdersByPrice vector
+		//with a price stored in the index. Then, it goes through all of the open orders stored in
+		//the openOrderBook vector and updates entries in the openOrdersByPrice vector.
+		//finally, after this is done, it goes through all of the index and checks if any of the
+		//openOrdersByPrice entries corresponding to the prices stored in the index have been zeroed
+		//out. if they have been zeroed out it means there are no longer any open orders corresponding
+		//to that price. it then removes that price which no longer holds any open orders from the index
+
+		//index for storing prices to iterate through:
+		updateOpenOrdersByPriceIndex;
+		using namespace std;
+		Timer timer;
+		timer.reset();
+
+
+
+
+		//erase all entries in openOrdersByPrice for prices stored in the index	
+		////failed attemt to iterate only through non-empty OpenOrdersByPrice
+		////can come back to this later if this function proves to be too slow
+		////now, just erase EVERYTHING every time and start from filling up from scratch
+		//if (indexToErase.size()) {
+		//	for (long price : indexToErase )
+		//	{
+		//		std::cout << " cued for erase: " << price << std::endl;
+		//		//below for testing:
+		//		cout << openOrdersByPrice.at(price).price << endl;
+		////		cout << openOrdersByPrice.at(price).buyLimitAmount << endl;
+		//		//THE FOLLOWING LINE OF CODE CRASHES. WILL COMPILE BUT CRASHES:
+		//		//COMMENT OUT TO MAKE IT WORK
+		//		//WHY?!?!?!?!?
+		////		openOrdersByPrice.at(price).eraseall();
+		//	}
+		//}
+
+		if (updateOpenOrdersByPriceIndex.size()) {
+			for (long price : updateOpenOrdersByPriceIndex)
 			{
-				MikeOrder order = allOrders.at(OrderId);
-				//update entries in openOrdersByPrice:
-				switch (order.ordertype)
-				{
-				case BUYLMT:
-					openOrdersByPrice.at(order.price).buyLimitAmount += order.amount;
-					break;
-				case BUYSTP:
-					openOrdersByPrice.at(order.price).buyStopAmount += order.amount;
-					break;
-				case SELLLMT:
-					openOrdersByPrice.at(order.price).sellLimitAmount += order.amount;
-					break;
-				case SELLSTP:
-					openOrdersByPrice.at(order.price).sellStopAmount += order.amount;
-					break;
-				default:
-					std::cout << " ERROR in MikePositionOrders::updateOpenOrdersByPrice()" << std::endl;
-					break;
-				}
-		
-				//update the index with the price:
-				index.insert(order.price);
+
+				openOrdersByPrice.at(price).eraseall();
 			}
-		
-			//			cout << "Filling OrdersByPrice took: " << timer.elapsed() << endl;
-		
-		
-			////THE BELOW WILL CRASH TOO:
-			////remove empty entries from index:
-			//if (index.size()) {
-			//	for (long price : index)
-			//	{
-			//		if (openOrdersByPrice.at(price).checkifempty()) { indexToErase.insert(price); }
-			//	}
-			//}
-		
+		}
+
+		//go through all the open orders in openOrderBook and update entries in OpenOrdersByPrice
+		for (int OrderId : indexOpenOrd)
+		{
+			MikeOrder order = allOrders.at(OrderId);
+			//update entries in openOrdersByPrice:
+			switch (order.ordertype)
+			{
+			case BUYLMT:
+				openOrdersByPrice.at(order.price).buyLimitAmount += order.amount;
+				break;
+			case BUYSTP:
+				openOrdersByPrice.at(order.price).buyStopAmount += order.amount;
+				break;
+			case SELLLMT:
+				openOrdersByPrice.at(order.price).sellLimitAmount += order.amount;
+				break;
+			case SELLSTP:
+				openOrdersByPrice.at(order.price).sellStopAmount += order.amount;
+				break;
+			default:
+				std::cout << " ERROR in MikePositionOrders::updateOpenOrdersByPrice()" << std::endl;
+				break;
+			}
+
+			//update the index with the price:
+			updateOpenOrdersByPriceIndex.insert(order.price);
+		}
+
+		//			cout << "Filling OrdersByPrice took: " << timer.elapsed() << endl;
+
+
+		////THE BELOW WILL CRASH TOO:
+		////remove empty entries from index:
+		//if (index.size()) {
+		//	for (long price : index)
+		//	{
+		//		if (openOrdersByPrice.at(price).checkifempty()) { indexToErase.insert(price); }
+		//	}
+		//}
+
 	}
 
 	void OrderbookPrototype::fill(int assignedtopos, int fillprice, int orderamount, long bidPrice, long askPrice)

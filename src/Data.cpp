@@ -53,7 +53,8 @@ Data::Data(Control * p, int starting_bid)	//THIS IS THE NEW REFACTORED CONSTRUCT
 	liveTWSData = NULL;
 	liveTWSData = new MikeTWSData();
 	using namespace std;
-	liveDataAvailable = liveTWSData->ConnectTWS(10);
+	//liveDataAvailable = liveTWSData->ConnectTWS(1);
+	liveDataAvailable = 0;
 	if (liveDataAvailable) {
 		cout << "\nLive Data Available" << endl;
 		cout << setprecision(15);

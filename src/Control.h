@@ -8,7 +8,7 @@
 //#include "MikeEnums.h"
 //#include "WidgetTable.h"
 //#include "MikePositionsOrders.h"
-
+#include "MikeTimer.h"
 
 
 class WidgetTable;
@@ -16,11 +16,13 @@ class Data;
 class Control;
 class MikeSimulator;
 class PriceControlUI;
+class SimpleTableWindow;
 class UserInterface;
 class MikePosition;
 class MikeOrder;
 class MikePositionOrders;
 class Fl_Widget;
+class Timer;
 
 enum BtnPressed;
 enum MikeOrderType;
@@ -75,6 +77,8 @@ public:
 		 int parameter1 = 0,
 		 int parameter2 = 0,
 		 double parameter3 = 0.0);
+	 //CALLBACKS FROM SIMPLETABLEWINDOW:
+	 void CallbkSmplTableWin(int rowPressed, int colPressed, long price, short windownumber);
 
 	 //getters/setters:
 	 PriceControlUI * GetPriceControlUI(){ return m_pPriceControlUI; }
@@ -91,6 +95,8 @@ private:
 	PriceControlUI * m_pPriceControlUI;
 
 	MikePositionOrders * manualPositions;
+
+	SimpleTableWindow * simpleTableWindow;
 	
 	//ManualInterface * manualInterface1;
 
@@ -100,6 +106,12 @@ private:
 	bool mainLoopActive = false;//used by startloop and stoploop
 	bool mainLoopfinished = false;//this for the Fl::add_timeout function timeoutfunction - to ensure that another run of the MainLoop is not initiated before the MainLoop is finished processing
 	bool livedatafeed = false;
+
+	//static variables moved here and changed to non-static:
+public:
+	Timer timer;
+	bool resetTimer;
+	long previouselapsedtime;
 };
 
 
