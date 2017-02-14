@@ -209,9 +209,10 @@ void Control::CallbkWidTable(int row, int col, long price, MikeOrderType OrderTy
 void Control::CallbkWidTable(int row, int col, long price, MikeOrderType OrderTypePressed, int orderSize) {
 	using namespace std;
 
-	//send order to OrderBook
-	
-	manualPositions->newOrder(OrderTypePressed, price, orderSize);
+	//send order to OrderBook if order type is not 'cancel order':	
+	if (OrderTypePressed != CXLORDER) { manualPositions->newOrder(OrderTypePressed, price, orderSize); }
+	if (OrderTypePressed == CXLORDER) { manualPositions->cancelAllOrdAtPrice(price); }
+	//check for fills:
 	manualPositions->checkFills(data->GetBidPrice(), data->GetAskPrice());
 	MainLoop();
 	//printCurrentAll();

@@ -34,7 +34,7 @@
     <ClInclude Include="src\MktSnapshot.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClInclude>
-    <ClInclude Include="src\OrderbookPrototype.h" />
+    <ClInclude Include="src\MikeOrderbook.h" />
     <ClInclude Include="src\PositionBook.h" />
     <ClInclude Include="src\PriceControlUI.h" />
     <ClInclude Include="src\SimpleTableWindow.h" />

@@ -14,15 +14,15 @@ class PositionBook;
 enum BtnPressed;
 enum MikeOrderType;
 
-	class OrderbookPrototype
+	class MikeOrderbook
 	{
 	private:
 		void fill(int assignedtopos, int fillprice, int orderamount, long bidPrice, long askPrice);// { std::cout << "\nImplement filling orders!!!" << std::endl; }
 	public:
 
-		OrderbookPrototype(MikePositionOrders * p_mikepositionorders, long highestprice);
-//		OrderbookPrototype(::PositionBook * positionbook);
-		~OrderbookPrototype();
+		MikeOrderbook(MikePositionOrders * p_mikepositionorders, long highestprice);
+//		MikeOrderbook(::PositionBook * positionbook);
+		~MikeOrderbook();
 
 
 

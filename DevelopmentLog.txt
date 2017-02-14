@@ -60,3 +60,32 @@ problem was in void Control::printCurrentAll() - fixed now - DONE
 Continue by refactoring refactored_m_slider1_cb in UserInterface - DONE
 moving void UserInterface::m_down_btn_cb(Fl_Widget *w, void * p) to Control. - DONE
 add Control class pointer to UserInterface constructor. - DONE
+
+Replace all "OrderbookPrototype", "MikeOrderbook", Match case, Whole word, Subfolders, Keep modified files open, Find Results 1, Entire Solution, ""
+  C:\Users\Michael\Documents\Visual Studio 2015\Projects\MikeSimulator LAPTOP\src\MikePositionsOrders.h(21,1):MikeOrderbook * orderbook;
+  C:\Users\Michael\Documents\Visual Studio 2015\Projects\MikeSimulator LAPTOP\src\MikePositionsOrders.h(44,7):class MikeOrderbook;
+  C:\Users\Michael\Documents\Visual Studio 2015\Projects\MikeSimulator LAPTOP\src\MikePositionsOrders.h(167,2):	MikeOrderbook * orderbook;
+  C:\Users\Michael\Documents\Visual Studio 2015\Projects\MikeSimulator LAPTOP\src\OrderbookPrototype.h(17,8):	class MikeOrderbook
+  C:\Users\Michael\Documents\Visual Studio 2015\Projects\MikeSimulator LAPTOP\src\OrderbookPrototype.h(23,3):		MikeOrderbook(MikePositionOrders * p_mikepositionorders, long highestprice);
+  C:\Users\Michael\Documents\Visual Studio 2015\Projects\MikeSimulator LAPTOP\src\OrderbookPrototype.h(24,5)://		MikeOrderbook(::PositionBook * positionbook);
+  C:\Users\Michael\Documents\Visual Studio 2015\Projects\MikeSimulator LAPTOP\src\OrderbookPrototype.h(25,4):		~MikeOrderbook();
+  C:\Users\Michael\Documents\Visual Studio 2015\Projects\MikeSimulator LAPTOP\src\MikePositionsOrders.cpp(12,11):#include "MikeOrderbook.h"
+  C:\Users\Michael\Documents\Visual Studio 2015\Projects\MikeSimulator LAPTOP\src\MikePositionsOrders.cpp(24,18):	orderbook = new MikeOrderbook(this, highestPrice);
+  C:\Users\Michael\Documents\Visual Studio 2015\Projects\MikeSimulator LAPTOP\src\OrderbookPrototype.cpp(3,11):#include "MikeOrderbook.h"
+  C:\Users\Michael\Documents\Visual Studio 2015\Projects\MikeSimulator LAPTOP\src\OrderbookPrototype.cpp(13,1):MikeOrderbook::MikeOrderbook(MikePositionOrders * p_mikepositionorders, long highestprice)
+  C:\Users\Michael\Documents\Visual Studio 2015\Projects\MikeSimulator LAPTOP\src\OrderbookPrototype.cpp(13,16):MikeOrderbook::MikeOrderbook(MikePositionOrders * p_mikepositionorders, long highestprice)
+  C:\Users\Michael\Documents\Visual Studio 2015\Projects\MikeSimulator LAPTOP\src\OrderbookPrototype.cpp(22,4):	//MikeOrderbook::MikeOrderbook(PositionBook * positionbook)
+  C:\Users\Michael\Documents\Visual Studio 2015\Projects\MikeSimulator LAPTOP\src\OrderbookPrototype.cpp(22,19):	//MikeOrderbook::MikeOrderbook(PositionBook * positionbook)
+  C:\Users\Michael\Documents\Visual Studio 2015\Projects\MikeSimulator LAPTOP\src\OrderbookPrototype.cpp(31,2):	MikeOrderbook::~MikeOrderbook()
+  C:\Users\Michael\Documents\Visual Studio 2015\Projects\MikeSimulator LAPTOP\src\OrderbookPrototype.cpp(31,18):	MikeOrderbook::~MikeOrderbook()
+  C:\Users\Michael\Documents\Visual Studio 2015\Projects\MikeSimulator LAPTOP\src\OrderbookPrototype.cpp(35,6):	int MikeOrderbook::neworder(MikeOrderType type, long orderPrice, long orderAmount)
+  C:\Users\Michael\Documents\Visual Studio 2015\Projects\MikeSimulator LAPTOP\src\OrderbookPrototype.cpp(96,7):	void MikeOrderbook::checkfills(long bidPrice, long askPrice)
+  C:\Users\Michael\Documents\Visual Studio 2015\Projects\MikeSimulator LAPTOP\src\OrderbookPrototype.cpp(213,7):	void MikeOrderbook::updateOpenOrdersByPrice()
+  C:\Users\Michael\Documents\Visual Studio 2015\Projects\MikeSimulator LAPTOP\src\OrderbookPrototype.cpp(301,7):	void MikeOrderbook::fill(int assignedtopos, int fillprice, int orderamount, long bidPrice, long askPrice)
+  C:\Users\Michael\Documents\Visual Studio 2015\Projects\MikeSimulator LAPTOP\src\OrderbookPrototype.cpp(307,7):	void MikeOrderbook::cancelordersatprice(int price)
+  C:\Users\Michael\Documents\Visual Studio 2015\Projects\MikeSimulator LAPTOP\src\OrderbookPrototype.cpp(311,10):	//Mike::MikeOrderbook::checkstatusoforder(long orderID)
+  C:\Users\Michael\Documents\Visual Studio 2015\Projects\MikeSimulator LAPTOP\src\OrderbookPrototype.cpp(317,20):	MikeOrdersAtPrice MikeOrderbook::totOrdAmtatPrice()
+  C:\Users\Michael\Documents\Visual Studio 2015\Projects\MikeSimulator LAPTOP\src\OrderbookPrototype.cpp(323,7):	void MikeOrderbook::modifyorder(long orderID)
+  C:\Users\Michael\Documents\Visual Studio 2015\Projects\MikeSimulator LAPTOP\src\OrderbookPrototype.cpp(327,7):	void MikeOrderbook::cancelorder(long orderID)
+  C:\Users\Michael\Documents\Visual Studio 2015\Projects\MikeSimulator LAPTOP\src\PositionBook.cpp(8,11):#include "MikeOrderbook.h"
+  Total replaced: 26  Matching files: 5  Total files searched: 70

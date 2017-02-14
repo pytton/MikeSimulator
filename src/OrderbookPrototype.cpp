@@ -1,6 +1,6 @@
 //#define COMMENTSOFF //
 #include <iostream>
-#include "OrderbookPrototype.h"
+#include "MikeOrderbook.h"
 #include "MikePositionsOrders.h"
 
 #include "MikeEnums.h"
@@ -10,7 +10,7 @@
 #include "PositionBook.h"
 #include "MikeTimer.h"
 
-OrderbookPrototype::OrderbookPrototype(MikePositionOrders * p_mikepositionorders, long highestprice)
+MikeOrderbook::MikeOrderbook(MikePositionOrders * p_mikepositionorders, long highestprice)
 	{
 		mypositionorders = p_mikepositionorders;
 		allOrders.clear();
@@ -19,7 +19,7 @@ OrderbookPrototype::OrderbookPrototype(MikePositionOrders * p_mikepositionorders
 		openOrdersByPrice.resize(highestprice +1);
 	}
 
-	//OrderbookPrototype::OrderbookPrototype(PositionBook * positionbook)
+	//MikeOrderbook::MikeOrderbook(PositionBook * positionbook)
 	//{
 	//	//mypositionbook = positionbook;
 	//	//allOrders.clear();
@@ -28,11 +28,11 @@ OrderbookPrototype::OrderbookPrototype(MikePositionOrders * p_mikepositionorders
 	//}
 
 
-	OrderbookPrototype::~OrderbookPrototype()
+	MikeOrderbook::~MikeOrderbook()
 	{
 	}
 
-	int OrderbookPrototype::neworder(MikeOrderType type, long orderPrice, long orderAmount)
+	int MikeOrderbook::neworder(MikeOrderType type, long orderPrice, long orderAmount)
 	{
 
 		//below copied from MikePositionOrders:
@@ -93,7 +93,7 @@ OrderbookPrototype::OrderbookPrototype(MikePositionOrders * p_mikepositionorders
 		return currNewOrderId; //returns the OrderId of the just created order to the caller of the function
 	}
 
-	void OrderbookPrototype::checkfills(long bidPrice, long askPrice)
+	void MikeOrderbook::checkfills(long bidPrice, long askPrice)
 	{
 		//copied from MikePositionOrders:
 		using namespace std;
@@ -210,7 +210,7 @@ OrderbookPrototype::OrderbookPrototype(MikePositionOrders * p_mikepositionorders
 
 	}
 
-	void OrderbookPrototype::updateOpenOrdersByPrice()
+	void MikeOrderbook::updateOpenOrdersByPrice()
 	{
 		//this is how this works. the updateOpenOrdersByPriceIndex stores prices at which there have ever
 		//been any open orders. at first pass, it erases every entry in the openOrdersByPrice vector
@@ -298,33 +298,33 @@ OrderbookPrototype::OrderbookPrototype(MikePositionOrders * p_mikepositionorders
 
 	}
 
-	void OrderbookPrototype::fill(int assignedtopos, int fillprice, int orderamount, long bidPrice, long askPrice)
+	void MikeOrderbook::fill(int assignedtopos, int fillprice, int orderamount, long bidPrice, long askPrice)
 	{
 		mypositionorders->fillposition(assignedtopos, fillprice, orderamount, bidPrice, askPrice);
 	//	std::cout << "\nImplement filling orders!!!" << std::endl;
 	}
 
-	void OrderbookPrototype::cancelordersatprice(int price)
+	void MikeOrderbook::cancelordersatprice(int price)
 	{
 	}
 
-	//Mike::OrderbookPrototype::checkstatusoforder(long orderID)
+	//Mike::MikeOrderbook::checkstatusoforder(long orderID)
 	//{
 	//	OrderStatus orderstatus = CANCELLED;
 	//	return orderstatus;
 	//}
 
-	MikeOrdersAtPrice OrderbookPrototype::totOrdAmtatPrice()
+	MikeOrdersAtPrice MikeOrderbook::totOrdAmtatPrice()
 	{
 		MikeOrdersAtPrice myOrders;
 		return MikeOrdersAtPrice();
 	}
 
-	void OrderbookPrototype::modifyorder(long orderID)
+	void MikeOrderbook::modifyorder(long orderID)
 	{
 	}
 
-	void OrderbookPrototype::cancelorder(long orderID)
+	void MikeOrderbook::cancelorder(long orderID)
 	{
 	}
 

@@ -9,7 +9,7 @@
 #include <iostream>
 
 #include "MikeTimer.h"
-#include "OrderbookPrototype.h"
+#include "MikeOrderbook.h"
 
 #include "PositionBook.h"
 
@@ -21,7 +21,7 @@ MikePositionOrders::MikePositionOrders(std::string name, long highestPrice)
 	positionbook = new PositionBook(highestPrice);
 	
 //initialize orderbook with a pointer to this MikePositionOrders:
-	orderbook = new OrderbookPrototype(this, highestPrice);
+	orderbook = new MikeOrderbook(this, highestPrice);
 //name this MikePositionOrders:
 	nameOfBook = name;
 
@@ -196,6 +196,18 @@ void MikePositionOrders::printoutAllOrders()
 	//		<< temp.ordertype << " Order Price: " << temp.price 
 	//		<< " Amount: " << temp.amount << endl;
 	//}
+}
+
+void MikePositionOrders::cancelOrder(long orderId)
+{
+	using namespace std;
+	cout << "Not implemented. Cancel orderId: " << orderId << endl;
+}
+
+void MikePositionOrders::cancelAllOrdAtPrice(long price)
+{
+	using namespace std;
+	cout << "Not implemented. Cancelling all orders at price: " << price << endl;
 }
 
 const std::vector<MikeOrdersAtPrice>* MikePositionOrders::GetOpOrdersbyPrice()

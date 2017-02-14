@@ -18,7 +18,7 @@ m_positionBook
 PositionBook * positionbook;
 
 //This class stores all the orders:
-OrderbookPrototype * orderbook;
+MikeOrderbook * orderbook;
 
 
 For example - human presses 'buy lmt' button with a price corresponding to 547.
@@ -41,7 +41,7 @@ position in MikePositionBook
 
 class Timer;
 class PositionBook;
-class OrderbookPrototype;
+class MikeOrderbook;
 
 
 enum BtnPressed;
@@ -164,7 +164,7 @@ private:
 	PositionBook * positionbook;
 
 	//This class stores all the orders:
-	OrderbookPrototype * orderbook;
+	MikeOrderbook * orderbook;
 public:
 	//POSITION METHODS:
 	//used for printing open positions in WidgetTable
