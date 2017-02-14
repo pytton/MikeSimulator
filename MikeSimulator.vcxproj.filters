@@ -66,6 +66,18 @@
     <ClInclude Include="src\PositionBook.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\TwsApiCpp-master\TwsApiC++\Api\Enumerations.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TwsApiCpp-master\TwsApiC++\Api\TwsApiDefs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TwsApiCpp-master\TwsApiC++\Api\TwsApiL0.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MikeTWSData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Control.cpp">
@@ -111,6 +123,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\PositionBook.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\APINoThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MikeTWSData.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

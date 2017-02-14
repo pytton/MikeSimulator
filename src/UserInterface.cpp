@@ -46,7 +46,7 @@ UserInterface::UserInterface(
 		number_cols = numberOfColumns,
 		how_many_cols_are_buttons = numberOfButtoncolumns;
 	
-	m_pTable = new WidgetTable(5, 5, 765, 655, "widgettable", this, top_row_price, number_rows,
+	m_pTable = new WidgetTable(5, 5, 940, 630, "widgettable", this, top_row_price, number_rows,
 		number_cols, how_many_cols_are_buttons, col_names, button_names);
 
 
@@ -56,12 +56,14 @@ UserInterface::UserInterface(
 	//******************
 	//SETTING CALLBACKS:
 	//******************
-//	m_btn_next->callback(experimental_cb, (void*)this);
+
 	m_btn_extra->callback(m_extra_btn_cb, (void*) this);	//this changes size of Widgettable
 	m_btn_printOrders->callback(m_printOrders_btn_cb, (void*) this);
 	m_btn_checkFills->callback(m_checkFills_btn_cb, (void*) this);
 	m_btn_printPos->callback(m_printPos_btn_cb, (void*) this);
+	m_btn_resetOrdSize->callback(m_resetOrderSize_cb, (void*) this);
 
+	m_order_size->value(100);
 
 
 
@@ -201,6 +203,11 @@ void UserInterface::m_printPos_btn_cb(Fl_Widget * w, void * p)
 	UserInterface * myUserInt = (UserInterface*)p;
 	myUserInt->m_pControl->CallbkUserInt(myUserInt, PRINTPOS);
 }
+void UserInterface::m_resetOrderSize_cb(Fl_Widget * w, void * p)
+{
+	UserInterface * myUserInt = (UserInterface*)p;
+	myUserInt->m_order_size->value(100);
+}
 //void UserInterface::m_up_btn_cb(Fl_Widget *w, void * p)
 //{
 ////	UserInterface * myUserInt = (UserInterface*)p;
@@ -227,6 +234,8 @@ void UserInterface::m_extra_btn_cb(Fl_Widget *w, void * p)
 //WidgetTable callback:
 //THIS IS WHERE THE ORDER TYPE IS DETERMINED
 //BASED ON WHICH COLUMN HAS BEEN PRESSED IN WIDGETTABLE
+
+
 void UserInterface::CallbkWidTable(int rowPressed, int colPressed, long price)
 {
 	//FIRST DETERMINE WHAT THE BUTTON PRESSED IN WIDGETTABLE WILL DO:
@@ -235,7 +244,8 @@ void UserInterface::CallbkWidTable(int rowPressed, int colPressed, long price)
 	MikeOrderType tempOrderType;
 	bool checkForValidOrderType = 1;
 	switch (colPressed)
-	{case 0:
+	{
+	case 0:
 		tempOrderType = CXLORDER;
 		break;
 	case 1:
@@ -255,12 +265,16 @@ void UserInterface::CallbkWidTable(int rowPressed, int colPressed, long price)
 		checkForValidOrderType = 0;
 	}
 
+	using namespace std;
+	cout << "\ndebugging UserInterface::CallbkWidTable. Order type: " << tempOrderType << endl;
+
 	if (checkForValidOrderType)
 	{
-		GetControl()->CallbkWidTable(rowPressed, colPressed, price, tempOrderType);
+		int orderSize = (int)m_order_size->value();//get the value of the order from Fl_Input which is part of UserInterface
+		GetControl()->CallbkWidTable(rowPressed, colPressed, price, tempOrderType, orderSize);
 	}
 	else std::cout << "Unhandled type of button pressed!!!" << std::endl;
-	
+
 }
 
 void UserInterface::PrintBidAsk(long bid, long ask)

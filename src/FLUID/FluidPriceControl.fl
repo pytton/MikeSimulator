@@ -8,7 +8,7 @@ class FluidPriceControlUI {open
   } {
     Fl_Window m_window1 {
       label {Price Control} open
-      xywh {997 94 193 618} type Double visible
+      xywh {601 74 177 602} type Double visible
     } {
       Fl_Button m_btnUp {
         label Up
@@ -31,8 +31,20 @@ class FluidPriceControlUI {open
         xywh {10 15 35 585} minimum 200 maximum 0 step 1 value 100 textsize 14
       }
       Fl_Button m_btnPrint {
-        label Print selected
+        label Print
         xywh {120 500 60 50}
+      }
+      Fl_Button m_btnLiveDataConsolePrint {
+        label {Print LiveData Console}
+        xywh {55 155 60 50} labelsize 12 align 128
+      }
+      Fl_Button m_btnConnectLiveData {
+        label {Connect Live Data}
+        xywh {55 215 60 50} align 128
+      }
+      Fl_Button m_btnStartLoop {
+        label {Start Loop} selected
+        xywh {55 90 60 50} align 128
       }
     }
   }

@@ -32,6 +32,8 @@ public:
 
 	Control(MikeSimulator * p, int starting_bid);
 
+	static void timeoutfunction(void * p);
+
 	//member functions:
 	void MainLoop();
 //	void ManualOrder(int type, long price);
@@ -65,6 +67,7 @@ public:
 	 //CALLBACKS FROM WIDGETTABLE:
 //	 virtual void CallbkWidTable(int row, int col, long price);
 	 virtual void CallbkWidTable(int row, int col, long price, MikeOrderType OrderTypePressed);
+	 virtual void CallbkWidTable(int row, int col, long price, MikeOrderType OrderTypePressed, int orderSize);
 	//CALLBACKS FROM PRICECONTROLUI:
 	 void CallbkPriceControlUI(PriceControlUI * p,
 		 BtnPressed btn,
@@ -91,6 +94,12 @@ private:
 	
 	//ManualInterface * manualInterface1;
 
+	void startloop();//starts looping the MainLoop function
+	void stoploop();//stops looping the MainLoop function
+	bool stopMainLoop = false;//used by startloop and stoploop
+	bool mainLoopActive = false;//used by startloop and stoploop
+	bool mainLoopfinished = false;//this for the Fl::add_timeout function timeoutfunction - to ensure that another run of the MainLoop is not initiated before the MainLoop is finished processing
+	bool livedatafeed = false;
 };
 
 

@@ -132,11 +132,19 @@ class My_fl_button : public  Fl_Button  //with location of button in Fl_Table
 public:
 	//below determines where in the Fl_Table the button is located
 	//needs to be set inside WidgetTable::SetSize function
+//private:
+protected:
 	int x_pos;	//column of button -> 0 is the first
+public:
 	int y_pos;	//row of button -> 0 is the first
 
 				//constructor:
 	My_fl_button(int x, int y, int w, int h, const char *l);	//x_pos y_pos set to 0 by default
+	inline int getXpos() { return x_pos; }
+	inline int getYpos() { return y_pos; }
+	
+	inline void setYpos(int y) { y_pos = y; }
+	inline void setXpos(int x) { x_pos = x; }
 
 };
 

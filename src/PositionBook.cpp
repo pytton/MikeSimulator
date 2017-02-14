@@ -91,7 +91,7 @@ long PositionBook::CalcAllOpenPL(long bidprice, long askprice)
 	if (bidprice != prevbidprice || askprice != prevaskprice)
 	{
 		allOpenPL = 0;//allOpenPL is static!
-		COMMENTSOFF cout << "CalcAllOpenPL called" << endl;
+		// cout << "CalcAllOpenPL called" << endl;
 		//go through every position in the openPosIndex and calculate each individual position's openPL:
 		for (long price : openPosIndexSet)
 		{
@@ -102,7 +102,7 @@ long PositionBook::CalcAllOpenPL(long bidprice, long askprice)
 		prevbidprice = bidprice;
 	}
 
-	COMMENTSOFF cout << "allOpenPL = " << allOpenPL << endl;
+	// cout << "allOpenPL = " << allOpenPL << endl;
 	return allOpenPL;
 	
 }

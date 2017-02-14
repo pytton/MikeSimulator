@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Src">
+      <UniqueIdentifier>{18be246b-2e15-471f-8303-719b8905903f}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Api">
+      <UniqueIdentifier>{91743d92-ac41-4717-aad4-4a99b130d069}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="source/PosixClient/src">
+      <UniqueIdentifier>{fff441f4-0a52-4277-b161-784e66bc33cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source/PosixClient/shared">
+      <UniqueIdentifier>{27388c1e-f1f4-4393-acd6-249cefc878f9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Src\afxwin.h">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Api\Enumerations.h">
+      <Filter>Api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Api\TwsApiDefs.h">
+      <Filter>Api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Api\TwsApiL0.h">
+      <Filter>Api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\PosixClient\src\EPosixClientSocket.h">
+      <Filter>source/PosixClient/src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\PosixClient\src\EPosixClientSocketPlatform.h">
+      <Filter>source/PosixClient/src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\PosixClient\Shared\CommissionReport.h">
+      <Filter>source/PosixClient/shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\PosixClient\Shared\CommonDefs.h">
+      <Filter>source/PosixClient/shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\PosixClient\Shared\Contract.h">
+      <Filter>source/PosixClient/shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\PosixClient\Shared\EClient.h">
+      <Filter>source/PosixClient/shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\PosixClient\Shared\EClientSocketBase.h">
+      <Filter>source/PosixClient/shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\PosixClient\Shared\EClientSocketBaseImpl.h">
+      <Filter>source/PosixClient/shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\PosixClient\Shared\EWrapper.h">
+      <Filter>source/PosixClient/shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\PosixClient\Shared\Execution.h">
+      <Filter>source/PosixClient/shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\PosixClient\Shared\IBString.h">
+      <Filter>source/PosixClient/shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\PosixClient\Shared\Order.h">
+      <Filter>source/PosixClient/shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\PosixClient\Shared\OrderState.h">
+      <Filter>source/PosixClient/shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\PosixClient\Shared\ScannerSubscription.h">
+      <Filter>source/PosixClient/shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\PosixClient\Shared\shared_ptr.h">
+      <Filter>source/PosixClient/shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\PosixClient\Shared\StdAfx.h">
+      <Filter>source/PosixClient/shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\PosixClient\Shared\TagValue.h">
+      <Filter>source/PosixClient/shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\PosixClient\Shared\TwsSocketClientErrors.h">
+      <Filter>source/PosixClient/shared</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Src\TwsApiL0.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\PosixClient\src\EClientSocketBase.cpp">
+      <Filter>source/PosixClient/src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\PosixClient\src\EPosixClientSocket.cpp">
+      <Filter>source/PosixClient/src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

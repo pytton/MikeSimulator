@@ -21,12 +21,14 @@ PriceControlUI::PriceControlUI(Control * control, double starting_bid_price, int
 	m_slider1->value(bid_price);
 	m_slider1->textsize(9);
 
+	//CALLBACK SETUP:
 	m_btnUp->callback(m_up_btn_cb, (void*)this);
-	m_btnDown->callback(m_down_btn_cb, (void*) this);	
+	m_btnDown->callback(m_down_btn_cb, (void*) this);
 	m_slider1->callback(m_slider1_cb, (void*) this);
 	m_btnPrint->callback(m_btnPrint_cb, (void*) this);
-	
-
+	m_btnLiveDataConsolePrint->callback(m_btnLiveDataConsolePrint_cb, (void*) this);
+	m_btnConnectLiveData->callback(m_btnConnectLiveData_cb, (void*) this);
+	m_btnStartLoop->callback(m_btnStartLoop_cb, (void*) this);
 
 	m_window1->end();
 
@@ -48,34 +50,41 @@ void PriceControlUI::setSlider(int value, int max, int min)
 void PriceControlUI::m_down_btn_cb(Fl_Widget * buttonPressed, void * p)
 {
 	PriceControlUI * myPriceControlUI = (PriceControlUI*)p;
-
-	//Fl_Widget * widgetToPass = buttonPressed;
-
 	myPriceControlUI->getControl()->CallbkPriceControlUI(myPriceControlUI, DOWNBTN, buttonPressed);
 }
 
 void PriceControlUI::m_up_btn_cb(Fl_Widget * buttonPressed, void * p)
 {
 	PriceControlUI * myPriceControlUI = (PriceControlUI*)p;
-
 	myPriceControlUI->m_pControl->CallbkPriceControlUI(myPriceControlUI, UPBTN, buttonPressed);
-
 }
 
 void PriceControlUI::m_slider1_cb(Fl_Widget * slider1Pointer, void * p)
 {
-	// void *p should be 'this' of UserInterface - it should be set up in
-	//UserInterface constructor
 	PriceControlUI * myPriceControlUI = (PriceControlUI*)p;
-
-
 	myPriceControlUI->m_pControl->CallbkPriceControlUI(myPriceControlUI, SLIDER1, slider1Pointer);
-
 }
 
 void PriceControlUI::m_btnPrint_cb(Fl_Widget * buttonPressed, void * p)
 {
 	PriceControlUI * myPriceControlUI = (PriceControlUI*)p;
-
 	myPriceControlUI->m_pControl->CallbkPriceControlUI(myPriceControlUI, PRINTBUT, buttonPressed);
+}
+
+void PriceControlUI::m_btnLiveDataConsolePrint_cb(Fl_Widget * buttonPressed, void * p)
+{
+	PriceControlUI * myPriceControlUI = (PriceControlUI*)p;
+	myPriceControlUI->m_pControl->CallbkPriceControlUI(myPriceControlUI, LIVEDATACONSOLEPRINTOUT, buttonPressed);
+}
+
+void PriceControlUI::m_btnConnectLiveData_cb(Fl_Widget * buttonPressed, void * p)
+{
+	PriceControlUI * myPriceControlUI = (PriceControlUI*)p;
+	myPriceControlUI->m_pControl->CallbkPriceControlUI(myPriceControlUI, CONNECTLIVEDATA, buttonPressed);
+}
+
+void PriceControlUI::m_btnStartLoop_cb(Fl_Widget * buttonPressed, void * p)
+{
+	PriceControlUI * myPriceControlUI = (PriceControlUI*)p;
+	myPriceControlUI->m_pControl->CallbkPriceControlUI(myPriceControlUI, STARTLOOP, buttonPressed);
 }

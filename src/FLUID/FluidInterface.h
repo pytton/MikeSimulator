@@ -29,6 +29,8 @@ public:
   Fl_Button *m_btn_printOrders;
   Fl_Button *m_btn_checkFills;
   Fl_Button *m_btn_printPos;
+  Fl_Value_Input *m_order_size;
+  Fl_Button *m_btn_resetOrdSize;
   Fl_Double_Window *m_window2;
   Fl_Text_Display *text_display;
 };

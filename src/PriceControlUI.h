@@ -43,6 +43,10 @@ private:
 	static void m_up_btn_cb(Fl_Widget *w, void * p);
 	static void m_slider1_cb(Fl_Widget *w, void * p);
 	static void m_btnPrint_cb(Fl_Widget *w, void * p);
+	static void m_btnLiveDataConsolePrint_cb(Fl_Widget *w, void * p);
+	static void m_btnConnectLiveData_cb(Fl_Widget *w, void * p);
+	static void m_btnStartLoop_cb(Fl_Widget *w, void * p);
+	
 
 };
 

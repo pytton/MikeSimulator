@@ -7,12 +7,21 @@
 #include "Data.h"
 #include "WidgetTable.h"
 #include "MikeEnums.h"
+#include "MikeTimer.h"
 
 #include "PriceControlUI.h"
 #include "ManualInterface.h"
 #include "MikePositionsOrders.h"
 
 using namespace std;
+
+int frequency_of_primes(int n) {
+	cout << "Primes calculating..." << endl;
+	int i, j;
+	int freq = n - 1;
+	for (i = 2; i <= n; ++i) for (j = sqrt(i); j>1; --j) if (i%j == 0) { --freq; break; }
+	return freq;
+}
 
 //Control::Control(MikeSimulator * p)
 //{
@@ -36,12 +45,34 @@ Control::Control(MikeSimulator * p, int starting_bid)
 	rePriceWidTable(userInterface);
 }
 
+void Control::timeoutfunction(void*p)
+{
+	static Timer timer;
+	static bool resetTimer = true;
+	if (resetTimer) {
+		timer.reset(); resetTimer = false;
+	}
+	Control * control = (Control*)p;
+	using namespace std;
+	static long previouselapsedtime = 0;
+	cout << "\MainLoop process time: "<< (timer.elapsed() - previouselapsedtime - 150) << endl;//150 because 0.15 in Fl::repeat_timeout(0.15, timeoutfunction,(void*) p);
+	previouselapsedtime = timer.elapsed();
+	/*if(control->mainLoopfinished)*/  control->MainLoop();
+	if (!control->stopMainLoop) Fl::repeat_timeout(0.15, timeoutfunction,(void*) p);
+	
+}
+
 void Control::MainLoop()
 {
+	using namespace std;
+	mainLoopfinished = false;//to ensure that the timeoutfunction does not call it again while it is executing
+	
+//	cout << "\nMainLoop Called. " << endl;
+							 
 	//TODO: work on 1 and 2 first
-
 	//1 check prices	-- this is done by manual up/down now
-
+	int tickerId = 1;//1-EUR, 2-GBP, 3-SPY, 4-DIA, 5-IWM, 6-QQQ
+	if (livedatafeed) data->updateLiveData(tickerId);
 	//2 check fills
 
 	manualPositions->checkFills(data->GetBidPrice(), data->GetAskPrice());
@@ -51,17 +82,19 @@ void Control::MainLoop()
 	//3 make decisions	-- now just manual orders
 	//4 display results/decisions
 
+//	data->PrintoutDataInConsole();
 	
-		printCurrentAll();
+	printCurrentAll();
 	
-	
+//	frequency_of_primes(3000000);
+//	Sleep(1500);
 	
 	//add other functions as needed
 	//5 send orders		-- for algos - nothing now
 	userInterface->PrintBidAsk(data->GetBidPrice(), data->GetAskPrice());
 
 	//printCurrentAll();
-
+	mainLoopfinished = true;//to ensure that the timeoutfunction does not call it again while it is executing
 }
 
 void Control::printCurrentAll()
@@ -149,7 +182,7 @@ void Control::CallbkUserInt(UserInterface * p, BtnPressed btn,
 }
 //WIDGETTABLE:
 
-void Control::CallbkWidTable(int row, int col, long price, MikeOrderType OrderTypePressed)
+void Control::CallbkWidTable(int row, int col, long price, MikeOrderType OrderTypePressed/*, long orderSize*/)
 {
 	using namespace std;
 
@@ -157,18 +190,27 @@ void Control::CallbkWidTable(int row, int col, long price, MikeOrderType OrderTy
 	//finish this so that the amount of order is passed through
 	manualPositions->newOrder(OrderTypePressed, price,100);
 	manualPositions->checkFills(data->GetBidPrice(), data->GetAskPrice());
-	printCurrentAll();
+	MainLoop();
+	//printCurrentAll();
 	
 
+}
+
+void Control::CallbkWidTable(int row, int col, long price, MikeOrderType OrderTypePressed, int orderSize) {
+	using namespace std;
+
+	//send order to OrderBook
+	
+	manualPositions->newOrder(OrderTypePressed, price, orderSize);
+	manualPositions->checkFills(data->GetBidPrice(), data->GetAskPrice());
+	MainLoop();
+	//printCurrentAll();
 }
 //PRICECONTROLUI
 void Control::CallbkPriceControlUI(PriceControlUI * p, BtnPressed btn, Fl_Widget * widgetPressed, int parameter1, int parameter2, double parameter3)
 {
 	if (btn == UPBTN)
 	{
-		//REFACTOR THIS:
-
-		//cout << "enum type callback called" << endl;
 		PriceControlUI * myPriceControl = (PriceControlUI*)p;
 		Data * myData = data;
 		//change bid ask prices:
@@ -179,7 +221,7 @@ void Control::CallbkPriceControlUI(PriceControlUI * p, BtnPressed btn, Fl_Widget
 		//update slider value:
 		myPriceControl->Getm_slider1()->value((double)myData->GetBidPrice());
 		//do something:
-		
+		//startloop();//HACK:experimenting, erase once finished experimenting
 		this->MainLoop();
 
 	}
@@ -197,7 +239,9 @@ void Control::CallbkPriceControlUI(PriceControlUI * p, BtnPressed btn, Fl_Widget
 		//update slider value:		
 		myPriceControl->Getm_slider1()->value((double)myData->GetBidPrice());
 		//do something:
+		//stoploop();//HACK:experimenting, erase once finished experimenting
 		this->MainLoop();
+		
 	}
 	if (btn == SLIDER1)
 	{
@@ -221,11 +265,70 @@ void Control::CallbkPriceControlUI(PriceControlUI * p, BtnPressed btn, Fl_Widget
 	}
 	if (btn == PRINTBUT)
 	{
-		
-		printCurrentAll();
+		MainLoop();
+		//printCurrentAll();
 
 	}
+	if (btn == LIVEDATACONSOLEPRINTOUT) {
 
+		PriceControlUI * myPriceControl = (PriceControlUI*)p;
+		Data * myData = data;
+		//PRINTOUT LIVE DATA IN THE CONSOLE:
+		data->PrintoutDataInConsole();
+	}
+	if (btn == CONNECTLIVEDATA) {
+
+		PriceControlUI * myPriceControl = (PriceControlUI*)p;
+		Data * myData = data;
+		//ATTEMPT TO CONNECT TO TWS LIVE DATAFEED:
+		data->ConnectLiveData();
+	}
+	if (btn == STARTLOOP) {
+
+		PriceControlUI * myPriceControl = (PriceControlUI*)p;
+		Data * myData = data;
+		cout << "\nControl Startloop called." << endl;
+		//If Control mainloop is stopped, start it:
+		if (!mainLoopActive) {
+			startloop();
+			//change the label of the button to "Stop Loop":
+			myPriceControl->m_btnStartLoop->label("Stop Loop");
+			return;
+		}
+		//If Control mainloop is running, stop it:
+		if (mainLoopActive) {
+			stoploop();
+			//change the label of the button to "Start Loop":
+			myPriceControl->m_btnStartLoop->label("Start Loop");
+			return;
+		}
+	}
+}
+
+void Control::startloop()
+{
+	//check to see if the loop is already running. if it is not, start the loop:
+	if(!mainLoopActive){
+		Fl::add_timeout(0.1, timeoutfunction, (void*) this);
+		mainLoopActive = true;
+		//and make sure the trigger to stop the loop inside timeoutfunction is off:
+		stopMainLoop = false;
+		//enable the live data feed - prices will be pulled from TWS:
+		livedatafeed = true;
+	}
+	
+}
+
+void Control::stoploop()
+{
+	//if the loop is already set up to be stopped, do nothing:
+	if (stopMainLoop) return;
+	//if it is not set to be stopped, set the trigger to stop it inside the timeoutfunction:
+	stopMainLoop = true;
+	//and let the class know it is not running:
+	mainLoopActive = false;
+	//stop the livedatafeed:
+	livedatafeed = false;
 }
 
 //Helpler functions for other classes:

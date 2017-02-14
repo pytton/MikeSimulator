@@ -8,11 +8,11 @@ class FluidInterface {open
   } {
     Fl_Window m_window1 {
       label window1 open
-      xywh {207 32 1157 661} type Double visible
+      xywh {219 44 1133 637} type Double visible
     } {
       Fl_Value_Input m_curr_ask {
         label {Current Ask}
-        xywh {895 100 55 20}
+        xywh {1080 200 55 20}
       }
       Fl_Value_Input m_top_limit {
         label {Top Limit}
@@ -23,11 +23,11 @@ class FluidInterface {open
         xywh {1075 150 60 20}
       }
       Fl_Table m_table {open
-        xywh {5 5 765 655} labelsize 10
+        xywh {5 5 940 655} labelsize 10
       } {}
       Fl_Value_Input m_curr_bid {
         label {Current Bid}
-        xywh {895 125 55 20}
+        xywh {1080 225 55 20}
       }
       Fl_Value_Input m_bottom_limit {
         label {Bottom Limit}
@@ -39,7 +39,7 @@ class FluidInterface {open
       }
       Fl_Button m_btn_extra {
         label {Reprice Table}
-        xywh {905 10 70 40} align 128
+        xywh {1070 255 70 40} align 128
       }
       Fl_Output m_TotOpenPos {
         label {Total Open Pos:}
@@ -59,19 +59,27 @@ class FluidInterface {open
       }
       Fl_Button m_btn_printOrders {
         label {Print Orders}
-        xywh {1030 220 45 30} labelsize 10 align 128
+        xywh {1035 305 45 30} labelsize 10 align 128
       }
       Fl_Button m_btn_checkFills {
         label {Check Fillls}
-        xywh {1030 260 45 30} labelsize 10 align 128
+        xywh {1035 345 45 30} labelsize 10 align 128
       }
       Fl_Button m_btn_printPos {
         label {Print Positions}
-        xywh {1090 220 45 30} labelsize 10 align 128
+        xywh {1090 305 45 30} labelsize 10 align 128
+      }
+      Fl_Value_Input m_order_size {
+        label {Order Size}
+        xywh {1075 390 60 20}
+      }
+      Fl_Button m_btn_resetOrdSize {
+        label {Reset Order Size} selected
+        xywh {1005 410 130 30} labelsize 10 align 128
       }
     }
     Fl_Window m_window2 {
-      label window2 open selected
+      label window2 open
       xywh {-32000 -32000 306 560} type Double hide
     } {
       Fl_Text_Display text_display {

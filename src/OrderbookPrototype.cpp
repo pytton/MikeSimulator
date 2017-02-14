@@ -203,7 +203,7 @@ OrderbookPrototype::OrderbookPrototype(MikePositionOrders * p_mikepositionorders
 		//update the openOrdersByPrice if any order got filled:
 		if (updatebyprice) updateOpenOrdersByPrice();
 
-	 cout << "\nChecking fills. Open orders: " << indexOpenOrd.size() << " Closed orders: " << indexClosedOrd.size() << " Checking fills took : " << timer.elapsed() << endl;
+//	 cout << "\nChecking fills. Open orders: " << indexOpenOrd.size() << " Closed orders: " << indexClosedOrd.size() << " Checking fills took : " << timer.elapsed() << endl;
 
 
 
@@ -300,7 +300,7 @@ OrderbookPrototype::OrderbookPrototype(MikePositionOrders * p_mikepositionorders
 				index.insert(order.price);
 			}
 		
-						cout << "Filling OrdersByPrice took: " << timer.elapsed() << endl;
+			//			cout << "Filling OrdersByPrice took: " << timer.elapsed() << endl;
 		
 		
 			////THE BELOW WILL CRASH TOO:

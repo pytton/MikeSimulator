@@ -3,7 +3,7 @@
 #include "FluidPriceControl.h"
 
 FluidPriceControlUI::FluidPriceControlUI() {
-  { m_window1 = new Fl_Double_Window(193, 618, "Price Control");
+  { m_window1 = new Fl_Double_Window(177, 602, "Price Control");
     m_window1->user_data((void*)(this));
     { m_btnUp = new Fl_Button(50, 500, 60, 50, "Up");
     } // Fl_Button* m_btnUp
@@ -24,6 +24,16 @@ FluidPriceControlUI::FluidPriceControlUI() {
     } // Fl_Value_Slider* m_slider1
     { m_btnPrint = new Fl_Button(120, 500, 60, 50, "Print");
     } // Fl_Button* m_btnPrint
+    { m_btnLiveDataConsolePrint = new Fl_Button(55, 155, 60, 50, "Print LiveData Console");
+      m_btnLiveDataConsolePrint->labelsize(12);
+      m_btnLiveDataConsolePrint->align(Fl_Align(FL_ALIGN_WRAP));
+    } // Fl_Button* m_btnLiveDataConsolePrint
+    { m_btnConnectLiveData = new Fl_Button(55, 215, 60, 50, "Connect Live Data");
+      m_btnConnectLiveData->align(Fl_Align(FL_ALIGN_WRAP));
+    } // Fl_Button* m_btnConnectLiveData
+    { m_btnStartLoop = new Fl_Button(55, 90, 60, 50, "Start Loop");
+      m_btnStartLoop->align(Fl_Align(FL_ALIGN_WRAP));
+    } // Fl_Button* m_btnStartLoop
     m_window1->end();
   } // Fl_Double_Window* m_window1
 }

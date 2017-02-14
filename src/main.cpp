@@ -109,20 +109,39 @@ Algo - make decisions here (one algo? more algos?)
 
 */
 
-
+#include "TwsApiL0.h"
 
 #include "MikeSimulator.h"
 #include "UserInterface.h"
+#include "MikeTWSData.h"
+#include <time.h>
+#include <iostream>
+std::string UTCTime();
+int StartTWSConn();
+
+void MikeCallback(void* p)
+{
+	using namespace std;
+	cout << setprecision(15) << "\nXXXXXXX MAIN CALLBACKXXXXXXXXXX " << UTCTime() << endl;
+	Fl::repeat_timeout(1.0, MikeCallback);
+}
 
 
 int main()
 {
 
+	//StartTWSConn();
+
+	//MikeTWSData myTWSData;
+	//bool connected = myTWSData.ConnectTWS(5);
+
+	//if (connected) myTWSData.consolePrintProt();
+
 	int starting_bid = 20415;
 	//std::cin >> starting_bid;
 	MikeSimulator * mikesimulator = new MikeSimulator(starting_bid);
 
-
+	Fl::add_timeout(1.0, MikeCallback);
 
 	return Fl::run();
 }

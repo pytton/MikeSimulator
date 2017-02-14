@@ -9,6 +9,7 @@ class Control;
 class MikeOrder;
 class Data;
 class MikeSimulator;
+class MikeTWSData;
 
 
 
@@ -17,13 +18,16 @@ class Data	//stores Market data used by program
 
 public:
 	//constructors:
-	Data(MikeSimulator * p);
+	//Data(MikeSimulator * p);
 	Data(Control * p, int starting_bid);
 
 	MikeSimulator * ptr_to_mikesimulator;	//pointer to class creating this class
 	//member functions:
 //	void MktSnapshot();	//loads historical data into memory (from Sample2.txt)
 	void Data::LiveData();	//empty now - TODO	
+	void ConnectLiveData();
+	void updateLiveData(int TickerId);//this asks liveTWSData for current data for TickerId and updates current bid_price ask_price bid_volume ask_volume values.
+	void PrintoutDataInConsole();
 	
 
 //GETTERS / SETTERS:
@@ -43,6 +47,8 @@ public:
 //	std::vector<MktSnap>  histSavedData;	//holds historical data saved in a file called "Sample2.txt"
 
 private:
+	MikeTWSData * liveTWSData;
+	bool liveDataAvailable;
 	long ask_price;
 	long bid_price;
 	long prev_ask_price;
@@ -55,7 +61,7 @@ private:
 	long prof_bot_limit;
 	long simple_time;
 
-	MikeOrder * Order;
+	//MikeOrder * Order;
 };
 
 

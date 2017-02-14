@@ -18,5 +18,8 @@ public:
   Fl_Output *m_AskDisplay;
   Fl_Value_Slider *m_slider1;
   Fl_Button *m_btnPrint;
+  Fl_Button *m_btnLiveDataConsolePrint;
+  Fl_Button *m_btnConnectLiveData;
+  Fl_Button *m_btnStartLoop;
 };
 #endif

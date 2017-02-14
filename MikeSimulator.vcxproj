@@ -28,6 +28,7 @@
     <ClInclude Include="src\MikePositionsOrders.h" />
     <ClInclude Include="src\MikeSimulator.h" />
     <ClInclude Include="src\MikeTimer.h" />
+    <ClInclude Include="src\MikeTWSData.h" />
     <ClInclude Include="src\MktSnapshot.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClInclude>
@@ -35,10 +36,16 @@
     <ClInclude Include="src\OrderbookPrototype.h" />
     <ClInclude Include="src\PositionBook.h" />
     <ClInclude Include="src\PriceControlUI.h" />
+    <ClInclude Include="src\TwsApiCpp-master\TwsApiC++\Api\Enumerations.h" />
+    <ClInclude Include="src\TwsApiCpp-master\TwsApiC++\Api\TwsApiDefs.h" />
+    <ClInclude Include="src\TwsApiCpp-master\TwsApiC++\Api\TwsApiL0.h" />
     <ClInclude Include="src\UserInterface.h" />
     <ClInclude Include="src\WidgetTable.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\APINoThread.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="src\Control.cpp" />
     <ClCompile Include="src\Data.cpp" />
     <ClCompile Include="src\FLUID\FluidInterface.cxx" />
@@ -48,6 +55,7 @@
     <ClCompile Include="src\MikePositionsOrders.cpp" />
     <ClCompile Include="src\MikeSimulator.cpp" />
     <ClCompile Include="src\MikeTimer.cpp" />
+    <ClCompile Include="src\MikeTWSData.cpp" />
     <ClCompile Include="src\NewPosOrders.cpp" />
     <ClCompile Include="src\OrderbookPrototype.cpp" />
     <ClCompile Include="src\PositionBook.cpp" />
@@ -67,6 +75,11 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="OrderBookStructure.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="src\TwsApiCpp-master\TwsApiC++\_win32\TwsApi.vcxproj">
+      <Project>{c03e5cca-3552-42f2-b865-494fad99974c}</Project>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{E37299F4-9F31-4641-98B7-4EEE53301711}</ProjectGuid>
@@ -130,12 +143,14 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <EnablePREfast>false</EnablePREfast>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>D:\MyDocuments\Visual Studio 2015\Projects\MikeSimulator\src\TwsApiCpp-master\source\PosixClient\Shared;D:\MyDocuments\Visual Studio 2015\Projects\MikeSimulator\src\TwsApiCpp-master\TwsApiC++\Api;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>fltkd.lib;wsock32.lib;comctl32.lib;fltkjpegd.lib;fltkimagesd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;Ws2_32.lib;fltkd.lib;wsock32.lib;comctl32.lib;fltkjpegd.lib;fltkimagesd.lib;fltk.lib;fltkjpeg.lib;fltkimages.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <FullProgramDatabaseFile>true</FullProgramDatabaseFile>
     </Link>
   </ItemDefinitionGroup>

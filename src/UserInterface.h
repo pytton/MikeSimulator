@@ -87,6 +87,7 @@ public:
 	//THIS IS WHERE THE ORDER TYPE IS DETERMINED
 	//BASED ON WHICH COLUMN HAS BEEN PRESSED IN WIDGETTABLE
 	virtual void CallbkWidTable(int rowPressed, int colPressed, long price);
+//	virtual void CallbkWidTable(int rowPressed, int colPressed, long price, int orderSize);
 	virtual void PrintBidAsk(long bid, long ask);
 	virtual void PrintAll(
 		long totalOpenPos,
@@ -117,6 +118,7 @@ protected:
 	static void m_printOrders_btn_cb(Fl_Widget *w, void * p);
 	static void m_checkFills_btn_cb(Fl_Widget *w, void * p);
 	static void m_printPos_btn_cb(Fl_Widget *w, void * p);
+	static void m_resetOrderSize_cb(Fl_Widget *w, void * p);
 
 	//	static void m_down_btn_cb(Fl_Widget *w, void * p);
 	//	static void m_up_btn_cb(Fl_Widget *w, void * p);
