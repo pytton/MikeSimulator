@@ -126,10 +126,15 @@ void MikeCallback(void* p)
 	Fl::repeat_timeout(1.0, MikeCallback);
 }
 
+int mikesimulator();
 
 int main()
 {
+	mikesimulator();
+}
 
+int mikesimulator()
+{
 	//StartTWSConn();
 
 	//MikeTWSData myTWSData;
@@ -141,11 +146,9 @@ int main()
 	//std::cin >> starting_bid;
 	MikeSimulator * mikesimulator = new MikeSimulator(starting_bid);
 
-	Fl::add_timeout(1.0, MikeCallback);
+	Fl::add_timeout(1.0, MikeCallback/*, (void*)mikesimulator*/);
 
 	return Fl::run();
+
+
 }
-
-
-
-
