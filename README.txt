@@ -1,3 +1,15 @@
+2017/02/19
+Trying to add SDL support to this solution. In order to make SDL work, the following has to be done:
+/*
+1. copy the directory SDL2-2.0.5, containing the lib and include files, from the zipped template file located at
+C:\Users\Michael\Documents\Visual Studio 2015\My Exported Templates
+to the solution directory C:\Users\Michael\Documents\Visual Studio 2015\Projects\SDL Template
+2. make sure the file SDL2.dll from this folder: \SDL2-2.0.5\lib\x86
+is copied to the directory of the executable file
+3. also - int main function needs to be in the full form: int main(int argc, char* argv[])
+using just int main() will fail
+*/
+
 2016/7/1
 working on void Control::printCurrentAll()
 
