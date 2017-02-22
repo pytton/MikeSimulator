@@ -1,6 +1,6 @@
 # My custom ignored files:
-/Debug
-/Release
+Debug/
+Release/
 *.obj
 
 

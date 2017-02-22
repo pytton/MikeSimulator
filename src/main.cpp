@@ -18,40 +18,32 @@
 //https://www.google.com/search?q=sdl+entry+point+must+be+defined&oq=sdl+entry+poi&aqs=chrome.1.69i57j69i59.3847j0j4&sourceid=chrome&ie=UTF-8
 
 
-
-
-//#include "TwsApiL0.h"
-//
-//#include "MikeSimulator.h"
-//#include "UserInterface.h"
-//#include "MikeTWSData.h"
 #include <time.h>
 #include <iostream>
-
-//#include "FL/Fl.h"
-
-#include "MikeSimulator.h"
+#include <iomanip>
+#include <thread>
+#include <string>
 
 #include <SDL.h>
 
+#include "MikeSimulator.h"
 
-//*****************************************************************************************
-//*****************************************************************************************
-//*****************************************************************************************
-//*****************************************************************************************
-// UNCOMMENT THIS ONE LINE BELOW (#include <thread>) TO SEE THE PROBLEM!!!!
-#include <thread>
+
+
+
 
 
 class MikeSimulator;
 std::string UTCTime();
 
-//void MikeCallback(void* p)
-//{
-//	using namespace std;
-//	cout << setprecision(15) << "\nXXXXXXX MAIN CALLBACKXXXXXXXXXX " << UTCTime() << endl;
-//	Fl::repeat_timeout(1.0, MikeCallback);
-//}
+using namespace std;
+
+void MikeCallback(void* p)
+{
+	using namespace std;
+	cout << setprecision(15) << "\nXXXXXXX MAIN CALLBACKXXXXXXXXXX " << UTCTime() << endl;
+	Fl::repeat_timeout(1.0, MikeCallback);
+}
 
 int mikesimulator();
 
@@ -108,7 +100,7 @@ int mikesimulator()
 
 //	MikeSimulator mikesimulator(starting_bid);
 
-//	Fl::add_timeout(1.0, MikeCallback/*, (void*)mikesimulator*/);
+	Fl::add_timeout(1.0, MikeCallback/*, (void*)mikesimulator*/);
 
 	return Fl::run();
 
