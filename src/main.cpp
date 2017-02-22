@@ -20,25 +20,38 @@
 
 
 
-#include "TwsApiL0.h"
-
-#include "MikeSimulator.h"
-#include "UserInterface.h"
-#include "MikeTWSData.h"
+//#include "TwsApiL0.h"
+//
+//#include "MikeSimulator.h"
+//#include "UserInterface.h"
+//#include "MikeTWSData.h"
 #include <time.h>
 #include <iostream>
 
+//#include "FL/Fl.h"
+
+#include "MikeSimulator.h"
+
 #include <SDL.h>
 
-std::string UTCTime();
-int StartTWSConn();
 
-void MikeCallback(void* p)
-{
-	using namespace std;
-	cout << setprecision(15) << "\nXXXXXXX MAIN CALLBACKXXXXXXXXXX " << UTCTime() << endl;
-	Fl::repeat_timeout(1.0, MikeCallback);
-}
+//*****************************************************************************************
+//*****************************************************************************************
+//*****************************************************************************************
+//*****************************************************************************************
+// UNCOMMENT THIS ONE LINE BELOW (#include <thread>) TO SEE THE PROBLEM!!!!
+#include <thread>
+
+
+class MikeSimulator;
+std::string UTCTime();
+
+//void MikeCallback(void* p)
+//{
+//	using namespace std;
+//	cout << setprecision(15) << "\nXXXXXXX MAIN CALLBACKXXXXXXXXXX " << UTCTime() << endl;
+//	Fl::repeat_timeout(1.0, MikeCallback);
+//}
 
 int mikesimulator();
 
@@ -46,139 +59,58 @@ using namespace std;
 
 int main(int argc, char* argv[]) {
 
-	const int SCREEN_WIDTH = 800;
-	const int SCREEN_HEIGHT = 600;
+	//const int SCREEN_WIDTH = 800;
+	//const int SCREEN_HEIGHT = 600;
 
-	if (SDL_Init(SDL_INIT_VIDEO) < 0) {
-		cout << "SDL init failed." << endl;
-		return 1;
-	}
+	//if (SDL_Init(SDL_INIT_VIDEO) < 0) {
+	//	cout << "SDL init failed." << endl;
+	//	return 1;
+	//}
 
-	SDL_Window *window = SDL_CreateWindow("Particle Fire Explosion",
-		SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH,
-		SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
+	//SDL_Window *window = SDL_CreateWindow("Particle Fire Explosion",
+	//	SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH,
+	//	SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
 
-	if (window == NULL) {
-		SDL_Quit();
-		return 2;
-	}
+	//if (window == NULL) {
+	//	SDL_Quit();
+	//	return 2;
+	//}
 
-	bool quit = false;
+	//bool quit = false;
 
-	SDL_Event event;
+	//SDL_Event event;
 
-	while (!quit) {
-		// Update particles
-		// Draw particles
-		// Check for messages/events
+	//while (!quit) {
+	//	// Update particles
+	//	// Draw particles
+	//	// Check for messages/events
 
-		while (SDL_PollEvent(&event)) {
-			if (event.type == SDL_QUIT) {
-				quit = true;
-			}
-		}
-	}
+	//	while (SDL_PollEvent(&event)) {
+	//		if (event.type == SDL_QUIT) {
+	//			quit = true;
+	//		}
+	//	}
+	//}
 
+	//SDL_DestroyWindow(window);
+	//SDL_Quit();
 
-	//	Fl::run();
-
-	SDL_DestroyWindow(window);
-	SDL_Quit();
+	mikesimulator();
 
 	return 0;
 }
 
 int mikesimulator()
 {
-	//StartTWSConn();
-
-	//MikeTWSData myTWSData;
-	//bool connected = myTWSData.ConnectTWS(5);
-
-	//if (connected) myTWSData.consolePrintProt();
-
 	int starting_bid = 20415;
 	//std::cin >> starting_bid;
 	MikeSimulator * mikesimulator = new MikeSimulator(starting_bid);
 
-	Fl::add_timeout(1.0, MikeCallback/*, (void*)mikesimulator*/);
+//	MikeSimulator mikesimulator(starting_bid);
+
+//	Fl::add_timeout(1.0, MikeCallback/*, (void*)mikesimulator*/);
 
 	return Fl::run();
 
 
 }
-
-
-/*
-
-BELOW COPIED FROM A SOLUTION WHERE SDL RUNS:
-
-int main(int argc, char* argv[])
-{
-using namespace std;
-
-if (SDL_Init(SDL_INIT_VIDEO) < 0)
-{
-cout << "SDL Init failed" << endl;
-return 1;
-}
-
-cout << "Hello!" << endl;
-
-SDL_Quit();
-
-
-int a;
-
-cin >> a;
-
-return 0;
-}
-
-
-int main(int argc, char* argv[]) {
-
-const int SCREEN_WIDTH = 800;
-const int SCREEN_HEIGHT = 600;
-
-if (SDL_Init(SDL_INIT_VIDEO) < 0) {
-cout << "SDL init failed." << endl;
-return 1;
-}
-
-SDL_Window *window = SDL_CreateWindow("Particle Fire Explosion",
-SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH,
-SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
-
-if (window == NULL) {
-SDL_Quit();
-return 2;
-}
-
-bool quit = false;
-
-SDL_Event event;
-
-while (!quit) {
-// Update particles
-// Draw particles
-// Check for messages/events
-
-while (SDL_PollEvent(&event)) {
-if (event.type == SDL_QUIT) {
-quit = true;
-}
-}
-}
-
-
-//	Fl::run();
-
-SDL_DestroyWindow(window);
-SDL_Quit();
-
-return 0;
-}
-
-
-*/

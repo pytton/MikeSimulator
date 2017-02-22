@@ -1,10 +1,11 @@
 #ifndef _MIKESIMULATOR_H_INCLUDED_
 #define _MIKESIMULATOR_H_INCLUDED_
 
-
+#include "FL/Fl.h"
 
 class Control;
 class Data;
+class MikeSimulator;
 
 
 class MikeSimulator

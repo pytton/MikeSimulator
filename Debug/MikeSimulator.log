@@ -1,4 +1,25 @@
 ﻿  main.cpp
 c:\users\michael\documents\visual studio 2015\projects\mikesimulator\src\freshtwsapi\ibstring.h(38): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
 c:\users\michael\documents\visual studio 2015\projects\mikesimulator\src\freshtwsapi\ibstring.h(47): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
-  MikeSimulator.vcxproj -> C:\Users\Michael\Documents\Visual Studio 2015\Projects\MikeSimulator\Debug\MikeSimulator.exe
+c:\users\michael\documents\visual studio 2015\projects\mikesimulator\src\freshtwsapi\shared_ptr.h(58): error C2872: 'shared_ptr': ambiguous symbol
+  c:\users\michael\documents\visual studio 2015\projects\mikesimulator\src\freshtwsapi\shared_ptr.h(53): note: could be 'shared_ptr'
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(438): note: or       'std::shared_ptr'
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(1661): note: see reference to class template instantiation 'shared_ptr<TagValue>' being compiled
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(1655): note: while compiling class template member function 'void std::vector<TagValueSPtr,std::allocator<_Ty>>::_Tidy(void)'
+          with
+          [
+              _Ty=TagValueSPtr
+          ]
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\vector(975): note: see reference to function template instantiation 'void std::vector<TagValueSPtr,std::allocator<_Ty>>::_Tidy(void)' being compiled
+          with
+          [
+              _Ty=TagValueSPtr
+          ]
+  c:\users\michael\documents\visual studio 2015\projects\mikesimulator\src\freshtwsapi\shared_ptr.h(62): note: see reference to class template instantiation 'std::vector<TagValueSPtr,std::allocator<_Ty>>' being compiled
+          with
+          [
+              _Ty=TagValueSPtr
+          ]
+  c:\users\michael\documents\visual studio 2015\projects\mikesimulator\src\freshtwsapi\shared_ptr.h(62): note: while compiling class template member function 'shared_ptr<TagValueList>::~shared_ptr(void)'
+  c:\users\michael\documents\visual studio 2015\projects\mikesimulator\src\freshtwsapi\contract.h(125): note: see reference to function template instantiation 'shared_ptr<TagValueList>::~shared_ptr(void)' being compiled
+  c:\users\michael\documents\visual studio 2015\projects\mikesimulator\src\freshtwsapi\contract.h(146): note: see reference to class template instantiation 'shared_ptr<TagValueList>' being compiled

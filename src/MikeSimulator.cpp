@@ -4,7 +4,13 @@
 
 #include "Data.h"
 #include "Control.h"
+//#include "TwsApiL0.h"
 
+#include "MikeSimulator.h"
+#include "UserInterface.h"
+#include "MikeTWSData.h"
+
+//#include "FL/Fl.h"
 
 
 MikeSimulator::MikeSimulator() //: control(this), data(this), display(this)

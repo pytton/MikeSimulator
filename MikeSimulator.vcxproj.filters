@@ -152,6 +152,9 @@
     <ClCompile Include="src\FreshTWSAPI\TwsApiL0.cpp">
       <Filter>BoonenTWSAPI</Filter>
     </ClCompile>
+    <ClCompile Include="src\ThreadMainFunction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="README.txt">

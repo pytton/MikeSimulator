@@ -64,6 +64,7 @@
     <ClCompile Include="src\PositionBook.cpp" />
     <ClCompile Include="src\PriceControlUI.cpp" />
     <ClCompile Include="src\SimpleTableWindow.cpp" />
+    <ClCompile Include="src\ThreadMainFunction.cpp" />
     <ClCompile Include="src\UserInterface.cpp" />
     <ClCompile Include="src\WidgetTable.cpp" />
   </ItemGroup>

@@ -13,6 +13,8 @@
 #include "UserInterface.h"
 #include "MikeTWSData.h"
 
+
+
 //forward function declarations:
 long StringToLong(std::string Input);
 
