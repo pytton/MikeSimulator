@@ -1,4 +1,0 @@
-﻿  APINoThread.cpp
-E:\Michael\Documents\Visual Studio 2015\Projects\MikeSimulator\src\TwsApiCpp-master\source\PosixClient\Shared\IBString.h(38): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
-E:\Michael\Documents\Visual Studio 2015\Projects\MikeSimulator\src\TwsApiCpp-master\source\PosixClient\Shared\IBString.h(47): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
-  Test.vcxproj -> E:\Michael\Documents\Visual Studio 2015\Projects\MikeSimulator\src\TwsApiCpp-master\TwsApiC++\Test\_win32\.\Debug\Test.exe
