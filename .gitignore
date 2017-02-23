@@ -1,6 +1,12 @@
 # My custom ignored files:
+
+
+
+
 Debug/
+
 Release/
+
 *.obj
 
 

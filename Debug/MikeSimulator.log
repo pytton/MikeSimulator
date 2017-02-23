@@ -1,2 +1,5 @@
-﻿  main.cpp
+﻿  ThreadMainFunction.cpp
+c:\users\michael\documents\visual studio 2015\projects\mikesimulator\src\threadmainfunction.cpp(99): warning C4297: 'SDL_main': function assumed not to throw an exception but does
+  c:\users\michael\documents\visual studio 2015\projects\mikesimulator\src\threadmainfunction.cpp(99): note: __declspec(nothrow), throw(), noexcept(true), or noexcept was specified on the function
+c:\users\michael\documents\visual studio 2015\projects\mikesimulator\src\threadmainfunction.cpp(154): warning C4715: 'sdlWindowStart': not all control paths return a value
   MikeSimulator.vcxproj -> C:\Users\Michael\Documents\Visual Studio 2015\Projects\MikeSimulator\Debug\MikeSimulator.exe
