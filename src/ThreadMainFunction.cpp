@@ -72,7 +72,7 @@ int mikesimulator(LogFile &log)
 	//std::cin >> starting_bid;
 	MikeSimulator * mikesimulator = new MikeSimulator(starting_bid);
 
-	Fl::add_timeout(1.0, MikeCallback/*, (void*)mikesimulator*/);
+//	Fl::add_timeout(1.0, MikeCallback/*, (void*)mikesimulator*/);
 
 	return Fl::run();
 }
@@ -137,11 +137,12 @@ int sdlWindowStart(LogFile &log)
 		// Update particles
 		// Draw particles
 		// Check for messages/events
-		if (timer.elapsed() > 1000) {
-			cout << "From SDL: " << endl;
-			timer.print();
-			timer.reset();
-		}
+
+		//if (timer.elapsed() > 1000) {
+		//	cout << "From SDL: " << endl;
+		//	timer.print();
+		//	timer.reset();
+		//}
 		while (SDL_PollEvent(&event)) {
 			if (event.type == SDL_QUIT) {
 				quit = true;

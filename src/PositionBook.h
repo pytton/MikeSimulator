@@ -58,6 +58,7 @@ private:
 	//stores all the positions
 	//the vector number reflects the price in cents - eg positionBook[10073]
 	//reflects a price of 100 dollars and 73 cents
+public: //for testing, make private
 	std::vector <MikePosition> positionBook;
 
 	///////////////////////////////////////////////////////////

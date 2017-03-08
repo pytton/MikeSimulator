@@ -115,9 +115,9 @@ public:
 	//this is for indexing purposes - set to TRUE if position was ever
 	//accessed or changed. Mainly to avoid iterating through tens of thousands
 	//of positions
-	bool checkifActive() { if (isActive == true) return true; else  return false; }
-	void setActive() { isActive = true; }
-	void setInactive() { isActive = false; }
+	inline bool checkifActive() { if (isActive == true) return true; else  return false; }
+	inline void setActive() { isActive = true; }
+	inline void setInactive() { isActive = false; }
 
 public:
 	//positive amount for buy orders, negative amount for sell orders!
@@ -159,7 +159,7 @@ class MikePositionOrders
 public:
 	MikePositionOrders(std::string name, long highestPrice);
 	~MikePositionOrders();
-private:
+public://private:
 	//This class stores all the positions:
 	PositionBook * positionbook;
 

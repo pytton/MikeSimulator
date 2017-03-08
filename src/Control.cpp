@@ -13,7 +13,11 @@
 #include "SimpleTableWindow.h"
 #include "ManualInterface.h"
 #include "MikePositionsOrders.h"
-
+/////////////////////////////////
+//erase after testing:
+#include "PositionBook.h"
+class PositionBook;
+/////////////////////////////////
 using namespace std;
 
 int frequency_of_primes(int n) {
@@ -54,21 +58,17 @@ Control::Control(MikeSimulator * p, int starting_bid)
 
 void Control::timeoutfunction(void*p)
 {
+	using namespace std;
 	Control * control = (Control*)p;
-//	static Timer timer;
-//	static bool resetTimer = true;
 	if (control->resetTimer) {
 		control->timer.reset(); control->resetTimer = false;
 	}
 	
-
-	using namespace std;
-//	static long previouselapsedtime = 0;
-	cout << "\MainLoop process time: "<< (control->timer.elapsed() - control->previouselapsedtime - 150) << endl;//150 because 0.15 in Fl::repeat_timeout(0.15, timeoutfunction,(void*) p);
+//	cout << "Size of userInterface: " << sizeof((*userInterface)) << endl;
+//	cout << "\MainLoop process time: "<< (control->timer.elapsed() - control->previouselapsedtime - 150) << endl;//150 because 0.15 in Fl::repeat_timeout(0.15, timeoutfunction,(void*) p);
 	control->previouselapsedtime = control->timer.elapsed();
-	/*if(control->mainLoopfinished)*/  control->MainLoop();
-	if (!control->stopMainLoop) Fl::repeat_timeout(0.15, timeoutfunction,(void*) p);
-	
+	control->MainLoop();
+	if (!control->stopMainLoop) Fl::repeat_timeout(0.15, timeoutfunction,(void*) p);	
 }
 
 
@@ -81,7 +81,7 @@ void Control::MainLoop()
 							 
 	//TODO: work on 1 and 2 first
 	//1 check prices	-- this is done by manual up/down now
-	int tickerId = 1;//1-EUR, 2-GBP, 3-SPY, 4-DIA, 5-IWM, 6-QQQ
+	int tickerId = 3;//1-EUR, 2-GBP, 3-SPY, 4-DIA, 5-IWM, 6-QQQ
 	if (livedatafeed) data->updateLiveData(tickerId);
 	//2 check fills
 
@@ -102,6 +102,20 @@ void Control::MainLoop()
 	//add other functions as needed
 	//5 send orders		-- for algos - nothing now
 	userInterface->PrintBidAsk(data->GetBidPrice(), data->GetAskPrice());
+
+	//print out the size in bytes of positionbook for testing purposes:
+//	cout << sizeof(*(manualPositions->GetMikePositions())) << endl;
+	//cout << sizeof(*manualPositions) << endl;
+	PositionBook * tempPos;
+	tempPos = manualPositions->positionbook;
+
+	//cout << tempPos->positionBook.size() << endl;
+	//cout << sizeof(MikePosition) * (tempPos->positionBook.size()) << endl;
+	//
+	//cout << sizeof(*tempPos) << endl;
+//	cout << sizeof(MikePosition) << endl;
+//	cout << manualPositions->positionbook.size() << endl;
+
 
 	//printCurrentAll();
 	mainLoopfinished = true;//to ensure that the timeoutfunction does not call it again while it is executing

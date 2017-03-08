@@ -139,7 +139,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IncludePath>$(VisualStudioDir)\ExternalLibraries\fltk-1.3.3;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\Michael\Documents\Visual Studio 2015\ExternalLibraries\fltk-1.3.3\lib;D:\MyDocuments\Visual Studio 2015\Projects\fltk-1.3.3\lib;E:\Michael\Documents\Visual Studio 2015\ExternalLibraries\fltk-1.3.3\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>C:\Users\pytto\Documents\Visual Studio 2015\ExternalLibraries\fltk-1.3.3\lib;C:\Users\Michael\Documents\Visual Studio 2015\ExternalLibraries\fltk-1.3.3\lib;D:\MyDocuments\Visual Studio 2015\Projects\fltk-1.3.3\lib;E:\Michael\Documents\Visual Studio 2015\ExternalLibraries\fltk-1.3.3\lib;$(LibraryPath)</LibraryPath>
     <CodeAnalysisRuleSet>MixedMinimumRules.ruleset</CodeAnalysisRuleSet>
     <RunCodeAnalysis>false</RunCodeAnalysis>
   </PropertyGroup>

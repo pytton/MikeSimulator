@@ -71,179 +71,181 @@ connectionFailure:
 
 }
 
-void MikeTWSData::consolePrintProt()
-{
-	using namespace std;
-	if (!ConnectedToTWS)
-	{
-		cout << "\nNot Connected! Quitting!" << endl;
-		return;
-	}
-	
-	int  tickerID = 1;
-
-	using namespace TwsApi;
-	//Contract	myContract;
-	////setting up EUR with tickerID = 1;
-	//GetContractDetails(myContract, 1);	
-	//pClientTWS->reqMktData(tickerID, myContract, "", false);
-	//pClientTWS->reqCurrentTime();
-	////setting up GBP with tickerID = 2;
-	//GetContractDetails(myContract, 2);
-	//tickerID = 2;
-	//pClientTWS->reqMktData(tickerID, myContract, "", false);
-	////setting up DIA with tickerID = 3;
-	//GetContractDetails(myContract, 3);
-	//tickerID = 3;
-	//pClientTWS->reqMktData(tickerID, myContract, "", false);
-	////setting up DIA with tickerID = 4;
-	//GetContractDetails(myContract, 4);
-	//tickerID = 4;
-	//pClientTWS->reqMktData(tickerID, myContract, "", false);
-	////setting up DIA with tickerID = 5;
-	//GetContractDetails(myContract, 5);
-	//tickerID = 5;
-	//pClientTWS->reqMktData(tickerID, myContract, "", false);
-	////setting up QQQ with tickerID = 6;
-	//GetContractDetails(myContract, 6);
-	//tickerID = 6;
-	//pClientTWS->reqMktData(tickerID, myContract, "", false);
-
-	using namespace std;
-	ofstream out("myApiOutput.txt"); out << setprecision(15);
-	ofstream out1("myApiOutput1.txt"); out1 << setprecision(15);
-	ofstream out2("myApiOutput2.txt"); out2 << setprecision(15);
-	ofstream out3("myApiOutput3.txt"); out3 << setprecision(15);
-	ofstream out4("myApiOutput4.txt"); out4 << setprecision(15);
-	ofstream out5("myApiOutput5.txt"); out5 << setprecision(15);
-	ofstream out6("myApiOutput6.txt"); out6 << setprecision(15);
-
-	clock_t time;		//time for inside of the while loop
-	time = clock();
-
-	cout << endl << "How many seconds do you want to capture?" << endl;
-	int duration;
-	cin >> duration;
-	int Wait = 100;	//in miliseconds
-	cout << "Enter interval in ms: ";
-	cin >> Wait;
-	cout << endl << "Enter note (start time?): " << endl;
-	string note;
-	cin >> note;
-
-	out << note << endl << UTCTime() << endl;		//printing start time in main out file
-	out << "Time: " << "," << "Contract: " << "," << "Bid: " << "," << "Ask: " << "," << "Bid size: " << "," << "Ask size: " << endl;
-	out << "*****START*****" << endl;
-
-	out1 << note << endl << UTCTime() << endl << "Time: " << "," << "Contract: " << "," << "Bid: " << "," << "Ask: " << "," << "Bid size: " << "," << "Ask size: " << endl << "*****START*****" << endl;
-	out2 << note << endl << UTCTime() << endl << "Time: " << "," << "Contract: " << "," << "Bid: " << "," << "Ask: " << "," << "Bid size: " << "," << "Ask size: " << endl << "*****START*****" << endl;
-	out3 << note << endl << UTCTime() << endl << "Time: " << "," << "Contract: " << "," << "Bid: " << "," << "Ask: " << "," << "Bid size: " << "," << "Ask size: " << endl << "*****START*****" << endl;
-	out4 << note << endl << UTCTime() << endl << "Time: " << "," << "Contract: " << "," << "Bid: " << "," << "Ask: " << "," << "Bid size: " << "," << "Ask size: " << endl << "*****START*****" << endl;
-	out5 << note << endl << UTCTime() << endl << "Time: " << "," << "Contract: " << "," << "Bid: " << "," << "Ask: " << "," << "Bid size: " << "," << "Ask size: " << endl << "*****START*****" << endl;
-	out6 << note << endl << UTCTime() << endl << "Time: " << "," << "Contract: " << "," << "Bid: " << "," << "Ask: " << "," << "Bid size: " << "," << "Ask size: " << endl << "*****START*****" << endl;
-
-
-
-	clock_t t;		// time for while loop
-	t = clock();
-
-	
-	while ((((float)((clock()) - t)) / CLOCKS_PER_SEC)  < duration)
-	{
-		Sleep(Wait);
-		cout << "\n\n\n\n\n\n\n" << UTCTime() << endl;
-		cout << "sleeping for: " << Wait << " ms" << endl << ((clock() - t) / CLOCKS_PER_SEC) << " of " << duration << " seconds" << endl;
-		cout << "Hours: " << (((clock() - t) / CLOCKS_PER_SEC) / 3600) << " Minutes: " << ((((clock() - t) / CLOCKS_PER_SEC) / 60) % 60) << endl;
-
-		string contractName = "";
-		int tickerId = 1;
-
-		double ask;
-		double bid;
-		double bidSize;
-		double askSize;
-
-		long serverTime = 0;
-
-	//	pClientTWS->reqMktData(tickerID, myContract, "", false);
-	//	pClientTWS->reqCurrentTime();
-		serverTime = twsReply->m_time;
-		out << UTCTime() << "," << serverTime << "," << (((clock() - t) / CLOCKS_PER_SEC) / 3600) << "h" << ((((clock() - t) / CLOCKS_PER_SEC) / 60) % 60) << "m" << ((clock() - t) % 60000); //(((clock() - t) / CLOCKS_PER_SEC)*1000);
-
-		for (int i = 1; i <= 6; i++) {		// iterate through contracts 1,2,3
-
-			tickerID = i;
-
-			ask = twsReply->m_priceAsk[tickerID];
-			bid = twsReply->m_priceBid[tickerID];
-			bidSize = twsReply->m_BidSize[tickerID];
-			askSize = twsReply->m_AskSize[tickerID];
-			serverTime = twsReply->m_time;
-
-			time = clock();
-			cout << setprecision(15);
-
-			switch (i) {
-			case 1:
-				time = clock();
-				contractName = "EUR";
-				out1 << serverTime << "," << time << "," << contractName << "," << bid << "," << ask << "," << bidSize << "," << askSize << endl;
-				break;
-			case 2:
-				time = clock();
-				contractName = "GBP";
-				out2 << serverTime << "," << time << "," << contractName << "," << bid << "," << ask << "," << bidSize << "," << askSize << endl;
-				break;
-			case 3:
-				time = clock();
-				contractName = "SPY";
-				out3 << serverTime << "," << time << "," << contractName << "," << bid << "," << ask << "," << bidSize << "," << askSize << endl;
-				break;
-			case 4:
-				time = clock();
-				contractName = "DIA";
-				out4 << serverTime << "," << time << "," << contractName << "," << bid << "," << ask << "," << bidSize << "," << askSize << endl;
-				break;
-			case 5:
-				time = clock();
-				contractName = "IWM";
-				out5 << serverTime << "," << time << "," << contractName << "," << bid << "," << ask << "," << bidSize << "," << askSize << endl;
-				break;
-			case 6:
-				time = clock();
-				contractName = "QQQ";
-				out6 << serverTime << "," << time << "," << contractName << "," << bid << "," << ask << "," << bidSize << "," << askSize << endl;
-				break;
-			}
-
-			cout << endl << contractName << endl;
-			cout << "ask: " << ask << endl << "bid: " << bid << endl << "ask size: " << askSize << endl << "bid size: " << bidSize << endl;
-
-			out << "," << contractName << "," << bid << "," << ask << "," << bidSize << "," << askSize;
-
-		}
-		out << endl;
-
-	}
-
-	cout << endl << "Finished." << endl;
-	cout << t << "     " << (clock()) << endl;
-
-	cout << CLOCKS_PER_SEC << endl;
-
-	out << "*****STOP*****" << endl << note << endl << endl << UTCTime();
-	out.close(); out1.close(); out2.close(); out3.close(); out4.close(); out5.close();
-	waitforuserend();
-//	pClientTWS->eDisconnect();
-//	delete twsReply;
-
-	return;
-
-
-
-
-}
-
+//
+//void MikeTWSData::consolePrintProt()
+//{
+//	using namespace std;
+//	if (!ConnectedToTWS)
+//	{
+//		cout << "\nNot Connected! Quitting!" << endl;
+//		return;
+//	}
+//	
+//	int  tickerID = 1;
+//
+//	using namespace TwsApi;
+//	//Contract	myContract;
+//	////setting up EUR with tickerID = 1;
+//	//GetContractDetails(myContract, 1);	
+//	//pClientTWS->reqMktData(tickerID, myContract, "", false);
+//	//pClientTWS->reqCurrentTime();
+//	////setting up GBP with tickerID = 2;
+//	//GetContractDetails(myContract, 2);
+//	//tickerID = 2;
+//	//pClientTWS->reqMktData(tickerID, myContract, "", false);
+//	////setting up DIA with tickerID = 3;
+//	//GetContractDetails(myContract, 3);
+//	//tickerID = 3;
+//	//pClientTWS->reqMktData(tickerID, myContract, "", false);
+//	////setting up DIA with tickerID = 4;
+//	//GetContractDetails(myContract, 4);
+//	//tickerID = 4;
+//	//pClientTWS->reqMktData(tickerID, myContract, "", false);
+//	////setting up DIA with tickerID = 5;
+//	//GetContractDetails(myContract, 5);
+//	//tickerID = 5;
+//	//pClientTWS->reqMktData(tickerID, myContract, "", false);
+//	////setting up QQQ with tickerID = 6;
+//	//GetContractDetails(myContract, 6);
+//	//tickerID = 6;
+//	//pClientTWS->reqMktData(tickerID, myContract, "", false);
+//
+//	using namespace std;
+//	ofstream out("myApiOutput.txt"); out << setprecision(15);
+//	ofstream out1("myApiOutput1.txt"); out1 << setprecision(15);
+//	ofstream out2("myApiOutput2.txt"); out2 << setprecision(15);
+//	ofstream out3("myApiOutput3.txt"); out3 << setprecision(15);
+//	ofstream out4("myApiOutput4.txt"); out4 << setprecision(15);
+//	ofstream out5("myApiOutput5.txt"); out5 << setprecision(15);
+//	ofstream out6("myApiOutput6.txt"); out6 << setprecision(15);
+//
+//	clock_t time;		//time for inside of the while loop
+//	time = clock();
+//
+//	cout << endl << "How many seconds do you want to capture?" << endl;
+//	int duration;
+//	cin >> duration;
+//	int Wait = 100;	//in miliseconds
+//	cout << "Enter interval in ms: ";
+//	cin >> Wait;
+//	cout << endl << "Enter note (start time?): " << endl;
+//	string note;
+//	cin >> note;
+//
+//	out << note << endl << UTCTime() << endl;		//printing start time in main out file
+//	out << "Time: " << "," << "Contract: " << "," << "Bid: " << "," << "Ask: " << "," << "Bid size: " << "," << "Ask size: " << endl;
+//	out << "*****START*****" << endl;
+//
+//	out1 << note << endl << UTCTime() << endl << "Time: " << "," << "Contract: " << "," << "Bid: " << "," << "Ask: " << "," << "Bid size: " << "," << "Ask size: " << endl << "*****START*****" << endl;
+//	out2 << note << endl << UTCTime() << endl << "Time: " << "," << "Contract: " << "," << "Bid: " << "," << "Ask: " << "," << "Bid size: " << "," << "Ask size: " << endl << "*****START*****" << endl;
+//	out3 << note << endl << UTCTime() << endl << "Time: " << "," << "Contract: " << "," << "Bid: " << "," << "Ask: " << "," << "Bid size: " << "," << "Ask size: " << endl << "*****START*****" << endl;
+//	out4 << note << endl << UTCTime() << endl << "Time: " << "," << "Contract: " << "," << "Bid: " << "," << "Ask: " << "," << "Bid size: " << "," << "Ask size: " << endl << "*****START*****" << endl;
+//	out5 << note << endl << UTCTime() << endl << "Time: " << "," << "Contract: " << "," << "Bid: " << "," << "Ask: " << "," << "Bid size: " << "," << "Ask size: " << endl << "*****START*****" << endl;
+//	out6 << note << endl << UTCTime() << endl << "Time: " << "," << "Contract: " << "," << "Bid: " << "," << "Ask: " << "," << "Bid size: " << "," << "Ask size: " << endl << "*****START*****" << endl;
+//
+//
+//
+//	clock_t t;		// time for while loop
+//	t = clock();
+//
+//	
+//	while ((((float)((clock()) - t)) / CLOCKS_PER_SEC)  < duration)
+//	{
+//		Sleep(Wait);
+//		cout << "\n\n\n\n\n\n\n" << UTCTime() << endl;
+//		cout << "sleeping for: " << Wait << " ms" << endl << ((clock() - t) / CLOCKS_PER_SEC) << " of " << duration << " seconds" << endl;
+//		cout << "Hours: " << (((clock() - t) / CLOCKS_PER_SEC) / 3600) << " Minutes: " << ((((clock() - t) / CLOCKS_PER_SEC) / 60) % 60) << endl;
+//
+//		string contractName = "";
+//		int tickerId = 1;
+//
+//		double ask;
+//		double bid;
+//		double bidSize;
+//		double askSize;
+//
+//		long serverTime = 0;
+//
+//	//	pClientTWS->reqMktData(tickerID, myContract, "", false);
+//	//	pClientTWS->reqCurrentTime();
+//		serverTime = twsReply->m_time;
+//		out << UTCTime() << "," << serverTime << "," << (((clock() - t) / CLOCKS_PER_SEC) / 3600) << "h" << ((((clock() - t) / CLOCKS_PER_SEC) / 60) % 60) << "m" << ((clock() - t) % 60000); //(((clock() - t) / CLOCKS_PER_SEC)*1000);
+//
+//		for (int i = 1; i <= 6; i++) {		// iterate through contracts 1,2,3
+//
+//			tickerID = i;
+//
+//			ask = twsReply->m_priceAsk[tickerID];
+//			bid = twsReply->m_priceBid[tickerID];
+//			bidSize = twsReply->m_BidSize[tickerID];
+//			askSize = twsReply->m_AskSize[tickerID];
+//			serverTime = twsReply->m_time;
+//
+//			time = clock();
+//			cout << setprecision(15);
+//
+//			switch (i) {
+//			case 1:
+//				time = clock();
+//				contractName = "EUR";
+//				out1 << serverTime << "," << time << "," << contractName << "," << bid << "," << ask << "," << bidSize << "," << askSize << endl;
+//				break;
+//			case 2:
+//				time = clock();
+//				contractName = "GBP";
+//				out2 << serverTime << "," << time << "," << contractName << "," << bid << "," << ask << "," << bidSize << "," << askSize << endl;
+//				break;
+//			case 3:
+//				time = clock();
+//				contractName = "SPY";
+//				out3 << serverTime << "," << time << "," << contractName << "," << bid << "," << ask << "," << bidSize << "," << askSize << endl;
+//				break;
+//			case 4:
+//				time = clock();
+//				contractName = "DIA";
+//				out4 << serverTime << "," << time << "," << contractName << "," << bid << "," << ask << "," << bidSize << "," << askSize << endl;
+//				break;
+//			case 5:
+//				time = clock();
+//				contractName = "IWM";
+//				out5 << serverTime << "," << time << "," << contractName << "," << bid << "," << ask << "," << bidSize << "," << askSize << endl;
+//				break;
+//			case 6:
+//				time = clock();
+//				contractName = "QQQ";
+//				out6 << serverTime << "," << time << "," << contractName << "," << bid << "," << ask << "," << bidSize << "," << askSize << endl;
+//				break;
+//			}
+//
+//			cout << endl << contractName << endl;
+//			cout << "ask: " << ask << endl << "bid: " << bid << endl << "ask size: " << askSize << endl << "bid size: " << bidSize << endl;
+//
+//			out << "," << contractName << "," << bid << "," << ask << "," << bidSize << "," << askSize;
+//
+//		}
+//		out << endl;
+//
+//	}
+//
+//	cout << endl << "Finished." << endl;
+//	cout << t << "     " << (clock()) << endl;
+//
+//	cout << CLOCKS_PER_SEC << endl;
+//
+//	out << "*****STOP*****" << endl << note << endl << endl << UTCTime();
+//	out.close(); out1.close(); out2.close(); out3.close(); out4.close(); out5.close();
+//	waitforuserend();
+////	pClientTWS->eDisconnect();
+////	delete twsReply;
+//
+//	return;
+//
+//
+//
+//
+//}
+//
+//
 void MikeTWSData::setupContracts()
 {
 	using namespace TwsApi;
