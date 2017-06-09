@@ -128,12 +128,13 @@ public:
 		//multiplied by amount
 		long tempclosed_pl = closed_pl;
 		long profitloss;
+		////////////////////////////////////////////////
 		profitloss = (price - fillprice) * filledamount;
 		closed_pl = tempclosed_pl + profitloss;
-
+		////////////////////////////////////////////////
 		//this updates the current open_amount by the amount that was filled
 		long tempopenamount = open_amount;
-		open_amount = tempopenamount + filledamount;		
+		open_amount = tempopenamount + filledamount;
 	}
 	void calculatePL(long bidprice, long askprice)
 	{

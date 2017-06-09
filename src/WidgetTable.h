@@ -1,11 +1,6 @@
 #ifndef _WidgetTable_H_INCLUDED_
 #define _WidgetTable_H_INCLUDED_
 
-//#include "FLUID/FluidInterface.h"
-//#include "Pointers.h"
-
-//#include "UserInterface.h"
-
 #include <iostream>
 #include <sstream>
 #include <stdio.h>
@@ -28,16 +23,14 @@ class MikePosition;
 class MikeOrdersAtPrice;
 class Control;
 
-class WidgetTable : public Fl_Table_Row		//WigetTable - table with cells drawed inside it
+//WigetTable - table with cells drawed inside it
+class WidgetTable : public Fl_Table_Row		
 {
 protected:
 	void draw_cell(TableContext context, int R = 0, int C = 0, int X = 0, int Y = 0, int W = 0, int H = 0);	//supplied from example - dont know how this works
-	void draw_cell(TableContext context,
-		int R, int C, int X, int Y, int W, int H, std::vector<std::string> col_names);
+	
 public:
 	//constructor:
-
-
 	WidgetTable(
 		int x, int y, int w, int h, const char *l,
 		UserInterface * pUserInterface,
@@ -53,15 +46,9 @@ public:
 	WidgetTable(int x, int y, int w, int h, const char * l, void * pControl, int top_row_price, int number_rows, int number_cols, int how_many_cols_are_buttons, std::vector<std::string> col_names, std::vector<std::string> button_names, short tabletype, short windownumber);
 	WidgetTable(int x, int y, int w, int h, const char *l);//not currently used
 
-	~WidgetTable()
-	{
-
-	}
-	
+	//TODO: Make a destructor which erases all the objects in the table	
 
 	Fl_Widget * GetElement(int nRow, int nCol);	//returns a pointer to the cell in the table at nRow nCol
-private:
-
 public:
 	void WidgetTable::PopPriceCol(/*WidgetTable * myTable*/); //populates the Price column with prices based on current TopRowPrice
 	void ClearColumn(int column);	//clears provided column of all text that might have been left behind by the previous draw - for use with Control::rePriceWidTable
@@ -88,8 +75,8 @@ public:
 	inline int GetBottomRowPrice() { return (GetTopRowPrice() - GetRows() + 1); }
 	inline void SetTopRowPrice(int value) { TopRowPrice = value; }
 	inline std::vector <std::string> * GetColNames() { return &col_names; }
-	virtual inline int GetBidCol(){ return bidColumn; }
-	virtual inline int GetAskCol(){ return askColumn; }
+	virtual inline short GetBidCol(){ return bidColumn; }
+	virtual inline short GetAskCol(){ return askColumn; }
 
 	//SETTERS:
 	virtual void SetColumnnWidth(short width) { columnWidth = width; }
@@ -142,7 +129,7 @@ private:
 		sellStopOrderCol = 11,
 		columnWidth = 55,
 		windownumber = 0;//for callbacks sent to Control - to tell which window its coming from. must be set in constructor
-
+	friend class UserInterface;
 
 };
 

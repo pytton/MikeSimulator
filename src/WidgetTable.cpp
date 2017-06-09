@@ -201,12 +201,6 @@ void WidgetTable::printPositions(const std::vector <MikePosition> *openPositions
 	Timer timer;
 	timer.reset();	//time this function
 
-	//openPosCol;
-	//openPLCol;
-	//closedPLCol;
-	//totalPLCol;
-
-
 	//print elements of openPositions vector into rows of WidgetTable that are currently displayed
 
 	int TopDisplayedPrice = GetTopRowPrice();		//this is the highest price currently displayed in WidgetTable
@@ -237,111 +231,130 @@ void WidgetTable::printPositions(const std::vector <MikePosition> *openPositions
 		}
 	}
 
-//populate the cells in WidgetTable with values:
-	for (int displayPrice = BottomDisplayedPrice; displayPrice <= TopDisplayedPrice; displayPrice++) 
+	try
 	{
-		try {openPositions->at(displayPrice).open_amount;} catch (...) {
-			std::cout << "Out of range error in: \nvoid WidgetTable::printPositions(const std::vector <MikePosition> *openPositions,	const std::vector <MikeOrdersAtPrice> *openOrdersAtPrice)" << std::endl;
-			break;
-		}
-
-		//FLTK requires that I pass what I want to print into the cells as a char *:
-		char buffer[50];
-		
-		//HACK: below now works. trouble with it before
-		//check if that position is active. if not, add this price to the notusedprices set
-		if (openPositions->at(displayPrice).isActive) {
-		//	cout << "\n position at price: " << displayPrice << " is active. printing." << endl;
-
-		//add this price to usedprices set - to make sure to ClearRow next time before printing new values
-			usedprices.insert(displayPrice);
-
-			//find the cell displaying OPEN POSITION at displayprice:
-			Fl_Input * openPosCell = (Fl_Input*)GetElement(RowOfPrice(displayPrice), openPosCol);
-
-			//print the open postion for displayPrice from openPositions vector to this cell:	
-			snprintf(buffer, 40, "%d", (openPositions->at(displayPrice).open_amount));
-			if (openPositions->at(displayPrice).open_amount != 0) {
-				openPosCell->textsize(14);
-				openPosCell->value(buffer);
+		//populate the cells in WidgetTable with values:
+		for (int displayPrice = BottomDisplayedPrice; displayPrice <= TopDisplayedPrice; displayPrice++)
+		{
+			try { openPositions->at(displayPrice).open_amount; }
+			catch (...) {
+				std::cout << "Out of range error in: \nvoid WidgetTable::printPositions(const std::vector <MikePosition> *openPositions,	const std::vector <MikeOrdersAtPrice> *openOrdersAtPrice)" << std::endl;
+				break;
 			}
-			else
-				openPosCell->value("");
 
-			//same for OPEN PL at displayprice:
-			Fl_Input * openPLCell = (Fl_Input*)GetElement(RowOfPrice(displayPrice), openPLCol);
-			snprintf(buffer, 40, "%d", (openPositions->at(displayPrice).open_pl));
-			openPLCell->value(buffer);
+			//FLTK requires that I pass what I want to print into the cells as a char *:
+			char buffer[50];
 
-			//same for CLOSED PL at displayprice:
-			Fl_Input * closedPLCell = (Fl_Input*)GetElement(RowOfPrice(displayPrice), closedPLCol);
-			snprintf(buffer, 40, "%d", (openPositions->at(displayPrice).closed_pl));
-			closedPLCell->value(buffer);
+			//HACK: below now works. trouble with it before
+			//check if that position is active. if not, add this price to the notusedprices set
+			if (openPositions->at(displayPrice).isActive) {
+				//	cout << "\n position at price: " << displayPrice << " is active. printing." << endl;
 
-			//same for TOTAL PL at displayprice:
-			Fl_Input * totalPLcell = (Fl_Input*)GetElement(RowOfPrice(displayPrice), totalPLCol);
-			snprintf(buffer, 40, "%d", (openPositions->at(displayPrice).total_pl));
-			totalPLcell->value(buffer);
+				//add this price to usedprices set - to make sure to ClearRow next time before printing new values
+				usedprices.insert(displayPrice);
 
+				//find the cell displaying OPEN POSITION at displayprice:
+				Fl_Input * openPosCell = (Fl_Input*)GetElement(RowOfPrice(displayPrice), openPosCol);
+
+				//print the open postion for displayPrice from openPositions vector to this cell:	
+				snprintf(buffer, 40, "%d", (openPositions->at(displayPrice).open_amount));
+				if (openPositions->at(displayPrice).open_amount != 0) {
+					openPosCell->textsize(14);
+					openPosCell->value(buffer);
+				}
+				else
+					openPosCell->value("");
+
+				//same for OPEN PL at displayprice:
+				Fl_Input * openPLCell = (Fl_Input*)GetElement(RowOfPrice(displayPrice), openPLCol);
+				snprintf(buffer, 40, "%d", (openPositions->at(displayPrice).open_pl));
+				openPLCell->value(buffer);
+
+				//same for CLOSED PL at displayprice:
+				Fl_Input * closedPLCell = (Fl_Input*)GetElement(RowOfPrice(displayPrice), closedPLCol);
+				snprintf(buffer, 40, "%d", (openPositions->at(displayPrice).closed_pl));
+				closedPLCell->value(buffer);
+
+				//same for TOTAL PL at displayprice:
+				Fl_Input * totalPLcell = (Fl_Input*)GetElement(RowOfPrice(displayPrice), totalPLCol);
+				snprintf(buffer, 40, "%d", (openPositions->at(displayPrice).total_pl));
+				totalPLcell->value(buffer);
+
+			}
+			else {
+				notusedprices.insert(displayPrice);//mark this price for deletion at this pass. if there are active orders at this price, it will be removed from the set below when printing out orders and this price will not be removed from usedprices set when cleaning up at the end of this function. if there are no active orders at this price, then at the end of this function this displayPrice will get removed from the prices which need to be cleared out before printing.
+			}
+
+
+
+		printorders:
+			//Print the open orders for this price:
+			//Buy Limit Orders:
+			if (openOrdersAtPrice->at(displayPrice).buyLimitAmount) {//print only prices with active orders
+				Fl_Input * buyLMTOrder = (Fl_Input*)GetElement(RowOfPrice(displayPrice), buyLimitOrderCol);
+				snprintf(buffer, 40, "%d", (openOrdersAtPrice->at(displayPrice).buyLimitAmount));
+				buyLMTOrder->value(buffer);
+				notusedprices.erase(displayPrice);
+				usedprices.insert(displayPrice);
+			}
+			//Buy Stop Orders:
+			if (openOrdersAtPrice->at(displayPrice).buyStopAmount) {//print only prices with active orders
+				Fl_Input * buySTPOrder = (Fl_Input*)GetElement(RowOfPrice(displayPrice), buyStopOrderCol);
+				snprintf(buffer, 40, "%d", (openOrdersAtPrice->at(displayPrice).buyStopAmount));
+				buySTPOrder->value(buffer);
+				notusedprices.erase(displayPrice);
+				usedprices.insert(displayPrice);
+			}
+
+			//Sell Limit Orders:
+			if (openOrdersAtPrice->at(displayPrice).sellLimitAmount) {
+				Fl_Input * sellLMTOrder = (Fl_Input*)GetElement(RowOfPrice(displayPrice), sellLimitOrderCol);
+				snprintf(buffer, 40, "%d", (openOrdersAtPrice->at(displayPrice).sellLimitAmount));
+				sellLMTOrder->value(buffer);
+				notusedprices.erase(displayPrice);
+				usedprices.insert(displayPrice);
+			}
+			//Sell Stop Orders:
+			if (openOrdersAtPrice->at(displayPrice).sellStopAmount) {
+				Fl_Input * sellSTPOrder = (Fl_Input*)GetElement(RowOfPrice(displayPrice), sellStopOrderCol);
+				snprintf(buffer, 40, "%d", (openOrdersAtPrice->at(displayPrice).sellStopAmount));
+				sellSTPOrder->value(buffer);
+				notusedprices.erase(displayPrice);
+				usedprices.insert(displayPrice);
+			}
 		}
-		else {
-			notusedprices.insert(displayPrice);//mark this price for deletion at this pass. if there are active orders at this price, it will be removed from the set below when printing out orders and this price will not be removed from usedprices set when cleaning up at the end of this function. if there are no active orders at this price, then at the end of this function this displayPrice will get removed from the prices which need to be cleared out before printing.
-		}
-		
-
-
-printorders:
-		//Print the open orders for this price:
-		//Buy Limit Orders:
-		if (openOrdersAtPrice->at(displayPrice).buyLimitAmount) {//print only prices with active orders
-			Fl_Input * buyLMTOrder = (Fl_Input*)GetElement(RowOfPrice(displayPrice), buyLimitOrderCol);
-			snprintf(buffer, 40, "%d", (openOrdersAtPrice->at(displayPrice).buyLimitAmount));
-			buyLMTOrder->value(buffer);
-			notusedprices.erase(displayPrice);
-			usedprices.insert(displayPrice);
-		}
-		//Buy Stop Orders:
-		if (openOrdersAtPrice->at(displayPrice).buyStopAmount) {//print only prices with active orders
-			Fl_Input * buySTPOrder = (Fl_Input*)GetElement(RowOfPrice(displayPrice), buyStopOrderCol);
-			snprintf(buffer, 40, "%d", (openOrdersAtPrice->at(displayPrice).buyStopAmount));
-			buySTPOrder->value(buffer);
-			notusedprices.erase(displayPrice);
-			usedprices.insert(displayPrice);
-		}
-
-		//Sell Limit Orders:
-		if (openOrdersAtPrice->at(displayPrice).sellLimitAmount) {
-			Fl_Input * sellLMTOrder = (Fl_Input*)GetElement(RowOfPrice(displayPrice), sellLimitOrderCol);
-			snprintf(buffer, 40, "%d", (openOrdersAtPrice->at(displayPrice).sellLimitAmount));
-			sellLMTOrder->value(buffer);
-			notusedprices.erase(displayPrice);
-			usedprices.insert(displayPrice);
-		}
-		//Sell Stop Orders:
-		if (openOrdersAtPrice->at(displayPrice).sellStopAmount) {
-			Fl_Input * sellSTPOrder = (Fl_Input*)GetElement(RowOfPrice(displayPrice), sellStopOrderCol);
-			snprintf(buffer, 40, "%d", (openOrdersAtPrice->at(displayPrice).sellStopAmount));
-			sellSTPOrder->value(buffer);
-			notusedprices.erase(displayPrice);
-			usedprices.insert(displayPrice);
-		}
+	}
+	catch (...)
+	{
+		cout << "Error in WidgetTable::printPositions function!" << endl;
+		return;
 	}
 
 //clean things up. go through all prices stored in notusedprices and remove those prices from usedprices:
-	if (notusedprices.size() > 0)
+	try
 	{
-		for (long price : notusedprices) usedprices.erase(price);
+
+		if (notusedprices.size() > 0)
+		{
+			for (long price : notusedprices) usedprices.erase(price);
+		}
+
+		notusedprices.clear();
+
 	}
-
-	notusedprices.clear();
-
+	catch (...)
+	{
+		cout << "Error in WidgetTable::printPositions function!" << endl;
+		return;
+	}
 }
 
+//used to get a pointer to an element of WidgetTable with X Y coordinates nRow nCol
+//nRow = 0 -> points to FIRST row; nCol = 0 -> points to col number 1!
+//remember the first columns are for buttons, not Fl_Input!
+//watch for off by one errors
 Fl_Widget * WidgetTable::GetElement(int nRow, int nCol)
-{//used to get a pointer to an element of WidgetTable with X Y coordinates nRow nCol
- //nRow = 0 -> points to FIRST row; nCol = 0 -> points to col number 1!
- //remember the first columns are for buttons, not Fl_Input!
- //watch for off by one errors
+{
 	int numCol = this->cols();
 	int nIndex = nRow * numCol + nCol;
 	return this->child(nIndex);
@@ -396,47 +409,19 @@ void WidgetTable::ClearColumn(int column)
 	}
 }
 
-//HACK: check if this works in a stable way
-//TODO: THIS FUNCTION KEEPS CRASHING AFTER BEING USED SEVERAL TIMES. The culprit seems to be in myCell->Value. * myCell is really a My_fl_button, not Fl_Input, but My_fl_button is derived from Fl_Input
 void WidgetTable::ClearRow(int row)
 {
 	using namespace std;
-	int startCol = ButtonColsNumber; //HACK: Error with My_fl_button was here. off by one. first column is zero. ButtonColsNumber gives number of Cols that are buttons
+	int startCol = ButtonColsNumber;
 	if (startCol < 0) cout << "\nError in WidgetTable::ClearRow!" << endl;
 	int endCol = GetCols();
 
-	//char buffer[20];
-	//
-	//snprintf(buffer, 20, "%d", 0);
-
-	//std::stringstream buffer;
-	//buffer.clear();
-	//buffer << "";
-//	myCell->value(buffer.str().c_str());
-
-
-	//using namespace std;
-	//cout << "\nClearRow in WidgetTable called. StartCol: " << startCol << " endCol: " << endCol << " ButtonColsNumber: " << ButtonColsNumber << endl;
 	const char * pChar = "";
 	if (pChar != NULL)
-	{
-		//Do That
-		//cout << "\npChar not null. clearing row. " << endl;
-		for (unsigned int i = startCol; i < endCol ; ++i)
-		{
-			//		cout << "\nStarting iteration. i= " << i << endl;
-			Fl_Input * myCell = dynamic_cast<Fl_Input*> (GetElement(row, i));
-			//Fl_Input * myCell = (Fl_Input*)GetElement(row, i);
-			//		cout << "\nmyCell found. i= " << i << endl;
+	{	for (unsigned int i = startCol; i < endCol ; ++i)
+		{	Fl_Input * myCell = dynamic_cast<Fl_Input*> (GetElement(row, i));
 			if (myCell == NULL) { cout << "\nError in ClearTable!" << endl; break; }
-			//myCell->value(buffer.str().c_str());
 			myCell->value(pChar);// this changes the private x_pos value of My_fl_button
-
-			//		myCell->static_value(NULL);
-
-			//		myCell->value(buffer, 1);
-			//		myCell->value((int)0);
-			//		cout << "\nEnd of For loop. i= " << i << endl;
 		}
 	}
 }
@@ -475,8 +460,6 @@ void WidgetTable::SetSize(int newrows, int newcols, WidgetTable * mytable, /*std
 			for (int c = 0; c<newcols; c++)
 			{
 				int X, Y, W, H;
-				////HACK: setting width of columns in WidgetTable:
-				//W = 70;
 				find_cell(CONTEXT_TABLE, r, c, X, Y, W, H);
 				char s[40];
 				//below decides what is put into table:
@@ -518,15 +501,7 @@ void WidgetTable::SetSize(int newrows, int newcols, WidgetTable * mytable, /*std
 					butt->callback(button_cb, (void*)mytable);
 					//butt->value(((r + c * 2) & 4) ? 1 : 0);	//this sets the light on or off for Fl_Light_Button
 
-					//old way of assigning labels - before being provided with button_names vector
-					//if (c == 0) butt->label("CXL");
-					//if (c == 1) butt->label("B LMT");
-					//if (c == 2) butt->label("B STP");
-					//if (c == 3) butt->label("S LMT");
-					//if (c == 4) butt->label("S STP");
-					//HACK: WORKING OUT PROBLEMS:
-					//butt->x_pos = c;	//set the col
-					butt->setXpos(c);
+					butt->setXpos(c);	//set the col
 					butt->y_pos = r;	//set the row
 				}
 
@@ -534,10 +509,6 @@ void WidgetTable::SetSize(int newrows, int newcols, WidgetTable * mytable, /*std
 		}
 	}
 	end();
-	//below doesnt work:
-	//	mytable->PopPriceCol(this);
-	//	PopPriceCol();	//populate price column with prices
-
 }
 
 //used to construct WidgetTable - I didn't write this, only modified it for my needs
@@ -584,19 +555,7 @@ void WidgetTable::draw_cell(TableContext context,
 
 	case CONTEXT_COL_HEADER:
 		fl_push_clip(X, Y, W, H);
-		{	//set the width of a single column:
-			//this doesnt work :(	
-			//if (C == 1)
-			//{
-			//	col_width(C, 30);
-			//	init_sizes();
-			//	Fl::redraw();
-			//}
-
-			//experimenting:
-			//			std::cout << "draw cell called" << std::endl;
-
-			fl_font(FL_HELVETICA, 9);
+		{	fl_font(FL_HELVETICA, 9);
 			static char s[40];
 			//below decide what is printed in column headers:
 			ColHeaderText(s, C);	//this function performs commented out code below
@@ -633,7 +592,9 @@ void WidgetTable::setBidAskColumns()
 	bidColumn = 6;
 	askColumn = 7;
 }
-void WidgetTable::ColHeaderText(char * s, int C)	//defines text of column headers
+
+//defines text of column headers
+void WidgetTable::ColHeaderText(char * s, int C)	
 {
 	//this function is called by 'draw_cell' - which is part of FLTK
 	//I cannot alter the way draw_cell is called to pass parameters

@@ -12,20 +12,13 @@
 
 MikeOrderbook::MikeOrderbook(MikePositionOrders * p_mikepositionorders, long highestprice)
 	{
+	std::cout << "Highest price in Mikeorderbook: " << highestprice << std::endl;
 		mypositionorders = p_mikepositionorders;
 		allOrders.clear();
 		indexOpenOrd.clear();
 		indexClosedOrd.clear();
 		openOrdersByPrice.resize(highestprice +1);
 	}
-
-	//MikeOrderbook::MikeOrderbook(PositionBook * positionbook)
-	//{
-	//	//mypositionbook = positionbook;
-	//	//allOrders.clear();
-	//	//indexOpenOrd.clear();
-	//	//indexClosedOrd.clear();
-	//}
 
 
 	MikeOrderbook::~MikeOrderbook()

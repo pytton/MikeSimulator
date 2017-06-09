@@ -80,6 +80,111 @@ void PositionBook::fillposition(int posprice, long fillprice, long filledamount,
 	std::cout << "NOT FULLY IMPLEMENTED YET. TESTING. FILLS HANDLED BY CALLING INDIVIDUAL MikePosition elements inside the orderbook vector" << std::endl;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//TODO: STATIC VARIABLES HERE!!!!
+
 long PositionBook::CalcAllOpenPL(long bidprice, long askprice)
 {
 	using namespace std;
@@ -91,7 +196,7 @@ long PositionBook::CalcAllOpenPL(long bidprice, long askprice)
 	if (bidprice != prevbidprice || askprice != prevaskprice)
 	{
 		allOpenPL = 0;//allOpenPL is static!
-		// cout << "CalcAllOpenPL called" << endl;
+		
 		//go through every position in the openPosIndex and calculate each individual position's openPL:
 		for (long price : openPosIndexSet)
 		{

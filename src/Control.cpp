@@ -28,11 +28,6 @@ int frequency_of_primes(int n) {
 	return freq;
 }
 
-//Control::Control(MikeSimulator * p)
-//{
-//	ptr_to_mikesimulator = p;
-////	userInterface = new UserInterface(this, ptr_to_mikesimulator);
-//}
 
 Control::Control(MikeSimulator * p, int starting_bid)
 {
@@ -64,7 +59,6 @@ void Control::timeoutfunction(void*p)
 		control->timer.reset(); control->resetTimer = false;
 	}
 	
-//	cout << "Size of userInterface: " << sizeof((*userInterface)) << endl;
 //	cout << "\MainLoop process time: "<< (control->timer.elapsed() - control->previouselapsedtime - 150) << endl;//150 because 0.15 in Fl::repeat_timeout(0.15, timeoutfunction,(void*) p);
 	control->previouselapsedtime = control->timer.elapsed();
 	control->MainLoop();
@@ -147,12 +141,6 @@ void Control::printCurrentAll()
 	totalClosedPL = myPositionOrders->CalcAllClosedPL(bidPrice, askPrice);
 	totalPL = myPositionOrders->CalcAllTotalPL(bidPrice, askPrice);
 
-	//totalOpenPos = 0;
-	//totalOpenPL = 0;
-	//totalClosedPL = 0;
-	//totalPL = 0;
-
-
 	myInterface->PrintAll(
 		totalOpenPos,
 		totalOpenPL,
@@ -167,8 +155,13 @@ void Control::printCurrentAll()
 }
 
 
-
-//CALLBACKS 
+//callbacks:
+//                _  _  _                   _            
+//    ___   __ _ | || || |__    __ _   ___ | | __ ___  _ 
+//   / __| / _` || || || '_ \  / _` | / __|| |/ // __|(_)
+//  | (__ | (_| || || || |_) || (_| || (__ |   < \__ \ _ 
+//   \___| \__,_||_||_||_.__/  \__,_| \___||_|\_\|___/(_)
+//                                                       
 
 //USERINTERFACE HANDLED HERE:
 //btn chooses what to do, UserInterface *p
@@ -205,20 +198,6 @@ void Control::CallbkUserInt(UserInterface * p, BtnPressed btn,
 	}
 }
 //WIDGETTABLE:
-
-void Control::CallbkWidTable(int row, int col, long price, MikeOrderType OrderTypePressed/*, long orderSize*/)
-{
-	using namespace std;
-
-	//send order to OrderBook
-	//finish this so that the amount of order is passed through
-	manualPositions->newOrder(OrderTypePressed, price,100);
-	manualPositions->checkFills(data->GetBidPrice(), data->GetAskPrice());
-	MainLoop();
-	//printCurrentAll();
-	
-
-}
 
 void Control::CallbkWidTable(int row, int col, long price, MikeOrderType OrderTypePressed, int orderSize) {
 	using namespace std;
@@ -395,6 +374,7 @@ void Control::rePriceWidTable(UserInterface * InterfaceToReprice)
 
 
 }
+
 void Control::rePriceWidTable()
 
 //Updates prices displayed in WidgetTable to between 100 above and below

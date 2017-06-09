@@ -16,11 +16,10 @@ enum MikeOrderType;
 
 	class MikeOrderbook
 	{
-	private:
-		void fill(int assignedtopos, int fillprice, int orderamount, long bidPrice, long askPrice);// { std::cout << "\nImplement filling orders!!!" << std::endl; }
+
 	public:
 
-		MikeOrderbook(MikePositionOrders * p_mikepositionorders, long highestprice);
+		MikeOrderbook(MikePositionOrders * p_mikepositionorders, long highestprice =123456);
 //		MikeOrderbook(::PositionBook * positionbook);
 		~MikeOrderbook();
 
@@ -42,7 +41,9 @@ enum MikeOrderType;
 		
 
 
+	
 	private:
+		void fill(int assignedtopos, int fillprice, int orderamount, long bidPrice, long askPrice);// { std::cout << "\nImplement filling orders!!!" << std::endl; }
 
 		MikePositionOrders * mypositionorders;//pointer to the positionbook which will be affected by orders in this orderbook
 		std::vector <MikeOrder> allOrders;//this stores ALL the orders ever entered - both the ones not filled yet, filled ones, cancelled and everything else. The index of this vector HAS TO MATCH the OrderId of the order - this is ensured by the implementation.

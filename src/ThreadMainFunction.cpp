@@ -57,14 +57,9 @@ public:
 
 };
 
-
 std::string UTCTime();
 void MikeCallback(void* p);
-//int mikesimulator(LogFile &log);
-//int mikesimulator();
 int sdlWindowStart(LogFile &log);
-int sdlWindowStart();
-
 
 int mikesimulator(LogFile &log)
 {
@@ -76,14 +71,6 @@ int mikesimulator(LogFile &log)
 
 	return Fl::run();
 }
-
-//void function_1(LogFile &log) {
-//	for (int i = 0; i > -100; i--)
-//	{
-//		log.shared_print("t1 says: ", i);
-//	}
-//}
-
 
 int main(int argc, char* argv[]) {
 
@@ -153,20 +140,6 @@ int sdlWindowStart(LogFile &log)
 	SDL_DestroyWindow(window);
 	SDL_Quit();
 }
-
-//int sdlWindowStart() {
-//	LogFile emptylog;
-//	int sdlWindowStart(LogFile &emptylog);
-//	return 0;
-//}
-
-
-
-//int mikesimulator() {
-//	LogFile emptylog;
-//	mikesimulator(std::ref(emptylog));
-//	return 0;
-//}
 
 void MikeCallback(void* p)
 {

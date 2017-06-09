@@ -2,7 +2,6 @@
 #define _UserInterface_H_INCLUDED_
 
 
-#include "FLUID/FluidInterface.h"
 
 
 #include <iostream>
@@ -19,11 +18,9 @@
 #include <FL/Fl_Table_Row.H>
 #include <FL/Fl_Text_Display.H>
 
-//#include "MikeEnums.h"
-//#include "MikePositionsOrders.h"
+#include "FLUID/FluidInterface.h"
 
-class WidgetTable;	//forward declaration
-//class Display;
+class WidgetTable;
 class MikeSimulator;
 class Control;
 class MikePosition;
@@ -42,9 +39,6 @@ class Fl_Widget;
 
 enum BtnPressed;
 enum MikeOrderType;
-
-
-
 
 class UserInterface : public FluidInterface
 {	//elements of FluidInterface:
@@ -109,8 +103,8 @@ protected:
 	int bid_price;
 
 	//these two store the names of columns and buttons:
-	std::vector <std::string> col_names;// = { "" };
-	std::vector <std::string> button_names;// = { "" };
+	std::vector <std::string> col_names;
+	std::vector <std::string> button_names;
 
 	//CALLBACKS
 
@@ -120,24 +114,10 @@ protected:
 	static void m_printPos_btn_cb(Fl_Widget *w, void * p);
 	static void m_resetOrderSize_cb(Fl_Widget *w, void * p);
 
-	//	static void m_down_btn_cb(Fl_Widget *w, void * p);
-	//	static void m_up_btn_cb(Fl_Widget *w, void * p);
-	//	static void m_slider1_cb(Fl_Widget *w, void * p);
-
 	//helpers:
 	//sets the names of column headers and buttons inside WidgetTable:
-	/*virtual*/ void SetColButNames(std::vector <std::string> &col_names, std::vector <std::string> &button_names);
-	
-	
-	//OLD CALLBACK FOR REFERENCE:
-//	static void experimental_cb(Fl_Widget *w, void * p);	//THIS NEEDS WORK!
-
-//	friend class ManualInterface;
-//	friend class Control;
+	virtual void SetColButNames(std::vector <std::string> &col_names, std::vector <std::string> &button_names);
 };
-
-
-
 
 
 #endif //_UserInterface_H_INCLUDED_

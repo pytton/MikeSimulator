@@ -32,25 +32,6 @@ Ws2_32.lib
 
 
 int StartTWSConn();
-////
-////class MyEWrapper: public EWrapperL0
-////{
-////};
-//
-//
-//
-//int main(void)
-//{
-//	//MyEWrapper	MW;
-//	//EClientL0*	EC = EClientL0::New( &MW );
-//
-//	//delete EC;
-//
-//	StartTWSConn();
-//
-//}
-
-
 
 #include <string>
 #include <conio.h>
@@ -62,9 +43,8 @@ int StartTWSConn();
 
 #include "TwsApiL0.h"
 #include "TwsApiDefs.h"
-//#include <process.h>
-using namespace TwsApi;
 
+using namespace TwsApi;
 
 std::string UTCTime()
 {
