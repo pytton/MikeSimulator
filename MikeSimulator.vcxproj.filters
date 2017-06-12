@@ -93,6 +93,9 @@
     <ClInclude Include="src\MikeOrderbook.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\PosOrders.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Control.cpp">

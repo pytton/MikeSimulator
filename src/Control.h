@@ -14,6 +14,9 @@
 #include <vector>
 #include "MikeTimer.h"
 
+#include "PosOrders.h"
+
+
 
 class WidgetTable;
 class Data;
@@ -37,6 +40,8 @@ public:
 	//constructor:
 
 	Control(MikeSimulator * p, int starting_bid);
+
+	Mike::NewPosOrd positions;
 
 	static void timeoutfunction(void * p);
 

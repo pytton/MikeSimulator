@@ -6,8 +6,8 @@
 
 
 class Control;
-class MikeOrder;
-class Data;
+//class MikeOrder;
+//class Data;
 class MikeSimulator;
 class MikeTWSData;
 

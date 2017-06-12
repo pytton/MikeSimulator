@@ -175,7 +175,7 @@ public:
 //	void newPosition(long price, long position);
 
 	
-	//used by orderbook to update a position after an order is filled. NOT IMPLEMENTED YET
+	//used by orderbook to update a position after an order is filled. NEEDS REVISION
 	void fillposition(int posprice, long fillprice, long filledamount, long bidPrice, long askPrice);
 	//calculates the total aggregate open P/L for all active positions of the whole book
 	long CalcAllOpenPL(long bidprice, long askprice);
@@ -189,7 +189,7 @@ public:
 	//this should be done before attempting to print out the positions
 	void calculateIndividualPLs(long bidprice, long askprice);
 
-	//prototype for printing activePositions:
+	//prototype for printing activePositions. NOT IMPLEMENTED:
 	void printoutActivePositions(long bidprice, long askprice);
 
 	//not implemented yet:

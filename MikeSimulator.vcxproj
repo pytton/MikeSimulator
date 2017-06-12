@@ -36,6 +36,7 @@
     </ClInclude>
     <ClInclude Include="src\MikeOrderbook.h" />
     <ClInclude Include="src\PositionBook.h" />
+    <ClInclude Include="src\PosOrders.h" />
     <ClInclude Include="src\PriceControlUI.h" />
     <ClInclude Include="src\SimpleTableWindow.h" />
     <ClInclude Include="src\TwsApiCpp-master\TwsApiC++\Api\Enumerations.h" />
