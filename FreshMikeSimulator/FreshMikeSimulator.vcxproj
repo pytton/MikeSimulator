@@ -131,7 +131,9 @@
     <ClInclude Include="MikeTWSData.h" />
     <ClInclude Include="MktSnapshot.h" />
     <ClInclude Include="PositionBook.h" />
-    <ClInclude Include="PosOrders.h" />
+    <ClInclude Include="PosOrders.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="PriceControlUI.h" />
     <ClInclude Include="SimpleTableWindow.h" />
     <ClInclude Include="UserInterface.h" />

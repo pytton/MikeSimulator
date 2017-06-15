@@ -14,7 +14,7 @@
 #include <vector>
 #include "MikeTimer.h"
 
-#include "PosOrders.h"
+//#include "PosOrders.h"
 
 
 
@@ -36,12 +36,14 @@ enum MikeOrderType;
 
 class Control
 {
+
+	typedef std::vector<MikePosition> MikePosVect;
 public:
 	//constructor:
 
 	Control(MikeSimulator * p, int starting_bid);
 
-	Mike::NewPosOrd positions;
+//	Mike::NewPosOrd positions;
 
 	static void timeoutfunction(void * p);
 
@@ -61,7 +63,7 @@ public:
 		long totalPL,
 		long askPrice,
 		long bidPrice,
-		std::vector <MikePosition> openPositions,
+		MikePosVect openPositions,
 		std::vector <MikeOrder> openOrders);
 
 

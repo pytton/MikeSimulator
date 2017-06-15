@@ -16,7 +16,7 @@ log.txt
 
 # User-specific files
 
-*.suo
+#*.suo
 
 *.user
 
@@ -42,9 +42,9 @@ log.txt
 
 [Rr]eleases/
 
-x64/
+#x64/
 
-x86/
+#x86/
 
 bld/
 
@@ -114,11 +114,11 @@ artifacts/
 
 *.meta
 
-*.obj
+#*.obj
 
 *.pch
 
-*.pdb
+#*.pdb
 
 *.pgc
 

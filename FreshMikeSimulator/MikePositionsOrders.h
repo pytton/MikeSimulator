@@ -38,14 +38,14 @@ position in MikePositionBook
 #include <unordered_set>
 #include "MikeTimer.h"
 
-
 class Timer;
 class PositionBook;
 class MikeOrderbook;
-
-
 enum BtnPressed;
 enum MikeOrderType;
+
+#ifndef _MIKEORDERCLASS_DEFINED_
+#define _MIKEORDERCLASS_DEFINED_
 
 class MikeOrder
 {
@@ -76,6 +76,8 @@ public:
 	//for future implementation.
 	bool partialFill = false;
 };
+
+#endif // !_MIKEORDERCLASS_DEFINED_
 
 //this class aggregates all the open orders by price. there can be multiple orders of
 //multiple kind and amount for a single price. this class keeps track of the total

@@ -13,6 +13,9 @@
 #include "SimpleTableWindow.h"
 #include "ManualInterface.h"
 #include "MikePositionsOrders.h"
+
+#include "PosOrders.h"
+
 /////////////////////////////////
 //erase after testing:
 #include "PositionBook.h"
@@ -70,6 +73,17 @@ void Control::timeoutfunction(void*p)
 
 void Control::MainLoop()
 {
+
+	Mike::PosOrds myPosOrders;
+
+
+	//const long expPrice = 23545;
+
+	//auto iter = myPosOrders.mPositions.find(expPrice);
+
+	//if (iter != myPosOrders.mPositions.end()) { cout << "Found " << expPrice << endl; }
+	//else { cout << expPrice << " not found!" << endl; }
+
 	using namespace std;
 	mainLoopfinished = false;//to ensure that the timeoutfunction does not call it again while it is executing
 	
@@ -123,7 +137,7 @@ void Control::printCurrentAll()
 	UserInterface * myInterface = userInterface;
 	MikePositionOrders * myPositionOrders = manualPositions;
 
-	const std::vector<MikePosition> *constPositions = myPositionOrders->GetMikePositions();
+	const MikePosVect *constPositions = myPositionOrders->GetMikePositions();
 
 	const std::vector<MikeOrdersAtPrice> *ordersAtPrice = myPositionOrders->GetOpOrdersbyPrice();
 
