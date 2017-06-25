@@ -22,6 +22,7 @@
     <ProjectGuid>{0249F4E2-BEAC-46AB-AF04-AD477BE22F8D}</ProjectGuid>
     <RootNamespace>FreshMikeSimulator</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>FreshMikeSimulator</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

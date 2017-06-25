@@ -54,6 +54,7 @@ class Timer;
 class PositionBook;
 class MikeOrderbook;
 class MikePosition;
+class MikeOrdersAtPrice;
 
 enum BtnPressed;
 enum MikeOrderType;
@@ -92,8 +93,81 @@ public:
 	bool partialFill = false;
 };
 
-#endif // !_MIKEORDERCLASS_DEFINED_
+class MikeOrdersAtPrice
+{
+public:
+	long price = 0;
+	long buyLimitAmount = 0;
+	long buyStopAmount = 0;
+	long sellLimitAmount = 0;
+	long sellStopAmount = 0;
 
+	void eraseall();//
+
+					//returns true if all orders are empty at this price
+	bool checkifempty();
+
+};
+
+class MikePosition
+{
+	friend class WidgetTable;
+public:
+	long price = 0;
+	long open_amount = 0;//positive open_amount means the position is 'long'. negative open_amount means the position is 'short'.
+	long open_pl = 0;
+	long closed_pl = 0;
+	long total_pl = 0;
+
+private:
+	bool isActive = false;
+	long prevbidprice = 0;
+	long prevaskprice = 0;
+
+public:
+	//this is for indexing purposes - set to TRUE if position was ever
+	//accessed or changed. Mainly to avoid iterating through tens of thousands
+	//of positions
+	inline bool checkifActive() { if (isActive == true) return true; else  return false; }
+	inline void setActive() { isActive = true; }
+	inline void setInactive() { isActive = false; }
+
+public:
+	//positive amount for buy orders, negative amount for sell orders!
+	void fill(long fillprice, long filledamount)
+	{
+		//this will modify the closed_pl by:
+		//difference in fill price and price of this position
+		//multiplied by amount
+		long tempclosed_pl = closed_pl;
+		long profitloss;
+		////////////////////////////////////////////////
+		profitloss = (price - fillprice) * filledamount;
+		closed_pl = tempclosed_pl + profitloss;
+		////////////////////////////////////////////////
+		//this updates the current open_amount by the amount that was filled
+		long tempopenamount = open_amount;
+		open_amount = tempopenamount + filledamount;
+	}
+	void calculatePL(long bidprice, long askprice)
+	{
+		//	static long prevbidprice = 0;
+		//	static long prevaskprice = 0;
+		if (bidprice != prevbidprice || askprice != prevaskprice)
+		{
+			open_pl = 0;
+			//if position is 'long':
+			if (open_amount >= 0) open_pl = (bidprice - price) * open_amount;
+			//if position is 'short':
+			if (open_amount < 0) open_pl = (askprice - price) * open_amount;
+
+			//update total_pl with new open_pl
+			total_pl = closed_pl + open_pl;
+		}
+	}
+};//class MikePosition
+
+#endif // !_MIKEORDERCLASS_DEFINED_
 
 namespace Mike {
 
@@ -151,7 +225,6 @@ namespace Mike {
 		long getNetPosition() { return mNetPosition; }  //sum of all positions: positive for long, negative for short
 		double getAveragePriceOfPosition() { return mAveragePriceOfPosition; }  //weighed avg. price of net position
 		double getZeroProfitPrice() { return mZeroProfitPrice; }  //price at which mAllTotalPL would equal zero
-
 
 
 	private:

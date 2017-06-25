@@ -23,24 +23,13 @@ class PositionBook;
 /////////////////////////////////
 using namespace std;
 
-int frequency_of_primes(int n) {
-	cout << "Primes calculating..." << endl;
-	int i, j;
-	int freq = n - 1;
-	for (i = 2; i <= n; ++i) for (j = sqrt(i); j>1; --j) if (i%j == 0) { --freq; break; }
-	return freq;
-}
-
-//Severity	Code	Description	Project	File	Suppression State	Line
-//Error	LNK2019	unresolved external symbol "public: __thiscall UserInterface::UserInterface(class Control *,double,int,int)" (? ? 0UserInterface@@QAE@PAVControl@@NHH@Z) referenced in function "public: __thiscall Control::Control(class MikeSimulator *,int)" (? ? 0Control@@QAE@PAVMikeSimulator@@H@Z)	FreshMikeSimulator	C : \Users\pytto\Documents\Visual Studio 2015\Projects\ExperimentsToErase\FreshMikeSimulator\FreshMikeSimulator\Control.obj		1
-//
-Control::Control(MikeSimulator * p, int starting_bid)
+Control::Control(Simulator * p, int starting_bid)
 {
 	ptr_to_mikesimulator = p;
 	std::cout << "Control constructed. Starting bid: " << starting_bid << std::endl;
 
 //	userInterface = new ManualInterface(this, /*p,*/ starting_bid);
-	userInterface = new UserInterface(this, /*p,*/ starting_bid);
+//	userInterface = new UserInterface(this, /*p,*/ starting_bid);
 	
 	data = new Data(this, starting_bid);
 	m_pPriceControlUI = new PriceControlUI(this, starting_bid);
@@ -70,20 +59,8 @@ void Control::timeoutfunction(void*p)
 	if (!control->stopMainLoop) Fl::repeat_timeout(0.15, timeoutfunction,(void*) p);	
 }
 
-
 void Control::MainLoop()
 {
-
-	//Mike::PosOrds myPosOrders;
-
-
-	//const long expPrice = 23545;
-
-	//auto iter = myPosOrders.mPositions.find(expPrice);
-
-	//if (iter != myPosOrders.mPositions.end()) { cout << "Found " << expPrice << endl; }
-	//else { cout << expPrice << " not found!" << endl; }
-
 	using namespace std;
 	mainLoopfinished = false;//to ensure that the timeoutfunction does not call it again while it is executing
 	
@@ -97,79 +74,116 @@ void Control::MainLoop()
 
 	manualPositions->checkFills(data->GetBidPrice(), data->GetAskPrice());
 	manualPositions->updateOpenOrdersByPrice();
-	//manualPositions->printoutActivePositions(data->GetBidPrice(), data->GetAskPrice());
-	//2a check/print current position, profit/loss, etc
-	//3 make decisions	-- now just manual orders
-	//4 display results/decisions
 
-//	data->PrintoutDataInConsole();
 	
 	printCurrentAll();
 	
-//	frequency_of_primes(3000000);
-//	Sleep(1500);
-	
-	//add other functions as needed
-	//5 send orders		-- for algos - nothing now
+
 	userInterface->PrintBidAsk(data->GetBidPrice(), data->GetAskPrice());
 
-	//print out the size in bytes of positionbook for testing purposes:
-//	cout << sizeof(*(manualPositions->GetMikePositions())) << endl;
-	//cout << sizeof(*manualPositions) << endl;
-	PositionBook * tempPos;
-	tempPos = manualPositions->positionbook;
 
-	//cout << tempPos->positionBook.size() << endl;
-	//cout << sizeof(MikePosition) * (tempPos->positionBook.size()) << endl;
-	//
-	//cout << sizeof(*tempPos) << endl;
-//	cout << sizeof(MikePosition) << endl;
-//	cout << manualPositions->positionbook.size() << endl;
-
-
-	//printCurrentAll();
 	mainLoopfinished = true;//to ensure that the timeoutfunction does not call it again while it is executing
 }
 
 void Control::printCurrentAll()
 {
-	Data * myData = data;
-	UserInterface * myInterface = userInterface;
-	MikePositionOrders * myPositionOrders = manualPositions;
+	//Data * myData = data;
+	//UserInterface * myInterface = userInterface;
+	//MikePositionOrders * myPositionOrders = manualPositions;
 
-	const MikePosVect *constPositions = myPositionOrders->GetMikePositions();
+	//const MikePosVect *constPositions = myPositionOrders->GetMikePositions();
 
-	const std::vector<MikeOrdersAtPrice> *ordersAtPrice = myPositionOrders->GetOpOrdersbyPrice();
+	//const std::vector<MikeOrdersAtPrice> *ordersAtPrice = myPositionOrders->GetOpOrdersbyPrice();
 
-	long 
-		totalOpenPos,
-		totalOpenPL,
-		totalClosedPL,
-		totalPL,
-		askPrice,
-		bidPrice;
+	//long 
+	//	totalOpenPos,
+	//	totalOpenPL,
+	//	totalClosedPL,
+	//	totalPL,
+	//	askPrice,
+	//	bidPrice;
 
-	askPrice = myData->GetAskPrice();
-	bidPrice = myData->GetBidPrice();
+	//askPrice = myData->GetAskPrice();
+	//bidPrice = myData->GetBidPrice();
 
-	totalOpenPos = myPositionOrders->CalcTotalOpenPos();
-	totalOpenPL = myPositionOrders->CalcAllOpenPL(bidPrice, askPrice);
-	totalClosedPL = myPositionOrders->CalcAllClosedPL(bidPrice, askPrice);
-	totalPL = myPositionOrders->CalcAllTotalPL(bidPrice, askPrice);
+	//totalOpenPos = myPositionOrders->CalcTotalOpenPos();
+	//totalOpenPL = myPositionOrders->CalcAllOpenPL(bidPrice, askPrice);
+	//totalClosedPL = myPositionOrders->CalcAllClosedPL(bidPrice, askPrice);
+	//totalPL = myPositionOrders->CalcAllTotalPL(bidPrice, askPrice);
 
-	myInterface->PrintAll(
-		totalOpenPos,
-		totalOpenPL,
-		totalClosedPL,
-		totalPL,
-		askPrice,
-		bidPrice,
-		constPositions,
-		ordersAtPrice
-		);
+	//myInterface->PrintAll(
+	//	totalOpenPos,
+	//	totalOpenPL,
+	//	totalClosedPL,
+	//	totalPL,
+	//	askPrice,
+	//	bidPrice,
+	//	constPositions,
+	//	ordersAtPrice
+	//	);
 
 }
 
+void Control::startloop()
+{
+	//check to see if the loop is already running. if it is not, start the loop:
+	if (!mainLoopActive) {
+		Fl::add_timeout(0.1, timeoutfunction, (void*) this);
+		mainLoopActive = true;
+		//and make sure the trigger to stop the loop inside timeoutfunction is off:
+		stopMainLoop = false;
+		//enable the live data feed - prices will be pulled from TWS:
+		livedatafeed = true;
+	}
+
+}
+
+void Control::stoploop()
+{
+	//if the loop is already set up to be stopped, do nothing:
+	if (stopMainLoop) return;
+	//if it is not set to be stopped, set the trigger to stop it inside the timeoutfunction:
+	stopMainLoop = true;
+	//and let the class know it is not running:
+	mainLoopActive = false;
+	//stop the livedatafeed:
+	livedatafeed = false;
+}
+
+//Helpler functions for other classes:
+
+//TODO:this is bad code. part of it needs to be moved into WidgetTable
+void Control::rePriceWidTable(UserInterface * InterfaceToReprice)
+{
+	using namespace std;
+
+	cout << "new rePriceWidTable called" << endl;
+
+	UserInterface* pUI = InterfaceToReprice;
+
+	//update prices shown in UserInterface:
+	pUI->rePriceWidTable(data->GetBidPrice());
+
+	//determine row which holds the price corresponding to current bid:
+	int scrollposition = pUI->GetTable()->GetTopRowPrice() - data->GetBidPrice();
+	//scroll the table to current bid with a 15 row offset:
+	pUI->GetTable()->row_position(scrollposition - 15);
+
+	//modify slider in PriceControlUI:
+	//update the slider minimum and maximum settings:
+	//setting initial Slider max/min values to that of bid/ask - offset of 95:
+
+	int value, max, min;
+	value = (int)data->GetBidPrice();
+	min = (int)data->GetBidPrice() + 95 /* 3 offset for safety*/;
+	max = (int)data->GetBidPrice() - 95 /* 3 offset for safety*/;
+
+	m_pPriceControlUI->setSlider(value, max, min);
+	//TODO: calling rePriceWidTable messes up the printout in WidgetTable - the index located now in WidgetTable::printPositions telling which rows to clear before printing fresh values - does not get cleared when rePriceWidTable is called. messes up the printout really bad
+	InterfaceToReprice->GetTable()->widgetTableNeedsClearAll = true;
+
+
+}
 
 //callbacks:
 //                _  _  _                   _            
@@ -329,93 +343,3 @@ void Control::CallbkSmplTableWin(int rowPressed, int colPressed, long price, sho
 {
 	cout << "Callback received in Control" << " price: " << price << " windownumber: " << windownumber << endl;
 }
-
-void Control::startloop()
-{
-	//check to see if the loop is already running. if it is not, start the loop:
-	if(!mainLoopActive){
-		Fl::add_timeout(0.1, timeoutfunction, (void*) this);
-		mainLoopActive = true;
-		//and make sure the trigger to stop the loop inside timeoutfunction is off:
-		stopMainLoop = false;
-		//enable the live data feed - prices will be pulled from TWS:
-		livedatafeed = true;
-	}
-	
-}
-
-void Control::stoploop()
-{
-	//if the loop is already set up to be stopped, do nothing:
-	if (stopMainLoop) return;
-	//if it is not set to be stopped, set the trigger to stop it inside the timeoutfunction:
-	stopMainLoop = true;
-	//and let the class know it is not running:
-	mainLoopActive = false;
-	//stop the livedatafeed:
-	livedatafeed = false;
-}
-
-//Helpler functions for other classes:
-
-//TODO:this is bad code. part of it needs to be moved into WidgetTable
-void Control::rePriceWidTable(UserInterface * InterfaceToReprice)
-{
-	using namespace std;
-
-	cout << "new rePriceWidTable called" << endl;
-
-	UserInterface* pUI = InterfaceToReprice;
-	
-	//update prices shown in UserInterface:
-	pUI->rePriceWidTable(data->GetBidPrice());
-
-	//determine row which holds the price corresponding to current bid:
-	int scrollposition = pUI->GetTable()->GetTopRowPrice() - data->GetBidPrice();
-	//scroll the table to current bid with a 15 row offset:
-	pUI->GetTable()->row_position(scrollposition - 15);
-
-	//modify slider in PriceControlUI:
-	//update the slider minimum and maximum settings:
-	//setting initial Slider max/min values to that of bid/ask - offset of 95:
-
-	int value, max, min;
-	value = (int)data->GetBidPrice();
-	min = (int)data->GetBidPrice() + 95 /* 3 offset for safety*/;
-	max = (int)data->GetBidPrice() - 95 /* 3 offset for safety*/;
-
-	m_pPriceControlUI->setSlider(value, max, min);
-	//TODO: calling rePriceWidTable messes up the printout in WidgetTable - the index located now in WidgetTable::printPositions telling which rows to clear before printing fresh values - does not get cleared when rePriceWidTable is called. messes up the printout really bad
-	InterfaceToReprice->GetTable()->widgetTableNeedsClearAll = true;
-
-
-}
-
-void Control::rePriceWidTable()
-
-//Updates prices displayed in WidgetTable to between 100 above and below
-//current bid price in Data class
-//Updates slider in PriceControlUI to current Bid price
-{
-	UserInterface* pUI = userInterface;
-
-//	WidgetTable * pTable = pUI->GetTable();
-
-	//update prices shown in UserInterface:
-
-	pUI->rePriceWidTable(data->GetBidPrice());
-
-	
-	//modify slider in PriceControlUI:
-	//update the slider minimum and maximum settings:
-	//setting initial Slider max/min values to that of bid/ask - offset of 95:
-
-	int value, max, min;
-	value = (int)data->GetBidPrice();
-	min = (int)data->GetBidPrice() + 95 /* 3 offset for safety*/;
-	max = (int)data->GetBidPrice() - 95 /* 3 offset for safety*/;
-
-	m_pPriceControlUI->setSlider(value, max, min);
-
-}
-
