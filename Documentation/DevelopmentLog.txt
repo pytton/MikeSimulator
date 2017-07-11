@@ -10,6 +10,16 @@ fed from live market data, or fed fromm historical data.
 
 Currently working on:
 
+2017/06/25:
+
+Created new branch in git called experiment. In that branch - changed the project name to FreshMikeSimulator. Created another project in same solution called NewMikeSim - this project will be built from the ground up using FreshMikeSimulator files in a better way - using namespaces and refactored FreshMikeSimulator code.
+
+Created new project called TestingNewMikeSim- for now - to test new class PosOrders.h using old FreshMikeSimulator structure. Implementing this class will need changes in Userinterface and Control class.
+Idea - create new class for use by control which integretes UserInterface and PosOrders into one new class to bind them together.
+
+for now - instantiate two UserInterface classes in Control - one linked with old MikePositionOrders, and second linked with new Mike::PosOrders
+
+
 6/4/2016
 in Control.h and Control.cpp - switched UserInterface * userInterface
 for ManualInterface * userInterface. This needs to be looked through and finished

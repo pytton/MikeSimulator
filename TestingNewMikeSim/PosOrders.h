@@ -45,143 +45,55 @@ position in MikePositionBook
 
 //#include "MikePositionsOrders.h"
 
+#include "MikeEnums.h"
+
 #include <vector>
 #include <string>
 #include <map>
 #include <set>
+#include <unordered_set>
 
 class Timer;
 class PositionBook;
 class MikeOrderbook;
 class MikePosition;
-class MikeOrdersAtPrice;
 
-enum BtnPressed;
+class WidgetTable;
+class Control;
+class ControlPrinter;
+
+enum class BtnPressed;
 enum MikeOrderType;
 
 
-#ifndef _MIKEORDERCLASS_DEFINED_
-#define _MIKEORDERCLASS_DEFINED_
-
-class MikeOrder
-{
+class SetMikeOrder : public MikeOrder {
 public:
-	//	MikeOrder();
-	//	~MikeOrder();
-
-	//BUYLMT, SELLLMT, BUYSTP, SELLSTP
-	MikeOrderType ordertype;
-
-	//this stores which position the order is assigned to
-	//there can be multiple orders for one price
-	//once order is filled - this tells which position is updated
-	long assignedToPosition = 0;
-
-	//the price of the order. prices are in cents.
-	long price = 0;
-
-	//the size of the order
-	long amount = 0;
-
-	//for future use - for passing orders into outside API
-	int orderId;
-
-	//for checking fills - has the order been filled already?
-	bool isFilled = false;
-
-	//for future implementation.
-	bool partialFill = false;
-};
-
-class MikeOrdersAtPrice
-{
-public:
-	long price = 0;
-	long buyLimitAmount = 0;
-	long buyStopAmount = 0;
-	long sellLimitAmount = 0;
-	long sellStopAmount = 0;
-
-	void eraseall();//
-
-					//returns true if all orders are empty at this price
-	bool checkifempty();
-
-};
-
-class MikePosition
-{
-	friend class WidgetTable;
-public:
-	long price = 0;
-	long open_amount = 0;//positive open_amount means the position is 'long'. negative open_amount means the position is 'short'.
-	long open_pl = 0;
-	long closed_pl = 0;
-	long total_pl = 0;
-
-private:
-	bool isActive = false;
-	long prevbidprice = 0;
-	long prevaskprice = 0;
-
-public:
-	//this is for indexing purposes - set to TRUE if position was ever
-	//accessed or changed. Mainly to avoid iterating through tens of thousands
-	//of positions
-	inline bool checkifActive() { if (isActive == true) return true; else  return false; }
-	inline void setActive() { isActive = true; }
-	inline void setInactive() { isActive = false; }
-
-public:
-	//positive amount for buy orders, negative amount for sell orders!
-	void fill(long fillprice, long filledamount)
-	{
-		//this will modify the closed_pl by:
-		//difference in fill price and price of this position
-		//multiplied by amount
-		long tempclosed_pl = closed_pl;
-		long profitloss;
-		////////////////////////////////////////////////
-		profitloss = (price - fillprice) * filledamount;
-		closed_pl = tempclosed_pl + profitloss;
-		////////////////////////////////////////////////
-		//this updates the current open_amount by the amount that was filled
-		long tempopenamount = open_amount;
-		open_amount = tempopenamount + filledamount;
+	bool operator<(const SetMikeOrder & other) const {
+		return orderId < other.orderId;
 	}
-	void calculatePL(long bidprice, long askprice)
-	{
-		//	static long prevbidprice = 0;
-		//	static long prevaskprice = 0;
-		if (bidprice != prevbidprice || askprice != prevaskprice)
-		{
-			open_pl = 0;
-			//if position is 'long':
-			if (open_amount >= 0) open_pl = (bidprice - price) * open_amount;
-			//if position is 'short':
-			if (open_amount < 0) open_pl = (askprice - price) * open_amount;
-
-			//update total_pl with new open_pl
-			total_pl = closed_pl + open_pl;
-		}
+};
+class MapMikePosition : public MikePosition {
+	bool operator<(const MapMikePosition & other) const {
+		return price < other.price;
 	}
-};//class MikePosition
-
-#endif // !_MIKEORDERCLASS_DEFINED_
+};
 
 namespace Mike {
-
-
 	//stores Positions and Orders
 	class PosOrders {
+		friend class Control;
+		friend class ControlPrinter;
 
 	public:
 		typedef ::std::map<long, MikePosition> PositionMap;
-		typedef ::std::set<MikeOrder> Orders;
+		typedef ::std::set<SetMikeOrder> Orders;
 		typedef ::std::map<long, MikeOrdersAtPrice> OrdsAtPrice;
-	public:
-		//main elements of this class:
 
+		PosOrders();
+		~PosOrders();
+		
+	private:
+		//main elements of this class:
 		PositionMap mPositions;  //stores all open positions
 		Orders mOpenOrders;  //stores all open orders
 		Orders mClosedOrders;  //stores all closed orders
@@ -192,17 +104,19 @@ namespace Mike {
 		long mNetPosition;  //sum of all positions: positive for long, negative for short
 		double mAveragePriceOfPosition;  //weighed avg. price of net position
 		double mZeroProfitPrice;  //price at which mAllTotalPL would equal zero
+		long mOrderId = 0;  //Internal ID for all orders - do not confuse with TWS orderIds to be implemented at other time
+		bool COMMENTSON;  //toggles cout info from class functions
 
 	protected:
-		//PosOrd();
-		//~PosOrd();
+		WidgetTable * myWidTable;
+
 
 		//controlling orders and positions:
 
 		//checkfills and update all values including P/Ls etc...
 		void updateAll(long bidPrice, long askPrice);
-		//enters a new order into the mOpenOrders container
-		void newOrder(long price, MikeOrderType orderType);
+		//creates a new order and returns the OrderId of the just created order to the caller of the function
+		long newOrder(long price, long orderAmount, MikeOrderType orderType);
 		bool modifyOrder(int orderNumber, long price, MikeOrderType orderType);  //if orderNumber is in mOpenOrders, changes it to new price and orderType. Returns false if orderNumber not found in mOpenOrders
 		void checkFills(long bidPrice, long askPrice);  //checks open orders for fills at given prices
 		void cancelOrdersAtPrice(long price);  //cancels all orders at given price
@@ -215,7 +129,7 @@ namespace Mike {
 //   \__, |\___|\__|\__\___|_|  |___/
 //   |___/                           
 		//for printing/looking up orders and postions. call updateAll before using these if you want values for current bid/ask price:
-
+	public:
 		PositionMap const * getPositionsPtr() { return &mPositions; };  //for looking at open positions
 		void updateOpenOrdersAtPrice();  //iterates through all mOpenOrders and updates mOpenOrdersAtPrice
 		OrdsAtPrice const * getOrdsAtPricePtr() { return &mOpenOrdersAtPrice; }  //for looking at all orders at a price
@@ -225,6 +139,7 @@ namespace Mike {
 		long getNetPosition() { return mNetPosition; }  //sum of all positions: positive for long, negative for short
 		double getAveragePriceOfPosition() { return mAveragePriceOfPosition; }  //weighed avg. price of net position
 		double getZeroProfitPrice() { return mZeroProfitPrice; }  //price at which mAllTotalPL would equal zero
+
 
 
 	private:

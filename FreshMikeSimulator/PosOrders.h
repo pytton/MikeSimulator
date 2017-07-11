@@ -99,7 +99,7 @@ namespace Mike {
 
 
 	//stores Positions and Orders
-	class PosOrderss {
+	class PosOrders {
 
 	public:
 		typedef ::std::map<long, MikePosition> PositionMap;
