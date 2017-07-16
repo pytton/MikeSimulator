@@ -78,13 +78,15 @@ int main(int argc, char* argv[]) {
 
 	std::thread t1(mikesimulator,std::ref(log) );
 
-	try {
-		sdlWindowStart(log);
-	}
-	catch (...){
-		t1.join();
-		throw;
-	}
+
+	//uncomment below for sdl in seperate thread:
+	//try {
+	//	sdlWindowStart(log);
+	//}
+	//catch (...){
+	//	t1.join();
+	//	throw;
+	//}
 
 	t1.join();
 

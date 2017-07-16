@@ -61,25 +61,32 @@ class UserInterface : public FluidInterface
 	//Fl_Button *m_btn_printPos;
 
 public:
-	//constructors/destructor:
+	//                           _                       _                  
+	//    ___  ___   _ __   ___ | |_  _ __  _   _   ___ | |_  ___   _ __  _ 
+	//   / __|/ _ \ | '_ \ / __|| __|| '__|| | | | / __|| __|/ _ \ | '__|(_)
+	//  | (__| (_) || | | |\__ \| |_ | |   | |_| || (__ | |_| (_) || |    _ 
+	//   \___|\___/ |_| |_||___/ \__||_|    \__,_| \___| \__|\___/ |_|   (_)
+	//                                                                      
 	UserInterface(Control * control,
 		double starting_bid_price = 700,
 		int numberOfColumns = 16,
 		int numberOfButtoncolumns = 5);
 
-	//GETTERS / SETTERS:
+	//                _    _                       __           _    _                      
+	//    __ _   ___ | |_ | |_  ___  _ __  ___    / /___   ___ | |_ | |_  ___  _ __  ___  _ 
+	//   / _` | / _ \| __|| __|/ _ \| '__|/ __|  / // __| / _ \| __|| __|/ _ \| '__|/ __|(_)
+	//  | (_| ||  __/| |_ | |_|  __/| |   \__ \ / / \__ \|  __/| |_ | |_|  __/| |   \__ \ _ 
+	//   \__, | \___| \__| \__|\___||_|   |___//_/  |___/ \___| \__| \__|\___||_|   |___/(_)
+	//   |___/                                                                              
 	Control * GetControl() { return m_pControl; }
 	inline WidgetTable *GetTable(){return m_pTable;}
 
-	//helper functions
-	void show();
-	void rePriceWidTable(long bidprice);
-
-	//WidgetTable callback:
-	//THIS IS WHERE THE ORDER TYPE IS DETERMINED
-	//BASED ON WHICH COLUMN HAS BEEN PRESSED IN WIDGETTABLE
-	virtual void CallbkWidTable(int rowPressed, int colPressed, long price);
-//	virtual void CallbkWidTable(int rowPressed, int colPressed, long price, int orderSize);
+	//                _         _                      
+	//   _ __   _ __ (_) _ __  | |_  ___  _ __  ___  _ 
+	//  | '_ \ | '__|| || '_ \ | __|/ _ \| '__|/ __|(_)
+	//  | |_) || |   | || | | || |_|  __/| |   \__ \ _ 
+	//  | .__/ |_|   |_||_| |_| \__|\___||_|   |___/(_)
+	//  |_|                                            
 	virtual void PrintBidAsk(long bid, long ask);
 	virtual void PrintAll(
 		long totalOpenPos,
@@ -91,31 +98,53 @@ public:
 		const std::vector <MikePosition> *openPositions,
 		const std::vector <MikeOrdersAtPrice> *openOrdersAtPrice);
 
-
 protected:
-	//members:
+	//                               _                         
+	//   _ __ ___    ___  _ __ ___  | |__    ___  _ __  ___  _ 
+	//  | '_ ` _ \  / _ \| '_ ` _ \ | '_ \  / _ \| '__|/ __|(_)
+	//  | | | | | ||  __/| | | | | || |_) ||  __/| |   \__ \ _ 
+	//  |_| |_| |_| \___||_| |_| |_||_.__/  \___||_|   |___/(_)
+	//                                                         
 	WidgetTable *m_pTable;		//this replaces regular Fl_Table with my custom one	
 	Control * m_pControl;
 	Fl_Button* m_myExtraBtn;
-	std::stringstream textDisplayString;
 	int bid_price;
 
 	//these two store the names of columns and buttons:
 	std::vector <std::string> col_names;
 	std::vector <std::string> button_names;
 
-	//CALLBACKS
+	//               _  _  _                   _            
+	//    ___  __ _ | || || |__    __ _   ___ | | __ ___  _ 
+	//   / __|/ _` || || || '_ \  / _` | / __|| |/ // __|(_)
+	//  | (__| (_| || || || |_) || (_| || (__ |   < \__ \ _ 
+	//   \___|\__,_||_||_||_.__/  \__,_| \___||_|\_\|___/(_)
+	//                                                      
 
+public:
+	//WidgetTable callback:
+	//THIS IS WHERE THE ORDER TYPE IS DETERMINED
+	//BASED ON WHICH COLUMN HAS BEEN PRESSED IN WIDGETTABLE
+	virtual void CallbkWidTable(int rowPressed, int colPressed, long price);
+protected:
 	static void m_extra_btn_cb(Fl_Widget * w, void * p);
 	static void m_printOrders_btn_cb(Fl_Widget *w, void * p);
 	static void m_checkFills_btn_cb(Fl_Widget *w, void * p);
 	static void m_printPos_btn_cb(Fl_Widget *w, void * p);
 	static void m_resetOrderSize_cb(Fl_Widget *w, void * p);
 
-	//helpers:
+	//   _            _                            
+	//  | |__    ___ | | _ __    ___  _ __  ___  _ 
+	//  | '_ \  / _ \| || '_ \  / _ \| '__|/ __|(_)
+	//  | | | ||  __/| || |_) ||  __/| |   \__ \ _ 
+	//  |_| |_| \___||_|| .__/  \___||_|   |___/(_)
+	//                  |_|                        
+
 	//sets the names of column headers and buttons inside WidgetTable:
 	virtual void SetColButNames(std::vector <std::string> &col_names, std::vector <std::string> &button_names);
-
+public:
+	void rePriceWidTable(long bidprice);
+	
 	//                                  _                          _           
 	//    ___ __  __ _ __    ___  _ __ (_) _ __ ___    ___  _ __  | |_  ___  _ 
 	//   / _ \\ \/ /| '_ \  / _ \| '__|| || '_ ` _ \  / _ \| '_ \ | __|/ __|(_)

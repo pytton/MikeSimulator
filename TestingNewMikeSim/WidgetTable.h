@@ -1,12 +1,6 @@
 #ifndef _WidgetTable_H_INCLUDED_
 #define _WidgetTable_H_INCLUDED_
 
-#include <iostream>
-#include <sstream>
-#include <stdio.h>
-#include <vector>
-#include <string>
-#include <set>
 
 #include <FL/Fl.H>
 #include <FL/Fl_Window.H>
@@ -16,17 +10,23 @@
 #include <FL/Fl_Table_Row.H>
 #include <FL/Fl_Text_Display.H>
 
+#include <iostream>
+#include <sstream>
+#include <stdio.h>
+#include <vector>
+#include <string>
+#include <set>
+#include <stack>
 
 
-
-//TODO: Finish moving members/methods from WidgetTable to WidTableBase
-//     ___ _____     __  _____  __           _____         _____  __    
-//    / __\\_   \ /\ \ \ \_   \/ _\  /\  /\ /__   \ /\  /\ \_   \/ _\ _ 
-//   / _\   / /\//  \/ /  / /\/\ \  / /_/ /   / /\// /_/ /  / /\/\ \ (_)
-//  / /  /\/ /_ / /\  //\/ /_  _\ \/ __  /   / /  / __  //\/ /_  _\ \ _ 
-//  \/   \____/ \_\ \/ \____/  \__/\/ /_/    \/   \/ /_/ \____/  \__/(_)
-//                                                                      
-
+//   #     #          #######                             ######                        #  
+//   #  #  # # #####     #      ##   #####  #      ###### #     #   ##    ####  ###### ### 
+//   #  #  # # #    #    #     #  #  #    # #      #      #     #  #  #  #      #       #  
+//   #  #  # # #    #    #    #    # #####  #      #####  ######  #    #  ####  #####      
+//   #  #  # # #    #    #    ###### #    # #      #      #     # ######      # #       #  
+//   #  #  # # #    #    #    #    # #    # #      #      #     # #    # #    # #      ### 
+//    ## ##  # #####     #    #    # #####  ###### ###### ######  #    #  ####  ######  #  
+//                                                                                         
 
 //base class of all WidgetTables
 //never use this class. derive from it to get what you need
@@ -34,48 +34,109 @@ class WidTableBase : public Fl_Table_Row
 {
 protected:
 	WidTableBase(int x, int y, int w, int h, const char *l);
-
-
-	//                _    _                        __            _    _                       
-	//    __ _   ___ | |_ | |_   ___  _ __  ___    / / ___   ___ | |_ | |_   ___  _ __  ___  _ 
-	//   / _` | / _ \| __|| __| / _ \| '__|/ __|  / / / __| / _ \| __|| __| / _ \| '__|/ __|(_)
-	//  | (_| ||  __/| |_ | |_ |  __/| |   \__ \ / /  \__ \|  __/| |_ | |_ |  __/| |   \__ \ _ 
-	//   \__, | \___| \__| \__| \___||_|   |___//_/   |___/ \___| \__| \__| \___||_|   |___/(_)
-	//   |___/                                                                     
+	WidTableBase(
+		int x, int y, int w, int h, const char *l,
+		int top_row_price,
+		int number_rows = 25,
+		int number_cols = 15,	/*how many columns in the table?*/
+		int how_many_cols_are_buttons = 5,	/*how many columns are buttons?*/
+		std::vector <std::string> col_names = { "" },	/*names of col headers*/
+		std::vector <std::string> button_names = { "" }	//names of buttons		
+	);
+	~WidTableBase();
+//                _    _                        __            _    _                       
+//    __ _   ___ | |_ | |_   ___  _ __  ___    / / ___   ___ | |_ | |_   ___  _ __  ___  _ 
+//   / _` | / _ \| __|| __| / _ \| '__|/ __|  / / / __| / _ \| __|| __| / _ \| '__|/ __|(_)
+//  | (_| ||  __/| |_ | |_ |  __/| |   \__ \ / /  \__ \|  __/| |_ | |_ |  __/| |   \__ \ _ 
+//   \__, | \___| \__| \__| \___||_|   |___//_/   |___/ \___| \__| \__| \___||_|   |___/(_)
+//   |___/                                                                     
 	//GETTERS:
+public:
 	inline int GetRows() { return table_rows; }
 	inline int GetCols() { return table_cols; }
+	inline int GetTopRowPrice() { return TopRowPrice; }
+	inline int GetBottomRowPrice() { return (GetTopRowPrice() - GetRows() + 1); }
+	inline void SetTopRowPrice(int value) { TopRowPrice = value; }
+	inline std::vector <std::string> * GetColNames() { return &col_names; }
 
+	//given price - returns the row in which that price is displayed in WidgetTable:
+	int RowOfPrice(long price);
+	//given the row - returns what price is currently printed in that row:
+	long PriceOfRow(int row);
 
+	//SETTERS:
+	virtual void SetColumnnWidth(short width) { columnWidth = width; }
+
+//                _  _  _                   _            
+//    ___   __ _ | || || |__    __ _   ___ | | __ ___  _ 
+//   / __| / _` || || || '_ \  / _` | / __|| |/ // __|(_)
+//  | (__ | (_| || || || |_) || (_| || (__ |   < \__ \ _ 
+//   \___| \__,_||_||_||_.__/  \__,_| \___||_|\_\|___/(_)
+
+protected:
 	static void button_cb(Fl_Widget *w, void * p);	//callbacks in fltk have to be static
 	virtual void virtButtonCb(Fl_Widget *w, void * p) = 0;
 
-	//                               _                         
-	//   _ __ ___    ___  _ __ ___  | |__    ___  _ __  ___  _ 
-	//  | '_ ` _ \  / _ \| '_ ` _ \ | '_ \  / _ \| '__|/ __|(_)
-	//  | | | | | ||  __/| | | | | || |_) ||  __/| |   \__ \ _ 
-	//  |_| |_| |_| \___||_| |_| |_||_.__/  \___||_|   |___/(_)
-	//  
+//                _         _                   
+//   _ __   _ __ (_) _ __  | |_  ___  _ __  ___ 
+//  | '_ \ | '__|| || '_ \ | __|/ _ \| '__|/ __|
+//  | |_) || |   | || | | || |_|  __/| |   \__ \
+//  | .__/ |_|   |_||_| |_| \__|\___||_|   |___/
+//  |_|                                         
+
+	virtual void printInTable(int row, int col, std::string text);	//row = 0 is first row!
+	void ClearColumn(int column);	//clears provided column of all text that might have been left behind by the previous draw - for use with Control::rePriceWidTable
+	void ClearRow(int row);	//as above, but for clearing a row
+
+//                               _                         
+//   _ __ ___    ___  _ __ ___  | |__    ___  _ __  ___  _ 
+//  | '_ ` _ \  / _ \| '_ ` _ \ | '_ \  / _ \| '__|/ __|(_)
+//  | | | | | ||  __/| | | | | || |_) ||  __/| |   \__ \ _ 
+//  |_| |_| |_| \___||_| |_| |_||_.__/  \___||_|   |___/(_)
+//  
 	int table_rows, table_cols;
 	int ButtonColsNumber;	//how many columns are buttons?
 	int TopRowPrice;		//the price at the first row on top - used to determine which positions to display
 	short tabletype;//HACK: decides what the callback function will call to: 0 - it will use UserInterface * ptr_to_UserInterface; 1 - it will use Control * ptrControl;
 	std::vector <std::string> col_names;	//needed by void ColHeaderText(char * s, int C)
 
-	//   _            _                         
-	//  | |__    ___ | | _ __    ___  _ __  ___ 
-	//  | '_ \  / _ \| || '_ \  / _ \| '__|/ __|
-	//  | | | ||  __/| || |_) ||  __/| |   \__ \
-	//  |_| |_| \___||_|| .__/  \___||_|   |___/
-	//                  |_|                     
+//   _            _                         
+//  | |__    ___ | | _ __    ___  _ __  ___ 
+//  | '_ \  / _ \| || '_ \  / _ \| '__|/ __|
+//  | | | ||  __/| || |_) ||  __/| |   \__ \
+//  |_| |_| \___||_|| .__/  \___||_|   |___/
+//                  |_|                     
 	//helper functions:
+
+	//defines text of column headers:
+	virtual void ColHeaderText(char * s, int C);
 	inline void SetRows(int numRows) { table_rows = numRows; }
 	inline void SetCols(int numCol) { table_cols = numCol; }
-	Fl_Widget * GetElement(int nRow, int nCol);	//returns a pointer to the cell in the table at nRow nCol
-												//supplied from example - dont know how this works
+	//returns a pointer to the cell in the table at nRow nCol:
+	Fl_Widget * GetElement(int nRow, int nCol);
+
+
+	//supplied from example - dont know how this works:
+	void draw_cell(TableContext context, int R = 0, int C = 0, int X = 0, int Y = 0, int W = 0, int H = 0);
+	//fills the table with cells:
 	void SetSize(int newrows, int newcols, WidTableBase * mytable, std::vector<std::string> button_names = { "" });
+
+	short columnWidth = 55;
+
+private:
+	//trying to resolve issue with using shared_ptr in SetSize function.
+	// the line Fl_Input *in = new Fl_Input(X, Y, W, H); created objects possibly not 
+	//detroyed when WidTableBase is destroyed. Replacing the line with a shared_ptr
+	//crashes program - probably because shared_ptr is destroyed before being used by
+	//FLTK. Idea: create a stack within WidTableBase and add all pointers to it.
+	//When WidTableBase is destroyed this stack gets destroyed and hopefully releases all
+	//unusued shared_ptr's
+
+	std::stack<Fl_Input*> sharedFlInputPointers;
 											
-};
+};  //class WidTableBase
+
+
 
 
 class MikeSimulator;
@@ -85,7 +146,14 @@ class MikeOrdersAtPrice;
 class Control;
 class WidTable1;
 
-
+//   #     #                              #######                              #  
+//   #  #  # # #####   ####  ###### #####    #      ##   #####  #      ###### ### 
+//   #  #  # # #    # #    # #        #      #     #  #  #    # #      #       #  
+//   #  #  # # #    # #      #####    #      #    #    # #####  #      #####      
+//   #  #  # # #    # #  ### #        #      #    ###### #    # #      #       #  
+//   #  #  # # #    # #    # #        #      #    #    # #    # #      #      ### 
+//    ## ##  # #####   ####  ######   #      #    #    # #####  ###### ######  #  
+// 
 
 //WigetTable - table with cells drawed inside it
 class WidgetTable : public WidTableBase
@@ -130,16 +198,11 @@ public:
 //  | .__/ |_|   |_||_| |_| \__|\___||_|   |___/
 //  |_|                                         
 
-	//print string in row/col. row 0 is first row
-	virtual void printInTable(int row, int col, std::string text);	//row = 0 is first row!
 	//print the bid and ask prices if such columns exist:
 	virtual void printBidAsk(long bid, long ask) {}	//empty now. do I need this?
 	virtual void printPositions(const std::vector <MikePosition> *openPositions) {}
 	virtual void printPositions(const std::vector <MikePosition> *openPositions,
 		const std::vector <MikeOrdersAtPrice> *openOrdersAtPrice);
-	void ClearColumn(int column);	//clears provided column of all text that might have been left behind by the previous draw - for use with Control::rePriceWidTable
-	void ClearRow(int row);	//as above, but for clearing a row
-
 
 	//                _    _                        __            _    _                       
 	//    __ _   ___ | |_ | |_   ___  _ __  ___    / / ___   ___ | |_ | |_   ___  _ __  ___  _ 
@@ -148,17 +211,8 @@ public:
 	//   \__, | \___| \__| \__| \___||_|   |___//_/   |___/ \___| \__| \__| \___||_|   |___/(_)
 	//   |___/                                                                     
 	//GETTERS:
-
-	inline int GetTopRowPrice() { return TopRowPrice; }
-	inline int GetBottomRowPrice() { return (GetTopRowPrice() - GetRows() + 1); }
-	inline void SetTopRowPrice(int value) { TopRowPrice = value; }
-	inline std::vector <std::string> * GetColNames() { return &col_names; }
 	virtual inline short GetBidCol(){ return bidColumn; }
 	virtual inline short GetAskCol(){ return askColumn; }
-	int RowOfPrice(long price);  //given price - returns the row in which that price is displayed in WidgetTable
-	long PriceOfRow(int row);  //given the row - returns what price is currently printed in that row
-	//SETTERS:
-	virtual void SetColumnnWidth(short width) { columnWidth = width; }
 
 protected:
 	//                _  _  _                   _            
@@ -167,7 +221,6 @@ protected:
 	//  | (__ | (_| || || || |_) || (_| || (__ |   < \__ \ _ 
 	//   \___| \__,_||_||_||_.__/  \__,_| \___||_|\_\|___/(_)
 
-	//static void button_cb(Fl_Widget *w, void * p);	//callbacks in fltk have to be static
 	virtual void virtButtonCb(Fl_Widget *w, void * p);
 	//                               _                         
 	//   _ __ ___    ___  _ __ ___  | |__    ___  _ __  ___  _ 
@@ -198,11 +251,6 @@ protected:
 	std::set <long> usedprices;//this set contains prices that have been used in the previous printout. in this iteration of printPositions, I will use the function ClearRow to erase this row before printing new values.
 	std::set <long> notusedprices;//contains prices that have been erased at first but not filled with new values - which means they do not need to be erased again next time. this set will be used to remove values from usedprices so that we do not erase empty rows everytime
 	
-	//defines text of column headers:
-	virtual void ColHeaderText(char * s, int C);	
-
-
-
 	//below describes which column number shows what kind of data?
 	//eg. bidcolumn = 6 and askColumn = 7 mean that the bid is
 	//printed in column 6 and ask is printed in column 7:
@@ -210,23 +258,18 @@ protected:
 		priceCol = 5,
 		bidColumn = 6,
 		askColumn = 7,
-		openPosCol = 12,
-		openPLCol = 13,
-		closedPLCol = 14,
-		totalPLCol = 15,
 		buyLimitOrderCol = 8,
 		buyStopOrderCol = 9,
 		sellLimitOrderCol = 10,
 		sellStopOrderCol = 11,
-		columnWidth = 55,
+		openPosCol = 12,
+		openPLCol = 13,
+		closedPLCol = 14,
+		totalPLCol = 15,
 		windownumber = 0;//for callbacks sent to Control - to tell which window its coming from. must be set in constructor
 
 	void PopPriceCol(/*WidgetTable * myTable*/); //populates the Price column with prices based on current TopRowPrice
 
-	//supplied from example - dont know how this works
-	void draw_cell(TableContext context, int R = 0, int C = 0, int X = 0, int Y = 0, int W = 0, int H = 0);	
-	//fills the table with cells:
-//	void SetSize(int newrows, int newcols, WidgetTable * mytable, std::vector<std::string> button_names = { "" });
 };
 
 class WidTable1 : public WidgetTable {
@@ -242,6 +285,14 @@ private:
 
 };
 
+//   #     #                                                                              #  
+//   ##   ## #   #         ###### #              #####  #    # ##### #####  ####  #    # ### 
+//   # # # #  # #          #      #              #    # #    #   #     #   #    # ##   #  #  
+//   #  #  #   #           #####  #              #####  #    #   #     #   #    # # #  #     
+//   #     #   #           #      #              #    # #    #   #     #   #    # #  # #  #  
+//   #     #   #           #      #              #    # #    #   #     #   #    # #   ## ### 
+//   #     #   #           #      ######         #####   ####    #     #    ####  #    #  #  
+//                 #######               #######                                             
 
 class My_fl_button : public  Fl_Button  //with location of button in Fl_Table
 {

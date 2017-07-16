@@ -63,8 +63,9 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="..\FLTK\PropertyPages\FLTKDebugWin32MTHREADd.props" />
     <Import Project="..\SDL2-2.0.5\PropertyPages\SDLDebugWin32.props" />
+    <Import Project="..\BoonenTWSAPI\PropertySheets\BoonenReleaseWin32.props" />
+    <Import Project="..\FLTK\PropertyPages\FLTKReleaseWin32.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />

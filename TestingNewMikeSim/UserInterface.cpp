@@ -107,10 +107,10 @@ void UserInterface::changename(std::string name)
 	m_window1->show();
 
 }
-void UserInterface::show()
-{
-	m_window1->show();
-}
+//void UserInterface::show()
+//{
+//	m_window1->show();
+//}
 
 void UserInterface::rePriceWidTable(long bidprice)
 //UNDER CONSTRUCTION
@@ -150,17 +150,20 @@ void UserInterface::rePriceWidTable(long bidprice)
 void UserInterface::m_printOrders_btn_cb(Fl_Widget * w, void * p)
 {
 	UserInterface * myUserInt = (UserInterface*)p;
+	if (myUserInt->m_pControl == NULL) { std::cout << "void pointer!" << std::endl; return; }
 	myUserInt->m_pControl->CallbkUserInt(myUserInt, BtnPressed::PRINTORDERSBTN);
 
 }
 void UserInterface::m_checkFills_btn_cb(Fl_Widget * w, void * p)
 {
 	UserInterface * myUserInt = (UserInterface*)p;
+	if (myUserInt->m_pControl == NULL) { std::cout << "void pointer!" << std::endl; return; }
 	myUserInt->m_pControl->CallbkUserInt(myUserInt, BtnPressed::CHECKFILLS);
 }
 void UserInterface::m_printPos_btn_cb(Fl_Widget * w, void * p)
 {
 	UserInterface * myUserInt = (UserInterface*)p;
+	if (myUserInt->m_pControl == NULL) { std::cout << "void pointer!" << std::endl; return; }
 	myUserInt->m_pControl->CallbkUserInt(myUserInt, BtnPressed::PRINTPOS);
 }
 void UserInterface::m_resetOrderSize_cb(Fl_Widget * w, void * p)
@@ -172,6 +175,7 @@ void UserInterface::m_resetOrderSize_cb(Fl_Widget * w, void * p)
 void UserInterface::m_extra_btn_cb(Fl_Widget *w, void * p)
 {
 	UserInterface * myUserInt = (UserInterface*)p;
+	if (myUserInt->m_pControl == NULL) { std::cout << "void pointer!" << std::endl; return; }
 	myUserInt->m_pControl->CallbkUserInt(myUserInt, BtnPressed::EXTRABTN);
 }
 
@@ -375,9 +379,12 @@ Mike::PosOrdManualUI::PosOrdManualUI(void * control,
 		tableCallbackType = 1;//need to tell WidgetTable that callbacks will be sent to Control, not UserInterface
 
 	std::vector <std::string>  col_names = { "Description", "Value" };
-	std::vector <std::string>  button_names = { "EMPTY", "SECOND" };
+	std::vector <std::string>  button_names = { "something", "like" };
 
 	mTable = new WidTable1();
+
+//	mTable = new WidgetTable(5, 5, 940, 630, "widgettable", this, top_row_price, number_rows,
+//		number_cols, how_many_cols_are_buttons, col_names, button_names);
 
 //	mTable = new WidgetTable(0, 0, 960, 1010, "", NULL , top_row_price, number_rows,
 //		number_cols, how_many_cols_are_buttons, col_names, button_names, tableCallbackType, 2);

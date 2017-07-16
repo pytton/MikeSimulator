@@ -33,9 +33,7 @@ int frequency_of_primes(int n) {
 	return freq;
 }
 
-//Severity	Code	Description	Project	File	Suppression State	Line
-//Error	LNK2019	unresolved external symbol "public: __thiscall UserInterface::UserInterface(class Control *,double,int,int)" (? ? 0UserInterface@@QAE@PAVControl@@NHH@Z) referenced in function "public: __thiscall Control::Control(class MikeSimulator *,int)" (? ? 0Control@@QAE@PAVMikeSimulator@@H@Z)	FreshMikeSimulator	C : \Users\pytto\Documents\Visual Studio 2015\Projects\ExperimentsToErase\FreshMikeSimulator\FreshMikeSimulator\Control.obj		1
-//
+
 Control::Control(MikeSimulator * p, int starting_bid)
 {
 	ptr_to_mikesimulator = p;
@@ -47,12 +45,12 @@ Control::Control(MikeSimulator * p, int starting_bid)
 
 	//experimenting:
 
-	interface2 = NULL;  // new UserInterface(this, starting_bid);
-	experimentpositions = NULL;  // new PosOrders();
-	WidgetTable * table = NULL;  // interface2->GetTable();
-	printerexperiment = new ControlPrinter(experimentpositions, table);
+	//interface2 = NULL;  // new UserInterface(this, starting_bid);
+	//experimentpositions = NULL;  // new PosOrders();
+	//WidgetTable * table = NULL;  // interface2->GetTable();
+	//printerexperiment = new ControlPrinter(experimentpositions, table);
 
-	experPosOrdUI = new Mike::PosOrdManualUI(NULL);
+	//experPosOrdUI = new Mike::PosOrdManualUI(NULL);
 	
 	
 //	cout << "Enter name of second Window: " << endl;
@@ -80,12 +78,12 @@ Control::Control(MikeSimulator * p, int starting_bid)
 	data = new Data(this, starting_bid);
 	m_pPriceControlUI = new PriceControlUI(this, starting_bid);
 	
-	simpleTableWindow = new SimpleTableWindow(this, 0 );
+//	simpleTableWindow = new SimpleTableWindow(this, 0 );
 
 	manualPositions = new MikePositionOrders("Manual", 1000000);
 	rePriceWidTable(userInterface);
 
-	prototypePosOrders = new Mike::PosOrders();
+//	prototypePosOrders = new Mike::PosOrders();
 	
 	//setting up previous static variables in Control::timeoutfunction(void*p)
 	timer.reset();
@@ -112,7 +110,7 @@ void Control::MainLoop()
 {
 	//experimenting:
 	//TODO: Erase this after finished experimenting
-	if (!mExperimentActive) experimenting();
+//	if (!mExperimentActive) experimenting();
 	//end experiment
 
 	using namespace std;
@@ -199,7 +197,7 @@ void Control::printCurrentAll()
 
 	//TODO:
 	//experimenting:
-	printerexperiment->printall();
+//	printerexperiment->printall();
 
 	//end experimenting;
 
