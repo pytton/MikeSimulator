@@ -185,7 +185,7 @@ WidgetTable::WidgetTable() : WidTableBase(5, 5, 500, 400, "Empty")
 
 void WidgetTable::virtButtonCb(Fl_Widget * w, void * p)
 {
-	My_fl_button * myButton = (My_fl_button*)w;  //myButton is the button that was pressed
+	Mike::My_fl_button * myButton = (Mike::My_fl_button*)w;  //myButton is the button that was pressed
 	WidgetTable * thisTable = (WidgetTable*)p;  //thisTable is the table in which the button was pressed
 
 												//HACK: check that there are no null pointers:

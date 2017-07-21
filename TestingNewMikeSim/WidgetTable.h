@@ -3,13 +3,17 @@
 
 #include "WidTableBase.h"
 
-
 class MikeSimulator;
 class UserInterface;
 class MikePosition;
 class MikeOrdersAtPrice;
 class Control;
 class WidTable1;
+
+namespace Mike {
+	class WidTableBase;
+	class My_fl_button;
+}
 
 //   #     #                              #######                              #  
 //   #  #  # # #####   ####  ###### #####    #      ##   #####  #      ###### ### 
@@ -21,7 +25,7 @@ class WidTable1;
 // 
 
 //WigetTable - table with cells drawed inside it
-class WidgetTable : public WidTableBase
+class WidgetTable : public Mike::WidTableBase
 {	friend class UserInterface;
 	friend class WidTable1;
 
