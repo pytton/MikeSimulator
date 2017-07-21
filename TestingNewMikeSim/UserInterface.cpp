@@ -301,61 +301,61 @@ void UserInterface::PrintAll(
 #include "WidgetTable.h"
 #include "Control.h"
 
-
-SimpleTableWindow::SimpleTableWindow(Control * ptrControl, short windownumber)
-{
-	mwindow1->begin();
-	delete mTable;
-
-	int top_row_price = 250,
-		number_rows = 20,
-		number_cols = 5,
-		how_many_cols_are_buttons = 2,
-		tableCallbackType = 1;//need to tell WidgetTable that callbacks will be sent to Control, not UserInterface
-
-	std::vector <std::string>  col_names = { "Description", "Value" };
-	std::vector <std::string>  button_names = { "EMPTY", "SECOND" };
-
-	widTable = new WidgetTable(5, 5, 940, 630, "widgettable", ptrControl, top_row_price, number_rows,
-		number_cols, how_many_cols_are_buttons, col_names, button_names, tableCallbackType, windownumber);
-
-	mwindow1->end();
-	mwindow1->label("experimental");
-
-	widTable->SetColumnnWidth(90);
-
-	widTable->redraw();
-	mwindow1->show();
-}
-
-
-SimpleTableWindow::~SimpleTableWindow()
-{
-}
-
-void SimpleTableWindow::rePriceWidTable(long priceattoprow)
-//UNDER CONSTRUCTION
-//Updates prices displayed in WidgetTable to between 100 above and below
-//current bid price in Data class
-//Updates slider in UserInterface to current Bid price
-{
-	WidgetTable * pTable = widTable;
-
-	pTable->SetTopRowPrice(priceattoprow);
-	//draw the new widget table:
-	this->mwindow1->hide();
-	this->mwindow1->redraw();
-	this->mwindow1->show();
-
-
-
-	//populate price column with prices:
-
-	//pUI->GetTable()->ClearColumn(6);	//clear the bid and ask columns
-	//pUI->GetTable()->ClearColumn(7);
-	//pUI->GetTable()->PopPriceCol();
-}
-
+//
+//SimpleTableWindow::SimpleTableWindow(Control * ptrControl, short windownumber)
+//{
+//	mwindow1->begin();
+//	delete mTable;
+//
+//	int top_row_price = 250,
+//		number_rows = 20,
+//		number_cols = 5,
+//		how_many_cols_are_buttons = 2,
+//		tableCallbackType = 1;//need to tell WidgetTable that callbacks will be sent to Control, not UserInterface
+//
+//	std::vector <std::string>  col_names = { "Description", "Value" };
+//	std::vector <std::string>  button_names = { "EMPTY", "SECOND" };
+//
+//	widTable = new WidgetTable(5, 5, 940, 630, "widgettable", ptrControl, top_row_price, number_rows,
+//		number_cols, how_many_cols_are_buttons, col_names, button_names, tableCallbackType, windownumber);
+//
+//	mwindow1->end();
+//	mwindow1->label("experimental");
+//
+//	widTable->SetColumnnWidth(90);
+//
+//	widTable->redraw();
+//	mwindow1->show();
+//}
+//
+//
+//SimpleTableWindow::~SimpleTableWindow()
+//{
+//}
+//
+//void SimpleTableWindow::rePriceWidTable(long priceattoprow)
+////UNDER CONSTRUCTION
+////Updates prices displayed in WidgetTable to between 100 above and below
+////current bid price in Data class
+////Updates slider in UserInterface to current Bid price
+//{
+//	WidgetTable * pTable = widTable;
+//
+//	pTable->SetTopRowPrice(priceattoprow);
+//	//draw the new widget table:
+//	this->mwindow1->hide();
+//	this->mwindow1->redraw();
+//	this->mwindow1->show();
+//
+//
+//
+//	//populate price column with prices:
+//
+//	//pUI->GetTable()->ClearColumn(6);	//clear the bid and ask columns
+//	//pUI->GetTable()->ClearColumn(7);
+//	//pUI->GetTable()->PopPriceCol();
+//}
+//
 
 //     ___             ___         _                                _        _____ 
 //    / _ \___  ___   /___\_ __ __| | /\/\   __ _ _ __  _   _  __ _| |/\ /\  \_   \
@@ -364,40 +364,40 @@ void SimpleTableWindow::rePriceWidTable(long priceattoprow)
 //  \/    \___/|___/\___/ |_|  \__,_\/    \/\__,_|_| |_|\__,_|\__,_|_|\___/\____/  
 //                                                                                 
 
-Mike::PosOrdManualUI::PosOrdManualUI(void * control,
-	double starting_bid_price,
-	int numberOfColumns,
-	int numberOfButtoncolumns)
-{
-	mWindow1->begin();
-	delete mTable;
-
-	int top_row_price = 250,
-		number_rows = 20,
-		number_cols = 5,
-		how_many_cols_are_buttons = 2,
-		tableCallbackType = 1;//need to tell WidgetTable that callbacks will be sent to Control, not UserInterface
-
-	std::vector <std::string>  col_names = { "Description", "Value" };
-	std::vector <std::string>  button_names = { "something", "like" };
-
-	mTable = new WidTable1();
-
-//	mTable = new WidgetTable(5, 5, 940, 630, "widgettable", this, top_row_price, number_rows,
-//		number_cols, how_many_cols_are_buttons, col_names, button_names);
-
-//	mTable = new WidgetTable(0, 0, 960, 1010, "", NULL , top_row_price, number_rows,
-//		number_cols, how_many_cols_are_buttons, col_names, button_names, tableCallbackType, 2);
-
-//	mTable->SetColumnnWidth(90);
-
-	mTable->redraw();
-	mWindow1->end();
-	mWindow1->label("experimental");
-
-	mWindow1->show();
-}
-//
-//PosOrdManualUI::~PosOrdManualUI()
+//Mike::PosOrdManualUI::PosOrdManualUI(void * control,
+//	double starting_bid_price,
+//	int numberOfColumns,
+//	int numberOfButtoncolumns)
 //{
+//	mWindow1->begin();
+//	delete mTable;
+//
+//	int top_row_price = 250,
+//		number_rows = 20,
+//		number_cols = 5,
+//		how_many_cols_are_buttons = 2,
+//		tableCallbackType = 1;//need to tell WidgetTable that callbacks will be sent to Control, not UserInterface
+//
+//	std::vector <std::string>  col_names = { "Description", "Value" };
+//	std::vector <std::string>  button_names = { "something", "like" };
+//
+//	mTable = new WidTable1();
+//
+////	mTable = new WidgetTable(5, 5, 940, 630, "widgettable", this, top_row_price, number_rows,
+////		number_cols, how_many_cols_are_buttons, col_names, button_names);
+//
+////	mTable = new WidgetTable(0, 0, 960, 1010, "", NULL , top_row_price, number_rows,
+////		number_cols, how_many_cols_are_buttons, col_names, button_names, tableCallbackType, 2);
+//
+////	mTable->SetColumnnWidth(90);
+//
+//	mTable->redraw();
+//	mWindow1->end();
+//	mWindow1->label("experimental");
+//
+//	mWindow1->show();
 //}
+////
+////PosOrdManualUI::~PosOrdManualUI()
+////{
+////}

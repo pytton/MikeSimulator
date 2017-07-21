@@ -117,7 +117,13 @@ public:
 
 	//int GetCurrentBid();	//Used by UserInterface
 private:
-	//members:
+	//                            _                     
+	//   _ __ ___   ___ _ __ ___ | |__   ___ _ __ ___ _ 
+	//  | '_ ` _ \ / _ \ '_ ` _ \| '_ \ / _ \ '__/ __(_)
+	//  | | | | | |  __/ | | | | | |_) |  __/ |  \__ \_ 
+	//  |_| |_| |_|\___|_| |_| |_|_.__/ \___|_|  |___(_)
+	//                                                  
+
 	MikeSimulator * ptr_to_mikesimulator;//ptr to class creating this one
 	UserInterface * userInterface;
 	Data * data;
@@ -156,16 +162,10 @@ protected:
 	//              |_|                                                        
 	//TODO: Erase this after finished experimenting
 public:
-	UserInterface * interface2;
-	Mike::PosOrders * experimentpositions;
-	ControlPrinter * printerexperiment;
 
-	Mike::SimpleStringInputFLTK * stringinput;
-
+	void experimentConstructor();
 	void experimenting();
 	bool mExperimentActive = false;
-
-	Mike::PosOrdManualUI * experPosOrdUI;
 
 };
 

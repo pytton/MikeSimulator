@@ -39,56 +39,20 @@ Control::Control(MikeSimulator * p, int starting_bid)
 	ptr_to_mikesimulator = p;
 	std::cout << "Control constructed. Starting bid: " << starting_bid << std::endl;
 
-//	userInterface = new ManualInterface(this, /*p,*/ starting_bid);
 	userInterface = new UserInterface(this, /*p,*/ starting_bid);
-
-
-	//experimenting:
-
-	//interface2 = NULL;  // new UserInterface(this, starting_bid);
-	//experimentpositions = NULL;  // new PosOrders();
-	//WidgetTable * table = NULL;  // interface2->GetTable();
-	//printerexperiment = new ControlPrinter(experimentpositions, table);
-
-	//experPosOrdUI = new Mike::PosOrdManualUI(NULL);
-	
-	
-//	cout << "Enter name of second Window: " << endl;
-//	std::string newname = "name";
-//
-//	stringinput = new  Mike::SimpleStringInputFLTK  ("Name of new window:");
-//
-//	stringinput->mInputField->label("new name???");
-//
-//	while (stringinput->mValueReady == false) {
-//		cout << "Waiting" << endl;
-//		Sleep(100); }
-//
-////	newname = stringInput.getStringValue("Enter name of new window:");
-//
-//	//cin >> newname;
-//	try {
-//		interface2->changename(newname);
-//	}
-//	catch (...) { cout << "Wrong name!"; }
-//
-
-	//end experiment
-
 	data = new Data(this, starting_bid);
 	m_pPriceControlUI = new PriceControlUI(this, starting_bid);
-	
-//	simpleTableWindow = new SimpleTableWindow(this, 0 );
-
 	manualPositions = new MikePositionOrders("Manual", 1000000);
 	rePriceWidTable(userInterface);
-
-//	prototypePosOrders = new Mike::PosOrders();
 	
 	//setting up previous static variables in Control::timeoutfunction(void*p)
 	timer.reset();
 	resetTimer = true;
 	previouselapsedtime = 0;
+	
+	//experimenting:
+	experimentConstructor();
+	//end experiment
 }
 
 void Control::timeoutfunction(void*p)
@@ -110,14 +74,12 @@ void Control::MainLoop()
 {
 	//experimenting:
 	//TODO: Erase this after finished experimenting
-//	if (!mExperimentActive) experimenting();
+	if (mExperimentActive) experimenting();
 	//end experiment
 
 	using namespace std;
 	mainLoopfinished = false;//to ensure that the timeoutfunction does not call it again while it is executing
-	
-//	cout << "\nMainLoop Called. " << endl;
-							 
+								 
 	//TODO: work on 1 and 2 first
 	//1 check prices	-- this is done by manual up/down now
 	int tickerId = 3;//1-EUR, 2-GBP, 3-SPY, 4-DIA, 5-IWM, 6-QQQ
@@ -127,25 +89,22 @@ void Control::MainLoop()
 	manualPositions->checkFills(data->GetBidPrice(), data->GetAskPrice());
 	manualPositions->updateOpenOrdersByPrice();
 	
-
 	//2a check/print current position, profit/loss, etc
 	//3 make decisions	-- now just manual orders
 	//4 display results/decisions
-
 //	data->PrintoutDataInConsole();
 	
 	printCurrentAll();
 	
 	//add other functions as needed
 	//5 send orders		-- for algos - nothing now
-	userInterface->PrintBidAsk(data->GetBidPrice(), data->GetAskPrice());
+	if (userInterface != nullptr) userInterface->PrintBidAsk(data->GetBidPrice(), data->GetAskPrice());
 
 	//print out the size in bytes of positionbook for testing purposes:
 //	cout << sizeof(*(manualPositions->GetMikePositions())) << endl;
 	//cout << sizeof(*manualPositions) << endl;
-	PositionBook * tempPos;
-	tempPos = manualPositions->positionbook;
-
+//	PositionBook * tempPos;
+//	tempPos = manualPositions->positionbook;
 	//cout << tempPos->positionBook.size() << endl;
 	//cout << sizeof(MikePosition) * (tempPos->positionBook.size()) << endl;
 	//
@@ -153,8 +112,6 @@ void Control::MainLoop()
 //	cout << sizeof(MikePosition) << endl;
 //	cout << manualPositions->positionbook.size() << endl;
 
-
-	//printCurrentAll();
 	mainLoopfinished = true;//to ensure that the timeoutfunction does not call it again while it is executing
 }
 
@@ -163,6 +120,10 @@ void Control::printCurrentAll()
 	Data * myData = data;
 	UserInterface * myInterface = userInterface;
 	MikePositionOrders * myPositionOrders = manualPositions;
+
+	if (myData == nullptr) return;
+	if (myInterface == nullptr) return;
+	if (myPositionOrders == nullptr) return;
 
 	const MikePosVect *constPositions = myPositionOrders->GetMikePositions();
 
@@ -194,12 +155,6 @@ void Control::printCurrentAll()
 		constPositions,
 		ordersAtPrice
 		);
-
-	//TODO:
-	//experimenting:
-//	printerexperiment->printall();
-
-	//end experimenting;
 
 }
 
@@ -356,6 +311,14 @@ void Control::CallbkPriceControlUI(PriceControlUI * p, BtnPressed btn, Fl_Widget
 			return;
 		}
 	}
+	if (btn == BtnPressed::EXPERIMENT) {
+		cout << "Experiment called" << endl;
+		if (userInterface != nullptr) {
+			userInterface->m_window1->show();
+			/*delete userInterface;
+			userInterface = nullptr;*/
+		}
+	}
 }
 
 void Control::CallbkSmplTableWin(int rowPressed, int colPressed, long price, short windownumber)
@@ -390,32 +353,14 @@ void Control::stoploop()
 }
 
 
+void Control::experimentConstructor()
+{
+}
+
 //TODO: Erase this after finished experimenting
 void Control::experimenting()
 {
-//	if (mExperimentActive) return;
-//	cout << "Enter name of second Window: " << endl;
-//	std::string newname = "name";
-//
-//	stringinput = new  Mike::SimpleStringInputFLTK("Name of new window:");
-//
-//	Sleep(1000);
-//
-////	stringinput->mInputField->label("new name???");
-//
-//	while (stringinput->mValueReady == false) {
-//		cout << "Waiting" << endl;
-//		
-//		//Sleep(100);
-//	}
-//
-//	//	newname = stringInput.getStringValue("Enter name of new window:");
-//
-//	//cin >> newname;
-//	try {
-//		interface2->changename(newname);
-//	}
-//	catch (...) { cout << "Wrong name!"; }
+
 
 }
 

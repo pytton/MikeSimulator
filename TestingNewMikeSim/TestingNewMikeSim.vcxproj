@@ -141,6 +141,7 @@
     <ClInclude Include="PriceControlUI.h" />
     <ClInclude Include="UserInterface.h" />
     <ClInclude Include="WidgetTable.h" />
+    <ClInclude Include="WidTableBase.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="APINoThread.cpp" />
@@ -165,6 +166,7 @@
     <ClCompile Include="ThreadMainFunction.cpp" />
     <ClCompile Include="UserInterface.cpp" />
     <ClCompile Include="WidgetTable.cpp" />
+    <ClCompile Include="WidTableBase.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

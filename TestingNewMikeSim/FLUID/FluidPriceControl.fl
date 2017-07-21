@@ -8,7 +8,7 @@ class FluidPriceControlUI {open
   } {
     Fl_Window m_window1 {
       label {Price Control} open
-      xywh {601 74 177 602} type Double visible
+      xywh {605 78 169 594} type Double visible
     } {
       Fl_Button m_btnUp {
         label Up
@@ -43,8 +43,12 @@ class FluidPriceControlUI {open
         xywh {55 215 60 50} align 128
       }
       Fl_Button m_btnStartLoop {
-        label {Start Loop} selected
+        label {Start Loop}
         xywh {55 90 60 50} align 128
+      }
+      Fl_Button m_btnExperiment {
+        label Experiment selected
+        xywh {65 15 90 40}
       }
     }
   }

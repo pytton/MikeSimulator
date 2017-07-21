@@ -21,5 +21,6 @@ public:
   Fl_Button *m_btnLiveDataConsolePrint;
   Fl_Button *m_btnConnectLiveData;
   Fl_Button *m_btnStartLoop;
+  Fl_Button *m_btnExperiment;
 };
 #endif

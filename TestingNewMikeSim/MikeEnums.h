@@ -27,7 +27,8 @@ enum class BtnPressed
 	PRINTBUT,
 	LIVEDATACONSOLEPRINTOUT,
 	CONNECTLIVEDATA,
-	STARTLOOP
+	STARTLOOP,
+	EXPERIMENT
 };
 
 enum class OrderStatus {

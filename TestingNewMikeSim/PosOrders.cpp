@@ -7,7 +7,7 @@ using namespace std;
 Mike::PosOrders::PosOrders()
 {
 	COMMENTSON = true;
-	myWidTable = new WidgetTable(10, 10, 20, 20, "myTable");
+//	myWidTable = new WidgetTable(10, 10, 20, 20, "myTable");
 }
 
 Mike::PosOrders::~PosOrders()

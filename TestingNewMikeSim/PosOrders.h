@@ -72,6 +72,7 @@ public:
 		return orderId < other.orderId;
 	}
 };
+
 class MapMikePosition : public MikePosition {
 	bool operator<(const MapMikePosition & other) const {
 		return price < other.price;
@@ -92,7 +93,7 @@ namespace Mike {
 		PosOrders();
 		~PosOrders();
 		
-	private:
+	protected:
 		//main elements of this class:
 		PositionMap mPositions;  //stores all open positions
 		Orders mOpenOrders;  //stores all open orders
@@ -108,7 +109,7 @@ namespace Mike {
 		bool COMMENTSON;  //toggles cout info from class functions
 
 	protected:
-		WidgetTable * myWidTable;
+	//	WidgetTable * myWidTable;
 
 
 		//controlling orders and positions:

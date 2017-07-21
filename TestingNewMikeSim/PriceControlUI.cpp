@@ -31,6 +31,7 @@ PriceControlUI::PriceControlUI(Control * control, double starting_bid_price, int
 	m_btnLiveDataConsolePrint->callback(m_btnLiveDataConsolePrint_cb, (void*) this);
 	m_btnConnectLiveData->callback(m_btnConnectLiveData_cb, (void*) this);
 	m_btnStartLoop->callback(m_btnStartLoop_cb, (void*) this);
+	m_btnExperiment->callback(m_experimentbtn_cb, (void*) this);
 
 	m_window1->end();
 
@@ -89,4 +90,10 @@ void PriceControlUI::m_btnStartLoop_cb(Fl_Widget * buttonPressed, void * p)
 {
 	PriceControlUI * myPriceControlUI = (PriceControlUI*)p;
 	myPriceControlUI->m_pControl->CallbkPriceControlUI(myPriceControlUI, BtnPressed::STARTLOOP, buttonPressed);
+}
+
+void PriceControlUI::m_experimentbtn_cb(Fl_Widget * buttonPressed, void * p)
+{
+	PriceControlUI * myPriceControlUI = (PriceControlUI*)p;
+	myPriceControlUI->m_pControl->CallbkPriceControlUI(myPriceControlUI, BtnPressed::EXPERIMENT, buttonPressed);
 }
