@@ -80,6 +80,11 @@ long MikePositionOrders::CalcTotalOpenPos()
 	return positionbook->CalcTotalOpenPos();
 }
 
+double MikePositionOrders::CalcAvgPos()
+{
+	return positionbook->CalcAvgPos();
+}
+
 void MikePositionOrders::calculateIndividualPLs(long bidprice, long askprice)
 {
 }

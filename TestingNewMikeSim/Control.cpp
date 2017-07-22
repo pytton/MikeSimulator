@@ -137,7 +137,7 @@ void Control::printCurrentAll()
 		askPrice,
 		bidPrice;
 
-	//double averagePrice = myPositionOrders->cal
+	double averagePrice = myPositionOrders->CalcAvgPos();
 
 	askPrice = myData->GetAskPrice();
 	bidPrice = myData->GetBidPrice();
@@ -156,7 +156,7 @@ void Control::printCurrentAll()
 		bidPrice,
 		constPositions,
 		ordersAtPrice,
-		0
+		averagePrice
 		);
 
 }
@@ -214,6 +214,23 @@ void Control::CallbkUserInt(UserInterface * p, BtnPressed btn,
 
 void Control::CallbkWidTable(int row, int col, long price, MikeOrderType OrderTypePressed, int orderSize) {
 	using namespace std;
+
+	//PRICE GUARD - make sure orders executed at prices no better than bid/ask:
+	//if Order Type was BUY LMT and price was above current ask price, make the price equal to ask price:
+	if (OrderTypePressed == BUYLMT) {
+		if (price > data->GetAskPrice()) price = data->GetAskPrice();	}
+	//if Order Type was BUY STP and price was below current ask price, make the price equal to ask price:
+	if (OrderTypePressed == BUYSTP) {
+		if (price < data->GetAskPrice()) price = data->GetAskPrice();
+	}
+	//if Order Type was SELL LMT and price was below current bid price, make the price equal to bid price:
+	if (OrderTypePressed == SELLLMT) {
+		if (price < data->GetBidPrice()) price = data->GetBidPrice();
+	}
+	//if Order Type was SELL STP and price was above current bid price, make the price equal to bid price:
+	if (OrderTypePressed == SELLSTP) {
+		if (price > data->GetBidPrice()) price = data->GetBidPrice();
+	}
 
 	//send order to OrderBook if order type is not 'cancel order':	
 	if (OrderTypePressed != CXLORDER) { manualPositions->newOrder(OrderTypePressed, price, orderSize); }

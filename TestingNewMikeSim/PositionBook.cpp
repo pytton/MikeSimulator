@@ -260,6 +260,18 @@ long PositionBook::CalcAllTotalPL(long bidprice, long askprice)
 
 long PositionBook::CalcTotalOpenPos()
 {
+	long totalOpenPosition = 0;
+	//go through every position in the openPosIndex and add up all the open_amount values:
+	for (long price : openPosIndexSet)
+	{
+		totalOpenPosition = totalOpenPosition + positionBook.at(price).open_amount;
+	}
+
+	return totalOpenPosition;
+}
+
+double PositionBook::CalcAvgPos()
+{
 	//Formula for calculating:
 	//PosPrice x PosOpenAmount = PosWeight
 	//TotalPosWeight = sum of all PosWeight
@@ -279,22 +291,10 @@ long PositionBook::CalcTotalOpenPos()
 		totalPosOpenAmount += positionBook.at(price).open_amount;
 	}
 
-	averageWeighedPos = totalPosWeight / totalPosOpenAmount;
+	if(totalPosOpenAmount !=0) averageWeighedPos = totalPosWeight / totalPosOpenAmount;
+	else averageWeighedPos = 0;
 
 	return averageWeighedPos;
-}
-
-double PositionBook::CalcAvgPos()
-{
-	//go through all open positions and generate the average weighed position:
-	for (long price : openPosIndexSet)
-	{
-		positionBook.at(price).open_amount;
-
-	//	allTotalPL = allTotalPL + positionBook.at(price).total_pl;
-	}
-
-	return 0;
 }
 
 void PositionBook::calculateIndividualPLs(long bidprice, long askprice)

@@ -75,11 +75,11 @@ void UserInterface::SetColButNames(std::vector <std::string> &col_names, std::ve
 	col_names.clear();
 
 	col_names.push_back("CANCEL\nORDER");
-	col_names.push_back("BUY");
-	col_names.push_back("BUY");
-	col_names.push_back("SELL");
-	col_names.push_back("SELL");
-	col_names.push_back("ZERO P/L\nPOINT");
+	col_names.push_back("BUY\nLIMIT");
+	col_names.push_back("BUY\nSTOP");
+	col_names.push_back("SELL\nLIMIT");
+	col_names.push_back("SELL\nSTOP");
+	col_names.push_back("AVERAGE\nPRICE");
 	col_names.push_back("BID");
 	col_names.push_back("ASK");
 	col_names.push_back("B LMT\nSIZE");
@@ -90,9 +90,9 @@ void UserInterface::SetColButNames(std::vector <std::string> &col_names, std::ve
 	col_names.push_back("OPEN\nP/L");
 	col_names.push_back("CLOSED\nP/L");
 	col_names.push_back("TOTAL\nP/L");
-	col_names.push_back("AVERAGE\nPRICE");
+	col_names.push_back("ZERO P/L\nPOINT");
 
-
+	
 	button_names.clear();
 
 	button_names.push_back("CXL");
@@ -307,11 +307,22 @@ void UserInterface::PrintAll(
 
 	snprintf(buffer, 20, "%d", askPrice);
 
+	snprintf(buffer, 20, "%f", averagePrice);
+	m_AvgPosPrice->value(buffer);
 
 	m_curr_ask->value(askPrice);
 	m_curr_bid->value(bidPrice);
 
+	//pring positions and orders in Table:
 	GetTable()->printPositions(openPositions, openOrdersAtPrice);
+
+	//print average price in Table:
+	WidgetTable * table = GetTable();
+	table->ClearColumn(table->avgPriceCol);
+	snprintf(buffer, 20, "%.0f", averagePrice);
+	int rowToPrintIn = 0;
+	rowToPrintIn = table->RowOfPrice((long)averagePrice);
+	table->printInTable(rowToPrintIn, table->avgPriceCol, buffer);
 }
 
 

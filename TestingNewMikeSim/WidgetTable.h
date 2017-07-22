@@ -135,6 +135,7 @@ protected:
 		openPLCol = 13,
 		closedPLCol = 14,
 		totalPLCol = 15,
+		avgPriceCol = 5,
 		windownumber = 0;//for callbacks sent to Control - to tell which window its coming from. must be set in constructor
 
 	void PopPriceCol(/*WidgetTable * myTable*/); //populates the Price column with prices based on current TopRowPrice

@@ -31,5 +31,6 @@ public:
   Fl_Value_Input *m_order_size;
   Fl_Button *m_btn_resetOrdSize;
   Fl_Button *m_btn_CancelAllOrders;
+  Fl_Output *m_AvgPosPrice;
 };
 #endif

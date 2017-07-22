@@ -80,6 +80,8 @@ public:
 	long CalcAllTotalPL(long bidprice, long askprice);
 	//calculates the total aggregate position for all active positions of the whole book
 	long CalcTotalOpenPos();
+	//calculate average weighed position price:
+	double CalcAvgPos();
 	//calculate individual P/L for each position that is stored in the openPosIndex
 	//this should be done before attempting to print out the positions
 	void calculateIndividualPLs(long bidprice, long askprice);

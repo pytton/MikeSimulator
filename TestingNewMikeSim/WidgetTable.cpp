@@ -188,7 +188,7 @@ void WidgetTable::virtButtonCb(Fl_Widget * w, void * p)
 	Mike::My_fl_button * myButton = (Mike::My_fl_button*)w;  //myButton is the button that was pressed
 	WidgetTable * thisTable = (WidgetTable*)p;  //thisTable is the table in which the button was pressed
 
-												//HACK: check that there are no null pointers:
+	//check that there are no null pointers:
 	if (tabletype != 0 && tabletype != 1) return;
 	if (thisTable->ptr_to_UserInterface == NULL && tabletype == 0) return;
 	if (thisTable->GetControl() == NULL && tabletype == 1) return;
@@ -227,14 +227,14 @@ void WidgetTable::printPositions(const std::vector <MikePosition> *openPositions
 	int TopDisplayedPrice = GetTopRowPrice();		//this is the highest price currently displayed in WidgetTable
 	int BottomDisplayedPrice = GetBottomRowPrice();	//this is the lowest as above
 
-													//	cout << "toprowprice: " << GetTopRowPrice()<< endl;
-													//	cout << "bottomrowprice: " << GetBottomRowPrice()<< endl;
+	//	cout << "toprowprice: " << GetTopRowPrice()<< endl;
+	//	cout << "bottomrowprice: " << GetBottomRowPrice()<< endl;
 
-													//HACK: moved to inside of function to be able to reset it. create a way to only print to rows which containg any data - for speed.
-													//	static set <long> usedprices;//this set contains prices that have been used in the previous printout. in this iteration of printPositions, I will use the function ClearRow to erase this row before printing new values.
-													//	static set <long> notusedprices;//contains prices that have been erased at first but not filled with new values - which means they do not need to be erased again next time. this set will be used to remove values from usedprices so that we do not erase empty rows everytime
+	//HACK: moved to inside of function to be able to reset it. create a way to only print to rows which containg any data - for speed.
+	//	static set <long> usedprices;//this set contains prices that have been used in the previous printout. in this iteration of printPositions, I will use the function ClearRow to erase this row before printing new values.
+	//	static set <long> notusedprices;//contains prices that have been erased at first but not filled with new values - which means they do not need to be erased again next time. this set will be used to remove values from usedprices so that we do not erase empty rows everytime
 
-													//check if Control::rePriceWidTable has been called - if it has, erase all rows before printing anything in them:
+	//check if Control::rePriceWidTable has been called - if it has, erase all rows before printing anything in them:
 	if (widgetTableNeedsClearAll) {
 		for (int displayPrice = BottomDisplayedPrice; displayPrice <= TopDisplayedPrice; displayPrice++) {
 			ClearRow(RowOfPrice(displayPrice));
