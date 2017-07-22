@@ -238,16 +238,12 @@ long PositionBook::CalcAllClosedPL(long bidprice, long askprice)
 
 long PositionBook::CalcAllTotalPL(long bidprice, long askprice)
 {
-	static long prevbidprice = 0;
-	static long prevaskprice = 0; //for speed - to calculate only if bid or ask price has changed
-	static long allTotalPL = 0;
-
 	//first - check if bid or ask price has changed:
 	if (bidprice != prevbidprice || askprice != prevaskprice)
 	{
-		allTotalPL = 0;//allTotalPL is static!
+		allTotalPL = 0;
 
-					   //go through every position in the openPosIndex and calculate each individual position's openPL:
+		//go through every position in the openPosIndex and calculate each individual position's openPL:
 		for (long price : openPosIndexSet)
 		{
 			positionBook.at(price).calculatePL(bidprice, askprice);
@@ -264,14 +260,41 @@ long PositionBook::CalcAllTotalPL(long bidprice, long askprice)
 
 long PositionBook::CalcTotalOpenPos()
 {
-	long totalOpenPosition = 0;
+	//Formula for calculating:
+	//PosPrice x PosOpenAmount = PosWeight
+	//TotalPosWeight = sum of all PosWeight
+	//TotalPosOpenAmount = sum of all PosOpenAmount
+	//averageWeighedPos = TotalPosWeight / TotalPosOpenAmount
+
+	long posWeight = 0;
+	double totalPosWeight = 0.0;
+	double totalPosOpenAmount = 0.0;
+
+	averageWeighedPos = 0;
 	//go through every position in the openPosIndex and add up all the open_amount values:
 	for (long price : openPosIndexSet)
 	{
-		totalOpenPosition = totalOpenPosition + positionBook.at(price).open_amount;
+		posWeight = positionBook.at(price).price * positionBook.at(price).open_amount;
+		totalPosWeight += posWeight;
+		totalPosOpenAmount += positionBook.at(price).open_amount;
 	}
 
-	return totalOpenPosition;
+	averageWeighedPos = totalPosWeight / totalPosOpenAmount;
+
+	return averageWeighedPos;
+}
+
+double PositionBook::CalcAvgPos()
+{
+	//go through all open positions and generate the average weighed position:
+	for (long price : openPosIndexSet)
+	{
+		positionBook.at(price).open_amount;
+
+	//	allTotalPL = allTotalPL + positionBook.at(price).total_pl;
+	}
+
+	return 0;
 }
 
 void PositionBook::calculateIndividualPLs(long bidprice, long askprice)

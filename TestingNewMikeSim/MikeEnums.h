@@ -28,7 +28,8 @@ enum class BtnPressed
 	LIVEDATACONSOLEPRINTOUT,
 	CONNECTLIVEDATA,
 	STARTLOOP,
-	EXPERIMENT
+	EXPERIMENT,
+	CANCELALLORDERS
 };
 
 enum class OrderStatus {
@@ -69,6 +70,9 @@ public:
 
 	//for future implementation.
 	bool partialFill = false;
+
+	//was the order cancelled?
+	bool cancelled = false;
 };
 
 //this class aggregates all the open orders by price. there can be multiple orders of

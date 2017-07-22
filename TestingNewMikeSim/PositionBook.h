@@ -46,6 +46,8 @@ public:
 	long CalcAllTotalPL(long bidprice, long askprice);
 	//calculates the total aggregate position for all active positions of the whole book
 	long CalcTotalOpenPos();
+	//calculate average weighed position price:
+	double CalcAvgPos();
 	//calculate individual P/L for each position that is stored in the openPosIndex
 	//this should be done before attempting to print out the positions
 	void calculateIndividualPLs(long bidprice, long askprice);
@@ -58,7 +60,7 @@ private:
 	//stores all the positions
 	//the vector number reflects the price in cents - eg positionBook[10073]
 	//reflects a price of 100 dollars and 73 cents
-public: //for testing, make private
+//public: //for testing, make private
 	std::vector <MikePosition> positionBook;
 
 	///////////////////////////////////////////////////////////
@@ -83,6 +85,15 @@ public: //for testing, make private
 
 	//simple timer for testing purposes:
 	Timer * timer;
+
+private:
+	//vars used by PositionBook::CalcAllTotalPL(long bidprice, long askprice):
+	 long prevbidprice = 0;
+	 long prevaskprice = 0; 
+	 long allTotalPL = 0;
+	 //vars used by PositionBook::CalcAvgPos():
+	 double averageWeighedPos = 0;
+
 };
 
 #endif//_POSITIONBOOK_H_INCLUDED_

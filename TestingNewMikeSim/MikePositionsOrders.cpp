@@ -4,6 +4,7 @@
 #include <string>
 #include <set>
 #include <unordered_set>
+#include <stack>
 
 #include "MikePositionsOrders.h"
 #include <iostream>
@@ -26,8 +27,8 @@ MikePositionOrders::MikePositionOrders(std::string name, long highestPrice)
 	nameOfBook = name;
 
 	//BELOW TEMPORARY FIX FOR REFACTORING:
-	refactoringPositionvector.resize(highestPrice + 1);
-	refactorOrdersBP.resize(highestPrice + 1);
+//	refactoringPositionvector.resize(highestPrice + 1);
+//	refactorOrdersBP.resize(highestPrice + 1);
 
 }
 
@@ -52,7 +53,6 @@ void MikePositionOrders::checkFills(long bidPrice, long askPrice)
 const std::vector<MikePosition>* MikePositionOrders::GetMikePositions()
 {
 	return positionbook->GetMikePositions();
-//	return nullptr;
 }
 
 void MikePositionOrders::fillposition(int posprice, long fillprice, long filledamount, long bidPrice, long askPrice)
@@ -112,7 +112,32 @@ void MikePositionOrders::cancelOrder(long orderId)
 void MikePositionOrders::cancelAllOrdAtPrice(long price)
 {
 	using namespace std;
-	cout << "Not implemented. Cancelling all orders at price: " << price << endl;
+	cout << "Print from MikePositionOrders: testing. Cancelling all orders at price: " << price << endl;
+
+	// first, find all orders with the price supplied; add these orders to the stack
+	std::stack<long> ordersToCancel;
+	//iterate through all orders in orderbook that have an orderID that was stored in the open orders index:
+	for (auto OrderIDToCancel = orderbook->indexOpenOrd.begin(); OrderIDToCancel != orderbook->indexOpenOrd.end(); OrderIDToCancel++) {
+		//if any of the open orders has a price matching the price we want to cancel, add it to the stack of orders we want to cancel:
+		if (orderbook->allOrders.at(*OrderIDToCancel).price == price) {
+			ordersToCancel.push(*OrderIDToCancel);
+		}
+	}
+
+	//go through the stack and erase all the orders:
+	while (ordersToCancel.size() > 0) {
+		long cancelThis = ordersToCancel.top();
+		orderbook->cancelorder(cancelThis);
+		ordersToCancel.pop();
+	}
+	//we erased some orders, so now update open orders by price in orderbook:
+	orderbook->updateOpenOrdersByPrice();
+
+}
+
+void MikePositionOrders::cancelAllOpenOrders()
+{
+	orderbook->cancelAllOpenOrders();
 }
 
 const std::vector<MikeOrdersAtPrice>* MikePositionOrders::GetOpOrdersbyPrice()

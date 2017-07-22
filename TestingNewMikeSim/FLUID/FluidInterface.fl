@@ -4,11 +4,11 @@ header_name {.h}
 code_name {.cxx}
 class FluidInterface {open
 } {
-  Function {FluidInterface()} {open selected
+  Function {FluidInterface()} {open
   } {
     Fl_Window m_window1 {
       label window1 open
-      xywh {227 52 1117 621} type Double visible
+      xywh {428 148 1144 637} type Double visible
     } {
       Fl_Value_Input m_curr_ask {
         label {Current Ask}
@@ -76,6 +76,10 @@ class FluidInterface {open
       Fl_Button m_btn_resetOrdSize {
         label {Reset Order Size}
         xywh {1005 410 130 30} labelsize 10 align 128
+      }
+      Fl_Button m_btn_CancelAllOrders {
+        label {Cancel All Orders} selected
+        xywh {1005 445 130 20} labelsize 12
       }
     }
   }

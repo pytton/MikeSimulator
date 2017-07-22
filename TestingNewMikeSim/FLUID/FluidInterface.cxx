@@ -3,7 +3,7 @@
 #include "FluidInterface.h"
 
 FluidInterface::FluidInterface() {
-  { m_window1 = new Fl_Double_Window(1117, 621, "window1");
+  { m_window1 = new Fl_Double_Window(1144, 637, "window1");
     m_window1->user_data((void*)(this));
     { m_curr_ask = new Fl_Value_Input(1080, 200, 55, 20, "Current Ask");
     } // Fl_Value_Input* m_curr_ask
@@ -58,6 +58,9 @@ FluidInterface::FluidInterface() {
       m_btn_resetOrdSize->labelsize(10);
       m_btn_resetOrdSize->align(Fl_Align(FL_ALIGN_WRAP));
     } // Fl_Button* m_btn_resetOrdSize
+    { m_btn_CancelAllOrders = new Fl_Button(1005, 445, 130, 20, "Cancel All Orders");
+      m_btn_CancelAllOrders->labelsize(12);
+    } // Fl_Button* m_btn_CancelAllOrders
     m_window1->end();
   } // Fl_Double_Window* m_window1
 }

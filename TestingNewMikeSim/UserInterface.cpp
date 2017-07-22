@@ -55,6 +55,7 @@ UserInterface::UserInterface(
 	m_btn_checkFills->callback(m_checkFills_btn_cb, (void*) this);
 	m_btn_printPos->callback(m_printPos_btn_cb, (void*) this);
 	m_btn_resetOrdSize->callback(m_resetOrderSize_cb, (void*) this);
+	m_btn_CancelAllOrders->callback(m_btn_CancelAllOrders_cb, (void*) this);
 
 	m_order_size->value(100);
 
@@ -78,7 +79,7 @@ void UserInterface::SetColButNames(std::vector <std::string> &col_names, std::ve
 	col_names.push_back("BUY");
 	col_names.push_back("SELL");
 	col_names.push_back("SELL");
-	col_names.push_back("PRICE");
+	col_names.push_back("ZERO P/L\nPOINT");
 	col_names.push_back("BID");
 	col_names.push_back("ASK");
 	col_names.push_back("B LMT\nSIZE");
@@ -89,6 +90,8 @@ void UserInterface::SetColButNames(std::vector <std::string> &col_names, std::ve
 	col_names.push_back("OPEN\nP/L");
 	col_names.push_back("CLOSED\nP/L");
 	col_names.push_back("TOTAL\nP/L");
+	col_names.push_back("AVERAGE\nPRICE");
+
 
 	button_names.clear();
 
@@ -172,12 +175,32 @@ void UserInterface::m_resetOrderSize_cb(Fl_Widget * w, void * p)
 	myUserInt->m_order_size->value(100);
 }
 
+void UserInterface::m_btn_CancelAllOrders_cb(Fl_Widget * w, void * p)
+{
+	UserInterface * myUserInt = (UserInterface*)p;
+	if (myUserInt->m_pControl == NULL) { std::cout << "void pointer!" << std::endl; return; }
+	myUserInt->m_pControl->CallbkUserInt(myUserInt, BtnPressed::CANCELALLORDERS);
+}
+
 void UserInterface::m_extra_btn_cb(Fl_Widget *w, void * p)
 {
 	UserInterface * myUserInt = (UserInterface*)p;
 	if (myUserInt->m_pControl == NULL) { std::cout << "void pointer!" << std::endl; return; }
 	myUserInt->m_pControl->CallbkUserInt(myUserInt, BtnPressed::EXTRABTN);
 }
+
+//   __    __  _      _               _    _____         _      _       
+//  / / /\ \ \(_)  __| |  __ _   ___ | |_ /__   \  __ _ | |__  | |  ___ 
+//  \ \/  \/ /| | / _` | / _` | / _ \| __|  / /\/ / _` || '_ \ | | / _ \
+//   \  /\  / | || (_| || (_| ||  __/| |_  / /   | (_| || |_) || ||  __/
+//    \/  \/  |_| \__,_| \__, | \___| \__| \/     \__,_||_.__/ |_| \___|
+//                       |___/                                          
+//     ___         _  _  _                   _                          
+//    / __\  __ _ | || || |__    __ _   ___ | | __ _                    
+//   / /    / _` || || || '_ \  / _` | / __|| |/ /(_)                   
+//  / /___ | (_| || || || |_) || (_| || (__ |   <  _                    
+//  \____/  \__,_||_||_||_.__/  \__,_| \___||_|\_\(_)                   
+//                                                                      
 
 //WidgetTable callback:
 //THIS IS WHERE THE ORDER TYPE IS DETERMINED
@@ -261,7 +284,9 @@ void UserInterface::PrintAll(
 	long askPrice, 
 	long bidPrice,
 	const std::vector <MikePosition> *openPositions,
-	const std::vector <MikeOrdersAtPrice> *openOrdersAtPrice)
+	const std::vector <MikeOrdersAtPrice> *openOrdersAtPrice,
+	double averagePrice
+)
 {
 	using namespace std;
 	Timer timer;

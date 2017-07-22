@@ -65,7 +65,7 @@ public:
 	//POSITION METHODS:
 	//used for printing open positions in WidgetTable
 	//temporary fix for refactoring - erase when not needed:
-	std::vector <MikePosition> refactoringPositionvector;
+//	std::vector <MikePosition> refactoringPositionvector;
 	const std::vector <MikePosition> * GetMikePositions();// {return &refactoringPositionvector; /*return &positionBook;*/ }
 //	void newPosition(long price, long position);
 
@@ -106,8 +106,9 @@ public:
 	//prototype function to print out all orders in the console:
 	void printoutAllOrders();//not implemented
 
-	void cancelOrder(long orderId);//implement this
-	void cancelAllOrdAtPrice(long price);//implement this
+	void cancelOrder(long orderId);
+	void cancelAllOrdAtPrice(long price);
+	void cancelAllOpenOrders();
 
 	//REFACTORING:
 	//used for printing open orders in WidgetTable

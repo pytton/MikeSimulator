@@ -1,5 +1,6 @@
 //#define COMMENTSOFF //
 #include <iostream>
+#include <stack>
 #include "MikeOrderbook.h"
 #include "MikePositionsOrders.h"
 
@@ -217,34 +218,10 @@ MikeOrderbook::MikeOrderbook(MikePositionOrders * p_mikepositionorders, long hig
 		//index for storing prices to iterate through:
 		updateOpenOrdersByPriceIndex;
 		using namespace std;
-		Timer timer;
-		timer.reset();
-
-
-
-
-		//erase all entries in openOrdersByPrice for prices stored in the index	
-		////failed attemt to iterate only through non-empty OpenOrdersByPrice
-		////can come back to this later if this function proves to be too slow
-		////now, just erase EVERYTHING every time and start from filling up from scratch
-		//if (indexToErase.size()) {
-		//	for (long price : indexToErase )
-		//	{
-		//		std::cout << " cued for erase: " << price << std::endl;
-		//		//below for testing:
-		//		cout << openOrdersByPrice.at(price).price << endl;
-		////		cout << openOrdersByPrice.at(price).buyLimitAmount << endl;
-		//		//THE FOLLOWING LINE OF CODE CRASHES. WILL COMPILE BUT CRASHES:
-		//		//COMMENT OUT TO MAKE IT WORK
-		//		//WHY?!?!?!?!?
-		////		openOrdersByPrice.at(price).eraseall();
-		//	}
-		//}
 
 		if (updateOpenOrdersByPriceIndex.size()) {
 			for (long price : updateOpenOrdersByPriceIndex)
 			{
-
 				openOrdersByPrice.at(price).eraseall();
 			}
 		}
@@ -277,18 +254,6 @@ MikeOrderbook::MikeOrderbook(MikePositionOrders * p_mikepositionorders, long hig
 			updateOpenOrdersByPriceIndex.insert(order.price);
 		}
 
-		//			cout << "Filling OrdersByPrice took: " << timer.elapsed() << endl;
-
-
-		////THE BELOW WILL CRASH TOO:
-		////remove empty entries from index:
-		//if (index.size()) {
-		//	for (long price : index)
-		//	{
-		//		if (openOrdersByPrice.at(price).checkifempty()) { indexToErase.insert(price); }
-		//	}
-		//}
-
 	}
 
 	void MikeOrderbook::fill(int assignedtopos, int fillprice, int orderamount, long bidPrice, long askPrice)
@@ -317,8 +282,34 @@ MikeOrderbook::MikeOrderbook(MikePositionOrders * p_mikepositionorders, long hig
 	{
 	}
 
+	//call updateOpenOrdersByPrice after using this function!
+	//if cancelling multiple orders - call it just once after cancelling last order.
 	void MikeOrderbook::cancelorder(long orderID)
 	{
+		//find the order to be cancelled:
+		MikeOrder & orderToCancel = allOrders.at(orderID);
+		//mark it as cancelled:
+		orderToCancel.cancelled = true;
+		//add the orderID to the closed orders index:
+		indexClosedOrd.insert(orderID);
+		//and remove it from the open orders index:
+		indexOpenOrd.erase(orderID);
+	}
+
+	void MikeOrderbook::cancelAllOpenOrders()
+	{
+		std::stack<long> ordersToCancel;
+		//get the orderIDs of all open orders and add them to the stack:
+		for (auto OrderIDToCancel = indexOpenOrd.begin(); OrderIDToCancel != indexOpenOrd.end(); OrderIDToCancel++) { ordersToCancel.push(*OrderIDToCancel); }
+
+		//go through the stack and erase all the orders:
+		while (ordersToCancel.size() > 0) {
+			long cancelThis = ordersToCancel.top();
+			cancelorder(cancelThis);
+			ordersToCancel.pop();
+		}
+		//we erased some orders, so now update open orders by price in orderbook:
+		updateOpenOrdersByPrice();
 	}
 
 	

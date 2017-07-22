@@ -69,7 +69,7 @@ public:
 	//                                                                      
 	UserInterface(Control * control,
 		double starting_bid_price = 700,
-		int numberOfColumns = 16,
+		int numberOfColumns = 19,
 		int numberOfButtoncolumns = 5);
 
 	//                _    _                       __           _    _                      
@@ -96,7 +96,8 @@ public:
 		long askPrice,
 		long bidPrice,
 		const std::vector <MikePosition> *openPositions,
-		const std::vector <MikeOrdersAtPrice> *openOrdersAtPrice);
+		const std::vector <MikeOrdersAtPrice> *openOrdersAtPrice,
+		double averagePrice);
 
 protected:
 	//                               _                         
@@ -132,6 +133,8 @@ protected:
 	static void m_checkFills_btn_cb(Fl_Widget *w, void * p);
 	static void m_printPos_btn_cb(Fl_Widget *w, void * p);
 	static void m_resetOrderSize_cb(Fl_Widget *w, void * p);
+	static void m_btn_CancelAllOrders_cb(Fl_Widget *w, void * p);
+	
 
 	//   _            _                            
 	//  | |__    ___ | | _ __    ___  _ __  ___  _ 

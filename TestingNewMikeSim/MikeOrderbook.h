@@ -16,7 +16,7 @@ enum MikeOrderType;
 
 	class MikeOrderbook
 	{
-
+		friend class MikePositionOrders;
 	public:
 
 		MikeOrderbook(MikePositionOrders * p_mikepositionorders, long highestprice =123456);
@@ -37,6 +37,7 @@ enum MikeOrderType;
 
 		void modifyorder(long orderID);//modifies order pointed to by orderID
 		void cancelorder(long orderID);//cancels order pointed by orderID
+		void cancelAllOpenOrders();  //cancels all open orders
 
 		
 

@@ -137,6 +137,8 @@ void Control::printCurrentAll()
 		askPrice,
 		bidPrice;
 
+	//double averagePrice = myPositionOrders->cal
+
 	askPrice = myData->GetAskPrice();
 	bidPrice = myData->GetBidPrice();
 
@@ -153,7 +155,8 @@ void Control::printCurrentAll()
 		askPrice,
 		bidPrice,
 		constPositions,
-		ordersAtPrice
+		ordersAtPrice,
+		0
 		);
 
 }
@@ -199,6 +202,12 @@ void Control::CallbkUserInt(UserInterface * p, BtnPressed btn,
 		long bidprice = data->GetBidPrice();
 		long askprice = data->GetAskPrice();
 		manualPositions->printoutActivePositions(bidprice, askprice);
+	}
+	if (btn == BtnPressed::CANCELALLORDERS)
+	{
+		cout << "Implementing cancelling all orders" << endl;
+		manualPositions->cancelAllOpenOrders();
+		printCurrentAll();
 	}
 }
 //WIDGETTABLE:
