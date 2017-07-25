@@ -188,6 +188,11 @@ void WidgetTable::virtButtonCb(Fl_Widget * w, void * p)
 	Mike::My_fl_button * myButton = (Mike::My_fl_button*)w;  //myButton is the button that was pressed
 	WidgetTable * thisTable = (WidgetTable*)p;  //thisTable is the table in which the button was pressed
 
+	//HACK:experimenting with color:
+//	clearAllButtonLabels();
+//	myButton->color(FL_RED);
+//	myButton->label("");
+
 	//check that there are no null pointers:
 	if (tabletype != 0 && tabletype != 1) return;
 	if (thisTable->ptr_to_UserInterface == NULL && tabletype == 0) return;

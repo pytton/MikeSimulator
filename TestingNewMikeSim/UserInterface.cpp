@@ -56,6 +56,7 @@ UserInterface::UserInterface(
 	m_btn_printPos->callback(m_printPos_btn_cb, (void*) this);
 	m_btn_resetOrdSize->callback(m_resetOrderSize_cb, (void*) this);
 	m_btn_CancelAllOrders->callback(m_btn_CancelAllOrders_cb, (void*) this);
+	m_btn_ClearPositions->callback(m_btn_ClearPostions, (void*) this);
 
 	m_order_size->value(100);
 
@@ -182,6 +183,13 @@ void UserInterface::m_btn_CancelAllOrders_cb(Fl_Widget * w, void * p)
 	myUserInt->m_pControl->CallbkUserInt(myUserInt, BtnPressed::CANCELALLORDERS);
 }
 
+void UserInterface::m_btn_ClearPostions(Fl_Widget * w, void * p)
+{
+	UserInterface * myUserInt = (UserInterface*)p;
+	if (myUserInt->m_pControl == NULL) { std::cout << "void pointer!" << std::endl; return; }
+	myUserInt->m_pControl->CallbkUserInt(myUserInt, BtnPressed::CLEARALLPOSITIONS);
+}
+
 void UserInterface::m_extra_btn_cb(Fl_Widget *w, void * p)
 {
 	UserInterface * myUserInt = (UserInterface*)p;
@@ -240,6 +248,7 @@ void UserInterface::CallbkWidTable(int rowPressed, int colPressed, long price)
 	if (checkForValidOrderType)
 	{
 		int orderSize = (int)m_order_size->value();//get the value of the order from Fl_Input which is part of UserInterface
+		if (GetControl() == NULL) { cout << "Void Pointer in UserInterface::CallbkWidTable" << endl; return; }
 		GetControl()->CallbkWidTable(rowPressed, colPressed, price, tempOrderType, orderSize);
 	}
 	else std::cout << "Unhandled type of button pressed!!!" << std::endl;
@@ -257,7 +266,7 @@ void UserInterface::PrintBidAsk(long bid, long ask)
 		//print "BID" in at the correct price:
 		int row = GetTable()->RowOfPrice(bid);
 		int col = GetTable()->GetBidCol();
-		GetTable()->printInTable(row, col, "BID");
+		GetTable()->printInTable(row, col, "BID", FL_BLUE);
 	}
 	else {
 		std::cout << "\n BID OUTSIDE OF WIDGETTABLE" << std::endl;
@@ -270,7 +279,7 @@ void UserInterface::PrintBidAsk(long bid, long ask)
 		//print "ASK" in at the correct price:
 		int row = GetTable()->RowOfPrice(ask);
 		int col = GetTable()->GetAskCol();
-		GetTable()->printInTable(row, col, "ASK");
+		GetTable()->printInTable(row, col, "ASK", FL_RED);
 	}
 	else {std::cout << "\n ASK OUTSIDE OF WIDGETTABLE" << std::endl;}
 }
@@ -314,15 +323,21 @@ void UserInterface::PrintAll(
 	m_curr_bid->value(bidPrice);
 
 	//pring positions and orders in Table:
-	GetTable()->printPositions(openPositions, openOrdersAtPrice);
-
-	//print average price in Table:
 	WidgetTable * table = GetTable();
+	table->printPositions(openPositions, openOrdersAtPrice);
+	
+	//print average price in Table:
 	table->ClearColumn(table->avgPriceCol);
-	snprintf(buffer, 20, "%.0f", averagePrice);
-	int rowToPrintIn = 0;
-	rowToPrintIn = table->RowOfPrice((long)averagePrice);
-	table->printInTable(rowToPrintIn, table->avgPriceCol, buffer);
+	if (averagePrice) {		
+		snprintf(buffer, 20, "%.0f", averagePrice);
+		int rowToPrintIn = 0;
+		rowToPrintIn = table->RowOfPrice((long)averagePrice);
+		Fl_Color color = FL_WHITE;
+		Fl_Color textColor = FL_YELLOW;
+		if (totalOpenPos >= 0) color = FL_DARK_BLUE;
+		else color = FL_RED;
+		table->printInTable(rowToPrintIn, table->avgPriceCol, buffer, color, textColor);
+	}
 }
 
 

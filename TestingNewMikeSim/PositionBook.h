@@ -51,6 +51,8 @@ public:
 	//calculate individual P/L for each position that is stored in the openPosIndex
 	//this should be done before attempting to print out the positions
 	void calculateIndividualPLs(long bidprice, long askprice);
+	//Clears out all Positions - sets everything to zero
+	void clearAllPositions();
 
 	//prototype for printing activePositions:
 	void printoutActivePositions(long bidprice, long askprice);
@@ -78,6 +80,9 @@ private:
 	void addPosToIndex(long price);
 	//remove position from active position index:
 	void remPosFromIndex(long price);
+
+	//initialize the positionBook vector:
+	void initPositionBook(long highestPrice);
 
 	//naming the class to enable having multiple instances of MikePositionOrders
 	//for multiple different strategies. This is done during class construction:

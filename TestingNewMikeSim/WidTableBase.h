@@ -85,9 +85,10 @@ namespace Mike {
 		//  | .__/ |_|   |_||_| |_| \__|\___||_|   |___/
 	//  |_|                                         
 
-		virtual void printInTable(int row, int col, std::string text);	//row = 0 is first row!
+		virtual void printInTable(int row, int col, std::string text, Fl_Color backgroundColor = NULL, Fl_Color textColor = NULL);	//row = 0 is first row!
 		void ClearColumn(int column);	//clears provided column of all text that might have been left behind by the previous draw - for use with Control::rePriceWidTable
 		void ClearRow(int row);	//as above, but for clearing a row
+		void clearAllButtonLabels();  //clears the labels of all buttons
 
 								//                               _                         
 								//   _ __ ___    ___  _ __ ___  | |__    ___  _ __  ___  _ 

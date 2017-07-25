@@ -111,7 +111,7 @@ namespace Mike {
 	//main printing function. row = 0, col = 0 are the first row/col of table. you need to know how many cols are buttons
 	//if 3 cols are buttons (cols 0 and 1 and 2) then you should not print in cols 2 and below
 	//function returns without printing if attempt made to print outside the table
-	void WidTableBase::printInTable(int row, int col, std::string text)//row = 0 is first row!
+	void WidTableBase::printInTable(int row, int col, std::string text, Fl_Color backgroundColor, Fl_Color textColor )//row = 0 is first row!
 	{
 		WidTableBase * myTable = this;
 
@@ -147,6 +147,8 @@ namespace Mike {
 		std::stringstream buffer;
 		buffer << text;
 		myCell->value(buffer.str().c_str());
+		if (textColor != NULL)  myCell->textcolor(textColor);
+		if (backgroundColor != NULL) myCell->color(backgroundColor);
 	}
 
 	//clears a single col
@@ -161,6 +163,7 @@ namespace Mike {
 			Fl_Input * myCell = (Fl_Input*)GetElement(i, column);
 
 			myCell->value("");
+			myCell->color(FL_WHITE);
 		}
 	}
 
@@ -184,9 +187,31 @@ namespace Mike {
 			{
 				Fl_Input * myCell = dynamic_cast<Fl_Input*> (GetElement(row, i));
 				if (myCell == NULL) { cout << "\nError in ClearTable!" << endl; break; }
-				myCell->value(pChar);// this changes the private x_pos value of My_fl_button
+				myCell->value(pChar);
 			}
 		}
+	}
+
+	void WidTableBase::clearAllButtonLabels()
+	{
+		using namespace std;
+
+		int startCol = 0;
+		int endCol = ButtonColsNumber;
+
+		const char * pChar = "";
+		My_fl_button * myCell;
+			for (unsigned int col = startCol; col < endCol; ++col)
+			{
+				for (unsigned int row = 0; row < GetRows(); row++) {
+					myCell = dynamic_cast<My_fl_button*> (GetElement(row, col));
+					if (myCell == NULL) { cout << "\nError in clearAllButtonLabels!" << endl; return; }
+					myCell->label(pChar);
+					//myCell->value(pChar);
+				}
+			}
+		
+
 	}
 
 	//   _          _                       

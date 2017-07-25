@@ -59,6 +59,11 @@ class UserInterface : public FluidInterface
 	//Fl_Button *m_btn_printOrders;
 	//Fl_Button *m_btn_checkFills;
 	//Fl_Button *m_btn_printPos;
+	//Fl_Value_Input *m_order_size;
+	//Fl_Button *m_btn_resetOrdSize;
+	//Fl_Button *m_btn_CancelAllOrders;
+	//Fl_Output *m_AvgPosPrice;
+	//Fl_Button *m_btn_ClearPositions;
 
 public:
 	//                           _                       _                  
@@ -134,6 +139,7 @@ protected:
 	static void m_printPos_btn_cb(Fl_Widget *w, void * p);
 	static void m_resetOrderSize_cb(Fl_Widget *w, void * p);
 	static void m_btn_CancelAllOrders_cb(Fl_Widget *w, void * p);
+	static void m_btn_ClearPostions(Fl_Widget *w, void * p);
 	
 
 	//   _            _                            

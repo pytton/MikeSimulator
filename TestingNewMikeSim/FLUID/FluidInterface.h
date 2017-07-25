@@ -32,5 +32,6 @@ public:
   Fl_Button *m_btn_resetOrdSize;
   Fl_Button *m_btn_CancelAllOrders;
   Fl_Output *m_AvgPosPrice;
+  Fl_Button *m_btn_ClearPositions;
 };
 #endif

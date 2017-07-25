@@ -85,6 +85,8 @@ public:
 	//calculate individual P/L for each position that is stored in the openPosIndex
 	//this should be done before attempting to print out the positions
 	void calculateIndividualPLs(long bidprice, long askprice);
+	//Clears out all Positions - sets everything to zero
+	void clearAllPositions();
 
 	//prototype for printing activePositions. NOT IMPLEMENTED:
 	void printoutActivePositions(long bidprice, long askprice);

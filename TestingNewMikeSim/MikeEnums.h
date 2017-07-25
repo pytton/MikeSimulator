@@ -29,7 +29,8 @@ enum class BtnPressed
 	CONNECTLIVEDATA,
 	STARTLOOP,
 	EXPERIMENT,
-	CANCELALLORDERS
+	CANCELALLORDERS,
+	CLEARALLPOSITIONS
 };
 
 enum class OrderStatus {
@@ -117,6 +118,7 @@ public:
 	inline bool checkifActive() { if (isActive == true) return true; else  return false; }
 	inline void setActive() { isActive = true; }
 	inline void setInactive() { isActive = false; }
+
 
 public:
 	//positive amount for buy orders, negative amount for sell orders!

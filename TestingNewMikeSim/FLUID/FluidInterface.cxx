@@ -3,7 +3,7 @@
 #include "FluidInterface.h"
 
 FluidInterface::FluidInterface() {
-  { m_window1 = new Fl_Double_Window(1136, 629, "window1");
+  { m_window1 = new Fl_Double_Window(1128, 621, "window1");
     m_window1->user_data((void*)(this));
     { m_curr_ask = new Fl_Value_Input(1080, 250, 55, 20, "Current Ask");
     } // Fl_Value_Input* m_curr_ask
@@ -65,6 +65,9 @@ FluidInterface::FluidInterface() {
       m_AvgPosPrice->labelsize(10);
       m_AvgPosPrice->textsize(12);
     } // Fl_Output* m_AvgPosPrice
+    { m_btn_ClearPositions = new Fl_Button(1005, 520, 130, 20, "Clear All Positions");
+      m_btn_ClearPositions->labelsize(12);
+    } // Fl_Button* m_btn_ClearPositions
     m_window1->end();
   } // Fl_Double_Window* m_window1
 }

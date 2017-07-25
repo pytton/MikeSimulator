@@ -20,31 +20,7 @@
 
 PositionBook::PositionBook(long highestPrice)
 {
-	
-	//positionBook is a vector of MikePosition classes that stores all positions
-	positionBook.clear();
-	
-
-	//create a vector that is big enough to fit all the prices
-	//eg price of 234.73 will be stored in
-	//positionBook[23473]
-
-	//how big is the positionBook? This is defined by PositionBookmaxPrice
-
-	PositionBookmaxPrice = highestPrice;
-	//create the postionbook:
-	positionBook.resize(PositionBookmaxPrice + 1);
-	
-	//initialize with prices:
-	for (long i = 0; i <= PositionBookmaxPrice; ++i)
-	{
-		positionBook[i].price = i;
-	}
-
-	//clear the open positions index
-
-	openPosIndexSet.clear();
-
+	initPositionBook(highestPrice);
 }
 
 
@@ -273,7 +249,7 @@ long PositionBook::CalcTotalOpenPos()
 double PositionBook::CalcAvgPos()
 {
 	//Formula for calculating:
-	//PosPrice x PosOpenAmount = PosWeight
+	//(PosPrice x PosOpenAmount) - PosClosedPL = PosWeight
 	//TotalPosWeight = sum of all PosWeight
 	//TotalPosOpenAmount = sum of all PosOpenAmount
 	//averageWeighedPos = TotalPosWeight / TotalPosOpenAmount
@@ -286,7 +262,7 @@ double PositionBook::CalcAvgPos()
 	//go through every position in the openPosIndex and add up all the open_amount values:
 	for (long price : openPosIndexSet)
 	{
-		posWeight = positionBook.at(price).price * positionBook.at(price).open_amount;
+		posWeight = (positionBook.at(price).price * positionBook.at(price).open_amount) - positionBook.at(price).closed_pl;
 		totalPosWeight += posWeight;
 		totalPosOpenAmount += positionBook.at(price).open_amount;
 	}
@@ -303,6 +279,15 @@ void PositionBook::calculateIndividualPLs(long bidprice, long askprice)
 	{
 		positionBook.at(price).calculatePL(bidprice, askprice);
 	}
+}
+
+void PositionBook::clearAllPositions()
+{
+	initPositionBook(PositionBookmaxPrice);
+//	//go through all the postions and set everything to zero:
+//	for (int i = 0; i < PositionBookmaxPrice; i++) {
+//		positionBook.at(i).
+//	}
 }
 
 void PositionBook::printoutActivePositions(long bidprice, long askprice)
@@ -403,4 +388,27 @@ void PositionBook::remPosFromIndex(long price)
 {
 	//remove the price from the index:
 	openPosIndexSet.erase(price);
+}
+
+void PositionBook::initPositionBook(long highestPrice)
+{
+	//positionBook is a vector of MikePosition classes that stores all positions
+	positionBook.clear();
+
+	//create a vector that is big enough to fit all the prices
+	//eg price of 234.73 will be stored in
+	//positionBook[23473]
+	//how big is the positionBook? This is defined by PositionBookmaxPrice
+	PositionBookmaxPrice = highestPrice;
+	//create the postionbook:
+	positionBook.resize(PositionBookmaxPrice + 1);
+
+	//initialize with prices:
+	for (long i = 0; i <= PositionBookmaxPrice; ++i)
+	{
+		positionBook[i].price = i;
+	}
+
+	//clear the open positions index
+	openPosIndexSet.clear();
 }

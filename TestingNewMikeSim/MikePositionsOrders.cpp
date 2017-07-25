@@ -89,6 +89,11 @@ void MikePositionOrders::calculateIndividualPLs(long bidprice, long askprice)
 {
 }
 
+void MikePositionOrders::clearAllPositions()
+{
+	positionbook->clearAllPositions();
+}
+
 void MikePositionOrders::updateOpenOrdersByPrice()
 {
 	orderbook->updateOpenOrdersByPrice();
