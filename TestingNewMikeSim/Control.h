@@ -23,6 +23,7 @@
 namespace Mike {
 	class PosOrdManualUI;
 	class PosOrders;
+	class ControlInterface;
 }
 
 class WidgetTable;
@@ -94,7 +95,7 @@ public:
 		 MikeOrderType OrderTypePressed,
 		 long orderSize = 100);
 	 //CALLBACKS FROM WIDGETTABLE:
-	 void CallbkWidTable(int row, int col, long price, MikeOrderType OrderTypePressed, int orderSize);
+	 void callbkWidTable(int row, int col, long price, MikeOrderType OrderTypePressed, int orderSize);
 	//CALLBACKS FROM PRICECONTROLUI:
 	 void CallbkPriceControlUI(PriceControlUI * p,
 		 BtnPressed btn,
@@ -162,10 +163,13 @@ protected:
 	//              |_|                                                        
 	//TODO: Erase this after finished experimenting
 public:
-
+	friend class ControlInterface;
 	void experimentConstructor();
 	void experimenting();
 	bool mExperimentActive = false;
+
+	Mike::ControlInterface * controlUI;
+	void callbkControlInterface(int);
 
 };
 

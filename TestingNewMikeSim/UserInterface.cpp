@@ -15,7 +15,7 @@
 //USERINTERFACE:
 
 UserInterface::UserInterface(
-	Control * control, 	 
+	Control * control,
 	double starting_bid_price/*700*/,
 	int numberOfColumns/*15*/,
 	int numberOfButtoncolumns/*5*/)	//constructor
@@ -30,15 +30,15 @@ UserInterface::UserInterface(
 	//******************************************************************************************
 	//creating WidgetTable:
 	delete m_table;	//deleting old table supplied by fluid
-	
+
 	//name the column headers and button names in WidgetTable:
 	SetColButNames(col_names, button_names);
 	//construct new WidgetTable:
-	int top_row_price = bid_price +100, 
-		number_rows = 200, 
+	int top_row_price = bid_price + 100,
+		number_rows = 200,
 		number_cols = numberOfColumns,
 		how_many_cols_are_buttons = numberOfButtoncolumns;
-	
+
 	m_pTable = new WidgetTable(5, 5, 940, 630, "widgettable", this, top_row_price, number_rows,
 		number_cols, how_many_cols_are_buttons, col_names, button_names);
 
@@ -62,13 +62,13 @@ UserInterface::UserInterface(
 
 
 
-//	m_pTable->PopPriceCol();
+	//	m_pTable->PopPriceCol();
 	m_window1->hide();
 	m_window1->redraw();
 	m_window1->show();
 
 }
-void UserInterface::SetColButNames(std::vector <std::string> &col_names, std::vector <std::string> &button_names)
+void UserInterfaceBase::SetColButNames(std::vector <std::string> &col_names, std::vector <std::string> &button_names)
 {
 	using namespace std;
 	cout << "UserInterface SetColButNames called" << endl;
@@ -93,7 +93,7 @@ void UserInterface::SetColButNames(std::vector <std::string> &col_names, std::ve
 	col_names.push_back("TOTAL\nP/L");
 	col_names.push_back("ZERO P/L\nPOINT");
 
-	
+
 	button_names.clear();
 
 	button_names.push_back("CXL");
@@ -102,7 +102,7 @@ void UserInterface::SetColButNames(std::vector <std::string> &col_names, std::ve
 	button_names.push_back("S LMT");
 	button_names.push_back("S STP");
 }
-void UserInterface::changename(std::string name)
+void UserInterfaceBase::changename(std::string name)
 {
 
 	const char * newname = name.c_str();
@@ -116,13 +116,13 @@ void UserInterface::changename(std::string name)
 //	m_window1->show();
 //}
 
-void UserInterface::rePriceWidTable(long bidprice)
+void UserInterfaceBase::rePriceWidTable(long bidprice)
 //UNDER CONSTRUCTION
 //Updates prices displayed in WidgetTable to between 100 above and below
 //current bid price in Data class
 //Updates slider in UserInterface to current Bid price
 {
-	UserInterface* pUI = this;
+	UserInterfaceBase* pUI = this;
 	WidgetTable * pTable = pUI->GetTable();
 
 	//make sure that the TopRowPrice is set to 100 above current bid price:	
@@ -135,7 +135,7 @@ void UserInterface::rePriceWidTable(long bidprice)
 
 	//populate price column with prices:
 	//clear the bid and ask columns
-	pUI->GetTable()->ClearColumn(pTable->GetBidCol());	
+	pUI->GetTable()->ClearColumn(pTable->GetBidCol());
 	pUI->GetTable()->ClearColumn(pTable->GetAskCol());
 	//print price
 	pUI->GetTable()->PopPriceCol();
@@ -150,52 +150,107 @@ void UserInterface::rePriceWidTable(long bidprice)
 //   \___| \__,_||_||_||_.__/  \__,_| \___||_|\_\|___/(_)
 //                                                       
 
-
-void UserInterface::m_printOrders_btn_cb(Fl_Widget * w, void * p)
+//this is internal callback:
+void UserInterfaceBase::m_resetOrderSize_cb(Fl_Widget * w, void * p)
 {
-	UserInterface * myUserInt = (UserInterface*)p;
-	if (myUserInt->m_pControl == NULL) { std::cout << "void pointer!" << std::endl; return; }
-	myUserInt->m_pControl->CallbkUserInt(myUserInt, BtnPressed::PRINTORDERSBTN);
-
-}
-void UserInterface::m_checkFills_btn_cb(Fl_Widget * w, void * p)
-{
-	UserInterface * myUserInt = (UserInterface*)p;
-	if (myUserInt->m_pControl == NULL) { std::cout << "void pointer!" << std::endl; return; }
-	myUserInt->m_pControl->CallbkUserInt(myUserInt, BtnPressed::CHECKFILLS);
-}
-void UserInterface::m_printPos_btn_cb(Fl_Widget * w, void * p)
-{
-	UserInterface * myUserInt = (UserInterface*)p;
-	if (myUserInt->m_pControl == NULL) { std::cout << "void pointer!" << std::endl; return; }
-	myUserInt->m_pControl->CallbkUserInt(myUserInt, BtnPressed::PRINTPOS);
-}
-void UserInterface::m_resetOrderSize_cb(Fl_Widget * w, void * p)
-{
-	UserInterface * myUserInt = (UserInterface*)p;
+	UserInterfaceBase * myUserInt = (UserInterfaceBase*)p;
 	myUserInt->m_order_size->value(100);
 }
 
-void UserInterface::m_btn_CancelAllOrders_cb(Fl_Widget * w, void * p)
+//static callbacks go to this virtual callback:
+void UserInterface::callbkUserInterface(BtnPressed button)
 {
-	UserInterface * myUserInt = (UserInterface*)p;
-	if (myUserInt->m_pControl == NULL) { std::cout << "void pointer!" << std::endl; return; }
-	myUserInt->m_pControl->CallbkUserInt(myUserInt, BtnPressed::CANCELALLORDERS);
+	std::cout << "UserInterface callback" << std::endl;
+	if (m_pControl == NULL) { std::cout << "void pointer!" << std::endl; return; }
+	m_pControl->CallbkUserInt(this, button);
 }
 
-void UserInterface::m_btn_ClearPostions(Fl_Widget * w, void * p)
+//static callbacks:
+void UserInterfaceBase::m_printOrders_btn_cb(Fl_Widget * w, void * p)
 {
-	UserInterface * myUserInt = (UserInterface*)p;
-	if (myUserInt->m_pControl == NULL) { std::cout << "void pointer!" << std::endl; return; }
-	myUserInt->m_pControl->CallbkUserInt(myUserInt, BtnPressed::CLEARALLPOSITIONS);
+	UserInterfaceBase * myUserInt = (UserInterfaceBase*)p;
+//	if (myUserInt->m_pControl == NULL) { std::cout << "void pointer!" << std::endl; return; }
+	myUserInt->callbkUserInterface(BtnPressed::PRINTORDERSBTN);
+}
+void UserInterfaceBase::m_checkFills_btn_cb(Fl_Widget * w, void * p)
+{
+	UserInterfaceBase * myUserInt = (UserInterfaceBase*)p;
+//	if (myUserInt->m_pControl == NULL) { std::cout << "void pointer!" << std::endl; return; }
+	myUserInt->callbkUserInterface(BtnPressed::CHECKFILLS);
+}
+void UserInterfaceBase::m_printPos_btn_cb(Fl_Widget * w, void * p)
+{
+	UserInterfaceBase * myUserInt = (UserInterfaceBase*)p;
+//	if (myUserInt->m_pControl == NULL) { std::cout << "void pointer!" << std::endl; return; }
+	myUserInt->callbkUserInterface(BtnPressed::PRINTPOS);
+}
+void UserInterfaceBase::m_btn_CancelAllOrders_cb(Fl_Widget * w, void * p)
+{
+	UserInterfaceBase * myUserInt = (UserInterfaceBase*)p;
+//	if (myUserInt->m_pControl == NULL) { std::cout << "void pointer!" << std::endl; return; }
+	myUserInt->callbkUserInterface(BtnPressed::CANCELALLORDERS);
 }
 
-void UserInterface::m_extra_btn_cb(Fl_Widget *w, void * p)
+void UserInterfaceBase::m_btn_ClearPostions(Fl_Widget * w, void * p)
 {
-	UserInterface * myUserInt = (UserInterface*)p;
-	if (myUserInt->m_pControl == NULL) { std::cout << "void pointer!" << std::endl; return; }
-	myUserInt->m_pControl->CallbkUserInt(myUserInt, BtnPressed::EXTRABTN);
+	UserInterfaceBase * myUserInt = (UserInterfaceBase*)p;
+//	if (myUserInt->m_pControl == NULL) { std::cout << "void pointer!" << std::endl; return; }
+	myUserInt->callbkUserInterface(BtnPressed::CLEARALLPOSITIONS);
 }
+
+void UserInterfaceBase::m_extra_btn_cb(Fl_Widget *w, void * p)
+{
+	UserInterfaceBase * myUserInt = (UserInterfaceBase*)p;
+//	if (myUserInt->m_pControl == NULL) { std::cout << "void pointer!" << std::endl; return; }
+	myUserInt->callbkUserInterface(BtnPressed::EXTRABTN);
+}
+
+////Old UserInterface callbacks:
+//void UserInterface::m_printOrders_btn_cb(Fl_Widget * w, void * p)
+//{
+//	UserInterface * myUserInt = (UserInterface*)p;
+//	if (myUserInt->m_pControl == NULL) { std::cout << "void pointer!" << std::endl; return; }
+//	myUserInt->m_pControl->CallbkUserInt(myUserInt, BtnPressed::PRINTORDERSBTN);
+//
+//}
+//void UserInterface::m_checkFills_btn_cb(Fl_Widget * w, void * p)
+//{
+//	UserInterface * myUserInt = (UserInterface*)p;
+//	if (myUserInt->m_pControl == NULL) { std::cout << "void pointer!" << std::endl; return; }
+//	myUserInt->m_pControl->CallbkUserInt(myUserInt, BtnPressed::CHECKFILLS);
+//}
+//void UserInterface::m_printPos_btn_cb(Fl_Widget * w, void * p)
+//{
+//	UserInterface * myUserInt = (UserInterface*)p;
+//	if (myUserInt->m_pControl == NULL) { std::cout << "void pointer!" << std::endl; return; }
+//	myUserInt->m_pControl->CallbkUserInt(myUserInt, BtnPressed::PRINTPOS);
+//}
+//void UserInterface::m_resetOrderSize_cb(Fl_Widget * w, void * p)
+//{
+//	UserInterface * myUserInt = (UserInterface*)p;
+//	myUserInt->m_order_size->value(100);
+//}
+//
+//void UserInterface::m_btn_CancelAllOrders_cb(Fl_Widget * w, void * p)
+//{
+//	UserInterface * myUserInt = (UserInterface*)p;
+//	if (myUserInt->m_pControl == NULL) { std::cout << "void pointer!" << std::endl; return; }
+//	myUserInt->m_pControl->CallbkUserInt(myUserInt, BtnPressed::CANCELALLORDERS);
+//}
+//
+//void UserInterface::m_btn_ClearPostions(Fl_Widget * w, void * p)
+//{
+//	UserInterface * myUserInt = (UserInterface*)p;
+//	if (myUserInt->m_pControl == NULL) { std::cout << "void pointer!" << std::endl; return; }
+//	myUserInt->m_pControl->CallbkUserInt(myUserInt, BtnPressed::CLEARALLPOSITIONS);
+//}
+//
+//void UserInterface::m_extra_btn_cb(Fl_Widget *w, void * p)
+//{
+//	UserInterface * myUserInt = (UserInterface*)p;
+//	if (myUserInt->m_pControl == NULL) { std::cout << "void pointer!" << std::endl; return; }
+//	myUserInt->m_pControl->CallbkUserInt(myUserInt, BtnPressed::EXTRABTN);
+//}
 
 //   __    __  _      _               _    _____         _      _       
 //  / / /\ \ \(_)  __| |  __ _   ___ | |_ /__   \  __ _ | |__  | |  ___ 
@@ -213,7 +268,7 @@ void UserInterface::m_extra_btn_cb(Fl_Widget *w, void * p)
 //WidgetTable callback:
 //THIS IS WHERE THE ORDER TYPE IS DETERMINED
 //BASED ON WHICH COLUMN HAS BEEN PRESSED IN WIDGETTABLE
-void UserInterface::CallbkWidTable(int rowPressed, int colPressed, long price)
+void UserInterfaceBase::callbkWidTable(int rowPressed, int colPressed, long price)
 {
 	//FIRST DETERMINE WHAT THE BUTTON PRESSED IN WIDGETTABLE WILL DO:
 	//Currently:
@@ -243,23 +298,30 @@ void UserInterface::CallbkWidTable(int rowPressed, int colPressed, long price)
 	}
 
 	using namespace std;
-	cout << "\ndebugging UserInterface::CallbkWidTable. Order type: " << tempOrderType << endl;
+	cout << "\ndebugging UserInterface::callbkWidTable. Order type: " << tempOrderType << endl;
 
-	if (checkForValidOrderType)
-	{
-		int orderSize = (int)m_order_size->value();//get the value of the order from Fl_Input which is part of UserInterface
-		if (GetControl() == NULL) { cout << "Void Pointer in UserInterface::CallbkWidTable" << endl; return; }
-		GetControl()->CallbkWidTable(rowPressed, colPressed, price, tempOrderType, orderSize);
+	if (!checkForValidOrderType) {
+		std::cout << "Unhandled type of button pressed!!!" << std::endl;
+		return;
 	}
-	else std::cout << "Unhandled type of button pressed!!!" << std::endl;
 
+	int orderSize = (int)m_order_size->value();//get the value of the order from Fl_Input which is part of UserInterface
+	sendWidTableCallback(rowPressed, colPressed, price, tempOrderType, orderSize);
 }
 
-void UserInterface::PrintBidAsk(long bid, long ask)
+void UserInterface::sendWidTableCallback(int rowPressed, int colPressed, long price, MikeOrderType tempOrderType, int orderSize)
+{
+	using namespace std;
+	if (GetControl() == NULL) { cout << "Void Pointer in UserInterface::callbkWidTable" << endl; return; }
+	GetControl()->callbkWidTable(rowPressed, colPressed, price, tempOrderType, orderSize);
+}
+
+
+void UserInterfaceBase::PrintBidAsk(long bid, long ask)
 {
 	//first, check if bid price is within the range now displayed by WidgetTable:
 
-	if (bid < GetTable()->GetTopRowPrice() && bid > GetTable()->GetTopRowPrice()- GetTable()->GetRows())
+	if (bid < GetTable()->GetTopRowPrice() && bid > GetTable()->GetTopRowPrice() - GetTable()->GetRows())
 	{
 		//erase everything in the BID column (so that previous bid does not show):
 		GetTable()->ClearColumn(GetTable()->GetBidCol());
@@ -281,16 +343,16 @@ void UserInterface::PrintBidAsk(long bid, long ask)
 		int col = GetTable()->GetAskCol();
 		GetTable()->printInTable(row, col, "ASK", FL_RED);
 	}
-	else {std::cout << "\n ASK OUTSIDE OF WIDGETTABLE" << std::endl;}
+	else { std::cout << "\n ASK OUTSIDE OF WIDGETTABLE" << std::endl; }
 }
 
 
-void UserInterface::PrintAll(
-	long totalOpenPos, 
-	long totalOpenPL, 
-	long totalClosedPL, 
-	long totalPL, 
-	long askPrice, 
+void UserInterfaceBase::PrintAll(
+	long totalOpenPos,
+	long totalOpenPL,
+	long totalClosedPL,
+	long totalPL,
+	long askPrice,
 	long bidPrice,
 	const std::vector <MikePosition> *openPositions,
 	const std::vector <MikeOrdersAtPrice> *openOrdersAtPrice,
@@ -325,10 +387,10 @@ void UserInterface::PrintAll(
 	//pring positions and orders in Table:
 	WidgetTable * table = GetTable();
 	table->printPositions(openPositions, openOrdersAtPrice);
-	
+
 	//print average price in Table:
 	table->ClearColumn(table->avgPriceCol);
-	if (averagePrice) {		
+	if (averagePrice) {
 		snprintf(buffer, 20, "%.0f", averagePrice);
 		int rowToPrintIn = 0;
 		rowToPrintIn = table->RowOfPrice((long)averagePrice);
@@ -452,3 +514,40 @@ void UserInterface::PrintAll(
 ////PosOrdManualUI::~PosOrdManualUI()
 ////{
 ////}
+
+using namespace std;
+
+Mike::ControlInterface::ControlInterface()
+{
+	//set callbacks:
+	m_btnShowPositions1->callback(m_btnShowPositions1_cb, (void*) this);
+	//show the window:
+	m_window1->show();
+}
+
+
+void Mike::ControlInterface::m_btnShowPositions1_cb(Fl_Widget * w, void * p)
+{
+	//FLTK callback have to be static
+	//so call a virtual callback:
+	ControlInterface * myInterface = (ControlInterface*)p;
+	myInterface->maincallback(w, p);
+}
+
+void Mike::ControlInterface::maincallback(Fl_Widget * w, void * p)
+{
+	if (callbackDestination == NULL) {
+		cout << "Callback destination not set!" << endl;
+		return;
+	}
+
+	int callbackParameter = 0;
+	if (w->label() == "Positions1") callbackParameter = 1;
+
+	callbackDestination->callbkControlInterface(callbackParameter);
+}
+
+Mike::UserInterfaceLinked::UserInterfaceLinked(): UserInterface(NULL)
+{
+
+}

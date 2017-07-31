@@ -26,7 +26,9 @@ namespace Mike {
 
 //WigetTable - table with cells drawed inside it
 class WidgetTable : public Mike::WidTableBase
-{	friend class UserInterface;
+{
+	friend class UserInterfaceBase;
+	friend class UserInterface;
 	friend class WidTable1;
 
 public:

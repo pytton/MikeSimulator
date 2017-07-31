@@ -206,7 +206,7 @@ void WidgetTable::virtButtonCb(Fl_Widget * w, void * p)
 
 	std::cout << "\nColumn pressed in WidTable: " << colPressed << std::endl << "Row button pressed: " << rowPressed << std::endl;
 
-	if (thisTable->tabletype == 0) { thisTable->ptr_to_UserInterface->CallbkWidTable(rowPressed, colPressed, price); }
+	if (thisTable->tabletype == 0) { thisTable->ptr_to_UserInterface->callbkWidTable(rowPressed, colPressed, price); }
 	if (thisTable->tabletype == 1) {
 		thisTable->GetControl()->CallbkSmplTableWin(rowPressed, colPressed, price, thisTable->windownumber);
 	}

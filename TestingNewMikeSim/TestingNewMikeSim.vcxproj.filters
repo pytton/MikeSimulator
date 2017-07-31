@@ -84,6 +84,12 @@
     <ClInclude Include="WidTableBase.h">
       <Filter>Source Files\Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="FLUID\FluidControlInterface.h">
+      <Filter>Source Files\FLUID</Filter>
+    </ClInclude>
+    <ClInclude Include="InegratorPosUI.h">
+      <Filter>Source Files\Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FLUID\FluidInterface.cxx">
@@ -154,6 +160,9 @@
     </ClCompile>
     <ClCompile Include="WidTableBase.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FLUID\FluidControlInterface.cxx">
+      <Filter>Source Files\FLUID</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

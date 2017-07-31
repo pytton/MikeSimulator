@@ -1,8 +1,7 @@
 #ifndef _UserInterface_H_INCLUDED_
 #define _UserInterface_H_INCLUDED_
 
-
-
+#include "FLUID/FluidInterface.h"
 
 #include <iostream>
 #include <sstream>
@@ -10,39 +9,121 @@
 #include <vector>
 #include <string>
 
-#include <FL/Fl.H>
-#include <FL/Fl_Window.H>
-#include <FL/Fl_Light_Button.H>
-#include <FL/Fl_Input.H>
-#include <FL/fl_draw.H>
-#include <FL/Fl_Table_Row.H>
-#include <FL/Fl_Text_Display.H>
-
-#include "FLUID/FluidInterface.h"
-
 class WidgetTable;
 class MikeSimulator;
 class Control;
 class MikePosition;
 class MikeOrdersAtPrice;
 
-class WidgetTable;
-class Data;
-class Control;
-class MikeSimulator;
-class PriceControlUI;
-class UserInterface;
-class MikePosition;
-class MikeOrder;
-class MikePositionOrders;
-class Fl_Widget;
-
 enum class BtnPressed;
 enum MikeOrderType;
 
-class UserInterface : public FluidInterface
-{	//elements of FluidInterface:
+class UserInterfaceBase : public FluidInterface
+{
+	friend class WidgetTable;
+	friend class Control;
+//	friend class UserInterface;
+//	friend class ManualInterface;
+
+protected:
+	//                _    _                       __           _    _                      
+	//    __ _   ___ | |_ | |_  ___  _ __  ___    / /___   ___ | |_ | |_  ___  _ __  ___  _ 
+	//   / _` | / _ \| __|| __|/ _ \| '__|/ __|  / // __| / _ \| __|| __|/ _ \| '__|/ __|(_)
+	//  | (_| ||  __/| |_ | |_|  __/| |   \__ \ / / \__ \|  __/| |_ | |_|  __/| |   \__ \ _ 
+	//   \__, | \___| \__| \__|\___||_|   |___//_/  |___/ \___| \__| \__|\___||_|   |___/(_)
+	//   |___/                                                                              
+	virtual Control * GetControl() { return m_pControl; }
+	inline WidgetTable *GetTable() { return m_pTable; }
+	//                _         _                      
+	//   _ __   _ __ (_) _ __  | |_  ___  _ __  ___  _ 
+	//  | '_ \ | '__|| || '_ \ | __|/ _ \| '__|/ __|(_)
+	//  | |_) || |   | || | | || |_|  __/| |   \__ \ _ 
+	//  | .__/ |_|   |_||_| |_| \__|\___||_|   |___/(_)
+	//  |_|   
+public:
+	//changes the name displayed on top of the window of UserInterface:
+	void changename(std::string name);
+	virtual void PrintBidAsk(long bid, long ask);
+	virtual void PrintAll(
+		long totalOpenPos,
+		long totalOpenPL,
+		long totalClosedPL,
+		long totalPL,
+		long askPrice,
+		long bidPrice,
+		const std::vector <MikePosition> *openPositions,
+		const std::vector <MikeOrdersAtPrice> *openOrdersAtPrice,
+		double averagePrice);
+	//                               _                         
+	//   _ __ ___    ___  _ __ ___  | |__    ___  _ __  ___  _ 
+	//  | '_ ` _ \  / _ \| '_ ` _ \ | '_ \  / _ \| '__|/ __|(_)
+	//  | | | | | ||  __/| | | | | || |_) ||  __/| |   \__ \ _ 
+	//  |_| |_| |_| \___||_| |_| |_||_.__/  \___||_|   |___/(_)
+	//                                                         
+protected:
+	WidgetTable *m_pTable;		//this replaces regular Fl_Table with my custom one	
+	Control * m_pControl;
+	Fl_Button* m_myExtraBtn;
+	int bid_price;
+	//these two store the names of columns and buttons:
+	std::vector <std::string> col_names;
+	std::vector <std::string> button_names;
+
+	//               _  _  _                   _            
+	//    ___  __ _ | || || |__    __ _   ___ | | __ ___  _ 
+	//   / __|/ _` || || || '_ \  / _` | / __|| |/ // __|(_)
+	//  | (__| (_| || || || |_) || (_| || (__ |   < \__ \ _ 
+	//   \___|\__,_||_||_||_.__/  \__,_| \___||_|\_\|___/(_)
+	//   
 	
+	////WidgetTable callback:
+	////THIS IS WHERE THE ORDER TYPE IS DETERMINED
+	////BASED ON WHICH COLUMN HAS BEEN PRESSED IN WIDGETTABLE
+	void callbkWidTable(int rowPressed, int colPressed, long price);
+	//this sends the data from callbkWidTable to wherever it is needed:
+	//Nowhere in UserInterfaceBase
+	//To Control class in UserInterface
+	//or somewhere else in derived classes:
+	virtual void sendWidTableCallback(int rowPressed, int colPressed, long price, MikeOrderType tempOrderType, int orderSize) { std::cout << "UserInterfaceBase callback" << std::endl; }
+
+	virtual void callbkUserInterface(BtnPressed) { std::cout << "UserInterfaceBase callback" << std::endl; }
+	
+	static void m_resetOrderSize_cb(Fl_Widget *w, void * p);  //internal callback sets order size to 100
+
+	//below callbacks link to outside of this class using virtual function callbkUserInterface:
+	static void m_extra_btn_cb(Fl_Widget * w, void * p);
+	static void m_printOrders_btn_cb(Fl_Widget *w, void * p);
+	static void m_checkFills_btn_cb(Fl_Widget *w, void * p);
+	static void m_printPos_btn_cb(Fl_Widget *w, void * p);
+	static void m_btn_CancelAllOrders_cb(Fl_Widget *w, void * p);
+	static void m_btn_ClearPostions(Fl_Widget *w, void * p);
+
+	//   _            _                            
+	//  | |__    ___ | | _ __    ___  _ __  ___  _ 
+	//  | '_ \  / _ \| || '_ \  / _ \| '__|/ __|(_)
+	//  | | | ||  __/| || |_) ||  __/| |   \__ \ _ 
+	//  |_| |_| \___||_|| .__/  \___||_|   |___/(_)
+	//                  |_|                        
+
+	//sets the names of column headers and buttons inside WidgetTable:
+	virtual void SetColButNames(std::vector <std::string> &col_names, std::vector <std::string> &button_names);
+public:
+	void rePriceWidTable(long bidprice);
+	
+};
+
+
+//                         _____         _                __                   
+//   /\ /\  ___   ___  _ __\_   \ _ __  | |_  ___  _ __  / _|  __ _   ___  ___ 
+//  / / \ \/ __| / _ \| '__|/ /\/| '_ \ | __|/ _ \| '__|| |_  / _` | / __|/ _ \
+//  \ \_/ /\__ \|  __/| |/\/ /_  | | | || |_|  __/| |   |  _|| (_| || (__|  __/
+//   \___/ |___/ \___||_|\____/  |_| |_| \__|\___||_|   |_|   \__,_| \___|\___|
+//                                                                             
+
+
+class UserInterface : public UserInterfaceBase
+{	//elements of FluidInterface:
+
 	//Fl_Double_Window *m_window1;
 	//Fl_Value_Input *m_curr_ask;
 	//Fl_Value_Input *m_top_limit;
@@ -76,94 +157,42 @@ public:
 		double starting_bid_price = 700,
 		int numberOfColumns = 19,
 		int numberOfButtoncolumns = 5);
-
-	//                _    _                       __           _    _                      
-	//    __ _   ___ | |_ | |_  ___  _ __  ___    / /___   ___ | |_ | |_  ___  _ __  ___  _ 
-	//   / _` | / _ \| __|| __|/ _ \| '__|/ __|  / // __| / _ \| __|| __|/ _ \| '__|/ __|(_)
-	//  | (_| ||  __/| |_ | |_|  __/| |   \__ \ / / \__ \|  __/| |_ | |_|  __/| |   \__ \ _ 
-	//   \__, | \___| \__| \__|\___||_|   |___//_/  |___/ \___| \__| \__|\___||_|   |___/(_)
-	//   |___/                                                                              
-	Control * GetControl() { return m_pControl; }
-	inline WidgetTable *GetTable(){return m_pTable;}
-
-	//                _         _                      
-	//   _ __   _ __ (_) _ __  | |_  ___  _ __  ___  _ 
-	//  | '_ \ | '__|| || '_ \ | __|/ _ \| '__|/ __|(_)
-	//  | |_) || |   | || | | || |_|  __/| |   \__ \ _ 
-	//  | .__/ |_|   |_||_| |_| \__|\___||_|   |___/(_)
-	//  |_|                                            
-	virtual void PrintBidAsk(long bid, long ask);
-	virtual void PrintAll(
-		long totalOpenPos,
-		long totalOpenPL,
-		long totalClosedPL,
-		long totalPL,
-		long askPrice,
-		long bidPrice,
-		const std::vector <MikePosition> *openPositions,
-		const std::vector <MikeOrdersAtPrice> *openOrdersAtPrice,
-		double averagePrice);
-
-protected:
-	//                               _                         
-	//   _ __ ___    ___  _ __ ___  | |__    ___  _ __  ___  _ 
-	//  | '_ ` _ \  / _ \| '_ ` _ \ | '_ \  / _ \| '__|/ __|(_)
-	//  | | | | | ||  __/| | | | | || |_) ||  __/| |   \__ \ _ 
-	//  |_| |_| |_| \___||_| |_| |_||_.__/  \___||_|   |___/(_)
-	//                                                         
-	WidgetTable *m_pTable;		//this replaces regular Fl_Table with my custom one	
-	Control * m_pControl;
-	Fl_Button* m_myExtraBtn;
-	int bid_price;
-
-	//these two store the names of columns and buttons:
-	std::vector <std::string> col_names;
-	std::vector <std::string> button_names;
-
 	//               _  _  _                   _            
 	//    ___  __ _ | || || |__    __ _   ___ | | __ ___  _ 
 	//   / __|/ _` || || || '_ \  / _` | / __|| |/ // __|(_)
 	//  | (__| (_| || || || |_) || (_| || (__ |   < \__ \ _ 
 	//   \___|\__,_||_||_||_.__/  \__,_| \___||_|\_\|___/(_)
 	//                                                      
-
-public:
-	//WidgetTable callback:
-	//THIS IS WHERE THE ORDER TYPE IS DETERMINED
-	//BASED ON WHICH COLUMN HAS BEEN PRESSED IN WIDGETTABLE
-	virtual void CallbkWidTable(int rowPressed, int colPressed, long price);
-protected:
-	static void m_extra_btn_cb(Fl_Widget * w, void * p);
-	static void m_printOrders_btn_cb(Fl_Widget *w, void * p);
-	static void m_checkFills_btn_cb(Fl_Widget *w, void * p);
-	static void m_printPos_btn_cb(Fl_Widget *w, void * p);
-	static void m_resetOrderSize_cb(Fl_Widget *w, void * p);
-	static void m_btn_CancelAllOrders_cb(Fl_Widget *w, void * p);
-	static void m_btn_ClearPostions(Fl_Widget *w, void * p);
-	
-
-	//   _            _                            
-	//  | |__    ___ | | _ __    ___  _ __  ___  _ 
-	//  | '_ \  / _ \| || '_ \  / _ \| '__|/ __|(_)
-	//  | | | ||  __/| || |_) ||  __/| |   \__ \ _ 
-	//  |_| |_| \___||_|| .__/  \___||_|   |___/(_)
-	//                  |_|                        
-
-	//sets the names of column headers and buttons inside WidgetTable:
-	virtual void SetColButNames(std::vector <std::string> &col_names, std::vector <std::string> &button_names);
-public:
-	void rePriceWidTable(long bidprice);
-	
-	//                                  _                          _           
-	//    ___ __  __ _ __    ___  _ __ (_) _ __ ___    ___  _ __  | |_  ___  _ 
-	//   / _ \\ \/ /| '_ \  / _ \| '__|| || '_ ` _ \  / _ \| '_ \ | __|/ __|(_)
-	//  |  __/ >  < | |_) ||  __/| |   | || | | | | ||  __/| | | || |_ \__ \ _ 
-	//   \___|/_/\_\| .__/  \___||_|   |_||_| |_| |_| \___||_| |_| \__||___/(_)
-	//              |_|                                                        
-public:
-	//changes the name displayed on top of the window of UserInterface:
-	void changename(std::string name);
+protected:	
+	//this sends the data from UserInterfaceBase::callbkWidTable to wherever it is needed. To Control class in UserInterface or somewhere else in derived classes:
+	virtual void sendWidTableCallback(int rowPressed, int colPressed, long price, MikeOrderType tempOrderType, int orderSize);
+	//static button callbacks defined in UserInterfaceBase call this function to determine what to do with pressing buttons
+	virtual void callbkUserInterface(BtnPressed);
 };
+
+
+//                         _____         _                __                      __  _         _              _ 
+//   /\ /\  ___   ___  _ __\_   \ _ __  | |_  ___  _ __  / _|  __ _   ___  ___   / / (_) _ __  | | __ ___   __| |
+//  / / \ \/ __| / _ \| '__|/ /\/| '_ \ | __|/ _ \| '__|| |_  / _` | / __|/ _ \ / /  | || '_ \ | |/ // _ \ / _` |
+//  \ \_/ /\__ \|  __/| |/\/ /_  | | | || |_|  __/| |   |  _|| (_| || (__|  __// /___| || | | ||   <|  __/| (_| |
+//   \___/ |___/ \___||_|\____/  |_| |_| \__|\___||_|   |_|   \__,_| \___|\___|\____/|_||_| |_||_|\_\\___| \__,_|
+//                                                                                                               
+
+
+//special class designed for IntegratorPosUI
+namespace Mike {
+	class UserInterfaceLinked : public UserInterface {
+	public:
+		UserInterfaceLinked();
+	private:
+		virtual void sendWidTableCallback(int rowPressed, int colPressed, long price, MikeOrderType tempOrderType, int orderSize) { std::cout << "Callback" << std::endl; }
+		virtual void callbkUserInterface(BtnPressed) { std::cout << "Callback" << std::endl; }
+	};
+}//namespace Mike
+
+
+
+
 
 //   __ _                 _     _____      _     _      __    __ _           _               
 //  / _(_)_ __ ___  _ __ | | __/__   \__ _| |__ | | ___/ / /\ \ (_)_ __   __| | _____      __
@@ -205,9 +234,10 @@ public:
 
 
 #include "FLUID/FluidPosOrdManualUI.h"
+#include "FLUID/FluidControlInterface.h"
 namespace Mike {
 
-	class PosOrdManualUI :  FluidPosOrdManualUI
+	class PosOrdManualUI : FluidPosOrdManualUI
 	{
 	public:
 		PosOrdManualUI(void * control,
@@ -220,6 +250,24 @@ namespace Mike {
 
 
 	};
+
+	//experimenting with an Interface for Control class
+	//right now used for showing windows that might have been closed
+	class ControlInterface : FluidControlInterface {
+	public:
+
+		ControlInterface();
+		//where do you want callbacks sent? Set to NULL to disable callbacks
+		Control * callbackDestination = NULL;
+		void setCallbackDestination(Control * p) { callbackDestination = p; }
+		//callbacks:
+
+		//FLTK callback have to be static
+		static void m_btnShowPositions1_cb(Fl_Widget * w, void * p);
+		virtual void maincallback(Fl_Widget * w, void * p);
+	};
+
+
 }//namespace Mike
 
 #endif //_UserInterface_H_INCLUDED_

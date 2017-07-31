@@ -25,6 +25,8 @@ class PositionBook;
 using namespace std;
 //using namespace Mike;
 
+class Mike::UserInterfaceLinked;
+
 int frequency_of_primes(int n) {
 	cout << "Primes calculating..." << endl;
 	int i, j;
@@ -39,7 +41,19 @@ Control::Control(MikeSimulator * p, int starting_bid)
 	ptr_to_mikesimulator = p;
 	std::cout << "Control constructed. Starting bid: " << starting_bid << std::endl;
 
+	////////////////////////////////////////////////////////////////////////
+
+	//                                  _                          _   
+	//    ___ __  __ _ __    ___  _ __ (_) _ __ ___    ___  _ __  | |_ 
+	//   / _ \\ \/ /| '_ \  / _ \| '__|| || '_ ` _ \  / _ \| '_ \ | __|
+	//  |  __/ >  < | |_) ||  __/| |   | || | | | | ||  __/| | | || |_ 
+	//   \___|/_/\_\| .__/  \___||_|   |_||_| |_| |_| \___||_| |_| \__|
+	//              |_|                                                
+
 	userInterface = new UserInterface(this, /*p,*/ starting_bid);
+//	userInterface = new Mike::UserInterfaceLinked();
+
+	userInterface->m_window1->label("Positions 1");
 	data = new Data(this, starting_bid);
 	m_pPriceControlUI = new PriceControlUI(this, starting_bid);
 	manualPositions = new MikePositionOrders("Manual", 1000000);
@@ -52,6 +66,10 @@ Control::Control(MikeSimulator * p, int starting_bid)
 	
 	//experimenting:
 	experimentConstructor();
+
+	controlUI = new Mike::ControlInterface();
+	controlUI->setCallbackDestination(this);
+	
 	//end experiment
 }
 
@@ -179,7 +197,7 @@ void Control::CallbkUserInt(UserInterface * p, BtnPressed btn,
 
 	if (btn == BtnPressed::EXTRABTN)
 	{
-		cout << "Extra button pressed - implement this!!!!" << endl;
+	//	cout << "Extra button pressed - implement this!!!!" << endl;
 		rePriceWidTable(p);
 	}
 	if (btn == BtnPressed::PRINTORDERSBTN)
@@ -218,7 +236,7 @@ void Control::CallbkUserInt(UserInterface * p, BtnPressed btn,
 }
 //WIDGETTABLE:
 
-void Control::CallbkWidTable(int row, int col, long price, MikeOrderType OrderTypePressed, int orderSize) {
+void Control::callbkWidTable(int row, int col, long price, MikeOrderType OrderTypePressed, int orderSize) {
 	using namespace std;
 
 	////PRICE GUARD - make sure orders executed at prices no better than bid/ask:
@@ -396,6 +414,16 @@ void Control::experimenting()
 
 
 }
+
+void Control::callbkControlInterface(int callback)
+{
+	cout << "Callback from Control Interface!!!!!!!" << endl;
+
+	if (callback == 1) { 
+		if (userInterface != nullptr) {userInterface->m_window1->show();}
+	}
+}
+
 
 //Helpler functions for other classes:
 
