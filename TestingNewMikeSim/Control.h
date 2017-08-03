@@ -6,6 +6,7 @@
 //  \____/\____/\_/  \|  \_/  \_/\_\\____/\____/
 //                                              
 
+#define MIKE_COMMENTSON false
 
 
 #ifndef _CONTROL_H_INCLUDED_
@@ -24,6 +25,7 @@ namespace Mike {
 	class PosOrdManualUI;
 	class PosOrders;
 	class ControlInterface;
+	class IntegratorPosUI;
 }
 
 class WidgetTable;
@@ -168,9 +170,15 @@ public:
 	void experimenting();
 	bool mExperimentActive = false;
 
+	//six buttons showing Positions windtows if minimized
 	Mike::ControlInterface * controlUI;
+	//callback used by ControlInterface
 	void callbkControlInterface(int);
-
+	/////////////////////////////////////////////////////////
+	//developing IntegratorPosUI:
+	UserInterface * userInterface2;
+	Mike::IntegratorPosUI * integratedPositions;
+	/////////////////////////////////////////////////////////
 };
 
 

@@ -15,6 +15,8 @@ class Control;
 class MikePosition;
 class MikeOrdersAtPrice;
 
+
+
 enum class BtnPressed;
 enum MikeOrderType;
 
@@ -178,13 +180,22 @@ protected:
 //   \___/ |___/ \___||_|\____/  |_| |_| \__|\___||_|   |_|   \__,_| \___|\___|\____/|_||_| |_||_|\_\\___| \__,_|
 //                                                                                                               
 
+namespace Mike {
+	class IntegratorPosUI;
+}
 
 //special class designed for IntegratorPosUI
 namespace Mike {
 	class UserInterfaceLinked : public UserInterface {
+		friend class IntegratorPosUI;
 	public:
 		UserInterfaceLinked();
+		
 	private:
+
+		//destination of callbacks:
+		IntegratorPosUI * callbackDest = NULL;
+
 		virtual void sendWidTableCallback(int rowPressed, int colPressed, long price, MikeOrderType tempOrderType, int orderSize) { std::cout << "Callback" << std::endl; }
 		virtual void callbkUserInterface(BtnPressed) { std::cout << "Callback" << std::endl; }
 	};

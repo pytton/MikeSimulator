@@ -31,12 +31,16 @@ namespace Mike {
 	class UserInterfaceLinked;
 }
 
+namespace Mike {
+	class IntegratorPosUI {
+	public:
+		IntegratorPosUI();
+	private:
 
-class IntegratorPosUI {
+		Mike::UserInterfaceLinked * userInterface;
+		MikePositionOrders * posOrders;
 
-	Mike::UserInterfaceLinked * userInterface;
-	
-};
-
+	};  //class IntegratorPosUI
+}  //namespace Mike
 
 #endif //IntegratorPosUI_h

@@ -298,7 +298,7 @@ void UserInterfaceBase::callbkWidTable(int rowPressed, int colPressed, long pric
 	}
 
 	using namespace std;
-	cout << "\ndebugging UserInterface::callbkWidTable. Order type: " << tempOrderType << endl;
+	if (MIKE_COMMENTSON) cout << "\ndebugging UserInterface::callbkWidTable. Order type: " << tempOrderType << endl;
 
 	if (!checkForValidOrderType) {
 		std::cout << "Unhandled type of button pressed!!!" << std::endl;

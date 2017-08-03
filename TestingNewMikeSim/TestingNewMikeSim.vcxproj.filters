@@ -87,7 +87,7 @@
     <ClInclude Include="FLUID\FluidControlInterface.h">
       <Filter>Source Files\FLUID</Filter>
     </ClInclude>
-    <ClInclude Include="InegratorPosUI.h">
+    <ClInclude Include="IntegratorPosUI.h">
       <Filter>Source Files\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -163,6 +163,9 @@
     </ClCompile>
     <ClCompile Include="FLUID\FluidControlInterface.cxx">
       <Filter>Source Files\FLUID</Filter>
+    </ClCompile>
+    <ClCompile Include="IntegratorPosUI.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -128,7 +128,7 @@
     <ClInclude Include="FLUID\FluidPosOrdManualUI.h" />
     <ClInclude Include="FLUID\FluidPriceControl.h" />
     <ClInclude Include="FLUID\FluidSimpleTableWindow.h" />
-    <ClInclude Include="InegratorPosUI.h" />
+    <ClInclude Include="IntegratorPosUI.h" />
     <ClInclude Include="ManualInterface.h" />
     <ClInclude Include="MikeEnums.h" />
     <ClInclude Include="MikeHelpers.h" />
@@ -155,6 +155,7 @@
     <ClCompile Include="FLUID\FluidPosOrdManualUI.cxx" />
     <ClCompile Include="FLUID\FluidPriceControl.cxx" />
     <ClCompile Include="FLUID\FluidSimpleTableWindow.cxx" />
+    <ClCompile Include="IntegratorPosUI.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="ManualInterface.cpp" />
     <ClCompile Include="MikeHelpers.cpp" />

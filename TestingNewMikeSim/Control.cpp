@@ -2,6 +2,7 @@
 
 #include <iostream>
 
+#include "IntegratorPosUI.h"
 #include "UserInterface.h"
 #include "MikeSimulator.h"
 #include "Data.h"
@@ -26,6 +27,17 @@ using namespace std;
 //using namespace Mike;
 
 class Mike::UserInterfaceLinked;
+
+
+//     ___   ___                           __    __  _____  __     ___     __  ___ 
+//    / __\ /___\ /\/\    /\/\    /\/\    /__\/\ \ \/__   \/ _\   /___\ /\ \ \/ _ \
+//   / /   //  ///    \  /    \  /    \  /_\ /  \/ /  / /\/\ \   //  ///  \/ /\// /
+//  / /___/ \_/// /\/\ \/ /\/\ \/ /\/\ \//__/ /\  /  / /   _\ \ / \_/// /\  /   \/ 
+//  \____/\___/ \/    \/\/    \/\/    \/\__/\_\ \/   \/    \__/ \___/ \_\ \/    () 
+//                                                                                 
+//commment switch
+#define MIKE_COMMENTSON false
+
 
 int frequency_of_primes(int n) {
 	cout << "Primes calculating..." << endl;
@@ -52,6 +64,13 @@ Control::Control(MikeSimulator * p, int starting_bid)
 
 	userInterface = new UserInterface(this, /*p,*/ starting_bid);
 //	userInterface = new Mike::UserInterfaceLinked();
+//	userInterface2 = new Mike::UserInterfaceLinked();
+//	userInterface2->m_window1->label("Developing IntegratorUI");
+
+	integratedPositions = new Mike::IntegratorPosUI();
+
+	////////////////////////////////////////////////////////////////////////
+
 
 	userInterface->m_window1->label("Positions 1");
 	data = new Data(this, starting_bid);
