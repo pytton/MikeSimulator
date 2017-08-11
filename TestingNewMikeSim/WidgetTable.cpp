@@ -18,7 +18,7 @@
 
 WidgetTable::WidgetTable(
 	int x, int y, int w, int h, const char *l,
-	UserInterface * pUserInterface,
+	UserInterfaceBase * pUserInterface,
 	int top_row_price,
 	int number_rows,
 	int number_cols,	/*how many columns in the table?*/
@@ -62,55 +62,57 @@ WidgetTable::WidgetTable(
 	ptr_to_UserInterface = pUserInterface;
 }
 
-WidgetTable::WidgetTable(
-	int x, int y, int w, int h, const char *l,
-	void * pCallbackPtr,
-	int top_row_price,
-	int number_rows,
-	int number_cols,	/*how many columns in the table?*/
-	int how_many_cols_are_buttons,	/*how many columns are buttons?*/
-	std::vector <std::string> col_names,	/*names of col headers*/
-	std::vector <std::string> button_names,	//names of buttons
-	short tableCallbackType,//0-UserInterface, 1-Control
-	short windownumber) : WidTableBase(x, y, w, h, l)
-{
-	//old way of setting callback - probably? still being used
-	if (tableCallbackType == 0) {
-		tabletype = tableCallbackType;//tabletype is used in the callback function to determine which callback to use
-		ptr_to_UserInterface = static_cast<UserInterface*>   (pCallbackPtr);
-		ptrControl = NULL;
-		if (ptr_to_UserInterface == NULL) std::cout << "ERROR CREATING WIDGETTABLE!!!!!" << std::endl;
-	}
-	if (tableCallbackType == 1) {
-		tabletype = tableCallbackType;
-		this->windownumber = windownumber;
-		ptr_to_UserInterface = NULL;
-		ptrControl = static_cast<Control*>   (pCallbackPtr);
-		if (ptrControl == NULL) std::cout << "ERROR CREATING WIDGETTABLE!!!!!" << std::endl;
-	}
+//WidgetTable::WidgetTable(
+//	int x, int y, int w, int h, const char *l,
+//	void * pCallbackPtr,
+//	int top_row_price,
+//	int number_rows,
+//	int number_cols,	/*how many columns in the table?*/
+//	int how_many_cols_are_buttons,	/*how many columns are buttons?*/
+//	std::vector <std::string> col_names,	/*names of col headers*/
+//	std::vector <std::string> button_names,	//names of buttons
+//	short tableCallbackType,//0-UserInterface, 1-Control
+//	short windownumber) : WidTableBase(x, y, w, h, l)
+//{
+//	//old way of setting callback - probably? still being used
+//	if (tableCallbackType == 0) {
+//		tabletype = tableCallbackType;//tabletype is used in the callback function to determine which callback to use
+//		ptr_to_UserInterface = static_cast<UserInterface*>   (pCallbackPtr);
+//		ptrControl = NULL;
+//		if (ptr_to_UserInterface == NULL) std::cout << "ERROR CREATING WIDGETTABLE!!!!!" << std::endl;
+//	}
+//	if (tableCallbackType == 1) {
+//		tabletype = tableCallbackType;
+//		this->windownumber = windownumber;
+//		ptr_to_UserInterface = NULL;
+//		ptrControl = static_cast<Control*>   (pCallbackPtr);
+//		if (ptrControl == NULL) std::cout << "ERROR CREATING WIDGETTABLE!!!!!" << std::endl;
+//	}
+//
+//	TopRowPrice = top_row_price;
+//	ButtonColsNumber = how_many_cols_are_buttons;	//how many columns of buttons?
+//	this->col_names = col_names;	//this has to be set for SetSize and ColHeaderText functions
+//
+//	col_header(1);
+//	col_resize(1);
+//	col_header_height(40);
+//	row_header(1);
+//	row_resize(0);
+//	row_header_width(40);
+//	end();
+//	SetCols(number_cols);
+//	SetRows(number_rows);
+//
+//	//this needs to be called to construct all the cells of WidgetTable
+//	SetSize(GetRows(), GetCols(), this, button_names);
+//
+//	//set the bid column and ask columns. virtual function:
+//	setBidAskColumns();
+//
+//	//ptr_to_UserInterface = pUserInterface;
+//}
+//
 
-	TopRowPrice = top_row_price;
-	ButtonColsNumber = how_many_cols_are_buttons;	//how many columns of buttons?
-	this->col_names = col_names;	//this has to be set for SetSize and ColHeaderText functions
-
-	col_header(1);
-	col_resize(1);
-	col_header_height(40);
-	row_header(1);
-	row_resize(0);
-	row_header_width(40);
-	end();
-	SetCols(number_cols);
-	SetRows(number_rows);
-
-	//this needs to be called to construct all the cells of WidgetTable
-	SetSize(GetRows(), GetCols(), this, button_names);
-
-	//set the bid column and ask columns. virtual function:
-	setBidAskColumns();
-
-	//ptr_to_UserInterface = pUserInterface;
-}
 
 //not currently used:
 WidgetTable::WidgetTable(int x, int y, int w, int h, const char *l) : WidTableBase(x, y, w, h, l)
@@ -198,7 +200,7 @@ void WidgetTable::virtButtonCb(Fl_Widget * w, void * p)
 	if (thisTable->ptr_to_UserInterface == NULL && tabletype == 0) return;
 	if (thisTable->GetControl() == NULL && tabletype == 1) return;
 
-	//send the information to Control:
+	
 	//What price level was pressed?:
 	int rowPressed = myButton->y_pos;		//this is the row in which the button was pressed
 	int colPressed = myButton->getXpos();
@@ -206,7 +208,9 @@ void WidgetTable::virtButtonCb(Fl_Widget * w, void * p)
 
 	std::cout << "\nColumn pressed in WidTable: " << colPressed << std::endl << "Row button pressed: " << rowPressed << std::endl;
 
+	//send the information to UserInterface or Control:
 	if (thisTable->tabletype == 0) { thisTable->ptr_to_UserInterface->callbkWidTable(rowPressed, colPressed, price); }
+	//this part no longer used:
 	if (thisTable->tabletype == 1) {
 		thisTable->GetControl()->CallbkSmplTableWin(rowPressed, colPressed, price, thisTable->windownumber);
 	}

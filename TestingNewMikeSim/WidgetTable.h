@@ -35,7 +35,7 @@ public:
 	//constructor:
 	WidgetTable(
 		int x, int y, int w, int h, const char *l,
-		UserInterface * pUserInterface,
+		UserInterfaceBase * pUserInterface,
 		int top_row_price,
 		int number_rows,
 		int number_cols /*= 15*/,	/*how many columns in the table?*/
@@ -43,17 +43,17 @@ public:
 		std::vector <std::string> col_names = { "" },	/*names of col headers*/
 		std::vector <std::string> button_names = { "" }	//names of buttons		
 		);
-	WidgetTable(
-		int x, int y, int w, int h, const char * l,
-		void * pControl,
-		int top_row_price,
-		int number_rows,
-		int number_cols,
-		int how_many_cols_are_buttons,
-		std::vector<std::string> col_names,
-		std::vector<std::string> button_names,
-		short tableCallbackType,
-		short windownumber);
+	//WidgetTable(
+	//	int x, int y, int w, int h, const char * l,
+	//	void * pControl,
+	//	int top_row_price,
+	//	int number_rows,
+	//	int number_cols,
+	//	int how_many_cols_are_buttons,
+	//	std::vector<std::string> col_names,
+	//	std::vector<std::string> button_names,
+	//	short tableCallbackType,
+	//	short windownumber);
 	WidgetTable(int x, int y, int w, int h, const char *l);//not currently used
 	WidgetTable();
 
@@ -92,6 +92,8 @@ protected:
 	//  | (__ | (_| || || || |_) || (_| || (__ |   < \__ \ _ 
 	//   \___| \__,_||_||_||_.__/  \__,_| \___||_|\_\|___/(_)
 
+	//determines what button was pressed, at what price, and sends this info to
+	//virtual UserInterfaceBase::callbkWidTable
 	virtual void virtButtonCb(Fl_Widget *w, void * p);
 	//                               _                         
 	//   _ __ ___    ___  _ __ ___  | |__    ___  _ __  ___  _ 
@@ -100,7 +102,7 @@ protected:
 	//  |_| |_| |_| \___||_| |_| |_||_.__/  \___||_|   |___/(_)
 	//                                                         
 
-	UserInterface * ptr_to_UserInterface;	//stores a pointer to window in which table is constructed. null at first. has to be set from outside.
+	UserInterfaceBase * ptr_to_UserInterface;	//stores a pointer to window in which table is constructed. null at first. has to be set from outside.
 	Control * ptrControl;
 	//setting the column numbers where bid/ask will be printed:
 	virtual void setBidAskColumns();
@@ -115,7 +117,7 @@ protected:
 	//helper functions:
 
 	//stores a pointer to window in which table is constructed. null at first. has to be set from outside:
-	UserInterface * GetUserInterface() { return	ptr_to_UserInterface; }	
+	UserInterfaceBase * GetUserInterface() { return	ptr_to_UserInterface; }
 	Control * GetControl() { return ptrControl; }
 	
 	//below indexes for use by WidgetTable::printPositions. they need to be reset once Control::rePriceWidTable is called so that they remain valid:

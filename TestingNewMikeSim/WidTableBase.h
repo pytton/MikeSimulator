@@ -76,7 +76,7 @@ namespace Mike {
 
 	protected:
 		static void button_cb(Fl_Widget *w, void * p);	//callbacks in fltk have to be static
-		virtual void virtButtonCb(Fl_Widget *w, void * p) = 0;
+		virtual void virtButtonCb(Fl_Widget *w, void * p) {}
 
 		//                _         _                   
 		//   _ __   _ __ (_) _ __  | |_  ___  _ __  ___ 
@@ -99,7 +99,7 @@ namespace Mike {
 		int table_rows, table_cols;
 		int ButtonColsNumber;	//how many columns are buttons?
 		int TopRowPrice;		//the price at the first row on top - used to determine which positions to display
-		short tabletype;//HACK: decides what the callback function will call to: 0 - it will use UserInterface * ptr_to_UserInterface; 1 - it will use Control * ptrControl;
+		short tabletype = 0;//HACK: decides what the callback function will call to: 0 - it will use UserInterface * ptr_to_UserInterface; 1 - it will use Control * ptrControl;
 		std::vector <std::string> col_names;	//needed by void ColHeaderText(char * s, int C)
 
 												//   _            _                         

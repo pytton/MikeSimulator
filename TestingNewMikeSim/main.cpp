@@ -1,7 +1,3 @@
-#define MIKE_COMMENTSON false
-
-
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////MOVED EVERYTHING FROM HERE TO ThreadMainFunction.cpp on 22/02/2017. Code below works without issues.
 ////Commented out for experiments.

@@ -7,8 +7,8 @@ class FluidInterface {open
   Function {FluidInterface()} {open
   } {
     Fl_Window m_window1 {
-      label window1 open
-      xywh {436 156 1128 621} type Double visible
+      label window1 open selected
+      xywh {333 210 1120 644} type Double visible
     } {
       Fl_Value_Input m_curr_ask {
         label {Current Ask}
@@ -86,7 +86,7 @@ class FluidInterface {open
         xywh {1075 6 60 24} labelsize 10 textsize 12
       }
       Fl_Button m_btn_ClearPositions {
-        label {Clear All Positions} selected
+        label {Clear All Positions}
         xywh {1005 520 130 20} labelsize 12
       }
     }

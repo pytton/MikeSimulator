@@ -36,7 +36,7 @@ class Mike::UserInterfaceLinked;
 //  \____/\___/ \/    \/\/    \/\/    \/\__/\_\ \/   \/    \__/ \___/ \_\ \/    () 
 //                                                                                 
 //commment switch
-#define MIKE_COMMENTSON false
+//#define MIKE_COMMENTSON false
 
 
 int frequency_of_primes(int n) {
@@ -254,6 +254,22 @@ void Control::CallbkUserInt(UserInterface * p, BtnPressed btn,
 	}
 }
 //WIDGETTABLE:
+/*
+Call sequence is as follows:
+1. user presses button inside WidTableBase.cpp
+2. this calls static void WidTableBase::button_cb(Fl_Widget *w, void * p)
+3. which calls virtual void WidTableBase::virtButtonCb(Fl_Widget *w, void * p) - this is an empty function which needs to be implemented in derived classes.
+4. in WidgetTable.ccp - void WidgetTable::virtButtonCb(Fl_Widget * w, void * p) which:
+5. determines what button was pressed, at what price, and sends this info to:
+6. virtual void UserInterfaceBase::callbkWidTable(int rowPressed, int colPressed, long price) which:
+7. determines what type of button was pressed, gets the value of the order from Fl_Input which is part of UserInterfaceBase, and send callback to virtual function implemented in derived classes. In this case:
+8. void UserInterface::sendWidTableCallback(int rowPressed, int colPressed, long price, MikeOrderType tempOrderType, int orderSize) which calls:
+9. void Control::callbkWidTable(int row, int col, long price, MikeOrderType OrderTypePressed, int orderSize)
+
+SUGGESTION - put all of this in one function located in UserInterfaceLinked
+*/
+
+
 
 void Control::callbkWidTable(int row, int col, long price, MikeOrderType OrderTypePressed, int orderSize) {
 	using namespace std;

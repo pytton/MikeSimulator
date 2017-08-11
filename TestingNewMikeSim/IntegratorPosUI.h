@@ -22,7 +22,7 @@ This class has a function to print out data from MikePositionOrders in UserInter
 
 //////////////////////////////////////////////////////////////////////////////
 
-
+enum class BtnPressed;
 class UserInterface;
 class MikePosition;
 class MikeOrder;
@@ -39,6 +39,15 @@ namespace Mike {
 
 		Mike::UserInterfaceLinked * userInterface;
 		MikePositionOrders * posOrders;
+
+		//callbacks:
+		void UserInterfaceCb(BtnPressed btn, long parameter1, long parameter2);
+
+		void printCurrentAll();
+		void update(long bidprice, long askprice);
+
+		//bid prices:
+		long bidPrice =0, askPrice=0, prevBidPrice=0, prevAskPrice=0;
 
 	};  //class IntegratorPosUI
 }  //namespace Mike

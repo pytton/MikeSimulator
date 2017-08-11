@@ -3,7 +3,7 @@
 #include "FluidInterface.h"
 
 FluidInterface::FluidInterface() {
-  { m_window1 = new Fl_Double_Window(1128, 621, "window1");
+  { m_window1 = new Fl_Double_Window(1120, 644, "window1");
     m_window1->user_data((void*)(this));
     { m_curr_ask = new Fl_Value_Input(1080, 250, 55, 20, "Current Ask");
     } // Fl_Value_Input* m_curr_ask

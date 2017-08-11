@@ -28,6 +28,16 @@ class UserInterfaceBase : public FluidInterface
 //	friend class ManualInterface;
 
 protected:
+	//                           _                       _                  
+	//    ___  ___   _ __   ___ | |_  _ __  _   _   ___ | |_  ___   _ __  _ 
+	//   / __|/ _ \ | '_ \ / __|| __|| '__|| | | | / __|| __|/ _ \ | '__|(_)
+	//  | (__| (_) || | | |\__ \| |_ | |   | |_| || (__ | |_| (_) || |    _ 
+	//   \___|\___/ |_| |_||___/ \__||_|    \__,_| \___| \__|\___/ |_|   (_)
+	// 
+
+	UserInterfaceBase();
+
+
 	//                _    _                       __           _    _                      
 	//    __ _   ___ | |_ | |_  ___  _ __  ___    / /___   ___ | |_ | |_  ___  _ __  ___  _ 
 	//   / _` | / _ \| __|| __|/ _ \| '__|/ __|  / // __| / _ \| __|| __|/ _ \| '__|/ __|(_)
@@ -66,7 +76,7 @@ protected:
 	WidgetTable *m_pTable;		//this replaces regular Fl_Table with my custom one	
 	Control * m_pControl;
 	Fl_Button* m_myExtraBtn;
-	int bid_price;
+	int bid_price = 20400;  //used to determine top row price in WidgetTable
 	//these two store the names of columns and buttons:
 	std::vector <std::string> col_names;
 	std::vector <std::string> button_names;
@@ -77,20 +87,22 @@ protected:
 	//  | (__| (_| || || || |_) || (_| || (__ |   < \__ \ _ 
 	//   \___|\__,_||_||_||_.__/  \__,_| \___||_|\_\|___/(_)
 	//   
-	
-	////WidgetTable callback:
-	////THIS IS WHERE THE ORDER TYPE IS DETERMINED
-	////BASED ON WHICH COLUMN HAS BEEN PRESSED IN WIDGETTABLE
-	void callbkWidTable(int rowPressed, int colPressed, long price);
+
 	//this sends the data from callbkWidTable to wherever it is needed:
 	//Nowhere in UserInterfaceBase
 	//To Control class in UserInterface
 	//or somewhere else in derived classes:
-	virtual void sendWidTableCallback(int rowPressed, int colPressed, long price, MikeOrderType tempOrderType, int orderSize) { std::cout << "UserInterfaceBase callback" << std::endl; }
+	virtual void sendWidTableCallback(int rowPressed, int colPressed, long price, MikeOrderType tempOrderType, int orderSize) = 0;  // { std::cout << "UserInterfaceBase callback" << std::endl; }
+	//empty in Base. implement in derived classes
+	virtual void callbkUserInterface(BtnPressed) = 0;
 
-	virtual void callbkUserInterface(BtnPressed) { std::cout << "UserInterfaceBase callback" << std::endl; }
-	
-	static void m_resetOrderSize_cb(Fl_Widget *w, void * p);  //internal callback sets order size to 100
+	//WidgetTable callback:
+   //THIS IS WHERE THE ORDER TYPE IS DETERMINED
+   //BASED ON WHICH COLUMN HAS BEEN PRESSED IN WIDGETTABLE
+	virtual void callbkWidTable(int rowPressed, int colPressed, long price);
+
+	//internal callback sets order size to 100
+	static void m_resetOrderSize_cb(Fl_Widget *w, void * p);
 
 	//below callbacks link to outside of this class using virtual function callbkUserInterface:
 	static void m_extra_btn_cb(Fl_Widget * w, void * p);
@@ -186,7 +198,7 @@ namespace Mike {
 
 //special class designed for IntegratorPosUI
 namespace Mike {
-	class UserInterfaceLinked : public UserInterface {
+	class UserInterfaceLinked : public UserInterfaceBase {
 		friend class IntegratorPosUI;
 	public:
 		UserInterfaceLinked();
@@ -196,8 +208,10 @@ namespace Mike {
 		//destination of callbacks:
 		IntegratorPosUI * callbackDest = NULL;
 
-		virtual void sendWidTableCallback(int rowPressed, int colPressed, long price, MikeOrderType tempOrderType, int orderSize) { std::cout << "Callback" << std::endl; }
-		virtual void callbkUserInterface(BtnPressed) { std::cout << "Callback" << std::endl; }
+//		virtual void callbkUserInterface(BtnPressed);
+
+		virtual void sendWidTableCallback(int rowPressed, int colPressed, long price, MikeOrderType tempOrderType, int orderSize);  // { std::cout << "Callback" << std::endl; }
+		virtual void callbkUserInterface(BtnPressed);  // { std::cout << "Callback" << std::endl; }
 	};
 }//namespace Mike
 

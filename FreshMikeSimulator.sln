@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FreshMikeSimulator", "FreshMikeSimulator\FreshMikeSimulator.vcxproj", "{0249F4E2-BEAC-46AB-AF04-AD477BE22F8D}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestingNewMikeSim", "TestingNewMikeSim\TestingNewMikeSim.vcxproj", "{62D6843F-4FA4-46C9-986C-85EF79DB38D2}"
 EndProject
 Global
@@ -15,14 +13,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0249F4E2-BEAC-46AB-AF04-AD477BE22F8D}.Debug|x64.ActiveCfg = Debug|x64
-		{0249F4E2-BEAC-46AB-AF04-AD477BE22F8D}.Debug|x64.Build.0 = Debug|x64
-		{0249F4E2-BEAC-46AB-AF04-AD477BE22F8D}.Debug|x86.ActiveCfg = Debug|Win32
-		{0249F4E2-BEAC-46AB-AF04-AD477BE22F8D}.Debug|x86.Build.0 = Debug|Win32
-		{0249F4E2-BEAC-46AB-AF04-AD477BE22F8D}.Release|x64.ActiveCfg = Release|x64
-		{0249F4E2-BEAC-46AB-AF04-AD477BE22F8D}.Release|x64.Build.0 = Release|x64
-		{0249F4E2-BEAC-46AB-AF04-AD477BE22F8D}.Release|x86.ActiveCfg = Release|Win32
-		{0249F4E2-BEAC-46AB-AF04-AD477BE22F8D}.Release|x86.Build.0 = Release|Win32
 		{62D6843F-4FA4-46C9-986C-85EF79DB38D2}.Debug|x64.ActiveCfg = Debug|x64
 		{62D6843F-4FA4-46C9-986C-85EF79DB38D2}.Debug|x64.Build.0 = Debug|x64
 		{62D6843F-4FA4-46C9-986C-85EF79DB38D2}.Debug|x86.ActiveCfg = Debug|Win32
