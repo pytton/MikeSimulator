@@ -1,6 +1,7 @@
 Task list:
 
 1. Implement constructor Mike::UserInterfaceLinked::UserInterfaceLinked() - make it so that it creates something like UserInterface
+2. Change repriceWidTable so that it is independent - use bid price only
 2. Make the callbacks simpler
 3. Delete unused buttons
 
@@ -20,4 +21,8 @@ Call sequence is as follows:
 SUGGESTION - implement:
 
 5. virtual UserInterfaceLinked::sendWidTableCallback in such a way that it calls positions directly in IntegratorPosUI
+
+Above done.
+
+
 */

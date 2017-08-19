@@ -15,6 +15,9 @@ class Control;
 class MikePosition;
 class MikeOrdersAtPrice;
 
+namespace Mike {
+	class WidTableBase;
+}
 
 
 enum class BtnPressed;
@@ -196,11 +199,16 @@ namespace Mike {
 	class IntegratorPosUI;
 }
 
-//special class designed for IntegratorPosUI
+
 namespace Mike {
+
+	//special class designed for IntegratorPosUI with virtual function
+	//UserInterfaceLinked::sendWidTableCallback implemented so that it sneds
+	//orders directly to MikePositionOrders without using Control class
 	class UserInterfaceLinked : public UserInterfaceBase {
 		friend class IntegratorPosUI;
 	public:
+		UserInterfaceLinked(IntegratorPosUI * ptr);
 		UserInterfaceLinked();
 		
 	private:
@@ -244,7 +252,7 @@ public:
 
 	void rePriceWidTable(long bidprice);
 
-	WidgetTable * widTable;
+	Mike::WidTableBase * widTable;
 
 	short thiswindownumber; //for use by class creating SimpleTableWindow - if more than one instance of SimpleTableWindow is used. for callbacks which have to be static in FLTK
 

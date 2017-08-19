@@ -69,6 +69,7 @@ Control::Control(MikeSimulator * p, int starting_bid)
 
 	integratedPositions = new Mike::IntegratorPosUI();
 
+	simpleTableWindow = new SimpleTableWindow(this, 3);
 	////////////////////////////////////////////////////////////////////////
 
 

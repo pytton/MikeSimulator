@@ -33,6 +33,8 @@ namespace Mike {
 	//never use this class. derive from it to get what you need
 	class WidTableBase : public Fl_Table_Row
 	{
+		friend class SimpleTableWindow;  //experiment - erase. create class derived from WidTableBase
+		//in SimpleTableWindow instead
 	protected:
 		WidTableBase(int x, int y, int w, int h, const char *l);
 		WidTableBase(

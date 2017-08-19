@@ -35,6 +35,9 @@ namespace Mike {
 	class IntegratorPosUI {
 	public:
 		IntegratorPosUI();
+
+		//getters/setters:
+		MikePositionOrders * getPosOrders() { return posOrders; }
 	private:
 
 		Mike::UserInterfaceLinked * userInterface;

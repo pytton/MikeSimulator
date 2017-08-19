@@ -8,7 +8,7 @@
 Mike::IntegratorPosUI::IntegratorPosUI()
 {
 	//create the User Interface:
-	userInterface = new Mike::UserInterfaceLinked();
+	userInterface = new Mike::UserInterfaceLinked(this);
 	userInterface->callbackDest = this;  //point userInterface callbacks to this class
 	userInterface->m_window1->label("Integrator 1");  //name the interface window
 
