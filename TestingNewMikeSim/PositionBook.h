@@ -25,6 +25,7 @@ public:
 	PositionBook(long highestPrice);
 	~PositionBook();
 
+	
 	//POSITION METHODS:
 	//used for printing open positions in WidgetTable
 	const std::vector <MikePosition> * GetMikePositions() { return   &positionBook; }
@@ -37,6 +38,8 @@ public:
 	
 	//Methods below are slow because each one iterates over all open positions in openPosIndexSet individually. So calling CalcAllOpenPL will go through the whole index, and then if you call CalcAllClosedPL it will go through the whole index again. To speed it up, consider making one method to calculate all of them at once at each iteration of accessing the postions pointed to by openPosIndexSet and then supplying all the answers as a struct:
 	
+	long getHighestPrice() { return PositionBookmaxPrice; }
+
 	//TODO: MAKE BELOW FASTER
 	//calculates the total aggregate open P/L for all active positions of the whole book
 	long CalcAllOpenPL(long bidprice, long askprice);

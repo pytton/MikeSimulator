@@ -42,6 +42,11 @@ MikePositionOrders::~MikePositionOrders()
 
 void MikePositionOrders::newOrder(MikeOrderType type, long orderPrice, long orderAmount)
 {
+	using namespace std;
+	if (orderPrice > positionbook->getHighestPrice()) {
+		cout << "Order price above highest available price in positionbook. ORDER NOT ENTERED! FIX THIS." << endl;
+		return;
+	}
 	orderbook->neworder( type, orderPrice, orderAmount);	
 }
 

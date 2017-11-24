@@ -32,7 +32,9 @@ namespace Mike {
 }
 
 namespace Mike {
+	//integrates MikePositionOrders with a user interface derived from UserInterfaceBase
 	class IntegratorPosUI {
+		friend class UserInterfaceLinked;
 	public:
 		IntegratorPosUI();
 
@@ -43,8 +45,9 @@ namespace Mike {
 		Mike::UserInterfaceLinked * userInterface;
 		MikePositionOrders * posOrders;
 
+	public:
 		//callbacks:
-		void UserInterfaceCb(BtnPressed btn, long parameter1, long parameter2);
+		void UserInterfaceCb(BtnPressed btn, long parameter1 = 0, long parameter2 = 0);
 
 		void printCurrentAll();
 		void update(long bidprice, long askprice);

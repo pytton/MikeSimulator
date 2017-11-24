@@ -428,6 +428,34 @@ void UserInterface::callbkUserInterface(BtnPressed button)
 
 Mike::UserInterfaceLinked::UserInterfaceLinked(IntegratorPosUI * ptr) : callbackDest(ptr)
 {
+	//add remove elements below:
+	m_window1->begin();
+
+
+	//******************************************************************************************
+	//creating WidgetTable:
+
+	if (NULL != m_table) delete m_table;	//deleting old table supplied by fluid
+											//	delete m_table;	//deleting old table supplied by fluid
+
+											//name the column headers and button names in WidgetTable:
+	SetColButNames(col_names, button_names);
+	//construct new WidgetTable:
+	int top_row_price = bid_price + 100,
+		number_rows = 200,
+		number_cols = 15,
+		how_many_cols_are_buttons = 5;
+
+	m_pTable = new WidgetTable(5, 5, 940, 630, "widgettable", this, top_row_price, number_rows,
+		number_cols, how_many_cols_are_buttons, col_names, button_names);
+
+
+	m_window1->end();
+	//******************************************************************************************
+
+	m_window1->hide();
+	m_window1->redraw();
+	m_window1->show();
 
 }
 
@@ -438,14 +466,30 @@ Mike::UserInterfaceLinked::UserInterfaceLinked(){
 
 void Mike::UserInterfaceLinked::sendWidTableCallback(int rowPressed, int colPressed, long price, MikeOrderType orderType, int orderSize){
 	using namespace std;
+
+	
 	if (MIKE_COMMENTSON) { cout << "UserInterfaceLinked::sendWidTableCallback Callback" << endl; }
 	if (NULL == callbackDest) { cout << "Void Pointer in UserInterface::callbkWidTable" << endl; return; }
 
 //	GetControl()->callbkWidTable(rowPressed, colPressed, price, orderType, orderSize);
 
-
+	//TODO: problem here. debug
 	//send order to OrderBook if order type is not 'cancel order':	
-	if (orderType != CXLORDER) {callbackDest->getPosOrders()->newOrder(orderType, price, orderSize); }
+	if (orderType != CXLORDER) {
+		
+////		callbackDest->posOrders->checkFills(200,300);
+//		cout << endl << callbackDest->getPosOrders() << endl;
+//
+//		MikePositionOrders * positions = callbackDest->getPosOrders();
+//		
+//		//positions->CalcAllClosedPL(200,300);
+//
+//		positions->newOrder(orderType, price, orderSize);
+
+		callbackDest->getPosOrders()->newOrder(orderType, price, orderSize); 
+	
+	
+	}
 	if (orderType == CXLORDER) { callbackDest->getPosOrders()->cancelAllOrdAtPrice(price); }
 	//check for fills:
 	
@@ -472,9 +516,10 @@ void Mike::UserInterfaceLinked::sendWidTableCallback(int rowPressed, int colPres
 
 }
 
-void Mike::UserInterfaceLinked::callbkUserInterface(BtnPressed)
+void Mike::UserInterfaceLinked::callbkUserInterface(BtnPressed btn)
 {
-	std::cout << "Callback" << std::endl;
+	callbackDest->UserInterfaceCb(btn);
+//	std::cout << "Callback" << std::endl;
 }
 
 

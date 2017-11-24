@@ -13,7 +13,8 @@ Mike::IntegratorPosUI::IntegratorPosUI()
 	userInterface->m_window1->label("Integrator 1");  //name the interface window
 
 	//create positions:
-	posOrders = new MikePositionOrders("Integrator 1", 20400);
+	long highestPrice = 100000;
+	posOrders = new MikePositionOrders("Integrator 1", highestPrice);
 }
 
 void Mike::IntegratorPosUI::UserInterfaceCb(BtnPressed btn, long parameter1, long parameter2)

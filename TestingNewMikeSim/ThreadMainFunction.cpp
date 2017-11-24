@@ -80,13 +80,13 @@ int main(int argc, char* argv[]) {
 
 
 	//uncomment below for sdl in seperate thread:
-	//try {
-	//	sdlWindowStart(log);
-	//}
-	//catch (...){
-	//	t1.join();
-	//	throw;
-	//}
+	try {
+		sdlWindowStart(log);
+	}
+	catch (...){
+		t1.join();
+		throw;
+	}
 
 	t1.join();
 
