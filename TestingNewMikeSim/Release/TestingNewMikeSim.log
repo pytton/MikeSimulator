@@ -1,0 +1,17 @@
+﻿  Control.cpp
+Control.cpp(46): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  IntegratorPosUI.cpp
+  ThreadMainFunction.cpp
+ThreadMainFunction.cpp(88): warning C4297: 'SDL_main': function assumed not to throw an exception but does
+  ThreadMainFunction.cpp(88): note: __declspec(nothrow), throw(), noexcept(true), or noexcept was specified on the function
+  UserInterface.cpp
+UserInterface.cpp(367): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  Generating code
+c:\users\pytto\documents\visual studio 2015\projects\mikesimulator\testingnewmikesim\threadmainfunction.cpp(144): warning C4715: 'sdlWindowStart': not all control paths return a value
+  54 of 2464 functions ( 2.2%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+TwsApi.lib(TwsApiL0.obj) : warning LNK4099: PDB 'TwsApi.pdb' was not found with 'TwsApi.lib(TwsApiL0.obj)' or at 'C:\Users\pytto\Documents\Visual Studio 2015\Projects\MikeSimulator\Release\TwsApi.pdb'; linking object as if no debug info
+  TestingNewMikeSim.vcxproj -> C:\Users\pytto\Documents\Visual Studio 2015\Projects\MikeSimulator\Release\TestingNewMikeSim.exe
+  TestingNewMikeSim.vcxproj -> C:\Users\pytto\Documents\Visual Studio 2015\Projects\MikeSimulator\Release\TestingNewMikeSim.pdb (Full PDB)

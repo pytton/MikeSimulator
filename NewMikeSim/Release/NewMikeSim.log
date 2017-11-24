@@ -1,0 +1,23 @@
+﻿  APINoThread.cpp
+C:\Users\pytto\Documents\Visual Studio 2015\Projects\MikeSimulator\BoonenTWSAPI\Shared\IBString.h(38): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+C:\Users\pytto\Documents\Visual Studio 2015\Projects\MikeSimulator\BoonenTWSAPI\Shared\IBString.h(47): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+  Control.cpp
+c:\users\pytto\documents\visual studio 2015\projects\mikesimulator\newmikesim\MikePositionsOrders.h(86): error C2011: 'MikeOrdersAtPrice': 'class' type redefinition
+  c:\users\pytto\documents\visual studio 2015\projects\mikesimulator\newmikesim\WidgetTable.h(23): note: see declaration of 'MikeOrdersAtPrice'
+c:\users\pytto\documents\visual studio 2015\projects\mikesimulator\newmikesim\MikePositionsOrders.h(102): error C2011: 'MikePosition': 'class' type redefinition
+  c:\users\pytto\documents\visual studio 2015\projects\mikesimulator\newmikesim\WidgetTable.h(22): note: see declaration of 'MikePosition'
+  Data.cpp
+C:\Users\pytto\Documents\Visual Studio 2015\Projects\MikeSimulator\BoonenTWSAPI\Shared\IBString.h(38): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+C:\Users\pytto\Documents\Visual Studio 2015\Projects\MikeSimulator\BoonenTWSAPI\Shared\IBString.h(47): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+Data.cpp(74): warning C4244: '=': conversion from 'double' to 'long', possible loss of data
+Data.cpp(75): warning C4244: '=': conversion from 'double' to 'long', possible loss of data
+Data.cpp(76): warning C4244: '=': conversion from 'double' to 'long', possible loss of data
+Data.cpp(77): warning C4244: '=': conversion from 'double' to 'long', possible loss of data
+  ThreadMainFunction.cpp
+ThreadMainFunction.cpp(68): error C2027: use of undefined type 'MikeSimulator'
+  ThreadMainFunction.cpp(24): note: see declaration of 'MikeSimulator'
+  ThreadMainFunction.cpp(24): note: see declaration of 'MikeSimulator'
+ThreadMainFunction.cpp(86): warning C4297: 'SDL_main': function assumed not to throw an exception but does
+  ThreadMainFunction.cpp(86): note: __declspec(nothrow), throw(), noexcept(true), or noexcept was specified on the function
+  UserInterface.cpp
+UserInterface.cpp(26): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
