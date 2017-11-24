@@ -1,4 +1,0 @@
-﻿cl : Command line warning D9007: '/Gm' requires '/Zi or /ZI'; option ignored
-  PositionBook.cpp
-  TestingNewMikeSim.vcxproj -> C:\Users\pytto\Documents\Visual Studio 2015\Projects\MikeSimulator\Debug\TestingNewMikeSim.exe
-  TestingNewMikeSim.vcxproj -> C:\Users\pytto\Documents\Visual Studio 2015\Projects\MikeSimulator\Debug\TestingNewMikeSim.pdb (Partial PDB)
