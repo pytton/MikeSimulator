@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_fluid_price_control_8h">
+    <title>FluidPriceControl.h File Reference</title>
+    <programlisting>#include &lt;FL/Fl.H&gt;</programlisting>
+    <programlisting>#include &lt;FL/Fl_Double_Window.H&gt;</programlisting>
+    <programlisting>#include &lt;FL/Fl_Button.H&gt;</programlisting>
+    <programlisting>#include &lt;FL/Fl_Output.H&gt;</programlisting>
+    <programlisting>#include &lt;FL/Fl_Value_Slider.H&gt;</programlisting>
+        <section>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_fluid_price_control_u_i">FluidPriceControlUI</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/FLUID/FluidPriceControl.h</para>
+    </simplesect>
+</section>

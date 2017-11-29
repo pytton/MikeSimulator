@@ -1,0 +1,33 @@
+Description of this software\+:
+
+A simulator to train how to trade live markets using custom designed algos; using live data but also \textquotesingle{}manual data\textquotesingle{} to understand what happens to algo orders when price moves. Manual data means bid/ask prices controlled by the user -\/ to simulate market moves I want to analyse. There will be a lot of different algos to develop and try out. Some fully autonomous, most launched by user and used as \textquotesingle{}bots\textquotesingle{}
+
+Features\+:
+
+Connect to Interactive brokers
+
+Pull live market data from Interactive Brokers
+
+Use that data for trading
+
+be able to\+:
+
+save that live market data to file
+
+use that saved data as historic data for future simulations
+
+be able to switch off live data and go to \textquotesingle{}hand control\textquotesingle{} where I decide what the price does manually to check behaviour of algos
+
+initially, fills are handled locally -\/ all longs fill at ask and shorts at bid. at some point, this will be changed so that fills are handled by Interactive Brokers and this software only checks if an order was filled or not.
+
+design considerations\+:
+
+Make it easy to grow and add new feautres.
+
+enable adding new algos at later stage.
+
+enable adding new ways to display current positions later.
+
+enagle adding new G\+UI to deal with postitions, orders and algos.
+
+enable adding new features to \textquotesingle{}Data\textquotesingle{} class -\/ trading multiple different instruments instead of just one, saving live price streams to file, loading those streams from file -\/ to use historical data instead of live data, \textquotesingle{}speeding up\textquotesingle{}, stopping and starting the flow of historical bid/ask prices to analyse algo behaviour using past historical data 

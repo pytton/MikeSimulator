@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title></title>
+
+<para>Description of this software:</para>
+
+<para>A simulator to train how to trade live markets using custom designed algos; using live data but also &apos;manual data&apos; to understand what happens to algo orders when price moves. Manual data means bid/ask prices controlled by the user - to simulate market moves I want to analyse. There will be a lot of different algos to develop and try out. Some fully autonomous, most launched by user and used as &apos;bots&apos;</para>
+
+<para>Features:</para>
+
+<para>Connect to Interactive brokers</para>
+
+<para>Pull live market data from Interactive Brokers</para>
+
+<para>Use that data for trading</para>
+
+<para>be able to:</para>
+
+<para>save that live market data to file</para>
+
+<para>use that saved data as historic data for future simulations</para>
+
+<para>be able to switch off live data and go to &apos;hand control&apos; where I decide what the price does manually to check behaviour of algos</para>
+
+<para>initially, fills are handled locally - all longs fill at ask and shorts at bid. at some point, this will be changed so that fills are handled by Interactive Brokers and this software only checks if an order was filled or not.</para>
+
+<para>design considerations:</para>
+
+<para>Make it easy to grow and add new feautres.</para>
+
+<para>enable adding new algos at later stage.</para>
+
+<para>enable adding new ways to display current positions later.</para>
+
+<para>enagle adding new GUI to deal with postitions, orders and algos.</para>
+
+<para>enable adding new features to &apos;Data&apos; class - trading multiple different instruments instead of just one, saving live price streams to file, loading those streams from file - to use historical data instead of live data, &apos;speeding up&apos;, stopping and starting the flow of historical bid/ask prices to analyse algo behaviour using past historical data </para>
+
+</chapter>

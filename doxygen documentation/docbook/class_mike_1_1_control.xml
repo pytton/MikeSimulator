@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_mike_1_1_control">
+<title>Mike::Control class Reference</title>
+<para>
+    <programlisting>#include <link linkend="_control_8h">&lt;Control.h&gt;</link></programlisting>
+</para>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef <link linkend="class_fluid_price_control_u_i">FluidPriceControlUI</link>  <link linkend="class_mike_1_1_control_1addbe39ef40982f0a4002b6f74091a799">DataUI</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef int  <link linkend="class_mike_1_1_control_1a313ca882c409ba9bed4837acf6d17a72">ControlUI</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>DataUI * priceControl</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_mike_1_1_control_1ac9a2e3b56773b1eadab7297327a9fbcc">Control</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_mike_1_1_control_1aa3395e0509ab5b980732ab0e3a29ce4d">~Control</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_mike_1_1_control_1a3440083f03f7da3d4490fa44bc13d62b">mainloop</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="class_mike_1_1_control_1addbe39ef40982f0a4002b6f74091a799">
+                <title>typedef FluidPriceControlUI Mike::Control::DataUI</title> <emphasis></emphasis>
+                
+<para>DataUI is a User Interface Window used to control everything associated with market price data. This is designed to grow. Market price data can be either pulled from Interactive Brokers using Jan Boonen&apos;s library or it can be switched to &apos;manual&apos; to explore behaviour of algos. </para>
+
+            </section>
+            <section xml:id="class_mike_1_1_control_1a313ca882c409ba9bed4837acf6d17a72">
+                <title>typedef int Mike::Control::ControlUI</title> <emphasis></emphasis>
+                
+            </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="class_mike_1_1_control_1ac9a2e3b56773b1eadab7297327a9fbcc">
+                <title>Mike::Control::Control ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_control_1aa3395e0509ab5b980732ab0e3a29ce4d">
+                <title>Mike::Control::~Control ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_control_1a3440083f03f7da3d4490fa44bc13d62b">
+                <title>void Mike::Control::mainloop ()</title> <emphasis></emphasis>
+                
+<para>The core of the program. This function runs in a continous loop and handles all events. Everything that happens is handled by functions inside this loop. </para>
+
+            </section>
+</section>

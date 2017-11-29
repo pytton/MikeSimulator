@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['_7econtrol',['~Control',['../class_mike_1_1_control.html#aa3395e0509ab5b980732ab0e3a29ce4d',1,'Mike::Control']]]
+  ['main',['main',['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cpp']]],
+  ['mainloop',['mainloop',['../class_mike_1_1_control.html#a3440083f03f7da3d4490fa44bc13d62b',1,'Mike::Control']]]
 ];
