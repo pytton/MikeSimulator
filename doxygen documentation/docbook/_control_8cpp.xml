@@ -2,12 +2,20 @@
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_control_8cpp">
     <title>Control.cpp File Reference</title>
     <programlisting>#include &quot;Control.h&quot;</programlisting>
+    <programlisting>#include &lt;iostream&gt;</programlisting>
         <simplesect>
             <title> Namespaces </title>
             <para>
                 <itemizedlist>
                     <listitem>
                         <para>struct <link linkend="namespace_mike">Mike</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespacestd">std</link></para>
                     </listitem>
                 </itemizedlist>
             </para>

@@ -1,8 +1,8 @@
 ﻿  main.cpp
-c:\users\pytto\documents\visual studio 2015\projects\mikesimulator\mikesimulator\src\control.h(12): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
   Control.cpp
-c:\users\pytto\documents\visual studio 2015\projects\mikesimulator\mikesimulator\src\control.h(12): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+c:\users\pytto\documents\visual studio 2015\projects\mikesimulator\mikesimulator\src\control.cpp(12): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
   FluidPriceControl.cxx
+  FluidControlInterface.cxx
   Generating Code...
-main.obj : error LNK2005: "int __cdecl Mike::frequency_of_primes(int)" (?frequency_of_primes@Mike@@YAHH@Z) already defined in Control.obj
-C:\Users\pytto\Documents\Visual Studio 2015\Projects\MikeSimulator\MikeSimulator\Debug\MikeSimulator.exe : fatal error LNK1169: one or more multiply defined symbols found
+  MikeSimulator.vcxproj -> C:\Users\pytto\Documents\Visual Studio 2015\Projects\MikeSimulator\MikeSimulator\Debug\MikeSimulator.exe
+  MikeSimulator.vcxproj -> C:\Users\pytto\Documents\Visual Studio 2015\Projects\MikeSimulator\MikeSimulator\Debug\MikeSimulator.pdb (Partial PDB)

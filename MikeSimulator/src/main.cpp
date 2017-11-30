@@ -61,7 +61,7 @@ int main()
 
 	Control control;
 
-	control.startloop();
+	control.startloop(&control);
 
 	Fl::run();
 

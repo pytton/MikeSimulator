@@ -6,15 +6,19 @@
     <chapter>
         <title>Namespace Documentation</title>
         <xi:include href="namespace_mike.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespacestd.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     </chapter>
         <xi:include href="mainpage.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <chapter>
         <title>Class Documentation</title>
         <xi:include href="class_mike_1_1_control.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="class_fluid_control_interface.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
         <xi:include href="class_fluid_price_control_u_i.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     </chapter>
     <chapter>
         <title>File Documentation</title>
+        <xi:include href="_fluid_control_interface_8cxx.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_fluid_control_interface_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
         <xi:include href="_fluid_price_control_8cxx.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
         <xi:include href="_fluid_price_control_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
         <xi:include href="_control_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>

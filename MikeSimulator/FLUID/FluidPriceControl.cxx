@@ -3,7 +3,7 @@
 #include "FluidPriceControl.h"
 
 FluidPriceControlUI::FluidPriceControlUI() {
-  { m_window1 = new Fl_Double_Window(237, 640, "Price Control");
+  { m_window1 = new Fl_Double_Window(238, 632, "Price Control");
     m_window1->user_data((void*)(this));
     { m_btnUp = new Fl_Button(50, 500, 60, 50, "Up");
     } // Fl_Button* m_btnUp

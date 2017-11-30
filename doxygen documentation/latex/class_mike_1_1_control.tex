@@ -10,6 +10,13 @@
 \hyperlink{class_mike_1_1_control_ac9a2e3b56773b1eadab7297327a9fbcc}{Control} ()
 \item 
 \hyperlink{class_mike_1_1_control_aa3395e0509ab5b980732ab0e3a29ce4d}{$\sim$\+Control} ()
+\item 
+void \hyperlink{class_mike_1_1_control_aa26389eedd6e1c60fa64fe7883ce6ce8}{stoploop} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_mike_1_1_control_ae34c60ef30c2de2332df13b644c7791f}{startloop} (void $\ast$ptr\+Control\+Pointer)
 \end{DoxyCompactItemize}
 \subsection*{Private Types}
 \begin{DoxyCompactItemize}
@@ -22,9 +29,28 @@ typedef int \hyperlink{class_mike_1_1_control_a313ca882c409ba9bed4837acf6d17a72}
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{class_mike_1_1_control_a3440083f03f7da3d4490fa44bc13d62b}{mainloop} ()
+\item 
+void \hyperlink{class_mike_1_1_control_a887652b2503a6e881fcceca36f0a0af9}{process\+Data} ()
+\item 
+void \hyperlink{class_mike_1_1_control_ad06eaf996f971a758eea1fd55eda2565}{process\+User\+Input} ()
+\item 
+void \hyperlink{class_mike_1_1_control_a2f239c6bace6fba6d31d54919b7ee6e1}{printout\+All} ()
+\item 
+void \hyperlink{class_mike_1_1_control_acf3d41cb5dd54a2ee31cfb0709a79e7e}{process\+Algos} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_mike_1_1_control_ac627d3cc73f39181fbfabfa01eb47f85}{mainloop\+Timeout\+Callback\+F\+L\+TK} (void $\ast$ptr\+Control\+Pointer)
 \end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_mike_1_1_control_a800d1dc7b58dc3af7c081225009c898f}{flag\+Stop\+Main\+Loop} = false
+\item 
+bool \hyperlink{class_mike_1_1_control_af17a58f80bda54fda5b0a5167c8f04ed}{main\+Loop\+Running} = false
+\item 
+bool \hyperlink{class_mike_1_1_control_a7749b97976e1bb3e7ea49c7d63531dfc}{main\+Loopfinished} = false
 \item 
 \hyperlink{class_mike_1_1_control_addbe39ef40982f0a4002b6f74091a799}{Data\+UI} $\ast$ \hyperlink{class_mike_1_1_control_a61d38447360ba0baa9ac8a3607de0c5b}{price\+Control}
 \end{DoxyCompactItemize}
@@ -43,7 +69,7 @@ void \hyperlink{class_mike_1_1_control_a3440083f03f7da3d4490fa44bc13d62b}{mainlo
 \subsubsection{\texorpdfstring{Data\+UI}{DataUI}}
 {\footnotesize\ttfamily typedef \hyperlink{class_fluid_price_control_u_i}{Fluid\+Price\+Control\+UI} \hyperlink{class_mike_1_1_control_addbe39ef40982f0a4002b6f74091a799}{Mike\+::\+Control\+::\+Data\+UI}\hspace{0.3cm}{\ttfamily [private]}}
 
-Data\+UI is a User Interface Window used to control everything associated with market price data. This is designed to grow. Market price data can be either pulled from Interactive Brokers using Jan Boonen\textquotesingle{}s library or it can be switched to \textquotesingle{}manual\textquotesingle{} to explore behaviour of algos. 
+
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_mike_1_1_control_ac9a2e3b56773b1eadab7297327a9fbcc}\label{class_mike_1_1_control_ac9a2e3b56773b1eadab7297327a9fbcc}} 
@@ -67,16 +93,76 @@ Data\+UI is a User Interface Window used to control everything associated with m
 \subsubsection{\texorpdfstring{mainloop()}{mainloop()}}
 {\footnotesize\ttfamily void Mike\+::\+Control\+::mainloop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-The core of the program. This function runs in a continous loop and handles all events. Everything that happens is handled by functions inside this loop. 
+The core of the program. This function runs in a continous loop and handles all events. Everything that happens is handled by functions inside this loop. \mbox{\Hypertarget{class_mike_1_1_control_ac627d3cc73f39181fbfabfa01eb47f85}\label{class_mike_1_1_control_ac627d3cc73f39181fbfabfa01eb47f85}} 
+\index{Mike\+::\+Control@{Mike\+::\+Control}!mainloop\+Timeout\+Callback\+F\+L\+TK@{mainloop\+Timeout\+Callback\+F\+L\+TK}}
+\index{mainloop\+Timeout\+Callback\+F\+L\+TK@{mainloop\+Timeout\+Callback\+F\+L\+TK}!Mike\+::\+Control@{Mike\+::\+Control}}
+\subsubsection{\texorpdfstring{mainloop\+Timeout\+Callback\+F\+L\+T\+K()}{mainloopTimeoutCallbackFLTK()}}
+{\footnotesize\ttfamily void Mike\+::\+Control\+::mainloop\+Timeout\+Callback\+F\+L\+TK (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr\+Control\+Pointer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Makes the \hyperlink{class_mike_1_1_control_a3440083f03f7da3d4490fa44bc13d62b}{mainloop()} function loop continously in intervals set by S\+E\+T\+\_\+\+M\+A\+I\+N\+L\+O\+O\+P\+\_\+\+I\+N\+T\+E\+R\+V\+AL. Has to be static per F\+L\+TK. \mbox{\Hypertarget{class_mike_1_1_control_a2f239c6bace6fba6d31d54919b7ee6e1}\label{class_mike_1_1_control_a2f239c6bace6fba6d31d54919b7ee6e1}} 
+\index{Mike\+::\+Control@{Mike\+::\+Control}!printout\+All@{printout\+All}}
+\index{printout\+All@{printout\+All}!Mike\+::\+Control@{Mike\+::\+Control}}
+\subsubsection{\texorpdfstring{printout\+All()}{printoutAll()}}
+{\footnotesize\ttfamily void Mike\+::\+Control\+::printout\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Printing out all information to user interfaces handled here \mbox{\Hypertarget{class_mike_1_1_control_acf3d41cb5dd54a2ee31cfb0709a79e7e}\label{class_mike_1_1_control_acf3d41cb5dd54a2ee31cfb0709a79e7e}} 
+\index{Mike\+::\+Control@{Mike\+::\+Control}!process\+Algos@{process\+Algos}}
+\index{process\+Algos@{process\+Algos}!Mike\+::\+Control@{Mike\+::\+Control}}
+\subsubsection{\texorpdfstring{process\+Algos()}{processAlgos()}}
+{\footnotesize\ttfamily void Mike\+::\+Control\+::process\+Algos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Handles all algo events (checkfills, make decisions, place/modify/cancel orders \mbox{\Hypertarget{class_mike_1_1_control_a887652b2503a6e881fcceca36f0a0af9}\label{class_mike_1_1_control_a887652b2503a6e881fcceca36f0a0af9}} 
+\index{Mike\+::\+Control@{Mike\+::\+Control}!process\+Data@{process\+Data}}
+\index{process\+Data@{process\+Data}!Mike\+::\+Control@{Mike\+::\+Control}}
+\subsubsection{\texorpdfstring{process\+Data()}{processData()}}
+{\footnotesize\ttfamily void Mike\+::\+Control\+::process\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Handles all events related to market data \mbox{\Hypertarget{class_mike_1_1_control_ad06eaf996f971a758eea1fd55eda2565}\label{class_mike_1_1_control_ad06eaf996f971a758eea1fd55eda2565}} 
+\index{Mike\+::\+Control@{Mike\+::\+Control}!process\+User\+Input@{process\+User\+Input}}
+\index{process\+User\+Input@{process\+User\+Input}!Mike\+::\+Control@{Mike\+::\+Control}}
+\subsubsection{\texorpdfstring{process\+User\+Input()}{processUserInput()}}
+{\footnotesize\ttfamily void Mike\+::\+Control\+::process\+User\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+All user interactions with graphical user interfaces handled here \mbox{\Hypertarget{class_mike_1_1_control_ae34c60ef30c2de2332df13b644c7791f}\label{class_mike_1_1_control_ae34c60ef30c2de2332df13b644c7791f}} 
+\index{Mike\+::\+Control@{Mike\+::\+Control}!startloop@{startloop}}
+\index{startloop@{startloop}!Mike\+::\+Control@{Mike\+::\+Control}}
+\subsubsection{\texorpdfstring{startloop()}{startloop()}}
+{\footnotesize\ttfamily void Mike\+::\+Control\+::startloop (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr\+Control\+Pointer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+This is how you start the program. Starts looping the Main\+Loop function. void pointer has to be of \hyperlink{class_mike_1_1_control}{Control} type \mbox{\Hypertarget{class_mike_1_1_control_aa26389eedd6e1c60fa64fe7883ce6ce8}\label{class_mike_1_1_control_aa26389eedd6e1c60fa64fe7883ce6ce8}} 
+\index{Mike\+::\+Control@{Mike\+::\+Control}!stoploop@{stoploop}}
+\index{stoploop@{stoploop}!Mike\+::\+Control@{Mike\+::\+Control}}
+\subsubsection{\texorpdfstring{stoploop()}{stoploop()}}
+{\footnotesize\ttfamily void Mike\+::\+Control\+::stoploop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Use this to pause execution of the program. Stops looping the Main\+Loop function 
 
 \subsection{Member Data Documentation}
-\mbox{\Hypertarget{class_mike_1_1_control_a61d38447360ba0baa9ac8a3607de0c5b}\label{class_mike_1_1_control_a61d38447360ba0baa9ac8a3607de0c5b}} 
+\mbox{\Hypertarget{class_mike_1_1_control_a800d1dc7b58dc3af7c081225009c898f}\label{class_mike_1_1_control_a800d1dc7b58dc3af7c081225009c898f}} 
+\index{Mike\+::\+Control@{Mike\+::\+Control}!flag\+Stop\+Main\+Loop@{flag\+Stop\+Main\+Loop}}
+\index{flag\+Stop\+Main\+Loop@{flag\+Stop\+Main\+Loop}!Mike\+::\+Control@{Mike\+::\+Control}}
+\subsubsection{\texorpdfstring{flag\+Stop\+Main\+Loop}{flagStopMainLoop}}
+{\footnotesize\ttfamily bool Mike\+::\+Control\+::flag\+Stop\+Main\+Loop = false\hspace{0.3cm}{\ttfamily [private]}}
+
+used internally by mainloop\+Timeout\+Callback\+F\+L\+TK, startloop and stoploop \mbox{\Hypertarget{class_mike_1_1_control_a7749b97976e1bb3e7ea49c7d63531dfc}\label{class_mike_1_1_control_a7749b97976e1bb3e7ea49c7d63531dfc}} 
+\index{Mike\+::\+Control@{Mike\+::\+Control}!main\+Loopfinished@{main\+Loopfinished}}
+\index{main\+Loopfinished@{main\+Loopfinished}!Mike\+::\+Control@{Mike\+::\+Control}}
+\subsubsection{\texorpdfstring{main\+Loopfinished}{mainLoopfinished}}
+{\footnotesize\ttfamily bool Mike\+::\+Control\+::main\+Loopfinished = false\hspace{0.3cm}{\ttfamily [private]}}
+
+this a \textquotesingle{}thread guard\textquotesingle{} for the Fl\+::add\+\_\+timeout function timeoutfunction -\/ to ensure that another run of the Main\+Loop is not initiated before the Main\+Loop is finished processing \mbox{\Hypertarget{class_mike_1_1_control_af17a58f80bda54fda5b0a5167c8f04ed}\label{class_mike_1_1_control_af17a58f80bda54fda5b0a5167c8f04ed}} 
+\index{Mike\+::\+Control@{Mike\+::\+Control}!main\+Loop\+Running@{main\+Loop\+Running}}
+\index{main\+Loop\+Running@{main\+Loop\+Running}!Mike\+::\+Control@{Mike\+::\+Control}}
+\subsubsection{\texorpdfstring{main\+Loop\+Running}{mainLoopRunning}}
+{\footnotesize\ttfamily bool Mike\+::\+Control\+::main\+Loop\+Running = false\hspace{0.3cm}{\ttfamily [private]}}
+
+\textquotesingle{}Thread guard\textquotesingle{} used by mainloop\+Timeout\+Callback\+F\+L\+TK, startloop and stoploop \mbox{\Hypertarget{class_mike_1_1_control_a61d38447360ba0baa9ac8a3607de0c5b}\label{class_mike_1_1_control_a61d38447360ba0baa9ac8a3607de0c5b}} 
 \index{Mike\+::\+Control@{Mike\+::\+Control}!price\+Control@{price\+Control}}
 \index{price\+Control@{price\+Control}!Mike\+::\+Control@{Mike\+::\+Control}}
 \subsubsection{\texorpdfstring{price\+Control}{priceControl}}
 {\footnotesize\ttfamily \hyperlink{class_mike_1_1_control_addbe39ef40982f0a4002b6f74091a799}{Data\+UI}$\ast$ Mike\+::\+Control\+::price\+Control\hspace{0.3cm}{\ttfamily [private]}}
 
-
+Data\+UI is a User Interface Window used to control everything associated with market price data. This is designed to grow. Market price data can be either pulled from Interactive Brokers using Jan Boonen\textquotesingle{}s library or it can be switched to \textquotesingle{}manual\textquotesingle{} to explore behaviour of algos. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

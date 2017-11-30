@@ -111,11 +111,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="FLUID\FluidControlInterface.cxx" />
     <ClCompile Include="FLUID\FluidPriceControl.cxx" />
     <ClCompile Include="src\Control.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="FLUID\FluidControlInterface.h" />
     <ClInclude Include="FLUID\FluidPriceControl.h" />
     <ClInclude Include="src\Control.h" />
   </ItemGroup>

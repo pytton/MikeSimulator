@@ -8,7 +8,7 @@ class FluidPriceControlUI {open
   } {
     Fl_Window m_window1 {
       label {Price Control} open selected
-      xywh {43 53 237 640} type Double visible
+      xywh {543 251 238 632} type Double visible
     } {
       Fl_Button m_btnUp {
         label Up

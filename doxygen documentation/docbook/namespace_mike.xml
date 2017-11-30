@@ -11,4 +11,25 @@
                 </itemizedlist>
             </para>
         </section>
+        <section>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const double <link linkend="namespace_mike_1abbeda217f93388b7dd036c32d183f426">SET_MAINLOOP_INTERVAL</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="namespace_mike_1ada7afe897748f668730c74456952e356">frequency_of_primes</link> (
+int n)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
 </section>

@@ -1,35 +1,34 @@
 #pragma once
+//ASCII ART FROM HERE: http://www.patorjk.com/software/taag/#p=display&h=0&c=c%2B%2B&f=Banner3&t=Control
 
 #include <math.h>
 
 #include "FluidPriceControl.h"
+#include "FluidControlInterface.h"
 
 namespace Mike
 {
-	int frequency_of_primes(int n) {
-		int i, j;
-		int freq = n - 1;
-		for (i = 2; i <= n; ++i) for (j = sqrt(i); j>1; --j) if (i%j == 0) { --freq; break; }
-		return freq;
-	}
-
-
-
-
 	/*!amount of seconds used by mainloopTimeoutCallbackFLTK() to determine how long to wait after mainloop() is finished before initiating another mainloop() function call*/
-	const static double SET_MAINLOOP_INTERVAL = 0.1;
+	const static double SET_MAINLOOP_INTERVAL = 0.01;
 
 	class Control
-	{
-
+	{	//   _                            _         __         
+		//  | |_  _   _  _ __    ___   __| |  ___  / _| ___  _ 
+		//  | __|| | | || '_ \  / _ \ / _` | / _ \| |_ / __|(_)
+		//  | |_ | |_| || |_) ||  __/| (_| ||  __/|  _|\__ \ _ 
+		//   \__| \__, || .__/  \___| \__,_| \___||_|  |___/(_)
+		//        |___/ |_|                                    
+		/*! DataUI is a window handling the Data class */
 		typedef FluidPriceControlUI DataUI;
-		typedef int ControlUI;
+		/*! ControlUI is a window handling the Control class */
+		typedef FluidControlInterface ControlUI;
+
 	public:
 		Control();
 		~Control();
 
-		/*!This is how you start the program. Starts looping the MainLoop function*/
-		void startloop();
+		/*!This is how you start the program. Starts looping the MainLoop function. void pointer has to be of Control type*/
+		static void startloop(void * ptrControlPointer);
 		/*!Use this to pause execution of the program. Stops looping the MainLoop function*/
 		void stoploop();
 	private:
@@ -44,10 +43,14 @@ namespace Mike
 		bool mainLoopRunning = false;
 		/*!this a 'thread guard' for the Fl::add_timeout function timeoutfunction - to ensure that another run of the MainLoop is not initiated before the MainLoop is finished processing*/		
 		bool mainLoopfinished = false;
-
-
-
-
+		/*! Handles all events related to market data*/
+		void processData() {}
+		/*! All user interactions with graphical user interfaces handled here */
+		void processUserInput() {}
+		/*! Printing out all information to user interfaces handled here */
+		void printoutAll() {}
+		/*! Handles all algo events (checkfills, make decisions, place/modify/cancel orders */
+		void processAlgos() {}
 
 
 		/*!
@@ -55,7 +58,9 @@ namespace Mike
 		This is designed to grow. Market price data can be either pulled from Interactive Brokers using
 		Jan Boonen's library or it can be switched to 'manual' to explore behaviour of algos.
 		*/
-		DataUI * priceControl;
+		DataUI * dataControlWindow;
+		/*! This window is for controlling the Control class */
+		ControlUI * controlWindow;
 	};
 }
 

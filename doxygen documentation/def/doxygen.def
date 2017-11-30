@@ -14,7 +14,7 @@ class = {
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'Control';
       sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Control.h';
-      sec-mem-desc-line = '17';
+      sec-mem-desc-line = '25';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -32,12 +32,57 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = '~Control';
       sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Control.h';
-      sec-mem-desc-line = '18';
+      sec-mem-desc-line = '26';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'class_mike_1_1_control_1aa26389eedd6e1c60fa64fe7883ce6ce8';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'stoploop';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Control.h';
+      sec-mem-desc-line = '31';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Use this to pause execution of the program. Stops looping the MainLoop function 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-section = {
+    sec-kind = 'public-static-func';
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'class_mike_1_1_control_1ae34c60ef30c2de2332df13b644c7791f';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+static void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'startloop';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+void *
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'ptrControlPointer';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Control.h';
+      sec-mem-desc-line = '29';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+This is how you start the program. Starts looping the MainLoop function. void pointer has to be of Control type 
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
   }; /* cp-section */
@@ -53,14 +98,12 @@ FluidPriceControlUI
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'DataUI';
       sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Control.h';
-      sec-mem-desc-line = '14';
+      sec-mem-desc-line = '21';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
-DataUI is a User Interface Window used to control everything associated with market price data.
-This is designed to grow. Market price data can be either pulled from Interactive Brokers using
-Jan Boonen's library or it can be switched to 'manual' to explore behaviour of algos.
+
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
@@ -73,7 +116,7 @@ int
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'ControlUI';
       sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Control.h';
-      sec-mem-desc-line = '15';
+      sec-mem-desc-line = '22';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -94,18 +137,153 @@ void
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'mainloop';
       sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Control.h';
-      sec-mem-desc-line = '24';
+      sec-mem-desc-line = '35';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
-The core of the program. This function runs in a continous loop and handles all events.
-Everything that happens is handled by functions inside this loop.
+    The core of the program. This function runs in a continous loop and handles all events.
+Everything that happens is handled by functions inside this loop.  
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'class_mike_1_1_control_1a887652b2503a6e881fcceca36f0a0af9';
+      sec-mem-virt = normal;
+      sec-mem-prot = private;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'processData';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Control.h';
+      sec-mem-desc-line = '45';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Handles all events related to market data 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'class_mike_1_1_control_1ad06eaf996f971a758eea1fd55eda2565';
+      sec-mem-virt = normal;
+      sec-mem-prot = private;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'processUserInput';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Control.h';
+      sec-mem-desc-line = '47';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+All user interactions with graphical user interfaces handled here  
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'class_mike_1_1_control_1a2f239c6bace6fba6d31d54919b7ee6e1';
+      sec-mem-virt = normal;
+      sec-mem-prot = private;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'printoutAll';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Control.h';
+      sec-mem-desc-line = '49';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Printing out all information to user interfaces handled here  
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'class_mike_1_1_control_1acf3d41cb5dd54a2ee31cfb0709a79e7e';
+      sec-mem-virt = normal;
+      sec-mem-prot = private;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'processAlgos';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Control.h';
+      sec-mem-desc-line = '51';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Handles all algo events (checkfills, make decisions, place/modify/cancel orders  
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
   }; /* cp-section */
   cp-section = {
     sec-kind = 'private-attrib';
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'class_mike_1_1_control_1a800d1dc7b58dc3af7c081225009c898f';
+      sec-mem-virt = normal;
+      sec-mem-prot = private;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+bool
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'flagStopMainLoop';
+      sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
+= false
+_EnD_oF_dEf_TeXt_;
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Control.h';
+      sec-mem-desc-line = '39';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+used internally by mainloopTimeoutCallbackFLTK, startloop and stoploop  
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'class_mike_1_1_control_1af17a58f80bda54fda5b0a5167c8f04ed';
+      sec-mem-virt = normal;
+      sec-mem-prot = private;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+bool
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'mainLoopRunning';
+      sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
+= false
+_EnD_oF_dEf_TeXt_;
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Control.h';
+      sec-mem-desc-line = '41';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+'Thread guard' used by mainloopTimeoutCallbackFLTK, startloop and stoploop  
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'class_mike_1_1_control_1a7749b97976e1bb3e7ea49c7d63531dfc';
+      sec-mem-virt = normal;
+      sec-mem-prot = private;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+bool
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'mainLoopfinished';
+      sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
+= false
+_EnD_oF_dEf_TeXt_;
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Control.h';
+      sec-mem-desc-line = '43';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+this a 'thread guard' for the Fl::add_timeout function timeoutfunction - to ensure that another run of the MainLoop is not initiated before the MainLoop is finished processing 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
     sec-member = {
       sec-mem-kind = 'variable';
       sec-mem-id   = 'class_mike_1_1_control_1a61d38447360ba0baa9ac8a3607de0c5b';
@@ -116,17 +294,46 @@ DataUI *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'priceControl';
       sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Control.h';
-      sec-mem-desc-line = '26';
+      sec-mem-desc-line = '63';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+DataUI is a User Interface Window used to control everything associated with market price data.
+This is designed to grow. Market price data can be either pulled from Interactive Brokers using
+Jan Boonen's library or it can be switched to 'manual' to explore behaviour of algos.
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-section = {
+    sec-kind = 'private-static-func';
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'class_mike_1_1_control_1ac627d3cc73f39181fbfabfa01eb47f85';
+      sec-mem-virt = normal;
+      sec-mem-prot = private;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+static void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'mainloopTimeoutCallbackFLTK';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+void *
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'ptrControlPointer';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Control.h';
+      sec-mem-desc-line = '37';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Makes the mainloop() function loop continously in intervals set by SET_MAINLOOP_INTERVAL. Has to be static per FLTK. 
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
   }; /* cp-section */
   cp-filename  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Control.h';
-  cp-fileline  = '8';
+  cp-fileline  = '14';
   cp-briefdesc = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -155,6 +362,186 @@ _EnD_oF_dEf_TeXt_;
           node-link-id = 'class_fluid_price_control_u_i';
         };
       }; /* node */
+
+_EnD_oF_dEf_TeXt_;
+}; /* class */
+class = {
+  cp-id     = 'class_fluid_control_interface';
+  cp-name   = 'FluidControlInterface';
+  cp-section = {
+    sec-kind = 'public-func';
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'class_fluid_control_interface_1a4cb172a43e95b2852f30807e9037a9d9';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'FluidControlInterface';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/FLUID/FluidControlInterface.h';
+      sec-mem-desc-line = '12';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-section = {
+    sec-kind = 'public-attrib';
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'class_fluid_control_interface_1ab318bb377679cd76946bb68fc505652f';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+Fl_Double_Window *
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'm_window1';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/FLUID/FluidControlInterface.h';
+      sec-mem-desc-line = '13';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'class_fluid_control_interface_1aa98b7fdaecb2d588e5decc52f23919fb';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+Fl_Button *
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'm_btnShowPositions1';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/FLUID/FluidControlInterface.h';
+      sec-mem-desc-line = '14';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'class_fluid_control_interface_1a04185b8fd0895dfc2b77a77c9eb61bc8';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+Fl_Box *
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'm_windowBox';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/FLUID/FluidControlInterface.h';
+      sec-mem-desc-line = '15';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'class_fluid_control_interface_1acc9ea2ec328a79737c722c6f7a3b236d';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+Fl_Button *
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'm_btnShowPositions2';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/FLUID/FluidControlInterface.h';
+      sec-mem-desc-line = '16';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'class_fluid_control_interface_1acd3d58fda18fea04d02874461097c510';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+Fl_Button *
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'm_btnShowPositions3';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/FLUID/FluidControlInterface.h';
+      sec-mem-desc-line = '17';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'class_fluid_control_interface_1a507c8f8707e6735a1f651e0cf9d5a51b';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+Fl_Button *
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'm_btnShowPositions4';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/FLUID/FluidControlInterface.h';
+      sec-mem-desc-line = '18';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'class_fluid_control_interface_1a4d0defe9534380c28d3e83a58d909696';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+Fl_Button *
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'm_btnExperiment1';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/FLUID/FluidControlInterface.h';
+      sec-mem-desc-line = '19';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'class_fluid_control_interface_1a3d129ab381b2bcf443836df21664d549';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+Fl_Button *
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'm_btnExperiment2';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/FLUID/FluidControlInterface.h';
+      sec-mem-desc-line = '20';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/FLUID/FluidControlInterface.h';
+  cp-fileline  = '10';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
 }; /* class */
@@ -393,6 +780,30 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
 }; /* class */
 file = {
+  file-id   = '_fluid_control_interface_8cxx';
+  file-name = 'FluidControlInterface.cxx';
+  file-full-name  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/FLUID/FluidControlInterface.cxx';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = '_fluid_control_interface_8h';
+  file-name = 'FluidControlInterface.h';
+  file-full-name  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/FLUID/FluidControlInterface.h';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
   file-id   = '_fluid_price_control_8cxx';
   file-name = 'FluidPriceControl.cxx';
   file-full-name  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/FLUID/FluidPriceControl.cxx';
@@ -419,6 +830,32 @@ _EnD_oF_dEf_TeXt_;
 file = {
   file-id   = '_control_8cpp';
   file-name = 'Control.cpp';
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'namespace_mike_1ada7afe897748f668730c74456952e356';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'frequency_of_primes';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'n';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Control.cpp';
+      func-mem-desc-line = '9';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    };
   file-full-name  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Control.cpp';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
@@ -431,6 +868,29 @@ _EnD_oF_dEf_TeXt_;
 file = {
   file-id   = '_control_8h';
   file-name = 'Control.h';
+    var = {
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'namespace_mike_1abbeda217f93388b7dd036c32d183f426';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+static const double
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'SET_MAINLOOP_INTERVAL';
+      var-mem-initializer = <<_EnD_oF_dEf_TeXt_
+= 0.01
+_EnD_oF_dEf_TeXt_;
+      var-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Control.h';
+      var-mem-desc-line = '11';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+amount of seconds used by mainloopTimeoutCallbackFLTK() to determine how long to wait after mainloop() is finished before initiating another mainloop() function call 
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    };
   file-full-name  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Control.h';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_

@@ -1,15 +1,25 @@
 #include "Control.h"
 #include <iostream>
-#include <mutex>
+
 
 using namespace std;
 namespace Mike
 {
+	/*! used for testing purposes to occupy CPU */
+	int frequency_of_primes(int n) {
+		int i, j;
+		int freq = n - 1;
+		for (i = 2; i <= n; ++i) for (j = sqrt(i); j>1; --j) if (i%j == 0) { --freq; break; }
+		return freq;
+	}
+
 	Control::Control()
 	{
-		priceControl = new DataUI();
-
-		priceControl->m_window1->show();
+		//set up the user interface windows:
+		dataControlWindow = new DataUI();
+		dataControlWindow->m_window1->show();
+		controlWindow = new ControlUI();
+		controlWindow->m_window1->show();
 	}
 
 
@@ -24,50 +34,34 @@ namespace Mike
 	{
 		mainLoopRunning = true;
 
-		std::cout << "Printed from mainloop" << std::endl;
+		//do everything that needs to be done:
 
-		int processTime = frequency_of_primes(20000);
-
-		cout << "Searched for primes: " << processTime << endl;
-
+		processData();
+		processUserInput();
+		printoutAll();
+		processAlgos();
 
 		mainLoopRunning = false;
-		
+		//start the loop again:
+		mainloopTimeoutCallbackFLTK(this);		
 	}
 
 	void Control::mainloopTimeoutCallbackFLTK(void * ptrControlPointer)
 	{
 		Control * control = (Control*)ptrControlPointer;
-
-		////commented out. this used to monitor the execution time of mainloop:
-		//if (control->resetTimer) {
-		//	control->timer.reset(); control->resetTimer = false;
-		//}
-		////	cout << "\MainLoop process time: "<< (control->timer.elapsed() - control->previouselapsedtime - 150) << endl;//150 because 0.15 in Fl::repeat_timeout(0.15, timeoutfunction,(void*) p);
-		//control->previouselapsedtime = control->timer.elapsed();
-
-
-		std::cout << "mainloopTimeoutCallbackFLTK called" << std::endl;
-		//check if mainloop has finished executing. if it has, execute the code in mainloop:
-		/*if (!control->mainLoopRunning)*/ { control->mainloop(); std::cout << "starting mainloop" << std::endl; }
 		//check if we want to stop the loop. if not, call mainloop in SET_MAINLOOP_INTERVAL seconds
-		if (!control->flagStopMainLoop) Fl::repeat_timeout(SET_MAINLOOP_INTERVAL, mainloopTimeoutCallbackFLTK, (void*)ptrControlPointer);
+		if (!control->flagStopMainLoop) Fl::repeat_timeout(SET_MAINLOOP_INTERVAL,startloop , ptrControlPointer);
 	}
-	void Control::startloop()
-	{
-		std::cout << "startloop called" << std::endl;
+	void Control::startloop(void * ptrControlPointer)
+	{	
+		Control * ptr = (Control*)ptrControlPointer;
+		//make sure the trigger to stop the loop inside timeoutfunction is off:
+		ptr->flagStopMainLoop = false;
 		//check to see if the loop is already running. if it is not, start the loop:
-		if (!mainLoopRunning) {
-			Fl::add_timeout(SET_MAINLOOP_INTERVAL, mainloopTimeoutCallbackFLTK, (void*) this);
-			mainLoopRunning = true;
-			//and make sure the trigger to stop the loop inside timeoutfunction is off:
-			flagStopMainLoop = false;
-			return;
-		}
-		else startloop();
-
+		if (!ptr->mainLoopRunning) ptr->mainloop();
+		//try again in 200 ms:
+		else { Sleep(200); startloop(ptrControlPointer); }
 	}
-
 	void Control::stoploop()
 	{
 		//if the loop is already set up to be stopped, do nothing:

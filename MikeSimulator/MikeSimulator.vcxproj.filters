@@ -23,6 +23,9 @@
     <ClCompile Include="src\Control.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="FLUID\FluidControlInterface.cxx">
+      <Filter>FLUID</Filter>
+    </ClCompile>
     <ClCompile Include="FLUID\FluidPriceControl.cxx">
       <Filter>FLUID</Filter>
     </ClCompile>
@@ -30,6 +33,9 @@
   <ItemGroup>
     <ClInclude Include="src\Control.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FLUID\FluidControlInterface.h">
+      <Filter>FLUID</Filter>
     </ClInclude>
     <ClInclude Include="FLUID\FluidPriceControl.h">
       <Filter>FLUID</Filter>
