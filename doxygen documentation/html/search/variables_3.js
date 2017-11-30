@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['set_5fmainloop_5finterval',['SET_MAINLOOP_INTERVAL',['../namespace_mike.html#abbeda217f93388b7dd036c32d183f426',1,'Mike']]]
+  ['datacontrolwindow',['dataControlWindow',['../class_mike_1_1_control.html#aaf1b458116247ebada43f8bb8faf3edf',1,'Mike::Control']]]
 ];

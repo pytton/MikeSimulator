@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['dataui',['DataUI',['../class_mike_1_1_control.html#addbe39ef40982f0a4002b6f74091a799',1,'Mike::Control']]]
+  ['amount',['amount',['../class_mike_order.html#a7ba5f0c33df2d790761605408b86254f',1,'MikeOrder']]],
+  ['assignedtoposition',['assignedToPosition',['../class_mike_order.html#a6df542f4fb3b3c79b508349e397b5e83',1,'MikeOrder']]]
 ];

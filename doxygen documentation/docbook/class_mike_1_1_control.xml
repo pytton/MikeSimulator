@@ -16,7 +16,7 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                            <para>typedef int  <link linkend="class_mike_1_1_control_1a313ca882c409ba9bed4837acf6d17a72">ControlUI</link></para>
+                            <para>typedef <link linkend="class_fluid_control_interface">FluidControlInterface</link>  <link linkend="class_mike_1_1_control_1aba56a17e2d16d087731d215476fff47d">ControlUI</link></para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -47,7 +47,14 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>DataUI * priceControl</para>
+                        <para>DataUI * dataControlWindow</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ControlUI * controlWindow</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -147,10 +154,14 @@ void * ptrControlPointer)</para>
             <section xml:id="class_mike_1_1_control_1addbe39ef40982f0a4002b6f74091a799">
                 <title>typedef FluidPriceControlUI Mike::Control::DataUI</title> <emphasis></emphasis>
                 
+<para>DataUI is a window handling the Data class </para>
+
             </section>
-            <section xml:id="class_mike_1_1_control_1a313ca882c409ba9bed4837acf6d17a72">
-                <title>typedef int Mike::Control::ControlUI</title> <emphasis></emphasis>
+            <section xml:id="class_mike_1_1_control_1aba56a17e2d16d087731d215476fff47d">
+                <title>typedef FluidControlInterface Mike::Control::ControlUI</title> <emphasis></emphasis>
                 
+<para>ControlUI is a window handling the <link linkend="class_mike_1_1_control">Control</link> class </para>
+
             </section>
         <section>
             <title>Member Data Documentation</title>
@@ -158,7 +169,7 @@ void * ptrControlPointer)</para>
                 <title>bool Mike::Control::flagStopMainLoop</title>                
 <para>used internally by mainloopTimeoutCallbackFLTK, startloop and stoploop </para>
 
-                <para>Definition at line 39 of file Control.h</para>
+                <para>Definition at line 41 of file Control.h</para>
                 <para>The Documentation for this struct was generated from the following file: </para>
                 <para><itemizedlist><listitem><para>Control.h</para></listitem></itemizedlist></para>
             </simplesect>
@@ -166,7 +177,7 @@ void * ptrControlPointer)</para>
                 <title>bool Mike::Control::mainLoopRunning</title>                
 <para>&apos;Thread guard&apos; used by mainloopTimeoutCallbackFLTK, startloop and stoploop </para>
 
-                <para>Definition at line 41 of file Control.h</para>
+                <para>Definition at line 43 of file Control.h</para>
                 <para>The Documentation for this struct was generated from the following file: </para>
                 <para><itemizedlist><listitem><para>Control.h</para></listitem></itemizedlist></para>
             </simplesect>
@@ -174,13 +185,21 @@ void * ptrControlPointer)</para>
                 <title>bool Mike::Control::mainLoopfinished</title>                
 <para>this a &apos;thread guard&apos; for the Fl::add_timeout function timeoutfunction - to ensure that another run of the MainLoop is not initiated before the MainLoop is finished processing </para>
 
-                <para>Definition at line 43 of file Control.h</para>
+                <para>Definition at line 45 of file Control.h</para>
                 <para>The Documentation for this struct was generated from the following file: </para>
                 <para><itemizedlist><listitem><para>Control.h</para></listitem></itemizedlist></para>
             </simplesect>
             <simplesect>
-                <title>DataUI* Mike::Control::priceControl</title>                
+                <title>DataUI* Mike::Control::dataControlWindow</title>                
 <para>DataUI is a User Interface Window used to control everything associated with market price data. This is designed to grow. Market price data can be either pulled from Interactive Brokers using Jan Boonen&apos;s library or it can be switched to &apos;manual&apos; to explore behaviour of algos. </para>
+
+                <para>Definition at line 61 of file Control.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Control.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>ControlUI* Mike::Control::controlWindow</title>                
+<para>This window is for controlling the <link linkend="class_mike_1_1_control">Control</link> class </para>
 
                 <para>Definition at line 63 of file Control.h</para>
                 <para>The Documentation for this struct was generated from the following file: </para>

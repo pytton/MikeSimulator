@@ -20,6 +20,9 @@ namespace Mike
 		dataControlWindow->m_window1->show();
 		controlWindow = new ControlUI();
 		controlWindow->m_window1->show();
+
+		userinterface = new UserInterface(this);
+		userinterface->m_window1->show();
 	}
 
 
@@ -69,4 +72,13 @@ namespace Mike
 		//if it is not set to be stopped, set the trigger to stop it inside the timeoutfunction:
 		flagStopMainLoop = true;
 	}
-}
+	void Control::CallbkUserInt(UserInterface * p, BtnPressed btn, long longparameter1, long longparameter2, double parameter3)
+	{
+	}
+	void Control::CallbkUserInt(UserInterface * p, long price, MikeOrderType OrderTypePressed, long orderSize)
+	{
+	}
+	void Control::callbkWidTable(int row, int col, long price, MikeOrderType OrderTypePressed, int orderSize)
+	{
+	}
+}//namespace Mike

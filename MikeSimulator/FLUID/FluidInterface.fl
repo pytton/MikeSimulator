@@ -1,0 +1,94 @@
+# data file for the Fltk User Interface Designer (fluid)
+version 1.0303 
+header_name {.h} 
+code_name {.cxx}
+class FluidInterface {open
+} {
+  Function {FluidInterface()} {open
+  } {
+    Fl_Window m_window1 {
+      label window1 open selected
+      xywh {333 210 1120 644} type Double visible
+    } {
+      Fl_Value_Input m_curr_ask {
+        label {Current Ask}
+        xywh {1080 250 55 20}
+      }
+      Fl_Value_Input m_top_limit {
+        label {Top Limit}
+        xywh {1075 150 60 20}
+      }
+      Fl_Value_Input m_top_profit {
+        label {Profit at top lim}
+        xywh {1075 200 60 20}
+      }
+      Fl_Table m_table {open
+        xywh {0 0 940 655} labelsize 10
+      } {}
+      Fl_Value_Input m_curr_bid {
+        label {Current Bid}
+        xywh {1080 275 55 20}
+      }
+      Fl_Value_Input m_bottom_limit {
+        label {Bottom Limit}
+        xywh {1075 175 60 20}
+      }
+      Fl_Value_Input m_bottom_profit {
+        label {Profit at bottom lim}
+        xywh {1075 225 60 20}
+      }
+      Fl_Button m_btn_extra {
+        label {Reprice Table}
+        xywh {1070 305 70 40} align 128
+      }
+      Fl_Output m_TotOpenPos {
+        label {Total Open Pos:}
+        xywh {1075 26 60 24} labelsize 10 textsize 12
+      }
+      Fl_Output m_TotOpenPL {
+        label {Total Open P/L:}
+        xywh {1075 46 60 24} labelsize 10 textsize 12
+      }
+      Fl_Output m_TotClosedPL {
+        label {Total Closed P/L:}
+        xywh {1075 66 60 24} labelsize 10 textsize 12
+      }
+      Fl_Output m_TotPL {
+        label {Total P/L:}
+        xywh {1075 86 60 24} labelsize 10 textsize 12
+      }
+      Fl_Button m_btn_printOrders {
+        label {Print Orders}
+        xywh {1035 355 45 30} labelsize 10 align 128
+      }
+      Fl_Button m_btn_checkFills {
+        label {Check Fillls}
+        xywh {1035 395 45 30} labelsize 10 align 128
+      }
+      Fl_Button m_btn_printPos {
+        label {Print Positions}
+        xywh {1090 355 45 30} labelsize 10 align 128
+      }
+      Fl_Value_Input m_order_size {
+        label {Order Size}
+        xywh {1075 440 60 20}
+      }
+      Fl_Button m_btn_resetOrdSize {
+        label {Reset Order Size}
+        xywh {1005 460 130 30} labelsize 10 align 128
+      }
+      Fl_Button m_btn_CancelAllOrders {
+        label {Cancel All Orders}
+        xywh {1005 495 130 20} labelsize 12
+      }
+      Fl_Output m_AvgPosPrice {
+        label {Average Price:}
+        xywh {1075 6 60 24} labelsize 10 textsize 12
+      }
+      Fl_Button m_btn_ClearPositions {
+        label {Clear All Positions}
+        xywh {1005 520 130 20} labelsize 12
+      }
+    }
+  }
+} 

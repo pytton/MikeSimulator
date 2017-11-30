@@ -51,14 +51,14 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>Fl_Button * m_btnExperiment1</para>
+                        <para>Fl_Button * btnStartLoop</para>
                     </listitem>
                 </itemizedlist>
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>Fl_Button * m_btnExperiment2</para>
+                        <para>Fl_Button * btnStopLoop</para>
                     </listitem>
                 </itemizedlist>
             </para>

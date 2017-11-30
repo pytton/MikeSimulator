@@ -15,6 +15,9 @@
     <Filter Include="FLUID">
       <UniqueIdentifier>{317961a3-c679-48a8-af9e-38038cf69d09}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Work in Progress">
+      <UniqueIdentifier>{380981c5-0acd-437f-b6c0-082ce718add7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -29,6 +32,18 @@
     <ClCompile Include="FLUID\FluidPriceControl.cxx">
       <Filter>FLUID</Filter>
     </ClCompile>
+    <ClCompile Include="src\UserInterface.cpp">
+      <Filter>Work in Progress</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WidgetTable.cpp">
+      <Filter>Work in Progress</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WidTableBase.cpp">
+      <Filter>Work in Progress</Filter>
+    </ClCompile>
+    <ClCompile Include="FLUID\FluidInterface.cxx">
+      <Filter>FLUID</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Control.h">
@@ -38,6 +53,21 @@
       <Filter>FLUID</Filter>
     </ClInclude>
     <ClInclude Include="FLUID\FluidPriceControl.h">
+      <Filter>FLUID</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MikeEnums.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\UserInterface.h">
+      <Filter>Work in Progress</Filter>
+    </ClInclude>
+    <ClInclude Include="src\WidgetTable.h">
+      <Filter>Work in Progress</Filter>
+    </ClInclude>
+    <ClInclude Include="src\WidTableBase.h">
+      <Filter>Work in Progress</Filter>
+    </ClInclude>
+    <ClInclude Include="FLUID\FluidInterface.h">
       <Filter>FLUID</Filter>
     </ClInclude>
   </ItemGroup>

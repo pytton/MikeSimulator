@@ -23,7 +23,7 @@ static void \hyperlink{class_mike_1_1_control_ae34c60ef30c2de2332df13b644c7791f}
 \item 
 typedef \hyperlink{class_fluid_price_control_u_i}{Fluid\+Price\+Control\+UI} \hyperlink{class_mike_1_1_control_addbe39ef40982f0a4002b6f74091a799}{Data\+UI}
 \item 
-typedef int \hyperlink{class_mike_1_1_control_a313ca882c409ba9bed4837acf6d17a72}{Control\+UI}
+typedef \hyperlink{class_fluid_control_interface}{Fluid\+Control\+Interface} \hyperlink{class_mike_1_1_control_aba56a17e2d16d087731d215476fff47d}{Control\+UI}
 \end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
@@ -52,24 +52,26 @@ bool \hyperlink{class_mike_1_1_control_af17a58f80bda54fda5b0a5167c8f04ed}{main\+
 \item 
 bool \hyperlink{class_mike_1_1_control_a7749b97976e1bb3e7ea49c7d63531dfc}{main\+Loopfinished} = false
 \item 
-\hyperlink{class_mike_1_1_control_addbe39ef40982f0a4002b6f74091a799}{Data\+UI} $\ast$ \hyperlink{class_mike_1_1_control_a61d38447360ba0baa9ac8a3607de0c5b}{price\+Control}
+\hyperlink{class_mike_1_1_control_addbe39ef40982f0a4002b6f74091a799}{Data\+UI} $\ast$ \hyperlink{class_mike_1_1_control_aaf1b458116247ebada43f8bb8faf3edf}{data\+Control\+Window}
+\item 
+\hyperlink{class_mike_1_1_control_aba56a17e2d16d087731d215476fff47d}{Control\+UI} $\ast$ \hyperlink{class_mike_1_1_control_ace0a737869d8dadfadc7cd0c191af872}{control\+Window}
 \end{DoxyCompactItemize}
 
 
 \subsection{Member Typedef Documentation}
-\mbox{\Hypertarget{class_mike_1_1_control_a313ca882c409ba9bed4837acf6d17a72}\label{class_mike_1_1_control_a313ca882c409ba9bed4837acf6d17a72}} 
+\mbox{\Hypertarget{class_mike_1_1_control_aba56a17e2d16d087731d215476fff47d}\label{class_mike_1_1_control_aba56a17e2d16d087731d215476fff47d}} 
 \index{Mike\+::\+Control@{Mike\+::\+Control}!Control\+UI@{Control\+UI}}
 \index{Control\+UI@{Control\+UI}!Mike\+::\+Control@{Mike\+::\+Control}}
 \subsubsection{\texorpdfstring{Control\+UI}{ControlUI}}
-{\footnotesize\ttfamily typedef int \hyperlink{class_mike_1_1_control_a313ca882c409ba9bed4837acf6d17a72}{Mike\+::\+Control\+::\+Control\+UI}\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily typedef \hyperlink{class_fluid_control_interface}{Fluid\+Control\+Interface} \hyperlink{class_mike_1_1_control_aba56a17e2d16d087731d215476fff47d}{Mike\+::\+Control\+::\+Control\+UI}\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{class_mike_1_1_control_addbe39ef40982f0a4002b6f74091a799}\label{class_mike_1_1_control_addbe39ef40982f0a4002b6f74091a799}} 
+Control\+UI is a window handling the \hyperlink{class_mike_1_1_control}{Control} class \mbox{\Hypertarget{class_mike_1_1_control_addbe39ef40982f0a4002b6f74091a799}\label{class_mike_1_1_control_addbe39ef40982f0a4002b6f74091a799}} 
 \index{Mike\+::\+Control@{Mike\+::\+Control}!Data\+UI@{Data\+UI}}
 \index{Data\+UI@{Data\+UI}!Mike\+::\+Control@{Mike\+::\+Control}}
 \subsubsection{\texorpdfstring{Data\+UI}{DataUI}}
 {\footnotesize\ttfamily typedef \hyperlink{class_fluid_price_control_u_i}{Fluid\+Price\+Control\+UI} \hyperlink{class_mike_1_1_control_addbe39ef40982f0a4002b6f74091a799}{Mike\+::\+Control\+::\+Data\+UI}\hspace{0.3cm}{\ttfamily [private]}}
 
-
+Data\+UI is a window handling the Data class 
 
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_mike_1_1_control_ac9a2e3b56773b1eadab7297327a9fbcc}\label{class_mike_1_1_control_ac9a2e3b56773b1eadab7297327a9fbcc}} 
@@ -138,7 +140,19 @@ This is how you start the program. Starts looping the Main\+Loop function. void 
 Use this to pause execution of the program. Stops looping the Main\+Loop function 
 
 \subsection{Member Data Documentation}
-\mbox{\Hypertarget{class_mike_1_1_control_a800d1dc7b58dc3af7c081225009c898f}\label{class_mike_1_1_control_a800d1dc7b58dc3af7c081225009c898f}} 
+\mbox{\Hypertarget{class_mike_1_1_control_ace0a737869d8dadfadc7cd0c191af872}\label{class_mike_1_1_control_ace0a737869d8dadfadc7cd0c191af872}} 
+\index{Mike\+::\+Control@{Mike\+::\+Control}!control\+Window@{control\+Window}}
+\index{control\+Window@{control\+Window}!Mike\+::\+Control@{Mike\+::\+Control}}
+\subsubsection{\texorpdfstring{control\+Window}{controlWindow}}
+{\footnotesize\ttfamily \hyperlink{class_mike_1_1_control_aba56a17e2d16d087731d215476fff47d}{Control\+UI}$\ast$ Mike\+::\+Control\+::control\+Window\hspace{0.3cm}{\ttfamily [private]}}
+
+This window is for controlling the \hyperlink{class_mike_1_1_control}{Control} class \mbox{\Hypertarget{class_mike_1_1_control_aaf1b458116247ebada43f8bb8faf3edf}\label{class_mike_1_1_control_aaf1b458116247ebada43f8bb8faf3edf}} 
+\index{Mike\+::\+Control@{Mike\+::\+Control}!data\+Control\+Window@{data\+Control\+Window}}
+\index{data\+Control\+Window@{data\+Control\+Window}!Mike\+::\+Control@{Mike\+::\+Control}}
+\subsubsection{\texorpdfstring{data\+Control\+Window}{dataControlWindow}}
+{\footnotesize\ttfamily \hyperlink{class_mike_1_1_control_addbe39ef40982f0a4002b6f74091a799}{Data\+UI}$\ast$ Mike\+::\+Control\+::data\+Control\+Window\hspace{0.3cm}{\ttfamily [private]}}
+
+Data\+UI is a User Interface Window used to control everything associated with market price data. This is designed to grow. Market price data can be either pulled from Interactive Brokers using Jan Boonen\textquotesingle{}s library or it can be switched to \textquotesingle{}manual\textquotesingle{} to explore behaviour of algos. \mbox{\Hypertarget{class_mike_1_1_control_a800d1dc7b58dc3af7c081225009c898f}\label{class_mike_1_1_control_a800d1dc7b58dc3af7c081225009c898f}} 
 \index{Mike\+::\+Control@{Mike\+::\+Control}!flag\+Stop\+Main\+Loop@{flag\+Stop\+Main\+Loop}}
 \index{flag\+Stop\+Main\+Loop@{flag\+Stop\+Main\+Loop}!Mike\+::\+Control@{Mike\+::\+Control}}
 \subsubsection{\texorpdfstring{flag\+Stop\+Main\+Loop}{flagStopMainLoop}}
@@ -156,13 +170,7 @@ this a \textquotesingle{}thread guard\textquotesingle{} for the Fl\+::add\+\_\+t
 \subsubsection{\texorpdfstring{main\+Loop\+Running}{mainLoopRunning}}
 {\footnotesize\ttfamily bool Mike\+::\+Control\+::main\+Loop\+Running = false\hspace{0.3cm}{\ttfamily [private]}}
 
-\textquotesingle{}Thread guard\textquotesingle{} used by mainloop\+Timeout\+Callback\+F\+L\+TK, startloop and stoploop \mbox{\Hypertarget{class_mike_1_1_control_a61d38447360ba0baa9ac8a3607de0c5b}\label{class_mike_1_1_control_a61d38447360ba0baa9ac8a3607de0c5b}} 
-\index{Mike\+::\+Control@{Mike\+::\+Control}!price\+Control@{price\+Control}}
-\index{price\+Control@{price\+Control}!Mike\+::\+Control@{Mike\+::\+Control}}
-\subsubsection{\texorpdfstring{price\+Control}{priceControl}}
-{\footnotesize\ttfamily \hyperlink{class_mike_1_1_control_addbe39ef40982f0a4002b6f74091a799}{Data\+UI}$\ast$ Mike\+::\+Control\+::price\+Control\hspace{0.3cm}{\ttfamily [private]}}
-
-Data\+UI is a User Interface Window used to control everything associated with market price data. This is designed to grow. Market price data can be either pulled from Interactive Brokers using Jan Boonen\textquotesingle{}s library or it can be switched to \textquotesingle{}manual\textquotesingle{} to explore behaviour of algos. 
+\textquotesingle{}Thread guard\textquotesingle{} used by mainloop\+Timeout\+Callback\+F\+L\+TK, startloop and stoploop 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

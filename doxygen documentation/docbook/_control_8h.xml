@@ -3,6 +3,7 @@
     <title>Control.h File Reference</title>
     <programlisting>#include &lt;math.h&gt;</programlisting>
     <programlisting>#include &quot;FluidPriceControl.h&quot;</programlisting>
+    <programlisting>#include &quot;FluidControlInterface.h&quot;</programlisting>
         <section>
             <title> Classes </title>
             <para>

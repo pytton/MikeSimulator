@@ -14,6 +14,9 @@
         <xi:include href="class_mike_1_1_control.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
         <xi:include href="class_fluid_control_interface.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
         <xi:include href="class_fluid_price_control_u_i.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="class_mike_order.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="class_mike_orders_at_price.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="class_mike_position.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     </chapter>
     <chapter>
         <title>File Documentation</title>
@@ -24,5 +27,6 @@
         <xi:include href="_control_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
         <xi:include href="_control_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
         <xi:include href="main_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="_mike_enums_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     </chapter>
 </book>

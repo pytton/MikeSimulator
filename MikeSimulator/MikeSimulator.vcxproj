@@ -112,14 +112,35 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="FLUID\FluidControlInterface.cxx" />
+    <ClCompile Include="FLUID\FluidInterface.cxx" />
     <ClCompile Include="FLUID\FluidPriceControl.cxx" />
     <ClCompile Include="src\Control.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\UserInterface.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\WidgetTable.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\WidTableBase.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FLUID\FluidControlInterface.h" />
+    <ClInclude Include="FLUID\FluidInterface.h" />
     <ClInclude Include="FLUID\FluidPriceControl.h" />
     <ClInclude Include="src\Control.h" />
+    <ClInclude Include="src\MikeEnums.h" />
+    <ClInclude Include="src\UserInterface.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="src\WidgetTable.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="src\WidTableBase.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

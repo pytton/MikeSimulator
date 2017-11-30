@@ -1,11 +1,10 @@
 var searchData=
 [
-  ['flagstopmainloop',['flagStopMainLoop',['../class_mike_1_1_control.html#a800d1dc7b58dc3af7c081225009c898f',1,'Mike::Control']]],
-  ['fluidcontrolinterface',['FluidControlInterface',['../class_fluid_control_interface.html',1,'FluidControlInterface'],['../class_fluid_control_interface.html#a4cb172a43e95b2852f30807e9037a9d9',1,'FluidControlInterface::FluidControlInterface()']]],
-  ['fluidcontrolinterface_2ecxx',['FluidControlInterface.cxx',['../_fluid_control_interface_8cxx.html',1,'']]],
-  ['fluidcontrolinterface_2eh',['FluidControlInterface.h',['../_fluid_control_interface_8h.html',1,'']]],
-  ['fluidpricecontrol_2ecxx',['FluidPriceControl.cxx',['../_fluid_price_control_8cxx.html',1,'']]],
-  ['fluidpricecontrol_2eh',['FluidPriceControl.h',['../_fluid_price_control_8h.html',1,'']]],
-  ['fluidpricecontrolui',['FluidPriceControlUI',['../class_fluid_price_control_u_i.html',1,'FluidPriceControlUI'],['../class_fluid_price_control_u_i.html#a2cda3cd2bdafd0550ffd992166db9f9b',1,'FluidPriceControlUI::FluidPriceControlUI()']]],
-  ['frequency_5fof_5fprimes',['frequency_of_primes',['../namespace_mike.html#ada7afe897748f668730c74456952e356',1,'Mike']]]
+  ['btnpressed',['BtnPressed',['../_mike_enums_8h.html#a4c3a46cee6b1b23836160cf1a9ff8052',1,'MikeEnums.h']]],
+  ['btnstartloop',['btnStartLoop',['../class_fluid_control_interface.html#a70b369e5c14edbf6415d2dc26c33b9d0',1,'FluidControlInterface']]],
+  ['btnstoploop',['btnStopLoop',['../class_fluid_control_interface.html#a2074a5b56d8fb0e88f1f4da84dfc5296',1,'FluidControlInterface']]],
+  ['buylimitamount',['buyLimitAmount',['../class_mike_orders_at_price.html#ae8a30caef06eaa1d11a34075ea36fe8e',1,'MikeOrdersAtPrice']]],
+  ['buylmt',['BUYLMT',['../_mike_enums_8h.html#ab4a7006a6e3be52a2e59ff26198d9ee1acf21dd16bd73daaff977d2117e7ef90b',1,'MikeEnums.h']]],
+  ['buystopamount',['buyStopAmount',['../class_mike_orders_at_price.html#a5e095c1c6366fe5ce9352b813dd23299',1,'MikeOrdersAtPrice']]],
+  ['buystp',['BUYSTP',['../_mike_enums_8h.html#ab4a7006a6e3be52a2e59ff26198d9ee1a5910dd759ac9da5880ab4b6f7e142aed',1,'MikeEnums.h']]]
 ];

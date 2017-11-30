@@ -1,23 +1,7 @@
 var searchData=
 [
-  ['m_5faskdisplay',['m_AskDisplay',['../class_fluid_price_control_u_i.html#a68a7585dc66f65459fa6c38c086299f8',1,'FluidPriceControlUI']]],
-  ['m_5fbiddisplay',['m_BidDisplay',['../class_fluid_price_control_u_i.html#afcc19c4bc7bc7295854861d2f667f457',1,'FluidPriceControlUI']]],
-  ['m_5fbtnconnectlivedata',['m_btnConnectLiveData',['../class_fluid_price_control_u_i.html#a298e80045e3c1ea8cabbc21b0b3138ca',1,'FluidPriceControlUI']]],
-  ['m_5fbtndown',['m_btnDown',['../class_fluid_price_control_u_i.html#a98213f3a52dd6c6b700f5a20f1cfa7ab',1,'FluidPriceControlUI']]],
-  ['m_5fbtnexperiment',['m_btnExperiment',['../class_fluid_price_control_u_i.html#ad94515ca4f97533e76a67e04bf4411e4',1,'FluidPriceControlUI']]],
-  ['m_5fbtnexperiment1',['m_btnExperiment1',['../class_fluid_control_interface.html#a4d0defe9534380c28d3e83a58d909696',1,'FluidControlInterface']]],
-  ['m_5fbtnexperiment2',['m_btnExperiment2',['../class_fluid_control_interface.html#a3d129ab381b2bcf443836df21664d549',1,'FluidControlInterface']]],
-  ['m_5fbtnlivedataconsoleprint',['m_btnLiveDataConsolePrint',['../class_fluid_price_control_u_i.html#a6a6870f04d6e93c70975e8dbc463c8eb',1,'FluidPriceControlUI']]],
-  ['m_5fbtnprint',['m_btnPrint',['../class_fluid_price_control_u_i.html#a0f591e3a87e7a68d05d1b17625d7de87',1,'FluidPriceControlUI']]],
-  ['m_5fbtnshowpositions1',['m_btnShowPositions1',['../class_fluid_control_interface.html#aa98b7fdaecb2d588e5decc52f23919fb',1,'FluidControlInterface']]],
-  ['m_5fbtnshowpositions2',['m_btnShowPositions2',['../class_fluid_control_interface.html#acc9ea2ec328a79737c722c6f7a3b236d',1,'FluidControlInterface']]],
-  ['m_5fbtnshowpositions3',['m_btnShowPositions3',['../class_fluid_control_interface.html#acd3d58fda18fea04d02874461097c510',1,'FluidControlInterface']]],
-  ['m_5fbtnshowpositions4',['m_btnShowPositions4',['../class_fluid_control_interface.html#a507c8f8707e6735a1f651e0cf9d5a51b',1,'FluidControlInterface']]],
-  ['m_5fbtnstartloop',['m_btnStartLoop',['../class_fluid_price_control_u_i.html#a41892b034300821670f3e585bdd191a3',1,'FluidPriceControlUI']]],
-  ['m_5fbtnup',['m_btnUp',['../class_fluid_price_control_u_i.html#a17dcc8d29c4170578c8305d0bbce0f89',1,'FluidPriceControlUI']]],
-  ['m_5fslider1',['m_slider1',['../class_fluid_price_control_u_i.html#ad57bb65dd4c67780a86158e5d2ac7b90',1,'FluidPriceControlUI']]],
-  ['m_5fwindow1',['m_window1',['../class_fluid_control_interface.html#ab318bb377679cd76946bb68fc505652f',1,'FluidControlInterface::m_window1()'],['../class_fluid_price_control_u_i.html#a65c8356043b3a182a177cf4a52317124',1,'FluidPriceControlUI::m_window1()']]],
-  ['m_5fwindowbox',['m_windowBox',['../class_fluid_control_interface.html#a04185b8fd0895dfc2b77a77c9eb61bc8',1,'FluidControlInterface']]],
-  ['mainloopfinished',['mainLoopfinished',['../class_mike_1_1_control.html#a7749b97976e1bb3e7ea49c7d63531dfc',1,'Mike::Control']]],
-  ['mainlooprunning',['mainLoopRunning',['../class_mike_1_1_control.html#af17a58f80bda54fda5b0a5167c8f04ed',1,'Mike::Control']]]
+  ['btnstartloop',['btnStartLoop',['../class_fluid_control_interface.html#a70b369e5c14edbf6415d2dc26c33b9d0',1,'FluidControlInterface']]],
+  ['btnstoploop',['btnStopLoop',['../class_fluid_control_interface.html#a2074a5b56d8fb0e88f1f4da84dfc5296',1,'FluidControlInterface']]],
+  ['buylimitamount',['buyLimitAmount',['../class_mike_orders_at_price.html#ae8a30caef06eaa1d11a34075ea36fe8e',1,'MikeOrdersAtPrice']]],
+  ['buystopamount',['buyStopAmount',['../class_mike_orders_at_price.html#a5e095c1c6366fe5ce9352b813dd23299',1,'MikeOrdersAtPrice']]]
 ];

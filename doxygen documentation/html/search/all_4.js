@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['pricecontrol',['priceControl',['../class_mike_1_1_control.html#a61d38447360ba0baa9ac8a3607de0c5b',1,'Mike::Control']]],
-  ['printoutall',['printoutAll',['../class_mike_1_1_control.html#a2f239c6bace6fba6d31d54919b7ee6e1',1,'Mike::Control']]],
-  ['processalgos',['processAlgos',['../class_mike_1_1_control.html#acf3d41cb5dd54a2ee31cfb0709a79e7e',1,'Mike::Control']]],
-  ['processdata',['processData',['../class_mike_1_1_control.html#a887652b2503a6e881fcceca36f0a0af9',1,'Mike::Control']]],
-  ['processuserinput',['processUserInput',['../class_mike_1_1_control.html#ad06eaf996f971a758eea1fd55eda2565',1,'Mike::Control']]]
+  ['datacontrolwindow',['dataControlWindow',['../class_mike_1_1_control.html#aaf1b458116247ebada43f8bb8faf3edf',1,'Mike::Control']]],
+  ['dataui',['DataUI',['../class_mike_1_1_control.html#addbe39ef40982f0a4002b6f74091a799',1,'Mike::Control']]],
+  ['downbtn',['DOWNBTN',['../_mike_enums_8h.html#a4c3a46cee6b1b23836160cf1a9ff8052a46d3bb51d595458598fa22b21480e5cb',1,'MikeEnums.h']]]
 ];

@@ -6,8 +6,15 @@
 #include "FluidPriceControl.h"
 #include "FluidControlInterface.h"
 
+#include "MikeEnums.h"
+
+#include "UserInterface.h"
+
 namespace Mike
 {
+
+	class UserInterface;
+
 	/*!amount of seconds used by mainloopTimeoutCallbackFLTK() to determine how long to wait after mainloop() is finished before initiating another mainloop() function call*/
 	const static double SET_MAINLOOP_INTERVAL = 0.01;
 
@@ -31,6 +38,35 @@ namespace Mike
 		static void startloop(void * ptrControlPointer);
 		/*!Use this to pause execution of the program. Stops looping the MainLoop function*/
 		void stoploop();
+
+		///////////////////////////////////////////////
+
+		//WORK IN PROGRESS:
+
+		UserInterface * userinterface;
+
+		//THIS IS WHAT I NEED TO REFACTOR!!!
+		//CALLBACK FUNCTIONS FOR USERINTERFACE:
+		void CallbkUserInt(UserInterface * p,
+			BtnPressed btn,
+			long longparameter1 = 0,
+			long longparameter2 = 0,
+			double parameter3 = 0.0);
+		void CallbkUserInt(UserInterface * p,
+			long price,
+			MikeOrderType OrderTypePressed,
+			long orderSize = 100);
+		//CALLBACKS FROM WIDGETTABLE:
+		void callbkWidTable(int row, int col, long price, MikeOrderType OrderTypePressed, int orderSize);
+
+
+
+
+		///////////////////////////////////////////
+
+
+
+
 	private:
 		/*! The core of the program. This function runs in a continous loop and handles all events.
 		Everything that happens is handled by functions inside this loop. */
