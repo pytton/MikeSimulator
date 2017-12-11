@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_mike_1_1_user_interface">
+<title>Mike::UserInterface class Reference</title>
+<para>
+    <programlisting>#include <link linkend="_user_interface_8h">&lt;UserInterface.h&gt;</link></programlisting>
+</para>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_mike_1_1_user_interface_1a3c10edd966f5470fb76a7ee844de2628">UserInterface</link> (
+<link linkend="class_mike_1_1_control">Control</link> * control, double starting_bid_price, int numberOfColumns, int numberOfButtoncolumns)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="class_mike_1_1_user_interface_1a2001cad2040c95ddea43b7d43f9e82bb">sendWidTableCallback</link> (
+int rowPressed, int colPressed, long price, <link linkend="namespace_mike_1aa486aea8b1d0d07190982a311394e6cb">MikeOrderType</link> tempOrderType, int orderSize)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="class_mike_1_1_user_interface_1a9421dadab2852eb9110e25e2dff1d849">callbkUserInterface</link> (
+<link linkend="namespace_mike_1a9dd611fa3c671b02e477e6b21465cc66">BtnPressed</link> )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="class_mike_1_1_user_interface_1a3c10edd966f5470fb76a7ee844de2628">
+                <title>Mike::UserInterface::UserInterface (Control *control, double starting_bid_price=700, int numberOfColumns=19, int numberOfButtoncolumns=5)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_user_interface_1a2001cad2040c95ddea43b7d43f9e82bb">
+                <title>void Mike::UserInterface::sendWidTableCallback (int rowPressed, int colPressed, long price, MikeOrderType tempOrderType, int orderSize)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_user_interface_1a9421dadab2852eb9110e25e2dff1d849">
+                <title>void Mike::UserInterface::callbkUserInterface (BtnPressed)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

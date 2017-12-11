@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_mike_1_1_mike_orders_at_price">
+<title>Mike::MikeOrdersAtPrice class Reference</title>
+<para>
+    <programlisting>#include <link linkend="_mike_enums_8h">&lt;MikeEnums.h&gt;</link></programlisting>
+</para>
+        <section>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>long price</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>long buyLimitAmount</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>long buyStopAmount</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>long sellLimitAmount</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>long sellStopAmount</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_mike_1_1_mike_orders_at_price_1a75b42dff63234fb5b8a2d2f30b9bea47">eraseall</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="class_mike_1_1_mike_orders_at_price_1a40d606d7b8902199a2ca73f1b85721bb">checkifempty</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="class_mike_1_1_mike_orders_at_price_1a75b42dff63234fb5b8a2d2f30b9bea47">
+                <title>void Mike::MikeOrdersAtPrice::eraseall ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_mike_orders_at_price_1a40d606d7b8902199a2ca73f1b85721bb">
+                <title>bool Mike::MikeOrdersAtPrice::checkifempty ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

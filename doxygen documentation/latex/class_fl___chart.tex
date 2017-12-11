@@ -1,0 +1,333 @@
+\hypertarget{class_fl___chart}{}\section{Fl\+\_\+\+Chart Class Reference}
+\label{class_fl___chart}\index{Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}}
+
+
+\hyperlink{class_fl___chart}{Fl\+\_\+\+Chart} displays simple charts. It is provided for Forms compatibility.  
+
+
+
+
+{\ttfamily \#include $<$Fl\+\_\+\+Chart.\+H$>$}
+
+Inheritance diagram for Fl\+\_\+\+Chart\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_fl___chart}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fl___chart_ab8564a05a9e558ad5b5b562e86a77fb2}{Fl\+\_\+\+Chart} (int X, int Y, int W, int H, const char $\ast$L=0)
+\item 
+\hyperlink{class_fl___chart_ad2001b6183ead9c3db024c877b140a0e}{$\sim$\+Fl\+\_\+\+Chart} ()
+\item 
+void \hyperlink{class_fl___chart_a4779938d0d2fe72349f1f40e34cccbbe}{clear} ()
+\item 
+void \hyperlink{class_fl___chart_ab45e570b04d13d0c366df960ebfeea20}{add} (double val, const char $\ast$str=0, unsigned col=0)
+\item 
+void \hyperlink{class_fl___chart_a089a59736fc83df0e3e635f666416b77}{insert} (int ind, double val, const char $\ast$str=0, unsigned col=0)
+\item 
+void \hyperlink{class_fl___chart_aaa2b08e9822cee55f318e925603eb451}{replace} (int ind, double val, const char $\ast$str=0, unsigned col=0)
+\item 
+void \hyperlink{class_fl___chart_a6782fd3e36ecec16dcc73e015c66ad8b}{bounds} (double $\ast$a, double $\ast$\hyperlink{forms_8_h_a0ba06a290a384fa06b1b90745827dae2}{b}) const
+\item 
+void \hyperlink{class_fl___chart_ae1701b8fd93cf1399dc22ef602d9f00d}{bounds} (double a, double \hyperlink{forms_8_h_a0ba06a290a384fa06b1b90745827dae2}{b})
+\item 
+int \hyperlink{class_fl___chart_a1c621c042c6f273e1c2243351e4afba6}{size} () const
+\item 
+void \hyperlink{class_fl___chart_a50625e04f40e8c30d4ee6e62699c5731}{size} (int W, int H)
+\item 
+int \hyperlink{class_fl___chart_ac49f97d8e5e82eb1471b25408dc2aacc}{maxsize} () const
+\item 
+void \hyperlink{class_fl___chart_a832be1890035c531c103d34058e71ca1}{maxsize} (int \hyperlink{forms_8_h_a2ccd5640c2b2869841c5dab22b937079}{m})
+\item 
+\hyperlink{_enumerations_8_h_a2ac46d9f082834b969fffe490a03a709}{Fl\+\_\+\+Font} \hyperlink{class_fl___chart_a999e93ef294afe5e8f43dff89a9019ad}{textfont} () const
+\item 
+void \hyperlink{class_fl___chart_a2a2b74d83ee1458eebf3f6e55de7fb76}{textfont} (\hyperlink{_enumerations_8_h_a2ac46d9f082834b969fffe490a03a709}{Fl\+\_\+\+Font} \hyperlink{forms_8_h_a672b4f0a8c8a6db61068c721f799d87f}{s})
+\item 
+\hyperlink{_enumerations_8_h_ad58927f5c691454480f7cd28362502f1}{Fl\+\_\+\+Fontsize} \hyperlink{class_fl___chart_afe7366b51678d90b978f82fb41a83fa0}{textsize} () const
+\item 
+void \hyperlink{class_fl___chart_a921349938807d1db4255bb182465461c}{textsize} (\hyperlink{_enumerations_8_h_ad58927f5c691454480f7cd28362502f1}{Fl\+\_\+\+Fontsize} \hyperlink{forms_8_h_a672b4f0a8c8a6db61068c721f799d87f}{s})
+\item 
+\hyperlink{_enumerations_8_h_a8b762953646f8abee866061f1af78a6a}{Fl\+\_\+\+Color} \hyperlink{class_fl___chart_a047a8ef3040ff85c6d022d92e0ef3746}{textcolor} () const
+\item 
+void \hyperlink{class_fl___chart_adde0ae8bff3349ebfa50c7680a90f3b0}{textcolor} (\hyperlink{_enumerations_8_h_a8b762953646f8abee866061f1af78a6a}{Fl\+\_\+\+Color} n)
+\item 
+\hyperlink{fl__types_8h_a65f85814a8290f9797005d3b28e7e5fc}{uchar} \hyperlink{class_fl___chart_aac985068654026812efd7df0d0b5a6ff}{autosize} () const
+\item 
+void \hyperlink{class_fl___chart_a36cf4d6801b88b3cb27b18d3f86e1835}{autosize} (\hyperlink{fl__types_8h_a65f85814a8290f9797005d3b28e7e5fc}{uchar} n)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fl___chart_a72ec7a85128f8fcac3a306cc90afc876}{draw} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_fl___chart_af033c19ade7cdec77c379c1f755980f4}{numb}
+\item 
+int \hyperlink{class_fl___chart_ade398943b059e32513164d803ce56481}{maxnumb}
+\item 
+int \hyperlink{class_fl___chart_a593b47a2e2ffbf761b3081fc92bcb2ed}{sizenumb}
+\item 
+\hyperlink{struct_f_l___c_h_a_r_t___e_n_t_r_y}{F\+L\+\_\+\+C\+H\+A\+R\+T\+\_\+\+E\+N\+T\+RY} $\ast$ \hyperlink{class_fl___chart_a3b2e0cd0705c4533ce181692d9e5f082}{entries}
+\item 
+double \hyperlink{class_fl___chart_a4502e914dd2ceb9eec7aa76da3c976c3}{min}
+\item 
+double \hyperlink{class_fl___chart_a3b2f89659a39dccf2f8b465bb3440fdb}{max}
+\item 
+\hyperlink{fl__types_8h_a65f85814a8290f9797005d3b28e7e5fc}{uchar} \hyperlink{class_fl___chart_ae7cbf8e0f7915382b71a2c421fdc7c71}{autosize\+\_\+}
+\item 
+\hyperlink{_enumerations_8_h_a2ac46d9f082834b969fffe490a03a709}{Fl\+\_\+\+Font} \hyperlink{class_fl___chart_a561007869d07a9ddcfd5f60175995eb2}{textfont\+\_\+}
+\item 
+\hyperlink{_enumerations_8_h_ad58927f5c691454480f7cd28362502f1}{Fl\+\_\+\+Fontsize} \hyperlink{class_fl___chart_af17044fa38072aa107a5760681d98fb9}{textsize\+\_\+}
+\item 
+\hyperlink{_enumerations_8_h_a8b762953646f8abee866061f1af78a6a}{Fl\+\_\+\+Color} \hyperlink{class_fl___chart_a258c1c3ebeb9339af1092f9d09a0bd34}{textcolor\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_fl___chart}{Fl\+\_\+\+Chart} displays simple charts. It is provided for Forms compatibility. 
+
+ 
+\begin{DoxyImage}
+\includegraphics[width=10cm]{charts.png}
+\doxyfigcaption{Fl\+\_\+\+Chart}
+\end{DoxyImage}
+ \begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000010}{Todo}]Refactor \hyperlink{class_fl___widget_adda2e8f162b3ea0332eb8d762350bbd5}{Fl\+\_\+\+Chart\+::type()} information.\end{DoxyRefDesc}
+
+
+The type of an \hyperlink{class_fl___chart}{Fl\+\_\+\+Chart} object can be set using \hyperlink{class_fl___widget_ad00d1457b3f578c8e6ffca52d9facad8}{type(uchar t)} to\+: \begin{DoxyItemize}
+\item {\ttfamily F\+L\+\_\+\+B\+A\+R\+\_\+\+C\+H\+A\+RT\+:} Each sample value is drawn as a vertical bar. \item {\ttfamily F\+L\+\_\+\+F\+I\+L\+L\+E\+D\+\_\+\+C\+H\+A\+RT\+:} The chart is filled from the bottom of the graph to the sample values. \item {\ttfamily F\+L\+\_\+\+H\+O\+R\+B\+A\+R\+\_\+\+C\+H\+A\+RT\+:} Each sample value is drawn as a horizontal bar. \item {\ttfamily F\+L\+\_\+\+L\+I\+N\+E\+\_\+\+C\+H\+A\+RT\+:} The chart is drawn as a polyline with vertices at each sample value. \item {\ttfamily F\+L\+\_\+\+P\+I\+E\+\_\+\+C\+H\+A\+RT\+:} A pie chart is drawn with each sample value being drawn as a proportionate slice in the circle. \item {\ttfamily F\+L\+\_\+\+S\+P\+E\+C\+I\+A\+L\+P\+I\+E\+\_\+\+C\+H\+A\+RT\+:} Like {\ttfamily F\+L\+\_\+\+P\+I\+E\+\_\+\+C\+H\+A\+RT}, but the first slice is separated from the pie. \item {\ttfamily F\+L\+\_\+\+S\+P\+I\+K\+E\+\_\+\+C\+H\+A\+RT\+:} Each sample value is drawn as a vertical line. \end{DoxyItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_fl___chart_ab8564a05a9e558ad5b5b562e86a77fb2}\label{class_fl___chart_ab8564a05a9e558ad5b5b562e86a77fb2}} 
+\index{Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}!Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}}
+\index{Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}!Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}}
+\subsubsection{\texorpdfstring{Fl\+\_\+\+Chart()}{Fl\_Chart()}}
+{\footnotesize\ttfamily Fl\+\_\+\+Chart\+::\+Fl\+\_\+\+Chart (\begin{DoxyParamCaption}\item[{int}]{X,  }\item[{int}]{Y,  }\item[{int}]{W,  }\item[{int}]{H,  }\item[{const char $\ast$}]{L = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fl___chart_ad2001b6183ead9c3db024c877b140a0e}\label{class_fl___chart_ad2001b6183ead9c3db024c877b140a0e}} 
+\index{Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}!````~Fl\+\_\+\+Chart@{$\sim$\+Fl\+\_\+\+Chart}}
+\index{````~Fl\+\_\+\+Chart@{$\sim$\+Fl\+\_\+\+Chart}!Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}}
+\subsubsection{\texorpdfstring{$\sim$\+Fl\+\_\+\+Chart()}{~Fl\_Chart()}}
+{\footnotesize\ttfamily Fl\+\_\+\+Chart\+::$\sim$\+Fl\+\_\+\+Chart (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_fl___chart_ab45e570b04d13d0c366df960ebfeea20}\label{class_fl___chart_ab45e570b04d13d0c366df960ebfeea20}} 
+\index{Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}!add@{add}}
+\index{add@{add}!Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}}
+\subsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void Fl\+\_\+\+Chart\+::add (\begin{DoxyParamCaption}\item[{double}]{val,  }\item[{const char $\ast$}]{str = {\ttfamily 0},  }\item[{unsigned}]{col = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fl___chart_aac985068654026812efd7df0d0b5a6ff}\label{class_fl___chart_aac985068654026812efd7df0d0b5a6ff}} 
+\index{Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}!autosize@{autosize}}
+\index{autosize@{autosize}!Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}}
+\subsubsection{\texorpdfstring{autosize()}{autosize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{fl__types_8h_a65f85814a8290f9797005d3b28e7e5fc}{uchar} Fl\+\_\+\+Chart\+::autosize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get whether the chart will automatically adjust the bounds of the chart. \begin{DoxyReturn}{Returns}
+non-\/zero if auto-\/sizing is enabled and zero if disabled. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fl___chart_a36cf4d6801b88b3cb27b18d3f86e1835}\label{class_fl___chart_a36cf4d6801b88b3cb27b18d3f86e1835}} 
+\index{Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}!autosize@{autosize}}
+\index{autosize@{autosize}!Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}}
+\subsubsection{\texorpdfstring{autosize()}{autosize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Fl\+\_\+\+Chart\+::autosize (\begin{DoxyParamCaption}\item[{\hyperlink{fl__types_8h_a65f85814a8290f9797005d3b28e7e5fc}{uchar}}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set whether the chart will automatically adjust the bounds of the chart. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em n} & non-\/zero to enable automatic resizing, zero to disable. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fl___chart_a6782fd3e36ecec16dcc73e015c66ad8b}\label{class_fl___chart_a6782fd3e36ecec16dcc73e015c66ad8b}} 
+\index{Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}!bounds@{bounds}}
+\index{bounds@{bounds}!Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}}
+\subsubsection{\texorpdfstring{bounds()}{bounds()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Fl\+\_\+\+Chart\+::bounds (\begin{DoxyParamCaption}\item[{double $\ast$}]{a,  }\item[{double $\ast$}]{b }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets the lower and upper bounds of the chart values. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em a,b} & are set to lower, upper \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fl___chart_ae1701b8fd93cf1399dc22ef602d9f00d}\label{class_fl___chart_ae1701b8fd93cf1399dc22ef602d9f00d}} 
+\index{Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}!bounds@{bounds}}
+\index{bounds@{bounds}!Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}}
+\subsubsection{\texorpdfstring{bounds()}{bounds()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Fl\+\_\+\+Chart\+::bounds (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fl___chart_a4779938d0d2fe72349f1f40e34cccbbe}\label{class_fl___chart_a4779938d0d2fe72349f1f40e34cccbbe}} 
+\index{Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}!clear@{clear}}
+\index{clear@{clear}!Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Fl\+\_\+\+Chart\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fl___chart_a72ec7a85128f8fcac3a306cc90afc876}\label{class_fl___chart_a72ec7a85128f8fcac3a306cc90afc876}} 
+\index{Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}!draw@{draw}}
+\index{draw@{draw}!Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}}
+\subsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Fl\+\_\+\+Chart\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Draws the widget. Never call this function directly. F\+L\+TK will schedule redrawing whenever needed. If your widget must be redrawn as soon as possible, call \hyperlink{class_fl___widget_aa63ce68cbf4620cf8750b868368ea02b}{redraw()} instead.
+
+Override this function to draw your own widgets.
+
+If you ever need to call another widget\textquotesingle{}s draw method {\itshape from within your own \hyperlink{class_fl___chart_a72ec7a85128f8fcac3a306cc90afc876}{draw()} method}, e.\+g. for an embedded scrollbar, you can do it (because \hyperlink{class_fl___chart_a72ec7a85128f8fcac3a306cc90afc876}{draw()} is virtual) like this\+:
+
+
+\begin{DoxyCode}
+    \hyperlink{class_fl___widget}{Fl\_Widget} *s = &scroll;     \textcolor{comment}{// scroll is an embedded Fl\_Scrollbar}
+s->\hyperlink{class_fl___widget_a1acb38c6b3cb40452ad02ccfeedbac8a}{draw}();          \textcolor{comment}{// calls Fl\_Scrollbar::draw()}
+\end{DoxyCode}
+ 
+
+Implements \hyperlink{class_fl___widget_a1acb38c6b3cb40452ad02ccfeedbac8a}{Fl\+\_\+\+Widget}.
+
+\mbox{\Hypertarget{class_fl___chart_a089a59736fc83df0e3e635f666416b77}\label{class_fl___chart_a089a59736fc83df0e3e635f666416b77}} 
+\index{Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}!insert@{insert}}
+\index{insert@{insert}!Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}}
+\subsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily void Fl\+\_\+\+Chart\+::insert (\begin{DoxyParamCaption}\item[{int}]{ind,  }\item[{double}]{val,  }\item[{const char $\ast$}]{str = {\ttfamily 0},  }\item[{unsigned}]{col = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fl___chart_ac49f97d8e5e82eb1471b25408dc2aacc}\label{class_fl___chart_ac49f97d8e5e82eb1471b25408dc2aacc}} 
+\index{Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}!maxsize@{maxsize}}
+\index{maxsize@{maxsize}!Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}}
+\subsubsection{\texorpdfstring{maxsize()}{maxsize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Fl\+\_\+\+Chart\+::maxsize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets the maximum number of data values for a chart. \mbox{\Hypertarget{class_fl___chart_a832be1890035c531c103d34058e71ca1}\label{class_fl___chart_a832be1890035c531c103d34058e71ca1}} 
+\index{Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}!maxsize@{maxsize}}
+\index{maxsize@{maxsize}!Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}}
+\subsubsection{\texorpdfstring{maxsize()}{maxsize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Fl\+\_\+\+Chart\+::maxsize (\begin{DoxyParamCaption}\item[{int}]{m }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fl___chart_aaa2b08e9822cee55f318e925603eb451}\label{class_fl___chart_aaa2b08e9822cee55f318e925603eb451}} 
+\index{Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}!replace@{replace}}
+\index{replace@{replace}!Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}}
+\subsubsection{\texorpdfstring{replace()}{replace()}}
+{\footnotesize\ttfamily void Fl\+\_\+\+Chart\+::replace (\begin{DoxyParamCaption}\item[{int}]{ind,  }\item[{double}]{val,  }\item[{const char $\ast$}]{str = {\ttfamily 0},  }\item[{unsigned}]{col = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fl___chart_a1c621c042c6f273e1c2243351e4afba6}\label{class_fl___chart_a1c621c042c6f273e1c2243351e4afba6}} 
+\index{Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}!size@{size}}
+\index{size@{size}!Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}}
+\subsubsection{\texorpdfstring{size()}{size()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Fl\+\_\+\+Chart\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the number of data values in the chart. \mbox{\Hypertarget{class_fl___chart_a50625e04f40e8c30d4ee6e62699c5731}\label{class_fl___chart_a50625e04f40e8c30d4ee6e62699c5731}} 
+\index{Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}!size@{size}}
+\index{size@{size}!Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}}
+\subsubsection{\texorpdfstring{size()}{size()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Fl\+\_\+\+Chart\+::size (\begin{DoxyParamCaption}\item[{int}]{W,  }\item[{int}]{H }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_fl___chart_a047a8ef3040ff85c6d022d92e0ef3746}\label{class_fl___chart_a047a8ef3040ff85c6d022d92e0ef3746}} 
+\index{Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}!textcolor@{textcolor}}
+\index{textcolor@{textcolor}!Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}}
+\subsubsection{\texorpdfstring{textcolor()}{textcolor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{_enumerations_8_h_a8b762953646f8abee866061f1af78a6a}{Fl\+\_\+\+Color} Fl\+\_\+\+Chart\+::textcolor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets the chart\textquotesingle{}s text color \mbox{\Hypertarget{class_fl___chart_adde0ae8bff3349ebfa50c7680a90f3b0}\label{class_fl___chart_adde0ae8bff3349ebfa50c7680a90f3b0}} 
+\index{Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}!textcolor@{textcolor}}
+\index{textcolor@{textcolor}!Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}}
+\subsubsection{\texorpdfstring{textcolor()}{textcolor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Fl\+\_\+\+Chart\+::textcolor (\begin{DoxyParamCaption}\item[{\hyperlink{_enumerations_8_h_a8b762953646f8abee866061f1af78a6a}{Fl\+\_\+\+Color}}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+gets the chart\textquotesingle{}s text color to {\ttfamily n}. \mbox{\Hypertarget{class_fl___chart_a999e93ef294afe5e8f43dff89a9019ad}\label{class_fl___chart_a999e93ef294afe5e8f43dff89a9019ad}} 
+\index{Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}!textfont@{textfont}}
+\index{textfont@{textfont}!Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}}
+\subsubsection{\texorpdfstring{textfont()}{textfont()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{_enumerations_8_h_a2ac46d9f082834b969fffe490a03a709}{Fl\+\_\+\+Font} Fl\+\_\+\+Chart\+::textfont (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets the chart\textquotesingle{}s text font \mbox{\Hypertarget{class_fl___chart_a2a2b74d83ee1458eebf3f6e55de7fb76}\label{class_fl___chart_a2a2b74d83ee1458eebf3f6e55de7fb76}} 
+\index{Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}!textfont@{textfont}}
+\index{textfont@{textfont}!Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}}
+\subsubsection{\texorpdfstring{textfont()}{textfont()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Fl\+\_\+\+Chart\+::textfont (\begin{DoxyParamCaption}\item[{\hyperlink{_enumerations_8_h_a2ac46d9f082834b969fffe490a03a709}{Fl\+\_\+\+Font}}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets the chart\textquotesingle{}s text font to {\ttfamily s}. \mbox{\Hypertarget{class_fl___chart_afe7366b51678d90b978f82fb41a83fa0}\label{class_fl___chart_afe7366b51678d90b978f82fb41a83fa0}} 
+\index{Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}!textsize@{textsize}}
+\index{textsize@{textsize}!Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}}
+\subsubsection{\texorpdfstring{textsize()}{textsize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{_enumerations_8_h_ad58927f5c691454480f7cd28362502f1}{Fl\+\_\+\+Fontsize} Fl\+\_\+\+Chart\+::textsize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets the chart\textquotesingle{}s text size \mbox{\Hypertarget{class_fl___chart_a921349938807d1db4255bb182465461c}\label{class_fl___chart_a921349938807d1db4255bb182465461c}} 
+\index{Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}!textsize@{textsize}}
+\index{textsize@{textsize}!Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}}
+\subsubsection{\texorpdfstring{textsize()}{textsize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Fl\+\_\+\+Chart\+::textsize (\begin{DoxyParamCaption}\item[{\hyperlink{_enumerations_8_h_ad58927f5c691454480f7cd28362502f1}{Fl\+\_\+\+Fontsize}}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+gets the chart\textquotesingle{}s text size to {\ttfamily s}. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_fl___chart_ae7cbf8e0f7915382b71a2c421fdc7c71}\label{class_fl___chart_ae7cbf8e0f7915382b71a2c421fdc7c71}} 
+\index{Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}!autosize\+\_\+@{autosize\+\_\+}}
+\index{autosize\+\_\+@{autosize\+\_\+}!Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}}
+\subsubsection{\texorpdfstring{autosize\+\_\+}{autosize\_}}
+{\footnotesize\ttfamily \hyperlink{fl__types_8h_a65f85814a8290f9797005d3b28e7e5fc}{uchar} Fl\+\_\+\+Chart\+::autosize\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fl___chart_a3b2e0cd0705c4533ce181692d9e5f082}\label{class_fl___chart_a3b2e0cd0705c4533ce181692d9e5f082}} 
+\index{Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}!entries@{entries}}
+\index{entries@{entries}!Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}}
+\subsubsection{\texorpdfstring{entries}{entries}}
+{\footnotesize\ttfamily \hyperlink{struct_f_l___c_h_a_r_t___e_n_t_r_y}{F\+L\+\_\+\+C\+H\+A\+R\+T\+\_\+\+E\+N\+T\+RY}$\ast$ Fl\+\_\+\+Chart\+::entries\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fl___chart_a3b2f89659a39dccf2f8b465bb3440fdb}\label{class_fl___chart_a3b2f89659a39dccf2f8b465bb3440fdb}} 
+\index{Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}!max@{max}}
+\index{max@{max}!Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}}
+\subsubsection{\texorpdfstring{max}{max}}
+{\footnotesize\ttfamily double Fl\+\_\+\+Chart\+::max\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fl___chart_ade398943b059e32513164d803ce56481}\label{class_fl___chart_ade398943b059e32513164d803ce56481}} 
+\index{Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}!maxnumb@{maxnumb}}
+\index{maxnumb@{maxnumb}!Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}}
+\subsubsection{\texorpdfstring{maxnumb}{maxnumb}}
+{\footnotesize\ttfamily int Fl\+\_\+\+Chart\+::maxnumb\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fl___chart_a4502e914dd2ceb9eec7aa76da3c976c3}\label{class_fl___chart_a4502e914dd2ceb9eec7aa76da3c976c3}} 
+\index{Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}!min@{min}}
+\index{min@{min}!Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}}
+\subsubsection{\texorpdfstring{min}{min}}
+{\footnotesize\ttfamily double Fl\+\_\+\+Chart\+::min\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fl___chart_af033c19ade7cdec77c379c1f755980f4}\label{class_fl___chart_af033c19ade7cdec77c379c1f755980f4}} 
+\index{Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}!numb@{numb}}
+\index{numb@{numb}!Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}}
+\subsubsection{\texorpdfstring{numb}{numb}}
+{\footnotesize\ttfamily int Fl\+\_\+\+Chart\+::numb\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fl___chart_a593b47a2e2ffbf761b3081fc92bcb2ed}\label{class_fl___chart_a593b47a2e2ffbf761b3081fc92bcb2ed}} 
+\index{Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}!sizenumb@{sizenumb}}
+\index{sizenumb@{sizenumb}!Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}}
+\subsubsection{\texorpdfstring{sizenumb}{sizenumb}}
+{\footnotesize\ttfamily int Fl\+\_\+\+Chart\+::sizenumb\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fl___chart_a258c1c3ebeb9339af1092f9d09a0bd34}\label{class_fl___chart_a258c1c3ebeb9339af1092f9d09a0bd34}} 
+\index{Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}!textcolor\+\_\+@{textcolor\+\_\+}}
+\index{textcolor\+\_\+@{textcolor\+\_\+}!Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}}
+\subsubsection{\texorpdfstring{textcolor\+\_\+}{textcolor\_}}
+{\footnotesize\ttfamily \hyperlink{_enumerations_8_h_a8b762953646f8abee866061f1af78a6a}{Fl\+\_\+\+Color} Fl\+\_\+\+Chart\+::textcolor\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fl___chart_a561007869d07a9ddcfd5f60175995eb2}\label{class_fl___chart_a561007869d07a9ddcfd5f60175995eb2}} 
+\index{Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}!textfont\+\_\+@{textfont\+\_\+}}
+\index{textfont\+\_\+@{textfont\+\_\+}!Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}}
+\subsubsection{\texorpdfstring{textfont\+\_\+}{textfont\_}}
+{\footnotesize\ttfamily \hyperlink{_enumerations_8_h_a2ac46d9f082834b969fffe490a03a709}{Fl\+\_\+\+Font} Fl\+\_\+\+Chart\+::textfont\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fl___chart_af17044fa38072aa107a5760681d98fb9}\label{class_fl___chart_af17044fa38072aa107a5760681d98fb9}} 
+\index{Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}!textsize\+\_\+@{textsize\+\_\+}}
+\index{textsize\+\_\+@{textsize\+\_\+}!Fl\+\_\+\+Chart@{Fl\+\_\+\+Chart}}
+\subsubsection{\texorpdfstring{textsize\+\_\+}{textsize\_}}
+{\footnotesize\ttfamily \hyperlink{_enumerations_8_h_ad58927f5c691454480f7cd28362502f1}{Fl\+\_\+\+Fontsize} Fl\+\_\+\+Chart\+::textsize\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+F\+L\+T\+K/\+F\+L/\hyperlink{_fl___chart_8_h}{Fl\+\_\+\+Chart.\+H}\end{DoxyCompactItemize}

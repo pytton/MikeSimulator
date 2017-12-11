@@ -1,0 +1,214 @@
+\hypertarget{gl2opengl_8h}{}\section{F\+L\+T\+K/\+F\+L/gl2opengl.h File Reference}
+\label{gl2opengl_8h}\index{F\+L\+T\+K/\+F\+L/gl2opengl.\+h@{F\+L\+T\+K/\+F\+L/gl2opengl.\+h}}
+{\ttfamily \#include $<$F\+L/gl.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}gl\+\_\+draw.\+H\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{gl2opengl_8h_ab1cef5ba3e6a1643b0d2c2c67d2efa03}{R\+G\+Bcolor}(r,  g,  \hyperlink{forms_8_h_a0ba06a290a384fa06b1b90745827dae2}{b})~gl\+Color3ub(r,g,\hyperlink{forms_8_h_a0ba06a290a384fa06b1b90745827dae2}{b})
+\item 
+\#define \hyperlink{gl2opengl_8h_aa1e22756ebc7429562c7526a639db02c}{bgnline}()~gl\+Begin(G\+L\+\_\+\+L\+I\+N\+E\+\_\+\+S\+T\+R\+IP)
+\item 
+\#define \hyperlink{gl2opengl_8h_a1a89de5453dd9ea26b1f2ea081ce7862}{bgnpolygon}()~gl\+Begin(G\+L\+\_\+\+P\+O\+L\+Y\+G\+ON)
+\item 
+\#define \hyperlink{gl2opengl_8h_a738c80be69bfab2717c8cba664c3ccaf}{bgnclosedline}()~gl\+Begin(G\+L\+\_\+\+L\+I\+N\+E\+\_\+\+L\+O\+OP)
+\item 
+\#define \hyperlink{gl2opengl_8h_a98c1c1c89bcb451ba163cfc45e0a215b}{endline}()~gl\+End()
+\item 
+\#define \hyperlink{gl2opengl_8h_a19801ee90a2b3f50499a4c8a42f46941}{endpolygon}()~gl\+End()
+\item 
+\#define \hyperlink{gl2opengl_8h_a1d11694df42302aea116d221c0a7081f}{endclosedline}()~gl\+End()
+\item 
+\#define \hyperlink{gl2opengl_8h_aadc9619ad80244bc5a34d0af0959d508}{v2f}(\hyperlink{forms_8_h_a3b90d5a73541ab9402511d87bed076ef}{v})~gl\+Vertex2fv(\hyperlink{forms_8_h_a3b90d5a73541ab9402511d87bed076ef}{v})
+\item 
+\#define \hyperlink{gl2opengl_8h_a2ab73bda9d1c8287beb89b3f4ac78180}{v2s}(\hyperlink{forms_8_h_a3b90d5a73541ab9402511d87bed076ef}{v})~gl\+Vertex2sv(\hyperlink{forms_8_h_a3b90d5a73541ab9402511d87bed076ef}{v})
+\item 
+\#define \hyperlink{gl2opengl_8h_a0b8b61d86a483099ae2ae5b14160fdea}{cmov}(x,  y,  z)~gl\+Raster\+Pos3f(x,y,z)
+\item 
+\#define \hyperlink{gl2opengl_8h_a4784bc33a81c6f54f6298b1ee537b35d}{charstr}(\hyperlink{forms_8_h_a672b4f0a8c8a6db61068c721f799d87f}{s})~\hyperlink{gl_8h_a44ced1db585c7da0f9df7fc6588c1cfe}{gl\+\_\+draw}(\hyperlink{forms_8_h_a672b4f0a8c8a6db61068c721f799d87f}{s})
+\item 
+\#define \hyperlink{gl2opengl_8h_a024f59819e310061093fab5a8ec77624}{fmprstr}(\hyperlink{forms_8_h_a672b4f0a8c8a6db61068c721f799d87f}{s})~\hyperlink{gl_8h_a44ced1db585c7da0f9df7fc6588c1cfe}{gl\+\_\+draw}(\hyperlink{forms_8_h_a672b4f0a8c8a6db61068c721f799d87f}{s})
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef float \hyperlink{gl2opengl_8h_ab65a016f4f1353f0df21e326958e25e0}{Matrix}\mbox{[}4\mbox{]}\mbox{[}4\mbox{]}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{gl2opengl_8h_ac8bb3912a3ce86b15842e79d0b421204}{clear} ()
+\item 
+void \hyperlink{gl2opengl_8h_a24382c8d0c275015c9c9361fbb572a37}{pushmatrix} ()
+\item 
+void \hyperlink{gl2opengl_8h_a798967b623f5dd9e954c9793319d0279}{popmatrix} ()
+\item 
+void \hyperlink{gl2opengl_8h_adf645fd0449da3b7e76c6cff7368c030}{multmatrix} (\hyperlink{gl2opengl_8h_ab65a016f4f1353f0df21e326958e25e0}{Matrix} \hyperlink{forms_8_h_a2ccd5640c2b2869841c5dab22b937079}{m})
+\item 
+void \hyperlink{gl2opengl_8h_a321f1e32cd01131a4f0e10f60a8fcc13}{color} (int n)
+\item 
+void \hyperlink{gl2opengl_8h_a856fcb8a7983d83666201749244432e5}{rect} (int x, int y, int r, int t)
+\item 
+void \hyperlink{gl2opengl_8h_a0498cc6273bea79449a5ba8a6ec8797d}{rectf} (int x, int y, int r, int t)
+\item 
+void \hyperlink{gl2opengl_8h_ab7397fea4d470d70d30318c66f321e3b}{recti} (int x, int y, int r, int t)
+\item 
+void \hyperlink{gl2opengl_8h_a05645e493f6016bfc718e96e59340148}{rectfi} (int x, int y, int r, int t)
+\item 
+void \hyperlink{gl2opengl_8h_a2ed0817bfd0ec172d02d180a28e305b1}{rects} (int x, int y, int r, int t)
+\item 
+void \hyperlink{gl2opengl_8h_a8b84d6dfdce662c986effe2f46739af0}{rectfs} (int x, int y, int r, int t)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{gl2opengl_8h_a738c80be69bfab2717c8cba664c3ccaf}\label{gl2opengl_8h_a738c80be69bfab2717c8cba664c3ccaf}} 
+\index{gl2opengl.\+h@{gl2opengl.\+h}!bgnclosedline@{bgnclosedline}}
+\index{bgnclosedline@{bgnclosedline}!gl2opengl.\+h@{gl2opengl.\+h}}
+\subsubsection{\texorpdfstring{bgnclosedline}{bgnclosedline}}
+{\footnotesize\ttfamily \#define bgnclosedline(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~gl\+Begin(G\+L\+\_\+\+L\+I\+N\+E\+\_\+\+L\+O\+OP)}
+
+\mbox{\Hypertarget{gl2opengl_8h_aa1e22756ebc7429562c7526a639db02c}\label{gl2opengl_8h_aa1e22756ebc7429562c7526a639db02c}} 
+\index{gl2opengl.\+h@{gl2opengl.\+h}!bgnline@{bgnline}}
+\index{bgnline@{bgnline}!gl2opengl.\+h@{gl2opengl.\+h}}
+\subsubsection{\texorpdfstring{bgnline}{bgnline}}
+{\footnotesize\ttfamily \#define bgnline(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~gl\+Begin(G\+L\+\_\+\+L\+I\+N\+E\+\_\+\+S\+T\+R\+IP)}
+
+\mbox{\Hypertarget{gl2opengl_8h_a1a89de5453dd9ea26b1f2ea081ce7862}\label{gl2opengl_8h_a1a89de5453dd9ea26b1f2ea081ce7862}} 
+\index{gl2opengl.\+h@{gl2opengl.\+h}!bgnpolygon@{bgnpolygon}}
+\index{bgnpolygon@{bgnpolygon}!gl2opengl.\+h@{gl2opengl.\+h}}
+\subsubsection{\texorpdfstring{bgnpolygon}{bgnpolygon}}
+{\footnotesize\ttfamily \#define bgnpolygon(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~gl\+Begin(G\+L\+\_\+\+P\+O\+L\+Y\+G\+ON)}
+
+\mbox{\Hypertarget{gl2opengl_8h_a4784bc33a81c6f54f6298b1ee537b35d}\label{gl2opengl_8h_a4784bc33a81c6f54f6298b1ee537b35d}} 
+\index{gl2opengl.\+h@{gl2opengl.\+h}!charstr@{charstr}}
+\index{charstr@{charstr}!gl2opengl.\+h@{gl2opengl.\+h}}
+\subsubsection{\texorpdfstring{charstr}{charstr}}
+{\footnotesize\ttfamily \#define charstr(\begin{DoxyParamCaption}\item[{}]{\hyperlink{forms_8_h_a672b4f0a8c8a6db61068c721f799d87f}{s} }\end{DoxyParamCaption})~\hyperlink{gl_8h_a44ced1db585c7da0f9df7fc6588c1cfe}{gl\+\_\+draw}(\hyperlink{forms_8_h_a672b4f0a8c8a6db61068c721f799d87f}{s})}
+
+\mbox{\Hypertarget{gl2opengl_8h_a0b8b61d86a483099ae2ae5b14160fdea}\label{gl2opengl_8h_a0b8b61d86a483099ae2ae5b14160fdea}} 
+\index{gl2opengl.\+h@{gl2opengl.\+h}!cmov@{cmov}}
+\index{cmov@{cmov}!gl2opengl.\+h@{gl2opengl.\+h}}
+\subsubsection{\texorpdfstring{cmov}{cmov}}
+{\footnotesize\ttfamily \#define cmov(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y,  }\item[{}]{z }\end{DoxyParamCaption})~gl\+Raster\+Pos3f(x,y,z)}
+
+\mbox{\Hypertarget{gl2opengl_8h_a1d11694df42302aea116d221c0a7081f}\label{gl2opengl_8h_a1d11694df42302aea116d221c0a7081f}} 
+\index{gl2opengl.\+h@{gl2opengl.\+h}!endclosedline@{endclosedline}}
+\index{endclosedline@{endclosedline}!gl2opengl.\+h@{gl2opengl.\+h}}
+\subsubsection{\texorpdfstring{endclosedline}{endclosedline}}
+{\footnotesize\ttfamily \#define endclosedline(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~gl\+End()}
+
+\mbox{\Hypertarget{gl2opengl_8h_a98c1c1c89bcb451ba163cfc45e0a215b}\label{gl2opengl_8h_a98c1c1c89bcb451ba163cfc45e0a215b}} 
+\index{gl2opengl.\+h@{gl2opengl.\+h}!endline@{endline}}
+\index{endline@{endline}!gl2opengl.\+h@{gl2opengl.\+h}}
+\subsubsection{\texorpdfstring{endline}{endline}}
+{\footnotesize\ttfamily \#define endline(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~gl\+End()}
+
+\mbox{\Hypertarget{gl2opengl_8h_a19801ee90a2b3f50499a4c8a42f46941}\label{gl2opengl_8h_a19801ee90a2b3f50499a4c8a42f46941}} 
+\index{gl2opengl.\+h@{gl2opengl.\+h}!endpolygon@{endpolygon}}
+\index{endpolygon@{endpolygon}!gl2opengl.\+h@{gl2opengl.\+h}}
+\subsubsection{\texorpdfstring{endpolygon}{endpolygon}}
+{\footnotesize\ttfamily \#define endpolygon(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~gl\+End()}
+
+\mbox{\Hypertarget{gl2opengl_8h_a024f59819e310061093fab5a8ec77624}\label{gl2opengl_8h_a024f59819e310061093fab5a8ec77624}} 
+\index{gl2opengl.\+h@{gl2opengl.\+h}!fmprstr@{fmprstr}}
+\index{fmprstr@{fmprstr}!gl2opengl.\+h@{gl2opengl.\+h}}
+\subsubsection{\texorpdfstring{fmprstr}{fmprstr}}
+{\footnotesize\ttfamily \#define fmprstr(\begin{DoxyParamCaption}\item[{}]{\hyperlink{forms_8_h_a672b4f0a8c8a6db61068c721f799d87f}{s} }\end{DoxyParamCaption})~\hyperlink{gl_8h_a44ced1db585c7da0f9df7fc6588c1cfe}{gl\+\_\+draw}(\hyperlink{forms_8_h_a672b4f0a8c8a6db61068c721f799d87f}{s})}
+
+\mbox{\Hypertarget{gl2opengl_8h_ab1cef5ba3e6a1643b0d2c2c67d2efa03}\label{gl2opengl_8h_ab1cef5ba3e6a1643b0d2c2c67d2efa03}} 
+\index{gl2opengl.\+h@{gl2opengl.\+h}!R\+G\+Bcolor@{R\+G\+Bcolor}}
+\index{R\+G\+Bcolor@{R\+G\+Bcolor}!gl2opengl.\+h@{gl2opengl.\+h}}
+\subsubsection{\texorpdfstring{R\+G\+Bcolor}{RGBcolor}}
+{\footnotesize\ttfamily \#define R\+G\+Bcolor(\begin{DoxyParamCaption}\item[{}]{r,  }\item[{}]{g,  }\item[{}]{\hyperlink{forms_8_h_a0ba06a290a384fa06b1b90745827dae2}{b} }\end{DoxyParamCaption})~gl\+Color3ub(r,g,\hyperlink{forms_8_h_a0ba06a290a384fa06b1b90745827dae2}{b})}
+
+\mbox{\Hypertarget{gl2opengl_8h_aadc9619ad80244bc5a34d0af0959d508}\label{gl2opengl_8h_aadc9619ad80244bc5a34d0af0959d508}} 
+\index{gl2opengl.\+h@{gl2opengl.\+h}!v2f@{v2f}}
+\index{v2f@{v2f}!gl2opengl.\+h@{gl2opengl.\+h}}
+\subsubsection{\texorpdfstring{v2f}{v2f}}
+{\footnotesize\ttfamily \#define v2f(\begin{DoxyParamCaption}\item[{}]{\hyperlink{forms_8_h_a3b90d5a73541ab9402511d87bed076ef}{v} }\end{DoxyParamCaption})~gl\+Vertex2fv(\hyperlink{forms_8_h_a3b90d5a73541ab9402511d87bed076ef}{v})}
+
+\mbox{\Hypertarget{gl2opengl_8h_a2ab73bda9d1c8287beb89b3f4ac78180}\label{gl2opengl_8h_a2ab73bda9d1c8287beb89b3f4ac78180}} 
+\index{gl2opengl.\+h@{gl2opengl.\+h}!v2s@{v2s}}
+\index{v2s@{v2s}!gl2opengl.\+h@{gl2opengl.\+h}}
+\subsubsection{\texorpdfstring{v2s}{v2s}}
+{\footnotesize\ttfamily \#define v2s(\begin{DoxyParamCaption}\item[{}]{\hyperlink{forms_8_h_a3b90d5a73541ab9402511d87bed076ef}{v} }\end{DoxyParamCaption})~gl\+Vertex2sv(\hyperlink{forms_8_h_a3b90d5a73541ab9402511d87bed076ef}{v})}
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{gl2opengl_8h_ab65a016f4f1353f0df21e326958e25e0}\label{gl2opengl_8h_ab65a016f4f1353f0df21e326958e25e0}} 
+\index{gl2opengl.\+h@{gl2opengl.\+h}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!gl2opengl.\+h@{gl2opengl.\+h}}
+\subsubsection{\texorpdfstring{Matrix}{Matrix}}
+{\footnotesize\ttfamily typedef float Matrix\mbox{[}4\mbox{]}\mbox{[}4\mbox{]}}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{gl2opengl_8h_ac8bb3912a3ce86b15842e79d0b421204}\label{gl2opengl_8h_ac8bb3912a3ce86b15842e79d0b421204}} 
+\index{gl2opengl.\+h@{gl2opengl.\+h}!clear@{clear}}
+\index{clear@{clear}!gl2opengl.\+h@{gl2opengl.\+h}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{gl2opengl_8h_a321f1e32cd01131a4f0e10f60a8fcc13}\label{gl2opengl_8h_a321f1e32cd01131a4f0e10f60a8fcc13}} 
+\index{gl2opengl.\+h@{gl2opengl.\+h}!color@{color}}
+\index{color@{color}!gl2opengl.\+h@{gl2opengl.\+h}}
+\subsubsection{\texorpdfstring{color()}{color()}}
+{\footnotesize\ttfamily void color (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{gl2opengl_8h_adf645fd0449da3b7e76c6cff7368c030}\label{gl2opengl_8h_adf645fd0449da3b7e76c6cff7368c030}} 
+\index{gl2opengl.\+h@{gl2opengl.\+h}!multmatrix@{multmatrix}}
+\index{multmatrix@{multmatrix}!gl2opengl.\+h@{gl2opengl.\+h}}
+\subsubsection{\texorpdfstring{multmatrix()}{multmatrix()}}
+{\footnotesize\ttfamily void multmatrix (\begin{DoxyParamCaption}\item[{\hyperlink{gl2opengl_8h_ab65a016f4f1353f0df21e326958e25e0}{Matrix}}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{gl2opengl_8h_a798967b623f5dd9e954c9793319d0279}\label{gl2opengl_8h_a798967b623f5dd9e954c9793319d0279}} 
+\index{gl2opengl.\+h@{gl2opengl.\+h}!popmatrix@{popmatrix}}
+\index{popmatrix@{popmatrix}!gl2opengl.\+h@{gl2opengl.\+h}}
+\subsubsection{\texorpdfstring{popmatrix()}{popmatrix()}}
+{\footnotesize\ttfamily void popmatrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{gl2opengl_8h_a24382c8d0c275015c9c9361fbb572a37}\label{gl2opengl_8h_a24382c8d0c275015c9c9361fbb572a37}} 
+\index{gl2opengl.\+h@{gl2opengl.\+h}!pushmatrix@{pushmatrix}}
+\index{pushmatrix@{pushmatrix}!gl2opengl.\+h@{gl2opengl.\+h}}
+\subsubsection{\texorpdfstring{pushmatrix()}{pushmatrix()}}
+{\footnotesize\ttfamily void pushmatrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{gl2opengl_8h_a856fcb8a7983d83666201749244432e5}\label{gl2opengl_8h_a856fcb8a7983d83666201749244432e5}} 
+\index{gl2opengl.\+h@{gl2opengl.\+h}!rect@{rect}}
+\index{rect@{rect}!gl2opengl.\+h@{gl2opengl.\+h}}
+\subsubsection{\texorpdfstring{rect()}{rect()}}
+{\footnotesize\ttfamily void rect (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{r,  }\item[{int}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{gl2opengl_8h_a0498cc6273bea79449a5ba8a6ec8797d}\label{gl2opengl_8h_a0498cc6273bea79449a5ba8a6ec8797d}} 
+\index{gl2opengl.\+h@{gl2opengl.\+h}!rectf@{rectf}}
+\index{rectf@{rectf}!gl2opengl.\+h@{gl2opengl.\+h}}
+\subsubsection{\texorpdfstring{rectf()}{rectf()}}
+{\footnotesize\ttfamily void rectf (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{r,  }\item[{int}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{gl2opengl_8h_a05645e493f6016bfc718e96e59340148}\label{gl2opengl_8h_a05645e493f6016bfc718e96e59340148}} 
+\index{gl2opengl.\+h@{gl2opengl.\+h}!rectfi@{rectfi}}
+\index{rectfi@{rectfi}!gl2opengl.\+h@{gl2opengl.\+h}}
+\subsubsection{\texorpdfstring{rectfi()}{rectfi()}}
+{\footnotesize\ttfamily void rectfi (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{r,  }\item[{int}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{gl2opengl_8h_a8b84d6dfdce662c986effe2f46739af0}\label{gl2opengl_8h_a8b84d6dfdce662c986effe2f46739af0}} 
+\index{gl2opengl.\+h@{gl2opengl.\+h}!rectfs@{rectfs}}
+\index{rectfs@{rectfs}!gl2opengl.\+h@{gl2opengl.\+h}}
+\subsubsection{\texorpdfstring{rectfs()}{rectfs()}}
+{\footnotesize\ttfamily void rectfs (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{r,  }\item[{int}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{gl2opengl_8h_ab7397fea4d470d70d30318c66f321e3b}\label{gl2opengl_8h_ab7397fea4d470d70d30318c66f321e3b}} 
+\index{gl2opengl.\+h@{gl2opengl.\+h}!recti@{recti}}
+\index{recti@{recti}!gl2opengl.\+h@{gl2opengl.\+h}}
+\subsubsection{\texorpdfstring{recti()}{recti()}}
+{\footnotesize\ttfamily void recti (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{r,  }\item[{int}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{gl2opengl_8h_a2ed0817bfd0ec172d02d180a28e305b1}\label{gl2opengl_8h_a2ed0817bfd0ec172d02d180a28e305b1}} 
+\index{gl2opengl.\+h@{gl2opengl.\+h}!rects@{rects}}
+\index{rects@{rects}!gl2opengl.\+h@{gl2opengl.\+h}}
+\subsubsection{\texorpdfstring{rects()}{rects()}}
+{\footnotesize\ttfamily void rects (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{r,  }\item[{int}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+

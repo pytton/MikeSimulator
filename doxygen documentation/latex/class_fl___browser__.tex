@@ -1,0 +1,949 @@
+\hypertarget{class_fl___browser__}{}\section{Fl\+\_\+\+Browser\+\_\+ Class Reference}
+\label{class_fl___browser__}\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+
+
+{\ttfamily \#include $<$Fl\+\_\+\+Browser\+\_\+.\+H$>$}
+
+Inheritance diagram for Fl\+\_\+\+Browser\+\_\+\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_fl___browser__}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \newline
+\hyperlink{class_fl___browser___ae31c28a4c79819d686805fdd1e48698ea18547ff3d0f33220ebae43d040f82850}{H\+O\+R\+I\+Z\+O\+N\+T\+AL} = 1, 
+\hyperlink{class_fl___browser___ae31c28a4c79819d686805fdd1e48698ea7bb46232e38930bcac3bd67c96cdaff5}{V\+E\+R\+T\+I\+C\+AL} = 2, 
+\hyperlink{class_fl___browser___ae31c28a4c79819d686805fdd1e48698eaab8e1ce95f30ab95086a09f50fc9e7b6}{B\+O\+TH} = 3, 
+\hyperlink{class_fl___browser___ae31c28a4c79819d686805fdd1e48698ea28f0b3b555121cd96c51ae991efb6c9b}{A\+L\+W\+A\+Y\+S\+\_\+\+ON} = 4, 
+\newline
+\hyperlink{class_fl___browser___ae31c28a4c79819d686805fdd1e48698ea565affd547be9e7d8d66ab078c2f32cf}{H\+O\+R\+I\+Z\+O\+N\+T\+A\+L\+\_\+\+A\+L\+W\+A\+YS} = 5, 
+\hyperlink{class_fl___browser___ae31c28a4c79819d686805fdd1e48698ea0b766422c7c7e00c660f9685d0b167e9}{V\+E\+R\+T\+I\+C\+A\+L\+\_\+\+A\+L\+W\+A\+YS} = 6, 
+\hyperlink{class_fl___browser___ae31c28a4c79819d686805fdd1e48698ea4af943b52ba7852580445055aaec0efc}{B\+O\+T\+H\+\_\+\+A\+L\+W\+A\+YS} = 7
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_fl___browser___a63015169440ce8d6c979abcc2a27d359}{handle} (int event)
+\item 
+void \hyperlink{class_fl___browser___a3e9c0647239e6952aa0636ad7db72ada}{resize} (int X, int Y, int W, int H)
+\item 
+int \hyperlink{class_fl___browser___af3f96e34d2283d2e854b53335e6ee85a}{select} (void $\ast$item, int val=1, int docallbacks=0)
+\item 
+int \hyperlink{class_fl___browser___a7012b37539c19c46cef95dc7cb556199}{select\+\_\+only} (void $\ast$item, int docallbacks=0)
+\item 
+int \hyperlink{class_fl___browser___ab3a742edc19d5b7c5cb03a2e0b8fac58}{deselect} (int docallbacks=0)
+\item 
+int \hyperlink{class_fl___browser___aeaf7951678d13027e9b5ca73925bedad}{position} () const
+\item 
+void \hyperlink{class_fl___browser___ac88a0e4dc3feb727efc225a3f4f920be}{position} (int pos)
+\item 
+int \hyperlink{class_fl___browser___ae312c07fc6eee01f42eae60c85594889}{hposition} () const
+\item 
+void \hyperlink{class_fl___browser___a6bf164ef525549ed6bc12e29045ef15c}{hposition} (int)
+\item 
+void \hyperlink{class_fl___browser___a4017241fa506a2f38acc06704a383fde}{display} (void $\ast$item)
+\item 
+\hyperlink{fl__types_8h_a65f85814a8290f9797005d3b28e7e5fc}{uchar} \hyperlink{class_fl___browser___a67d0ca392fbc14371277661a4ab75fc7}{has\+\_\+scrollbar} () const
+\item 
+void \hyperlink{class_fl___browser___abad9f952fd007be8afcd1e3ca7ea1b86}{has\+\_\+scrollbar} (\hyperlink{fl__types_8h_a65f85814a8290f9797005d3b28e7e5fc}{uchar} mode)
+\item 
+\hyperlink{_enumerations_8_h_a2ac46d9f082834b969fffe490a03a709}{Fl\+\_\+\+Font} \hyperlink{class_fl___browser___a2963aa5fdbdba4f300a6ae328e31dd13}{textfont} () const
+\item 
+void \hyperlink{class_fl___browser___aea733233102940a15e5f31b9e3ba3ec9}{textfont} (\hyperlink{_enumerations_8_h_a2ac46d9f082834b969fffe490a03a709}{Fl\+\_\+\+Font} font)
+\item 
+\hyperlink{_enumerations_8_h_ad58927f5c691454480f7cd28362502f1}{Fl\+\_\+\+Fontsize} \hyperlink{class_fl___browser___a43889aa554fd2285991f73cc11918bda}{textsize} () const
+\item 
+void \hyperlink{class_fl___browser___ad6f0e70675e073dd97e02b5954675861}{textsize} (\hyperlink{_enumerations_8_h_ad58927f5c691454480f7cd28362502f1}{Fl\+\_\+\+Fontsize} new\+Size)
+\item 
+\hyperlink{_enumerations_8_h_a8b762953646f8abee866061f1af78a6a}{Fl\+\_\+\+Color} \hyperlink{class_fl___browser___a1a76a8e81183b02b45a669d8cfd3adeb}{textcolor} () const
+\item 
+void \hyperlink{class_fl___browser___ad33ff1165743695e7bb2e1d89eb75622}{textcolor} (\hyperlink{_enumerations_8_h_a8b762953646f8abee866061f1af78a6a}{Fl\+\_\+\+Color} col)
+\item 
+int \hyperlink{class_fl___browser___a89f6b1be07fc063bf8a8d83cb39d5fa0}{scrollbar\+\_\+size} () const
+\item 
+void \hyperlink{class_fl___browser___a6743b9c1513c68e82543530154cadf57}{scrollbar\+\_\+size} (int new\+Size)
+\item 
+int \hyperlink{class_fl___browser___a397cd7d2550ca3d87032fa1ffd3e4bbc}{scrollbar\+\_\+width} () const
+\item 
+void \hyperlink{class_fl___browser___a4d59d5c7d78393a7a5d5bfaa01694580}{scrollbar\+\_\+width} (int width)
+\item 
+void \hyperlink{class_fl___browser___a92ef1a69de96f610e2776591ee3bea06}{scrollbar\+\_\+right} ()
+\item 
+void \hyperlink{class_fl___browser___af6c48bc6c8bcfc43f317aa053b72ea2d}{scrollbar\+\_\+left} ()
+\item 
+void \hyperlink{class_fl___browser___a852d20413fc81fd0be7c63408639974e}{sort} (int \hyperlink{class_fl___widget_a5b8a508113d122b448c38045e65e4266}{flags}=0)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fl___scrollbar}{Fl\+\_\+\+Scrollbar} \hyperlink{class_fl___browser___ac76f28c936430d7884ac98d44ff4e3ad}{scrollbar}
+\item 
+\hyperlink{class_fl___scrollbar}{Fl\+\_\+\+Scrollbar} \hyperlink{class_fl___browser___a7cd58698b839837fb530814fad43c2cc}{hscrollbar}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void $\ast$ \hyperlink{class_fl___browser___a43dd6231f2684f132a5a33b5d7d0c8e7}{item\+\_\+first} () const =0
+\item 
+virtual void $\ast$ \hyperlink{class_fl___browser___aca6035552f5e9ecbeaa6caaf5fb8a3cb}{item\+\_\+next} (void $\ast$item) const =0
+\item 
+virtual void $\ast$ \hyperlink{class_fl___browser___afeb24ca0dbd8e4685fa18382512c94d3}{item\+\_\+prev} (void $\ast$item) const =0
+\item 
+virtual void $\ast$ \hyperlink{class_fl___browser___a2302bec54f4ea593146be5490a7fe93b}{item\+\_\+last} () const
+\item 
+virtual int \hyperlink{class_fl___browser___a5487d8f8d3e9cce3e87918f8f53e6ae6}{item\+\_\+height} (void $\ast$item) const =0
+\item 
+virtual int \hyperlink{class_fl___browser___a3b84b5418ac2554dfaaeb50cfba63569}{item\+\_\+width} (void $\ast$item) const =0
+\item 
+virtual int \hyperlink{class_fl___browser___aa9f378038994076e866daac8ca050507}{item\+\_\+quick\+\_\+height} (void $\ast$item) const
+\item 
+virtual void \hyperlink{class_fl___browser___ad145a5000b8ec78a45270a1d9294aa15}{item\+\_\+draw} (void $\ast$item, int X, int Y, int W, int H) const =0
+\item 
+virtual const char $\ast$ \hyperlink{class_fl___browser___afe9e25c3ea0c73dcba379e7a46efaddb}{item\+\_\+text} (void $\ast$item) const
+\item 
+virtual void \hyperlink{class_fl___browser___a52451c9082450cfb259e9e5b06344387}{item\+\_\+swap} (void $\ast$a, void $\ast$\hyperlink{forms_8_h_a0ba06a290a384fa06b1b90745827dae2}{b})
+\item 
+virtual void $\ast$ \hyperlink{class_fl___browser___a6dd51e0b34953ddb1de33a750ab07c22}{item\+\_\+at} (int index) const
+\item 
+virtual int \hyperlink{class_fl___browser___a1a15e2abc969d5958d5ca0d7ae2d412b}{full\+\_\+width} () const
+\item 
+virtual int \hyperlink{class_fl___browser___a16a8a583c790f87f852c6d10413e9592}{full\+\_\+height} () const
+\item 
+virtual int \hyperlink{class_fl___browser___aff44d1df61b13c4ef50636dc7e140cb3}{incr\+\_\+height} () const
+\item 
+virtual void \hyperlink{class_fl___browser___a81b34bf7d536207d3b049924ef491f3b}{item\+\_\+select} (void $\ast$item, int val=1)
+\item 
+virtual int \hyperlink{class_fl___browser___a05500ecd3d8da6f429117751829395c7}{item\+\_\+selected} (void $\ast$item) const
+\item 
+void $\ast$ \hyperlink{class_fl___browser___acf8856ddf092e7b00d9f6b381cc09b20}{top} () const
+\item 
+void $\ast$ \hyperlink{class_fl___browser___a0def0e61d7de24c2ebaa3dfa982232c1}{selection} () const
+\item 
+void \hyperlink{class_fl___browser___ac1aa2a6bed2109458ab8b701585dca9d}{new\+\_\+list} ()
+\item 
+void \hyperlink{class_fl___browser___a0e14ea8be60dc03d76124ed5d3a1b58d}{deleting} (void $\ast$item)
+\item 
+void \hyperlink{class_fl___browser___ac741e98e5af5630f9c693066ef2cc578}{replacing} (void $\ast$a, void $\ast$\hyperlink{forms_8_h_a0ba06a290a384fa06b1b90745827dae2}{b})
+\item 
+void \hyperlink{class_fl___browser___ae1ae1e4627efd74f6dfc7c9116648a49}{swapping} (void $\ast$a, void $\ast$\hyperlink{forms_8_h_a0ba06a290a384fa06b1b90745827dae2}{b})
+\item 
+void \hyperlink{class_fl___browser___a6ad26748441b4801ae10f55414e98f0a}{inserting} (void $\ast$a, void $\ast$\hyperlink{forms_8_h_a0ba06a290a384fa06b1b90745827dae2}{b})
+\item 
+int \hyperlink{class_fl___browser___afe38d875145818749f6e3c34059866ff}{displayed} (void $\ast$item) const
+\item 
+void \hyperlink{class_fl___browser___ac06f58d6aa13a432825231c19aba6544}{redraw\+\_\+line} (void $\ast$item)
+\item 
+void \hyperlink{class_fl___browser___a78e2b46f393546abbe22ec28e048f8de}{redraw\+\_\+lines} ()
+\item 
+void \hyperlink{class_fl___browser___a280d61654c588bc6a5602e4a65e321ca}{bbox} (int \&X, int \&Y, int \&W, int \&H) const
+\item 
+int \hyperlink{class_fl___browser___ab7be86a21c621edb7e5cbea6c30adb44}{leftedge} () const
+\item 
+void $\ast$ \hyperlink{class_fl___browser___a259e5042e07cae2f63884497affe562a}{find\+\_\+item} (int ypos)
+\item 
+void \hyperlink{class_fl___browser___af563481285289e2fc304ded1a0cbb49f}{draw} ()
+\item 
+\hyperlink{class_fl___browser___a88e6a3e490e8de7042d6c16b2888dfd3}{Fl\+\_\+\+Browser\+\_\+} (int X, int Y, int W, int H, const char $\ast$L=0)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fl___browser___a122a2aa4ad005096b627f80522b4af30}{update\+\_\+top} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_fl___browser___a42ebd2ebdf27d127c5761d83c6117896}{position\+\_\+}
+\item 
+int \hyperlink{class_fl___browser___a94838051983c0bc05c062fc165293ae1}{real\+\_\+position\+\_\+}
+\item 
+int \hyperlink{class_fl___browser___ac85a7d5443dc80ec303235d0e73f6e1d}{hposition\+\_\+}
+\item 
+int \hyperlink{class_fl___browser___a4fbe438fdc6307c625564ac6b129c0b6}{real\+\_\+hposition\+\_\+}
+\item 
+int \hyperlink{class_fl___browser___a0eeaec2d2c9203a0bba760fd7964ea0a}{offset\+\_\+}
+\item 
+int \hyperlink{class_fl___browser___a85d8605cbd2f69cd1e6bf425ee2397ab}{max\+\_\+width}
+\item 
+\hyperlink{fl__types_8h_a65f85814a8290f9797005d3b28e7e5fc}{uchar} \hyperlink{class_fl___browser___aeaeeb512d94e2f1d1e0cabdf371fa484}{has\+\_\+scrollbar\+\_\+}
+\item 
+\hyperlink{_enumerations_8_h_a2ac46d9f082834b969fffe490a03a709}{Fl\+\_\+\+Font} \hyperlink{class_fl___browser___a51e202ee8f00054b29d21f3c446fea58}{textfont\+\_\+}
+\item 
+\hyperlink{_enumerations_8_h_ad58927f5c691454480f7cd28362502f1}{Fl\+\_\+\+Fontsize} \hyperlink{class_fl___browser___a2c139b34575677afa28dfe093c825782}{textsize\+\_\+}
+\item 
+\hyperlink{_enumerations_8_h_a8b762953646f8abee866061f1af78a6a}{Fl\+\_\+\+Color} \hyperlink{class_fl___browser___a16df24a8581bfe5fc2875d54fb59fd50}{textcolor\+\_\+}
+\item 
+void $\ast$ \hyperlink{class_fl___browser___aacdf6ccc00b1046b82ebbb29549e8c9d}{top\+\_\+}
+\item 
+void $\ast$ \hyperlink{class_fl___browser___a2079bb4f157eeebaac3d9caa3b32c185}{selection\+\_\+}
+\item 
+void $\ast$ \hyperlink{class_fl___browser___a6c53c2b9d47b93b3c4199d27deaf060f}{redraw1}
+\item 
+void $\ast$ \hyperlink{class_fl___browser___ab6b6618e0df3dc38440f8c1e5ab6239d}{redraw2}
+\item 
+void $\ast$ \hyperlink{class_fl___browser___af67016b9a714652a5f97c14455bcb844}{max\+\_\+width\+\_\+item}
+\item 
+int \hyperlink{class_fl___browser___a1e8bcfe4c5b762d097ca97771f7cac72}{scrollbar\+\_\+size\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This is the base class for browsers. To be useful it must be subclassed and several virtual functions defined. The Forms-\/compatible browser and the file chooser\textquotesingle{}s browser are subclassed off of this.
+
+This has been designed so that the subclass has complete control over the storage of the data, although because next() and prev() functions are used to index, it works best as a linked list or as a large block of characters in which the line breaks must be searched for.
+
+A great deal of work has been done so that the \char`\"{}height\char`\"{} of a data object does not need to be determined until it is drawn. This is useful if actually figuring out the size of an object requires accessing image data or doing stat() on a file or doing some other slow operation.
+
+\subsubsection*{Keyboard navigation of browser items }
+
+The keyboard navigation of browser items is only possible if \hyperlink{class_fl___widget_a1acaad8af2c94836dea0d3086dca1ac3}{visible\+\_\+focus()} is enabled. If disabled, the widget rejects keyboard focus; Tab and Shift-\/\+Tab focus navigation will skip the widget.
+
+In \textquotesingle{}Select\textquotesingle{} and \textquotesingle{}Normal\textquotesingle{} mode, the widget rejects keyboard focus; no navigation keys are supported (other than scrollbar positioning).
+
+In \textquotesingle{}Hold\textquotesingle{} mode, the widget accepts keyboard focus, and Up/\+Down arrow keys can navigate the selected item.
+
+In \textquotesingle{}Multi\textquotesingle{} mode, the widget accepts keyboard focus, and Up/\+Down arrow keys navigate the focus box; Space toggles the current item\textquotesingle{}s selection, Enter selects only the current item (deselects all others). If Shift (or Ctrl) is combined with Up/\+Down arrow keys, the current item\textquotesingle{}s selection state is extended to the next item. In this way one can extend a selection or de-\/selection. 
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_fl___browser___ae31c28a4c79819d686805fdd1e48698e}\label{class_fl___browser___ae31c28a4c79819d686805fdd1e48698e}} 
+\subsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+Values for \hyperlink{class_fl___browser___a67d0ca392fbc14371277661a4ab75fc7}{has\+\_\+scrollbar()}. Anonymous enum bit flags for \hyperlink{class_fl___browser___a67d0ca392fbc14371277661a4ab75fc7}{has\+\_\+scrollbar()}.
+\begin{DoxyItemize}
+\item bit 0\+: horizontal
+\item bit 1\+: vertical
+\item bit 2\+: \textquotesingle{}always\textquotesingle{} (to be combined with bits 0 and 1)
+\item bit 3-\/31\+: reserved for future use 
+\end{DoxyItemize}\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+O\+R\+I\+Z\+O\+N\+T\+AL@{H\+O\+R\+I\+Z\+O\+N\+T\+AL}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!H\+O\+R\+I\+Z\+O\+N\+T\+AL@{H\+O\+R\+I\+Z\+O\+N\+T\+AL}}}\mbox{\Hypertarget{class_fl___browser___ae31c28a4c79819d686805fdd1e48698ea18547ff3d0f33220ebae43d040f82850}\label{class_fl___browser___ae31c28a4c79819d686805fdd1e48698ea18547ff3d0f33220ebae43d040f82850}} 
+H\+O\+R\+I\+Z\+O\+N\+T\+AL&Only show horizontal scrollbar. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\+E\+R\+T\+I\+C\+AL@{V\+E\+R\+T\+I\+C\+AL}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!V\+E\+R\+T\+I\+C\+AL@{V\+E\+R\+T\+I\+C\+AL}}}\mbox{\Hypertarget{class_fl___browser___ae31c28a4c79819d686805fdd1e48698ea7bb46232e38930bcac3bd67c96cdaff5}\label{class_fl___browser___ae31c28a4c79819d686805fdd1e48698ea7bb46232e38930bcac3bd67c96cdaff5}} 
+V\+E\+R\+T\+I\+C\+AL&Only show vertical scrollbar. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+O\+TH@{B\+O\+TH}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!B\+O\+TH@{B\+O\+TH}}}\mbox{\Hypertarget{class_fl___browser___ae31c28a4c79819d686805fdd1e48698eaab8e1ce95f30ab95086a09f50fc9e7b6}\label{class_fl___browser___ae31c28a4c79819d686805fdd1e48698eaab8e1ce95f30ab95086a09f50fc9e7b6}} 
+B\+O\+TH&Show both scrollbars. (default) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+L\+W\+A\+Y\+S\+\_\+\+ON@{A\+L\+W\+A\+Y\+S\+\_\+\+ON}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!A\+L\+W\+A\+Y\+S\+\_\+\+ON@{A\+L\+W\+A\+Y\+S\+\_\+\+ON}}}\mbox{\Hypertarget{class_fl___browser___ae31c28a4c79819d686805fdd1e48698ea28f0b3b555121cd96c51ae991efb6c9b}\label{class_fl___browser___ae31c28a4c79819d686805fdd1e48698ea28f0b3b555121cd96c51ae991efb6c9b}} 
+A\+L\+W\+A\+Y\+S\+\_\+\+ON&Specified scrollbar(s) should \textquotesingle{}always\textquotesingle{} be shown (to be used with H\+O\+R\+I\+Z\+O\+N\+T\+A\+L/\+V\+E\+R\+T\+I\+C\+AL) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+O\+R\+I\+Z\+O\+N\+T\+A\+L\+\_\+\+A\+L\+W\+A\+YS@{H\+O\+R\+I\+Z\+O\+N\+T\+A\+L\+\_\+\+A\+L\+W\+A\+YS}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!H\+O\+R\+I\+Z\+O\+N\+T\+A\+L\+\_\+\+A\+L\+W\+A\+YS@{H\+O\+R\+I\+Z\+O\+N\+T\+A\+L\+\_\+\+A\+L\+W\+A\+YS}}}\mbox{\Hypertarget{class_fl___browser___ae31c28a4c79819d686805fdd1e48698ea565affd547be9e7d8d66ab078c2f32cf}\label{class_fl___browser___ae31c28a4c79819d686805fdd1e48698ea565affd547be9e7d8d66ab078c2f32cf}} 
+H\+O\+R\+I\+Z\+O\+N\+T\+A\+L\+\_\+\+A\+L\+W\+A\+YS&Horizontal scrollbar always on. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\+E\+R\+T\+I\+C\+A\+L\+\_\+\+A\+L\+W\+A\+YS@{V\+E\+R\+T\+I\+C\+A\+L\+\_\+\+A\+L\+W\+A\+YS}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!V\+E\+R\+T\+I\+C\+A\+L\+\_\+\+A\+L\+W\+A\+YS@{V\+E\+R\+T\+I\+C\+A\+L\+\_\+\+A\+L\+W\+A\+YS}}}\mbox{\Hypertarget{class_fl___browser___ae31c28a4c79819d686805fdd1e48698ea0b766422c7c7e00c660f9685d0b167e9}\label{class_fl___browser___ae31c28a4c79819d686805fdd1e48698ea0b766422c7c7e00c660f9685d0b167e9}} 
+V\+E\+R\+T\+I\+C\+A\+L\+\_\+\+A\+L\+W\+A\+YS&Vertical scrollbar always on. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\+O\+T\+H\+\_\+\+A\+L\+W\+A\+YS@{B\+O\+T\+H\+\_\+\+A\+L\+W\+A\+YS}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!B\+O\+T\+H\+\_\+\+A\+L\+W\+A\+YS@{B\+O\+T\+H\+\_\+\+A\+L\+W\+A\+YS}}}\mbox{\Hypertarget{class_fl___browser___ae31c28a4c79819d686805fdd1e48698ea4af943b52ba7852580445055aaec0efc}\label{class_fl___browser___ae31c28a4c79819d686805fdd1e48698ea4af943b52ba7852580445055aaec0efc}} 
+B\+O\+T\+H\+\_\+\+A\+L\+W\+A\+YS&Both scrollbars always on. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_fl___browser___a88e6a3e490e8de7042d6c16b2888dfd3}\label{class_fl___browser___a88e6a3e490e8de7042d6c16b2888dfd3}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{Fl\+\_\+\+Browser\+\_\+()}{Fl\_Browser\_()}}
+{\footnotesize\ttfamily Fl\+\_\+\+Browser\+\_\+\+::\+Fl\+\_\+\+Browser\+\_\+ (\begin{DoxyParamCaption}\item[{int}]{X,  }\item[{int}]{Y,  }\item[{int}]{W,  }\item[{int}]{H,  }\item[{const char $\ast$}]{L = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_fl___browser___a280d61654c588bc6a5602e4a65e321ca}\label{class_fl___browser___a280d61654c588bc6a5602e4a65e321ca}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!bbox@{bbox}}
+\index{bbox@{bbox}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{bbox()}{bbox()}}
+{\footnotesize\ttfamily void Fl\+\_\+\+Browser\+\_\+\+::bbox (\begin{DoxyParamCaption}\item[{int \&}]{X,  }\item[{int \&}]{Y,  }\item[{int \&}]{W,  }\item[{int \&}]{H }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fl___browser___a0e14ea8be60dc03d76124ed5d3a1b58d}\label{class_fl___browser___a0e14ea8be60dc03d76124ed5d3a1b58d}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!deleting@{deleting}}
+\index{deleting@{deleting}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{deleting()}{deleting()}}
+{\footnotesize\ttfamily void Fl\+\_\+\+Browser\+\_\+\+::deleting (\begin{DoxyParamCaption}\item[{void $\ast$}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fl___browser___ab3a742edc19d5b7c5cb03a2e0b8fac58}\label{class_fl___browser___ab3a742edc19d5b7c5cb03a2e0b8fac58}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!deselect@{deselect}}
+\index{deselect@{deselect}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{deselect()}{deselect()}}
+{\footnotesize\ttfamily int Fl\+\_\+\+Browser\+\_\+\+::deselect (\begin{DoxyParamCaption}\item[{int}]{docallbacks = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fl___browser___a4017241fa506a2f38acc06704a383fde}\label{class_fl___browser___a4017241fa506a2f38acc06704a383fde}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!display@{display}}
+\index{display@{display}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily void Fl\+\_\+\+Browser\+\_\+\+::display (\begin{DoxyParamCaption}\item[{void $\ast$}]{item }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fl___browser___afe38d875145818749f6e3c34059866ff}\label{class_fl___browser___afe38d875145818749f6e3c34059866ff}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!displayed@{displayed}}
+\index{displayed@{displayed}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{displayed()}{displayed()}}
+{\footnotesize\ttfamily int Fl\+\_\+\+Browser\+\_\+\+::displayed (\begin{DoxyParamCaption}\item[{void $\ast$}]{item }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fl___browser___af563481285289e2fc304ded1a0cbb49f}\label{class_fl___browser___af563481285289e2fc304ded1a0cbb49f}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!draw@{draw}}
+\index{draw@{draw}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Fl\+\_\+\+Browser\+\_\+\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Draws the widget. Never call this function directly. F\+L\+TK will schedule redrawing whenever needed. If your widget must be redrawn as soon as possible, call \hyperlink{class_fl___widget_aa63ce68cbf4620cf8750b868368ea02b}{redraw()} instead.
+
+Override this function to draw your own widgets.
+
+If you ever need to call another widget\textquotesingle{}s draw method {\itshape from within your own \hyperlink{class_fl___browser___af563481285289e2fc304ded1a0cbb49f}{draw()} method}, e.\+g. for an embedded scrollbar, you can do it (because \hyperlink{class_fl___browser___af563481285289e2fc304ded1a0cbb49f}{draw()} is virtual) like this\+:
+
+
+\begin{DoxyCode}
+    \hyperlink{class_fl___widget}{Fl\_Widget} *s = &scroll;     \textcolor{comment}{// scroll is an embedded Fl\_Scrollbar}
+s->\hyperlink{class_fl___widget_a1acb38c6b3cb40452ad02ccfeedbac8a}{draw}();          \textcolor{comment}{// calls Fl\_Scrollbar::draw()}
+\end{DoxyCode}
+ 
+
+Implements \hyperlink{class_fl___widget_a1acb38c6b3cb40452ad02ccfeedbac8a}{Fl\+\_\+\+Widget}.
+
+\mbox{\Hypertarget{class_fl___browser___a259e5042e07cae2f63884497affe562a}\label{class_fl___browser___a259e5042e07cae2f63884497affe562a}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!find\+\_\+item@{find\+\_\+item}}
+\index{find\+\_\+item@{find\+\_\+item}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{find\+\_\+item()}{find\_item()}}
+{\footnotesize\ttfamily void$\ast$ Fl\+\_\+\+Browser\+\_\+\+::find\+\_\+item (\begin{DoxyParamCaption}\item[{int}]{ypos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fl___browser___a16a8a583c790f87f852c6d10413e9592}\label{class_fl___browser___a16a8a583c790f87f852c6d10413e9592}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!full\+\_\+height@{full\+\_\+height}}
+\index{full\+\_\+height@{full\+\_\+height}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{full\+\_\+height()}{full\_height()}}
+{\footnotesize\ttfamily virtual int Fl\+\_\+\+Browser\+\_\+\+::full\+\_\+height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \hyperlink{class_fl___browser_aeadc4b1c149e211228f0cfaaf9df929f}{Fl\+\_\+\+Browser}, and \hyperlink{class_fl___file___browser_ad47103480abf8a727c37e2adaae19657}{Fl\+\_\+\+File\+\_\+\+Browser}.
+
+\mbox{\Hypertarget{class_fl___browser___a1a15e2abc969d5958d5ca0d7ae2d412b}\label{class_fl___browser___a1a15e2abc969d5958d5ca0d7ae2d412b}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!full\+\_\+width@{full\+\_\+width}}
+\index{full\+\_\+width@{full\+\_\+width}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{full\+\_\+width()}{full\_width()}}
+{\footnotesize\ttfamily virtual int Fl\+\_\+\+Browser\+\_\+\+::full\+\_\+width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_fl___browser___a63015169440ce8d6c979abcc2a27d359}\label{class_fl___browser___a63015169440ce8d6c979abcc2a27d359}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!handle@{handle}}
+\index{handle@{handle}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{handle()}{handle()}}
+{\footnotesize\ttfamily int Fl\+\_\+\+Browser\+\_\+\+::handle (\begin{DoxyParamCaption}\item[{int}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Handles the specified event. You normally don\textquotesingle{}t call this method directly, but instead let F\+L\+TK do it when the user interacts with the widget.
+
+When implemented in a widget, this function must return 0 if the widget does not use the event or 1 otherwise.
+
+Most of the time, you want to call the inherited \hyperlink{class_fl___browser___a63015169440ce8d6c979abcc2a27d359}{handle()} method in your overridden method so that you don\textquotesingle{}t short-\/circuit events that you don\textquotesingle{}t handle. In this last case you should return the callee retval.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em event} & the kind of event received \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & if the event was not used or understood \\
+\hline
+{\em 1} & if the event was used and can be deleted \\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{_enumerations_8_h_ad16daf120d9a0501cccaee563af0b9a3}{Fl\+\_\+\+Event} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{class_fl___widget_a3521aba25eda761620953dd49d335ea7}{Fl\+\_\+\+Widget}.
+
+
+
+Reimplemented in \hyperlink{class_fl___check___browser_acdc1442cb069cec53f6b6263201a4af6}{Fl\+\_\+\+Check\+\_\+\+Browser}.
+
+\mbox{\Hypertarget{class_fl___browser___a67d0ca392fbc14371277661a4ab75fc7}\label{class_fl___browser___a67d0ca392fbc14371277661a4ab75fc7}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!has\+\_\+scrollbar@{has\+\_\+scrollbar}}
+\index{has\+\_\+scrollbar@{has\+\_\+scrollbar}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{has\+\_\+scrollbar()}{has\_scrollbar()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{fl__types_8h_a65f85814a8290f9797005d3b28e7e5fc}{uchar} Fl\+\_\+\+Browser\+\_\+\+::has\+\_\+scrollbar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the current scrollbar mode, see \hyperlink{class_fl___browser___abad9f952fd007be8afcd1e3ca7ea1b86}{Fl\+\_\+\+Browser\+\_\+\+::has\+\_\+scrollbar(uchar)} \mbox{\Hypertarget{class_fl___browser___abad9f952fd007be8afcd1e3ca7ea1b86}\label{class_fl___browser___abad9f952fd007be8afcd1e3ca7ea1b86}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!has\+\_\+scrollbar@{has\+\_\+scrollbar}}
+\index{has\+\_\+scrollbar@{has\+\_\+scrollbar}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{has\+\_\+scrollbar()}{has\_scrollbar()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Fl\+\_\+\+Browser\+\_\+\+::has\+\_\+scrollbar (\begin{DoxyParamCaption}\item[{\hyperlink{fl__types_8h_a65f85814a8290f9797005d3b28e7e5fc}{uchar}}]{mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets whether the widget should have scrollbars or not (default \hyperlink{class_fl___browser___ae31c28a4c79819d686805fdd1e48698eaab8e1ce95f30ab95086a09f50fc9e7b6}{Fl\+\_\+\+Browser\+\_\+\+::\+B\+O\+TH}). By default you can scroll in both directions, and the scrollbars disappear if the data will fit in the widget. \hyperlink{class_fl___browser___a67d0ca392fbc14371277661a4ab75fc7}{has\+\_\+scrollbar()} changes this based on the value of {\ttfamily mode\+:} 
+
+
+\begin{DoxyItemize}
+\item 0 -\/ No scrollbars.
+\item \hyperlink{class_fl___browser___ae31c28a4c79819d686805fdd1e48698ea18547ff3d0f33220ebae43d040f82850}{Fl\+\_\+\+Browser\+\_\+\+::\+H\+O\+R\+I\+Z\+O\+N\+T\+AL} -\/ Only a horizontal scrollbar.
+\item \hyperlink{class_fl___browser___ae31c28a4c79819d686805fdd1e48698ea7bb46232e38930bcac3bd67c96cdaff5}{Fl\+\_\+\+Browser\+\_\+\+::\+V\+E\+R\+T\+I\+C\+AL} -\/ Only a vertical scrollbar.
+\item \hyperlink{class_fl___browser___ae31c28a4c79819d686805fdd1e48698eaab8e1ce95f30ab95086a09f50fc9e7b6}{Fl\+\_\+\+Browser\+\_\+\+::\+B\+O\+TH} -\/ The default is both scrollbars.
+\item \hyperlink{class_fl___browser___ae31c28a4c79819d686805fdd1e48698ea565affd547be9e7d8d66ab078c2f32cf}{Fl\+\_\+\+Browser\+\_\+\+::\+H\+O\+R\+I\+Z\+O\+N\+T\+A\+L\+\_\+\+A\+L\+W\+A\+YS} -\/ Horizontal scrollbar always on, vertical always off.
+\item \hyperlink{class_fl___browser___ae31c28a4c79819d686805fdd1e48698ea0b766422c7c7e00c660f9685d0b167e9}{Fl\+\_\+\+Browser\+\_\+\+::\+V\+E\+R\+T\+I\+C\+A\+L\+\_\+\+A\+L\+W\+A\+YS} -\/ Vertical scrollbar always on, horizontal always off.
+\item \hyperlink{class_fl___browser___ae31c28a4c79819d686805fdd1e48698ea4af943b52ba7852580445055aaec0efc}{Fl\+\_\+\+Browser\+\_\+\+::\+B\+O\+T\+H\+\_\+\+A\+L\+W\+A\+YS} -\/ Both always on. 
+\end{DoxyItemize}\mbox{\Hypertarget{class_fl___browser___ae312c07fc6eee01f42eae60c85594889}\label{class_fl___browser___ae312c07fc6eee01f42eae60c85594889}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!hposition@{hposition}}
+\index{hposition@{hposition}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{hposition()}{hposition()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Fl\+\_\+\+Browser\+\_\+\+::hposition (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets the horizontal scroll position of the list as a pixel position {\ttfamily pos}. The position returned is how many pixels of the list are scrolled off the left edge of the screen. Example\+: A position of \textquotesingle{}18\textquotesingle{} indicates the left 18 pixels of the list are scrolled off the left edge of the screen. \begin{DoxySeeAlso}{See also}
+\hyperlink{class_fl___browser___aeaf7951678d13027e9b5ca73925bedad}{position()}, \hyperlink{class_fl___browser___ae312c07fc6eee01f42eae60c85594889}{hposition()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_fl___browser___a6bf164ef525549ed6bc12e29045ef15c}\label{class_fl___browser___a6bf164ef525549ed6bc12e29045ef15c}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!hposition@{hposition}}
+\index{hposition@{hposition}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{hposition()}{hposition()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Fl\+\_\+\+Browser\+\_\+\+::hposition (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fl___browser___aff44d1df61b13c4ef50636dc7e140cb3}\label{class_fl___browser___aff44d1df61b13c4ef50636dc7e140cb3}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!incr\+\_\+height@{incr\+\_\+height}}
+\index{incr\+\_\+height@{incr\+\_\+height}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{incr\+\_\+height()}{incr\_height()}}
+{\footnotesize\ttfamily virtual int Fl\+\_\+\+Browser\+\_\+\+::incr\+\_\+height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \hyperlink{class_fl___browser_aa26afc5b34fea349c1baa25f086ba08a}{Fl\+\_\+\+Browser}, and \hyperlink{class_fl___file___browser_a6b259e0fcbe561e4c7252d784fbd7dc2}{Fl\+\_\+\+File\+\_\+\+Browser}.
+
+\mbox{\Hypertarget{class_fl___browser___a6ad26748441b4801ae10f55414e98f0a}\label{class_fl___browser___a6ad26748441b4801ae10f55414e98f0a}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!inserting@{inserting}}
+\index{inserting@{inserting}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{inserting()}{inserting()}}
+{\footnotesize\ttfamily void Fl\+\_\+\+Browser\+\_\+\+::inserting (\begin{DoxyParamCaption}\item[{void $\ast$}]{a,  }\item[{void $\ast$}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fl___browser___a6dd51e0b34953ddb1de33a750ab07c22}\label{class_fl___browser___a6dd51e0b34953ddb1de33a750ab07c22}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!item\+\_\+at@{item\+\_\+at}}
+\index{item\+\_\+at@{item\+\_\+at}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{item\+\_\+at()}{item\_at()}}
+{\footnotesize\ttfamily virtual void$\ast$ Fl\+\_\+\+Browser\+\_\+\+::item\+\_\+at (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+This method must be provided by the subclass to return the item for the specified {\ttfamily index}. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em index} & The {\ttfamily index} of the item to be returned \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The item at the specified {\ttfamily index}. 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{class_fl___browser_aa1d22a122c794581b30183f045db2959}{Fl\+\_\+\+Browser}.
+
+\mbox{\Hypertarget{class_fl___browser___ad145a5000b8ec78a45270a1d9294aa15}\label{class_fl___browser___ad145a5000b8ec78a45270a1d9294aa15}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!item\+\_\+draw@{item\+\_\+draw}}
+\index{item\+\_\+draw@{item\+\_\+draw}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{item\+\_\+draw()}{item\_draw()}}
+{\footnotesize\ttfamily virtual void Fl\+\_\+\+Browser\+\_\+\+::item\+\_\+draw (\begin{DoxyParamCaption}\item[{void $\ast$}]{item,  }\item[{int}]{X,  }\item[{int}]{Y,  }\item[{int}]{W,  }\item[{int}]{H }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+This method must be provided by the subclass to draw the {\ttfamily item} in the area indicated by {\ttfamily X}, {\ttfamily Y}, {\ttfamily W}, {\ttfamily H}. 
+
+Implemented in \hyperlink{class_fl___browser_a99dd1f2cf866b107a5742d1e35774620}{Fl\+\_\+\+Browser}, \hyperlink{class_fl___file___browser_adac9f1a1881c10b99250861ec1794b99}{Fl\+\_\+\+File\+\_\+\+Browser}, and \hyperlink{class_fl___check___browser_a4d3901a7e14353cdc4db876ca957f30a}{Fl\+\_\+\+Check\+\_\+\+Browser}.
+
+\mbox{\Hypertarget{class_fl___browser___a43dd6231f2684f132a5a33b5d7d0c8e7}\label{class_fl___browser___a43dd6231f2684f132a5a33b5d7d0c8e7}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!item\+\_\+first@{item\+\_\+first}}
+\index{item\+\_\+first@{item\+\_\+first}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{item\+\_\+first()}{item\_first()}}
+{\footnotesize\ttfamily virtual void$\ast$ Fl\+\_\+\+Browser\+\_\+\+::item\+\_\+first (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+This method must be provided by the subclass to return the first item in the list. \begin{DoxySeeAlso}{See also}
+\hyperlink{class_fl___browser___a43dd6231f2684f132a5a33b5d7d0c8e7}{item\+\_\+first()}, \hyperlink{class_fl___browser___aca6035552f5e9ecbeaa6caaf5fb8a3cb}{item\+\_\+next()}, \hyperlink{class_fl___browser___a2302bec54f4ea593146be5490a7fe93b}{item\+\_\+last()}, \hyperlink{class_fl___browser___afeb24ca0dbd8e4685fa18382512c94d3}{item\+\_\+prev()} 
+\end{DoxySeeAlso}
+
+
+Implemented in \hyperlink{class_fl___browser_a7822c6d04744af8f9ffa7a1e0c46955c}{Fl\+\_\+\+Browser}, and \hyperlink{class_fl___check___browser_a7b7acdf6eff04f97bae4f0cb505b8866}{Fl\+\_\+\+Check\+\_\+\+Browser}.
+
+\mbox{\Hypertarget{class_fl___browser___a5487d8f8d3e9cce3e87918f8f53e6ae6}\label{class_fl___browser___a5487d8f8d3e9cce3e87918f8f53e6ae6}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!item\+\_\+height@{item\+\_\+height}}
+\index{item\+\_\+height@{item\+\_\+height}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{item\+\_\+height()}{item\_height()}}
+{\footnotesize\ttfamily virtual int Fl\+\_\+\+Browser\+\_\+\+::item\+\_\+height (\begin{DoxyParamCaption}\item[{void $\ast$}]{item }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+This method must be provided by the subclass to return the height of {\ttfamily item} in pixels. Allow for two additional pixels for the list selection box. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em item} & The item whose height is returned. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The height of the specified {\ttfamily item} in pixels. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_fl___browser___a5487d8f8d3e9cce3e87918f8f53e6ae6}{item\+\_\+height()}, \hyperlink{class_fl___browser___a3b84b5418ac2554dfaaeb50cfba63569}{item\+\_\+width()}, \hyperlink{class_fl___browser___aa9f378038994076e866daac8ca050507}{item\+\_\+quick\+\_\+height()} 
+\end{DoxySeeAlso}
+
+
+Implemented in \hyperlink{class_fl___browser_a57103fdfb68bbe7ebb8bbe133ebe9009}{Fl\+\_\+\+Browser}, \hyperlink{class_fl___file___browser_adecceb89eda245a4d8fc03545f156107}{Fl\+\_\+\+File\+\_\+\+Browser}, and \hyperlink{class_fl___check___browser_ac026b8efc935db4f9481c1aa05e43fe5}{Fl\+\_\+\+Check\+\_\+\+Browser}.
+
+\mbox{\Hypertarget{class_fl___browser___a2302bec54f4ea593146be5490a7fe93b}\label{class_fl___browser___a2302bec54f4ea593146be5490a7fe93b}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!item\+\_\+last@{item\+\_\+last}}
+\index{item\+\_\+last@{item\+\_\+last}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{item\+\_\+last()}{item\_last()}}
+{\footnotesize\ttfamily virtual void$\ast$ Fl\+\_\+\+Browser\+\_\+\+::item\+\_\+last (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+This method must be provided by the subclass to return the last item in the list. \begin{DoxySeeAlso}{See also}
+\hyperlink{class_fl___browser___a43dd6231f2684f132a5a33b5d7d0c8e7}{item\+\_\+first()}, \hyperlink{class_fl___browser___aca6035552f5e9ecbeaa6caaf5fb8a3cb}{item\+\_\+next()}, \hyperlink{class_fl___browser___a2302bec54f4ea593146be5490a7fe93b}{item\+\_\+last()}, \hyperlink{class_fl___browser___afeb24ca0dbd8e4685fa18382512c94d3}{item\+\_\+prev()} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \hyperlink{class_fl___browser_a5de7360f3e39ad20c3bf552893a92626}{Fl\+\_\+\+Browser}.
+
+\mbox{\Hypertarget{class_fl___browser___aca6035552f5e9ecbeaa6caaf5fb8a3cb}\label{class_fl___browser___aca6035552f5e9ecbeaa6caaf5fb8a3cb}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!item\+\_\+next@{item\+\_\+next}}
+\index{item\+\_\+next@{item\+\_\+next}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{item\+\_\+next()}{item\_next()}}
+{\footnotesize\ttfamily virtual void$\ast$ Fl\+\_\+\+Browser\+\_\+\+::item\+\_\+next (\begin{DoxyParamCaption}\item[{void $\ast$}]{item }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+This method must be provided by the subclass to return the item in the list after {\ttfamily item}. \begin{DoxySeeAlso}{See also}
+\hyperlink{class_fl___browser___a43dd6231f2684f132a5a33b5d7d0c8e7}{item\+\_\+first()}, \hyperlink{class_fl___browser___aca6035552f5e9ecbeaa6caaf5fb8a3cb}{item\+\_\+next()}, \hyperlink{class_fl___browser___a2302bec54f4ea593146be5490a7fe93b}{item\+\_\+last()}, \hyperlink{class_fl___browser___afeb24ca0dbd8e4685fa18382512c94d3}{item\+\_\+prev()} 
+\end{DoxySeeAlso}
+
+
+Implemented in \hyperlink{class_fl___browser_aca0d9393c07552ce4ee75a9a10dbe93e}{Fl\+\_\+\+Browser}, and \hyperlink{class_fl___check___browser_a7d270e0fd9e92b80f84fdf55e652fbb4}{Fl\+\_\+\+Check\+\_\+\+Browser}.
+
+\mbox{\Hypertarget{class_fl___browser___afeb24ca0dbd8e4685fa18382512c94d3}\label{class_fl___browser___afeb24ca0dbd8e4685fa18382512c94d3}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!item\+\_\+prev@{item\+\_\+prev}}
+\index{item\+\_\+prev@{item\+\_\+prev}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{item\+\_\+prev()}{item\_prev()}}
+{\footnotesize\ttfamily virtual void$\ast$ Fl\+\_\+\+Browser\+\_\+\+::item\+\_\+prev (\begin{DoxyParamCaption}\item[{void $\ast$}]{item }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+This method must be provided by the subclass to return the item in the list before {\ttfamily item}. \begin{DoxySeeAlso}{See also}
+\hyperlink{class_fl___browser___a43dd6231f2684f132a5a33b5d7d0c8e7}{item\+\_\+first()}, \hyperlink{class_fl___browser___aca6035552f5e9ecbeaa6caaf5fb8a3cb}{item\+\_\+next()}, \hyperlink{class_fl___browser___a2302bec54f4ea593146be5490a7fe93b}{item\+\_\+last()}, \hyperlink{class_fl___browser___afeb24ca0dbd8e4685fa18382512c94d3}{item\+\_\+prev()} 
+\end{DoxySeeAlso}
+
+
+Implemented in \hyperlink{class_fl___browser_a0fbf4d057bc1b7afcdd872b78ee8526b}{Fl\+\_\+\+Browser}, and \hyperlink{class_fl___check___browser_ad181ae65962d13d6409723742080db82}{Fl\+\_\+\+Check\+\_\+\+Browser}.
+
+\mbox{\Hypertarget{class_fl___browser___aa9f378038994076e866daac8ca050507}\label{class_fl___browser___aa9f378038994076e866daac8ca050507}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!item\+\_\+quick\+\_\+height@{item\+\_\+quick\+\_\+height}}
+\index{item\+\_\+quick\+\_\+height@{item\+\_\+quick\+\_\+height}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{item\+\_\+quick\+\_\+height()}{item\_quick\_height()}}
+{\footnotesize\ttfamily virtual int Fl\+\_\+\+Browser\+\_\+\+::item\+\_\+quick\+\_\+height (\begin{DoxyParamCaption}\item[{void $\ast$}]{item }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_fl___browser___a81b34bf7d536207d3b049924ef491f3b}\label{class_fl___browser___a81b34bf7d536207d3b049924ef491f3b}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!item\+\_\+select@{item\+\_\+select}}
+\index{item\+\_\+select@{item\+\_\+select}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{item\+\_\+select()}{item\_select()}}
+{\footnotesize\ttfamily virtual void Fl\+\_\+\+Browser\+\_\+\+::item\+\_\+select (\begin{DoxyParamCaption}\item[{void $\ast$}]{item,  }\item[{int}]{val = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \hyperlink{class_fl___browser_afe09fb2afd71d7504d23742d11327be1}{Fl\+\_\+\+Browser}, and \hyperlink{class_fl___check___browser_a74727184624de40dac5fee3058ee44ce}{Fl\+\_\+\+Check\+\_\+\+Browser}.
+
+\mbox{\Hypertarget{class_fl___browser___a05500ecd3d8da6f429117751829395c7}\label{class_fl___browser___a05500ecd3d8da6f429117751829395c7}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!item\+\_\+selected@{item\+\_\+selected}}
+\index{item\+\_\+selected@{item\+\_\+selected}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{item\+\_\+selected()}{item\_selected()}}
+{\footnotesize\ttfamily virtual int Fl\+\_\+\+Browser\+\_\+\+::item\+\_\+selected (\begin{DoxyParamCaption}\item[{void $\ast$}]{item }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \hyperlink{class_fl___browser_af407fce6bdc3c2892aad6a38ef647f9e}{Fl\+\_\+\+Browser}, and \hyperlink{class_fl___check___browser_a972578f45f53734d31934b38ec82aec6}{Fl\+\_\+\+Check\+\_\+\+Browser}.
+
+\mbox{\Hypertarget{class_fl___browser___a52451c9082450cfb259e9e5b06344387}\label{class_fl___browser___a52451c9082450cfb259e9e5b06344387}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!item\+\_\+swap@{item\+\_\+swap}}
+\index{item\+\_\+swap@{item\+\_\+swap}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{item\+\_\+swap()}{item\_swap()}}
+{\footnotesize\ttfamily virtual void Fl\+\_\+\+Browser\+\_\+\+::item\+\_\+swap (\begin{DoxyParamCaption}\item[{void $\ast$}]{a,  }\item[{void $\ast$}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+This optional method should be provided by the subclass to efficiently swap browser items {\ttfamily a} and {\ttfamily b}, such as for sorting. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a,b} & The two items to be swapped. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_fl___browser_aca1943ac78a9dfeee8f76d300dbb398c}{Fl\+\_\+\+Browser}.
+
+\mbox{\Hypertarget{class_fl___browser___afe9e25c3ea0c73dcba379e7a46efaddb}\label{class_fl___browser___afe9e25c3ea0c73dcba379e7a46efaddb}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!item\+\_\+text@{item\+\_\+text}}
+\index{item\+\_\+text@{item\+\_\+text}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{item\+\_\+text()}{item\_text()}}
+{\footnotesize\ttfamily virtual const char$\ast$ Fl\+\_\+\+Browser\+\_\+\+::item\+\_\+text (\begin{DoxyParamCaption}\item[{void $\ast$}]{item }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+This optional method returns a string (label) that may be used for sorting. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em item} & The item whose label text is returned. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The item\textquotesingle{}s text label. (Can be N\+U\+LL if blank) 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{class_fl___browser_add545302a6a8b2a611f6cc4e60475bca}{Fl\+\_\+\+Browser}.
+
+\mbox{\Hypertarget{class_fl___browser___a3b84b5418ac2554dfaaeb50cfba63569}\label{class_fl___browser___a3b84b5418ac2554dfaaeb50cfba63569}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!item\+\_\+width@{item\+\_\+width}}
+\index{item\+\_\+width@{item\+\_\+width}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{item\+\_\+width()}{item\_width()}}
+{\footnotesize\ttfamily virtual int Fl\+\_\+\+Browser\+\_\+\+::item\+\_\+width (\begin{DoxyParamCaption}\item[{void $\ast$}]{item }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+This method must be provided by the subclass to return the width of the {\ttfamily item} in pixels. Allow for two additional pixels for the list selection box. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em item} & The item whose width is returned. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The width of the item in pixels. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_fl___browser_acc938270d35aeb63341f2953a740d7f8}{Fl\+\_\+\+Browser}, \hyperlink{class_fl___file___browser_a93a0cff704c868f0d76031ec56e33c3f}{Fl\+\_\+\+File\+\_\+\+Browser}, and \hyperlink{class_fl___check___browser_ac503f723436bb1f549fa3e6bf2754bb4}{Fl\+\_\+\+Check\+\_\+\+Browser}.
+
+\mbox{\Hypertarget{class_fl___browser___ab7be86a21c621edb7e5cbea6c30adb44}\label{class_fl___browser___ab7be86a21c621edb7e5cbea6c30adb44}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!leftedge@{leftedge}}
+\index{leftedge@{leftedge}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{leftedge()}{leftedge()}}
+{\footnotesize\ttfamily int Fl\+\_\+\+Browser\+\_\+\+::leftedge (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fl___browser___ac1aa2a6bed2109458ab8b701585dca9d}\label{class_fl___browser___ac1aa2a6bed2109458ab8b701585dca9d}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!new\+\_\+list@{new\+\_\+list}}
+\index{new\+\_\+list@{new\+\_\+list}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{new\+\_\+list()}{new\_list()}}
+{\footnotesize\ttfamily void Fl\+\_\+\+Browser\+\_\+\+::new\+\_\+list (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fl___browser___aeaf7951678d13027e9b5ca73925bedad}\label{class_fl___browser___aeaf7951678d13027e9b5ca73925bedad}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!position@{position}}
+\index{position@{position}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{position()}{position()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Fl\+\_\+\+Browser\+\_\+\+::position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets the vertical scroll position of the list as a pixel position {\ttfamily pos}. The position returned is how many pixels of the list are scrolled off the top edge of the screen. Example\+: A position of \textquotesingle{}3\textquotesingle{} indicates the top 3 pixels of the list are scrolled off the top edge of the screen. \begin{DoxySeeAlso}{See also}
+\hyperlink{class_fl___browser___aeaf7951678d13027e9b5ca73925bedad}{position()}, \hyperlink{class_fl___browser___ae312c07fc6eee01f42eae60c85594889}{hposition()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_fl___browser___ac88a0e4dc3feb727efc225a3f4f920be}\label{class_fl___browser___ac88a0e4dc3feb727efc225a3f4f920be}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!position@{position}}
+\index{position@{position}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{position()}{position()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Fl\+\_\+\+Browser\+\_\+\+::position (\begin{DoxyParamCaption}\item[{int}]{pos }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fl___browser___ac06f58d6aa13a432825231c19aba6544}\label{class_fl___browser___ac06f58d6aa13a432825231c19aba6544}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!redraw\+\_\+line@{redraw\+\_\+line}}
+\index{redraw\+\_\+line@{redraw\+\_\+line}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{redraw\+\_\+line()}{redraw\_line()}}
+{\footnotesize\ttfamily void Fl\+\_\+\+Browser\+\_\+\+::redraw\+\_\+line (\begin{DoxyParamCaption}\item[{void $\ast$}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fl___browser___a78e2b46f393546abbe22ec28e048f8de}\label{class_fl___browser___a78e2b46f393546abbe22ec28e048f8de}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!redraw\+\_\+lines@{redraw\+\_\+lines}}
+\index{redraw\+\_\+lines@{redraw\+\_\+lines}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{redraw\+\_\+lines()}{redraw\_lines()}}
+{\footnotesize\ttfamily void Fl\+\_\+\+Browser\+\_\+\+::redraw\+\_\+lines (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+This method will cause the entire list to be redrawn. \begin{DoxySeeAlso}{See also}
+\hyperlink{class_fl___browser___a78e2b46f393546abbe22ec28e048f8de}{redraw\+\_\+lines()}, \hyperlink{class_fl___browser___ac06f58d6aa13a432825231c19aba6544}{redraw\+\_\+line()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_fl___browser___ac741e98e5af5630f9c693066ef2cc578}\label{class_fl___browser___ac741e98e5af5630f9c693066ef2cc578}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!replacing@{replacing}}
+\index{replacing@{replacing}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{replacing()}{replacing()}}
+{\footnotesize\ttfamily void Fl\+\_\+\+Browser\+\_\+\+::replacing (\begin{DoxyParamCaption}\item[{void $\ast$}]{a,  }\item[{void $\ast$}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fl___browser___a3e9c0647239e6952aa0636ad7db72ada}\label{class_fl___browser___a3e9c0647239e6952aa0636ad7db72ada}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!resize@{resize}}
+\index{resize@{resize}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily void Fl\+\_\+\+Browser\+\_\+\+::resize (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Changes the size or position of the widget.
+
+This is a virtual function so that the widget may implement its own handling of resizing. The default version does {\itshape not} call the \hyperlink{class_fl___widget_aa63ce68cbf4620cf8750b868368ea02b}{redraw()} method, but instead relies on the parent widget to do so because the parent may know a faster way to update the display, such as scrolling from the old position.
+
+Some window managers under X11 call \hyperlink{class_fl___browser___a3e9c0647239e6952aa0636ad7db72ada}{resize()} a lot more often than needed. Please verify that the position or size of a widget did actually change before doing any extensive calculations.
+
+position(\+X, Y) is a shortcut for resize(X, Y, \hyperlink{class_fl___widget_ad59ece778aaf15acc4dd01a8bf5f8012}{w()}, \hyperlink{class_fl___widget_aeeabd61e2d10c76cd6600dbbfe951f71}{h()}), and size(\+W, H) is a shortcut for resize(\hyperlink{class_fl___widget_abea0b9ad493d58bf7fda8d3c81d477b7}{x()}, \hyperlink{class_fl___widget_aec1aded9efdf5f23dfac8cc725cefc4a}{y()}, W, H).
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x,y} & new position relative to the parent window \\
+\hline
+\mbox{\tt in}  & {\em w,h} & new size \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_fl___widget_ac45bdb80c3e66c571d0420ebefd4aaa5}{position(int,int)}, \hyperlink{class_fl___widget_ae386844a68c27ea0b64313619551e786}{size(int,int)} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{class_fl___widget_a59fd9dbe65ba2602412ebc4c07e9c362}{Fl\+\_\+\+Widget}.
+
+\mbox{\Hypertarget{class_fl___browser___af6c48bc6c8bcfc43f317aa053b72ea2d}\label{class_fl___browser___af6c48bc6c8bcfc43f317aa053b72ea2d}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!scrollbar\+\_\+left@{scrollbar\+\_\+left}}
+\index{scrollbar\+\_\+left@{scrollbar\+\_\+left}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{scrollbar\+\_\+left()}{scrollbar\_left()}}
+{\footnotesize\ttfamily void Fl\+\_\+\+Browser\+\_\+\+::scrollbar\+\_\+left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Moves the vertical scrollbar to the lefthand side of the list. For back compatibility. \mbox{\Hypertarget{class_fl___browser___a92ef1a69de96f610e2776591ee3bea06}\label{class_fl___browser___a92ef1a69de96f610e2776591ee3bea06}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!scrollbar\+\_\+right@{scrollbar\+\_\+right}}
+\index{scrollbar\+\_\+right@{scrollbar\+\_\+right}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{scrollbar\+\_\+right()}{scrollbar\_right()}}
+{\footnotesize\ttfamily void Fl\+\_\+\+Browser\+\_\+\+::scrollbar\+\_\+right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Moves the vertical scrollbar to the righthand side of the list. For back compatibility. \mbox{\Hypertarget{class_fl___browser___a89f6b1be07fc063bf8a8d83cb39d5fa0}\label{class_fl___browser___a89f6b1be07fc063bf8a8d83cb39d5fa0}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!scrollbar\+\_\+size@{scrollbar\+\_\+size}}
+\index{scrollbar\+\_\+size@{scrollbar\+\_\+size}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{scrollbar\+\_\+size()}{scrollbar\_size()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Fl\+\_\+\+Browser\+\_\+\+::scrollbar\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets the current size of the scrollbars\textquotesingle{} troughs, in pixels.
+
+If this value is zero (default), this widget will use the \hyperlink{class_fl_ae861b8bd4f2d4dcbec7be697e8b4b80e}{Fl\+::scrollbar\+\_\+size()} value as the scrollbar\textquotesingle{}s width.
+
+\begin{DoxyReturn}{Returns}
+Scrollbar size in pixels, or 0 if the global Fl\+::scrollsize() is being used. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_fl_aca2f98b26f2552b82dd245b8094a41aa}{Fl\+::scrollbar\+\_\+size(int)} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_fl___browser___a6743b9c1513c68e82543530154cadf57}\label{class_fl___browser___a6743b9c1513c68e82543530154cadf57}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!scrollbar\+\_\+size@{scrollbar\+\_\+size}}
+\index{scrollbar\+\_\+size@{scrollbar\+\_\+size}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{scrollbar\+\_\+size()}{scrollbar\_size()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Fl\+\_\+\+Browser\+\_\+\+::scrollbar\+\_\+size (\begin{DoxyParamCaption}\item[{int}]{new\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets the pixel size of the scrollbars\textquotesingle{} troughs to {\ttfamily new\+Size}, in pixels.
+
+Normally you should not need this method, and should use \hyperlink{class_fl_aca2f98b26f2552b82dd245b8094a41aa}{Fl\+::scrollbar\+\_\+size(int)} instead to manage the size of A\+LL your widgets\textquotesingle{} scrollbars. This ensures your application has a consistent UI, is the default behavior, and is normally what you want.
+
+Only use T\+H\+IS method if you really need to override the global scrollbar size. The need for this should be rare.
+
+Setting {\ttfamily new\+Size} to the special value of 0 causes the widget to track the global \hyperlink{class_fl_ae861b8bd4f2d4dcbec7be697e8b4b80e}{Fl\+::scrollbar\+\_\+size()}, which is the default.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em new\+Size} & Sets the scrollbar size in pixels.~\newline
+ If 0 (default), scrollbar size tracks the global \hyperlink{class_fl_ae861b8bd4f2d4dcbec7be697e8b4b80e}{Fl\+::scrollbar\+\_\+size()} \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_fl_ae861b8bd4f2d4dcbec7be697e8b4b80e}{Fl\+::scrollbar\+\_\+size()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_fl___browser___a397cd7d2550ca3d87032fa1ffd3e4bbc}\label{class_fl___browser___a397cd7d2550ca3d87032fa1ffd3e4bbc}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!scrollbar\+\_\+width@{scrollbar\+\_\+width}}
+\index{scrollbar\+\_\+width@{scrollbar\+\_\+width}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{scrollbar\+\_\+width()}{scrollbar\_width()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Fl\+\_\+\+Browser\+\_\+\+::scrollbar\+\_\+width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+This method has been deprecated, existing for backwards compatibility only. Use \hyperlink{class_fl___browser___a89f6b1be07fc063bf8a8d83cb39d5fa0}{scrollbar\+\_\+size()} instead. This method always returns the global value \hyperlink{class_fl_ae861b8bd4f2d4dcbec7be697e8b4b80e}{Fl\+::scrollbar\+\_\+size()}. \begin{DoxyReturn}{Returns}
+Always returns the global value \hyperlink{class_fl_ae861b8bd4f2d4dcbec7be697e8b4b80e}{Fl\+::scrollbar\+\_\+size()}. 
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000006}{Todo}]This method should eventually be removed in 1.\+4+ \end{DoxyRefDesc}
+\mbox{\Hypertarget{class_fl___browser___a4d59d5c7d78393a7a5d5bfaa01694580}\label{class_fl___browser___a4d59d5c7d78393a7a5d5bfaa01694580}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!scrollbar\+\_\+width@{scrollbar\+\_\+width}}
+\index{scrollbar\+\_\+width@{scrollbar\+\_\+width}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{scrollbar\+\_\+width()}{scrollbar\_width()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Fl\+\_\+\+Browser\+\_\+\+::scrollbar\+\_\+width (\begin{DoxyParamCaption}\item[{int}]{width }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This method has been deprecated, existing for backwards compatibility only. Use \hyperlink{class_fl___browser___a6743b9c1513c68e82543530154cadf57}{scrollbar\+\_\+size(int)} instead. This method sets the global \hyperlink{class_fl_ae861b8bd4f2d4dcbec7be697e8b4b80e}{Fl\+::scrollbar\+\_\+size()}, and forces this instance of the widget to use it. \begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000007}{Todo}]This method should eventually be removed in 1.\+4+ \end{DoxyRefDesc}
+\mbox{\Hypertarget{class_fl___browser___af3f96e34d2283d2e854b53335e6ee85a}\label{class_fl___browser___af3f96e34d2283d2e854b53335e6ee85a}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!select@{select}}
+\index{select@{select}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{select()}{select()}}
+{\footnotesize\ttfamily int Fl\+\_\+\+Browser\+\_\+\+::select (\begin{DoxyParamCaption}\item[{void $\ast$}]{item,  }\item[{int}]{val = {\ttfamily 1},  }\item[{int}]{docallbacks = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fl___browser___a7012b37539c19c46cef95dc7cb556199}\label{class_fl___browser___a7012b37539c19c46cef95dc7cb556199}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!select\+\_\+only@{select\+\_\+only}}
+\index{select\+\_\+only@{select\+\_\+only}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{select\+\_\+only()}{select\_only()}}
+{\footnotesize\ttfamily int Fl\+\_\+\+Browser\+\_\+\+::select\+\_\+only (\begin{DoxyParamCaption}\item[{void $\ast$}]{item,  }\item[{int}]{docallbacks = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fl___browser___a0def0e61d7de24c2ebaa3dfa982232c1}\label{class_fl___browser___a0def0e61d7de24c2ebaa3dfa982232c1}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!selection@{selection}}
+\index{selection@{selection}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{selection()}{selection()}}
+{\footnotesize\ttfamily void$\ast$ Fl\+\_\+\+Browser\+\_\+\+::selection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Returns the item currently selected, or N\+U\+LL if there is no selection.
+
+For multiple selection browsers this call returns the currently focused item, even if it is not selected. To find all selected items, call \hyperlink{class_fl___browser_aca66dd0e41251d25abefbcff1602194d}{Fl\+\_\+\+Multi\+\_\+\+Browser\+::selected()} for every item in question. \mbox{\Hypertarget{class_fl___browser___a852d20413fc81fd0be7c63408639974e}\label{class_fl___browser___a852d20413fc81fd0be7c63408639974e}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!sort@{sort}}
+\index{sort@{sort}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{sort()}{sort()}}
+{\footnotesize\ttfamily void Fl\+\_\+\+Browser\+\_\+\+::sort (\begin{DoxyParamCaption}\item[{int}]{flags = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fl___browser___ae1ae1e4627efd74f6dfc7c9116648a49}\label{class_fl___browser___ae1ae1e4627efd74f6dfc7c9116648a49}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!swapping@{swapping}}
+\index{swapping@{swapping}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{swapping()}{swapping()}}
+{\footnotesize\ttfamily void Fl\+\_\+\+Browser\+\_\+\+::swapping (\begin{DoxyParamCaption}\item[{void $\ast$}]{a,  }\item[{void $\ast$}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fl___browser___a1a76a8e81183b02b45a669d8cfd3adeb}\label{class_fl___browser___a1a76a8e81183b02b45a669d8cfd3adeb}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!textcolor@{textcolor}}
+\index{textcolor@{textcolor}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{textcolor()}{textcolor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{_enumerations_8_h_a8b762953646f8abee866061f1af78a6a}{Fl\+\_\+\+Color} Fl\+\_\+\+Browser\+\_\+\+::textcolor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets the default text color for the lines in the browser. \mbox{\Hypertarget{class_fl___browser___ad33ff1165743695e7bb2e1d89eb75622}\label{class_fl___browser___ad33ff1165743695e7bb2e1d89eb75622}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!textcolor@{textcolor}}
+\index{textcolor@{textcolor}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{textcolor()}{textcolor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Fl\+\_\+\+Browser\+\_\+\+::textcolor (\begin{DoxyParamCaption}\item[{\hyperlink{_enumerations_8_h_a8b762953646f8abee866061f1af78a6a}{Fl\+\_\+\+Color}}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets the default text color for the lines in the browser to color {\ttfamily col}. \mbox{\Hypertarget{class_fl___browser___a2963aa5fdbdba4f300a6ae328e31dd13}\label{class_fl___browser___a2963aa5fdbdba4f300a6ae328e31dd13}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!textfont@{textfont}}
+\index{textfont@{textfont}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{textfont()}{textfont()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{_enumerations_8_h_a2ac46d9f082834b969fffe490a03a709}{Fl\+\_\+\+Font} Fl\+\_\+\+Browser\+\_\+\+::textfont (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets the default text font for the lines in the browser. \begin{DoxySeeAlso}{See also}
+\hyperlink{class_fl___browser___a2963aa5fdbdba4f300a6ae328e31dd13}{textfont()}, \hyperlink{class_fl___browser___a43889aa554fd2285991f73cc11918bda}{textsize()}, \hyperlink{class_fl___browser___a1a76a8e81183b02b45a669d8cfd3adeb}{textcolor()} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_fl___browser___aea733233102940a15e5f31b9e3ba3ec9}\label{class_fl___browser___aea733233102940a15e5f31b9e3ba3ec9}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!textfont@{textfont}}
+\index{textfont@{textfont}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{textfont()}{textfont()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Fl\+\_\+\+Browser\+\_\+\+::textfont (\begin{DoxyParamCaption}\item[{\hyperlink{_enumerations_8_h_a2ac46d9f082834b969fffe490a03a709}{Fl\+\_\+\+Font}}]{font }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets the default text font for the lines in the browser to {\ttfamily font}. \mbox{\Hypertarget{class_fl___browser___a43889aa554fd2285991f73cc11918bda}\label{class_fl___browser___a43889aa554fd2285991f73cc11918bda}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!textsize@{textsize}}
+\index{textsize@{textsize}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{textsize()}{textsize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{_enumerations_8_h_ad58927f5c691454480f7cd28362502f1}{Fl\+\_\+\+Fontsize} Fl\+\_\+\+Browser\+\_\+\+::textsize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets the default text size (in pixels) for the lines in the browser. \mbox{\Hypertarget{class_fl___browser___ad6f0e70675e073dd97e02b5954675861}\label{class_fl___browser___ad6f0e70675e073dd97e02b5954675861}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!textsize@{textsize}}
+\index{textsize@{textsize}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{textsize()}{textsize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Fl\+\_\+\+Browser\+\_\+\+::textsize (\begin{DoxyParamCaption}\item[{\hyperlink{_enumerations_8_h_ad58927f5c691454480f7cd28362502f1}{Fl\+\_\+\+Fontsize}}]{new\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets the default text size (in pixels) for the lines in the browser to {\ttfamily size}. \mbox{\Hypertarget{class_fl___browser___acf8856ddf092e7b00d9f6b381cc09b20}\label{class_fl___browser___acf8856ddf092e7b00d9f6b381cc09b20}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!top@{top}}
+\index{top@{top}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{top()}{top()}}
+{\footnotesize\ttfamily void$\ast$ Fl\+\_\+\+Browser\+\_\+\+::top (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Returns the item that appears at the top of the list. \mbox{\Hypertarget{class_fl___browser___a122a2aa4ad005096b627f80522b4af30}\label{class_fl___browser___a122a2aa4ad005096b627f80522b4af30}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!update\+\_\+top@{update\+\_\+top}}
+\index{update\+\_\+top@{update\+\_\+top}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{update\+\_\+top()}{update\_top()}}
+{\footnotesize\ttfamily void Fl\+\_\+\+Browser\+\_\+\+::update\+\_\+top (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_fl___browser___aeaeeb512d94e2f1d1e0cabdf371fa484}\label{class_fl___browser___aeaeeb512d94e2f1d1e0cabdf371fa484}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!has\+\_\+scrollbar\+\_\+@{has\+\_\+scrollbar\+\_\+}}
+\index{has\+\_\+scrollbar\+\_\+@{has\+\_\+scrollbar\+\_\+}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{has\+\_\+scrollbar\+\_\+}{has\_scrollbar\_}}
+{\footnotesize\ttfamily \hyperlink{fl__types_8h_a65f85814a8290f9797005d3b28e7e5fc}{uchar} Fl\+\_\+\+Browser\+\_\+\+::has\+\_\+scrollbar\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fl___browser___ac85a7d5443dc80ec303235d0e73f6e1d}\label{class_fl___browser___ac85a7d5443dc80ec303235d0e73f6e1d}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!hposition\+\_\+@{hposition\+\_\+}}
+\index{hposition\+\_\+@{hposition\+\_\+}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{hposition\+\_\+}{hposition\_}}
+{\footnotesize\ttfamily int Fl\+\_\+\+Browser\+\_\+\+::hposition\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fl___browser___a7cd58698b839837fb530814fad43c2cc}\label{class_fl___browser___a7cd58698b839837fb530814fad43c2cc}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!hscrollbar@{hscrollbar}}
+\index{hscrollbar@{hscrollbar}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{hscrollbar}{hscrollbar}}
+{\footnotesize\ttfamily \hyperlink{class_fl___scrollbar}{Fl\+\_\+\+Scrollbar} Fl\+\_\+\+Browser\+\_\+\+::hscrollbar}
+
+Horizontal scrollbar. Public, so that it can be accessed directly. \mbox{\Hypertarget{class_fl___browser___a85d8605cbd2f69cd1e6bf425ee2397ab}\label{class_fl___browser___a85d8605cbd2f69cd1e6bf425ee2397ab}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!max\+\_\+width@{max\+\_\+width}}
+\index{max\+\_\+width@{max\+\_\+width}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{max\+\_\+width}{max\_width}}
+{\footnotesize\ttfamily int Fl\+\_\+\+Browser\+\_\+\+::max\+\_\+width\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fl___browser___af67016b9a714652a5f97c14455bcb844}\label{class_fl___browser___af67016b9a714652a5f97c14455bcb844}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!max\+\_\+width\+\_\+item@{max\+\_\+width\+\_\+item}}
+\index{max\+\_\+width\+\_\+item@{max\+\_\+width\+\_\+item}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{max\+\_\+width\+\_\+item}{max\_width\_item}}
+{\footnotesize\ttfamily void$\ast$ Fl\+\_\+\+Browser\+\_\+\+::max\+\_\+width\+\_\+item\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fl___browser___a0eeaec2d2c9203a0bba760fd7964ea0a}\label{class_fl___browser___a0eeaec2d2c9203a0bba760fd7964ea0a}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!offset\+\_\+@{offset\+\_\+}}
+\index{offset\+\_\+@{offset\+\_\+}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{offset\+\_\+}{offset\_}}
+{\footnotesize\ttfamily int Fl\+\_\+\+Browser\+\_\+\+::offset\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fl___browser___a42ebd2ebdf27d127c5761d83c6117896}\label{class_fl___browser___a42ebd2ebdf27d127c5761d83c6117896}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!position\+\_\+@{position\+\_\+}}
+\index{position\+\_\+@{position\+\_\+}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{position\+\_\+}{position\_}}
+{\footnotesize\ttfamily int Fl\+\_\+\+Browser\+\_\+\+::position\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fl___browser___a4fbe438fdc6307c625564ac6b129c0b6}\label{class_fl___browser___a4fbe438fdc6307c625564ac6b129c0b6}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!real\+\_\+hposition\+\_\+@{real\+\_\+hposition\+\_\+}}
+\index{real\+\_\+hposition\+\_\+@{real\+\_\+hposition\+\_\+}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{real\+\_\+hposition\+\_\+}{real\_hposition\_}}
+{\footnotesize\ttfamily int Fl\+\_\+\+Browser\+\_\+\+::real\+\_\+hposition\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fl___browser___a94838051983c0bc05c062fc165293ae1}\label{class_fl___browser___a94838051983c0bc05c062fc165293ae1}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!real\+\_\+position\+\_\+@{real\+\_\+position\+\_\+}}
+\index{real\+\_\+position\+\_\+@{real\+\_\+position\+\_\+}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{real\+\_\+position\+\_\+}{real\_position\_}}
+{\footnotesize\ttfamily int Fl\+\_\+\+Browser\+\_\+\+::real\+\_\+position\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fl___browser___a6c53c2b9d47b93b3c4199d27deaf060f}\label{class_fl___browser___a6c53c2b9d47b93b3c4199d27deaf060f}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!redraw1@{redraw1}}
+\index{redraw1@{redraw1}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{redraw1}{redraw1}}
+{\footnotesize\ttfamily void$\ast$ Fl\+\_\+\+Browser\+\_\+\+::redraw1\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fl___browser___ab6b6618e0df3dc38440f8c1e5ab6239d}\label{class_fl___browser___ab6b6618e0df3dc38440f8c1e5ab6239d}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!redraw2@{redraw2}}
+\index{redraw2@{redraw2}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{redraw2}{redraw2}}
+{\footnotesize\ttfamily void $\ast$ Fl\+\_\+\+Browser\+\_\+\+::redraw2\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fl___browser___ac76f28c936430d7884ac98d44ff4e3ad}\label{class_fl___browser___ac76f28c936430d7884ac98d44ff4e3ad}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!scrollbar@{scrollbar}}
+\index{scrollbar@{scrollbar}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{scrollbar}{scrollbar}}
+{\footnotesize\ttfamily \hyperlink{class_fl___scrollbar}{Fl\+\_\+\+Scrollbar} Fl\+\_\+\+Browser\+\_\+\+::scrollbar}
+
+Vertical scrollbar. Public, so that it can be accessed directly. \mbox{\Hypertarget{class_fl___browser___a1e8bcfe4c5b762d097ca97771f7cac72}\label{class_fl___browser___a1e8bcfe4c5b762d097ca97771f7cac72}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!scrollbar\+\_\+size\+\_\+@{scrollbar\+\_\+size\+\_\+}}
+\index{scrollbar\+\_\+size\+\_\+@{scrollbar\+\_\+size\+\_\+}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{scrollbar\+\_\+size\+\_\+}{scrollbar\_size\_}}
+{\footnotesize\ttfamily int Fl\+\_\+\+Browser\+\_\+\+::scrollbar\+\_\+size\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fl___browser___a2079bb4f157eeebaac3d9caa3b32c185}\label{class_fl___browser___a2079bb4f157eeebaac3d9caa3b32c185}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!selection\+\_\+@{selection\+\_\+}}
+\index{selection\+\_\+@{selection\+\_\+}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{selection\+\_\+}{selection\_}}
+{\footnotesize\ttfamily void$\ast$ Fl\+\_\+\+Browser\+\_\+\+::selection\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fl___browser___a16df24a8581bfe5fc2875d54fb59fd50}\label{class_fl___browser___a16df24a8581bfe5fc2875d54fb59fd50}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!textcolor\+\_\+@{textcolor\+\_\+}}
+\index{textcolor\+\_\+@{textcolor\+\_\+}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{textcolor\+\_\+}{textcolor\_}}
+{\footnotesize\ttfamily \hyperlink{_enumerations_8_h_a8b762953646f8abee866061f1af78a6a}{Fl\+\_\+\+Color} Fl\+\_\+\+Browser\+\_\+\+::textcolor\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fl___browser___a51e202ee8f00054b29d21f3c446fea58}\label{class_fl___browser___a51e202ee8f00054b29d21f3c446fea58}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!textfont\+\_\+@{textfont\+\_\+}}
+\index{textfont\+\_\+@{textfont\+\_\+}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{textfont\+\_\+}{textfont\_}}
+{\footnotesize\ttfamily \hyperlink{_enumerations_8_h_a2ac46d9f082834b969fffe490a03a709}{Fl\+\_\+\+Font} Fl\+\_\+\+Browser\+\_\+\+::textfont\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fl___browser___a2c139b34575677afa28dfe093c825782}\label{class_fl___browser___a2c139b34575677afa28dfe093c825782}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!textsize\+\_\+@{textsize\+\_\+}}
+\index{textsize\+\_\+@{textsize\+\_\+}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{textsize\+\_\+}{textsize\_}}
+{\footnotesize\ttfamily \hyperlink{_enumerations_8_h_ad58927f5c691454480f7cd28362502f1}{Fl\+\_\+\+Fontsize} Fl\+\_\+\+Browser\+\_\+\+::textsize\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_fl___browser___aacdf6ccc00b1046b82ebbb29549e8c9d}\label{class_fl___browser___aacdf6ccc00b1046b82ebbb29549e8c9d}} 
+\index{Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}!top\+\_\+@{top\+\_\+}}
+\index{top\+\_\+@{top\+\_\+}!Fl\+\_\+\+Browser\+\_\+@{Fl\+\_\+\+Browser\+\_\+}}
+\subsubsection{\texorpdfstring{top\+\_\+}{top\_}}
+{\footnotesize\ttfamily void$\ast$ Fl\+\_\+\+Browser\+\_\+\+::top\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+F\+L\+T\+K/\+F\+L/\hyperlink{_fl___browser___8_h}{Fl\+\_\+\+Browser\+\_\+.\+H}\end{DoxyCompactItemize}

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['datacontrolwindow',['dataControlWindow',['../class_mike_1_1_control.html#aaf1b458116247ebada43f8bb8faf3edf',1,'Mike::Control']]]
+  ['datacontrolwindow',['dataControlWindow',['../class_mike_1_1_data.html#a615c7c93b1c7addbe8e888ddbed837a4',1,'Mike::Data']]]
 ];

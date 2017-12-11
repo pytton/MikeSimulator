@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_control_u_i">
+<title>ControlUI class Reference</title>
+<para>
+    <programlisting>#include <link linkend="_control_u_i_8h">&lt;ControlUI.h&gt;</link></programlisting>
+</para>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_control_u_i_1ad2a2837a3b055d166b0dfe209545046e">ControlUI</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_control_u_i_1a65f2e6bca109cef29ba350ba2a1580f9">~ControlUI</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void <link linkend="class_control_u_i_1ab72cd93a7844ff76187ddf77432ddafb">fltkBtnCallback</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_control_u_i_1a951dd8a83c3b93b9231169c6eb33fa82">callbackHandler</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="class_control_u_i_1ad2a2837a3b055d166b0dfe209545046e">
+                <title>ControlUI::ControlUI ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_control_u_i_1a65f2e6bca109cef29ba350ba2a1580f9">
+                <title>ControlUI::~ControlUI ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_control_u_i_1ab72cd93a7844ff76187ddf77432ddafb">
+                <title>static void ControlUI::fltkBtnCallback ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_control_u_i_1a951dd8a83c3b93b9231169c6eb33fa82">
+                <title>void ControlUI::callbackHandler ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

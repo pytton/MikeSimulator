@@ -1,0 +1,83 @@
+\hypertarget{_fl___widget_8_h}{}\section{F\+L\+T\+K/\+F\+L/\+Fl\+\_\+\+Widget.H File Reference}
+\label{_fl___widget_8_h}\index{F\+L\+T\+K/\+F\+L/\+Fl\+\_\+\+Widget.\+H@{F\+L\+T\+K/\+F\+L/\+Fl\+\_\+\+Widget.\+H}}
+{\ttfamily \#include \char`\"{}Enumerations.\+H\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_fl___label}{Fl\+\_\+\+Label}
+\item 
+class \hyperlink{class_fl___widget}{Fl\+\_\+\+Widget}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_fl___widget_8_h_ad300ac1cbbe7744c87fc376ce0eb9cc7}{F\+L\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+T\+Y\+PE}~100
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef long \hyperlink{_fl___widget_8_h_a6c7d27e81f16857f18da5e4ce097de75}{fl\+\_\+intptr\+\_\+t}
+\item 
+typedef unsigned long \hyperlink{_fl___widget_8_h_a0c2a2b4e6f4413cf8fbdda84b75bd420}{fl\+\_\+uintptr\+\_\+t}
+\item 
+typedef void() \hyperlink{_fl___widget_8_h_a640bea0193560eec20903c45c93c7472}{Fl\+\_\+\+Callback}(\hyperlink{class_fl___widget}{Fl\+\_\+\+Widget} $\ast$, void $\ast$)
+\item 
+typedef \hyperlink{_fl___widget_8_h_a640bea0193560eec20903c45c93c7472}{Fl\+\_\+\+Callback} $\ast$ \hyperlink{_fl___widget_8_h_ad515601d7e8cbd1c65ece6364e8c23d0}{Fl\+\_\+\+Callback\+\_\+p}
+\item 
+typedef void() \hyperlink{_fl___widget_8_h_a6ce47be89b1f24ea198fd2c93951969e}{Fl\+\_\+\+Callback0}(\hyperlink{class_fl___widget}{Fl\+\_\+\+Widget} $\ast$)
+\item 
+typedef void() \hyperlink{_fl___widget_8_h_a25bc4848432a4fbd426456f2952712eb}{Fl\+\_\+\+Callback1}(\hyperlink{class_fl___widget}{Fl\+\_\+\+Widget} $\ast$, long)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_fl___widget}{Fl\+\_\+\+Widget}, \hyperlink{struct_fl___label}{Fl\+\_\+\+Label} classes . 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_fl___widget_8_h_ad300ac1cbbe7744c87fc376ce0eb9cc7}\label{_fl___widget_8_h_ad300ac1cbbe7744c87fc376ce0eb9cc7}} 
+\index{Fl\+\_\+\+Widget.\+H@{Fl\+\_\+\+Widget.\+H}!F\+L\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+T\+Y\+PE@{F\+L\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+T\+Y\+PE}}
+\index{F\+L\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+T\+Y\+PE@{F\+L\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+T\+Y\+PE}!Fl\+\_\+\+Widget.\+H@{Fl\+\_\+\+Widget.\+H}}
+\subsubsection{\texorpdfstring{F\+L\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+T\+Y\+PE}{FL\_RESERVED\_TYPE}}
+{\footnotesize\ttfamily \#define F\+L\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+T\+Y\+PE~100}
+
+Reserved type numbers (necessary for my cheapo R\+T\+TI) start here. Grep the header files for \char`\"{}\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+T\+Y\+P\+E\char`\"{} to find the next available number. 
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{_fl___widget_8_h_a640bea0193560eec20903c45c93c7472}\label{_fl___widget_8_h_a640bea0193560eec20903c45c93c7472}} 
+\index{Fl\+\_\+\+Widget.\+H@{Fl\+\_\+\+Widget.\+H}!Fl\+\_\+\+Callback@{Fl\+\_\+\+Callback}}
+\index{Fl\+\_\+\+Callback@{Fl\+\_\+\+Callback}!Fl\+\_\+\+Widget.\+H@{Fl\+\_\+\+Widget.\+H}}
+\subsubsection{\texorpdfstring{Fl\+\_\+\+Callback}{Fl\_Callback}}
+{\footnotesize\ttfamily typedef void() Fl\+\_\+\+Callback(\hyperlink{class_fl___widget}{Fl\+\_\+\+Widget} $\ast$, void $\ast$)}
+
+Default callback type definition for all fltk widgets (by far the most used) \mbox{\Hypertarget{_fl___widget_8_h_a6ce47be89b1f24ea198fd2c93951969e}\label{_fl___widget_8_h_a6ce47be89b1f24ea198fd2c93951969e}} 
+\index{Fl\+\_\+\+Widget.\+H@{Fl\+\_\+\+Widget.\+H}!Fl\+\_\+\+Callback0@{Fl\+\_\+\+Callback0}}
+\index{Fl\+\_\+\+Callback0@{Fl\+\_\+\+Callback0}!Fl\+\_\+\+Widget.\+H@{Fl\+\_\+\+Widget.\+H}}
+\subsubsection{\texorpdfstring{Fl\+\_\+\+Callback0}{Fl\_Callback0}}
+{\footnotesize\ttfamily typedef void() Fl\+\_\+\+Callback0(\hyperlink{class_fl___widget}{Fl\+\_\+\+Widget} $\ast$)}
+
+One parameter callback type definition passing only the widget \mbox{\Hypertarget{_fl___widget_8_h_a25bc4848432a4fbd426456f2952712eb}\label{_fl___widget_8_h_a25bc4848432a4fbd426456f2952712eb}} 
+\index{Fl\+\_\+\+Widget.\+H@{Fl\+\_\+\+Widget.\+H}!Fl\+\_\+\+Callback1@{Fl\+\_\+\+Callback1}}
+\index{Fl\+\_\+\+Callback1@{Fl\+\_\+\+Callback1}!Fl\+\_\+\+Widget.\+H@{Fl\+\_\+\+Widget.\+H}}
+\subsubsection{\texorpdfstring{Fl\+\_\+\+Callback1}{Fl\_Callback1}}
+{\footnotesize\ttfamily typedef void() Fl\+\_\+\+Callback1(\hyperlink{class_fl___widget}{Fl\+\_\+\+Widget} $\ast$, long)}
+
+Callback type definition passing the widget and a long data value \mbox{\Hypertarget{_fl___widget_8_h_ad515601d7e8cbd1c65ece6364e8c23d0}\label{_fl___widget_8_h_ad515601d7e8cbd1c65ece6364e8c23d0}} 
+\index{Fl\+\_\+\+Widget.\+H@{Fl\+\_\+\+Widget.\+H}!Fl\+\_\+\+Callback\+\_\+p@{Fl\+\_\+\+Callback\+\_\+p}}
+\index{Fl\+\_\+\+Callback\+\_\+p@{Fl\+\_\+\+Callback\+\_\+p}!Fl\+\_\+\+Widget.\+H@{Fl\+\_\+\+Widget.\+H}}
+\subsubsection{\texorpdfstring{Fl\+\_\+\+Callback\+\_\+p}{Fl\_Callback\_p}}
+{\footnotesize\ttfamily typedef \hyperlink{_fl___widget_8_h_a640bea0193560eec20903c45c93c7472}{Fl\+\_\+\+Callback}$\ast$ \hyperlink{_fl___widget_8_h_ad515601d7e8cbd1c65ece6364e8c23d0}{Fl\+\_\+\+Callback\+\_\+p}}
+
+Default callback type pointer definition for all fltk widgets \mbox{\Hypertarget{_fl___widget_8_h_a6c7d27e81f16857f18da5e4ce097de75}\label{_fl___widget_8_h_a6c7d27e81f16857f18da5e4ce097de75}} 
+\index{Fl\+\_\+\+Widget.\+H@{Fl\+\_\+\+Widget.\+H}!fl\+\_\+intptr\+\_\+t@{fl\+\_\+intptr\+\_\+t}}
+\index{fl\+\_\+intptr\+\_\+t@{fl\+\_\+intptr\+\_\+t}!Fl\+\_\+\+Widget.\+H@{Fl\+\_\+\+Widget.\+H}}
+\subsubsection{\texorpdfstring{fl\+\_\+intptr\+\_\+t}{fl\_intptr\_t}}
+{\footnotesize\ttfamily typedef long \hyperlink{_fl___widget_8_h_a6c7d27e81f16857f18da5e4ce097de75}{fl\+\_\+intptr\+\_\+t}}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000020}{Todo}]typedef\textquotesingle{}s fl\+\_\+intptr\+\_\+t and fl\+\_\+uintptr\+\_\+t should be documented. \end{DoxyRefDesc}
+\mbox{\Hypertarget{_fl___widget_8_h_a0c2a2b4e6f4413cf8fbdda84b75bd420}\label{_fl___widget_8_h_a0c2a2b4e6f4413cf8fbdda84b75bd420}} 
+\index{Fl\+\_\+\+Widget.\+H@{Fl\+\_\+\+Widget.\+H}!fl\+\_\+uintptr\+\_\+t@{fl\+\_\+uintptr\+\_\+t}}
+\index{fl\+\_\+uintptr\+\_\+t@{fl\+\_\+uintptr\+\_\+t}!Fl\+\_\+\+Widget.\+H@{Fl\+\_\+\+Widget.\+H}}
+\subsubsection{\texorpdfstring{fl\+\_\+uintptr\+\_\+t}{fl\_uintptr\_t}}
+{\footnotesize\ttfamily typedef unsigned long \hyperlink{_fl___widget_8_h_a0c2a2b4e6f4413cf8fbdda84b75bd420}{fl\+\_\+uintptr\+\_\+t}}
+

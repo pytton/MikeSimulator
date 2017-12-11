@@ -1,0 +1,43 @@
+# data file for the Fltk User Interface Designer (fluid)
+version 1.0303 
+header_name {.h} 
+code_name {.cxx}
+class FluidControlInterface {open selected
+} {
+  Function {FluidControlInterface()} {open
+  } {
+    Fl_Window mWindow {
+      label {Control Interface} open
+      xywh {1052 266 252 210} type Double resizable visible
+    } {
+      Fl_Box mWindowBox {
+        label {Show Windows:}
+        xywh {5 5 90 30} align 128
+      }
+      Fl_Button mBtnShowPositions1 {
+        label Positions1
+        xywh {5 35 90 40}
+      }
+      Fl_Button mBtnShowPositions2 {
+        label Positions2
+        xywh {5 75 90 40}
+      }
+      Fl_Button mBtnShowPositions3 {
+        label Positions3
+        xywh {5 115 90 40}
+      }
+      Fl_Button mBtnShowPositions4 {
+        label {Show Data Control Window}
+        xywh {5 155 90 50} align 128
+      }
+      Fl_Button mBtnStartLoop {
+        label {Start Loop}
+        xywh {110 15 90 40}
+      }
+      Fl_Button mBtnStopLoop {
+        label {Stop Loop}
+        xywh {110 55 90 40}
+      }
+    }
+  }
+} 

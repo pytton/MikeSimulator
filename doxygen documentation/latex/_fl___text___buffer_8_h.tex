@@ -1,0 +1,62 @@
+\hypertarget{_fl___text___buffer_8_h}{}\section{F\+L\+T\+K/\+F\+L/\+Fl\+\_\+\+Text\+\_\+\+Buffer.H File Reference}
+\label{_fl___text___buffer_8_h}\index{F\+L\+T\+K/\+F\+L/\+Fl\+\_\+\+Text\+\_\+\+Buffer.\+H@{F\+L\+T\+K/\+F\+L/\+Fl\+\_\+\+Text\+\_\+\+Buffer.\+H}}
+{\ttfamily \#include \char`\"{}Fl\+\_\+\+Export.\+H\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_fl___text___selection}{Fl\+\_\+\+Text\+\_\+\+Selection}
+\begin{DoxyCompactList}\small\item\em This is an internal class for \hyperlink{class_fl___text___buffer}{Fl\+\_\+\+Text\+\_\+\+Buffer} to manage text selections. This class works correctly with utf-\/8 strings assuming that the parameters for all calls are on character boundaries. \end{DoxyCompactList}\item 
+class \hyperlink{class_fl___text___buffer}{Fl\+\_\+\+Text\+\_\+\+Buffer}
+\begin{DoxyCompactList}\small\item\em This class manages unicode displayed in one or more \hyperlink{class_fl___text___display}{Fl\+\_\+\+Text\+\_\+\+Display} widgets. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_fl___text___buffer_8_h_acae0ad63ad39752e4e636f2377d5b71d}{I\+S\+\_\+\+U\+T\+F8\+\_\+\+A\+L\+I\+G\+N\+ED}(a)
+\item 
+\#define \hyperlink{_fl___text___buffer_8_h_abb7018b201a55f41f1f392c784613904}{I\+S\+\_\+\+U\+T\+F8\+\_\+\+A\+L\+I\+G\+N\+E\+D2}(a,  \hyperlink{forms_8_h_a0ba06a290a384fa06b1b90745827dae2}{b})
+\item 
+\#define \hyperlink{_fl___text___buffer_8_h_aca48bba5d04e6174920efb35b079d107}{F\+L\+\_\+\+T\+E\+X\+T\+\_\+\+M\+A\+X\+\_\+\+E\+X\+P\+\_\+\+C\+H\+A\+R\+\_\+\+L\+EN}~20
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \hyperlink{_fl___text___buffer_8_h_ae3f9ce6427d687a8714a4c7f2572bd29}{Fl\+\_\+\+Text\+\_\+\+Modify\+\_\+\+Cb}) (int pos, int n\+Inserted, int n\+Deleted, int n\+Restyled, const char $\ast$deleted\+Text, void $\ast$cb\+Arg)
+\item 
+typedef void($\ast$ \hyperlink{_fl___text___buffer_8_h_a6332a42d32987dfd522b063701df60b4}{Fl\+\_\+\+Text\+\_\+\+Predelete\+\_\+\+Cb}) (int pos, int n\+Deleted, void $\ast$cb\+Arg)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_fl___text___buffer_8_h_aca48bba5d04e6174920efb35b079d107}\label{_fl___text___buffer_8_h_aca48bba5d04e6174920efb35b079d107}} 
+\index{Fl\+\_\+\+Text\+\_\+\+Buffer.\+H@{Fl\+\_\+\+Text\+\_\+\+Buffer.\+H}!F\+L\+\_\+\+T\+E\+X\+T\+\_\+\+M\+A\+X\+\_\+\+E\+X\+P\+\_\+\+C\+H\+A\+R\+\_\+\+L\+EN@{F\+L\+\_\+\+T\+E\+X\+T\+\_\+\+M\+A\+X\+\_\+\+E\+X\+P\+\_\+\+C\+H\+A\+R\+\_\+\+L\+EN}}
+\index{F\+L\+\_\+\+T\+E\+X\+T\+\_\+\+M\+A\+X\+\_\+\+E\+X\+P\+\_\+\+C\+H\+A\+R\+\_\+\+L\+EN@{F\+L\+\_\+\+T\+E\+X\+T\+\_\+\+M\+A\+X\+\_\+\+E\+X\+P\+\_\+\+C\+H\+A\+R\+\_\+\+L\+EN}!Fl\+\_\+\+Text\+\_\+\+Buffer.\+H@{Fl\+\_\+\+Text\+\_\+\+Buffer.\+H}}
+\subsubsection{\texorpdfstring{F\+L\+\_\+\+T\+E\+X\+T\+\_\+\+M\+A\+X\+\_\+\+E\+X\+P\+\_\+\+C\+H\+A\+R\+\_\+\+L\+EN}{FL\_TEXT\_MAX\_EXP\_CHAR\_LEN}}
+{\footnotesize\ttfamily \#define F\+L\+\_\+\+T\+E\+X\+T\+\_\+\+M\+A\+X\+\_\+\+E\+X\+P\+\_\+\+C\+H\+A\+R\+\_\+\+L\+EN~20}
+
+\mbox{\Hypertarget{_fl___text___buffer_8_h_acae0ad63ad39752e4e636f2377d5b71d}\label{_fl___text___buffer_8_h_acae0ad63ad39752e4e636f2377d5b71d}} 
+\index{Fl\+\_\+\+Text\+\_\+\+Buffer.\+H@{Fl\+\_\+\+Text\+\_\+\+Buffer.\+H}!I\+S\+\_\+\+U\+T\+F8\+\_\+\+A\+L\+I\+G\+N\+ED@{I\+S\+\_\+\+U\+T\+F8\+\_\+\+A\+L\+I\+G\+N\+ED}}
+\index{I\+S\+\_\+\+U\+T\+F8\+\_\+\+A\+L\+I\+G\+N\+ED@{I\+S\+\_\+\+U\+T\+F8\+\_\+\+A\+L\+I\+G\+N\+ED}!Fl\+\_\+\+Text\+\_\+\+Buffer.\+H@{Fl\+\_\+\+Text\+\_\+\+Buffer.\+H}}
+\subsubsection{\texorpdfstring{I\+S\+\_\+\+U\+T\+F8\+\_\+\+A\+L\+I\+G\+N\+ED}{IS\_UTF8\_ALIGNED}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+U\+T\+F8\+\_\+\+A\+L\+I\+G\+N\+ED(\begin{DoxyParamCaption}\item[{}]{a }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_fl___text___buffer_8_h_abb7018b201a55f41f1f392c784613904}\label{_fl___text___buffer_8_h_abb7018b201a55f41f1f392c784613904}} 
+\index{Fl\+\_\+\+Text\+\_\+\+Buffer.\+H@{Fl\+\_\+\+Text\+\_\+\+Buffer.\+H}!I\+S\+\_\+\+U\+T\+F8\+\_\+\+A\+L\+I\+G\+N\+E\+D2@{I\+S\+\_\+\+U\+T\+F8\+\_\+\+A\+L\+I\+G\+N\+E\+D2}}
+\index{I\+S\+\_\+\+U\+T\+F8\+\_\+\+A\+L\+I\+G\+N\+E\+D2@{I\+S\+\_\+\+U\+T\+F8\+\_\+\+A\+L\+I\+G\+N\+E\+D2}!Fl\+\_\+\+Text\+\_\+\+Buffer.\+H@{Fl\+\_\+\+Text\+\_\+\+Buffer.\+H}}
+\subsubsection{\texorpdfstring{I\+S\+\_\+\+U\+T\+F8\+\_\+\+A\+L\+I\+G\+N\+E\+D2}{IS\_UTF8\_ALIGNED2}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+U\+T\+F8\+\_\+\+A\+L\+I\+G\+N\+E\+D2(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{\hyperlink{forms_8_h_a0ba06a290a384fa06b1b90745827dae2}{b} }\end{DoxyParamCaption})}
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{_fl___text___buffer_8_h_ae3f9ce6427d687a8714a4c7f2572bd29}\label{_fl___text___buffer_8_h_ae3f9ce6427d687a8714a4c7f2572bd29}} 
+\index{Fl\+\_\+\+Text\+\_\+\+Buffer.\+H@{Fl\+\_\+\+Text\+\_\+\+Buffer.\+H}!Fl\+\_\+\+Text\+\_\+\+Modify\+\_\+\+Cb@{Fl\+\_\+\+Text\+\_\+\+Modify\+\_\+\+Cb}}
+\index{Fl\+\_\+\+Text\+\_\+\+Modify\+\_\+\+Cb@{Fl\+\_\+\+Text\+\_\+\+Modify\+\_\+\+Cb}!Fl\+\_\+\+Text\+\_\+\+Buffer.\+H@{Fl\+\_\+\+Text\+\_\+\+Buffer.\+H}}
+\subsubsection{\texorpdfstring{Fl\+\_\+\+Text\+\_\+\+Modify\+\_\+\+Cb}{Fl\_Text\_Modify\_Cb}}
+{\footnotesize\ttfamily typedef void($\ast$ Fl\+\_\+\+Text\+\_\+\+Modify\+\_\+\+Cb) (int pos, int n\+Inserted, int n\+Deleted, int n\+Restyled, const char $\ast$deleted\+Text, void $\ast$cb\+Arg)}
+
+\mbox{\Hypertarget{_fl___text___buffer_8_h_a6332a42d32987dfd522b063701df60b4}\label{_fl___text___buffer_8_h_a6332a42d32987dfd522b063701df60b4}} 
+\index{Fl\+\_\+\+Text\+\_\+\+Buffer.\+H@{Fl\+\_\+\+Text\+\_\+\+Buffer.\+H}!Fl\+\_\+\+Text\+\_\+\+Predelete\+\_\+\+Cb@{Fl\+\_\+\+Text\+\_\+\+Predelete\+\_\+\+Cb}}
+\index{Fl\+\_\+\+Text\+\_\+\+Predelete\+\_\+\+Cb@{Fl\+\_\+\+Text\+\_\+\+Predelete\+\_\+\+Cb}!Fl\+\_\+\+Text\+\_\+\+Buffer.\+H@{Fl\+\_\+\+Text\+\_\+\+Buffer.\+H}}
+\subsubsection{\texorpdfstring{Fl\+\_\+\+Text\+\_\+\+Predelete\+\_\+\+Cb}{Fl\_Text\_Predelete\_Cb}}
+{\footnotesize\ttfamily typedef void($\ast$ Fl\+\_\+\+Text\+\_\+\+Predelete\+\_\+\+Cb) (int pos, int n\+Deleted, void $\ast$cb\+Arg)}
+

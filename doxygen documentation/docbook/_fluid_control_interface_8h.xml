@@ -3,8 +3,8 @@
     <title>FluidControlInterface.h File Reference</title>
     <programlisting>#include &lt;FL/Fl.H&gt;</programlisting>
     <programlisting>#include &lt;FL/Fl_Double_Window.H&gt;</programlisting>
-    <programlisting>#include &lt;FL/Fl_Button.H&gt;</programlisting>
     <programlisting>#include &lt;FL/Fl_Box.H&gt;</programlisting>
+    <programlisting>#include &lt;FL/Fl_Button.H&gt;</programlisting>
         <section>
             <title> Classes </title>
             <para>
@@ -17,6 +17,6 @@
         </section>
     <simplesect>
         <title>Detailed Description</title>
-    <para>Definition in file C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/FLUID/FluidControlInterface.h</para>
+    <para>Definition in file D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidControlInterface.h</para>
     </simplesect>
 </section>

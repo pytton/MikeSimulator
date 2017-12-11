@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_widget_table_8cpp">
+    <title>WidgetTable.cpp File Reference</title>
+    <programlisting>#include &quot;UserInterface.h&quot;</programlisting>
+    <programlisting>#include &quot;WidgetTable.h&quot;</programlisting>
+    <programlisting>#include &quot;MikeEnums.h&quot;</programlisting>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespace_mike">Mike</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidgetTable.cpp</para>
+    </simplesect>
+</section>

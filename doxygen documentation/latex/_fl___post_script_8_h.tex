@@ -1,0 +1,69 @@
+\hypertarget{_fl___post_script_8_h}{}\section{F\+L\+T\+K/\+F\+L/\+Fl\+\_\+\+Post\+Script.H File Reference}
+\label{_fl___post_script_8_h}\index{F\+L\+T\+K/\+F\+L/\+Fl\+\_\+\+Post\+Script.\+H@{F\+L\+T\+K/\+F\+L/\+Fl\+\_\+\+Post\+Script.\+H}}
+
+
+declaration of classes \hyperlink{class_fl___post_script___graphics___driver}{Fl\+\_\+\+Post\+Script\+\_\+\+Graphics\+\_\+\+Driver}, \hyperlink{class_fl___post_script___file___device}{Fl\+\_\+\+Post\+Script\+\_\+\+File\+\_\+\+Device}.  
+
+
+{\ttfamily \#include $<$F\+L/\+Fl\+\_\+\+Paged\+\_\+\+Device.\+H$>$}\newline
+{\ttfamily \#include $<$F\+L/fl\+\_\+draw.\+H$>$}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_fl___post_script___graphics___driver}{Fl\+\_\+\+Post\+Script\+\_\+\+Graphics\+\_\+\+Driver}
+\item 
+class \hyperlink{class_fl___post_script___graphics___driver_1_1_clip}{Fl\+\_\+\+Post\+Script\+\_\+\+Graphics\+\_\+\+Driver\+::\+Clip}
+\item 
+class \hyperlink{class_fl___post_script___file___device}{Fl\+\_\+\+Post\+Script\+\_\+\+File\+\_\+\+Device}
+\begin{DoxyCompactList}\small\item\em To send graphical output to a Post\+Script file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef int() \hyperlink{_fl___post_script_8_h_ab7cbc3517e5261c856e1030514358fe7}{Fl\+\_\+\+Post\+Script\+\_\+\+Close\+\_\+\+Command}(F\+I\+LE $\ast$)
+\begin{DoxyCompactList}\small\item\em Post\+Script graphical backend. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+declaration of classes \hyperlink{class_fl___post_script___graphics___driver}{Fl\+\_\+\+Post\+Script\+\_\+\+Graphics\+\_\+\+Driver}, \hyperlink{class_fl___post_script___file___device}{Fl\+\_\+\+Post\+Script\+\_\+\+File\+\_\+\+Device}. 
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{_fl___post_script_8_h_ab7cbc3517e5261c856e1030514358fe7}\label{_fl___post_script_8_h_ab7cbc3517e5261c856e1030514358fe7}} 
+\index{Fl\+\_\+\+Post\+Script.\+H@{Fl\+\_\+\+Post\+Script.\+H}!Fl\+\_\+\+Post\+Script\+\_\+\+Close\+\_\+\+Command@{Fl\+\_\+\+Post\+Script\+\_\+\+Close\+\_\+\+Command}}
+\index{Fl\+\_\+\+Post\+Script\+\_\+\+Close\+\_\+\+Command@{Fl\+\_\+\+Post\+Script\+\_\+\+Close\+\_\+\+Command}!Fl\+\_\+\+Post\+Script.\+H@{Fl\+\_\+\+Post\+Script.\+H}}
+\subsubsection{\texorpdfstring{Fl\+\_\+\+Post\+Script\+\_\+\+Close\+\_\+\+Command}{Fl\_PostScript\_Close\_Command}}
+{\footnotesize\ttfamily typedef int() Fl\+\_\+\+Post\+Script\+\_\+\+Close\+\_\+\+Command(F\+I\+LE $\ast$)}
+
+
+
+Post\+Script graphical backend. 
+
+Post\+Script text uses vectorial fonts when using the F\+L\+TK standard fonts and the latin alphabet or a few other characters listed in the following table. The latin alphabet means all unicode characters between U+0020 and U+017F, or, in other words, the A\+S\+C\+II, Latin-\/1 Supplement and Latin Extended-\/A charts. \tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*{9}{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Char}&\textbf{ Codepoint}&\textbf{ Name }&\textbf{ Char}&\textbf{ Codepoint}&\textbf{ Name }&\textbf{ Char}&\textbf{ Codepoint}&\textbf{ Name }\\\cline{1-9}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\textbf{ Char}&\textbf{ Codepoint}&\textbf{ Name }&\textbf{ Char}&\textbf{ Codepoint}&\textbf{ Name }&\textbf{ Char}&\textbf{ Codepoint}&\textbf{ Name }\\\cline{1-9}
+\endhead
+ƒ&U+0192&florin&‚&U+201A&quotesinglbase&™&U+2122&trademark \\\cline{1-9}
+ˆ&U+02\+C6&circumflex&“&U+201C&quotedblleft&∂&U+2202&partialdiff \\\cline{1-9}
+ˇ&U+02\+C7&caron&”&U+201D&quotedblright&Δ&U+2206&Delta \\\cline{1-9}
+˘&U+02\+D8&breve&„&U+201E&quotedblbase&∑&U+2211&summation \\\cline{1-9}
+˙&U+02\+D9&dotaccent&†&U+2020&dagger&√&U+221A&radical \\\cline{1-9}
+˚&U+02\+DA&ring&‡&U+2021&daggerdbl&∞&U+221E&infinity \\\cline{1-9}
+˛&U+02\+DB&ogonek&•&U+2022&bullet&≠&U+2260&notequal \\\cline{1-9}
+˜&U+02\+DC&tilde&…&U+2026&ellipsis&≤&U+2264&lessequal \\\cline{1-9}
+˝&U+02\+DD&hungarumlaut&‰&U+2030&perthousand&≥&U+2265&greaterequal \\\cline{1-9}
+–&U+2013&endash&‹&U+2039&guilsinglleft&◊&U+25\+CA&lozenge \\\cline{1-9}
+—&U+2014&emdash&›&U+203A&guilsinglright&ﬁ&U+\+F\+B01&fi \\\cline{1-9}
+‘&U+2018&quoteleft&/&U+2044&fraction&ﬂ&U+\+F\+B02&fl \\\cline{1-9}
+’&U+2019&quoteright&€&U+20\+AC&Euro&&U+\+F8\+FF&apple (Mac OS only) \\\cline{1-9}
+\end{longtabu}
+~\newline
+ All other unicode characters or all other fonts (F\+L\+\_\+\+F\+R\+E\+E\+\_\+\+F\+O\+NT and above) are output as a bitmap. ~\newline
+ F\+L\+TK standard fonts are output using the corresponding Post\+Script standard fonts.\+Signature of Fl\+\_\+\+Post\+Script\+::close\+\_\+command() functions passed as parameters. 

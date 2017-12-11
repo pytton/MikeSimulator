@@ -1,0 +1,262 @@
+\hypertarget{class_mike_1_1_user_interface_base}{}\section{Mike\+:\+:User\+Interface\+Base Class Reference}
+\label{class_mike_1_1_user_interface_base}\index{Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}}
+
+
+{\ttfamily \#include $<$User\+Interface.\+h$>$}
+
+Inheritance diagram for Mike\+:\+:User\+Interface\+Base\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_mike_1_1_user_interface_base}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_mike_1_1_user_interface_base_a8db9431a5f9fc2683908c5d4cf086623}{changename} (\+::std\+::string name)
+\item 
+virtual void \hyperlink{class_mike_1_1_user_interface_base_a3a1d4bc6ce2f817327d39e48340ae23c}{Print\+Bid\+Ask} (long bid, long ask)
+\item 
+virtual void \hyperlink{class_mike_1_1_user_interface_base_a1386d2a22c47d96264ed2549da036de3}{Print\+All} (long total\+Open\+Pos, long total\+Open\+PL, long total\+Closed\+PL, long total\+PL, long ask\+Price, long bid\+Price, const \+::std\+::vector$<$ \hyperlink{class_mike_1_1_mike_position}{Mike\+Position} $>$ $\ast$open\+Positions, const \+::std\+::vector$<$ \hyperlink{class_mike_1_1_mike_orders_at_price}{Mike\+Orders\+At\+Price} $>$ $\ast$open\+Orders\+At\+Price, double average\+Price)
+\item 
+void \hyperlink{class_mike_1_1_user_interface_base_a5208d9aa15d5b83eac5aca6e885dd23f}{re\+Price\+Wid\+Table} (long bidprice)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_mike_1_1_user_interface_base_ada6313efe882ae0535f64cf2f3aa1aa2}{User\+Interface\+Base} ()
+\item 
+virtual \hyperlink{class_mike_1_1_control}{Control} $\ast$ \hyperlink{class_mike_1_1_user_interface_base_ad83087afc74a281927d47a753f752525}{Get\+Control} ()
+\item 
+\hyperlink{class_mike_1_1_widget_table}{Widget\+Table} $\ast$ \hyperlink{class_mike_1_1_user_interface_base_a0f9e3b0b58927dfc847c07066dd748f9}{Get\+Table} ()
+\item 
+virtual void \hyperlink{class_mike_1_1_user_interface_base_a42469ffe57a8528064068a84e277ee6a}{send\+Wid\+Table\+Callback} (int row\+Pressed, int col\+Pressed, long price, \hyperlink{namespace_mike_aa486aea8b1d0d07190982a311394e6cb}{Mike\+Order\+Type} temp\+Order\+Type, int order\+Size)=0
+\item 
+virtual void \hyperlink{class_mike_1_1_user_interface_base_acb35df6eb1e854e714c42f6ae473a193}{callbk\+User\+Interface} (\hyperlink{namespace_mike_a9dd611fa3c671b02e477e6b21465cc66}{Btn\+Pressed})=0
+\item 
+virtual void \hyperlink{class_mike_1_1_user_interface_base_a56229f8ce8bb05e4b9908fcfc7222412}{callbk\+Wid\+Table} (int row\+Pressed, int col\+Pressed, long price)
+\item 
+virtual void \hyperlink{class_mike_1_1_user_interface_base_afa6ddc0cce6cf6df28a542bd7e8c3686}{Set\+Col\+But\+Names} (\+::std\+::vector$<$\+::std\+::string $>$ \&\hyperlink{class_mike_1_1_user_interface_base_a9de8526205e04a7d4c2ea9e1486050a8}{col\+\_\+names}, \+::std\+::vector$<$\+::std\+::string $>$ \&\hyperlink{class_mike_1_1_user_interface_base_a541ac5799c899bf3dfad6532d0686bd1}{button\+\_\+names})
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_mike_1_1_user_interface_base_ad438c7558df623165da5070d41dd3561}{m\+\_\+reset\+Order\+Size\+\_\+cb} (Fl\+\_\+\+Widget $\ast$w, void $\ast$p)
+\item 
+static void \hyperlink{class_mike_1_1_user_interface_base_aeb8db80038bcb02e65b188c96a84985c}{m\+\_\+extra\+\_\+btn\+\_\+cb} (Fl\+\_\+\+Widget $\ast$w, void $\ast$p)
+\item 
+static void \hyperlink{class_mike_1_1_user_interface_base_a2dce036ed966a3a2ede063197ca30e1a}{m\+\_\+print\+Orders\+\_\+btn\+\_\+cb} (Fl\+\_\+\+Widget $\ast$w, void $\ast$p)
+\item 
+static void \hyperlink{class_mike_1_1_user_interface_base_a1f47ae3583c78cd13f3de566f1583ae3}{m\+\_\+check\+Fills\+\_\+btn\+\_\+cb} (Fl\+\_\+\+Widget $\ast$w, void $\ast$p)
+\item 
+static void \hyperlink{class_mike_1_1_user_interface_base_abcfd0e8bffab60ceb9892635b8b06130}{m\+\_\+print\+Pos\+\_\+btn\+\_\+cb} (Fl\+\_\+\+Widget $\ast$w, void $\ast$p)
+\item 
+static void \hyperlink{class_mike_1_1_user_interface_base_a29cc254adb1d358370a4be6a3ea02d8a}{m\+\_\+btn\+\_\+\+Cancel\+All\+Orders\+\_\+cb} (Fl\+\_\+\+Widget $\ast$w, void $\ast$p)
+\item 
+static void \hyperlink{class_mike_1_1_user_interface_base_a423d89d55cc12eee96c6d679b88313a0}{m\+\_\+btn\+\_\+\+Clear\+Postions} (Fl\+\_\+\+Widget $\ast$w, void $\ast$p)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_mike_1_1_widget_table}{Widget\+Table} $\ast$ \hyperlink{class_mike_1_1_user_interface_base_a56b0885c73939b643bd43f7e08f354aa}{m\+\_\+p\+Table}
+\item 
+\hyperlink{class_mike_1_1_control}{Control} $\ast$ \hyperlink{class_mike_1_1_user_interface_base_a54da7e6218d2c09481b0804257bd989d}{m\+\_\+p\+Control}
+\item 
+Fl\+\_\+\+Button $\ast$ \hyperlink{class_mike_1_1_user_interface_base_aefa6f3786f9bed8b9ec54c1a65c90b37}{m\+\_\+my\+Extra\+Btn}
+\item 
+int \hyperlink{class_mike_1_1_user_interface_base_a1c3c746313e0a033040696169a9f46d8}{bid\+\_\+price} = 20400
+\item 
+\+::std\+::vector$<$\+::std\+::string $>$ \hyperlink{class_mike_1_1_user_interface_base_a9de8526205e04a7d4c2ea9e1486050a8}{col\+\_\+names}
+\item 
+\+::std\+::vector$<$\+::std\+::string $>$ \hyperlink{class_mike_1_1_user_interface_base_a541ac5799c899bf3dfad6532d0686bd1}{button\+\_\+names}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_mike_1_1_user_interface_base_abcbb78a2aa9a92d43c9ea7c42cbc681e}{Widget\+Table}
+\item 
+class \hyperlink{class_mike_1_1_user_interface_base_aa43d07603cc032a3ea563afd34b7581c}{Mike\+::\+Control}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_mike_1_1_user_interface_base_ada6313efe882ae0535f64cf2f3aa1aa2}\label{class_mike_1_1_user_interface_base_ada6313efe882ae0535f64cf2f3aa1aa2}} 
+\index{Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}!User\+Interface\+Base@{User\+Interface\+Base}}
+\index{User\+Interface\+Base@{User\+Interface\+Base}!Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}}
+\subsubsection{\texorpdfstring{User\+Interface\+Base()}{UserInterfaceBase()}}
+{\footnotesize\ttfamily Mike\+::\+User\+Interface\+Base\+::\+User\+Interface\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_mike_1_1_user_interface_base_acb35df6eb1e854e714c42f6ae473a193}\label{class_mike_1_1_user_interface_base_acb35df6eb1e854e714c42f6ae473a193}} 
+\index{Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}!callbk\+User\+Interface@{callbk\+User\+Interface}}
+\index{callbk\+User\+Interface@{callbk\+User\+Interface}!Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}}
+\subsubsection{\texorpdfstring{callbk\+User\+Interface()}{callbkUserInterface()}}
+{\footnotesize\ttfamily virtual void Mike\+::\+User\+Interface\+Base\+::callbk\+User\+Interface (\begin{DoxyParamCaption}\item[{\hyperlink{namespace_mike_a9dd611fa3c671b02e477e6b21465cc66}{Btn\+Pressed}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \hyperlink{class_mike_1_1_user_interface_linked_a3ad33941e45f2f171cb4db443cb46841}{Mike\+::\+User\+Interface\+Linked}, and \hyperlink{class_mike_1_1_user_interface_a9421dadab2852eb9110e25e2dff1d849}{Mike\+::\+User\+Interface}.
+
+\mbox{\Hypertarget{class_mike_1_1_user_interface_base_a56229f8ce8bb05e4b9908fcfc7222412}\label{class_mike_1_1_user_interface_base_a56229f8ce8bb05e4b9908fcfc7222412}} 
+\index{Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}!callbk\+Wid\+Table@{callbk\+Wid\+Table}}
+\index{callbk\+Wid\+Table@{callbk\+Wid\+Table}!Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}}
+\subsubsection{\texorpdfstring{callbk\+Wid\+Table()}{callbkWidTable()}}
+{\footnotesize\ttfamily void Mike\+::\+User\+Interface\+Base\+::callbk\+Wid\+Table (\begin{DoxyParamCaption}\item[{int}]{row\+Pressed,  }\item[{int}]{col\+Pressed,  }\item[{long}]{price }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_mike_1_1_user_interface_base_a8db9431a5f9fc2683908c5d4cf086623}\label{class_mike_1_1_user_interface_base_a8db9431a5f9fc2683908c5d4cf086623}} 
+\index{Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}!changename@{changename}}
+\index{changename@{changename}!Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}}
+\subsubsection{\texorpdfstring{changename()}{changename()}}
+{\footnotesize\ttfamily void Mike\+::\+User\+Interface\+Base\+::changename (\begin{DoxyParamCaption}\item[{\+::std\+::string}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_mike_1_1_user_interface_base_ad83087afc74a281927d47a753f752525}\label{class_mike_1_1_user_interface_base_ad83087afc74a281927d47a753f752525}} 
+\index{Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}!Get\+Control@{Get\+Control}}
+\index{Get\+Control@{Get\+Control}!Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}}
+\subsubsection{\texorpdfstring{Get\+Control()}{GetControl()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_mike_1_1_control}{Control}$\ast$ Mike\+::\+User\+Interface\+Base\+::\+Get\+Control (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_mike_1_1_user_interface_base_a0f9e3b0b58927dfc847c07066dd748f9}\label{class_mike_1_1_user_interface_base_a0f9e3b0b58927dfc847c07066dd748f9}} 
+\index{Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}!Get\+Table@{Get\+Table}}
+\index{Get\+Table@{Get\+Table}!Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}}
+\subsubsection{\texorpdfstring{Get\+Table()}{GetTable()}}
+{\footnotesize\ttfamily \hyperlink{class_mike_1_1_widget_table}{Widget\+Table}$\ast$ Mike\+::\+User\+Interface\+Base\+::\+Get\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_user_interface_base_a29cc254adb1d358370a4be6a3ea02d8a}\label{class_mike_1_1_user_interface_base_a29cc254adb1d358370a4be6a3ea02d8a}} 
+\index{Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}!m\+\_\+btn\+\_\+\+Cancel\+All\+Orders\+\_\+cb@{m\+\_\+btn\+\_\+\+Cancel\+All\+Orders\+\_\+cb}}
+\index{m\+\_\+btn\+\_\+\+Cancel\+All\+Orders\+\_\+cb@{m\+\_\+btn\+\_\+\+Cancel\+All\+Orders\+\_\+cb}!Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}}
+\subsubsection{\texorpdfstring{m\+\_\+btn\+\_\+\+Cancel\+All\+Orders\+\_\+cb()}{m\_btn\_CancelAllOrders\_cb()}}
+{\footnotesize\ttfamily void Mike\+::\+User\+Interface\+Base\+::m\+\_\+btn\+\_\+\+Cancel\+All\+Orders\+\_\+cb (\begin{DoxyParamCaption}\item[{Fl\+\_\+\+Widget $\ast$}]{w,  }\item[{void $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_user_interface_base_a423d89d55cc12eee96c6d679b88313a0}\label{class_mike_1_1_user_interface_base_a423d89d55cc12eee96c6d679b88313a0}} 
+\index{Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}!m\+\_\+btn\+\_\+\+Clear\+Postions@{m\+\_\+btn\+\_\+\+Clear\+Postions}}
+\index{m\+\_\+btn\+\_\+\+Clear\+Postions@{m\+\_\+btn\+\_\+\+Clear\+Postions}!Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}}
+\subsubsection{\texorpdfstring{m\+\_\+btn\+\_\+\+Clear\+Postions()}{m\_btn\_ClearPostions()}}
+{\footnotesize\ttfamily void Mike\+::\+User\+Interface\+Base\+::m\+\_\+btn\+\_\+\+Clear\+Postions (\begin{DoxyParamCaption}\item[{Fl\+\_\+\+Widget $\ast$}]{w,  }\item[{void $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_user_interface_base_a1f47ae3583c78cd13f3de566f1583ae3}\label{class_mike_1_1_user_interface_base_a1f47ae3583c78cd13f3de566f1583ae3}} 
+\index{Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}!m\+\_\+check\+Fills\+\_\+btn\+\_\+cb@{m\+\_\+check\+Fills\+\_\+btn\+\_\+cb}}
+\index{m\+\_\+check\+Fills\+\_\+btn\+\_\+cb@{m\+\_\+check\+Fills\+\_\+btn\+\_\+cb}!Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}}
+\subsubsection{\texorpdfstring{m\+\_\+check\+Fills\+\_\+btn\+\_\+cb()}{m\_checkFills\_btn\_cb()}}
+{\footnotesize\ttfamily void Mike\+::\+User\+Interface\+Base\+::m\+\_\+check\+Fills\+\_\+btn\+\_\+cb (\begin{DoxyParamCaption}\item[{Fl\+\_\+\+Widget $\ast$}]{w,  }\item[{void $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_user_interface_base_aeb8db80038bcb02e65b188c96a84985c}\label{class_mike_1_1_user_interface_base_aeb8db80038bcb02e65b188c96a84985c}} 
+\index{Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}!m\+\_\+extra\+\_\+btn\+\_\+cb@{m\+\_\+extra\+\_\+btn\+\_\+cb}}
+\index{m\+\_\+extra\+\_\+btn\+\_\+cb@{m\+\_\+extra\+\_\+btn\+\_\+cb}!Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}}
+\subsubsection{\texorpdfstring{m\+\_\+extra\+\_\+btn\+\_\+cb()}{m\_extra\_btn\_cb()}}
+{\footnotesize\ttfamily void Mike\+::\+User\+Interface\+Base\+::m\+\_\+extra\+\_\+btn\+\_\+cb (\begin{DoxyParamCaption}\item[{Fl\+\_\+\+Widget $\ast$}]{w,  }\item[{void $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_user_interface_base_a2dce036ed966a3a2ede063197ca30e1a}\label{class_mike_1_1_user_interface_base_a2dce036ed966a3a2ede063197ca30e1a}} 
+\index{Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}!m\+\_\+print\+Orders\+\_\+btn\+\_\+cb@{m\+\_\+print\+Orders\+\_\+btn\+\_\+cb}}
+\index{m\+\_\+print\+Orders\+\_\+btn\+\_\+cb@{m\+\_\+print\+Orders\+\_\+btn\+\_\+cb}!Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}}
+\subsubsection{\texorpdfstring{m\+\_\+print\+Orders\+\_\+btn\+\_\+cb()}{m\_printOrders\_btn\_cb()}}
+{\footnotesize\ttfamily void Mike\+::\+User\+Interface\+Base\+::m\+\_\+print\+Orders\+\_\+btn\+\_\+cb (\begin{DoxyParamCaption}\item[{Fl\+\_\+\+Widget $\ast$}]{w,  }\item[{void $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_user_interface_base_abcfd0e8bffab60ceb9892635b8b06130}\label{class_mike_1_1_user_interface_base_abcfd0e8bffab60ceb9892635b8b06130}} 
+\index{Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}!m\+\_\+print\+Pos\+\_\+btn\+\_\+cb@{m\+\_\+print\+Pos\+\_\+btn\+\_\+cb}}
+\index{m\+\_\+print\+Pos\+\_\+btn\+\_\+cb@{m\+\_\+print\+Pos\+\_\+btn\+\_\+cb}!Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}}
+\subsubsection{\texorpdfstring{m\+\_\+print\+Pos\+\_\+btn\+\_\+cb()}{m\_printPos\_btn\_cb()}}
+{\footnotesize\ttfamily void Mike\+::\+User\+Interface\+Base\+::m\+\_\+print\+Pos\+\_\+btn\+\_\+cb (\begin{DoxyParamCaption}\item[{Fl\+\_\+\+Widget $\ast$}]{w,  }\item[{void $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_user_interface_base_ad438c7558df623165da5070d41dd3561}\label{class_mike_1_1_user_interface_base_ad438c7558df623165da5070d41dd3561}} 
+\index{Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}!m\+\_\+reset\+Order\+Size\+\_\+cb@{m\+\_\+reset\+Order\+Size\+\_\+cb}}
+\index{m\+\_\+reset\+Order\+Size\+\_\+cb@{m\+\_\+reset\+Order\+Size\+\_\+cb}!Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}}
+\subsubsection{\texorpdfstring{m\+\_\+reset\+Order\+Size\+\_\+cb()}{m\_resetOrderSize\_cb()}}
+{\footnotesize\ttfamily void Mike\+::\+User\+Interface\+Base\+::m\+\_\+reset\+Order\+Size\+\_\+cb (\begin{DoxyParamCaption}\item[{Fl\+\_\+\+Widget $\ast$}]{w,  }\item[{void $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_user_interface_base_a1386d2a22c47d96264ed2549da036de3}\label{class_mike_1_1_user_interface_base_a1386d2a22c47d96264ed2549da036de3}} 
+\index{Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}!Print\+All@{Print\+All}}
+\index{Print\+All@{Print\+All}!Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}}
+\subsubsection{\texorpdfstring{Print\+All()}{PrintAll()}}
+{\footnotesize\ttfamily void Mike\+::\+User\+Interface\+Base\+::\+Print\+All (\begin{DoxyParamCaption}\item[{long}]{total\+Open\+Pos,  }\item[{long}]{total\+Open\+PL,  }\item[{long}]{total\+Closed\+PL,  }\item[{long}]{total\+PL,  }\item[{long}]{ask\+Price,  }\item[{long}]{bid\+Price,  }\item[{const \+::std\+::vector$<$ \hyperlink{class_mike_1_1_mike_position}{Mike\+Position} $>$ $\ast$}]{open\+Positions,  }\item[{const \+::std\+::vector$<$ \hyperlink{class_mike_1_1_mike_orders_at_price}{Mike\+Orders\+At\+Price} $>$ $\ast$}]{open\+Orders\+At\+Price,  }\item[{double}]{average\+Price }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_mike_1_1_user_interface_base_a3a1d4bc6ce2f817327d39e48340ae23c}\label{class_mike_1_1_user_interface_base_a3a1d4bc6ce2f817327d39e48340ae23c}} 
+\index{Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}!Print\+Bid\+Ask@{Print\+Bid\+Ask}}
+\index{Print\+Bid\+Ask@{Print\+Bid\+Ask}!Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}}
+\subsubsection{\texorpdfstring{Print\+Bid\+Ask()}{PrintBidAsk()}}
+{\footnotesize\ttfamily void Mike\+::\+User\+Interface\+Base\+::\+Print\+Bid\+Ask (\begin{DoxyParamCaption}\item[{long}]{bid,  }\item[{long}]{ask }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_mike_1_1_user_interface_base_a5208d9aa15d5b83eac5aca6e885dd23f}\label{class_mike_1_1_user_interface_base_a5208d9aa15d5b83eac5aca6e885dd23f}} 
+\index{Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}!re\+Price\+Wid\+Table@{re\+Price\+Wid\+Table}}
+\index{re\+Price\+Wid\+Table@{re\+Price\+Wid\+Table}!Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}}
+\subsubsection{\texorpdfstring{re\+Price\+Wid\+Table()}{rePriceWidTable()}}
+{\footnotesize\ttfamily void Mike\+::\+User\+Interface\+Base\+::re\+Price\+Wid\+Table (\begin{DoxyParamCaption}\item[{long}]{bidprice }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_mike_1_1_user_interface_base_a42469ffe57a8528064068a84e277ee6a}\label{class_mike_1_1_user_interface_base_a42469ffe57a8528064068a84e277ee6a}} 
+\index{Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}!send\+Wid\+Table\+Callback@{send\+Wid\+Table\+Callback}}
+\index{send\+Wid\+Table\+Callback@{send\+Wid\+Table\+Callback}!Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}}
+\subsubsection{\texorpdfstring{send\+Wid\+Table\+Callback()}{sendWidTableCallback()}}
+{\footnotesize\ttfamily virtual void Mike\+::\+User\+Interface\+Base\+::send\+Wid\+Table\+Callback (\begin{DoxyParamCaption}\item[{int}]{row\+Pressed,  }\item[{int}]{col\+Pressed,  }\item[{long}]{price,  }\item[{\hyperlink{namespace_mike_aa486aea8b1d0d07190982a311394e6cb}{Mike\+Order\+Type}}]{temp\+Order\+Type,  }\item[{int}]{order\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Implemented in \hyperlink{class_mike_1_1_user_interface_linked_a687ab0f108f97cae19ee81688a45476a}{Mike\+::\+User\+Interface\+Linked}, and \hyperlink{class_mike_1_1_user_interface_a2001cad2040c95ddea43b7d43f9e82bb}{Mike\+::\+User\+Interface}.
+
+\mbox{\Hypertarget{class_mike_1_1_user_interface_base_afa6ddc0cce6cf6df28a542bd7e8c3686}\label{class_mike_1_1_user_interface_base_afa6ddc0cce6cf6df28a542bd7e8c3686}} 
+\index{Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}!Set\+Col\+But\+Names@{Set\+Col\+But\+Names}}
+\index{Set\+Col\+But\+Names@{Set\+Col\+But\+Names}!Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}}
+\subsubsection{\texorpdfstring{Set\+Col\+But\+Names()}{SetColButNames()}}
+{\footnotesize\ttfamily void Mike\+::\+User\+Interface\+Base\+::\+Set\+Col\+But\+Names (\begin{DoxyParamCaption}\item[{\+::std\+::vector$<$\+::std\+::string $>$ \&}]{col\+\_\+names,  }\item[{\+::std\+::vector$<$\+::std\+::string $>$ \&}]{button\+\_\+names }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_mike_1_1_user_interface_base_aa43d07603cc032a3ea563afd34b7581c}\label{class_mike_1_1_user_interface_base_aa43d07603cc032a3ea563afd34b7581c}} 
+\index{Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}!Mike\+::\+Control@{Mike\+::\+Control}}
+\index{Mike\+::\+Control@{Mike\+::\+Control}!Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}}
+\subsubsection{\texorpdfstring{Mike\+::\+Control}{Mike::Control}}
+{\footnotesize\ttfamily friend class \hyperlink{class_mike_1_1_control}{Mike\+::\+Control}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_mike_1_1_user_interface_base_abcbb78a2aa9a92d43c9ea7c42cbc681e}\label{class_mike_1_1_user_interface_base_abcbb78a2aa9a92d43c9ea7c42cbc681e}} 
+\index{Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}!Widget\+Table@{Widget\+Table}}
+\index{Widget\+Table@{Widget\+Table}!Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}}
+\subsubsection{\texorpdfstring{Widget\+Table}{WidgetTable}}
+{\footnotesize\ttfamily friend class \hyperlink{class_mike_1_1_widget_table}{Widget\+Table}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_mike_1_1_user_interface_base_a1c3c746313e0a033040696169a9f46d8}\label{class_mike_1_1_user_interface_base_a1c3c746313e0a033040696169a9f46d8}} 
+\index{Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}!bid\+\_\+price@{bid\+\_\+price}}
+\index{bid\+\_\+price@{bid\+\_\+price}!Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}}
+\subsubsection{\texorpdfstring{bid\+\_\+price}{bid\_price}}
+{\footnotesize\ttfamily int Mike\+::\+User\+Interface\+Base\+::bid\+\_\+price = 20400\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_user_interface_base_a541ac5799c899bf3dfad6532d0686bd1}\label{class_mike_1_1_user_interface_base_a541ac5799c899bf3dfad6532d0686bd1}} 
+\index{Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}!button\+\_\+names@{button\+\_\+names}}
+\index{button\+\_\+names@{button\+\_\+names}!Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}}
+\subsubsection{\texorpdfstring{button\+\_\+names}{button\_names}}
+{\footnotesize\ttfamily \+::std\+::vector$<$\+::std\+::string$>$ Mike\+::\+User\+Interface\+Base\+::button\+\_\+names\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_user_interface_base_a9de8526205e04a7d4c2ea9e1486050a8}\label{class_mike_1_1_user_interface_base_a9de8526205e04a7d4c2ea9e1486050a8}} 
+\index{Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}!col\+\_\+names@{col\+\_\+names}}
+\index{col\+\_\+names@{col\+\_\+names}!Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}}
+\subsubsection{\texorpdfstring{col\+\_\+names}{col\_names}}
+{\footnotesize\ttfamily \+::std\+::vector$<$\+::std\+::string$>$ Mike\+::\+User\+Interface\+Base\+::col\+\_\+names\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_user_interface_base_aefa6f3786f9bed8b9ec54c1a65c90b37}\label{class_mike_1_1_user_interface_base_aefa6f3786f9bed8b9ec54c1a65c90b37}} 
+\index{Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}!m\+\_\+my\+Extra\+Btn@{m\+\_\+my\+Extra\+Btn}}
+\index{m\+\_\+my\+Extra\+Btn@{m\+\_\+my\+Extra\+Btn}!Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}}
+\subsubsection{\texorpdfstring{m\+\_\+my\+Extra\+Btn}{m\_myExtraBtn}}
+{\footnotesize\ttfamily Fl\+\_\+\+Button$\ast$ Mike\+::\+User\+Interface\+Base\+::m\+\_\+my\+Extra\+Btn\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_user_interface_base_a54da7e6218d2c09481b0804257bd989d}\label{class_mike_1_1_user_interface_base_a54da7e6218d2c09481b0804257bd989d}} 
+\index{Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}!m\+\_\+p\+Control@{m\+\_\+p\+Control}}
+\index{m\+\_\+p\+Control@{m\+\_\+p\+Control}!Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}}
+\subsubsection{\texorpdfstring{m\+\_\+p\+Control}{m\_pControl}}
+{\footnotesize\ttfamily \hyperlink{class_mike_1_1_control}{Control}$\ast$ Mike\+::\+User\+Interface\+Base\+::m\+\_\+p\+Control\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_user_interface_base_a56b0885c73939b643bd43f7e08f354aa}\label{class_mike_1_1_user_interface_base_a56b0885c73939b643bd43f7e08f354aa}} 
+\index{Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}!m\+\_\+p\+Table@{m\+\_\+p\+Table}}
+\index{m\+\_\+p\+Table@{m\+\_\+p\+Table}!Mike\+::\+User\+Interface\+Base@{Mike\+::\+User\+Interface\+Base}}
+\subsubsection{\texorpdfstring{m\+\_\+p\+Table}{m\_pTable}}
+{\footnotesize\ttfamily \hyperlink{class_mike_1_1_widget_table}{Widget\+Table}$\ast$ Mike\+::\+User\+Interface\+Base\+::m\+\_\+p\+Table\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/work\+In\+Progress/\hyperlink{_user_interface_8h}{User\+Interface.\+h}\item 
+src/work\+In\+Progress/\hyperlink{_user_interface_8cpp}{User\+Interface.\+cpp}\end{DoxyCompactItemize}

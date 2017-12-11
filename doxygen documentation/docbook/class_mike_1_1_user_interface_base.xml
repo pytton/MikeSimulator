@@ -1,0 +1,295 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_mike_1_1_user_interface_base">
+<title>Mike::UserInterfaceBase class Reference</title>
+<para>
+    <programlisting>#include <link linkend="_user_interface_8h">&lt;UserInterface.h&gt;</link></programlisting>
+</para>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Protected Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>WidgetTable * m_pTable</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Control * m_pControl</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Fl_Button * m_myExtraBtn</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int bid_price</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>::std::vector&lt;::std::string &gt; col_names</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>::std::vector&lt;::std::string &gt; button_names</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_mike_1_1_user_interface_base_1ada6313efe882ae0535f64cf2f3aa1aa2">UserInterfaceBase</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual <link linkend="class_mike_1_1_control">Control</link> * <link linkend="class_mike_1_1_user_interface_base_1ad83087afc74a281927d47a753f752525">GetControl</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="class_mike_1_1_widget_table">WidgetTable</link> * <link linkend="class_mike_1_1_user_interface_base_1a0f9e3b0b58927dfc847c07066dd748f9">GetTable</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="class_mike_1_1_user_interface_base_1a42469ffe57a8528064068a84e277ee6a">sendWidTableCallback</link> (
+int rowPressed, int colPressed, long price, <link linkend="namespace_mike_1aa486aea8b1d0d07190982a311394e6cb">MikeOrderType</link> tempOrderType, int orderSize)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="class_mike_1_1_user_interface_base_1acb35df6eb1e854e714c42f6ae473a193">callbkUserInterface</link> (
+<link linkend="namespace_mike_1a9dd611fa3c671b02e477e6b21465cc66">BtnPressed</link> )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="class_mike_1_1_user_interface_base_1a56229f8ce8bb05e4b9908fcfc7222412">callbkWidTable</link> (
+int rowPressed, int colPressed, long price)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="class_mike_1_1_user_interface_base_1afa6ddc0cce6cf6df28a542bd7e8c3686">SetColButNames</link> (
+::std::vector&lt;::std::string &gt; &amp; col_names, ::std::vector&lt;::std::string &gt; &amp; button_names)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_mike_1_1_user_interface_base_1a8db9431a5f9fc2683908c5d4cf086623">changename</link> (
+::std::string name)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="class_mike_1_1_user_interface_base_1a3a1d4bc6ce2f817327d39e48340ae23c">PrintBidAsk</link> (
+long bid, long ask)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="class_mike_1_1_user_interface_base_1a1386d2a22c47d96264ed2549da036de3">PrintAll</link> (
+long totalOpenPos, long totalOpenPL, long totalClosedPL, long totalPL, long askPrice, long bidPrice, const ::std::vector&lt; <link linkend="class_mike_1_1_mike_position">MikePosition</link> &gt; * openPositions, const ::std::vector&lt; <link linkend="class_mike_1_1_mike_orders_at_price">MikeOrdersAtPrice</link> &gt; * openOrdersAtPrice, double averagePrice)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_mike_1_1_user_interface_base_1a5208d9aa15d5b83eac5aca6e885dd23f">rePriceWidTable</link> (
+long bidprice)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void <link linkend="class_mike_1_1_user_interface_base_1ad438c7558df623165da5070d41dd3561">m_resetOrderSize_cb</link> (
+Fl_Widget * w, void * p)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void <link linkend="class_mike_1_1_user_interface_base_1aeb8db80038bcb02e65b188c96a84985c">m_extra_btn_cb</link> (
+Fl_Widget * w, void * p)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void <link linkend="class_mike_1_1_user_interface_base_1a2dce036ed966a3a2ede063197ca30e1a">m_printOrders_btn_cb</link> (
+Fl_Widget * w, void * p)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void <link linkend="class_mike_1_1_user_interface_base_1a1f47ae3583c78cd13f3de566f1583ae3">m_checkFills_btn_cb</link> (
+Fl_Widget * w, void * p)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void <link linkend="class_mike_1_1_user_interface_base_1abcfd0e8bffab60ceb9892635b8b06130">m_printPos_btn_cb</link> (
+Fl_Widget * w, void * p)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void <link linkend="class_mike_1_1_user_interface_base_1a29cc254adb1d358370a4be6a3ea02d8a">m_btn_CancelAllOrders_cb</link> (
+Fl_Widget * w, void * p)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void <link linkend="class_mike_1_1_user_interface_base_1a423d89d55cc12eee96c6d679b88313a0">m_btn_ClearPostions</link> (
+Fl_Widget * w, void * p)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="class_mike_1_1_user_interface_base_1ada6313efe882ae0535f64cf2f3aa1aa2">
+                <title>Mike::UserInterfaceBase::UserInterfaceBase ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_user_interface_base_1ad83087afc74a281927d47a753f752525">
+                <title>virtual Control* Mike::UserInterfaceBase::GetControl ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_user_interface_base_1a0f9e3b0b58927dfc847c07066dd748f9">
+                <title>WidgetTable* Mike::UserInterfaceBase::GetTable ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_user_interface_base_1a42469ffe57a8528064068a84e277ee6a">
+                <title>virtual void Mike::UserInterfaceBase::sendWidTableCallback (int rowPressed, int colPressed, long price, MikeOrderType tempOrderType, int orderSize)=0</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_user_interface_base_1acb35df6eb1e854e714c42f6ae473a193">
+                <title>virtual void Mike::UserInterfaceBase::callbkUserInterface (BtnPressed)=0</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_user_interface_base_1a56229f8ce8bb05e4b9908fcfc7222412">
+                <title>void Mike::UserInterfaceBase::callbkWidTable (int rowPressed, int colPressed, long price)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_user_interface_base_1afa6ddc0cce6cf6df28a542bd7e8c3686">
+                <title>void Mike::UserInterfaceBase::SetColButNames (::std::vector&lt;::std::string &gt; &amp;col_names, ::std::vector&lt;::std::string &gt; &amp;button_names)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_user_interface_base_1a8db9431a5f9fc2683908c5d4cf086623">
+                <title>void Mike::UserInterfaceBase::changename (::std::string name)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_user_interface_base_1a3a1d4bc6ce2f817327d39e48340ae23c">
+                <title>void Mike::UserInterfaceBase::PrintBidAsk (long bid, long ask)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_user_interface_base_1a1386d2a22c47d96264ed2549da036de3">
+                <title>void Mike::UserInterfaceBase::PrintAll (long totalOpenPos, long totalOpenPL, long totalClosedPL, long totalPL, long askPrice, long bidPrice, const ::std::vector&lt; MikePosition &gt; *openPositions, const ::std::vector&lt; MikeOrdersAtPrice &gt; *openOrdersAtPrice, double averagePrice)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_user_interface_base_1a5208d9aa15d5b83eac5aca6e885dd23f">
+                <title>void Mike::UserInterfaceBase::rePriceWidTable (long bidprice)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_user_interface_base_1ad438c7558df623165da5070d41dd3561">
+                <title>void Mike::UserInterfaceBase::m_resetOrderSize_cb (Fl_Widget *w, void *p)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_user_interface_base_1aeb8db80038bcb02e65b188c96a84985c">
+                <title>void Mike::UserInterfaceBase::m_extra_btn_cb (Fl_Widget *w, void *p)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_user_interface_base_1a2dce036ed966a3a2ede063197ca30e1a">
+                <title>void Mike::UserInterfaceBase::m_printOrders_btn_cb (Fl_Widget *w, void *p)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_user_interface_base_1a1f47ae3583c78cd13f3de566f1583ae3">
+                <title>void Mike::UserInterfaceBase::m_checkFills_btn_cb (Fl_Widget *w, void *p)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_user_interface_base_1abcfd0e8bffab60ceb9892635b8b06130">
+                <title>void Mike::UserInterfaceBase::m_printPos_btn_cb (Fl_Widget *w, void *p)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_user_interface_base_1a29cc254adb1d358370a4be6a3ea02d8a">
+                <title>void Mike::UserInterfaceBase::m_btn_CancelAllOrders_cb (Fl_Widget *w, void *p)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_user_interface_base_1a423d89d55cc12eee96c6d679b88313a0">
+                <title>void Mike::UserInterfaceBase::m_btn_ClearPostions (Fl_Widget *w, void *p)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

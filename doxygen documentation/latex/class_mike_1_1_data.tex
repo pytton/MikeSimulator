@@ -1,0 +1,57 @@
+\hypertarget{class_mike_1_1_data}{}\section{Mike\+:\+:Data Class Reference}
+\label{class_mike_1_1_data}\index{Mike\+::\+Data@{Mike\+::\+Data}}
+
+
+{\ttfamily \#include $<$Data.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_mike_1_1_data_afb88d046472d9a49f9ea16d6773d9def}{Data} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_fluid_price_control_u_i}{Fluid\+Price\+Control\+UI} \hyperlink{class_mike_1_1_data_a7d4ea849326ce9098b521ebc12317b58}{Data\+UI}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_mike_1_1_data_a7d4ea849326ce9098b521ebc12317b58}{Data\+UI} $\ast$ \hyperlink{class_mike_1_1_data_a615c7c93b1c7addbe8e888ddbed837a4}{data\+Control\+Window}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class designed for handling market data. Connects to Interactive Brokers to pull live bid/ask prices. Contains Order\+Server(currently local dummy) which sends orders to the market and checks if they are filled. 
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_mike_1_1_data_a7d4ea849326ce9098b521ebc12317b58}\label{class_mike_1_1_data_a7d4ea849326ce9098b521ebc12317b58}} 
+\index{Mike\+::\+Data@{Mike\+::\+Data}!Data\+UI@{Data\+UI}}
+\index{Data\+UI@{Data\+UI}!Mike\+::\+Data@{Mike\+::\+Data}}
+\subsubsection{\texorpdfstring{Data\+UI}{DataUI}}
+{\footnotesize\ttfamily typedef \hyperlink{class_fluid_price_control_u_i}{Fluid\+Price\+Control\+UI} \hyperlink{class_mike_1_1_data_a7d4ea849326ce9098b521ebc12317b58}{Mike\+::\+Data\+::\+Data\+UI}\hspace{0.3cm}{\ttfamily [private]}}
+
+Data\+UI is an F\+L\+TK window controlling the \hyperlink{class_mike_1_1_data}{Data} class 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_mike_1_1_data_afb88d046472d9a49f9ea16d6773d9def}\label{class_mike_1_1_data_afb88d046472d9a49f9ea16d6773d9def}} 
+\index{Mike\+::\+Data@{Mike\+::\+Data}!Data@{Data}}
+\index{Data@{Data}!Mike\+::\+Data@{Mike\+::\+Data}}
+\subsubsection{\texorpdfstring{Data()}{Data()}}
+{\footnotesize\ttfamily Mike\+::\+Data\+::\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_mike_1_1_data_a615c7c93b1c7addbe8e888ddbed837a4}\label{class_mike_1_1_data_a615c7c93b1c7addbe8e888ddbed837a4}} 
+\index{Mike\+::\+Data@{Mike\+::\+Data}!data\+Control\+Window@{data\+Control\+Window}}
+\index{data\+Control\+Window@{data\+Control\+Window}!Mike\+::\+Data@{Mike\+::\+Data}}
+\subsubsection{\texorpdfstring{data\+Control\+Window}{dataControlWindow}}
+{\footnotesize\ttfamily \hyperlink{class_mike_1_1_data_a7d4ea849326ce9098b521ebc12317b58}{Data\+UI}$\ast$ Mike\+::\+Data\+::data\+Control\+Window\hspace{0.3cm}{\ttfamily [private]}}
+
+Data\+UI is a User Interface Window used to control everything associated with market price data. This is designed to grow. Market price data can be either pulled from Interactive Brokers using Jan Boonen\textquotesingle{}s library or it can be switched to \textquotesingle{}manual\textquotesingle{} to explore behaviour of algos. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_data_8h}{Data.\+h}\item 
+src/\hyperlink{_data_8cpp}{Data.\+cpp}\end{DoxyCompactItemize}

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['widgettable',['WidgetTable',['../class_mike_position.html#abcbb78a2aa9a92d43c9ea7c42cbc681e',1,'MikePosition']]]
+  ['integratorposui',['IntegratorPosUI',['../class_mike_1_1_user_interface_linked.html#aa68f3dbce9d9f381bea2f56fda8bfb6b',1,'Mike::UserInterfaceLinked']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['dataui',['DataUI',['../class_mike_1_1_control.html#addbe39ef40982f0a4002b6f74091a799',1,'Mike::Control']]]
+  ['dataui',['DataUI',['../class_mike_1_1_data.html#a7d4ea849326ce9098b521ebc12317b58',1,'Mike::Data']]]
 ];

@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_user_interface_8cpp">
+    <title>UserInterface.cpp File Reference</title>
+    <programlisting>#include &lt;sstream&gt;</programlisting>
+    <programlisting>#include &quot;UserInterface.h&quot;</programlisting>
+    <programlisting>#include &quot;WidgetTable.h&quot;</programlisting>
+    <programlisting>#include &quot;MikeEnums.h&quot;</programlisting>
+    <programlisting>#include &quot;Control.h&quot;</programlisting>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespace_mike">Mike</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <section>
+            <title>Macros</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="_user_interface_8cpp_1aaf59555a0e52e935352c762bfa73db27">MIKE_COMMENTSON</link> true</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/UserInterface.cpp</para>
+    </simplesect>
+</section>

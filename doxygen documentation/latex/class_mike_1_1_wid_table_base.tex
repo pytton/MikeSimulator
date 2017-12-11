@@ -1,0 +1,316 @@
+\hypertarget{class_mike_1_1_wid_table_base}{}\section{Mike\+:\+:Wid\+Table\+Base Class Reference}
+\label{class_mike_1_1_wid_table_base}\index{Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}}
+
+
+{\ttfamily \#include $<$Wid\+Table\+Base.\+h$>$}
+
+Inheritance diagram for Mike\+:\+:Wid\+Table\+Base\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_mike_1_1_wid_table_base}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_mike_1_1_wid_table_base_abdc666dec8fa95e8e6232c9eae6ee8e2}{Get\+Rows} ()
+\item 
+int \hyperlink{class_mike_1_1_wid_table_base_afac57108a679ea7b3800ab8a14e80209}{Get\+Cols} ()
+\item 
+int \hyperlink{class_mike_1_1_wid_table_base_ab9f884cfed7ee50f7037bf1e75258f11}{Get\+Top\+Row\+Price} ()
+\item 
+int \hyperlink{class_mike_1_1_wid_table_base_af29863e5a1695c64a748133b335ecc16}{Get\+Bottom\+Row\+Price} ()
+\item 
+void \hyperlink{class_mike_1_1_wid_table_base_a456b14469434d2fffe513a9d7cc39e25}{Set\+Top\+Row\+Price} (int value)
+\item 
+std\+::vector$<$ std\+::string $>$ $\ast$ \hyperlink{class_mike_1_1_wid_table_base_a8fab1137b438a8ae331c9ceeaae43acb}{Get\+Col\+Names} ()
+\item 
+int \hyperlink{class_mike_1_1_wid_table_base_a590a250d0bb443aef98a7250555d1c68}{Row\+Of\+Price} (long price)
+\item 
+long \hyperlink{class_mike_1_1_wid_table_base_afb5e90634ccda27eb8f40a1f2b6208a1}{Price\+Of\+Row} (int row)
+\item 
+virtual void \hyperlink{class_mike_1_1_wid_table_base_a71a0e404a020f7b8d10544113c16a4ce}{Set\+Columnn\+Width} (short width)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_mike_1_1_wid_table_base_aa9d89f83f34c4ce8f0655ff3437374a5}{Wid\+Table\+Base} (int x, int y, int w, int h, const char $\ast$l)
+\item 
+\hyperlink{class_mike_1_1_wid_table_base_aa2cee360b485c40a08c556da54ffa439}{Wid\+Table\+Base} (int x, int y, int w, int h, const char $\ast$l, int top\+\_\+row\+\_\+price, int number\+\_\+rows=25, int number\+\_\+cols=15, int how\+\_\+many\+\_\+cols\+\_\+are\+\_\+buttons=5, std\+::vector$<$ std\+::string $>$ \hyperlink{class_mike_1_1_wid_table_base_acc76591b1fa97f8259fc95f492d8e1b9}{col\+\_\+names}=\{ \char`\"{}\char`\"{} \}, std\+::vector$<$ std\+::string $>$ button\+\_\+names=\{ \char`\"{}\char`\"{} \})
+\item 
+\hyperlink{class_mike_1_1_wid_table_base_a66c2828fd13a8abf4f5faa274e632542}{$\sim$\+Wid\+Table\+Base} ()
+\item 
+virtual void \hyperlink{class_mike_1_1_wid_table_base_aed65d79c6e84fd89abceaf6ffa079fad}{virt\+Button\+Cb} (Fl\+\_\+\+Widget $\ast$w, void $\ast$p)
+\item 
+void \hyperlink{class_mike_1_1_wid_table_base_a22ff7af61bac2dc33e596e68a236b845}{print\+In\+Table} (int row, int col, std\+::string text, Fl\+\_\+\+Color background\+Color=N\+U\+LL, Fl\+\_\+\+Color text\+Color=N\+U\+LL)
+\item 
+void \hyperlink{class_mike_1_1_wid_table_base_af7acb57a8144c9ab4e01a8300469b98e}{Clear\+Column} (int column)
+\item 
+void \hyperlink{class_mike_1_1_wid_table_base_a17021ef3e4cea06939284891dc27d61f}{Clear\+Row} (int row)
+\item 
+void \hyperlink{class_mike_1_1_wid_table_base_a4779181b9c1eebc13406f9093d665236}{clear\+All\+Button\+Labels} ()
+\item 
+virtual void \hyperlink{class_mike_1_1_wid_table_base_a980add59d3d60f68517b48a896e5eb3c}{Col\+Header\+Text} (char $\ast$s, int C)
+\item 
+void \hyperlink{class_mike_1_1_wid_table_base_a3486b3282392458231cb09f9d9a4e504}{Set\+Rows} (int num\+Rows)
+\item 
+void \hyperlink{class_mike_1_1_wid_table_base_a52555afc3c0f71ae166d862258303447}{Set\+Cols} (int num\+Col)
+\item 
+Fl\+\_\+\+Widget $\ast$ \hyperlink{class_mike_1_1_wid_table_base_a5c2de58aec7fa3751862b68f18031f88}{Get\+Element} (int n\+Row, int n\+Col)
+\item 
+void \hyperlink{class_mike_1_1_wid_table_base_a1a463c054dfd0dc563dedf0fbdaf3232}{draw\+\_\+cell} (Table\+Context context, int R=0, int C=0, int X=0, int Y=0, int W=0, int H=0)
+\item 
+void \hyperlink{class_mike_1_1_wid_table_base_a23f12c24def459d1dde1c53a7e237d4a}{Set\+Size} (int newrows, int newcols, \hyperlink{class_mike_1_1_wid_table_base}{Wid\+Table\+Base} $\ast$mytable, std\+::vector$<$ std\+::string $>$ button\+\_\+names=\{ \char`\"{}\char`\"{} \})
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_mike_1_1_wid_table_base_afba70372ad656f248ca4ea9dc408e41f}{button\+\_\+cb} (Fl\+\_\+\+Widget $\ast$w, void $\ast$p)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_mike_1_1_wid_table_base_a72f42a61350eb88e259047217fe4d92f}{table\+\_\+rows}
+\item 
+int \hyperlink{class_mike_1_1_wid_table_base_a286d2c5a539c51110c59cbc3b5121d5b}{table\+\_\+cols}
+\item 
+int \hyperlink{class_mike_1_1_wid_table_base_a1f418b75c1d456ef2c167809edfa17db}{Button\+Cols\+Number}
+\item 
+int \hyperlink{class_mike_1_1_wid_table_base_a0b15be1c88a8a50bb65df9eb43027732}{Top\+Row\+Price}
+\item 
+short \hyperlink{class_mike_1_1_wid_table_base_a8821c66c2f042e78997e6f2b132b0b4d}{tabletype} = 0
+\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{class_mike_1_1_wid_table_base_acc76591b1fa97f8259fc95f492d8e1b9}{col\+\_\+names}
+\item 
+short \hyperlink{class_mike_1_1_wid_table_base_a610c3e633ae8fc7290881ffeda317475}{column\+Width} = 55
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::stack$<$ Fl\+\_\+\+Input $\ast$ $>$ \hyperlink{class_mike_1_1_wid_table_base_a50bcff267ab19f59fa27bfb2264f815b}{shared\+Fl\+Input\+Pointers}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_mike_1_1_wid_table_base_a3890cb6751c73d6d400ecb8ab17d7f2d}{Simple\+Table\+Window}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_mike_1_1_wid_table_base_aa9d89f83f34c4ce8f0655ff3437374a5}\label{class_mike_1_1_wid_table_base_aa9d89f83f34c4ce8f0655ff3437374a5}} 
+\index{Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}!Wid\+Table\+Base@{Wid\+Table\+Base}}
+\index{Wid\+Table\+Base@{Wid\+Table\+Base}!Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}}
+\subsubsection{\texorpdfstring{Wid\+Table\+Base()}{WidTableBase()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Mike\+::\+Wid\+Table\+Base\+::\+Wid\+Table\+Base (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{const char $\ast$}]{l }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_wid_table_base_aa2cee360b485c40a08c556da54ffa439}\label{class_mike_1_1_wid_table_base_aa2cee360b485c40a08c556da54ffa439}} 
+\index{Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}!Wid\+Table\+Base@{Wid\+Table\+Base}}
+\index{Wid\+Table\+Base@{Wid\+Table\+Base}!Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}}
+\subsubsection{\texorpdfstring{Wid\+Table\+Base()}{WidTableBase()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Mike\+::\+Wid\+Table\+Base\+::\+Wid\+Table\+Base (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{const char $\ast$}]{l,  }\item[{int}]{top\+\_\+row\+\_\+price,  }\item[{int}]{number\+\_\+rows = {\ttfamily 25},  }\item[{int}]{number\+\_\+cols = {\ttfamily 15},  }\item[{int}]{how\+\_\+many\+\_\+cols\+\_\+are\+\_\+buttons = {\ttfamily 5},  }\item[{std\+::vector$<$ std\+::string $>$}]{col\+\_\+names = {\ttfamily \{~\char`\"{}\char`\"{}~\}},  }\item[{std\+::vector$<$ std\+::string $>$}]{button\+\_\+names = {\ttfamily \{~\char`\"{}\char`\"{}~\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_wid_table_base_a66c2828fd13a8abf4f5faa274e632542}\label{class_mike_1_1_wid_table_base_a66c2828fd13a8abf4f5faa274e632542}} 
+\index{Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}!````~Wid\+Table\+Base@{$\sim$\+Wid\+Table\+Base}}
+\index{````~Wid\+Table\+Base@{$\sim$\+Wid\+Table\+Base}!Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}}
+\subsubsection{\texorpdfstring{$\sim$\+Wid\+Table\+Base()}{~WidTableBase()}}
+{\footnotesize\ttfamily Mike\+::\+Wid\+Table\+Base\+::$\sim$\+Wid\+Table\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_mike_1_1_wid_table_base_afba70372ad656f248ca4ea9dc408e41f}\label{class_mike_1_1_wid_table_base_afba70372ad656f248ca4ea9dc408e41f}} 
+\index{Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}!button\+\_\+cb@{button\+\_\+cb}}
+\index{button\+\_\+cb@{button\+\_\+cb}!Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}}
+\subsubsection{\texorpdfstring{button\+\_\+cb()}{button\_cb()}}
+{\footnotesize\ttfamily void Mike\+::\+Wid\+Table\+Base\+::button\+\_\+cb (\begin{DoxyParamCaption}\item[{Fl\+\_\+\+Widget $\ast$}]{w,  }\item[{void $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_wid_table_base_a4779181b9c1eebc13406f9093d665236}\label{class_mike_1_1_wid_table_base_a4779181b9c1eebc13406f9093d665236}} 
+\index{Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}!clear\+All\+Button\+Labels@{clear\+All\+Button\+Labels}}
+\index{clear\+All\+Button\+Labels@{clear\+All\+Button\+Labels}!Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}}
+\subsubsection{\texorpdfstring{clear\+All\+Button\+Labels()}{clearAllButtonLabels()}}
+{\footnotesize\ttfamily void Mike\+::\+Wid\+Table\+Base\+::clear\+All\+Button\+Labels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_wid_table_base_af7acb57a8144c9ab4e01a8300469b98e}\label{class_mike_1_1_wid_table_base_af7acb57a8144c9ab4e01a8300469b98e}} 
+\index{Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}!Clear\+Column@{Clear\+Column}}
+\index{Clear\+Column@{Clear\+Column}!Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}}
+\subsubsection{\texorpdfstring{Clear\+Column()}{ClearColumn()}}
+{\footnotesize\ttfamily void Mike\+::\+Wid\+Table\+Base\+::\+Clear\+Column (\begin{DoxyParamCaption}\item[{int}]{column }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_wid_table_base_a17021ef3e4cea06939284891dc27d61f}\label{class_mike_1_1_wid_table_base_a17021ef3e4cea06939284891dc27d61f}} 
+\index{Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}!Clear\+Row@{Clear\+Row}}
+\index{Clear\+Row@{Clear\+Row}!Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}}
+\subsubsection{\texorpdfstring{Clear\+Row()}{ClearRow()}}
+{\footnotesize\ttfamily void Mike\+::\+Wid\+Table\+Base\+::\+Clear\+Row (\begin{DoxyParamCaption}\item[{int}]{row }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_wid_table_base_a980add59d3d60f68517b48a896e5eb3c}\label{class_mike_1_1_wid_table_base_a980add59d3d60f68517b48a896e5eb3c}} 
+\index{Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}!Col\+Header\+Text@{Col\+Header\+Text}}
+\index{Col\+Header\+Text@{Col\+Header\+Text}!Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}}
+\subsubsection{\texorpdfstring{Col\+Header\+Text()}{ColHeaderText()}}
+{\footnotesize\ttfamily void Mike\+::\+Wid\+Table\+Base\+::\+Col\+Header\+Text (\begin{DoxyParamCaption}\item[{char $\ast$}]{s,  }\item[{int}]{C }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_mike_1_1_wid_table_base_a1a463c054dfd0dc563dedf0fbdaf3232}\label{class_mike_1_1_wid_table_base_a1a463c054dfd0dc563dedf0fbdaf3232}} 
+\index{Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}!draw\+\_\+cell@{draw\+\_\+cell}}
+\index{draw\+\_\+cell@{draw\+\_\+cell}!Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}}
+\subsubsection{\texorpdfstring{draw\+\_\+cell()}{draw\_cell()}}
+{\footnotesize\ttfamily void Mike\+::\+Wid\+Table\+Base\+::draw\+\_\+cell (\begin{DoxyParamCaption}\item[{Table\+Context}]{context,  }\item[{int}]{R = {\ttfamily 0},  }\item[{int}]{C = {\ttfamily 0},  }\item[{int}]{X = {\ttfamily 0},  }\item[{int}]{Y = {\ttfamily 0},  }\item[{int}]{W = {\ttfamily 0},  }\item[{int}]{H = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_wid_table_base_af29863e5a1695c64a748133b335ecc16}\label{class_mike_1_1_wid_table_base_af29863e5a1695c64a748133b335ecc16}} 
+\index{Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}!Get\+Bottom\+Row\+Price@{Get\+Bottom\+Row\+Price}}
+\index{Get\+Bottom\+Row\+Price@{Get\+Bottom\+Row\+Price}!Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}}
+\subsubsection{\texorpdfstring{Get\+Bottom\+Row\+Price()}{GetBottomRowPrice()}}
+{\footnotesize\ttfamily int Mike\+::\+Wid\+Table\+Base\+::\+Get\+Bottom\+Row\+Price (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_mike_1_1_wid_table_base_a8fab1137b438a8ae331c9ceeaae43acb}\label{class_mike_1_1_wid_table_base_a8fab1137b438a8ae331c9ceeaae43acb}} 
+\index{Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}!Get\+Col\+Names@{Get\+Col\+Names}}
+\index{Get\+Col\+Names@{Get\+Col\+Names}!Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}}
+\subsubsection{\texorpdfstring{Get\+Col\+Names()}{GetColNames()}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$$\ast$ Mike\+::\+Wid\+Table\+Base\+::\+Get\+Col\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_mike_1_1_wid_table_base_afac57108a679ea7b3800ab8a14e80209}\label{class_mike_1_1_wid_table_base_afac57108a679ea7b3800ab8a14e80209}} 
+\index{Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}!Get\+Cols@{Get\+Cols}}
+\index{Get\+Cols@{Get\+Cols}!Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}}
+\subsubsection{\texorpdfstring{Get\+Cols()}{GetCols()}}
+{\footnotesize\ttfamily int Mike\+::\+Wid\+Table\+Base\+::\+Get\+Cols (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_mike_1_1_wid_table_base_a5c2de58aec7fa3751862b68f18031f88}\label{class_mike_1_1_wid_table_base_a5c2de58aec7fa3751862b68f18031f88}} 
+\index{Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}!Get\+Element@{Get\+Element}}
+\index{Get\+Element@{Get\+Element}!Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}}
+\subsubsection{\texorpdfstring{Get\+Element()}{GetElement()}}
+{\footnotesize\ttfamily Fl\+\_\+\+Widget $\ast$ Mike\+::\+Wid\+Table\+Base\+::\+Get\+Element (\begin{DoxyParamCaption}\item[{int}]{n\+Row,  }\item[{int}]{n\+Col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_wid_table_base_abdc666dec8fa95e8e6232c9eae6ee8e2}\label{class_mike_1_1_wid_table_base_abdc666dec8fa95e8e6232c9eae6ee8e2}} 
+\index{Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}!Get\+Rows@{Get\+Rows}}
+\index{Get\+Rows@{Get\+Rows}!Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}}
+\subsubsection{\texorpdfstring{Get\+Rows()}{GetRows()}}
+{\footnotesize\ttfamily int Mike\+::\+Wid\+Table\+Base\+::\+Get\+Rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_mike_1_1_wid_table_base_ab9f884cfed7ee50f7037bf1e75258f11}\label{class_mike_1_1_wid_table_base_ab9f884cfed7ee50f7037bf1e75258f11}} 
+\index{Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}!Get\+Top\+Row\+Price@{Get\+Top\+Row\+Price}}
+\index{Get\+Top\+Row\+Price@{Get\+Top\+Row\+Price}!Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}}
+\subsubsection{\texorpdfstring{Get\+Top\+Row\+Price()}{GetTopRowPrice()}}
+{\footnotesize\ttfamily int Mike\+::\+Wid\+Table\+Base\+::\+Get\+Top\+Row\+Price (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_mike_1_1_wid_table_base_afb5e90634ccda27eb8f40a1f2b6208a1}\label{class_mike_1_1_wid_table_base_afb5e90634ccda27eb8f40a1f2b6208a1}} 
+\index{Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}!Price\+Of\+Row@{Price\+Of\+Row}}
+\index{Price\+Of\+Row@{Price\+Of\+Row}!Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}}
+\subsubsection{\texorpdfstring{Price\+Of\+Row()}{PriceOfRow()}}
+{\footnotesize\ttfamily long Mike\+::\+Wid\+Table\+Base\+::\+Price\+Of\+Row (\begin{DoxyParamCaption}\item[{int}]{row }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_mike_1_1_wid_table_base_a22ff7af61bac2dc33e596e68a236b845}\label{class_mike_1_1_wid_table_base_a22ff7af61bac2dc33e596e68a236b845}} 
+\index{Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}!print\+In\+Table@{print\+In\+Table}}
+\index{print\+In\+Table@{print\+In\+Table}!Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}}
+\subsubsection{\texorpdfstring{print\+In\+Table()}{printInTable()}}
+{\footnotesize\ttfamily void Mike\+::\+Wid\+Table\+Base\+::print\+In\+Table (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col,  }\item[{std\+::string}]{text,  }\item[{Fl\+\_\+\+Color}]{background\+Color = {\ttfamily NULL},  }\item[{Fl\+\_\+\+Color}]{text\+Color = {\ttfamily NULL} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_wid_table_base_a590a250d0bb443aef98a7250555d1c68}\label{class_mike_1_1_wid_table_base_a590a250d0bb443aef98a7250555d1c68}} 
+\index{Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}!Row\+Of\+Price@{Row\+Of\+Price}}
+\index{Row\+Of\+Price@{Row\+Of\+Price}!Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}}
+\subsubsection{\texorpdfstring{Row\+Of\+Price()}{RowOfPrice()}}
+{\footnotesize\ttfamily int Mike\+::\+Wid\+Table\+Base\+::\+Row\+Of\+Price (\begin{DoxyParamCaption}\item[{long}]{price }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_mike_1_1_wid_table_base_a52555afc3c0f71ae166d862258303447}\label{class_mike_1_1_wid_table_base_a52555afc3c0f71ae166d862258303447}} 
+\index{Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}!Set\+Cols@{Set\+Cols}}
+\index{Set\+Cols@{Set\+Cols}!Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}}
+\subsubsection{\texorpdfstring{Set\+Cols()}{SetCols()}}
+{\footnotesize\ttfamily void Mike\+::\+Wid\+Table\+Base\+::\+Set\+Cols (\begin{DoxyParamCaption}\item[{int}]{num\+Col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_wid_table_base_a71a0e404a020f7b8d10544113c16a4ce}\label{class_mike_1_1_wid_table_base_a71a0e404a020f7b8d10544113c16a4ce}} 
+\index{Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}!Set\+Columnn\+Width@{Set\+Columnn\+Width}}
+\index{Set\+Columnn\+Width@{Set\+Columnn\+Width}!Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}}
+\subsubsection{\texorpdfstring{Set\+Columnn\+Width()}{SetColumnnWidth()}}
+{\footnotesize\ttfamily virtual void Mike\+::\+Wid\+Table\+Base\+::\+Set\+Columnn\+Width (\begin{DoxyParamCaption}\item[{short}]{width }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_mike_1_1_wid_table_base_a3486b3282392458231cb09f9d9a4e504}\label{class_mike_1_1_wid_table_base_a3486b3282392458231cb09f9d9a4e504}} 
+\index{Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}!Set\+Rows@{Set\+Rows}}
+\index{Set\+Rows@{Set\+Rows}!Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}}
+\subsubsection{\texorpdfstring{Set\+Rows()}{SetRows()}}
+{\footnotesize\ttfamily void Mike\+::\+Wid\+Table\+Base\+::\+Set\+Rows (\begin{DoxyParamCaption}\item[{int}]{num\+Rows }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_wid_table_base_a23f12c24def459d1dde1c53a7e237d4a}\label{class_mike_1_1_wid_table_base_a23f12c24def459d1dde1c53a7e237d4a}} 
+\index{Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}!Set\+Size@{Set\+Size}}
+\index{Set\+Size@{Set\+Size}!Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}}
+\subsubsection{\texorpdfstring{Set\+Size()}{SetSize()}}
+{\footnotesize\ttfamily void Mike\+::\+Wid\+Table\+Base\+::\+Set\+Size (\begin{DoxyParamCaption}\item[{int}]{newrows,  }\item[{int}]{newcols,  }\item[{\hyperlink{class_mike_1_1_wid_table_base}{Wid\+Table\+Base} $\ast$}]{mytable,  }\item[{std\+::vector$<$ std\+::string $>$}]{button\+\_\+names = {\ttfamily \{~\char`\"{}\char`\"{}~\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_wid_table_base_a456b14469434d2fffe513a9d7cc39e25}\label{class_mike_1_1_wid_table_base_a456b14469434d2fffe513a9d7cc39e25}} 
+\index{Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}!Set\+Top\+Row\+Price@{Set\+Top\+Row\+Price}}
+\index{Set\+Top\+Row\+Price@{Set\+Top\+Row\+Price}!Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}}
+\subsubsection{\texorpdfstring{Set\+Top\+Row\+Price()}{SetTopRowPrice()}}
+{\footnotesize\ttfamily void Mike\+::\+Wid\+Table\+Base\+::\+Set\+Top\+Row\+Price (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_mike_1_1_wid_table_base_aed65d79c6e84fd89abceaf6ffa079fad}\label{class_mike_1_1_wid_table_base_aed65d79c6e84fd89abceaf6ffa079fad}} 
+\index{Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}!virt\+Button\+Cb@{virt\+Button\+Cb}}
+\index{virt\+Button\+Cb@{virt\+Button\+Cb}!Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}}
+\subsubsection{\texorpdfstring{virt\+Button\+Cb()}{virtButtonCb()}}
+{\footnotesize\ttfamily virtual void Mike\+::\+Wid\+Table\+Base\+::virt\+Button\+Cb (\begin{DoxyParamCaption}\item[{Fl\+\_\+\+Widget $\ast$}]{w,  }\item[{void $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \hyperlink{class_mike_1_1_widget_table_affddec39940626f7d72ffaf9e02d04e4}{Mike\+::\+Widget\+Table}.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_mike_1_1_wid_table_base_a3890cb6751c73d6d400ecb8ab17d7f2d}\label{class_mike_1_1_wid_table_base_a3890cb6751c73d6d400ecb8ab17d7f2d}} 
+\index{Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}!Simple\+Table\+Window@{Simple\+Table\+Window}}
+\index{Simple\+Table\+Window@{Simple\+Table\+Window}!Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}}
+\subsubsection{\texorpdfstring{Simple\+Table\+Window}{SimpleTableWindow}}
+{\footnotesize\ttfamily friend class Simple\+Table\+Window\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_mike_1_1_wid_table_base_a1f418b75c1d456ef2c167809edfa17db}\label{class_mike_1_1_wid_table_base_a1f418b75c1d456ef2c167809edfa17db}} 
+\index{Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}!Button\+Cols\+Number@{Button\+Cols\+Number}}
+\index{Button\+Cols\+Number@{Button\+Cols\+Number}!Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}}
+\subsubsection{\texorpdfstring{Button\+Cols\+Number}{ButtonColsNumber}}
+{\footnotesize\ttfamily int Mike\+::\+Wid\+Table\+Base\+::\+Button\+Cols\+Number\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_wid_table_base_acc76591b1fa97f8259fc95f492d8e1b9}\label{class_mike_1_1_wid_table_base_acc76591b1fa97f8259fc95f492d8e1b9}} 
+\index{Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}!col\+\_\+names@{col\+\_\+names}}
+\index{col\+\_\+names@{col\+\_\+names}!Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}}
+\subsubsection{\texorpdfstring{col\+\_\+names}{col\_names}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ Mike\+::\+Wid\+Table\+Base\+::col\+\_\+names\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_wid_table_base_a610c3e633ae8fc7290881ffeda317475}\label{class_mike_1_1_wid_table_base_a610c3e633ae8fc7290881ffeda317475}} 
+\index{Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}!column\+Width@{column\+Width}}
+\index{column\+Width@{column\+Width}!Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}}
+\subsubsection{\texorpdfstring{column\+Width}{columnWidth}}
+{\footnotesize\ttfamily short Mike\+::\+Wid\+Table\+Base\+::column\+Width = 55\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_wid_table_base_a50bcff267ab19f59fa27bfb2264f815b}\label{class_mike_1_1_wid_table_base_a50bcff267ab19f59fa27bfb2264f815b}} 
+\index{Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}!shared\+Fl\+Input\+Pointers@{shared\+Fl\+Input\+Pointers}}
+\index{shared\+Fl\+Input\+Pointers@{shared\+Fl\+Input\+Pointers}!Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}}
+\subsubsection{\texorpdfstring{shared\+Fl\+Input\+Pointers}{sharedFlInputPointers}}
+{\footnotesize\ttfamily std\+::stack$<$Fl\+\_\+\+Input$\ast$$>$ Mike\+::\+Wid\+Table\+Base\+::shared\+Fl\+Input\+Pointers\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_mike_1_1_wid_table_base_a286d2c5a539c51110c59cbc3b5121d5b}\label{class_mike_1_1_wid_table_base_a286d2c5a539c51110c59cbc3b5121d5b}} 
+\index{Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}!table\+\_\+cols@{table\+\_\+cols}}
+\index{table\+\_\+cols@{table\+\_\+cols}!Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}}
+\subsubsection{\texorpdfstring{table\+\_\+cols}{table\_cols}}
+{\footnotesize\ttfamily int Mike\+::\+Wid\+Table\+Base\+::table\+\_\+cols\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_wid_table_base_a72f42a61350eb88e259047217fe4d92f}\label{class_mike_1_1_wid_table_base_a72f42a61350eb88e259047217fe4d92f}} 
+\index{Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}!table\+\_\+rows@{table\+\_\+rows}}
+\index{table\+\_\+rows@{table\+\_\+rows}!Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}}
+\subsubsection{\texorpdfstring{table\+\_\+rows}{table\_rows}}
+{\footnotesize\ttfamily int Mike\+::\+Wid\+Table\+Base\+::table\+\_\+rows\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_wid_table_base_a8821c66c2f042e78997e6f2b132b0b4d}\label{class_mike_1_1_wid_table_base_a8821c66c2f042e78997e6f2b132b0b4d}} 
+\index{Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}!tabletype@{tabletype}}
+\index{tabletype@{tabletype}!Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}}
+\subsubsection{\texorpdfstring{tabletype}{tabletype}}
+{\footnotesize\ttfamily short Mike\+::\+Wid\+Table\+Base\+::tabletype = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_wid_table_base_a0b15be1c88a8a50bb65df9eb43027732}\label{class_mike_1_1_wid_table_base_a0b15be1c88a8a50bb65df9eb43027732}} 
+\index{Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}!Top\+Row\+Price@{Top\+Row\+Price}}
+\index{Top\+Row\+Price@{Top\+Row\+Price}!Mike\+::\+Wid\+Table\+Base@{Mike\+::\+Wid\+Table\+Base}}
+\subsubsection{\texorpdfstring{Top\+Row\+Price}{TopRowPrice}}
+{\footnotesize\ttfamily int Mike\+::\+Wid\+Table\+Base\+::\+Top\+Row\+Price\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/work\+In\+Progress/\hyperlink{_wid_table_base_8h}{Wid\+Table\+Base.\+h}\item 
+src/work\+In\+Progress/\hyperlink{_wid_table_base_8cpp}{Wid\+Table\+Base.\+cpp}\end{DoxyCompactItemize}

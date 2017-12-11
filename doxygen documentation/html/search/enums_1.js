@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mikeordertype',['MikeOrderType',['../_mike_enums_8h.html#ab4a7006a6e3be52a2e59ff26198d9ee1',1,'MikeEnums.h']]]
+  ['mikeordertype',['MikeOrderType',['../namespace_mike.html#aa486aea8b1d0d07190982a311394e6cb',1,'Mike']]]
 ];

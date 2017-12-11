@@ -1,0 +1,322 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_mike_1_1_widget_table">
+<title>Mike::WidgetTable class Reference</title>
+<para>
+    <programlisting>#include <link linkend="_widget_table_8h">&lt;WidgetTable.h&gt;</link></programlisting>
+</para>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool widgetTableNeedsClearAll</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Protected Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>UserInterfaceBase * ptr_to_UserInterface</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Control * ptrControl</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::set&lt; long &gt; usedprices</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::set&lt; long &gt; notusedprices</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>short priceCol</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>short bidColumn</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>short askColumn</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>short buyLimitOrderCol</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>short buyStopOrderCol</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>short sellLimitOrderCol</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>short sellStopOrderCol</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>short openPosCol</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>short openPLCol</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>short closedPLCol</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>short totalPLCol</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>short avgPriceCol</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>short windownumber</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_mike_1_1_widget_table_1a2b409a5c6b7f2f4fd589ac0250fc297d">WidgetTable</link> (
+int x, int y, int w, int h, const char * l, <link linkend="class_mike_1_1_user_interface_base">UserInterfaceBase</link> * pUserInterface, int top_row_price, int number_rows, int number_cols, int how_many_cols_are_buttons, std::vector&lt; std::string &gt; col_names, std::vector&lt; std::string &gt; button_names)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_mike_1_1_widget_table_1a1989e5265f9e1d53512d5936d21d41b5">WidgetTable</link> (
+int x, int y, int w, int h, const char * l)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_mike_1_1_widget_table_1a141dd523d530477be58523c3ae2c2365">WidgetTable</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="class_mike_1_1_widget_table_1a4a798ce9e43334f3ee1823c89ee91cf3">printBidAsk</link> (
+long bid, long ask)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="class_mike_1_1_widget_table_1a8e269ede4b6a6ca1ef70ef588aa5e601">printPositions</link> (
+const std::vector&lt; <link linkend="class_mike_1_1_mike_position">MikePosition</link> &gt; * openPositions)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="class_mike_1_1_widget_table_1a4ed53614a2ef8bc68994a84af4b30084">printPositions</link> (
+const std::vector&lt; <link linkend="class_mike_1_1_mike_position">MikePosition</link> &gt; * openPositions, const std::vector&lt; <link linkend="class_mike_1_1_mike_orders_at_price">MikeOrdersAtPrice</link> &gt; * openOrdersAtPrice)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual short <link linkend="class_mike_1_1_widget_table_1a72cefeed8a17eb9abea21c3f38d7fe23">GetBidCol</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual short <link linkend="class_mike_1_1_widget_table_1a7f23d041f5d4eab8103cca41951f7863">GetAskCol</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="class_mike_1_1_widget_table_1affddec39940626f7d72ffaf9e02d04e4">virtButtonCb</link> (
+Fl_Widget * w, void * p)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="class_mike_1_1_widget_table_1ae788064f6ed7b19e9ac42b717ff53567">setBidAskColumns</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="class_mike_1_1_user_interface_base">UserInterfaceBase</link> * <link linkend="class_mike_1_1_widget_table_1a62d2aadd2ee9f9e9f376dd597b5dcd7b">GetUserInterface</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="class_mike_1_1_control">Control</link> * <link linkend="class_mike_1_1_widget_table_1ad5fd734ccfa48b6866554122c8b66667">GetControl</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_mike_1_1_widget_table_1a7c161d452ff10617cafcbc331a92a8b2">PopPriceCol</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="class_mike_1_1_widget_table_1a2b409a5c6b7f2f4fd589ac0250fc297d">
+                <title>Mike::WidgetTable::WidgetTable (int x, int y, int w, int h, const char *l, UserInterfaceBase *pUserInterface, int top_row_price, int number_rows, int number_cols, int how_many_cols_are_buttons=5, std::vector&lt; std::string &gt; col_names={ &quot;&quot; }, std::vector&lt; std::string &gt; button_names={ &quot;&quot; })</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_widget_table_1a1989e5265f9e1d53512d5936d21d41b5">
+                <title>Mike::WidgetTable::WidgetTable (int x, int y, int w, int h, const char *l)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_widget_table_1a141dd523d530477be58523c3ae2c2365">
+                <title>Mike::WidgetTable::WidgetTable ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_widget_table_1a4a798ce9e43334f3ee1823c89ee91cf3">
+                <title>virtual void Mike::WidgetTable::printBidAsk (long bid, long ask)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_widget_table_1a8e269ede4b6a6ca1ef70ef588aa5e601">
+                <title>virtual void Mike::WidgetTable::printPositions (const std::vector&lt; MikePosition &gt; *openPositions)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_widget_table_1a4ed53614a2ef8bc68994a84af4b30084">
+                <title>void Mike::WidgetTable::printPositions (const std::vector&lt; MikePosition &gt; *openPositions, const std::vector&lt; MikeOrdersAtPrice &gt; *openOrdersAtPrice)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_widget_table_1a72cefeed8a17eb9abea21c3f38d7fe23">
+                <title>virtual short Mike::WidgetTable::GetBidCol ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_widget_table_1a7f23d041f5d4eab8103cca41951f7863">
+                <title>virtual short Mike::WidgetTable::GetAskCol ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_widget_table_1affddec39940626f7d72ffaf9e02d04e4">
+                <title>void Mike::WidgetTable::virtButtonCb (Fl_Widget *w, void *p)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_widget_table_1ae788064f6ed7b19e9ac42b717ff53567">
+                <title>void Mike::WidgetTable::setBidAskColumns ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_widget_table_1a62d2aadd2ee9f9e9f376dd597b5dcd7b">
+                <title>UserInterfaceBase* Mike::WidgetTable::GetUserInterface ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_widget_table_1ad5fd734ccfa48b6866554122c8b66667">
+                <title>Control* Mike::WidgetTable::GetControl ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_widget_table_1a7c161d452ff10617cafcbc331a92a8b2">
+                <title>void Mike::WidgetTable::PopPriceCol ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

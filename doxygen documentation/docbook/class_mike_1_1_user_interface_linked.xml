@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_mike_1_1_user_interface_linked">
+<title>Mike::UserInterfaceLinked class Reference</title>
+<para>
+    <programlisting>#include <link linkend="_user_interface_8h">&lt;UserInterface.h&gt;</link></programlisting>
+</para>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>IntegratorPosUI * callbackDest</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_mike_1_1_user_interface_linked_1aa740cbba693f1b5bb18e9415fb986a05">UserInterfaceLinked</link> (
+<link linkend="class_mike_1_1_user_interface_linked_1aa68f3dbce9d9f381bea2f56fda8bfb6b">IntegratorPosUI</link> * ptr)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_mike_1_1_user_interface_linked_1a6bae08d2fe4a3270f2bb42458d843327">UserInterfaceLinked</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="class_mike_1_1_user_interface_linked_1a687ab0f108f97cae19ee81688a45476a">sendWidTableCallback</link> (
+int rowPressed, int colPressed, long price, <link linkend="namespace_mike_1aa486aea8b1d0d07190982a311394e6cb">MikeOrderType</link> tempOrderType, int orderSize)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="class_mike_1_1_user_interface_linked_1a3ad33941e45f2f171cb4db443cb46841">callbkUserInterface</link> (
+<link linkend="namespace_mike_1a9dd611fa3c671b02e477e6b21465cc66">BtnPressed</link> )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="class_mike_1_1_user_interface_linked_1aa740cbba693f1b5bb18e9415fb986a05">
+                <title>Mike::UserInterfaceLinked::UserInterfaceLinked (IntegratorPosUI *ptr)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_user_interface_linked_1a6bae08d2fe4a3270f2bb42458d843327">
+                <title>Mike::UserInterfaceLinked::UserInterfaceLinked ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_user_interface_linked_1a687ab0f108f97cae19ee81688a45476a">
+                <title>virtual void Mike::UserInterfaceLinked::sendWidTableCallback (int rowPressed, int colPressed, long price, MikeOrderType tempOrderType, int orderSize)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_user_interface_linked_1a3ad33941e45f2f171cb4db443cb46841">
+                <title>virtual void Mike::UserInterfaceLinked::callbkUserInterface (BtnPressed)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

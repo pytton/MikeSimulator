@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['nextbtn',['NEXTBTN',['../_mike_enums_8h.html#a4c3a46cee6b1b23836160cf1a9ff8052ad88061c53bebad3a332240e1ae155360',1,'MikeEnums.h']]]
+  ['nextbtn',['NEXTBTN',['../namespace_mike.html#a9dd611fa3c671b02e477e6b21465cc66ad88061c53bebad3a332240e1ae155360',1,'Mike']]],
+  ['notusedprices',['notusedprices',['../class_mike_1_1_widget_table.html#a4a046800392a9e7685f8650495b938aa',1,'Mike::WidgetTable']]]
 ];

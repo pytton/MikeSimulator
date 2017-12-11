@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['buylmt',['BUYLMT',['../_mike_enums_8h.html#ab4a7006a6e3be52a2e59ff26198d9ee1acf21dd16bd73daaff977d2117e7ef90b',1,'MikeEnums.h']]],
-  ['buystp',['BUYSTP',['../_mike_enums_8h.html#ab4a7006a6e3be52a2e59ff26198d9ee1a5910dd759ac9da5880ab4b6f7e142aed',1,'MikeEnums.h']]]
+  ['buylmt',['BUYLMT',['../namespace_mike.html#aa486aea8b1d0d07190982a311394e6cba95eacef5178d46e4cacf51432bd802d1',1,'Mike']]],
+  ['buystp',['BUYSTP',['../namespace_mike.html#aa486aea8b1d0d07190982a311394e6cba790d25ece8bd5d94f9eb23a4d1495e01',1,'Mike']]]
 ];

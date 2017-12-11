@@ -9,56 +9,56 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>Fl_Double_Window * m_window1</para>
+                        <para>Fl_Double_Window * mWindow</para>
                     </listitem>
                 </itemizedlist>
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>Fl_Button * m_btnShowPositions1</para>
+                        <para>Fl_Box * mWindowBox</para>
                     </listitem>
                 </itemizedlist>
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>Fl_Box * m_windowBox</para>
+                        <para>Fl_Button * mBtnShowPositions1</para>
                     </listitem>
                 </itemizedlist>
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>Fl_Button * m_btnShowPositions2</para>
+                        <para>Fl_Button * mBtnShowPositions2</para>
                     </listitem>
                 </itemizedlist>
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>Fl_Button * m_btnShowPositions3</para>
+                        <para>Fl_Button * mBtnShowPositions3</para>
                     </listitem>
                 </itemizedlist>
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>Fl_Button * m_btnShowPositions4</para>
+                        <para>Fl_Button * mBtnShowPositions4</para>
                     </listitem>
                 </itemizedlist>
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>Fl_Button * btnStartLoop</para>
+                        <para>Fl_Button * mBtnStartLoop</para>
                     </listitem>
                 </itemizedlist>
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>Fl_Button * btnStopLoop</para>
+                        <para>Fl_Button * mBtnStopLoop</para>
                     </listitem>
                 </itemizedlist>
             </para>

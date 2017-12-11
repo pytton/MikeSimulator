@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_mike_1_1_my__fl__button">
+<title>Mike::My_fl_button class Reference</title>
+<para>
+    <programlisting>#include <link linkend="_wid_table_base_8h">&lt;WidTableBase.h&gt;</link></programlisting>
+</para>
+        <section>
+            <title>Protected Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int x_pos</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int y_pos</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_mike_1_1_my__fl__button_1a3339012650ecdf33d2cb219ec88e7c45">My_fl_button</link> (
+int x, int y, int w, int h, const char * l)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_mike_1_1_my__fl__button_1a046314695eb006cecb6f54dc0f1057e9">getXpos</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_mike_1_1_my__fl__button_1a6e8291f5f02866c53ac7354b53193367">getYpos</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_mike_1_1_my__fl__button_1a67886921f1394ca398fb9ea3f950fa23">setYpos</link> (
+int y)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_mike_1_1_my__fl__button_1a13bb440e147816fe6ebe80d499735b60">setXpos</link> (
+int x)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="class_mike_1_1_my__fl__button_1a3339012650ecdf33d2cb219ec88e7c45">
+                <title>Mike::My_fl_button::My_fl_button (int x, int y, int w, int h, const char *l)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_my__fl__button_1a046314695eb006cecb6f54dc0f1057e9">
+                <title>int Mike::My_fl_button::getXpos ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_my__fl__button_1a6e8291f5f02866c53ac7354b53193367">
+                <title>int Mike::My_fl_button::getYpos ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_my__fl__button_1a67886921f1394ca398fb9ea3f950fa23">
+                <title>void Mike::My_fl_button::setYpos (int y)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_my__fl__button_1a13bb440e147816fe6ebe80d499735b60">
+                <title>void Mike::My_fl_button::setXpos (int x)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

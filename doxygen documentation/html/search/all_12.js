@@ -1,0 +1,11 @@
+var searchData=
+[
+  ['widgettable',['WidgetTable',['../class_mike_1_1_widget_table.html',1,'Mike::WidgetTable'],['../class_mike_1_1_mike_position.html#abcbb78a2aa9a92d43c9ea7c42cbc681e',1,'Mike::MikePosition::WidgetTable()'],['../class_mike_1_1_user_interface_base.html#abcbb78a2aa9a92d43c9ea7c42cbc681e',1,'Mike::UserInterfaceBase::WidgetTable()'],['../class_mike_1_1_widget_table.html#a2b409a5c6b7f2f4fd589ac0250fc297d',1,'Mike::WidgetTable::WidgetTable(int x, int y, int w, int h, const char *l, UserInterfaceBase *pUserInterface, int top_row_price, int number_rows, int number_cols, int how_many_cols_are_buttons=5, std::vector&lt; std::string &gt; col_names={ &quot;&quot; }, std::vector&lt; std::string &gt; button_names={ &quot;&quot; })'],['../class_mike_1_1_widget_table.html#a1989e5265f9e1d53512d5936d21d41b5',1,'Mike::WidgetTable::WidgetTable(int x, int y, int w, int h, const char *l)'],['../class_mike_1_1_widget_table.html#a141dd523d530477be58523c3ae2c2365',1,'Mike::WidgetTable::WidgetTable()']]],
+  ['widgettable_2ecpp',['WidgetTable.cpp',['../_widget_table_8cpp.html',1,'']]],
+  ['widgettable_2eh',['WidgetTable.h',['../_widget_table_8h.html',1,'']]],
+  ['widgettableneedsclearall',['widgetTableNeedsClearAll',['../class_mike_1_1_widget_table.html#a4036058693902d510469a59b9466a366',1,'Mike::WidgetTable']]],
+  ['widtablebase',['WidTableBase',['../class_mike_1_1_wid_table_base.html',1,'Mike::WidTableBase'],['../class_mike_1_1_wid_table_base.html#aa9d89f83f34c4ce8f0655ff3437374a5',1,'Mike::WidTableBase::WidTableBase(int x, int y, int w, int h, const char *l)'],['../class_mike_1_1_wid_table_base.html#aa2cee360b485c40a08c556da54ffa439',1,'Mike::WidTableBase::WidTableBase(int x, int y, int w, int h, const char *l, int top_row_price, int number_rows=25, int number_cols=15, int how_many_cols_are_buttons=5, std::vector&lt; std::string &gt; col_names={ &quot;&quot; }, std::vector&lt; std::string &gt; button_names={ &quot;&quot; })']]],
+  ['widtablebase_2ecpp',['WidTableBase.cpp',['../_wid_table_base_8cpp.html',1,'']]],
+  ['widtablebase_2eh',['WidTableBase.h',['../_wid_table_base_8h.html',1,'']]],
+  ['windownumber',['windownumber',['../class_mike_1_1_widget_table.html#a16ce4e53a1c455b630399f87d154e5ed',1,'Mike::WidgetTable']]]
+];

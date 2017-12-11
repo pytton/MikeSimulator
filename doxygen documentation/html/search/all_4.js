@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['datacontrolwindow',['dataControlWindow',['../class_mike_1_1_control.html#aaf1b458116247ebada43f8bb8faf3edf',1,'Mike::Control']]],
-  ['dataui',['DataUI',['../class_mike_1_1_control.html#addbe39ef40982f0a4002b6f74091a799',1,'Mike::Control']]],
-  ['downbtn',['DOWNBTN',['../_mike_enums_8h.html#a4c3a46cee6b1b23836160cf1a9ff8052a46d3bb51d595458598fa22b21480e5cb',1,'MikeEnums.h']]]
+  ['eraseall',['eraseall',['../class_mike_1_1_mike_orders_at_price.html#a75b42dff63234fb5b8a2d2f30b9bea47',1,'Mike::MikeOrdersAtPrice']]],
+  ['experiment',['EXPERIMENT',['../namespace_mike.html#a9dd611fa3c671b02e477e6b21465cc66a8df329b49b6668b7b1ec13ba71c72864',1,'Mike']]],
+  ['extrabtn',['EXTRABTN',['../namespace_mike.html#a9dd611fa3c671b02e477e6b21465cc66a2f29ae51ab6f869980ca89cd5f2ee9e0',1,'Mike']]]
 ];

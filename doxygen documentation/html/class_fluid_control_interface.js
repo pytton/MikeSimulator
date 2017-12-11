@@ -1,12 +1,12 @@
 var class_fluid_control_interface =
 [
     [ "FluidControlInterface", "class_fluid_control_interface.html#a4cb172a43e95b2852f30807e9037a9d9", null ],
-    [ "btnStartLoop", "class_fluid_control_interface.html#a70b369e5c14edbf6415d2dc26c33b9d0", null ],
-    [ "btnStopLoop", "class_fluid_control_interface.html#a2074a5b56d8fb0e88f1f4da84dfc5296", null ],
-    [ "m_btnShowPositions1", "class_fluid_control_interface.html#aa98b7fdaecb2d588e5decc52f23919fb", null ],
-    [ "m_btnShowPositions2", "class_fluid_control_interface.html#acc9ea2ec328a79737c722c6f7a3b236d", null ],
-    [ "m_btnShowPositions3", "class_fluid_control_interface.html#acd3d58fda18fea04d02874461097c510", null ],
-    [ "m_btnShowPositions4", "class_fluid_control_interface.html#a507c8f8707e6735a1f651e0cf9d5a51b", null ],
-    [ "m_window1", "class_fluid_control_interface.html#ab318bb377679cd76946bb68fc505652f", null ],
-    [ "m_windowBox", "class_fluid_control_interface.html#a04185b8fd0895dfc2b77a77c9eb61bc8", null ]
+    [ "mBtnShowPositions1", "class_fluid_control_interface.html#adc41c1528cbec12780e89140de2f8913", null ],
+    [ "mBtnShowPositions2", "class_fluid_control_interface.html#a3d74260a0b459e570427438dc5077db0", null ],
+    [ "mBtnShowPositions3", "class_fluid_control_interface.html#aedea42f561d246eb95442e13a88f8d23", null ],
+    [ "mBtnShowPositions4", "class_fluid_control_interface.html#a3827651fb223790ca880f23312266dde", null ],
+    [ "mBtnStartLoop", "class_fluid_control_interface.html#a7d1930c1f10db9e39ce691f504b81387", null ],
+    [ "mBtnStopLoop", "class_fluid_control_interface.html#a885b36cf5c6e5ab82a2b6636579d840e", null ],
+    [ "mWindow", "class_fluid_control_interface.html#a94da1536108cd2bd24edefd8711ca510", null ],
+    [ "mWindowBox", "class_fluid_control_interface.html#aad9032c096ff2feb1c72f534012282c9", null ]
 ];

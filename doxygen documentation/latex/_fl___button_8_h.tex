@@ -1,0 +1,68 @@
+\hypertarget{_fl___button_8_h}{}\section{F\+L\+T\+K/\+F\+L/\+Fl\+\_\+\+Button.H File Reference}
+\label{_fl___button_8_h}\index{F\+L\+T\+K/\+F\+L/\+Fl\+\_\+\+Button.\+H@{F\+L\+T\+K/\+F\+L/\+Fl\+\_\+\+Button.\+H}}
+{\ttfamily \#include \char`\"{}Fl\+\_\+\+Widget.\+H\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_fl___button}{Fl\+\_\+\+Button}
+\begin{DoxyCompactList}\small\item\em Buttons generate callbacks when they are clicked by the user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_fl___button_8_h_aa6c0d9d14d04aad8aa41289e7b8aa588}{F\+L\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+B\+U\+T\+T\+ON}~0
+\item 
+\#define \hyperlink{_fl___button_8_h_a5afdb5adfef9c1555b5a4165c5404cc1}{F\+L\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+B\+U\+T\+T\+ON}~1
+\begin{DoxyCompactList}\small\item\em value() toggles between 0 and 1 at every click of the button \end{DoxyCompactList}\item 
+\#define \hyperlink{_fl___button_8_h_aa2d288c51fe96434d1d163a9fa49c33c}{F\+L\+\_\+\+R\+A\+D\+I\+O\+\_\+\+B\+U\+T\+T\+ON}~(\hyperlink{_fl___widget_8_h_ad300ac1cbbe7744c87fc376ce0eb9cc7}{F\+L\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+T\+Y\+PE}+2)
+\item 
+\#define \hyperlink{_fl___button_8_h_aefb893509f5b5834310f2004fdde4d17}{F\+L\+\_\+\+H\+I\+D\+D\+E\+N\+\_\+\+B\+U\+T\+T\+ON}~3
+\begin{DoxyCompactList}\small\item\em for Forms compatibility \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_fl___export_8_h_aa9ba29a18aee9d738370a06eeb4470fc}{F\+L\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{fl__types_8h_a37ec1cd050a604a45dff00efba45609d}{Fl\+\_\+\+Shortcut} \hyperlink{_fl___button_8_h_a3126c385bf20f21725bf2c3d0fef6e1c}{fl\+\_\+old\+\_\+shortcut} (const char $\ast$)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_fl___button_8_h_aefb893509f5b5834310f2004fdde4d17}\label{_fl___button_8_h_aefb893509f5b5834310f2004fdde4d17}} 
+\index{Fl\+\_\+\+Button.\+H@{Fl\+\_\+\+Button.\+H}!F\+L\+\_\+\+H\+I\+D\+D\+E\+N\+\_\+\+B\+U\+T\+T\+ON@{F\+L\+\_\+\+H\+I\+D\+D\+E\+N\+\_\+\+B\+U\+T\+T\+ON}}
+\index{F\+L\+\_\+\+H\+I\+D\+D\+E\+N\+\_\+\+B\+U\+T\+T\+ON@{F\+L\+\_\+\+H\+I\+D\+D\+E\+N\+\_\+\+B\+U\+T\+T\+ON}!Fl\+\_\+\+Button.\+H@{Fl\+\_\+\+Button.\+H}}
+\subsubsection{\texorpdfstring{F\+L\+\_\+\+H\+I\+D\+D\+E\+N\+\_\+\+B\+U\+T\+T\+ON}{FL\_HIDDEN\_BUTTON}}
+{\footnotesize\ttfamily \#define F\+L\+\_\+\+H\+I\+D\+D\+E\+N\+\_\+\+B\+U\+T\+T\+ON~3}
+
+
+
+for Forms compatibility 
+
+\mbox{\Hypertarget{_fl___button_8_h_aa6c0d9d14d04aad8aa41289e7b8aa588}\label{_fl___button_8_h_aa6c0d9d14d04aad8aa41289e7b8aa588}} 
+\index{Fl\+\_\+\+Button.\+H@{Fl\+\_\+\+Button.\+H}!F\+L\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+B\+U\+T\+T\+ON@{F\+L\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+B\+U\+T\+T\+ON}}
+\index{F\+L\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+B\+U\+T\+T\+ON@{F\+L\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+B\+U\+T\+T\+ON}!Fl\+\_\+\+Button.\+H@{Fl\+\_\+\+Button.\+H}}
+\subsubsection{\texorpdfstring{F\+L\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+B\+U\+T\+T\+ON}{FL\_NORMAL\_BUTTON}}
+{\footnotesize\ttfamily \#define F\+L\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+B\+U\+T\+T\+ON~0}
+
+value() will be set to 1 during the press of the button and reverts back to 0 when the button is released \mbox{\Hypertarget{_fl___button_8_h_aa2d288c51fe96434d1d163a9fa49c33c}\label{_fl___button_8_h_aa2d288c51fe96434d1d163a9fa49c33c}} 
+\index{Fl\+\_\+\+Button.\+H@{Fl\+\_\+\+Button.\+H}!F\+L\+\_\+\+R\+A\+D\+I\+O\+\_\+\+B\+U\+T\+T\+ON@{F\+L\+\_\+\+R\+A\+D\+I\+O\+\_\+\+B\+U\+T\+T\+ON}}
+\index{F\+L\+\_\+\+R\+A\+D\+I\+O\+\_\+\+B\+U\+T\+T\+ON@{F\+L\+\_\+\+R\+A\+D\+I\+O\+\_\+\+B\+U\+T\+T\+ON}!Fl\+\_\+\+Button.\+H@{Fl\+\_\+\+Button.\+H}}
+\subsubsection{\texorpdfstring{F\+L\+\_\+\+R\+A\+D\+I\+O\+\_\+\+B\+U\+T\+T\+ON}{FL\_RADIO\_BUTTON}}
+{\footnotesize\ttfamily \#define F\+L\+\_\+\+R\+A\+D\+I\+O\+\_\+\+B\+U\+T\+T\+ON~(\hyperlink{_fl___widget_8_h_ad300ac1cbbe7744c87fc376ce0eb9cc7}{F\+L\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+T\+Y\+PE}+2)}
+
+is set to 1 at button press, and all other buttons in the same group with {\ttfamily type() == F\+L\+\_\+\+R\+A\+D\+I\+O\+\_\+\+B\+U\+T\+T\+ON} are set to zero. \mbox{\Hypertarget{_fl___button_8_h_a5afdb5adfef9c1555b5a4165c5404cc1}\label{_fl___button_8_h_a5afdb5adfef9c1555b5a4165c5404cc1}} 
+\index{Fl\+\_\+\+Button.\+H@{Fl\+\_\+\+Button.\+H}!F\+L\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+B\+U\+T\+T\+ON@{F\+L\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+B\+U\+T\+T\+ON}}
+\index{F\+L\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+B\+U\+T\+T\+ON@{F\+L\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+B\+U\+T\+T\+ON}!Fl\+\_\+\+Button.\+H@{Fl\+\_\+\+Button.\+H}}
+\subsubsection{\texorpdfstring{F\+L\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+B\+U\+T\+T\+ON}{FL\_TOGGLE\_BUTTON}}
+{\footnotesize\ttfamily \#define F\+L\+\_\+\+T\+O\+G\+G\+L\+E\+\_\+\+B\+U\+T\+T\+ON~1}
+
+
+
+value() toggles between 0 and 1 at every click of the button 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_fl___button_8_h_a3126c385bf20f21725bf2c3d0fef6e1c}\label{_fl___button_8_h_a3126c385bf20f21725bf2c3d0fef6e1c}} 
+\index{Fl\+\_\+\+Button.\+H@{Fl\+\_\+\+Button.\+H}!fl\+\_\+old\+\_\+shortcut@{fl\+\_\+old\+\_\+shortcut}}
+\index{fl\+\_\+old\+\_\+shortcut@{fl\+\_\+old\+\_\+shortcut}!Fl\+\_\+\+Button.\+H@{Fl\+\_\+\+Button.\+H}}
+\subsubsection{\texorpdfstring{fl\+\_\+old\+\_\+shortcut()}{fl\_old\_shortcut()}}
+{\footnotesize\ttfamily \hyperlink{_fl___export_8_h_aa9ba29a18aee9d738370a06eeb4470fc}{F\+L\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{fl__types_8h_a37ec1cd050a604a45dff00efba45609d}{Fl\+\_\+\+Shortcut} fl\+\_\+old\+\_\+shortcut (\begin{DoxyParamCaption}\item[{const char $\ast$}]{ }\end{DoxyParamCaption})}
+

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['isactive',['isActive',['../class_mike_position.html#a71ffc762cb81d7b32a68294ede633f0d',1,'MikePosition']]],
-  ['isfilled',['isFilled',['../class_mike_order.html#af48f9d511cab7de91c33eeeb108c334a',1,'MikeOrder']]]
+  ['isfilled',['isFilled',['../class_mike_1_1_mike_order.html#a835f8f61eb1eb1afcc409a5633612045',1,'Mike::MikeOrder']]]
 ];

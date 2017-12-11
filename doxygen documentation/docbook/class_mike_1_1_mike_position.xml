@@ -1,0 +1,187 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_mike_1_1_mike_position">
+<title>Mike::MikePosition class Reference</title>
+<para>
+    <programlisting>#include <link linkend="_mike_enums_8h">&lt;MikeEnums.h&gt;</link></programlisting>
+</para>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>long mPositionPrice</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>long mPositionOpenAmount</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>long mOpenPL</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>long mClosedPL</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>long mTotalPL</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool mIsActive</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>long mPrevbidprice</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>long mPrevaskprice</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="class_mike_1_1_mike_position_1acd1cfa66162ab937ac369a25645b7ac3">checkifActive</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_mike_1_1_mike_position_1acc61ff4360ca7ff0adc2773f4e6edbfa">setActive</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_mike_1_1_mike_position_1a676371436dcf535be28c28eb45fc237d">setInactive</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_mike_1_1_mike_position_1a2bfb2f57faa3be7f9958345ddb438b03">fill</link> (
+long fillprice, long filledamount)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_mike_1_1_mike_position_1a4530507292631b2accf01cf35c49103b">calculatePL</link> (
+long bidprice, long askprice)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para>A single position for a particular price - open amount, openPL, closedPL, totalPL. One Positions class can have many single <link linkend="class_mike_1_1_mike_position">MikePosition</link> members - but only one for a particular price point. </para>
+                <para>Definition at line 104 of file MikeEnums.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>MikeEnums.h</para></listitem></itemizedlist></para>
+        </simplesect>
+        <section>
+            <title>Member Data Documentation</title>
+            <simplesect>
+                <title>long Mike::MikePosition::mPositionPrice</title>                
+<para>price in cents </para>
+
+                <para>Definition at line 108 of file MikeEnums.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>MikeEnums.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>long Mike::MikePosition::mPositionOpenAmount</title>                
+<para>positive open_amount means the position is &apos;long&apos;. negative open_amount means the position is &apos;short&apos;. </para>
+
+                <para>Definition at line 110 of file MikeEnums.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>MikeEnums.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>long Mike::MikePosition::mOpenPL</title>                
+<para>open profit/loss. call calculatePL(bidprice, askprice) to update this </para>
+
+                <para>Definition at line 112 of file MikeEnums.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>MikeEnums.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>long Mike::MikePosition::mTotalPL</title>                
+<para>total profit/loss for this price </para>
+
+                <para>Definition at line 116 of file MikeEnums.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>MikeEnums.h</para></listitem></itemizedlist></para>
+            </simplesect>
+        </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="class_mike_1_1_mike_position_1acd1cfa66162ab937ac369a25645b7ac3">
+                <title>bool Mike::MikePosition::checkifActive ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_mike_position_1acc61ff4360ca7ff0adc2773f4e6edbfa">
+                <title>void Mike::MikePosition::setActive ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_mike_position_1a676371436dcf535be28c28eb45fc237d">
+                <title>void Mike::MikePosition::setInactive ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_mike_position_1a2bfb2f57faa3be7f9958345ddb438b03">
+                <title>void Mike::MikePosition::fill (long fillprice, long filledamount)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_mike_position_1a4530507292631b2accf01cf35c49103b">
+                <title>void Mike::MikePosition::calculatePL (long bidprice, long askprice)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

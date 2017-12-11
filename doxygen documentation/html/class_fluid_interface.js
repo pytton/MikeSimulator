@@ -1,0 +1,25 @@
+var class_fluid_interface =
+[
+    [ "FluidInterface", "class_fluid_interface.html#a8d908e649929ac29ee7c7ea1d58972be", null ],
+    [ "m_AvgPosPrice", "class_fluid_interface.html#a6106c5c65a144e105a586e989250ffa3", null ],
+    [ "m_bottom_limit", "class_fluid_interface.html#a934958466791ab5e58dc419e83e841e9", null ],
+    [ "m_bottom_profit", "class_fluid_interface.html#ac19438e0f4c4e8578dc19924baa22757", null ],
+    [ "m_btn_CancelAllOrders", "class_fluid_interface.html#a974f975acf9f9be805e25908978d879b", null ],
+    [ "m_btn_checkFills", "class_fluid_interface.html#a508b3c5a146b4275534b2c6881740282", null ],
+    [ "m_btn_ClearPositions", "class_fluid_interface.html#a479ef6af6e3c45db0f51a2b95a065672", null ],
+    [ "m_btn_extra", "class_fluid_interface.html#aa022e70f1c8931e1e900dd02fcc0edb8", null ],
+    [ "m_btn_printOrders", "class_fluid_interface.html#aaaf08b63cd10cc8d3b247e4d24da6e5a", null ],
+    [ "m_btn_printPos", "class_fluid_interface.html#af62f75d2e5b156fe243becb5635f2bf3", null ],
+    [ "m_btn_resetOrdSize", "class_fluid_interface.html#a9173a1074dddfe66553518d7caa8f9d1", null ],
+    [ "m_curr_ask", "class_fluid_interface.html#ad3602a1cc7b792c75382ea9499ab8dd7", null ],
+    [ "m_curr_bid", "class_fluid_interface.html#a510a2ac2cf61761833226823f434a72c", null ],
+    [ "m_order_size", "class_fluid_interface.html#ae24f85770e0950a85ad3edf40bac3321", null ],
+    [ "m_table", "class_fluid_interface.html#a18542e676efe12b02f8f942a9cec8a62", null ],
+    [ "m_top_limit", "class_fluid_interface.html#a81b5e83db29bcbfee9e6affed03befbf", null ],
+    [ "m_top_profit", "class_fluid_interface.html#abea73a05d352082acbecb7e16210708c", null ],
+    [ "m_TotClosedPL", "class_fluid_interface.html#ac0b9cbb054516b180ea22b1df083aaf6", null ],
+    [ "m_TotOpenPL", "class_fluid_interface.html#aca2934bd9b472aa0abd681b401d619fa", null ],
+    [ "m_TotOpenPos", "class_fluid_interface.html#a7527438818bbe46c24eaa4bf2937edd7", null ],
+    [ "m_TotPL", "class_fluid_interface.html#acb76315615db2a907ba49a8c0a8f24aa", null ],
+    [ "m_window1", "class_fluid_interface.html#a460e32e78feb976474ee0735d0e9fb1c", null ]
+];

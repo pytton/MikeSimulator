@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_mike_u_i">
+<title>MikeUI class Reference</title>
+<para>
+    <programlisting>#include <link linkend="_mike_u_i_8h">&lt;MikeUI.h&gt;</link></programlisting>
+</para>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_mike_u_i_1a8919b872efda1c51af76e7e461f16f5f">MikeUI</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_mike_u_i_1a492b2e08d03c9bb9b8c7ad5d54467bff">~MikeUI</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="class_mike_u_i_1a8919b872efda1c51af76e7e461f16f5f">
+                <title>MikeUI::MikeUI ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_u_i_1a492b2e08d03c9bb9b8c7ad5d54467bff">
+                <title>MikeUI::~MikeUI ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

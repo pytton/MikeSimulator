@@ -1,0 +1,147 @@
+\hypertarget{class_mike_1_1_mike_position}{}\section{Mike\+:\+:Mike\+Position Class Reference}
+\label{class_mike_1_1_mike_position}\index{Mike\+::\+Mike\+Position@{Mike\+::\+Mike\+Position}}
+
+
+{\ttfamily \#include $<$Mike\+Enums.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_mike_1_1_mike_position_acd1cfa66162ab937ac369a25645b7ac3}{checkif\+Active} ()
+\item 
+void \hyperlink{class_mike_1_1_mike_position_acc61ff4360ca7ff0adc2773f4e6edbfa}{set\+Active} ()
+\item 
+void \hyperlink{class_mike_1_1_mike_position_a676371436dcf535be28c28eb45fc237d}{set\+Inactive} ()
+\item 
+void \hyperlink{class_mike_1_1_mike_position_a2bfb2f57faa3be7f9958345ddb438b03}{fill} (long fillprice, long filledamount)
+\item 
+void \hyperlink{class_mike_1_1_mike_position_a4530507292631b2accf01cf35c49103b}{calculate\+PL} (long bidprice, long askprice)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+long \hyperlink{class_mike_1_1_mike_position_aeb47a1ecac92630f59c4ce24da59cc7b}{m\+Position\+Price} = 0
+\item 
+long \hyperlink{class_mike_1_1_mike_position_a3d55782c0ee13efca342ca0c7cb8431e}{m\+Position\+Open\+Amount} = 0
+\item 
+long \hyperlink{class_mike_1_1_mike_position_a63c1b720a7b83cad039a584cb41133c8}{m\+Open\+PL} = 0
+\item 
+long \hyperlink{class_mike_1_1_mike_position_a3f4c68d85dec90c8ad5d5d0c4eafb249}{m\+Closed\+PL} = 0
+\item 
+long \hyperlink{class_mike_1_1_mike_position_a93759730506f9f9b612c6f5f2b79935d}{m\+Total\+PL} = 0
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_mike_1_1_mike_position_ad02c9d99e625e381926c8b59d137dd39}{m\+Is\+Active} = false
+\item 
+long \hyperlink{class_mike_1_1_mike_position_a84c3a8e75acb7fb08097c9c08e97d72d}{m\+Prevbidprice} = 0
+\item 
+long \hyperlink{class_mike_1_1_mike_position_a607eb417a9553d4c32177f2e95d761ce}{m\+Prevaskprice} = 0
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_mike_1_1_mike_position_abcbb78a2aa9a92d43c9ea7c42cbc681e}{Widget\+Table}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A single position for a particular price -\/ open amount, open\+PL, closed\+PL, total\+PL. One Positions class can have many single \hyperlink{class_mike_1_1_mike_position}{Mike\+Position} members -\/ but only one for a particular price point. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_mike_1_1_mike_position_a4530507292631b2accf01cf35c49103b}\label{class_mike_1_1_mike_position_a4530507292631b2accf01cf35c49103b}} 
+\index{Mike\+::\+Mike\+Position@{Mike\+::\+Mike\+Position}!calculate\+PL@{calculate\+PL}}
+\index{calculate\+PL@{calculate\+PL}!Mike\+::\+Mike\+Position@{Mike\+::\+Mike\+Position}}
+\subsubsection{\texorpdfstring{calculate\+P\+L()}{calculatePL()}}
+{\footnotesize\ttfamily void Mike\+::\+Mike\+Position\+::calculate\+PL (\begin{DoxyParamCaption}\item[{long}]{bidprice,  }\item[{long}]{askprice }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_mike_1_1_mike_position_acd1cfa66162ab937ac369a25645b7ac3}\label{class_mike_1_1_mike_position_acd1cfa66162ab937ac369a25645b7ac3}} 
+\index{Mike\+::\+Mike\+Position@{Mike\+::\+Mike\+Position}!checkif\+Active@{checkif\+Active}}
+\index{checkif\+Active@{checkif\+Active}!Mike\+::\+Mike\+Position@{Mike\+::\+Mike\+Position}}
+\subsubsection{\texorpdfstring{checkif\+Active()}{checkifActive()}}
+{\footnotesize\ttfamily bool Mike\+::\+Mike\+Position\+::checkif\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_mike_1_1_mike_position_a2bfb2f57faa3be7f9958345ddb438b03}\label{class_mike_1_1_mike_position_a2bfb2f57faa3be7f9958345ddb438b03}} 
+\index{Mike\+::\+Mike\+Position@{Mike\+::\+Mike\+Position}!fill@{fill}}
+\index{fill@{fill}!Mike\+::\+Mike\+Position@{Mike\+::\+Mike\+Position}}
+\subsubsection{\texorpdfstring{fill()}{fill()}}
+{\footnotesize\ttfamily void Mike\+::\+Mike\+Position\+::fill (\begin{DoxyParamCaption}\item[{long}]{fillprice,  }\item[{long}]{filledamount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_mike_1_1_mike_position_acc61ff4360ca7ff0adc2773f4e6edbfa}\label{class_mike_1_1_mike_position_acc61ff4360ca7ff0adc2773f4e6edbfa}} 
+\index{Mike\+::\+Mike\+Position@{Mike\+::\+Mike\+Position}!set\+Active@{set\+Active}}
+\index{set\+Active@{set\+Active}!Mike\+::\+Mike\+Position@{Mike\+::\+Mike\+Position}}
+\subsubsection{\texorpdfstring{set\+Active()}{setActive()}}
+{\footnotesize\ttfamily void Mike\+::\+Mike\+Position\+::set\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_mike_1_1_mike_position_a676371436dcf535be28c28eb45fc237d}\label{class_mike_1_1_mike_position_a676371436dcf535be28c28eb45fc237d}} 
+\index{Mike\+::\+Mike\+Position@{Mike\+::\+Mike\+Position}!set\+Inactive@{set\+Inactive}}
+\index{set\+Inactive@{set\+Inactive}!Mike\+::\+Mike\+Position@{Mike\+::\+Mike\+Position}}
+\subsubsection{\texorpdfstring{set\+Inactive()}{setInactive()}}
+{\footnotesize\ttfamily void Mike\+::\+Mike\+Position\+::set\+Inactive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_mike_1_1_mike_position_abcbb78a2aa9a92d43c9ea7c42cbc681e}\label{class_mike_1_1_mike_position_abcbb78a2aa9a92d43c9ea7c42cbc681e}} 
+\index{Mike\+::\+Mike\+Position@{Mike\+::\+Mike\+Position}!Widget\+Table@{Widget\+Table}}
+\index{Widget\+Table@{Widget\+Table}!Mike\+::\+Mike\+Position@{Mike\+::\+Mike\+Position}}
+\subsubsection{\texorpdfstring{Widget\+Table}{WidgetTable}}
+{\footnotesize\ttfamily friend class \hyperlink{class_mike_1_1_widget_table}{Widget\+Table}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_mike_1_1_mike_position_a3f4c68d85dec90c8ad5d5d0c4eafb249}\label{class_mike_1_1_mike_position_a3f4c68d85dec90c8ad5d5d0c4eafb249}} 
+\index{Mike\+::\+Mike\+Position@{Mike\+::\+Mike\+Position}!m\+Closed\+PL@{m\+Closed\+PL}}
+\index{m\+Closed\+PL@{m\+Closed\+PL}!Mike\+::\+Mike\+Position@{Mike\+::\+Mike\+Position}}
+\subsubsection{\texorpdfstring{m\+Closed\+PL}{mClosedPL}}
+{\footnotesize\ttfamily long Mike\+::\+Mike\+Position\+::m\+Closed\+PL = 0}
+
+\mbox{\Hypertarget{class_mike_1_1_mike_position_ad02c9d99e625e381926c8b59d137dd39}\label{class_mike_1_1_mike_position_ad02c9d99e625e381926c8b59d137dd39}} 
+\index{Mike\+::\+Mike\+Position@{Mike\+::\+Mike\+Position}!m\+Is\+Active@{m\+Is\+Active}}
+\index{m\+Is\+Active@{m\+Is\+Active}!Mike\+::\+Mike\+Position@{Mike\+::\+Mike\+Position}}
+\subsubsection{\texorpdfstring{m\+Is\+Active}{mIsActive}}
+{\footnotesize\ttfamily bool Mike\+::\+Mike\+Position\+::m\+Is\+Active = false\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_mike_1_1_mike_position_a63c1b720a7b83cad039a584cb41133c8}\label{class_mike_1_1_mike_position_a63c1b720a7b83cad039a584cb41133c8}} 
+\index{Mike\+::\+Mike\+Position@{Mike\+::\+Mike\+Position}!m\+Open\+PL@{m\+Open\+PL}}
+\index{m\+Open\+PL@{m\+Open\+PL}!Mike\+::\+Mike\+Position@{Mike\+::\+Mike\+Position}}
+\subsubsection{\texorpdfstring{m\+Open\+PL}{mOpenPL}}
+{\footnotesize\ttfamily long Mike\+::\+Mike\+Position\+::m\+Open\+PL = 0}
+
+open profit/loss. call calculate\+P\+L(bidprice, askprice) to update this \mbox{\Hypertarget{class_mike_1_1_mike_position_a3d55782c0ee13efca342ca0c7cb8431e}\label{class_mike_1_1_mike_position_a3d55782c0ee13efca342ca0c7cb8431e}} 
+\index{Mike\+::\+Mike\+Position@{Mike\+::\+Mike\+Position}!m\+Position\+Open\+Amount@{m\+Position\+Open\+Amount}}
+\index{m\+Position\+Open\+Amount@{m\+Position\+Open\+Amount}!Mike\+::\+Mike\+Position@{Mike\+::\+Mike\+Position}}
+\subsubsection{\texorpdfstring{m\+Position\+Open\+Amount}{mPositionOpenAmount}}
+{\footnotesize\ttfamily long Mike\+::\+Mike\+Position\+::m\+Position\+Open\+Amount = 0}
+
+positive open\+\_\+amount means the position is \textquotesingle{}long\textquotesingle{}. negative open\+\_\+amount means the position is \textquotesingle{}short\textquotesingle{}. \mbox{\Hypertarget{class_mike_1_1_mike_position_aeb47a1ecac92630f59c4ce24da59cc7b}\label{class_mike_1_1_mike_position_aeb47a1ecac92630f59c4ce24da59cc7b}} 
+\index{Mike\+::\+Mike\+Position@{Mike\+::\+Mike\+Position}!m\+Position\+Price@{m\+Position\+Price}}
+\index{m\+Position\+Price@{m\+Position\+Price}!Mike\+::\+Mike\+Position@{Mike\+::\+Mike\+Position}}
+\subsubsection{\texorpdfstring{m\+Position\+Price}{mPositionPrice}}
+{\footnotesize\ttfamily long Mike\+::\+Mike\+Position\+::m\+Position\+Price = 0}
+
+price in cents \mbox{\Hypertarget{class_mike_1_1_mike_position_a607eb417a9553d4c32177f2e95d761ce}\label{class_mike_1_1_mike_position_a607eb417a9553d4c32177f2e95d761ce}} 
+\index{Mike\+::\+Mike\+Position@{Mike\+::\+Mike\+Position}!m\+Prevaskprice@{m\+Prevaskprice}}
+\index{m\+Prevaskprice@{m\+Prevaskprice}!Mike\+::\+Mike\+Position@{Mike\+::\+Mike\+Position}}
+\subsubsection{\texorpdfstring{m\+Prevaskprice}{mPrevaskprice}}
+{\footnotesize\ttfamily long Mike\+::\+Mike\+Position\+::m\+Prevaskprice = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_mike_1_1_mike_position_a84c3a8e75acb7fb08097c9c08e97d72d}\label{class_mike_1_1_mike_position_a84c3a8e75acb7fb08097c9c08e97d72d}} 
+\index{Mike\+::\+Mike\+Position@{Mike\+::\+Mike\+Position}!m\+Prevbidprice@{m\+Prevbidprice}}
+\index{m\+Prevbidprice@{m\+Prevbidprice}!Mike\+::\+Mike\+Position@{Mike\+::\+Mike\+Position}}
+\subsubsection{\texorpdfstring{m\+Prevbidprice}{mPrevbidprice}}
+{\footnotesize\ttfamily long Mike\+::\+Mike\+Position\+::m\+Prevbidprice = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_mike_1_1_mike_position_a93759730506f9f9b612c6f5f2b79935d}\label{class_mike_1_1_mike_position_a93759730506f9f9b612c6f5f2b79935d}} 
+\index{Mike\+::\+Mike\+Position@{Mike\+::\+Mike\+Position}!m\+Total\+PL@{m\+Total\+PL}}
+\index{m\+Total\+PL@{m\+Total\+PL}!Mike\+::\+Mike\+Position@{Mike\+::\+Mike\+Position}}
+\subsubsection{\texorpdfstring{m\+Total\+PL}{mTotalPL}}
+{\footnotesize\ttfamily long Mike\+::\+Mike\+Position\+::m\+Total\+PL = 0}
+
+total profit/loss for this price 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_mike_enums_8h}{Mike\+Enums.\+h}\end{DoxyCompactItemize}

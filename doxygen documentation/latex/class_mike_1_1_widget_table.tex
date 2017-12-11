@@ -1,0 +1,314 @@
+\hypertarget{class_mike_1_1_widget_table}{}\section{Mike\+:\+:Widget\+Table Class Reference}
+\label{class_mike_1_1_widget_table}\index{Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}}
+
+
+{\ttfamily \#include $<$Widget\+Table.\+h$>$}
+
+Inheritance diagram for Mike\+:\+:Widget\+Table\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_mike_1_1_widget_table}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_mike_1_1_widget_table_a2b409a5c6b7f2f4fd589ac0250fc297d}{Widget\+Table} (int x, int y, int w, int h, const char $\ast$l, \hyperlink{class_mike_1_1_user_interface_base}{User\+Interface\+Base} $\ast$p\+User\+Interface, int top\+\_\+row\+\_\+price, int number\+\_\+rows, int number\+\_\+cols, int how\+\_\+many\+\_\+cols\+\_\+are\+\_\+buttons=5, std\+::vector$<$ std\+::string $>$ \hyperlink{class_mike_1_1_wid_table_base_acc76591b1fa97f8259fc95f492d8e1b9}{col\+\_\+names}=\{ \char`\"{}\char`\"{} \}, std\+::vector$<$ std\+::string $>$ button\+\_\+names=\{ \char`\"{}\char`\"{} \})
+\item 
+\hyperlink{class_mike_1_1_widget_table_a1989e5265f9e1d53512d5936d21d41b5}{Widget\+Table} (int x, int y, int w, int h, const char $\ast$l)
+\item 
+\hyperlink{class_mike_1_1_widget_table_a141dd523d530477be58523c3ae2c2365}{Widget\+Table} ()
+\item 
+virtual void \hyperlink{class_mike_1_1_widget_table_a4a798ce9e43334f3ee1823c89ee91cf3}{print\+Bid\+Ask} (long bid, long ask)
+\item 
+virtual void \hyperlink{class_mike_1_1_widget_table_a8e269ede4b6a6ca1ef70ef588aa5e601}{print\+Positions} (const std\+::vector$<$ \hyperlink{class_mike_1_1_mike_position}{Mike\+Position} $>$ $\ast$open\+Positions)
+\item 
+virtual void \hyperlink{class_mike_1_1_widget_table_a4ed53614a2ef8bc68994a84af4b30084}{print\+Positions} (const std\+::vector$<$ \hyperlink{class_mike_1_1_mike_position}{Mike\+Position} $>$ $\ast$open\+Positions, const std\+::vector$<$ \hyperlink{class_mike_1_1_mike_orders_at_price}{Mike\+Orders\+At\+Price} $>$ $\ast$open\+Orders\+At\+Price)
+\item 
+virtual short \hyperlink{class_mike_1_1_widget_table_a72cefeed8a17eb9abea21c3f38d7fe23}{Get\+Bid\+Col} ()
+\item 
+virtual short \hyperlink{class_mike_1_1_widget_table_a7f23d041f5d4eab8103cca41951f7863}{Get\+Ask\+Col} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_mike_1_1_widget_table_a4036058693902d510469a59b9466a366}{widget\+Table\+Needs\+Clear\+All} = true
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_mike_1_1_widget_table_affddec39940626f7d72ffaf9e02d04e4}{virt\+Button\+Cb} (Fl\+\_\+\+Widget $\ast$w, void $\ast$p)
+\item 
+virtual void \hyperlink{class_mike_1_1_widget_table_ae788064f6ed7b19e9ac42b717ff53567}{set\+Bid\+Ask\+Columns} ()
+\item 
+\hyperlink{class_mike_1_1_user_interface_base}{User\+Interface\+Base} $\ast$ \hyperlink{class_mike_1_1_widget_table_a62d2aadd2ee9f9e9f376dd597b5dcd7b}{Get\+User\+Interface} ()
+\item 
+\hyperlink{class_mike_1_1_control}{Control} $\ast$ \hyperlink{class_mike_1_1_widget_table_ad5fd734ccfa48b6866554122c8b66667}{Get\+Control} ()
+\item 
+void \hyperlink{class_mike_1_1_widget_table_a7c161d452ff10617cafcbc331a92a8b2}{Pop\+Price\+Col} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_mike_1_1_user_interface_base}{User\+Interface\+Base} $\ast$ \hyperlink{class_mike_1_1_widget_table_a460f10100176575e81fdab9aa342f1fc}{ptr\+\_\+to\+\_\+\+User\+Interface}
+\item 
+\hyperlink{class_mike_1_1_control}{Control} $\ast$ \hyperlink{class_mike_1_1_widget_table_a99eeaeb402037858e27985daf341c295}{ptr\+Control}
+\item 
+std\+::set$<$ long $>$ \hyperlink{class_mike_1_1_widget_table_a2be8c41838500d0e8cc343f873123627}{usedprices}
+\item 
+std\+::set$<$ long $>$ \hyperlink{class_mike_1_1_widget_table_a4a046800392a9e7685f8650495b938aa}{notusedprices}
+\item 
+short \hyperlink{class_mike_1_1_widget_table_a11872a3f7b12c24408afa775e535b355}{price\+Col} = 5
+\item 
+short \hyperlink{class_mike_1_1_widget_table_a4e008648f0bc010c2bbde1fc549002b7}{bid\+Column} = 6
+\item 
+short \hyperlink{class_mike_1_1_widget_table_aa7a40e478418cd985cade406cbd842bf}{ask\+Column} = 7
+\item 
+short \hyperlink{class_mike_1_1_widget_table_ac3572ce4e7d0c7aa5a1fcca70cbdb9fd}{buy\+Limit\+Order\+Col} = 8
+\item 
+short \hyperlink{class_mike_1_1_widget_table_a11086c367b264f5f89c81d84a57175f1}{buy\+Stop\+Order\+Col} = 9
+\item 
+short \hyperlink{class_mike_1_1_widget_table_a0c380b42a2fdd90e5611c178459a0220}{sell\+Limit\+Order\+Col} = 10
+\item 
+short \hyperlink{class_mike_1_1_widget_table_ab2ccfe721d6f46bec502537be80500b0}{sell\+Stop\+Order\+Col} = 11
+\item 
+short \hyperlink{class_mike_1_1_widget_table_a22fc35da5771db1fabacf89707e1460e}{open\+Pos\+Col} = 12
+\item 
+short \hyperlink{class_mike_1_1_widget_table_a6d455e6428a049b73ca5abc431b2e435}{open\+P\+L\+Col} = 13
+\item 
+short \hyperlink{class_mike_1_1_widget_table_a4f69dde53abb4ecf06a6c773f002e174}{closed\+P\+L\+Col} = 14
+\item 
+short \hyperlink{class_mike_1_1_widget_table_acff6706430ba0825b29cefd5f4cac752}{total\+P\+L\+Col} = 15
+\item 
+short \hyperlink{class_mike_1_1_widget_table_a1663756da4a083698f606af83a1b2447}{avg\+Price\+Col} = 5
+\item 
+short \hyperlink{class_mike_1_1_widget_table_a16ce4e53a1c455b630399f87d154e5ed}{windownumber} = 0
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_mike_1_1_widget_table_a530ab6298efc8f8abbe63608c9c3e996}{User\+Interface\+Base}
+\item 
+class \hyperlink{class_mike_1_1_widget_table_adb55a5cf0f8d4b17f324a902a7904d97}{User\+Interface}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_mike_1_1_widget_table_a2b409a5c6b7f2f4fd589ac0250fc297d}\label{class_mike_1_1_widget_table_a2b409a5c6b7f2f4fd589ac0250fc297d}} 
+\index{Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}!Widget\+Table@{Widget\+Table}}
+\index{Widget\+Table@{Widget\+Table}!Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}}
+\subsubsection{\texorpdfstring{Widget\+Table()}{WidgetTable()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Mike\+::\+Widget\+Table\+::\+Widget\+Table (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{const char $\ast$}]{l,  }\item[{\hyperlink{class_mike_1_1_user_interface_base}{User\+Interface\+Base} $\ast$}]{p\+User\+Interface,  }\item[{int}]{top\+\_\+row\+\_\+price,  }\item[{int}]{number\+\_\+rows,  }\item[{int}]{number\+\_\+cols,  }\item[{int}]{how\+\_\+many\+\_\+cols\+\_\+are\+\_\+buttons = {\ttfamily 5},  }\item[{std\+::vector$<$ std\+::string $>$}]{col\+\_\+names = {\ttfamily \{~\char`\"{}\char`\"{}~\}},  }\item[{std\+::vector$<$ std\+::string $>$}]{button\+\_\+names = {\ttfamily \{~\char`\"{}\char`\"{}~\}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_mike_1_1_widget_table_a1989e5265f9e1d53512d5936d21d41b5}\label{class_mike_1_1_widget_table_a1989e5265f9e1d53512d5936d21d41b5}} 
+\index{Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}!Widget\+Table@{Widget\+Table}}
+\index{Widget\+Table@{Widget\+Table}!Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}}
+\subsubsection{\texorpdfstring{Widget\+Table()}{WidgetTable()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Mike\+::\+Widget\+Table\+::\+Widget\+Table (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{const char $\ast$}]{l }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_mike_1_1_widget_table_a141dd523d530477be58523c3ae2c2365}\label{class_mike_1_1_widget_table_a141dd523d530477be58523c3ae2c2365}} 
+\index{Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}!Widget\+Table@{Widget\+Table}}
+\index{Widget\+Table@{Widget\+Table}!Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}}
+\subsubsection{\texorpdfstring{Widget\+Table()}{WidgetTable()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Mike\+::\+Widget\+Table\+::\+Widget\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_mike_1_1_widget_table_a7f23d041f5d4eab8103cca41951f7863}\label{class_mike_1_1_widget_table_a7f23d041f5d4eab8103cca41951f7863}} 
+\index{Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}!Get\+Ask\+Col@{Get\+Ask\+Col}}
+\index{Get\+Ask\+Col@{Get\+Ask\+Col}!Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}}
+\subsubsection{\texorpdfstring{Get\+Ask\+Col()}{GetAskCol()}}
+{\footnotesize\ttfamily virtual short Mike\+::\+Widget\+Table\+::\+Get\+Ask\+Col (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_mike_1_1_widget_table_a72cefeed8a17eb9abea21c3f38d7fe23}\label{class_mike_1_1_widget_table_a72cefeed8a17eb9abea21c3f38d7fe23}} 
+\index{Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}!Get\+Bid\+Col@{Get\+Bid\+Col}}
+\index{Get\+Bid\+Col@{Get\+Bid\+Col}!Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}}
+\subsubsection{\texorpdfstring{Get\+Bid\+Col()}{GetBidCol()}}
+{\footnotesize\ttfamily virtual short Mike\+::\+Widget\+Table\+::\+Get\+Bid\+Col (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_mike_1_1_widget_table_ad5fd734ccfa48b6866554122c8b66667}\label{class_mike_1_1_widget_table_ad5fd734ccfa48b6866554122c8b66667}} 
+\index{Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}!Get\+Control@{Get\+Control}}
+\index{Get\+Control@{Get\+Control}!Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}}
+\subsubsection{\texorpdfstring{Get\+Control()}{GetControl()}}
+{\footnotesize\ttfamily \hyperlink{class_mike_1_1_control}{Control}$\ast$ Mike\+::\+Widget\+Table\+::\+Get\+Control (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_widget_table_a62d2aadd2ee9f9e9f376dd597b5dcd7b}\label{class_mike_1_1_widget_table_a62d2aadd2ee9f9e9f376dd597b5dcd7b}} 
+\index{Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}!Get\+User\+Interface@{Get\+User\+Interface}}
+\index{Get\+User\+Interface@{Get\+User\+Interface}!Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}}
+\subsubsection{\texorpdfstring{Get\+User\+Interface()}{GetUserInterface()}}
+{\footnotesize\ttfamily \hyperlink{class_mike_1_1_user_interface_base}{User\+Interface\+Base}$\ast$ Mike\+::\+Widget\+Table\+::\+Get\+User\+Interface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_widget_table_a7c161d452ff10617cafcbc331a92a8b2}\label{class_mike_1_1_widget_table_a7c161d452ff10617cafcbc331a92a8b2}} 
+\index{Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}!Pop\+Price\+Col@{Pop\+Price\+Col}}
+\index{Pop\+Price\+Col@{Pop\+Price\+Col}!Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}}
+\subsubsection{\texorpdfstring{Pop\+Price\+Col()}{PopPriceCol()}}
+{\footnotesize\ttfamily void Mike\+::\+Widget\+Table\+::\+Pop\+Price\+Col (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_widget_table_a4a798ce9e43334f3ee1823c89ee91cf3}\label{class_mike_1_1_widget_table_a4a798ce9e43334f3ee1823c89ee91cf3}} 
+\index{Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}!print\+Bid\+Ask@{print\+Bid\+Ask}}
+\index{print\+Bid\+Ask@{print\+Bid\+Ask}!Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}}
+\subsubsection{\texorpdfstring{print\+Bid\+Ask()}{printBidAsk()}}
+{\footnotesize\ttfamily virtual void Mike\+::\+Widget\+Table\+::print\+Bid\+Ask (\begin{DoxyParamCaption}\item[{long}]{bid,  }\item[{long}]{ask }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_mike_1_1_widget_table_a8e269ede4b6a6ca1ef70ef588aa5e601}\label{class_mike_1_1_widget_table_a8e269ede4b6a6ca1ef70ef588aa5e601}} 
+\index{Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}!print\+Positions@{print\+Positions}}
+\index{print\+Positions@{print\+Positions}!Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}}
+\subsubsection{\texorpdfstring{print\+Positions()}{printPositions()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void Mike\+::\+Widget\+Table\+::print\+Positions (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \hyperlink{class_mike_1_1_mike_position}{Mike\+Position} $>$ $\ast$}]{open\+Positions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_mike_1_1_widget_table_a4ed53614a2ef8bc68994a84af4b30084}\label{class_mike_1_1_widget_table_a4ed53614a2ef8bc68994a84af4b30084}} 
+\index{Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}!print\+Positions@{print\+Positions}}
+\index{print\+Positions@{print\+Positions}!Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}}
+\subsubsection{\texorpdfstring{print\+Positions()}{printPositions()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Mike\+::\+Widget\+Table\+::print\+Positions (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \hyperlink{class_mike_1_1_mike_position}{Mike\+Position} $>$ $\ast$}]{open\+Positions,  }\item[{const std\+::vector$<$ \hyperlink{class_mike_1_1_mike_orders_at_price}{Mike\+Orders\+At\+Price} $>$ $\ast$}]{open\+Orders\+At\+Price }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_mike_1_1_widget_table_ae788064f6ed7b19e9ac42b717ff53567}\label{class_mike_1_1_widget_table_ae788064f6ed7b19e9ac42b717ff53567}} 
+\index{Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}!set\+Bid\+Ask\+Columns@{set\+Bid\+Ask\+Columns}}
+\index{set\+Bid\+Ask\+Columns@{set\+Bid\+Ask\+Columns}!Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}}
+\subsubsection{\texorpdfstring{set\+Bid\+Ask\+Columns()}{setBidAskColumns()}}
+{\footnotesize\ttfamily void Mike\+::\+Widget\+Table\+::set\+Bid\+Ask\+Columns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_mike_1_1_widget_table_affddec39940626f7d72ffaf9e02d04e4}\label{class_mike_1_1_widget_table_affddec39940626f7d72ffaf9e02d04e4}} 
+\index{Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}!virt\+Button\+Cb@{virt\+Button\+Cb}}
+\index{virt\+Button\+Cb@{virt\+Button\+Cb}!Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}}
+\subsubsection{\texorpdfstring{virt\+Button\+Cb()}{virtButtonCb()}}
+{\footnotesize\ttfamily void Mike\+::\+Widget\+Table\+::virt\+Button\+Cb (\begin{DoxyParamCaption}\item[{Fl\+\_\+\+Widget $\ast$}]{w,  }\item[{void $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \hyperlink{class_mike_1_1_wid_table_base_aed65d79c6e84fd89abceaf6ffa079fad}{Mike\+::\+Wid\+Table\+Base}.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_mike_1_1_widget_table_adb55a5cf0f8d4b17f324a902a7904d97}\label{class_mike_1_1_widget_table_adb55a5cf0f8d4b17f324a902a7904d97}} 
+\index{Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}!User\+Interface@{User\+Interface}}
+\index{User\+Interface@{User\+Interface}!Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}}
+\subsubsection{\texorpdfstring{User\+Interface}{UserInterface}}
+{\footnotesize\ttfamily friend class \hyperlink{class_mike_1_1_user_interface}{User\+Interface}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_mike_1_1_widget_table_a530ab6298efc8f8abbe63608c9c3e996}\label{class_mike_1_1_widget_table_a530ab6298efc8f8abbe63608c9c3e996}} 
+\index{Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}!User\+Interface\+Base@{User\+Interface\+Base}}
+\index{User\+Interface\+Base@{User\+Interface\+Base}!Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}}
+\subsubsection{\texorpdfstring{User\+Interface\+Base}{UserInterfaceBase}}
+{\footnotesize\ttfamily friend class \hyperlink{class_mike_1_1_user_interface_base}{User\+Interface\+Base}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_mike_1_1_widget_table_aa7a40e478418cd985cade406cbd842bf}\label{class_mike_1_1_widget_table_aa7a40e478418cd985cade406cbd842bf}} 
+\index{Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}!ask\+Column@{ask\+Column}}
+\index{ask\+Column@{ask\+Column}!Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}}
+\subsubsection{\texorpdfstring{ask\+Column}{askColumn}}
+{\footnotesize\ttfamily short Mike\+::\+Widget\+Table\+::ask\+Column = 7\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_widget_table_a1663756da4a083698f606af83a1b2447}\label{class_mike_1_1_widget_table_a1663756da4a083698f606af83a1b2447}} 
+\index{Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}!avg\+Price\+Col@{avg\+Price\+Col}}
+\index{avg\+Price\+Col@{avg\+Price\+Col}!Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}}
+\subsubsection{\texorpdfstring{avg\+Price\+Col}{avgPriceCol}}
+{\footnotesize\ttfamily short Mike\+::\+Widget\+Table\+::avg\+Price\+Col = 5\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_widget_table_a4e008648f0bc010c2bbde1fc549002b7}\label{class_mike_1_1_widget_table_a4e008648f0bc010c2bbde1fc549002b7}} 
+\index{Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}!bid\+Column@{bid\+Column}}
+\index{bid\+Column@{bid\+Column}!Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}}
+\subsubsection{\texorpdfstring{bid\+Column}{bidColumn}}
+{\footnotesize\ttfamily short Mike\+::\+Widget\+Table\+::bid\+Column = 6\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_widget_table_ac3572ce4e7d0c7aa5a1fcca70cbdb9fd}\label{class_mike_1_1_widget_table_ac3572ce4e7d0c7aa5a1fcca70cbdb9fd}} 
+\index{Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}!buy\+Limit\+Order\+Col@{buy\+Limit\+Order\+Col}}
+\index{buy\+Limit\+Order\+Col@{buy\+Limit\+Order\+Col}!Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}}
+\subsubsection{\texorpdfstring{buy\+Limit\+Order\+Col}{buyLimitOrderCol}}
+{\footnotesize\ttfamily short Mike\+::\+Widget\+Table\+::buy\+Limit\+Order\+Col = 8\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_widget_table_a11086c367b264f5f89c81d84a57175f1}\label{class_mike_1_1_widget_table_a11086c367b264f5f89c81d84a57175f1}} 
+\index{Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}!buy\+Stop\+Order\+Col@{buy\+Stop\+Order\+Col}}
+\index{buy\+Stop\+Order\+Col@{buy\+Stop\+Order\+Col}!Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}}
+\subsubsection{\texorpdfstring{buy\+Stop\+Order\+Col}{buyStopOrderCol}}
+{\footnotesize\ttfamily short Mike\+::\+Widget\+Table\+::buy\+Stop\+Order\+Col = 9\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_widget_table_a4f69dde53abb4ecf06a6c773f002e174}\label{class_mike_1_1_widget_table_a4f69dde53abb4ecf06a6c773f002e174}} 
+\index{Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}!closed\+P\+L\+Col@{closed\+P\+L\+Col}}
+\index{closed\+P\+L\+Col@{closed\+P\+L\+Col}!Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}}
+\subsubsection{\texorpdfstring{closed\+P\+L\+Col}{closedPLCol}}
+{\footnotesize\ttfamily short Mike\+::\+Widget\+Table\+::closed\+P\+L\+Col = 14\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_widget_table_a4a046800392a9e7685f8650495b938aa}\label{class_mike_1_1_widget_table_a4a046800392a9e7685f8650495b938aa}} 
+\index{Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}!notusedprices@{notusedprices}}
+\index{notusedprices@{notusedprices}!Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}}
+\subsubsection{\texorpdfstring{notusedprices}{notusedprices}}
+{\footnotesize\ttfamily std\+::set$<$long$>$ Mike\+::\+Widget\+Table\+::notusedprices\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_widget_table_a6d455e6428a049b73ca5abc431b2e435}\label{class_mike_1_1_widget_table_a6d455e6428a049b73ca5abc431b2e435}} 
+\index{Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}!open\+P\+L\+Col@{open\+P\+L\+Col}}
+\index{open\+P\+L\+Col@{open\+P\+L\+Col}!Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}}
+\subsubsection{\texorpdfstring{open\+P\+L\+Col}{openPLCol}}
+{\footnotesize\ttfamily short Mike\+::\+Widget\+Table\+::open\+P\+L\+Col = 13\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_widget_table_a22fc35da5771db1fabacf89707e1460e}\label{class_mike_1_1_widget_table_a22fc35da5771db1fabacf89707e1460e}} 
+\index{Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}!open\+Pos\+Col@{open\+Pos\+Col}}
+\index{open\+Pos\+Col@{open\+Pos\+Col}!Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}}
+\subsubsection{\texorpdfstring{open\+Pos\+Col}{openPosCol}}
+{\footnotesize\ttfamily short Mike\+::\+Widget\+Table\+::open\+Pos\+Col = 12\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_widget_table_a11872a3f7b12c24408afa775e535b355}\label{class_mike_1_1_widget_table_a11872a3f7b12c24408afa775e535b355}} 
+\index{Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}!price\+Col@{price\+Col}}
+\index{price\+Col@{price\+Col}!Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}}
+\subsubsection{\texorpdfstring{price\+Col}{priceCol}}
+{\footnotesize\ttfamily short Mike\+::\+Widget\+Table\+::price\+Col = 5\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_widget_table_a460f10100176575e81fdab9aa342f1fc}\label{class_mike_1_1_widget_table_a460f10100176575e81fdab9aa342f1fc}} 
+\index{Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}!ptr\+\_\+to\+\_\+\+User\+Interface@{ptr\+\_\+to\+\_\+\+User\+Interface}}
+\index{ptr\+\_\+to\+\_\+\+User\+Interface@{ptr\+\_\+to\+\_\+\+User\+Interface}!Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}}
+\subsubsection{\texorpdfstring{ptr\+\_\+to\+\_\+\+User\+Interface}{ptr\_to\_UserInterface}}
+{\footnotesize\ttfamily \hyperlink{class_mike_1_1_user_interface_base}{User\+Interface\+Base}$\ast$ Mike\+::\+Widget\+Table\+::ptr\+\_\+to\+\_\+\+User\+Interface\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_widget_table_a99eeaeb402037858e27985daf341c295}\label{class_mike_1_1_widget_table_a99eeaeb402037858e27985daf341c295}} 
+\index{Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}!ptr\+Control@{ptr\+Control}}
+\index{ptr\+Control@{ptr\+Control}!Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}}
+\subsubsection{\texorpdfstring{ptr\+Control}{ptrControl}}
+{\footnotesize\ttfamily \hyperlink{class_mike_1_1_control}{Control}$\ast$ Mike\+::\+Widget\+Table\+::ptr\+Control\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_widget_table_a0c380b42a2fdd90e5611c178459a0220}\label{class_mike_1_1_widget_table_a0c380b42a2fdd90e5611c178459a0220}} 
+\index{Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}!sell\+Limit\+Order\+Col@{sell\+Limit\+Order\+Col}}
+\index{sell\+Limit\+Order\+Col@{sell\+Limit\+Order\+Col}!Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}}
+\subsubsection{\texorpdfstring{sell\+Limit\+Order\+Col}{sellLimitOrderCol}}
+{\footnotesize\ttfamily short Mike\+::\+Widget\+Table\+::sell\+Limit\+Order\+Col = 10\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_widget_table_ab2ccfe721d6f46bec502537be80500b0}\label{class_mike_1_1_widget_table_ab2ccfe721d6f46bec502537be80500b0}} 
+\index{Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}!sell\+Stop\+Order\+Col@{sell\+Stop\+Order\+Col}}
+\index{sell\+Stop\+Order\+Col@{sell\+Stop\+Order\+Col}!Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}}
+\subsubsection{\texorpdfstring{sell\+Stop\+Order\+Col}{sellStopOrderCol}}
+{\footnotesize\ttfamily short Mike\+::\+Widget\+Table\+::sell\+Stop\+Order\+Col = 11\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_widget_table_acff6706430ba0825b29cefd5f4cac752}\label{class_mike_1_1_widget_table_acff6706430ba0825b29cefd5f4cac752}} 
+\index{Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}!total\+P\+L\+Col@{total\+P\+L\+Col}}
+\index{total\+P\+L\+Col@{total\+P\+L\+Col}!Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}}
+\subsubsection{\texorpdfstring{total\+P\+L\+Col}{totalPLCol}}
+{\footnotesize\ttfamily short Mike\+::\+Widget\+Table\+::total\+P\+L\+Col = 15\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_widget_table_a2be8c41838500d0e8cc343f873123627}\label{class_mike_1_1_widget_table_a2be8c41838500d0e8cc343f873123627}} 
+\index{Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}!usedprices@{usedprices}}
+\index{usedprices@{usedprices}!Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}}
+\subsubsection{\texorpdfstring{usedprices}{usedprices}}
+{\footnotesize\ttfamily std\+::set$<$long$>$ Mike\+::\+Widget\+Table\+::usedprices\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_mike_1_1_widget_table_a4036058693902d510469a59b9466a366}\label{class_mike_1_1_widget_table_a4036058693902d510469a59b9466a366}} 
+\index{Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}!widget\+Table\+Needs\+Clear\+All@{widget\+Table\+Needs\+Clear\+All}}
+\index{widget\+Table\+Needs\+Clear\+All@{widget\+Table\+Needs\+Clear\+All}!Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}}
+\subsubsection{\texorpdfstring{widget\+Table\+Needs\+Clear\+All}{widgetTableNeedsClearAll}}
+{\footnotesize\ttfamily bool Mike\+::\+Widget\+Table\+::widget\+Table\+Needs\+Clear\+All = true}
+
+\mbox{\Hypertarget{class_mike_1_1_widget_table_a16ce4e53a1c455b630399f87d154e5ed}\label{class_mike_1_1_widget_table_a16ce4e53a1c455b630399f87d154e5ed}} 
+\index{Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}!windownumber@{windownumber}}
+\index{windownumber@{windownumber}!Mike\+::\+Widget\+Table@{Mike\+::\+Widget\+Table}}
+\subsubsection{\texorpdfstring{windownumber}{windownumber}}
+{\footnotesize\ttfamily short Mike\+::\+Widget\+Table\+::windownumber = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/work\+In\+Progress/\hyperlink{_widget_table_8h}{Widget\+Table.\+h}\item 
+src/work\+In\+Progress/\hyperlink{_widget_table_8cpp}{Widget\+Table.\+cpp}\end{DoxyCompactItemize}

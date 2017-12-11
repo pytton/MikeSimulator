@@ -1,5 +1,7 @@
 #include "Control.h"
 #include <iostream>
+#include <time.h> //for time(NULL)
+
 
 
 using namespace std;
@@ -15,32 +17,31 @@ namespace Mike
 
 	Control::Control()
 	{
-		//set up the user interface windows:
-		dataControlWindow = new DataUI();
-		dataControlWindow->m_window1->show();
-		controlWindow = new ControlUI();
-		controlWindow->m_window1->show();
+		//initialize and show the control window:
+		mptrControlWindow = new ControlUI();
+		//mptrControlWindow->mWindow->show();
 
-		userinterface = new UserInterface(this);
-		userinterface->m_window1->show();
+		//initialize data:
+		mptrData = new Data();
+
 	}
 
 
 	Control::~Control()
 	{
+		if (NULL != mptrData) delete mptrData;
+		if (NULL != mptrControlWindow) delete mptrControlWindow;
 	}
-
-
-
 
 	void Control::mainloop()
 	{
 		mainLoopRunning = true;
-
+		
 		//do everything that needs to be done:
+		cout << "mainloop called " << time(NULL) << endl;
 
 		processData();
-		processUserInput();
+		processUserInput(this);
 		printoutAll();
 		processAlgos();
 
@@ -49,22 +50,47 @@ namespace Mike
 		mainloopTimeoutCallbackFLTK(this);		
 	}
 
+	void Control::processUserInput(void * ptrControlPointer)
+	{
+		Control * ptr = (Control*)ptrControlPointer;
+		//Testing here:
+
+		if (ptr->mptrControlWindow->eventsWaiting()) {
+			ControlUIEvent myEvent = ptr->mptrControlWindow->getNextEvent();
+			switch (myEvent.mButtonPressed)
+			{
+			case ControlUIButton::START_LOOP:
+				cout << "Start loop button pressed." << endl;
+				startloop(ptr);
+				break;
+			case ControlUIButton::STOP_LOOP:
+				cout << "STOP loop button pressed." << endl;
+				break;
+				
+			case ControlUIButton::POSITIONS1:
+				cout << "Positions1 button pressed." << endl;
+				break;
+			default:
+				break;
+			}
+		}
+	}
+
 	void Control::mainloopTimeoutCallbackFLTK(void * ptrControlPointer)
 	{
 		Control * control = (Control*)ptrControlPointer;
 		//check if we want to stop the loop. if not, call mainloop in SET_MAINLOOP_INTERVAL seconds
-		if (!control->flagStopMainLoop) Fl::repeat_timeout(SET_MAINLOOP_INTERVAL,startloop , ptrControlPointer);
+		if (!control->flagStopMainLoop) Fl::add_timeout(SET_MAINLOOP_INTERVAL, startloop, ptrControlPointer);
 	}
 	void Control::startloop(void * ptrControlPointer)
-	{	
+	{
 		Control * ptr = (Control*)ptrControlPointer;
 		//make sure the trigger to stop the loop inside timeoutfunction is off:
 		ptr->flagStopMainLoop = false;
 		//check to see if the loop is already running. if it is not, start the loop:
 		if (!ptr->mainLoopRunning) ptr->mainloop();
-		//try again in 200 ms:
-		else { Sleep(200); startloop(ptrControlPointer); }
 	}
+
 	void Control::stoploop()
 	{
 		//if the loop is already set up to be stopped, do nothing:
@@ -72,13 +98,5 @@ namespace Mike
 		//if it is not set to be stopped, set the trigger to stop it inside the timeoutfunction:
 		flagStopMainLoop = true;
 	}
-	void Control::CallbkUserInt(UserInterface * p, BtnPressed btn, long longparameter1, long longparameter2, double parameter3)
-	{
-	}
-	void Control::CallbkUserInt(UserInterface * p, long price, MikeOrderType OrderTypePressed, long orderSize)
-	{
-	}
-	void Control::callbkWidTable(int row, int col, long price, MikeOrderType OrderTypePressed, int orderSize)
-	{
-	}
+
 }//namespace Mike

@@ -1,0 +1,381 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_mike_1_1_wid_table_base">
+<title>Mike::WidTableBase class Reference</title>
+<para>
+    <programlisting>#include <link linkend="_wid_table_base_8h">&lt;WidTableBase.h&gt;</link></programlisting>
+</para>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Protected Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int table_rows</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int table_cols</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int ButtonColsNumber</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int TopRowPrice</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>short tabletype</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::vector&lt; std::string &gt; col_names</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>short columnWidth</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::stack&lt; Fl_Input * &gt; sharedFlInputPointers</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_mike_1_1_wid_table_base_1aa9d89f83f34c4ce8f0655ff3437374a5">WidTableBase</link> (
+int x, int y, int w, int h, const char * l)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_mike_1_1_wid_table_base_1aa2cee360b485c40a08c556da54ffa439">WidTableBase</link> (
+int x, int y, int w, int h, const char * l, int top_row_price, int number_rows, int number_cols, int how_many_cols_are_buttons, std::vector&lt; std::string &gt; col_names, std::vector&lt; std::string &gt; button_names)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_mike_1_1_wid_table_base_1a66c2828fd13a8abf4f5faa274e632542">~WidTableBase</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="class_mike_1_1_wid_table_base_1aed65d79c6e84fd89abceaf6ffa079fad">virtButtonCb</link> (
+Fl_Widget * w, void * p)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_mike_1_1_wid_table_base_1a22ff7af61bac2dc33e596e68a236b845">printInTable</link> (
+int row, int col, std::string text, Fl_Color backgroundColor, Fl_Color textColor)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_mike_1_1_wid_table_base_1af7acb57a8144c9ab4e01a8300469b98e">ClearColumn</link> (
+int column)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_mike_1_1_wid_table_base_1a17021ef3e4cea06939284891dc27d61f">ClearRow</link> (
+int row)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_mike_1_1_wid_table_base_1a4779181b9c1eebc13406f9093d665236">clearAllButtonLabels</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="class_mike_1_1_wid_table_base_1a980add59d3d60f68517b48a896e5eb3c">ColHeaderText</link> (
+char * s, int C)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_mike_1_1_wid_table_base_1a3486b3282392458231cb09f9d9a4e504">SetRows</link> (
+int numRows)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_mike_1_1_wid_table_base_1a52555afc3c0f71ae166d862258303447">SetCols</link> (
+int numCol)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Fl_Widget * <link linkend="class_mike_1_1_wid_table_base_1a5c2de58aec7fa3751862b68f18031f88">GetElement</link> (
+int nRow, int nCol)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_mike_1_1_wid_table_base_1a1a463c054dfd0dc563dedf0fbdaf3232">draw_cell</link> (
+TableContext context, int R, int C, int X, int Y, int W, int H)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_mike_1_1_wid_table_base_1a23f12c24def459d1dde1c53a7e237d4a">SetSize</link> (
+int newrows, int newcols, <link linkend="class_mike_1_1_wid_table_base">WidTableBase</link> * mytable, std::vector&lt; std::string &gt; button_names)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_mike_1_1_wid_table_base_1abdc666dec8fa95e8e6232c9eae6ee8e2">GetRows</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_mike_1_1_wid_table_base_1afac57108a679ea7b3800ab8a14e80209">GetCols</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_mike_1_1_wid_table_base_1ab9f884cfed7ee50f7037bf1e75258f11">GetTopRowPrice</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_mike_1_1_wid_table_base_1af29863e5a1695c64a748133b335ecc16">GetBottomRowPrice</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_mike_1_1_wid_table_base_1a456b14469434d2fffe513a9d7cc39e25">SetTopRowPrice</link> (
+int value)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::vector&lt; std::string &gt; * <link linkend="class_mike_1_1_wid_table_base_1a8fab1137b438a8ae331c9ceeaae43acb">GetColNames</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="class_mike_1_1_wid_table_base_1a590a250d0bb443aef98a7250555d1c68">RowOfPrice</link> (
+long price)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>long <link linkend="class_mike_1_1_wid_table_base_1afb5e90634ccda27eb8f40a1f2b6208a1">PriceOfRow</link> (
+int row)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>virtual void <link linkend="class_mike_1_1_wid_table_base_1a71a0e404a020f7b8d10544113c16a4ce">SetColumnnWidth</link> (
+short width)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void <link linkend="class_mike_1_1_wid_table_base_1afba70372ad656f248ca4ea9dc408e41f">button_cb</link> (
+Fl_Widget * w, void * p)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+            <section xml:id="class_mike_1_1_wid_table_base_1aa9d89f83f34c4ce8f0655ff3437374a5">
+                <title>Mike::WidTableBase::WidTableBase (int x, int y, int w, int h, const char *l)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_wid_table_base_1aa2cee360b485c40a08c556da54ffa439">
+                <title>Mike::WidTableBase::WidTableBase (int x, int y, int w, int h, const char *l, int top_row_price, int number_rows=25, int number_cols=15, int how_many_cols_are_buttons=5, std::vector&lt; std::string &gt; col_names={ &quot;&quot; }, std::vector&lt; std::string &gt; button_names={ &quot;&quot; })</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_wid_table_base_1a66c2828fd13a8abf4f5faa274e632542">
+                <title>Mike::WidTableBase::~WidTableBase ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_wid_table_base_1aed65d79c6e84fd89abceaf6ffa079fad">
+                <title>virtual void Mike::WidTableBase::virtButtonCb (Fl_Widget *w, void *p)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_wid_table_base_1a22ff7af61bac2dc33e596e68a236b845">
+                <title>void Mike::WidTableBase::printInTable (int row, int col, std::string text, Fl_Color backgroundColor=NULL, Fl_Color textColor=NULL)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_wid_table_base_1af7acb57a8144c9ab4e01a8300469b98e">
+                <title>void Mike::WidTableBase::ClearColumn (int column)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_wid_table_base_1a17021ef3e4cea06939284891dc27d61f">
+                <title>void Mike::WidTableBase::ClearRow (int row)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_wid_table_base_1a4779181b9c1eebc13406f9093d665236">
+                <title>void Mike::WidTableBase::clearAllButtonLabels ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_wid_table_base_1a980add59d3d60f68517b48a896e5eb3c">
+                <title>void Mike::WidTableBase::ColHeaderText (char *s, int C)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_wid_table_base_1a3486b3282392458231cb09f9d9a4e504">
+                <title>void Mike::WidTableBase::SetRows (int numRows)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_wid_table_base_1a52555afc3c0f71ae166d862258303447">
+                <title>void Mike::WidTableBase::SetCols (int numCol)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_wid_table_base_1a5c2de58aec7fa3751862b68f18031f88">
+                <title>Fl_Widget * Mike::WidTableBase::GetElement (int nRow, int nCol)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_wid_table_base_1a1a463c054dfd0dc563dedf0fbdaf3232">
+                <title>void Mike::WidTableBase::draw_cell (TableContext context, int R=0, int C=0, int X=0, int Y=0, int W=0, int H=0)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_wid_table_base_1a23f12c24def459d1dde1c53a7e237d4a">
+                <title>void Mike::WidTableBase::SetSize (int newrows, int newcols, WidTableBase *mytable, std::vector&lt; std::string &gt; button_names={ &quot;&quot; })</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_wid_table_base_1abdc666dec8fa95e8e6232c9eae6ee8e2">
+                <title>int Mike::WidTableBase::GetRows ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_wid_table_base_1afac57108a679ea7b3800ab8a14e80209">
+                <title>int Mike::WidTableBase::GetCols ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_wid_table_base_1ab9f884cfed7ee50f7037bf1e75258f11">
+                <title>int Mike::WidTableBase::GetTopRowPrice ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_wid_table_base_1af29863e5a1695c64a748133b335ecc16">
+                <title>int Mike::WidTableBase::GetBottomRowPrice ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_wid_table_base_1a456b14469434d2fffe513a9d7cc39e25">
+                <title>void Mike::WidTableBase::SetTopRowPrice (int value)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_wid_table_base_1a8fab1137b438a8ae331c9ceeaae43acb">
+                <title>std::vector&lt;std::string&gt;* Mike::WidTableBase::GetColNames ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_wid_table_base_1a590a250d0bb443aef98a7250555d1c68">
+                <title>int Mike::WidTableBase::RowOfPrice (long price)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_wid_table_base_1afb5e90634ccda27eb8f40a1f2b6208a1">
+                <title>long Mike::WidTableBase::PriceOfRow (int row)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_wid_table_base_1a71a0e404a020f7b8d10544113c16a4ce">
+                <title>virtual void Mike::WidTableBase::SetColumnnWidth (short width)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_wid_table_base_1afba70372ad656f248ca4ea9dc408e41f">
+                <title>void Mike::WidTableBase::button_cb (Fl_Widget *w, void *p)</title> <emphasis></emphasis>
+                
+            </section>
+</section>

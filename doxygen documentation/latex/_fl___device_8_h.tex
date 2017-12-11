@@ -1,0 +1,115 @@
+\hypertarget{_fl___device_8_h}{}\section{F\+L\+T\+K/\+F\+L/\+Fl\+\_\+\+Device.H File Reference}
+\label{_fl___device_8_h}\index{F\+L\+T\+K/\+F\+L/\+Fl\+\_\+\+Device.\+H@{F\+L\+T\+K/\+F\+L/\+Fl\+\_\+\+Device.\+H}}
+
+
+declaration of classes \hyperlink{class_fl___device}{Fl\+\_\+\+Device}, \hyperlink{class_fl___graphics___driver}{Fl\+\_\+\+Graphics\+\_\+\+Driver}, \hyperlink{class_fl___surface___device}{Fl\+\_\+\+Surface\+\_\+\+Device}, \hyperlink{class_fl___display___device}{Fl\+\_\+\+Display\+\_\+\+Device}, \hyperlink{class_fl___device___plugin}{Fl\+\_\+\+Device\+\_\+\+Plugin}.  
+
+
+{\ttfamily \#include $<$F\+L/x.\+H$>$}\newline
+{\ttfamily \#include $<$F\+L/\+Fl\+\_\+\+Plugin.\+H$>$}\newline
+{\ttfamily \#include $<$F\+L/\+Fl\+\_\+\+Image.\+H$>$}\newline
+{\ttfamily \#include $<$F\+L/\+Fl\+\_\+\+Bitmap.\+H$>$}\newline
+{\ttfamily \#include $<$F\+L/\+Fl\+\_\+\+Pixmap.\+H$>$}\newline
+{\ttfamily \#include $<$F\+L/\+Fl\+\_\+\+R\+G\+B\+\_\+\+Image.\+H$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_fl___device}{Fl\+\_\+\+Device}
+\begin{DoxyCompactList}\small\item\em All graphical output devices and all graphics systems. \end{DoxyCompactList}\item 
+class \hyperlink{class_fl___graphics___driver}{Fl\+\_\+\+Graphics\+\_\+\+Driver}
+\begin{DoxyCompactList}\small\item\em A virtual class subclassed for each graphics driver F\+L\+TK uses. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_fl___graphics___driver_1_1matrix}{Fl\+\_\+\+Graphics\+\_\+\+Driver\+::matrix}
+\item 
+class \hyperlink{class_fl___xlib___graphics___driver}{Fl\+\_\+\+Xlib\+\_\+\+Graphics\+\_\+\+Driver}
+\begin{DoxyCompactList}\small\item\em The Xlib-\/specific graphics class. \end{DoxyCompactList}\item 
+class \hyperlink{class_fl___surface___device}{Fl\+\_\+\+Surface\+\_\+\+Device}
+\begin{DoxyCompactList}\small\item\em A surface that\textquotesingle{}s susceptible to receive graphical output. \end{DoxyCompactList}\item 
+class \hyperlink{class_fl___display___device}{Fl\+\_\+\+Display\+\_\+\+Device}
+\begin{DoxyCompactList}\small\item\em A display to which the computer can draw. \end{DoxyCompactList}\item 
+class \hyperlink{class_fl___device___plugin}{Fl\+\_\+\+Device\+\_\+\+Plugin}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_fl___device_8_h_abcfddf51900f110c482eb02d87432955}{X\+P\+O\+I\+NT}~\hyperlink{win32_8_h_a1ff179578a3389b4f8c2ca9ff5820851}{X\+Point}
+\item 
+\#define \hyperlink{_fl___device_8_h_a1bcd38908cba66c659bd98b2d791ca55}{F\+L\+\_\+\+R\+E\+G\+I\+O\+N\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE}~10
+\item 
+\#define \hyperlink{_fl___device_8_h_a28fb61d3423470d0c1220ca380551077}{F\+L\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE}~32
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \hyperlink{_fl___device_8_h_a702e2cb8dd542dda67e5c206b0d73a07}{Fl\+\_\+\+Draw\+\_\+\+Image\+\_\+\+Cb}) (void $\ast$data, int x, int y, int \hyperlink{forms_8_h_aac374e320caaadeca4874add33b62af2}{w}, \hyperlink{fl__types_8h_a65f85814a8290f9797005d3b28e7e5fc}{uchar} $\ast$buf)
+\item 
+typedef short \hyperlink{_fl___device_8_h_a80f9cf99cc19414c003f11fbf88aaca6}{C\+O\+O\+R\+D\+\_\+T}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_fl___export_8_h_aa9ba29a18aee9d738370a06eeb4470fc}{F\+L\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{class_fl___graphics___driver}{Fl\+\_\+\+Graphics\+\_\+\+Driver} $\ast$ \hyperlink{_fl___device_8_h_a70e4f05429b26bb420c70f64e972f2a5}{fl\+\_\+graphics\+\_\+driver}
+\begin{DoxyCompactList}\small\item\em Points to the driver that currently receives all graphics requests. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+declaration of classes \hyperlink{class_fl___device}{Fl\+\_\+\+Device}, \hyperlink{class_fl___graphics___driver}{Fl\+\_\+\+Graphics\+\_\+\+Driver}, \hyperlink{class_fl___surface___device}{Fl\+\_\+\+Surface\+\_\+\+Device}, \hyperlink{class_fl___display___device}{Fl\+\_\+\+Display\+\_\+\+Device}, \hyperlink{class_fl___device___plugin}{Fl\+\_\+\+Device\+\_\+\+Plugin}. 
+
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_fl___device_8_h_a28fb61d3423470d0c1220ca380551077}\label{_fl___device_8_h_a28fb61d3423470d0c1220ca380551077}} 
+\index{Fl\+\_\+\+Device.\+H@{Fl\+\_\+\+Device.\+H}!F\+L\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE@{F\+L\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE}}
+\index{F\+L\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE@{F\+L\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE}!Fl\+\_\+\+Device.\+H@{Fl\+\_\+\+Device.\+H}}
+\subsubsection{\texorpdfstring{F\+L\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE}{FL\_MATRIX\_STACK\_SIZE}}
+{\footnotesize\ttfamily \#define F\+L\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE~32}
+
+\mbox{\Hypertarget{_fl___device_8_h_a1bcd38908cba66c659bd98b2d791ca55}\label{_fl___device_8_h_a1bcd38908cba66c659bd98b2d791ca55}} 
+\index{Fl\+\_\+\+Device.\+H@{Fl\+\_\+\+Device.\+H}!F\+L\+\_\+\+R\+E\+G\+I\+O\+N\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE@{F\+L\+\_\+\+R\+E\+G\+I\+O\+N\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE}}
+\index{F\+L\+\_\+\+R\+E\+G\+I\+O\+N\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE@{F\+L\+\_\+\+R\+E\+G\+I\+O\+N\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE}!Fl\+\_\+\+Device.\+H@{Fl\+\_\+\+Device.\+H}}
+\subsubsection{\texorpdfstring{F\+L\+\_\+\+R\+E\+G\+I\+O\+N\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE}{FL\_REGION\_STACK\_SIZE}}
+{\footnotesize\ttfamily \#define F\+L\+\_\+\+R\+E\+G\+I\+O\+N\+\_\+\+S\+T\+A\+C\+K\+\_\+\+S\+I\+ZE~10}
+
+\mbox{\Hypertarget{_fl___device_8_h_abcfddf51900f110c482eb02d87432955}\label{_fl___device_8_h_abcfddf51900f110c482eb02d87432955}} 
+\index{Fl\+\_\+\+Device.\+H@{Fl\+\_\+\+Device.\+H}!X\+P\+O\+I\+NT@{X\+P\+O\+I\+NT}}
+\index{X\+P\+O\+I\+NT@{X\+P\+O\+I\+NT}!Fl\+\_\+\+Device.\+H@{Fl\+\_\+\+Device.\+H}}
+\subsubsection{\texorpdfstring{X\+P\+O\+I\+NT}{XPOINT}}
+{\footnotesize\ttfamily \#define X\+P\+O\+I\+NT~\hyperlink{win32_8_h_a1ff179578a3389b4f8c2ca9ff5820851}{X\+Point}}
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{_fl___device_8_h_a80f9cf99cc19414c003f11fbf88aaca6}\label{_fl___device_8_h_a80f9cf99cc19414c003f11fbf88aaca6}} 
+\index{Fl\+\_\+\+Device.\+H@{Fl\+\_\+\+Device.\+H}!C\+O\+O\+R\+D\+\_\+T@{C\+O\+O\+R\+D\+\_\+T}}
+\index{C\+O\+O\+R\+D\+\_\+T@{C\+O\+O\+R\+D\+\_\+T}!Fl\+\_\+\+Device.\+H@{Fl\+\_\+\+Device.\+H}}
+\subsubsection{\texorpdfstring{C\+O\+O\+R\+D\+\_\+T}{COORD\_T}}
+{\footnotesize\ttfamily typedef short \hyperlink{_fl___device_8_h_a80f9cf99cc19414c003f11fbf88aaca6}{C\+O\+O\+R\+D\+\_\+T}}
+
+\mbox{\Hypertarget{_fl___device_8_h_a702e2cb8dd542dda67e5c206b0d73a07}\label{_fl___device_8_h_a702e2cb8dd542dda67e5c206b0d73a07}} 
+\index{Fl\+\_\+\+Device.\+H@{Fl\+\_\+\+Device.\+H}!Fl\+\_\+\+Draw\+\_\+\+Image\+\_\+\+Cb@{Fl\+\_\+\+Draw\+\_\+\+Image\+\_\+\+Cb}}
+\index{Fl\+\_\+\+Draw\+\_\+\+Image\+\_\+\+Cb@{Fl\+\_\+\+Draw\+\_\+\+Image\+\_\+\+Cb}!Fl\+\_\+\+Device.\+H@{Fl\+\_\+\+Device.\+H}}
+\subsubsection{\texorpdfstring{Fl\+\_\+\+Draw\+\_\+\+Image\+\_\+\+Cb}{Fl\_Draw\_Image\_Cb}}
+{\footnotesize\ttfamily typedef void($\ast$ Fl\+\_\+\+Draw\+\_\+\+Image\+\_\+\+Cb) (void $\ast$data, int x, int y, int \hyperlink{forms_8_h_aac374e320caaadeca4874add33b62af2}{w}, \hyperlink{fl__types_8h_a65f85814a8290f9797005d3b28e7e5fc}{uchar} $\ast$buf)}
+
+signature of image generation callback function. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em data} & user data passed to function \\
+\hline
+\mbox{\tt in}  & {\em x,y,w} & position and width of scan line in image \\
+\hline
+\mbox{\tt out}  & {\em buf} & buffer for generated image data. You must copy {\ttfamily w} pixels from scanline {\ttfamily y}, starting at pixel {\ttfamily x} to this buffer. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{_fl___device_8_h_a70e4f05429b26bb420c70f64e972f2a5}\label{_fl___device_8_h_a70e4f05429b26bb420c70f64e972f2a5}} 
+\index{Fl\+\_\+\+Device.\+H@{Fl\+\_\+\+Device.\+H}!fl\+\_\+graphics\+\_\+driver@{fl\+\_\+graphics\+\_\+driver}}
+\index{fl\+\_\+graphics\+\_\+driver@{fl\+\_\+graphics\+\_\+driver}!Fl\+\_\+\+Device.\+H@{Fl\+\_\+\+Device.\+H}}
+\subsubsection{\texorpdfstring{fl\+\_\+graphics\+\_\+driver}{fl\_graphics\_driver}}
+{\footnotesize\ttfamily \hyperlink{_fl___export_8_h_aa9ba29a18aee9d738370a06eeb4470fc}{F\+L\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{class_fl___graphics___driver}{Fl\+\_\+\+Graphics\+\_\+\+Driver}$\ast$ fl\+\_\+graphics\+\_\+driver}
+
+
+
+Points to the driver that currently receives all graphics requests. 
+

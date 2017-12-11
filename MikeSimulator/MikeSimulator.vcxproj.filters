@@ -18,6 +18,9 @@
     <Filter Include="Work in Progress">
       <UniqueIdentifier>{380981c5-0acd-437f-b6c0-082ce718add7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="UserInterfaces">
+      <UniqueIdentifier>{f1496f47-00a8-4020-9e2a-c545b3eeabd1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -26,22 +29,16 @@
     <ClCompile Include="src\Control.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="FLUID\FluidControlInterface.cxx">
+    <ClCompile Include="src\Data.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\UserInterfaces\ControlUI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\FLUID\FluidControlInterface.cxx">
       <Filter>FLUID</Filter>
     </ClCompile>
-    <ClCompile Include="FLUID\FluidPriceControl.cxx">
-      <Filter>FLUID</Filter>
-    </ClCompile>
-    <ClCompile Include="src\UserInterface.cpp">
-      <Filter>Work in Progress</Filter>
-    </ClCompile>
-    <ClCompile Include="src\WidgetTable.cpp">
-      <Filter>Work in Progress</Filter>
-    </ClCompile>
-    <ClCompile Include="src\WidTableBase.cpp">
-      <Filter>Work in Progress</Filter>
-    </ClCompile>
-    <ClCompile Include="FLUID\FluidInterface.cxx">
+    <ClCompile Include="src\FLUID\FluidPriceControl.cxx">
       <Filter>FLUID</Filter>
     </ClCompile>
   </ItemGroup>
@@ -49,25 +46,19 @@
     <ClInclude Include="src\Control.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="FLUID\FluidControlInterface.h">
-      <Filter>FLUID</Filter>
-    </ClInclude>
-    <ClInclude Include="FLUID\FluidPriceControl.h">
-      <Filter>FLUID</Filter>
-    </ClInclude>
     <ClInclude Include="src\MikeEnums.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\UserInterface.h">
-      <Filter>Work in Progress</Filter>
+    <ClInclude Include="src\Data.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\WidgetTable.h">
-      <Filter>Work in Progress</Filter>
+    <ClInclude Include="src\UserInterfaces\ControlUI.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\WidTableBase.h">
-      <Filter>Work in Progress</Filter>
+    <ClInclude Include="src\FLUID\FluidControlInterface.h">
+      <Filter>FLUID</Filter>
     </ClInclude>
-    <ClInclude Include="FLUID\FluidInterface.h">
+    <ClInclude Include="src\FLUID\FluidPriceControl.h">
       <Filter>FLUID</Filter>
     </ClInclude>
   </ItemGroup>

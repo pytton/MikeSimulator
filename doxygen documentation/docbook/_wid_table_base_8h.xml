@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_wid_table_base_8h">
+    <title>WidTableBase.h File Reference</title>
+    <programlisting>#include &lt;FL/Fl.H&gt;</programlisting>
+    <programlisting>#include &lt;FL/Fl_Window.H&gt;</programlisting>
+    <programlisting>#include &lt;FL/Fl_Light_Button.H&gt;</programlisting>
+    <programlisting>#include &lt;FL/Fl_Input.H&gt;</programlisting>
+    <programlisting>#include &lt;FL/fl_draw.H&gt;</programlisting>
+    <programlisting>#include &lt;FL/Fl_Table_Row.H&gt;</programlisting>
+    <programlisting>#include &lt;FL/Fl_Text_Display.H&gt;</programlisting>
+    <programlisting>#include &lt;iostream&gt;</programlisting>
+    <programlisting>#include &lt;sstream&gt;</programlisting>
+    <programlisting>#include &lt;stdio.h&gt;</programlisting>
+    <programlisting>#include &lt;vector&gt;</programlisting>
+    <programlisting>#include &lt;string&gt;</programlisting>
+    <programlisting>#include &lt;set&gt;</programlisting>
+    <programlisting>#include &lt;stack&gt;</programlisting>
+        <section>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_mike_1_1_wid_table_base">Mike::WidTableBase</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_mike_1_1_my__fl__button">Mike::My_fl_button</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespace_mike">Mike</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h</para>
+    </simplesect>
+</section>

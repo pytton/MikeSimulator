@@ -2,8 +2,10 @@
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_control_8h">
     <title>Control.h File Reference</title>
     <programlisting>#include &lt;math.h&gt;</programlisting>
-    <programlisting>#include &quot;FluidPriceControl.h&quot;</programlisting>
-    <programlisting>#include &quot;FluidControlInterface.h&quot;</programlisting>
+    <programlisting>#include &quot;FLUID\FluidControlInterface.h&quot;</programlisting>
+    <programlisting>#include &quot;MikeEnums.h&quot;</programlisting>
+    <programlisting>#include &quot;Data.h&quot;</programlisting>
+    <programlisting>#include &quot;UserInterfaces\ControlUI.h&quot;</programlisting>
         <section>
             <title> Classes </title>
             <para>
@@ -26,6 +28,6 @@
         </simplesect>
     <simplesect>
         <title>Detailed Description</title>
-    <para>Definition in file C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Control.h</para>
+    <para>Definition in file D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/Control.h</para>
     </simplesect>
 </section>

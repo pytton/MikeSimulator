@@ -1,7 +1,11 @@
 var searchData=
 [
-  ['btnstartloop',['btnStartLoop',['../class_fluid_control_interface.html#a70b369e5c14edbf6415d2dc26c33b9d0',1,'FluidControlInterface']]],
-  ['btnstoploop',['btnStopLoop',['../class_fluid_control_interface.html#a2074a5b56d8fb0e88f1f4da84dfc5296',1,'FluidControlInterface']]],
-  ['buylimitamount',['buyLimitAmount',['../class_mike_orders_at_price.html#ae8a30caef06eaa1d11a34075ea36fe8e',1,'MikeOrdersAtPrice']]],
-  ['buystopamount',['buyStopAmount',['../class_mike_orders_at_price.html#a5e095c1c6366fe5ce9352b813dd23299',1,'MikeOrdersAtPrice']]]
+  ['bid_5fprice',['bid_price',['../class_mike_1_1_user_interface_base.html#a1c3c746313e0a033040696169a9f46d8',1,'Mike::UserInterfaceBase']]],
+  ['bidcolumn',['bidColumn',['../class_mike_1_1_widget_table.html#a4e008648f0bc010c2bbde1fc549002b7',1,'Mike::WidgetTable']]],
+  ['button_5fnames',['button_names',['../class_mike_1_1_user_interface_base.html#a541ac5799c899bf3dfad6532d0686bd1',1,'Mike::UserInterfaceBase']]],
+  ['buttoncolsnumber',['ButtonColsNumber',['../class_mike_1_1_wid_table_base.html#a1f418b75c1d456ef2c167809edfa17db',1,'Mike::WidTableBase']]],
+  ['buylimitamount',['buyLimitAmount',['../class_mike_1_1_mike_orders_at_price.html#ae3ffe4271c193a1a9aea2d8e945ae855',1,'Mike::MikeOrdersAtPrice']]],
+  ['buylimitordercol',['buyLimitOrderCol',['../class_mike_1_1_widget_table.html#ac3572ce4e7d0c7aa5a1fcca70cbdb9fd',1,'Mike::WidgetTable']]],
+  ['buystopamount',['buyStopAmount',['../class_mike_1_1_mike_orders_at_price.html#ad4267dc038aa740ef12adfa448ba8fef',1,'Mike::MikeOrdersAtPrice']]],
+  ['buystopordercol',['buyStopOrderCol',['../class_mike_1_1_widget_table.html#a11086c367b264f5f89c81d84a57175f1',1,'Mike::WidgetTable']]]
 ];
