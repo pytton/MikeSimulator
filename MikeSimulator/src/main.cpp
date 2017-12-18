@@ -45,25 +45,35 @@ saving live price streams to file, loading those streams from file - to use hist
 */
 
 
+#include <thread>
+#include <mutex>
 #include <iostream>
 
 #include "FL\Fl.H"
-
 #include "Control.h"
 
 
-namespace Mike {}
+namespace Mike {
+
+	void launchFLTK() {
+		Control control;
+		control.startloop(&control);
+		Fl::run();
+	}
+
+
+}
 
 int main()
 {
 	using namespace std;
-	using namespace Mike;
+//	using namespace Mike;
 
-	Control control;
 
-	control.startloop(&control);
+	std::thread t1(Mike::launchFLTK);
 
-	Fl::run();
+	t1.join();
+//	launchFLTK();
 
 	cout << "Hello there!" << endl;
 	int a;

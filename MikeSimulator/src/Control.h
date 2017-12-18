@@ -5,8 +5,6 @@
 #include <thread> //for this_thread
 #include <mutex>
 
-#include "FLUID\FluidControlInterface.h"
-
 
 #include "MikeEnums.h"
 #include "Data.h"
