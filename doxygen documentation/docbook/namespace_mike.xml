@@ -13,7 +13,35 @@
             <para>
                 <itemizedlist>
                     <listitem>
+                        <para>struct <link linkend="class_mike_1_1_control_u_i">Mike::ControlUI</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="struct_mike_1_1_control_u_i_event">Mike::ControlUIEvent</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
                         <para>struct <link linkend="class_mike_1_1_data">Mike::Data</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_mike_1_1_data_u_i">Mike::DataUI</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="struct_mike_1_1_data_u_i_event">Mike::DataUIEvent</link></para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -86,6 +114,19 @@
             <para>
                 <itemizedlist>
                     <listitem>
+                            <para><literallayout>enum <link linkend="namespace_mike_1ac75044494e0b43141b5cefbcd63b7dde">DataUIButton</link> {
+<link linkend="namespace_mike_1ac75044494e0b43141b5cefbcd63b7ddeafe84ab8fffe0adb5a7f80f7fc92b3eac">UPBTN</link>,
+<link linkend="namespace_mike_1ac75044494e0b43141b5cefbcd63b7ddea276c9b2cc5f83e23e8a6207ce8453f41">DWNBTN</link>,
+<link linkend="namespace_mike_1ac75044494e0b43141b5cefbcd63b7ddea3c93f85078b290625b7c4db299979c4f">SLIDER</link>,
+<link linkend="namespace_mike_1ac75044494e0b43141b5cefbcd63b7ddeaba2b45bdc11e2a4a6e86aab2ac693cbb">EMPTY</link>
+}</literallayout>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
                             <para><literallayout>enum <link linkend="namespace_mike_1aa486aea8b1d0d07190982a311394e6cb">MikeOrderType</link> {
 <link linkend="namespace_mike_1aa486aea8b1d0d07190982a311394e6cba80f009cd3767a52807d46f46317b2010">CXLORDER</link>,
 <link linkend="namespace_mike_1aa486aea8b1d0d07190982a311394e6cba95eacef5178d46e4cacf51432bd802d1">BUYLMT</link>,
@@ -135,6 +176,19 @@
                     </listitem>
                 </itemizedlist>
             </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para><literallayout>enum <link linkend="namespace_mike_1ab036b30a5fb5ef61314086e0c2c5ca6a">ControlUIButton</link> {
+<link linkend="namespace_mike_1ab036b30a5fb5ef61314086e0c2c5ca6aa500270f27fc0ed38d9eac72f3341a134">START_LOOP</link>,
+<link linkend="namespace_mike_1ab036b30a5fb5ef61314086e0c2c5ca6aa64646db0a55b84b883b13a6d4e7451cd">STOP_LOOP</link>,
+<link linkend="namespace_mike_1ab036b30a5fb5ef61314086e0c2c5ca6aa7d229f5ac25776571570233b300b841b">POSITIONS1</link>,
+<link linkend="namespace_mike_1ab036b30a5fb5ef61314086e0c2c5ca6aaba2b45bdc11e2a4a6e86aab2ac693cbb">EMPTY</link>
+}</literallayout>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
         </section>
         <section>
             <title>Variables</title>
@@ -153,6 +207,14 @@
                     <listitem>
                         <para>int <link linkend="namespace_mike_1ada7afe897748f668730c74456952e356">frequency_of_primes</link> (
 int n)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="namespace_mike_1a11de29a6b789ad768bf74759d81c1957">launchFLTK</link> (
+)</para>
                     </listitem>
                 </itemizedlist>
             </para>

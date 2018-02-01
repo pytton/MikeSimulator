@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_mike_1_1_data_u_i">
+<title>Mike::DataUI class Reference</title>
+<para>
+    <programlisting>#include <link linkend="_data_8h">&lt;Data.h&gt;</link></programlisting>
+</para>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_mike_1_1_data_u_i_1ad2bc91f28168c7cc8bbcca47b54e59e8">DataUI</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+            <section xml:id="class_mike_1_1_data_u_i_1ad2bc91f28168c7cc8bbcca47b54e59e8">
+                <title>Mike::DataUI::DataUI ()</title> <emphasis></emphasis>
+                
+            </section>
+</section>

@@ -1,8 +1,10 @@
-﻿  Control.cpp
-c:\users\michael\documents\visual studio 2015\projects\mikesimulator\mikesimulator\src\control.cpp(14): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-  Generating Code...
-  Compiling...
+﻿  ControlUI.cpp
   main.cpp
+  FluidPriceControl.cxx
+  FluidControlInterface.cxx
+  Data.cpp
+  Control.cpp
+c:\users\pytto\documents\visual studio 2015\projects\mikesimulator\mikesimulator\src\control.cpp(14): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
   Generating Code...
-  MikeSimulator.vcxproj -> C:\Users\Michael\Documents\Visual Studio 2015\Projects\MikeSimulator\MikeSimulator\Debug\MikeSimulator.exe
-  MikeSimulator.vcxproj -> C:\Users\Michael\Documents\Visual Studio 2015\Projects\MikeSimulator\MikeSimulator\Debug\MikeSimulator.pdb (Partial PDB)
+  MikeSimulator.vcxproj -> C:\Users\pytto\Documents\Visual Studio 2015\Projects\MikeSimulator\MikeSimulator\Debug\MikeSimulator.exe
+  MikeSimulator.vcxproj -> C:\Users\pytto\Documents\Visual Studio 2015\Projects\MikeSimulator\MikeSimulator\Debug\MikeSimulator.pdb (Partial PDB)

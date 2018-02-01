@@ -25,8 +25,6 @@ void \hyperlink{class_mike_1_1_control_a3440083f03f7da3d4490fa44bc13d62b}{mainlo
 \item 
 void \hyperlink{class_mike_1_1_control_a887652b2503a6e881fcceca36f0a0af9}{process\+Data} ()
 \item 
-void \hyperlink{class_mike_1_1_control_ad06eaf996f971a758eea1fd55eda2565}{process\+User\+Input} ()
-\item 
 void \hyperlink{class_mike_1_1_control_a2f239c6bace6fba6d31d54919b7ee6e1}{printout\+All} ()
 \item 
 void \hyperlink{class_mike_1_1_control_acf3d41cb5dd54a2ee31cfb0709a79e7e}{process\+Algos} ()
@@ -35,6 +33,8 @@ void \hyperlink{class_mike_1_1_control_acf3d41cb5dd54a2ee31cfb0709a79e7e}{proces
 \begin{DoxyCompactItemize}
 \item 
 static void \hyperlink{class_mike_1_1_control_ac627d3cc73f39181fbfabfa01eb47f85}{mainloop\+Timeout\+Callback\+F\+L\+TK} (void $\ast$ptr\+Control\+Pointer)
+\item 
+static void \hyperlink{class_mike_1_1_control_a248ae37034b449f3385b28cd1a79af8a}{process\+User\+Input} (void $\ast$ptr\+Control\+Pointer)
 \end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -45,7 +45,7 @@ bool \hyperlink{class_mike_1_1_control_af17a58f80bda54fda5b0a5167c8f04ed}{main\+
 \item 
 bool \hyperlink{class_mike_1_1_control_a7749b97976e1bb3e7ea49c7d63531dfc}{main\+Loopfinished} = false
 \item 
-\hyperlink{class_control_u_i}{Control\+UI} $\ast$ \hyperlink{class_mike_1_1_control_ae6eb65158d5ab90cebb53cb46abf3d3c}{mptr\+Control\+Window}
+\hyperlink{class_mike_1_1_control_u_i}{Control\+UI} $\ast$ \hyperlink{class_mike_1_1_control_ae6eb65158d5ab90cebb53cb46abf3d3c}{mptr\+Control\+Window}
 \item 
 \hyperlink{class_mike_1_1_data}{Data} $\ast$ \hyperlink{class_mike_1_1_control_ad372b18cce9cd2fbd276df12bb4e886c}{mptr\+Data}
 \end{DoxyCompactItemize}
@@ -58,7 +58,7 @@ bool \hyperlink{class_mike_1_1_control_a7749b97976e1bb3e7ea49c7d63531dfc}{main\+
 \subsubsection{\texorpdfstring{Control()}{Control()}}
 {\footnotesize\ttfamily Mike\+::\+Control\+::\+Control (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\hyperlink{class_control_u_i}{Control\+UI} is a window handling the \hyperlink{class_mike_1_1_control}{Control} class \mbox{\Hypertarget{class_mike_1_1_control_aa3395e0509ab5b980732ab0e3a29ce4d}\label{class_mike_1_1_control_aa3395e0509ab5b980732ab0e3a29ce4d}} 
+\hyperlink{class_mike_1_1_control_u_i}{Control\+UI} is a window handling the \hyperlink{class_mike_1_1_control}{Control} class \mbox{\Hypertarget{class_mike_1_1_control_aa3395e0509ab5b980732ab0e3a29ce4d}\label{class_mike_1_1_control_aa3395e0509ab5b980732ab0e3a29ce4d}} 
 \index{Mike\+::\+Control@{Mike\+::\+Control}!````~Control@{$\sim$\+Control}}
 \index{````~Control@{$\sim$\+Control}!Mike\+::\+Control@{Mike\+::\+Control}}
 \subsubsection{\texorpdfstring{$\sim$\+Control()}{~Control()}}
@@ -97,11 +97,11 @@ Handles all algo events (checkfills, make decisions, place/modify/cancel orders 
 \subsubsection{\texorpdfstring{process\+Data()}{processData()}}
 {\footnotesize\ttfamily void Mike\+::\+Control\+::process\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
 
-Handles all events related to market data \mbox{\Hypertarget{class_mike_1_1_control_ad06eaf996f971a758eea1fd55eda2565}\label{class_mike_1_1_control_ad06eaf996f971a758eea1fd55eda2565}} 
+Handles all events related to market data \mbox{\Hypertarget{class_mike_1_1_control_a248ae37034b449f3385b28cd1a79af8a}\label{class_mike_1_1_control_a248ae37034b449f3385b28cd1a79af8a}} 
 \index{Mike\+::\+Control@{Mike\+::\+Control}!process\+User\+Input@{process\+User\+Input}}
 \index{process\+User\+Input@{process\+User\+Input}!Mike\+::\+Control@{Mike\+::\+Control}}
 \subsubsection{\texorpdfstring{process\+User\+Input()}{processUserInput()}}
-{\footnotesize\ttfamily void Mike\+::\+Control\+::process\+User\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+{\footnotesize\ttfamily void Mike\+::\+Control\+::process\+User\+Input (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr\+Control\+Pointer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 All user interactions with graphical user interfaces handled here \mbox{\Hypertarget{class_mike_1_1_control_ae34c60ef30c2de2332df13b644c7791f}\label{class_mike_1_1_control_ae34c60ef30c2de2332df13b644c7791f}} 
 \index{Mike\+::\+Control@{Mike\+::\+Control}!startloop@{startloop}}
@@ -140,7 +140,7 @@ this a \textquotesingle{}thread guard\textquotesingle{} for the Fl\+::add\+\_\+t
 \index{Mike\+::\+Control@{Mike\+::\+Control}!mptr\+Control\+Window@{mptr\+Control\+Window}}
 \index{mptr\+Control\+Window@{mptr\+Control\+Window}!Mike\+::\+Control@{Mike\+::\+Control}}
 \subsubsection{\texorpdfstring{mptr\+Control\+Window}{mptrControlWindow}}
-{\footnotesize\ttfamily \hyperlink{class_control_u_i}{Control\+UI}$\ast$ Mike\+::\+Control\+::mptr\+Control\+Window\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \hyperlink{class_mike_1_1_control_u_i}{Control\+UI}$\ast$ Mike\+::\+Control\+::mptr\+Control\+Window\hspace{0.3cm}{\ttfamily [private]}}
 
 F\+L\+TK window for controlling the \hyperlink{class_mike_1_1_control}{Control} class \mbox{\Hypertarget{class_mike_1_1_control_ad372b18cce9cd2fbd276df12bb4e886c}\label{class_mike_1_1_control_ad372b18cce9cd2fbd276df12bb4e886c}} 
 \index{Mike\+::\+Control@{Mike\+::\+Control}!mptr\+Data@{mptr\+Data}}

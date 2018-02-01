@@ -1,6 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="main_8cpp">
     <title>main.cpp File Reference</title>
+    <programlisting>#include &lt;thread&gt;</programlisting>
+    <programlisting>#include &lt;mutex&gt;</programlisting>
     <programlisting>#include &lt;iostream&gt;</programlisting>
     <programlisting>#include &quot;FL\Fl.H&quot;</programlisting>
     <programlisting>#include &quot;Control.h&quot;</programlisting>
@@ -27,6 +29,6 @@
         </section>
     <simplesect>
         <title>Detailed Description</title>
-    <para>Definition in file D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/main.cpp</para>
+    <para>Definition in file C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/main.cpp</para>
     </simplesect>
 </section>

@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['_7econtrol',['~Control',['../class_mike_1_1_control.html#aa3395e0509ab5b980732ab0e3a29ce4d',1,'Mike::Control']]],
-  ['_7econtrolui',['~ControlUI',['../class_control_u_i.html#a65f2e6bca109cef29ba350ba2a1580f9',1,'ControlUI']]],
-  ['_7emikeui',['~MikeUI',['../class_mike_u_i.html#a492b2e08d03c9bb9b8c7ad5d54467bff',1,'MikeUI']]],
-  ['_7ewidtablebase',['~WidTableBase',['../class_mike_1_1_wid_table_base.html#a66c2828fd13a8abf4f5faa274e632542',1,'Mike::WidTableBase']]]
+  ['virtbuttoncb',['virtButtonCb',['../class_mike_1_1_widget_table.html#affddec39940626f7d72ffaf9e02d04e4',1,'Mike::WidgetTable::virtButtonCb()'],['../class_mike_1_1_wid_table_base.html#aed65d79c6e84fd89abceaf6ffa079fad',1,'Mike::WidTableBase::virtButtonCb()']]]
 ];

@@ -12,8 +12,11 @@
     <chapter>
         <title>Class Documentation</title>
         <xi:include href="class_mike_1_1_control.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
-        <xi:include href="class_control_u_i.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="class_mike_1_1_control_u_i.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="struct_mike_1_1_control_u_i_event.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
         <xi:include href="class_mike_1_1_data.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="class_mike_1_1_data_u_i.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="struct_mike_1_1_data_u_i_event.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
         <xi:include href="class_fl___button.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
         <xi:include href="class_fl___table___row.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
         <xi:include href="class_fluid_control_interface.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['control',['Control',['../class_mike_1_1_user_interface_base.html#aa43d07603cc032a3ea563afd34b7581c',1,'Mike::UserInterfaceBase']]]
+  ['integratorposui',['IntegratorPosUI',['../class_mike_1_1_user_interface_linked.html#aa68f3dbce9d9f381bea2f56fda8bfb6b',1,'Mike::UserInterfaceLinked']]]
 ];

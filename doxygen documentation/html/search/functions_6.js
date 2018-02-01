@@ -1,15 +1,17 @@
 var searchData=
 [
-  ['m_5fbtn_5fcancelallorders_5fcb',['m_btn_CancelAllOrders_cb',['../class_mike_1_1_user_interface_base.html#a29cc254adb1d358370a4be6a3ea02d8a',1,'Mike::UserInterfaceBase']]],
-  ['m_5fbtn_5fclearpostions',['m_btn_ClearPostions',['../class_mike_1_1_user_interface_base.html#a423d89d55cc12eee96c6d679b88313a0',1,'Mike::UserInterfaceBase']]],
-  ['m_5fcheckfills_5fbtn_5fcb',['m_checkFills_btn_cb',['../class_mike_1_1_user_interface_base.html#a1f47ae3583c78cd13f3de566f1583ae3',1,'Mike::UserInterfaceBase']]],
-  ['m_5fextra_5fbtn_5fcb',['m_extra_btn_cb',['../class_mike_1_1_user_interface_base.html#aeb8db80038bcb02e65b188c96a84985c',1,'Mike::UserInterfaceBase']]],
-  ['m_5fprintorders_5fbtn_5fcb',['m_printOrders_btn_cb',['../class_mike_1_1_user_interface_base.html#a2dce036ed966a3a2ede063197ca30e1a',1,'Mike::UserInterfaceBase']]],
-  ['m_5fprintpos_5fbtn_5fcb',['m_printPos_btn_cb',['../class_mike_1_1_user_interface_base.html#abcfd0e8bffab60ceb9892635b8b06130',1,'Mike::UserInterfaceBase']]],
-  ['m_5fresetordersize_5fcb',['m_resetOrderSize_cb',['../class_mike_1_1_user_interface_base.html#ad438c7558df623165da5070d41dd3561',1,'Mike::UserInterfaceBase']]],
-  ['main',['main',['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cpp']]],
-  ['mainloop',['mainloop',['../class_mike_1_1_control.html#a3440083f03f7da3d4490fa44bc13d62b',1,'Mike::Control']]],
-  ['mainlooptimeoutcallbackfltk',['mainloopTimeoutCallbackFLTK',['../class_mike_1_1_control.html#ac627d3cc73f39181fbfabfa01eb47f85',1,'Mike::Control']]],
-  ['mikeui',['MikeUI',['../class_mike_u_i.html#a8919b872efda1c51af76e7e461f16f5f',1,'MikeUI']]],
-  ['my_5ffl_5fbutton',['My_fl_button',['../class_mike_1_1_my__fl__button.html#a3339012650ecdf33d2cb219ec88e7c45',1,'Mike::My_fl_button']]]
+  ['getaskcol',['GetAskCol',['../class_mike_1_1_widget_table.html#a7f23d041f5d4eab8103cca41951f7863',1,'Mike::WidgetTable']]],
+  ['getbidcol',['GetBidCol',['../class_mike_1_1_widget_table.html#a72cefeed8a17eb9abea21c3f38d7fe23',1,'Mike::WidgetTable']]],
+  ['getbottomrowprice',['GetBottomRowPrice',['../class_mike_1_1_wid_table_base.html#af29863e5a1695c64a748133b335ecc16',1,'Mike::WidTableBase']]],
+  ['getcolnames',['GetColNames',['../class_mike_1_1_wid_table_base.html#a8fab1137b438a8ae331c9ceeaae43acb',1,'Mike::WidTableBase']]],
+  ['getcols',['GetCols',['../class_mike_1_1_wid_table_base.html#afac57108a679ea7b3800ab8a14e80209',1,'Mike::WidTableBase']]],
+  ['getcontrol',['GetControl',['../class_mike_1_1_user_interface_base.html#ad83087afc74a281927d47a753f752525',1,'Mike::UserInterfaceBase::GetControl()'],['../class_mike_1_1_widget_table.html#ad5fd734ccfa48b6866554122c8b66667',1,'Mike::WidgetTable::GetControl()']]],
+  ['getelement',['GetElement',['../class_mike_1_1_wid_table_base.html#a5c2de58aec7fa3751862b68f18031f88',1,'Mike::WidTableBase']]],
+  ['getnextevent',['getNextEvent',['../class_mike_1_1_control_u_i.html#ae5bb9cf35b75c37381573ce7469504f1',1,'Mike::ControlUI']]],
+  ['getrows',['GetRows',['../class_mike_1_1_wid_table_base.html#abdc666dec8fa95e8e6232c9eae6ee8e2',1,'Mike::WidTableBase']]],
+  ['gettable',['GetTable',['../class_mike_1_1_user_interface_base.html#a0f9e3b0b58927dfc847c07066dd748f9',1,'Mike::UserInterfaceBase']]],
+  ['gettoprowprice',['GetTopRowPrice',['../class_mike_1_1_wid_table_base.html#ab9f884cfed7ee50f7037bf1e75258f11',1,'Mike::WidTableBase']]],
+  ['getuserinterface',['GetUserInterface',['../class_mike_1_1_widget_table.html#a62d2aadd2ee9f9e9f376dd597b5dcd7b',1,'Mike::WidgetTable']]],
+  ['getxpos',['getXpos',['../class_mike_1_1_my__fl__button.html#a046314695eb006cecb6f54dc0f1057e9',1,'Mike::My_fl_button']]],
+  ['getypos',['getYpos',['../class_mike_1_1_my__fl__button.html#a6e8291f5f02866c53ac7354b53193367',1,'Mike::My_fl_button']]]
 ];

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="struct_mike_1_1_control_u_i_event">
+<title>Mike::ControlUIEvent struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="_control_u_i_8h">&lt;ControlUI.h&gt;</link></programlisting>
+</para>
+        <section>
+            <title>Public Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>ControlUIButton mButtonPressed</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para>Simple struct holding buttons/events pressed by user. Yes perhaps in this class it could be a simple enum instead - but creating this for symmetry in other classes where additional parameters might need to be passed. </para>
+                <para>Definition at line 17 of file ControlUI.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>ControlUI.h</para></listitem></itemizedlist></para>
+        </simplesect>
+        <section>
+            <title>Member Data Documentation</title>
+        </section>
+</section>

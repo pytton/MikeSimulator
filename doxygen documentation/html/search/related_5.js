@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['node',['Node',['../class_fl___preferences.html#a6db9d28bd448a131448276ee03de1e6d',1,'Fl_Preferences']]]
+  ['widgettable',['WidgetTable',['../class_mike_1_1_mike_position.html#abcbb78a2aa9a92d43c9ea7c42cbc681e',1,'Mike::MikePosition::WidgetTable()'],['../class_mike_1_1_user_interface_base.html#abcbb78a2aa9a92d43c9ea7c42cbc681e',1,'Mike::UserInterfaceBase::WidgetTable()']]]
 ];

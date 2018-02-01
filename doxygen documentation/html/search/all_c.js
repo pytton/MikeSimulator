@@ -3,6 +3,8 @@ var searchData=
   ['partfill',['PARTFILL',['../namespace_mike.html#a194f722ae64bec13b06019160da629c6a2eed1f37802fbc2235e1a112aebb49d9',1,'Mike']]],
   ['partialfill',['partialFill',['../class_mike_1_1_mike_order.html#af03e7280847c51ac707e60727474b390',1,'Mike::MikeOrder']]],
   ['poppricecol',['PopPriceCol',['../class_mike_1_1_widget_table.html#a7c161d452ff10617cafcbc331a92a8b2',1,'Mike::WidgetTable']]],
+  ['positions1',['POSITIONS1',['../namespace_mike.html#ab036b30a5fb5ef61314086e0c2c5ca6aa7d229f5ac25776571570233b300b841b',1,'Mike']]],
+  ['positions1fltkkbtncallback',['POSITIONS1fltkKBtncallback',['../class_mike_1_1_control_u_i.html#ae37ce9f312e0f906a4847d6690927e27',1,'Mike::ControlUI']]],
   ['prevbtn',['PREVBTN',['../namespace_mike.html#a9dd611fa3c671b02e477e6b21465cc66a790d81bf8b9805f17946ec3bac50f1c5',1,'Mike']]],
   ['price',['price',['../class_mike_1_1_mike_order.html#a134e751155f6f3c72c9cd600a9865d8f',1,'Mike::MikeOrder::price()'],['../class_mike_1_1_mike_orders_at_price.html#af960da71d8dac99d0828a81d306eddae',1,'Mike::MikeOrdersAtPrice::price()']]],
   ['pricecol',['priceCol',['../class_mike_1_1_widget_table.html#a11872a3f7b12c24408afa775e535b355',1,'Mike::WidgetTable']]],
@@ -17,7 +19,7 @@ var searchData=
   ['printpositions',['printPositions',['../class_mike_1_1_widget_table.html#a8e269ede4b6a6ca1ef70ef588aa5e601',1,'Mike::WidgetTable::printPositions(const std::vector&lt; MikePosition &gt; *openPositions)'],['../class_mike_1_1_widget_table.html#a4ed53614a2ef8bc68994a84af4b30084',1,'Mike::WidgetTable::printPositions(const std::vector&lt; MikePosition &gt; *openPositions, const std::vector&lt; MikeOrdersAtPrice &gt; *openOrdersAtPrice)']]],
   ['processalgos',['processAlgos',['../class_mike_1_1_control.html#acf3d41cb5dd54a2ee31cfb0709a79e7e',1,'Mike::Control']]],
   ['processdata',['processData',['../class_mike_1_1_control.html#a887652b2503a6e881fcceca36f0a0af9',1,'Mike::Control']]],
-  ['processuserinput',['processUserInput',['../class_mike_1_1_control.html#ad06eaf996f971a758eea1fd55eda2565',1,'Mike::Control']]],
+  ['processuserinput',['processUserInput',['../class_mike_1_1_control.html#a248ae37034b449f3385b28cd1a79af8a',1,'Mike::Control']]],
   ['ptr_5fto_5fuserinterface',['ptr_to_UserInterface',['../class_mike_1_1_widget_table.html#a460f10100176575e81fdab9aa342f1fc',1,'Mike::WidgetTable']]],
   ['ptrcontrol',['ptrControl',['../class_mike_1_1_widget_table.html#a99eeaeb402037858e27985daf341c295',1,'Mike::WidgetTable']]]
 ];

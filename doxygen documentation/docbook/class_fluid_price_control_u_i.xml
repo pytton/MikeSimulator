@@ -9,77 +9,70 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>Fl_Double_Window * m_window1</para>
+                        <para>Fl_Double_Window * mWindow</para>
                     </listitem>
                 </itemizedlist>
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>Fl_Button * m_btnUp</para>
+                        <para>Fl_Button * mBtnUp</para>
                     </listitem>
                 </itemizedlist>
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>Fl_Button * m_btnDown</para>
+                        <para>Fl_Button * mBtnDown</para>
                     </listitem>
                 </itemizedlist>
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>Fl_Output * m_BidDisplay</para>
+                        <para>Fl_Output * mBidDisplay</para>
                     </listitem>
                 </itemizedlist>
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>Fl_Output * m_AskDisplay</para>
+                        <para>Fl_Output * mAskDisplay</para>
                     </listitem>
                 </itemizedlist>
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>Fl_Value_Slider * m_slider1</para>
+                        <para>Fl_Value_Slider * mSlider</para>
                     </listitem>
                 </itemizedlist>
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>Fl_Button * m_btnPrint</para>
+                        <para>Fl_Button * mBtnLiveDataConsolePrint</para>
                     </listitem>
                 </itemizedlist>
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>Fl_Button * m_btnLiveDataConsolePrint</para>
+                        <para>Fl_Button * mBtnConnectLiveData</para>
                     </listitem>
                 </itemizedlist>
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>Fl_Button * m_btnConnectLiveData</para>
+                        <para>Fl_Button * mBtnStartLoop</para>
                     </listitem>
                 </itemizedlist>
             </para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>Fl_Button * m_btnStartLoop</para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                        <para>Fl_Button * m_btnExperiment</para>
+                        <para>Fl_Button * mBtnExperiment</para>
                     </listitem>
                 </itemizedlist>
             </para>

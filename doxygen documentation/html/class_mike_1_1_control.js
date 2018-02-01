@@ -7,7 +7,7 @@ var class_mike_1_1_control =
     [ "printoutAll", "class_mike_1_1_control.html#a2f239c6bace6fba6d31d54919b7ee6e1", null ],
     [ "processAlgos", "class_mike_1_1_control.html#acf3d41cb5dd54a2ee31cfb0709a79e7e", null ],
     [ "processData", "class_mike_1_1_control.html#a887652b2503a6e881fcceca36f0a0af9", null ],
-    [ "processUserInput", "class_mike_1_1_control.html#ad06eaf996f971a758eea1fd55eda2565", null ],
+    [ "processUserInput", "class_mike_1_1_control.html#a248ae37034b449f3385b28cd1a79af8a", null ],
     [ "startloop", "class_mike_1_1_control.html#ae34c60ef30c2de2332df13b644c7791f", null ],
     [ "stoploop", "class_mike_1_1_control.html#aa26389eedd6e1c60fa64fe7883ce6ce8", null ],
     [ "flagStopMainLoop", "class_mike_1_1_control.html#a800d1dc7b58dc3af7c081225009c898f", null ],

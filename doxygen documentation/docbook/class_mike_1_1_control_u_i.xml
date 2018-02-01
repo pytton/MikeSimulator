@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="class_mike_1_1_control_u_i">
+<title>Mike::ControlUI class Reference</title>
+<para>
+    <programlisting>#include <link linkend="_control_u_i_8h">&lt;ControlUI.h&gt;</link></programlisting>
+</para>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::queue&lt; ControlUIEvent &gt; mEventQueue</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_mike_1_1_control_u_i_1ab62701989c636033cd6756c332a43513">ControlUI</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_mike_1_1_control_u_i_1af2e1bde555402a1035d7f8e2b1525b50">~ControlUI</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="class_mike_1_1_control_u_i_1afb11a656dc093a18fd3f12f9b9709418">eventsWaiting</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="struct_mike_1_1_control_u_i_event">ControlUIEvent</link> <link linkend="class_mike_1_1_control_u_i_1ae5bb9cf35b75c37381573ce7469504f1">getNextEvent</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="class_mike_1_1_control_u_i_1abcc1603903c8fd267ca9ce1a559266a9">addUserEvent</link> (
+<link linkend="namespace_mike_1ab036b30a5fb5ef61314086e0c2c5ca6a">ControlUIButton</link> btnPressedByUser)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void <link linkend="class_mike_1_1_control_u_i_1aaf2f6fc2cf93202867a797cf7bb6cc3e">STARTLOOPfltkKBtncallback</link> (
+Fl_Widget * w, void * pointerPassed)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void <link linkend="class_mike_1_1_control_u_i_1af3a7231a14cd112112e3e1c71e10baa1">STOPLOOPfltkKBtncallback</link> (
+Fl_Widget * w, void * pointerPassed)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void <link linkend="class_mike_1_1_control_u_i_1ae37ce9f312e0f906a4847d6690927e27">POSITIONS1fltkKBtncallback</link> (
+Fl_Widget * w, void * pointerPassed)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para>Creates a window with buttons for controlling the <link linkend="class_mike_1_1_control">Control</link> class. Use FLUID software to design/modify the window described in <link linkend="_fluid_control_interface_8h">FluidControlInterface.h</link> - this class inherits from it. </para>
+                <para>Definition at line 23 of file ControlUI.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>ControlUI.h</para></listitem></itemizedlist></para>
+        </simplesect>
+        <section>
+            <title>Member Data Documentation</title>
+            <simplesect>
+                <title>std::queue&lt;ControlUIEvent&gt; Mike::ControlUI::mEventQueue</title>                
+<para>Queue for handling callbacks. All callbacks are added to a queue. Use method bool <link linkend="class_mike_1_1_control_u_i_1afb11a656dc093a18fd3f12f9b9709418">eventsWaiting()</link> to check if any button have been pressed. Use method getNextEvent to get next callback and remove it from the queue </para>
+
+                <para>Definition at line 41 of file ControlUI.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>ControlUI.h</para></listitem></itemizedlist></para>
+            </simplesect>
+        </section>
+            <section xml:id="class_mike_1_1_control_u_i_1ab62701989c636033cd6756c332a43513">
+                <title>Mike::ControlUI::ControlUI ()</title> <emphasis></emphasis>
+                
+<para>Constructor. Displays the window by default. Assign callbacks here. </para>
+
+            </section>
+            <section xml:id="class_mike_1_1_control_u_i_1af2e1bde555402a1035d7f8e2b1525b50">
+                <title>Mike::ControlUI::~ControlUI ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="class_mike_1_1_control_u_i_1afb11a656dc093a18fd3f12f9b9709418">
+                <title>bool Mike::ControlUI::eventsWaiting ()</title> <emphasis></emphasis>
+                
+<para>Returns true if there are any callbacks in the queue (mEventQueue) that are waiting to be handled. False if queue is empty. </para>
+
+            </section>
+            <section xml:id="class_mike_1_1_control_u_i_1ae5bb9cf35b75c37381573ce7469504f1">
+                <title>ControlUIEvent Mike::ControlUI::getNextEvent ()</title> <emphasis></emphasis>
+                
+<para>Not thread safe. Check that queue is not empty using <link linkend="class_mike_1_1_control_u_i_1afb11a656dc093a18fd3f12f9b9709418">eventsWaiting()</link> before calling this. Returns the next event from the mEventQueue and removes that item from the queue. If this event is notprocessed by the caller then it is lost. Returns a dummy event with mButtonPressed = EMPTY if there are no elements in the queue and the caller decided to call this function without checkig for that. </para>
+
+            </section>
+            <section xml:id="class_mike_1_1_control_u_i_1abcc1603903c8fd267ca9ce1a559266a9">
+                <title>void Mike::ControlUI::addUserEvent (ControlUIButton btnPressedByUser)</title> <emphasis></emphasis>
+                
+<para>Used by FLTK static callbacks to add buttons pressed by user to mEventQueue </para>
+
+            </section>
+            <section xml:id="class_mike_1_1_control_u_i_1aaf2f6fc2cf93202867a797cf7bb6cc3e">
+                <title>void Mike::ControlUI::STARTLOOPfltkKBtncallback (Fl_Widget *w, void *pointerPassed)</title> <emphasis></emphasis>
+                
+<para>FLTK callback for pressing StartLoop button </para>
+
+            </section>
+            <section xml:id="class_mike_1_1_control_u_i_1af3a7231a14cd112112e3e1c71e10baa1">
+                <title>void Mike::ControlUI::STOPLOOPfltkKBtncallback (Fl_Widget *w, void *pointerPassed)</title> <emphasis></emphasis>
+                
+<para>FLTK callback for pressing StopLoop button </para>
+
+            </section>
+            <section xml:id="class_mike_1_1_control_u_i_1ae37ce9f312e0f906a4847d6690927e27">
+                <title>void Mike::ControlUI::POSITIONS1fltkKBtncallback (Fl_Widget *w, void *pointerPassed)</title> <emphasis></emphasis>
+                
+<para>FLTK callback for pressing Positions1 button </para>
+
+            </section>
+</section>

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['widgettable',['WidgetTable',['../class_mike_1_1_mike_position.html#abcbb78a2aa9a92d43c9ea7c42cbc681e',1,'Mike::MikePosition::WidgetTable()'],['../class_mike_1_1_user_interface_base.html#abcbb78a2aa9a92d43c9ea7c42cbc681e',1,'Mike::UserInterfaceBase::WidgetTable()']]]
+  ['userinterface',['UserInterface',['../class_mike_1_1_widget_table.html#adb55a5cf0f8d4b17f324a902a7904d97',1,'Mike::WidgetTable']]],
+  ['userinterfacebase',['UserInterfaceBase',['../class_mike_1_1_widget_table.html#a530ab6298efc8f8abbe63608c9c3e996',1,'Mike::WidgetTable']]]
 ];

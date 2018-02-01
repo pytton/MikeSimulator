@@ -7,6 +7,20 @@
             <para>
                 <itemizedlist>
                     <listitem>
+                        <para>struct <link linkend="struct_mike_1_1_data_u_i_event">Mike::DataUIEvent</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="class_mike_1_1_data_u_i">Mike::DataUI</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
                         <para>struct <link linkend="class_mike_1_1_data">Mike::Data</link></para>
                     </listitem>
                 </itemizedlist>
@@ -24,6 +38,6 @@
         </simplesect>
     <simplesect>
         <title>Detailed Description</title>
-    <para>Definition in file D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/Data.h</para>
+    <para>Definition in file C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Data.h</para>
     </simplesect>
 </section>

@@ -93,7 +93,15 @@ $(document).ready(function(){initNavTree('namespace_mike.html','');});
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mike_1_1_control.html">Control</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mike_1_1_control_u_i.html">ControlUI</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mike_1_1_control_u_i_event.html">ControlUIEvent</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mike_1_1_data.html">Data</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mike_1_1_data_u_i.html">DataUI</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mike_1_1_data_u_i_event.html">DataUIEvent</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mike_1_1_mike_order.html">MikeOrder</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -116,6 +124,12 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
+<tr class="memitem:ac75044494e0b43141b5cefbcd63b7dde"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_mike.html#ac75044494e0b43141b5cefbcd63b7dde">DataUIButton</a> { <a class="el" href="namespace_mike.html#ac75044494e0b43141b5cefbcd63b7ddeafe84ab8fffe0adb5a7f80f7fc92b3eac">DataUIButton::UPBTN</a>, 
+<a class="el" href="namespace_mike.html#ac75044494e0b43141b5cefbcd63b7ddea276c9b2cc5f83e23e8a6207ce8453f41">DataUIButton::DWNBTN</a>, 
+<a class="el" href="namespace_mike.html#ac75044494e0b43141b5cefbcd63b7ddea3c93f85078b290625b7c4db299979c4f">DataUIButton::SLIDER</a>, 
+<a class="el" href="namespace_mike.html#ac75044494e0b43141b5cefbcd63b7ddeaba2b45bdc11e2a4a6e86aab2ac693cbb">DataUIButton::EMPTY</a>
+ }</td></tr>
+<tr class="separator:ac75044494e0b43141b5cefbcd63b7dde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa486aea8b1d0d07190982a311394e6cb"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_mike.html#aa486aea8b1d0d07190982a311394e6cb">MikeOrderType</a> { <br />
 &#160;&#160;<a class="el" href="namespace_mike.html#aa486aea8b1d0d07190982a311394e6cba80f009cd3767a52807d46f46317b2010">CXLORDER</a>, 
 <a class="el" href="namespace_mike.html#aa486aea8b1d0d07190982a311394e6cba95eacef5178d46e4cacf51432bd802d1">BUYLMT</a>, 
@@ -155,15 +169,23 @@ Enumerations</h2></td></tr>
 <a class="el" href="namespace_mike.html#a194f722ae64bec13b06019160da629c6a9f935beb31030ad0d4d26126c0f39bf2">OrderStatus::CANCELLED</a>
  }</td></tr>
 <tr class="separator:a194f722ae64bec13b06019160da629c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab036b30a5fb5ef61314086e0c2c5ca6a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_mike.html#ab036b30a5fb5ef61314086e0c2c5ca6a">ControlUIButton</a> { <a class="el" href="namespace_mike.html#ab036b30a5fb5ef61314086e0c2c5ca6aa500270f27fc0ed38d9eac72f3341a134">ControlUIButton::START_LOOP</a>, 
+<a class="el" href="namespace_mike.html#ab036b30a5fb5ef61314086e0c2c5ca6aa64646db0a55b84b883b13a6d4e7451cd">ControlUIButton::STOP_LOOP</a>, 
+<a class="el" href="namespace_mike.html#ab036b30a5fb5ef61314086e0c2c5ca6aa7d229f5ac25776571570233b300b841b">ControlUIButton::POSITIONS1</a>, 
+<a class="el" href="namespace_mike.html#ab036b30a5fb5ef61314086e0c2c5ca6aaba2b45bdc11e2a4a6e86aab2ac693cbb">ControlUIButton::EMPTY</a>
+ }</td></tr>
+<tr class="separator:ab036b30a5fb5ef61314086e0c2c5ca6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ada7afe897748f668730c74456952e356"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_mike.html#ada7afe897748f668730c74456952e356">frequency_of_primes</a> (int n)</td></tr>
 <tr class="separator:ada7afe897748f668730c74456952e356"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11de29a6b789ad768bf74759d81c1957"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_mike.html#a11de29a6b789ad768bf74759d81c1957">launchFLTK</a> ()</td></tr>
+<tr class="separator:a11de29a6b789ad768bf74759d81c1957"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:abbeda217f93388b7dd036c32d183f426"><td class="memItemLeft" align="right" valign="top">static const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_mike.html#abbeda217f93388b7dd036c32d183f426">SET_MAINLOOP_INTERVAL</a> = 0.01</td></tr>
+<tr class="memitem:abbeda217f93388b7dd036c32d183f426"><td class="memItemLeft" align="right" valign="top">static const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_mike.html#abbeda217f93388b7dd036c32d183f426">SET_MAINLOOP_INTERVAL</a> = 0.3</td></tr>
 <tr class="separator:abbeda217f93388b7dd036c32d183f426"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
@@ -203,6 +225,62 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="a9dd611fa3c671b02e477e6b21465cc66a8df329b49b6668b7b1ec13ba71c72864"></a>EXPERIMENT&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a9dd611fa3c671b02e477e6b21465cc66ad80f2da521c72deea940b13dc9c55138"></a>CANCELALLORDERS&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a9dd611fa3c671b02e477e6b21465cc66ab26db120255197418962e537e3e5e301"></a>CLEARALLPOSITIONS&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="ab036b30a5fb5ef61314086e0c2c5ca6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab036b30a5fb5ef61314086e0c2c5ca6a">&#9670;&nbsp;</a></span>ControlUIButton</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespace_mike.html#ab036b30a5fb5ef61314086e0c2c5ca6a">Mike::ControlUIButton</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ab036b30a5fb5ef61314086e0c2c5ca6aa500270f27fc0ed38d9eac72f3341a134"></a>START_LOOP&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab036b30a5fb5ef61314086e0c2c5ca6aa64646db0a55b84b883b13a6d4e7451cd"></a>STOP_LOOP&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab036b30a5fb5ef61314086e0c2c5ca6aa7d229f5ac25776571570233b300b841b"></a>POSITIONS1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab036b30a5fb5ef61314086e0c2c5ca6aaba2b45bdc11e2a4a6e86aab2ac693cbb"></a>EMPTY&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="ac75044494e0b43141b5cefbcd63b7dde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac75044494e0b43141b5cefbcd63b7dde">&#9670;&nbsp;</a></span>DataUIButton</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespace_mike.html#ac75044494e0b43141b5cefbcd63b7dde">Mike::DataUIButton</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ac75044494e0b43141b5cefbcd63b7ddeafe84ab8fffe0adb5a7f80f7fc92b3eac"></a>UPBTN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac75044494e0b43141b5cefbcd63b7ddea276c9b2cc5f83e23e8a6207ce8453f41"></a>DWNBTN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac75044494e0b43141b5cefbcd63b7ddea3c93f85078b290625b7c4db299979c4f"></a>SLIDER&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ac75044494e0b43141b5cefbcd63b7ddeaba2b45bdc11e2a4a6e86aab2ac693cbb"></a>EMPTY&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -276,6 +354,23 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a11de29a6b789ad768bf74759d81c1957"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11de29a6b789ad768bf74759d81c1957">&#9670;&nbsp;</a></span>launchFLTK()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mike::launchFLTK </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Variable Documentation</h2>
 <a id="abbeda217f93388b7dd036c32d183f426"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abbeda217f93388b7dd036c32d183f426">&#9670;&nbsp;</a></span>SET_MAINLOOP_INTERVAL</h2>
@@ -287,7 +382,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const double Mike::SET_MAINLOOP_INTERVAL = 0.01</td>
+          <td class="memname">const double Mike::SET_MAINLOOP_INTERVAL = 0.3</td>
         </tr>
       </table>
   </td>

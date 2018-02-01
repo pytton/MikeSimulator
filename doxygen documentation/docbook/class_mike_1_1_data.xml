@@ -5,16 +5,6 @@
     <programlisting>#include <link linkend="_data_8h">&lt;Data.h&gt;</link></programlisting>
 </para>
         <section>
-            <title></title>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                            <para>typedef <link linkend="class_fluid_price_control_u_i">FluidPriceControlUI</link>  <link linkend="class_mike_1_1_data_1a7d4ea849326ce9098b521ebc12317b58">DataUI</link></para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-        </section>
-        <section>
             <title>Private Attributes</title>
             <para>
                 <itemizedlist>
@@ -34,34 +24,42 @@
                     </listitem>
                 </itemizedlist>
             </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="class_mike_1_1_data_1aca3a0c18d791cca46c27c86caf3059cf">~Data</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
         </section>
         <simplesect>
             <title>Detailed Description</title>
 
 <para>Class designed for handling market data. Connects to Interactive Brokers to pull live bid/ask prices. Contains OrderServer(currently local dummy) which sends orders to the market and checks if they are filled. </para>
-                <para>Definition at line 8 of file Data.h</para>
+                <para>Definition at line 27 of file Data.h</para>
                 <para>The Documentation for this struct was generated from the following file: </para>
                 <para><itemizedlist><listitem><para>Data.h</para></listitem></itemizedlist></para>
         </simplesect>
-            <section xml:id="class_mike_1_1_data_1a7d4ea849326ce9098b521ebc12317b58">
-                <title>typedef FluidPriceControlUI Mike::Data::DataUI</title> <emphasis></emphasis>
-                
-<para>DataUI is an FLTK window controlling the <link linkend="class_mike_1_1_data">Data</link> class </para>
-
-            </section>
         <section>
             <title>Member Data Documentation</title>
             <simplesect>
                 <title>DataUI* Mike::Data::dataControlWindow</title>                
-<para>DataUI is a User Interface Window used to control everything associated with market price data. This is designed to grow. Market price data can be either pulled from Interactive Brokers using Jan Boonen&apos;s library or it can be switched to &apos;manual&apos; to explore behaviour of algos. </para>
+<para><link linkend="class_mike_1_1_data_u_i">DataUI</link> is a User Interface Window used to control everything associated with market price data. This is designed to grow. Market price data can be either pulled from Interactive Brokers using Jan Boonen&apos;s library or it can be switched to &apos;manual&apos; to explore behaviour of algos. </para>
 
-                <para>Definition at line 19 of file Data.h</para>
+                <para>Definition at line 39 of file Data.h</para>
                 <para>The Documentation for this struct was generated from the following file: </para>
                 <para><itemizedlist><listitem><para>Data.h</para></listitem></itemizedlist></para>
             </simplesect>
         </section>
             <section xml:id="class_mike_1_1_data_1afb88d046472d9a49f9ea16d6773d9def">
                 <title>Mike::Data::Data ()</title> <emphasis></emphasis>
+                
+<para><link linkend="class_mike_1_1_data_u_i">DataUI</link> is an FLTK window controlling the <link linkend="class_mike_1_1_data">Data</link> class </para>
+
+            </section>
+            <section xml:id="class_mike_1_1_data_1aca3a0c18d791cca46c27c86caf3059cf">
+                <title>Mike::Data::~Data ()</title> <emphasis></emphasis>
                 
             </section>
 </section>

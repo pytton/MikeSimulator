@@ -1,0 +1,129 @@
+\hypertarget{class_mike_1_1_control_u_i}{}\section{Mike\+:\+:Control\+UI Class Reference}
+\label{class_mike_1_1_control_u_i}\index{Mike\+::\+Control\+UI@{Mike\+::\+Control\+UI}}
+
+
+{\ttfamily \#include $<$Control\+U\+I.\+h$>$}
+
+Inheritance diagram for Mike\+:\+:Control\+UI\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_mike_1_1_control_u_i}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_mike_1_1_control_u_i_ab62701989c636033cd6756c332a43513}{Control\+UI} ()
+\item 
+\hyperlink{class_mike_1_1_control_u_i_af2e1bde555402a1035d7f8e2b1525b50}{$\sim$\+Control\+UI} ()
+\item 
+bool \hyperlink{class_mike_1_1_control_u_i_afb11a656dc093a18fd3f12f9b9709418}{events\+Waiting} ()
+\item 
+\hyperlink{struct_mike_1_1_control_u_i_event}{Control\+U\+I\+Event} \hyperlink{class_mike_1_1_control_u_i_ae5bb9cf35b75c37381573ce7469504f1}{get\+Next\+Event} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_mike_1_1_control_u_i_abcc1603903c8fd267ca9ce1a559266a9}{add\+User\+Event} (\hyperlink{namespace_mike_ab036b30a5fb5ef61314086e0c2c5ca6a}{Control\+U\+I\+Button} btn\+Pressed\+By\+User)
+\end{DoxyCompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_mike_1_1_control_u_i_aaf2f6fc2cf93202867a797cf7bb6cc3e}{S\+T\+A\+R\+T\+L\+O\+O\+Pfltk\+K\+Btncallback} (Fl\+\_\+\+Widget $\ast$w, void $\ast$pointer\+Passed)
+\item 
+static void \hyperlink{class_mike_1_1_control_u_i_af3a7231a14cd112112e3e1c71e10baa1}{S\+T\+O\+P\+L\+O\+O\+Pfltk\+K\+Btncallback} (Fl\+\_\+\+Widget $\ast$w, void $\ast$pointer\+Passed)
+\item 
+static void \hyperlink{class_mike_1_1_control_u_i_ae37ce9f312e0f906a4847d6690927e27}{P\+O\+S\+I\+T\+I\+O\+N\+S1fltk\+K\+Btncallback} (Fl\+\_\+\+Widget $\ast$w, void $\ast$pointer\+Passed)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::queue$<$ \hyperlink{struct_mike_1_1_control_u_i_event}{Control\+U\+I\+Event} $>$ \hyperlink{class_mike_1_1_control_u_i_ae46585298dfd8ddb97a4d64168cc39e1}{m\+Event\+Queue}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_mike_1_1_control_u_i_a9adf7c444a8611024541177662d4716a}{Control}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Creates a window with buttons for controlling the \hyperlink{class_mike_1_1_control}{Control} class. Use F\+L\+U\+ID software to design/modify the window described in \hyperlink{_fluid_control_interface_8h}{Fluid\+Control\+Interface.\+h} -\/ this class inherits from it. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_mike_1_1_control_u_i_ab62701989c636033cd6756c332a43513}\label{class_mike_1_1_control_u_i_ab62701989c636033cd6756c332a43513}} 
+\index{Mike\+::\+Control\+UI@{Mike\+::\+Control\+UI}!Control\+UI@{Control\+UI}}
+\index{Control\+UI@{Control\+UI}!Mike\+::\+Control\+UI@{Mike\+::\+Control\+UI}}
+\subsubsection{\texorpdfstring{Control\+U\+I()}{ControlUI()}}
+{\footnotesize\ttfamily Mike\+::\+Control\+U\+I\+::\+Control\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructor. Displays the window by default. Assign callbacks here. \mbox{\Hypertarget{class_mike_1_1_control_u_i_af2e1bde555402a1035d7f8e2b1525b50}\label{class_mike_1_1_control_u_i_af2e1bde555402a1035d7f8e2b1525b50}} 
+\index{Mike\+::\+Control\+UI@{Mike\+::\+Control\+UI}!````~Control\+UI@{$\sim$\+Control\+UI}}
+\index{````~Control\+UI@{$\sim$\+Control\+UI}!Mike\+::\+Control\+UI@{Mike\+::\+Control\+UI}}
+\subsubsection{\texorpdfstring{$\sim$\+Control\+U\+I()}{~ControlUI()}}
+{\footnotesize\ttfamily Mike\+::\+Control\+U\+I\+::$\sim$\+Control\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_mike_1_1_control_u_i_abcc1603903c8fd267ca9ce1a559266a9}\label{class_mike_1_1_control_u_i_abcc1603903c8fd267ca9ce1a559266a9}} 
+\index{Mike\+::\+Control\+UI@{Mike\+::\+Control\+UI}!add\+User\+Event@{add\+User\+Event}}
+\index{add\+User\+Event@{add\+User\+Event}!Mike\+::\+Control\+UI@{Mike\+::\+Control\+UI}}
+\subsubsection{\texorpdfstring{add\+User\+Event()}{addUserEvent()}}
+{\footnotesize\ttfamily void Mike\+::\+Control\+U\+I\+::add\+User\+Event (\begin{DoxyParamCaption}\item[{\hyperlink{namespace_mike_ab036b30a5fb5ef61314086e0c2c5ca6a}{Control\+U\+I\+Button}}]{btn\+Pressed\+By\+User }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Used by F\+L\+TK static callbacks to add buttons pressed by user to m\+Event\+Queue \mbox{\Hypertarget{class_mike_1_1_control_u_i_afb11a656dc093a18fd3f12f9b9709418}\label{class_mike_1_1_control_u_i_afb11a656dc093a18fd3f12f9b9709418}} 
+\index{Mike\+::\+Control\+UI@{Mike\+::\+Control\+UI}!events\+Waiting@{events\+Waiting}}
+\index{events\+Waiting@{events\+Waiting}!Mike\+::\+Control\+UI@{Mike\+::\+Control\+UI}}
+\subsubsection{\texorpdfstring{events\+Waiting()}{eventsWaiting()}}
+{\footnotesize\ttfamily bool Mike\+::\+Control\+U\+I\+::events\+Waiting (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns true if there are any callbacks in the queue (m\+Event\+Queue) that are waiting to be handled. False if queue is empty. \mbox{\Hypertarget{class_mike_1_1_control_u_i_ae5bb9cf35b75c37381573ce7469504f1}\label{class_mike_1_1_control_u_i_ae5bb9cf35b75c37381573ce7469504f1}} 
+\index{Mike\+::\+Control\+UI@{Mike\+::\+Control\+UI}!get\+Next\+Event@{get\+Next\+Event}}
+\index{get\+Next\+Event@{get\+Next\+Event}!Mike\+::\+Control\+UI@{Mike\+::\+Control\+UI}}
+\subsubsection{\texorpdfstring{get\+Next\+Event()}{getNextEvent()}}
+{\footnotesize\ttfamily \hyperlink{struct_mike_1_1_control_u_i_event}{Control\+U\+I\+Event} Mike\+::\+Control\+U\+I\+::get\+Next\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Not thread safe. Check that queue is not empty using \hyperlink{class_mike_1_1_control_u_i_afb11a656dc093a18fd3f12f9b9709418}{events\+Waiting()} before calling this. Returns the next event from the m\+Event\+Queue and removes that item from the queue. If this event is notprocessed by the caller then it is lost. Returns a dummy event with m\+Button\+Pressed = E\+M\+P\+TY if there are no elements in the queue and the caller decided to call this function without checkig for that. \mbox{\Hypertarget{class_mike_1_1_control_u_i_ae37ce9f312e0f906a4847d6690927e27}\label{class_mike_1_1_control_u_i_ae37ce9f312e0f906a4847d6690927e27}} 
+\index{Mike\+::\+Control\+UI@{Mike\+::\+Control\+UI}!P\+O\+S\+I\+T\+I\+O\+N\+S1fltk\+K\+Btncallback@{P\+O\+S\+I\+T\+I\+O\+N\+S1fltk\+K\+Btncallback}}
+\index{P\+O\+S\+I\+T\+I\+O\+N\+S1fltk\+K\+Btncallback@{P\+O\+S\+I\+T\+I\+O\+N\+S1fltk\+K\+Btncallback}!Mike\+::\+Control\+UI@{Mike\+::\+Control\+UI}}
+\subsubsection{\texorpdfstring{P\+O\+S\+I\+T\+I\+O\+N\+S1fltk\+K\+Btncallback()}{POSITIONS1fltkKBtncallback()}}
+{\footnotesize\ttfamily void Mike\+::\+Control\+U\+I\+::\+P\+O\+S\+I\+T\+I\+O\+N\+S1fltk\+K\+Btncallback (\begin{DoxyParamCaption}\item[{Fl\+\_\+\+Widget $\ast$}]{w,  }\item[{void $\ast$}]{pointer\+Passed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+F\+L\+TK callback for pressing Positions1 button \mbox{\Hypertarget{class_mike_1_1_control_u_i_aaf2f6fc2cf93202867a797cf7bb6cc3e}\label{class_mike_1_1_control_u_i_aaf2f6fc2cf93202867a797cf7bb6cc3e}} 
+\index{Mike\+::\+Control\+UI@{Mike\+::\+Control\+UI}!S\+T\+A\+R\+T\+L\+O\+O\+Pfltk\+K\+Btncallback@{S\+T\+A\+R\+T\+L\+O\+O\+Pfltk\+K\+Btncallback}}
+\index{S\+T\+A\+R\+T\+L\+O\+O\+Pfltk\+K\+Btncallback@{S\+T\+A\+R\+T\+L\+O\+O\+Pfltk\+K\+Btncallback}!Mike\+::\+Control\+UI@{Mike\+::\+Control\+UI}}
+\subsubsection{\texorpdfstring{S\+T\+A\+R\+T\+L\+O\+O\+Pfltk\+K\+Btncallback()}{STARTLOOPfltkKBtncallback()}}
+{\footnotesize\ttfamily void Mike\+::\+Control\+U\+I\+::\+S\+T\+A\+R\+T\+L\+O\+O\+Pfltk\+K\+Btncallback (\begin{DoxyParamCaption}\item[{Fl\+\_\+\+Widget $\ast$}]{w,  }\item[{void $\ast$}]{pointer\+Passed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+F\+L\+TK callback for pressing Start\+Loop button \mbox{\Hypertarget{class_mike_1_1_control_u_i_af3a7231a14cd112112e3e1c71e10baa1}\label{class_mike_1_1_control_u_i_af3a7231a14cd112112e3e1c71e10baa1}} 
+\index{Mike\+::\+Control\+UI@{Mike\+::\+Control\+UI}!S\+T\+O\+P\+L\+O\+O\+Pfltk\+K\+Btncallback@{S\+T\+O\+P\+L\+O\+O\+Pfltk\+K\+Btncallback}}
+\index{S\+T\+O\+P\+L\+O\+O\+Pfltk\+K\+Btncallback@{S\+T\+O\+P\+L\+O\+O\+Pfltk\+K\+Btncallback}!Mike\+::\+Control\+UI@{Mike\+::\+Control\+UI}}
+\subsubsection{\texorpdfstring{S\+T\+O\+P\+L\+O\+O\+Pfltk\+K\+Btncallback()}{STOPLOOPfltkKBtncallback()}}
+{\footnotesize\ttfamily void Mike\+::\+Control\+U\+I\+::\+S\+T\+O\+P\+L\+O\+O\+Pfltk\+K\+Btncallback (\begin{DoxyParamCaption}\item[{Fl\+\_\+\+Widget $\ast$}]{w,  }\item[{void $\ast$}]{pointer\+Passed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+F\+L\+TK callback for pressing Stop\+Loop button 
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_mike_1_1_control_u_i_a9adf7c444a8611024541177662d4716a}\label{class_mike_1_1_control_u_i_a9adf7c444a8611024541177662d4716a}} 
+\index{Mike\+::\+Control\+UI@{Mike\+::\+Control\+UI}!Control@{Control}}
+\index{Control@{Control}!Mike\+::\+Control\+UI@{Mike\+::\+Control\+UI}}
+\subsubsection{\texorpdfstring{Control}{Control}}
+{\footnotesize\ttfamily friend class \hyperlink{class_mike_1_1_control}{Control}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_mike_1_1_control_u_i_ae46585298dfd8ddb97a4d64168cc39e1}\label{class_mike_1_1_control_u_i_ae46585298dfd8ddb97a4d64168cc39e1}} 
+\index{Mike\+::\+Control\+UI@{Mike\+::\+Control\+UI}!m\+Event\+Queue@{m\+Event\+Queue}}
+\index{m\+Event\+Queue@{m\+Event\+Queue}!Mike\+::\+Control\+UI@{Mike\+::\+Control\+UI}}
+\subsubsection{\texorpdfstring{m\+Event\+Queue}{mEventQueue}}
+{\footnotesize\ttfamily std\+::queue$<$\hyperlink{struct_mike_1_1_control_u_i_event}{Control\+U\+I\+Event}$>$ Mike\+::\+Control\+U\+I\+::m\+Event\+Queue\hspace{0.3cm}{\ttfamily [private]}}
+
+Queue for handling callbacks. All callbacks are added to a queue. Use method bool \hyperlink{class_mike_1_1_control_u_i_afb11a656dc093a18fd3f12f9b9709418}{events\+Waiting()} to check if any button have been pressed. Use method get\+Next\+Event to get next callback and remove it from the queue 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+User\+Interfaces/\hyperlink{_control_u_i_8h}{Control\+U\+I.\+h}\item 
+src/\+User\+Interfaces/\hyperlink{_control_u_i_8cpp}{Control\+U\+I.\+cpp}\end{DoxyCompactItemize}

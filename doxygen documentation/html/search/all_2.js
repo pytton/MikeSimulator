@@ -2,7 +2,6 @@ var searchData=
 [
   ['calculatepl',['calculatePL',['../class_mike_1_1_mike_position.html#a4530507292631b2accf01cf35c49103b',1,'Mike::MikePosition']]],
   ['callbackdest',['callbackDest',['../class_mike_1_1_user_interface_linked.html#aced836eb94453776afa2d07387293ea7',1,'Mike::UserInterfaceLinked']]],
-  ['callbackhandler',['callbackHandler',['../class_control_u_i.html#a951dd8a83c3b93b9231169c6eb33fa82',1,'ControlUI']]],
   ['callbkuserinterface',['callbkUserInterface',['../class_mike_1_1_user_interface_base.html#acb35df6eb1e854e714c42f6ae473a193',1,'Mike::UserInterfaceBase::callbkUserInterface()'],['../class_mike_1_1_user_interface.html#a9421dadab2852eb9110e25e2dff1d849',1,'Mike::UserInterface::callbkUserInterface()'],['../class_mike_1_1_user_interface_linked.html#a3ad33941e45f2f171cb4db443cb46841',1,'Mike::UserInterfaceLinked::callbkUserInterface()']]],
   ['callbkwidtable',['callbkWidTable',['../class_mike_1_1_user_interface_base.html#a56229f8ce8bb05e4b9908fcfc7222412',1,'Mike::UserInterfaceBase']]],
   ['cancelallorders',['CANCELALLORDERS',['../namespace_mike.html#a9dd611fa3c671b02e477e6b21465cc66ad80f2da521c72deea940b13dc9c55138',1,'Mike']]],
@@ -20,11 +19,13 @@ var searchData=
   ['colheadertext',['ColHeaderText',['../class_mike_1_1_wid_table_base.html#a980add59d3d60f68517b48a896e5eb3c',1,'Mike::WidTableBase']]],
   ['columnwidth',['columnWidth',['../class_mike_1_1_wid_table_base.html#a610c3e633ae8fc7290881ffeda317475',1,'Mike::WidTableBase']]],
   ['connectlivedata',['CONNECTLIVEDATA',['../namespace_mike.html#a9dd611fa3c671b02e477e6b21465cc66a66d7f181c31512aa2aa39a7bfac160cc',1,'Mike']]],
-  ['control',['Control',['../class_mike_1_1_control.html',1,'Mike::Control'],['../class_mike_1_1_control.html#ac9a2e3b56773b1eadab7297327a9fbcc',1,'Mike::Control::Control()']]],
+  ['control',['Control',['../class_mike_1_1_control.html',1,'Mike::Control'],['../class_mike_1_1_control_u_i.html#a9adf7c444a8611024541177662d4716a',1,'Mike::ControlUI::Control()'],['../class_mike_1_1_control.html#ac9a2e3b56773b1eadab7297327a9fbcc',1,'Mike::Control::Control()']]],
   ['control_2ecpp',['Control.cpp',['../_control_8cpp.html',1,'']]],
   ['control_2eh',['Control.h',['../_control_8h.html',1,'']]],
-  ['controlui',['ControlUI',['../class_control_u_i.html',1,'ControlUI'],['../class_control_u_i.html#ad2a2837a3b055d166b0dfe209545046e',1,'ControlUI::ControlUI()']]],
+  ['controlui',['ControlUI',['../class_mike_1_1_control_u_i.html',1,'Mike::ControlUI'],['../class_mike_1_1_control_u_i.html#ab62701989c636033cd6756c332a43513',1,'Mike::ControlUI::ControlUI()']]],
   ['controlui_2ecpp',['ControlUI.cpp',['../_control_u_i_8cpp.html',1,'']]],
   ['controlui_2eh',['ControlUI.h',['../_control_u_i_8h.html',1,'']]],
+  ['controluibutton',['ControlUIButton',['../namespace_mike.html#ab036b30a5fb5ef61314086e0c2c5ca6a',1,'Mike']]],
+  ['controluievent',['ControlUIEvent',['../struct_mike_1_1_control_u_i_event.html',1,'Mike']]],
   ['cxlorder',['CXLORDER',['../namespace_mike.html#aa486aea8b1d0d07190982a311394e6cba80f009cd3767a52807d46f46317b2010',1,'Mike']]]
 ];

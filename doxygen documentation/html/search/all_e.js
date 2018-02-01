@@ -21,7 +21,12 @@ var searchData=
   ['setypos',['setYpos',['../class_mike_1_1_my__fl__button.html#a67886921f1394ca398fb9ea3f950fa23',1,'Mike::My_fl_button']]],
   ['sharedflinputpointers',['sharedFlInputPointers',['../class_mike_1_1_wid_table_base.html#a50bcff267ab19f59fa27bfb2264f815b',1,'Mike::WidTableBase']]],
   ['simpletablewindow',['SimpleTableWindow',['../class_mike_1_1_wid_table_base.html#a3890cb6751c73d6d400ecb8ab17d7f2d',1,'Mike::WidTableBase']]],
+  ['slider',['SLIDER',['../namespace_mike.html#ac75044494e0b43141b5cefbcd63b7ddea3c93f85078b290625b7c4db299979c4f',1,'Mike']]],
   ['slider1',['SLIDER1',['../namespace_mike.html#a9dd611fa3c671b02e477e6b21465cc66ac1d632c96d763edcce1ebba77b0ba5a4',1,'Mike']]],
+  ['start_5floop',['START_LOOP',['../namespace_mike.html#ab036b30a5fb5ef61314086e0c2c5ca6aa500270f27fc0ed38d9eac72f3341a134',1,'Mike']]],
   ['startloop',['startloop',['../class_mike_1_1_control.html#ae34c60ef30c2de2332df13b644c7791f',1,'Mike::Control::startloop()'],['../namespace_mike.html#a9dd611fa3c671b02e477e6b21465cc66afdd7056a8336913761e5b22e5094b13f',1,'Mike::STARTLOOP()']]],
-  ['stoploop',['stoploop',['../class_mike_1_1_control.html#aa26389eedd6e1c60fa64fe7883ce6ce8',1,'Mike::Control']]]
+  ['startloopfltkkbtncallback',['STARTLOOPfltkKBtncallback',['../class_mike_1_1_control_u_i.html#aaf2f6fc2cf93202867a797cf7bb6cc3e',1,'Mike::ControlUI']]],
+  ['stop_5floop',['STOP_LOOP',['../namespace_mike.html#ab036b30a5fb5ef61314086e0c2c5ca6aa64646db0a55b84b883b13a6d4e7451cd',1,'Mike']]],
+  ['stoploop',['stoploop',['../class_mike_1_1_control.html#aa26389eedd6e1c60fa64fe7883ce6ce8',1,'Mike::Control']]],
+  ['stoploopfltkkbtncallback',['STOPLOOPfltkKBtncallback',['../class_mike_1_1_control_u_i.html#af3a7231a14cd112112e3e1c71e10baa1',1,'Mike::ControlUI']]]
 ];

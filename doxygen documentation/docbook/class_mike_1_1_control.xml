@@ -101,14 +101,6 @@ void * ptrControlPointer)</para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>void <link linkend="class_mike_1_1_control_1ad06eaf996f971a758eea1fd55eda2565">processUserInput</link> (
-)</para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
                         <para>void <link linkend="class_mike_1_1_control_1a2f239c6bace6fba6d31d54919b7ee6e1">printoutAll</link> (
 )</para>
                     </listitem>
@@ -129,6 +121,14 @@ void * ptrControlPointer)</para>
                 <itemizedlist>
                     <listitem>
                         <para>static void <link linkend="class_mike_1_1_control_1ac627d3cc73f39181fbfabfa01eb47f85">mainloopTimeoutCallbackFLTK</link> (
+void * ptrControlPointer)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void <link linkend="class_mike_1_1_control_1a248ae37034b449f3385b28cd1a79af8a">processUserInput</link> (
 void * ptrControlPointer)</para>
                     </listitem>
                 </itemizedlist>
@@ -180,7 +180,7 @@ void * ptrControlPointer)</para>
             <section xml:id="class_mike_1_1_control_1ac9a2e3b56773b1eadab7297327a9fbcc">
                 <title>Mike::Control::Control ()</title> <emphasis></emphasis>
                 
-<para><link linkend="class_control_u_i">ControlUI</link> is a window handling the <link linkend="class_mike_1_1_control">Control</link> class </para>
+<para><link linkend="class_mike_1_1_control_u_i">ControlUI</link> is a window handling the <link linkend="class_mike_1_1_control">Control</link> class </para>
 
             </section>
             <section xml:id="class_mike_1_1_control_1aa3395e0509ab5b980732ab0e3a29ce4d">
@@ -211,12 +211,6 @@ void * ptrControlPointer)</para>
 <para>Handles all events related to market data </para>
 
             </section>
-            <section xml:id="class_mike_1_1_control_1ad06eaf996f971a758eea1fd55eda2565">
-                <title>void Mike::Control::processUserInput ()</title> <emphasis></emphasis>
-                
-<para>All user interactions with graphical user interfaces handled here </para>
-
-            </section>
             <section xml:id="class_mike_1_1_control_1a2f239c6bace6fba6d31d54919b7ee6e1">
                 <title>void Mike::Control::printoutAll ()</title> <emphasis></emphasis>
                 
@@ -233,6 +227,12 @@ void * ptrControlPointer)</para>
                 <title>void Mike::Control::mainloopTimeoutCallbackFLTK (void *ptrControlPointer)</title> <emphasis></emphasis>
                 
 <para>Makes the <link linkend="class_mike_1_1_control_1a3440083f03f7da3d4490fa44bc13d62b">mainloop()</link> function loop continously in intervals set by SET_MAINLOOP_INTERVAL. Has to be static per FLTK. </para>
+
+            </section>
+            <section xml:id="class_mike_1_1_control_1a248ae37034b449f3385b28cd1a79af8a">
+                <title>void Mike::Control::processUserInput (void *ptrControlPointer)</title> <emphasis></emphasis>
+                
+<para>All user interactions with graphical user interfaces handled here </para>
 
             </section>
 </section>

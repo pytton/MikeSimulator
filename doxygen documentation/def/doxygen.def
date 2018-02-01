@@ -13,7 +13,7 @@ class = {
 
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'Control';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/Control.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Control.h';
       sec-mem-desc-line = '33';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -31,7 +31,7 @@ _EnD_oF_dEf_TeXt_;
 
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = '~Control';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/Control.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Control.h';
       sec-mem-desc-line = '34';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -49,7 +49,7 @@ _EnD_oF_dEf_TeXt_;
 void
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'stoploop';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/Control.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Control.h';
       sec-mem-desc-line = '39';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -76,7 +76,7 @@ void *
 _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'ptrControlPointer';
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/Control.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Control.h';
       sec-mem-desc-line = '37';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -97,7 +97,7 @@ _EnD_oF_dEf_TeXt_;
 void
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'mainloop';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/Control.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Control.h';
       sec-mem-desc-line = '44';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -116,31 +116,13 @@ _EnD_oF_dEf_TeXt_;
 void
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'processData';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/Control.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Control.h';
       sec-mem-desc-line = '54';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
 Handles all events related to market data 
-_EnD_oF_dEf_TeXt_;
-    }; /* sec-member */
-    sec-member = {
-      sec-mem-kind = 'function';
-      sec-mem-id   = 'class_mike_1_1_control_1ad06eaf996f971a758eea1fd55eda2565';
-      sec-mem-virt = normal;
-      sec-mem-prot = private;
-      sec-mem-type = <<_EnD_oF_dEf_TeXt_
-void
-_EnD_oF_dEf_TeXt_;
-      sec-mem-name = 'processUserInput';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/Control.h';
-      sec-mem-desc-line = '56';
-      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
-_EnD_oF_dEf_TeXt_;
-      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
-All user interactions with graphical user interfaces handled here  
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
@@ -152,7 +134,7 @@ _EnD_oF_dEf_TeXt_;
 void
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'printoutAll';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/Control.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Control.h';
       sec-mem-desc-line = '58';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -170,7 +152,7 @@ _EnD_oF_dEf_TeXt_;
 void
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'processAlgos';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/Control.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Control.h';
       sec-mem-desc-line = '60';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -194,7 +176,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = false
 _EnD_oF_dEf_TeXt_;
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/Control.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Control.h';
       sec-mem-desc-line = '48';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -215,7 +197,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = false
 _EnD_oF_dEf_TeXt_;
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/Control.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Control.h';
       sec-mem-desc-line = '50';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -236,7 +218,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = false
 _EnD_oF_dEf_TeXt_;
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/Control.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Control.h';
       sec-mem-desc-line = '52';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -254,7 +236,7 @@ _EnD_oF_dEf_TeXt_;
 ControlUI *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'mptrControlWindow';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/Control.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Control.h';
       sec-mem-desc-line = '65';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -272,7 +254,7 @@ _EnD_oF_dEf_TeXt_;
 Data *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'mptrData';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/Control.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Control.h';
       sec-mem-desc-line = '67';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -299,7 +281,7 @@ void *
 _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'ptrControlPointer';
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/Control.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Control.h';
       sec-mem-desc-line = '46';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -308,8 +290,32 @@ _EnD_oF_dEf_TeXt_;
 Makes the mainloop() function loop continously in intervals set by SET_MAINLOOP_INTERVAL. Has to be static per FLTK. 
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'class_mike_1_1_control_1a248ae37034b449f3385b28cd1a79af8a';
+      sec-mem-virt = normal;
+      sec-mem-prot = private;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+static void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'processUserInput';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+void *
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'ptrControlPointer';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Control.h';
+      sec-mem-desc-line = '56';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+All user interactions with graphical user interfaces handled here  
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
   }; /* cp-section */
-  cp-filename  = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/Control.h';
+  cp-filename  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Control.h';
   cp-fileline  = '22';
   cp-briefdesc = <<_EnD_oF_dEf_TeXt_
 
@@ -318,17 +324,6 @@ _EnD_oF_dEf_TeXt_;
 
 _EnD_oF_dEf_TeXt_;
   cp-collaborationgraph = <<_EnD_oF_dEf_TeXt_
-      node = {
-        node-id    = 2;
-        node-label = 'ControlUI';
-        node-link = {
-          node-link-id = 'class_control_u_i';
-        };
-        node-child = {
-          child-id = '3';
-          relation = public-inheritance;
-        }; /* node-child */
-      }; /* node */
       node = {
         node-id    = 1;
         node-label = 'Mike::Control';
@@ -352,6 +347,17 @@ _EnD_oF_dEf_TeXt_;
       }; /* node */
       node = {
         node-id    = 5;
+        node-label = 'Mike::DataUI';
+        node-link = {
+          node-link-id = 'class_mike_1_1_data_u_i';
+        };
+        node-child = {
+          child-id = '6';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+      node = {
+        node-id    = 6;
         node-label = 'FluidPriceControlUI';
         node-link = {
           node-link-id = 'class_fluid_price_control_u_i';
@@ -363,6 +369,17 @@ _EnD_oF_dEf_TeXt_;
         node-link = {
           node-link-id = 'class_fluid_control_interface';
         };
+      }; /* node */
+      node = {
+        node-id    = 2;
+        node-label = 'Mike::ControlUI';
+        node-link = {
+          node-link-id = 'class_mike_1_1_control_u_i';
+        };
+        node-child = {
+          child-id = '3';
+          relation = public-inheritance;
+        }; /* node-child */
       }; /* node */
       node = {
         node-id    = 4;
@@ -382,8 +399,8 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
 }; /* class */
 class = {
-  cp-id     = 'class_control_u_i';
-  cp-name   = 'ControlUI';
+  cp-id     = 'class_mike_1_1_control_u_i';
+  cp-name   = 'Mike::ControlUI';
   cp-ref     = {
     ref-type = base;
     ref-id   = 'class_fluid_control_interface';
@@ -394,15 +411,33 @@ class = {
     sec-kind = 'public-func';
     sec-member = {
       sec-mem-kind = 'function';
-      sec-mem-id   = 'class_control_u_i_1ad2a2837a3b055d166b0dfe209545046e';
+      sec-mem-id   = 'class_mike_1_1_control_u_i_1ab62701989c636033cd6756c332a43513';
       sec-mem-virt = normal;
       sec-mem-prot = public;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'ControlUI';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/UserInterfaces/ControlUI.h';
-      sec-mem-desc-line = '9';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/UserInterfaces/ControlUI.h';
+      sec-mem-desc-line = '27';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Constructor. Displays the window by default. Assign callbacks here.  
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'class_mike_1_1_control_u_i_1af2e1bde555402a1035d7f8e2b1525b50';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = '~ControlUI';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/UserInterfaces/ControlUI.h';
+      sec-mem-desc-line = '28';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -412,20 +447,38 @@ _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
       sec-mem-kind = 'function';
-      sec-mem-id   = 'class_control_u_i_1a65f2e6bca109cef29ba350ba2a1580f9';
+      sec-mem-id   = 'class_mike_1_1_control_u_i_1afb11a656dc093a18fd3f12f9b9709418';
       sec-mem-virt = normal;
       sec-mem-prot = public;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
-
+bool
 _EnD_oF_dEf_TeXt_;
-      sec-mem-name = '~ControlUI';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/UserInterfaces/ControlUI.h';
-      sec-mem-desc-line = '10';
+      sec-mem-name = 'eventsWaiting';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/UserInterfaces/ControlUI.h';
+      sec-mem-desc-line = '31';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Returns true if there are any callbacks in the queue (mEventQueue) that are waiting to be handled. False if queue is empty. 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'class_mike_1_1_control_u_i_1ae5bb9cf35b75c37381573ce7469504f1';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+ControlUIEvent
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'getNextEvent';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/UserInterfaces/ControlUI.h';
+      sec-mem-desc-line = '34';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Not thread safe. Check that queue is not empty using eventsWaiting() before calling this. Returns the next event from the mEventQueue and removes that item from the queue. If this event is notprocessed by the caller then it is lost. Returns a dummy event with mButtonPressed = EMPTY if there are no elements in the queue and the caller decided to call this function without checkig for that.   
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
   }; /* cp-section */
@@ -433,20 +486,49 @@ _EnD_oF_dEf_TeXt_;
     sec-kind = 'private-func';
     sec-member = {
       sec-mem-kind = 'function';
-      sec-mem-id   = 'class_control_u_i_1a951dd8a83c3b93b9231169c6eb33fa82';
+      sec-mem-id   = 'class_mike_1_1_control_u_i_1abcc1603903c8fd267ca9ce1a559266a9';
       sec-mem-virt = normal;
       sec-mem-prot = private;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
 void
 _EnD_oF_dEf_TeXt_;
-      sec-mem-name = 'callbackHandler';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/UserInterfaces/ControlUI.h';
-      sec-mem-desc-line = '13';
+      sec-mem-name = 'addUserEvent';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+ControlUIButton
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'btnPressedByUser';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/UserInterfaces/ControlUI.h';
+      sec-mem-desc-line = '43';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+Used by FLTK static callbacks to add buttons pressed by user to mEventQueue 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-section = {
+    sec-kind = 'private-attrib';
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'class_mike_1_1_control_u_i_1ae46585298dfd8ddb97a4d64168cc39e1';
+      sec-mem-virt = normal;
+      sec-mem-prot = private;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+std::queue< ControlUIEvent >
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'mEventQueue';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/UserInterfaces/ControlUI.h';
+      sec-mem-desc-line = '41';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+   Queue for handling callbacks. All callbacks are added to a queue.
+Use method bool eventsWaiting() to check if any button have been pressed.
+Use method getNextEvent to get next callback and remove it from the queue
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
   }; /* cp-section */
@@ -454,15 +536,108 @@ _EnD_oF_dEf_TeXt_;
     sec-kind = 'private-static-func';
     sec-member = {
       sec-mem-kind = 'function';
-      sec-mem-id   = 'class_control_u_i_1ab72cd93a7844ff76187ddf77432ddafb';
+      sec-mem-id   = 'class_mike_1_1_control_u_i_1aaf2f6fc2cf93202867a797cf7bb6cc3e';
       sec-mem-virt = normal;
       sec-mem-prot = private;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
 static void
 _EnD_oF_dEf_TeXt_;
-      sec-mem-name = 'fltkBtnCallback';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/UserInterfaces/ControlUI.h';
-      sec-mem-desc-line = '12';
+      sec-mem-name = 'STARTLOOPfltkKBtncallback';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Fl_Widget *
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'w';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+void *
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'pointerPassed';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/UserInterfaces/ControlUI.h';
+      sec-mem-desc-line = '47';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+FLTK callback for pressing StartLoop button 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'class_mike_1_1_control_u_i_1af3a7231a14cd112112e3e1c71e10baa1';
+      sec-mem-virt = normal;
+      sec-mem-prot = private;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+static void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'STOPLOOPfltkKBtncallback';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Fl_Widget *
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'w';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+void *
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'pointerPassed';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/UserInterfaces/ControlUI.h';
+      sec-mem-desc-line = '49';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+FLTK callback for pressing StopLoop button 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'class_mike_1_1_control_u_i_1ae37ce9f312e0f906a4847d6690927e27';
+      sec-mem-virt = normal;
+      sec-mem-prot = private;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+static void
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'POSITIONS1fltkKBtncallback';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Fl_Widget *
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'w';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+void *
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'pointerPassed';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/UserInterfaces/ControlUI.h';
+      sec-mem-desc-line = '51';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+FLTK callback for pressing Positions1 button 
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-section = {
+    sec-kind = 'signal';
+    sec-member = {
+      sec-mem-kind = 'friend';
+      sec-mem-id   = 'class_mike_1_1_control_u_i_1a9adf7c444a8611024541177662d4716a';
+      sec-mem-virt = normal;
+      sec-mem-prot = private;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+friend class
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'Control';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/UserInterfaces/ControlUI.h';
+      sec-mem-desc-line = '24';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -471,57 +646,90 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
   }; /* cp-section */
-  cp-filename  = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/UserInterfaces/ControlUI.h';
-  cp-fileline  = '7';
+  cp-filename  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/UserInterfaces/ControlUI.h';
+  cp-fileline  = '23';
   cp-briefdesc = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
   cp-documentation = <<_EnD_oF_dEf_TeXt_
-
+Creates a window with buttons for controlling the Control class. Use FLUID software to design/modify the window described in FluidControlInterface.h - this class inherits from it.  
 _EnD_oF_dEf_TeXt_;
   cp-inheritancegraph = <<_EnD_oF_dEf_TeXt_
       node = {
-        node-id    = 6;
-        node-label = 'ControlUI';
-        node-link = {
-          node-link-id = 'class_control_u_i';
-        };
-        node-child = {
-          child-id = '7';
-          relation = public-inheritance;
-        }; /* node-child */
-      }; /* node */
-      node = {
-        node-id    = 7;
+        node-id    = 8;
         node-label = 'FluidControlInterface';
         node-link = {
           node-link-id = 'class_fluid_control_interface';
         };
+      }; /* node */
+      node = {
+        node-id    = 7;
+        node-label = 'Mike::ControlUI';
+        node-link = {
+          node-link-id = 'class_mike_1_1_control_u_i';
+        };
+        node-child = {
+          child-id = '8';
+          relation = public-inheritance;
+        }; /* node-child */
       }; /* node */
 
 _EnD_oF_dEf_TeXt_;
   cp-collaborationgraph = <<_EnD_oF_dEf_TeXt_
       node = {
-        node-id    = 8;
-        node-label = 'ControlUI';
-        node-link = {
-          node-link-id = 'class_control_u_i';
-        };
-        node-child = {
-          child-id = '9';
-          relation = public-inheritance;
-        }; /* node-child */
-      }; /* node */
-      node = {
-        node-id    = 9;
+        node-id    = 10;
         node-label = 'FluidControlInterface';
         node-link = {
           node-link-id = 'class_fluid_control_interface';
         };
       }; /* node */
+      node = {
+        node-id    = 9;
+        node-label = 'Mike::ControlUI';
+        node-link = {
+          node-link-id = 'class_mike_1_1_control_u_i';
+        };
+        node-child = {
+          child-id = '10';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
 
 _EnD_oF_dEf_TeXt_;
 }; /* class */
+struct = {
+  cp-id     = 'struct_mike_1_1_control_u_i_event';
+  cp-name   = 'Mike::ControlUIEvent';
+  cp-section = {
+    sec-kind = 'public-attrib';
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'struct_mike_1_1_control_u_i_event_1adf53b39417816ab95cd27ab7dec31707';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+ControlUIButton
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'mButtonPressed';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/UserInterfaces/ControlUI.h';
+      sec-mem-desc-line = '18';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/UserInterfaces/ControlUI.h';
+  cp-fileline  = '17';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+Simple struct holding buttons/events pressed by user. Yes perhaps in this class it could be a simple enum instead - but creating this for symmetry in other classes where additional parameters might need to be passed. 
+_EnD_oF_dEf_TeXt_;
+}; /* struct */
 class = {
   cp-id     = 'class_mike_1_1_data';
   cp-name   = 'Mike::Data';
@@ -536,34 +744,31 @@ class = {
 
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'Data';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/Data.h';
-      sec-mem-desc-line = '12';
-      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
-_EnD_oF_dEf_TeXt_;
-      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
-_EnD_oF_dEf_TeXt_;
-    }; /* sec-member */
-  }; /* cp-section */
-  cp-section = {
-    sec-kind = 'private-type';
-    sec-member = {
-      sec-mem-kind = 'typedef';
-      sec-mem-id   = 'class_mike_1_1_data_1a7d4ea849326ce9098b521ebc12317b58';
-      sec-mem-virt = normal;
-      sec-mem-prot = private;
-      sec-mem-type = <<_EnD_oF_dEf_TeXt_
-FluidPriceControlUI
-_EnD_oF_dEf_TeXt_;
-      sec-mem-name = 'DataUI';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/Data.h';
-      sec-mem-desc-line = '10';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Data.h';
+      sec-mem-desc-line = '31';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
 DataUI is an FLTK window controlling the Data class  
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'class_mike_1_1_data_1aca3a0c18d791cca46c27c86caf3059cf';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = '~Data';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Data.h';
+      sec-mem-desc-line = '32';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
   }; /* cp-section */
@@ -578,8 +783,8 @@ _EnD_oF_dEf_TeXt_;
 DataUI *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'dataControlWindow';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/Data.h';
-      sec-mem-desc-line = '19';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Data.h';
+      sec-mem-desc-line = '39';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -590,8 +795,8 @@ Jan Boonen's library or it can be switched to 'manual' to explore behaviour of a
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
   }; /* cp-section */
-  cp-filename  = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/Data.h';
-  cp-fileline  = '8';
+  cp-filename  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Data.h';
+  cp-fileline  = '27';
   cp-briefdesc = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -600,20 +805,31 @@ Class designed for handling market data. Connects to Interactive Brokers to pull
 _EnD_oF_dEf_TeXt_;
   cp-collaborationgraph = <<_EnD_oF_dEf_TeXt_
       node = {
-        node-id    = 12;
+        node-id    = 15;
+        node-label = 'Mike::DataUI';
+        node-link = {
+          node-link-id = 'class_mike_1_1_data_u_i';
+        };
+        node-child = {
+          child-id = '16';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+      node = {
+        node-id    = 16;
         node-label = 'FluidPriceControlUI';
         node-link = {
           node-link-id = 'class_fluid_price_control_u_i';
         };
       }; /* node */
       node = {
-        node-id    = 11;
+        node-id    = 14;
         node-label = 'Mike::Data';
         node-link = {
           node-link-id = 'class_mike_1_1_data';
         };
         node-child = {
-          child-id = '12';
+          child-id = '15';
           relation = usage;
           edgelabel = <<_EnD_oF_dEf_TeXt_
 dataControlWindow
@@ -624,6 +840,120 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
 }; /* class */
 class = {
+  cp-id     = 'class_mike_1_1_data_u_i';
+  cp-name   = 'Mike::DataUI';
+  cp-ref     = {
+    ref-type = base;
+    ref-id   = 'class_fluid_price_control_u_i';
+    ref-prot = public;
+    ref-virt = non-virtual;
+  };
+  cp-section = {
+    sec-kind = 'public-func';
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'class_mike_1_1_data_u_i_1ad2bc91f28168c7cc8bbcca47b54e59e8';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'DataUI';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Data.h';
+      sec-mem-desc-line = '22';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Data.h';
+  cp-fileline  = '20';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  cp-inheritancegraph = <<_EnD_oF_dEf_TeXt_
+      node = {
+        node-id    = 17;
+        node-label = 'Mike::DataUI';
+        node-link = {
+          node-link-id = 'class_mike_1_1_data_u_i';
+        };
+        node-child = {
+          child-id = '18';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+      node = {
+        node-id    = 18;
+        node-label = 'FluidPriceControlUI';
+        node-link = {
+          node-link-id = 'class_fluid_price_control_u_i';
+        };
+      }; /* node */
+
+_EnD_oF_dEf_TeXt_;
+  cp-collaborationgraph = <<_EnD_oF_dEf_TeXt_
+      node = {
+        node-id    = 19;
+        node-label = 'Mike::DataUI';
+        node-link = {
+          node-link-id = 'class_mike_1_1_data_u_i';
+        };
+        node-child = {
+          child-id = '20';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+      node = {
+        node-id    = 20;
+        node-label = 'FluidPriceControlUI';
+        node-link = {
+          node-link-id = 'class_fluid_price_control_u_i';
+        };
+      }; /* node */
+
+_EnD_oF_dEf_TeXt_;
+}; /* class */
+struct = {
+  cp-id     = 'struct_mike_1_1_data_u_i_event';
+  cp-name   = 'Mike::DataUIEvent';
+  cp-section = {
+    sec-kind = 'public-attrib';
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'struct_mike_1_1_data_u_i_event_1a0750106bd16c5494aa6402d16474b5b4';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+DataUIButton
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'mButtonPressed';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Data.h';
+      sec-mem-desc-line = '16';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Data.h';
+  cp-fileline  = '15';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+Simple struct holding buttons/events pressed by user.  
+_EnD_oF_dEf_TeXt_;
+}; /* struct */
+class = {
   cp-id     = 'class_fl___button';
   cp-name   = 'Fl_Button';
   cp-ref     = {
@@ -632,7 +962,7 @@ class = {
     ref-prot = public;
     ref-virt = non-virtual;
   };
-  cp-filename  = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+  cp-filename  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
   cp-fileline  = '154';
   cp-briefdesc = <<_EnD_oF_dEf_TeXt_
 
@@ -642,18 +972,18 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
   cp-inheritancegraph = <<_EnD_oF_dEf_TeXt_
       node = {
-        node-id    = 14;
+        node-id    = 24;
         node-label = 'Mike::My_fl_button';
         node-link = {
           node-link-id = 'class_mike_1_1_my__fl__button';
         };
         node-child = {
-          child-id = '13';
+          child-id = '23';
           relation = public-inheritance;
         }; /* node-child */
       }; /* node */
       node = {
-        node-id    = 13;
+        node-id    = 23;
         node-label = 'Fl_Button';
       }; /* node */
 
@@ -668,7 +998,7 @@ class = {
     ref-prot = public;
     ref-virt = non-virtual;
   };
-  cp-filename  = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+  cp-filename  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
   cp-fileline  = '35';
   cp-briefdesc = <<_EnD_oF_dEf_TeXt_
 
@@ -678,28 +1008,28 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
   cp-inheritancegraph = <<_EnD_oF_dEf_TeXt_
       node = {
-        node-id    = 16;
+        node-id    = 26;
         node-label = 'Fl_Table_Row';
       }; /* node */
       node = {
-        node-id    = 17;
+        node-id    = 27;
         node-label = 'Mike::WidTableBase';
         node-link = {
           node-link-id = 'class_mike_1_1_wid_table_base';
         };
         node-child = {
-          child-id = '16';
+          child-id = '26';
           relation = public-inheritance;
         }; /* node-child */
       }; /* node */
       node = {
-        node-id    = 18;
+        node-id    = 28;
         node-label = 'Mike::WidgetTable';
         node-link = {
           node-link-id = 'class_mike_1_1_widget_table';
         };
         node-child = {
-          child-id = '17';
+          child-id = '27';
           relation = public-inheritance;
         }; /* node-child */
       }; /* node */
@@ -711,7 +1041,7 @@ class = {
   cp-name   = 'FluidControlInterface';
   cp-ref     = {
     ref-type = derived;
-    ref-id   = 'class_control_u_i';
+    ref-id   = 'class_mike_1_1_control_u_i';
     ref-prot = public;
     ref-virt = non-virtual;
   };
@@ -726,7 +1056,7 @@ class = {
 
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'FluidControlInterface';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidControlInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidControlInterface.h';
       sec-mem-desc-line = '12';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -747,7 +1077,7 @@ _EnD_oF_dEf_TeXt_;
 Fl_Double_Window *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'mWindow';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidControlInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidControlInterface.h';
       sec-mem-desc-line = '13';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -765,7 +1095,7 @@ _EnD_oF_dEf_TeXt_;
 Fl_Box *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'mWindowBox';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidControlInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidControlInterface.h';
       sec-mem-desc-line = '14';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -783,7 +1113,7 @@ _EnD_oF_dEf_TeXt_;
 Fl_Button *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'mBtnShowPositions1';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidControlInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidControlInterface.h';
       sec-mem-desc-line = '15';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -801,7 +1131,7 @@ _EnD_oF_dEf_TeXt_;
 Fl_Button *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'mBtnShowPositions2';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidControlInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidControlInterface.h';
       sec-mem-desc-line = '16';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -819,7 +1149,7 @@ _EnD_oF_dEf_TeXt_;
 Fl_Button *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'mBtnShowPositions3';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidControlInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidControlInterface.h';
       sec-mem-desc-line = '17';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -837,7 +1167,7 @@ _EnD_oF_dEf_TeXt_;
 Fl_Button *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'mBtnShowPositions4';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidControlInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidControlInterface.h';
       sec-mem-desc-line = '18';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -855,7 +1185,7 @@ _EnD_oF_dEf_TeXt_;
 Fl_Button *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'mBtnStartLoop';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidControlInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidControlInterface.h';
       sec-mem-desc-line = '19';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -873,7 +1203,7 @@ _EnD_oF_dEf_TeXt_;
 Fl_Button *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'mBtnStopLoop';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidControlInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidControlInterface.h';
       sec-mem-desc-line = '20';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -883,7 +1213,7 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
   }; /* cp-section */
-  cp-filename  = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidControlInterface.h';
+  cp-filename  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidControlInterface.h';
   cp-fileline  = '10';
   cp-briefdesc = <<_EnD_oF_dEf_TeXt_
 
@@ -893,22 +1223,22 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
   cp-inheritancegraph = <<_EnD_oF_dEf_TeXt_
       node = {
-        node-id    = 21;
-        node-label = 'ControlUI';
-        node-link = {
-          node-link-id = 'class_control_u_i';
-        };
-        node-child = {
-          child-id = '20';
-          relation = public-inheritance;
-        }; /* node-child */
-      }; /* node */
-      node = {
-        node-id    = 20;
+        node-id    = 30;
         node-label = 'FluidControlInterface';
         node-link = {
           node-link-id = 'class_fluid_control_interface';
         };
+      }; /* node */
+      node = {
+        node-id    = 31;
+        node-label = 'Mike::ControlUI';
+        node-link = {
+          node-link-id = 'class_mike_1_1_control_u_i';
+        };
+        node-child = {
+          child-id = '30';
+          relation = public-inheritance;
+        }; /* node-child */
       }; /* node */
 
 _EnD_oF_dEf_TeXt_;
@@ -933,7 +1263,7 @@ class = {
 
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'FluidInterface';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidInterface.h';
       sec-mem-desc-line = '14';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -954,7 +1284,7 @@ _EnD_oF_dEf_TeXt_;
 Fl_Double_Window *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'm_window1';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidInterface.h';
       sec-mem-desc-line = '15';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -972,7 +1302,7 @@ _EnD_oF_dEf_TeXt_;
 Fl_Value_Input *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'm_curr_ask';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidInterface.h';
       sec-mem-desc-line = '16';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -990,7 +1320,7 @@ _EnD_oF_dEf_TeXt_;
 Fl_Value_Input *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'm_top_limit';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidInterface.h';
       sec-mem-desc-line = '17';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1008,7 +1338,7 @@ _EnD_oF_dEf_TeXt_;
 Fl_Value_Input *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'm_top_profit';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidInterface.h';
       sec-mem-desc-line = '18';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1026,7 +1356,7 @@ _EnD_oF_dEf_TeXt_;
 Fl_Table *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'm_table';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidInterface.h';
       sec-mem-desc-line = '19';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1044,7 +1374,7 @@ _EnD_oF_dEf_TeXt_;
 Fl_Value_Input *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'm_curr_bid';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidInterface.h';
       sec-mem-desc-line = '20';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1062,7 +1392,7 @@ _EnD_oF_dEf_TeXt_;
 Fl_Value_Input *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'm_bottom_limit';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidInterface.h';
       sec-mem-desc-line = '21';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1080,7 +1410,7 @@ _EnD_oF_dEf_TeXt_;
 Fl_Value_Input *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'm_bottom_profit';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidInterface.h';
       sec-mem-desc-line = '22';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1098,7 +1428,7 @@ _EnD_oF_dEf_TeXt_;
 Fl_Button *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'm_btn_extra';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidInterface.h';
       sec-mem-desc-line = '23';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1116,7 +1446,7 @@ _EnD_oF_dEf_TeXt_;
 Fl_Output *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'm_TotOpenPos';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidInterface.h';
       sec-mem-desc-line = '24';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1134,7 +1464,7 @@ _EnD_oF_dEf_TeXt_;
 Fl_Output *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'm_TotOpenPL';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidInterface.h';
       sec-mem-desc-line = '25';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1152,7 +1482,7 @@ _EnD_oF_dEf_TeXt_;
 Fl_Output *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'm_TotClosedPL';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidInterface.h';
       sec-mem-desc-line = '26';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1170,7 +1500,7 @@ _EnD_oF_dEf_TeXt_;
 Fl_Output *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'm_TotPL';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidInterface.h';
       sec-mem-desc-line = '27';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1188,7 +1518,7 @@ _EnD_oF_dEf_TeXt_;
 Fl_Button *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'm_btn_printOrders';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidInterface.h';
       sec-mem-desc-line = '28';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1206,7 +1536,7 @@ _EnD_oF_dEf_TeXt_;
 Fl_Button *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'm_btn_checkFills';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidInterface.h';
       sec-mem-desc-line = '29';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1224,7 +1554,7 @@ _EnD_oF_dEf_TeXt_;
 Fl_Button *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'm_btn_printPos';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidInterface.h';
       sec-mem-desc-line = '30';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1242,7 +1572,7 @@ _EnD_oF_dEf_TeXt_;
 Fl_Value_Input *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'm_order_size';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidInterface.h';
       sec-mem-desc-line = '31';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1260,7 +1590,7 @@ _EnD_oF_dEf_TeXt_;
 Fl_Button *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'm_btn_resetOrdSize';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidInterface.h';
       sec-mem-desc-line = '32';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1278,7 +1608,7 @@ _EnD_oF_dEf_TeXt_;
 Fl_Button *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'm_btn_CancelAllOrders';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidInterface.h';
       sec-mem-desc-line = '33';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1296,7 +1626,7 @@ _EnD_oF_dEf_TeXt_;
 Fl_Output *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'm_AvgPosPrice';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidInterface.h';
       sec-mem-desc-line = '34';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1314,7 +1644,7 @@ _EnD_oF_dEf_TeXt_;
 Fl_Button *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'm_btn_ClearPositions';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidInterface.h';
       sec-mem-desc-line = '35';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1324,7 +1654,7 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
   }; /* cp-section */
-  cp-filename  = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidInterface.h';
+  cp-filename  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidInterface.h';
   cp-fileline  = '12';
   cp-briefdesc = <<_EnD_oF_dEf_TeXt_
 
@@ -1334,42 +1664,42 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
   cp-inheritancegraph = <<_EnD_oF_dEf_TeXt_
       node = {
-        node-id    = 25;
+        node-id    = 35;
         node-label = 'Mike::UserInterface';
         node-link = {
           node-link-id = 'class_mike_1_1_user_interface';
         };
         node-child = {
-          child-id = '24';
+          child-id = '34';
           relation = public-inheritance;
         }; /* node-child */
       }; /* node */
       node = {
-        node-id    = 24;
+        node-id    = 34;
         node-label = 'Mike::UserInterfaceBase';
         node-link = {
           node-link-id = 'class_mike_1_1_user_interface_base';
         };
         node-child = {
-          child-id = '23';
+          child-id = '33';
           relation = public-inheritance;
         }; /* node-child */
       }; /* node */
       node = {
-        node-id    = 23;
+        node-id    = 33;
         node-label = 'FluidInterface';
         node-link = {
           node-link-id = 'class_fluid_interface';
         };
       }; /* node */
       node = {
-        node-id    = 26;
+        node-id    = 36;
         node-label = 'Mike::UserInterfaceLinked';
         node-link = {
           node-link-id = 'class_mike_1_1_user_interface_linked';
         };
         node-child = {
-          child-id = '24';
+          child-id = '34';
           relation = public-inheritance;
         }; /* node-child */
       }; /* node */
@@ -1379,6 +1709,12 @@ _EnD_oF_dEf_TeXt_;
 class = {
   cp-id     = 'class_fluid_price_control_u_i';
   cp-name   = 'FluidPriceControlUI';
+  cp-ref     = {
+    ref-type = derived;
+    ref-id   = 'class_mike_1_1_data_u_i';
+    ref-prot = public;
+    ref-virt = non-virtual;
+  };
   cp-section = {
     sec-kind = 'public-func';
     sec-member = {
@@ -1390,7 +1726,7 @@ class = {
 
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'FluidPriceControlUI';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidPriceControl.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidPriceControl.h';
       sec-mem-desc-line = '13';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1404,14 +1740,14 @@ _EnD_oF_dEf_TeXt_;
     sec-kind = 'public-attrib';
     sec-member = {
       sec-mem-kind = 'variable';
-      sec-mem-id   = 'class_fluid_price_control_u_i_1a65c8356043b3a182a177cf4a52317124';
+      sec-mem-id   = 'class_fluid_price_control_u_i_1ae46d2ef90d0168e432d81a4e8a3490ad';
       sec-mem-virt = normal;
       sec-mem-prot = public;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
 Fl_Double_Window *
 _EnD_oF_dEf_TeXt_;
-      sec-mem-name = 'm_window1';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidPriceControl.h';
+      sec-mem-name = 'mWindow';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidPriceControl.h';
       sec-mem-desc-line = '14';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1422,14 +1758,14 @@ _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
       sec-mem-kind = 'variable';
-      sec-mem-id   = 'class_fluid_price_control_u_i_1a17dcc8d29c4170578c8305d0bbce0f89';
+      sec-mem-id   = 'class_fluid_price_control_u_i_1aad93e5aca9d51cb79bfcab447920725b';
       sec-mem-virt = normal;
       sec-mem-prot = public;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
 Fl_Button *
 _EnD_oF_dEf_TeXt_;
-      sec-mem-name = 'm_btnUp';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidPriceControl.h';
+      sec-mem-name = 'mBtnUp';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidPriceControl.h';
       sec-mem-desc-line = '15';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1440,14 +1776,14 @@ _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
       sec-mem-kind = 'variable';
-      sec-mem-id   = 'class_fluid_price_control_u_i_1a98213f3a52dd6c6b700f5a20f1cfa7ab';
+      sec-mem-id   = 'class_fluid_price_control_u_i_1ae37fe12e34d030760cdac07beb1bbd2a';
       sec-mem-virt = normal;
       sec-mem-prot = public;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
 Fl_Button *
 _EnD_oF_dEf_TeXt_;
-      sec-mem-name = 'm_btnDown';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidPriceControl.h';
+      sec-mem-name = 'mBtnDown';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidPriceControl.h';
       sec-mem-desc-line = '16';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1458,14 +1794,14 @@ _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
       sec-mem-kind = 'variable';
-      sec-mem-id   = 'class_fluid_price_control_u_i_1afcc19c4bc7bc7295854861d2f667f457';
+      sec-mem-id   = 'class_fluid_price_control_u_i_1a2b2168f48d093610977ebf1f460efe45';
       sec-mem-virt = normal;
       sec-mem-prot = public;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
 Fl_Output *
 _EnD_oF_dEf_TeXt_;
-      sec-mem-name = 'm_BidDisplay';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidPriceControl.h';
+      sec-mem-name = 'mBidDisplay';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidPriceControl.h';
       sec-mem-desc-line = '17';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1476,14 +1812,14 @@ _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
       sec-mem-kind = 'variable';
-      sec-mem-id   = 'class_fluid_price_control_u_i_1a68a7585dc66f65459fa6c38c086299f8';
+      sec-mem-id   = 'class_fluid_price_control_u_i_1a362fe4e8d45b6ed293d519b53f5a59eb';
       sec-mem-virt = normal;
       sec-mem-prot = public;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
 Fl_Output *
 _EnD_oF_dEf_TeXt_;
-      sec-mem-name = 'm_AskDisplay';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidPriceControl.h';
+      sec-mem-name = 'mAskDisplay';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidPriceControl.h';
       sec-mem-desc-line = '18';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1494,14 +1830,14 @@ _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
       sec-mem-kind = 'variable';
-      sec-mem-id   = 'class_fluid_price_control_u_i_1ad57bb65dd4c67780a86158e5d2ac7b90';
+      sec-mem-id   = 'class_fluid_price_control_u_i_1a25682c8e7a2b560a980bf83f844f624d';
       sec-mem-virt = normal;
       sec-mem-prot = public;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
 Fl_Value_Slider *
 _EnD_oF_dEf_TeXt_;
-      sec-mem-name = 'm_slider1';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidPriceControl.h';
+      sec-mem-name = 'mSlider';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidPriceControl.h';
       sec-mem-desc-line = '19';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1512,14 +1848,14 @@ _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
       sec-mem-kind = 'variable';
-      sec-mem-id   = 'class_fluid_price_control_u_i_1a0f591e3a87e7a68d05d1b17625d7de87';
+      sec-mem-id   = 'class_fluid_price_control_u_i_1a7e10dcaefdec12b2baf2fb4bcee05caa';
       sec-mem-virt = normal;
       sec-mem-prot = public;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
 Fl_Button *
 _EnD_oF_dEf_TeXt_;
-      sec-mem-name = 'm_btnPrint';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidPriceControl.h';
+      sec-mem-name = 'mBtnLiveDataConsolePrint';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidPriceControl.h';
       sec-mem-desc-line = '20';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1530,14 +1866,14 @@ _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
       sec-mem-kind = 'variable';
-      sec-mem-id   = 'class_fluid_price_control_u_i_1a6a6870f04d6e93c70975e8dbc463c8eb';
+      sec-mem-id   = 'class_fluid_price_control_u_i_1a29d330db93240eadfec26e87d2dbe93b';
       sec-mem-virt = normal;
       sec-mem-prot = public;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
 Fl_Button *
 _EnD_oF_dEf_TeXt_;
-      sec-mem-name = 'm_btnLiveDataConsolePrint';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidPriceControl.h';
+      sec-mem-name = 'mBtnConnectLiveData';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidPriceControl.h';
       sec-mem-desc-line = '21';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1548,14 +1884,14 @@ _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
       sec-mem-kind = 'variable';
-      sec-mem-id   = 'class_fluid_price_control_u_i_1a298e80045e3c1ea8cabbc21b0b3138ca';
+      sec-mem-id   = 'class_fluid_price_control_u_i_1ae447fa7404ef3619f800c7f9aabc0409';
       sec-mem-virt = normal;
       sec-mem-prot = public;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
 Fl_Button *
 _EnD_oF_dEf_TeXt_;
-      sec-mem-name = 'm_btnConnectLiveData';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidPriceControl.h';
+      sec-mem-name = 'mBtnStartLoop';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidPriceControl.h';
       sec-mem-desc-line = '22';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1566,14 +1902,14 @@ _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
       sec-mem-kind = 'variable';
-      sec-mem-id   = 'class_fluid_price_control_u_i_1a41892b034300821670f3e585bdd191a3';
+      sec-mem-id   = 'class_fluid_price_control_u_i_1a84fec8b4e80c3c26ba1529882fb7f0d0';
       sec-mem-virt = normal;
       sec-mem-prot = public;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
 Fl_Button *
 _EnD_oF_dEf_TeXt_;
-      sec-mem-name = 'm_btnStartLoop';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidPriceControl.h';
+      sec-mem-name = 'mBtnExperiment';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidPriceControl.h';
       sec-mem-desc-line = '23';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1582,31 +1918,34 @@ _EnD_oF_dEf_TeXt_;
 
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
-    sec-member = {
-      sec-mem-kind = 'variable';
-      sec-mem-id   = 'class_fluid_price_control_u_i_1ad94515ca4f97533e76a67e04bf4411e4';
-      sec-mem-virt = normal;
-      sec-mem-prot = public;
-      sec-mem-type = <<_EnD_oF_dEf_TeXt_
-Fl_Button *
-_EnD_oF_dEf_TeXt_;
-      sec-mem-name = 'm_btnExperiment';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidPriceControl.h';
-      sec-mem-desc-line = '24';
-      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
-_EnD_oF_dEf_TeXt_;
-      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
-_EnD_oF_dEf_TeXt_;
-    }; /* sec-member */
   }; /* cp-section */
-  cp-filename  = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidPriceControl.h';
+  cp-filename  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidPriceControl.h';
   cp-fileline  = '11';
   cp-briefdesc = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
   cp-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  cp-inheritancegraph = <<_EnD_oF_dEf_TeXt_
+      node = {
+        node-id    = 39;
+        node-label = 'Mike::DataUI';
+        node-link = {
+          node-link-id = 'class_mike_1_1_data_u_i';
+        };
+        node-child = {
+          child-id = '38';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+      node = {
+        node-id    = 38;
+        node-label = 'FluidPriceControlUI';
+        node-link = {
+          node-link-id = 'class_fluid_price_control_u_i';
+        };
+      }; /* node */
 
 _EnD_oF_dEf_TeXt_;
 }; /* class */
@@ -1624,7 +1963,7 @@ class = {
 MikeOrderType
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'ordertype';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/MikeEnums.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/MikeEnums.h';
       sec-mem-desc-line = '57';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1645,7 +1984,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = 0
 _EnD_oF_dEf_TeXt_;
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/MikeEnums.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/MikeEnums.h';
       sec-mem-desc-line = '62';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1666,7 +2005,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = 0
 _EnD_oF_dEf_TeXt_;
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/MikeEnums.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/MikeEnums.h';
       sec-mem-desc-line = '65';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1687,7 +2026,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = 0
 _EnD_oF_dEf_TeXt_;
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/MikeEnums.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/MikeEnums.h';
       sec-mem-desc-line = '68';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1705,7 +2044,7 @@ _EnD_oF_dEf_TeXt_;
 long
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'orderId';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/MikeEnums.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/MikeEnums.h';
       sec-mem-desc-line = '71';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1726,7 +2065,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = false
 _EnD_oF_dEf_TeXt_;
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/MikeEnums.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/MikeEnums.h';
       sec-mem-desc-line = '74';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1747,7 +2086,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = false
 _EnD_oF_dEf_TeXt_;
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/MikeEnums.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/MikeEnums.h';
       sec-mem-desc-line = '77';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1768,7 +2107,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = false
 _EnD_oF_dEf_TeXt_;
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/MikeEnums.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/MikeEnums.h';
       sec-mem-desc-line = '80';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1778,7 +2117,7 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
   }; /* cp-section */
-  cp-filename  = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/MikeEnums.h';
+  cp-filename  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/MikeEnums.h';
   cp-fileline  = '51';
   cp-briefdesc = <<_EnD_oF_dEf_TeXt_
 
@@ -1801,7 +2140,7 @@ class = {
 void
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'eraseall';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/MikeEnums.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/MikeEnums.h';
       sec-mem-desc-line = '95';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1819,7 +2158,7 @@ _EnD_oF_dEf_TeXt_;
 bool
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'checkifempty';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/MikeEnums.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/MikeEnums.h';
       sec-mem-desc-line = '98';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1843,7 +2182,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = 0
 _EnD_oF_dEf_TeXt_;
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/MikeEnums.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/MikeEnums.h';
       sec-mem-desc-line = '89';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1864,7 +2203,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = 0
 _EnD_oF_dEf_TeXt_;
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/MikeEnums.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/MikeEnums.h';
       sec-mem-desc-line = '90';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1885,7 +2224,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = 0
 _EnD_oF_dEf_TeXt_;
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/MikeEnums.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/MikeEnums.h';
       sec-mem-desc-line = '91';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1906,7 +2245,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = 0
 _EnD_oF_dEf_TeXt_;
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/MikeEnums.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/MikeEnums.h';
       sec-mem-desc-line = '92';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1927,7 +2266,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = 0
 _EnD_oF_dEf_TeXt_;
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/MikeEnums.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/MikeEnums.h';
       sec-mem-desc-line = '93';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1937,7 +2276,7 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
   }; /* cp-section */
-  cp-filename  = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/MikeEnums.h';
+  cp-filename  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/MikeEnums.h';
   cp-fileline  = '87';
   cp-briefdesc = <<_EnD_oF_dEf_TeXt_
 
@@ -1960,7 +2299,7 @@ class = {
 bool
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'checkifActive';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/MikeEnums.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/MikeEnums.h';
       sec-mem-desc-line = '128';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1978,7 +2317,7 @@ _EnD_oF_dEf_TeXt_;
 void
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'setActive';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/MikeEnums.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/MikeEnums.h';
       sec-mem-desc-line = '129';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -1996,7 +2335,7 @@ _EnD_oF_dEf_TeXt_;
 void
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'setInactive';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/MikeEnums.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/MikeEnums.h';
       sec-mem-desc-line = '130';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2026,7 +2365,7 @@ long
 _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'filledamount';
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/MikeEnums.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/MikeEnums.h';
       sec-mem-desc-line = '135';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2056,7 +2395,7 @@ long
 _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'askprice';
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/MikeEnums.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/MikeEnums.h';
       sec-mem-desc-line = '152';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2080,7 +2419,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = 0
 _EnD_oF_dEf_TeXt_;
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/MikeEnums.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/MikeEnums.h';
       sec-mem-desc-line = '108';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2101,7 +2440,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = 0
 _EnD_oF_dEf_TeXt_;
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/MikeEnums.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/MikeEnums.h';
       sec-mem-desc-line = '110';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2122,7 +2461,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = 0
 _EnD_oF_dEf_TeXt_;
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/MikeEnums.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/MikeEnums.h';
       sec-mem-desc-line = '112';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2143,7 +2482,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = 0
 _EnD_oF_dEf_TeXt_;
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/MikeEnums.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/MikeEnums.h';
       sec-mem-desc-line = '114';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2164,7 +2503,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = 0
 _EnD_oF_dEf_TeXt_;
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/MikeEnums.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/MikeEnums.h';
       sec-mem-desc-line = '116';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2188,7 +2527,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = false
 _EnD_oF_dEf_TeXt_;
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/MikeEnums.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/MikeEnums.h';
       sec-mem-desc-line = '119';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2209,7 +2548,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = 0
 _EnD_oF_dEf_TeXt_;
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/MikeEnums.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/MikeEnums.h';
       sec-mem-desc-line = '120';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2230,7 +2569,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = 0
 _EnD_oF_dEf_TeXt_;
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/MikeEnums.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/MikeEnums.h';
       sec-mem-desc-line = '121';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2251,7 +2590,7 @@ _EnD_oF_dEf_TeXt_;
 friend class
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'WidgetTable';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/MikeEnums.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/MikeEnums.h';
       sec-mem-desc-line = '105';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2261,7 +2600,7 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
   }; /* cp-section */
-  cp-filename  = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/MikeEnums.h';
+  cp-filename  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/MikeEnums.h';
   cp-fileline  = '104';
   cp-briefdesc = <<_EnD_oF_dEf_TeXt_
 
@@ -2284,7 +2623,7 @@ class = {
 
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'MikeUI';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/MikeUI.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/MikeUI.h';
       sec-mem-desc-line = '7';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2302,7 +2641,7 @@ _EnD_oF_dEf_TeXt_;
 
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = '~MikeUI';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/MikeUI.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/MikeUI.h';
       sec-mem-desc-line = '8';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2312,7 +2651,7 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
   }; /* cp-section */
-  cp-filename  = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/MikeUI.h';
+  cp-filename  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/MikeUI.h';
   cp-fileline  = '5';
   cp-briefdesc = <<_EnD_oF_dEf_TeXt_
 
@@ -2371,7 +2710,7 @@ const char *
 _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'l';
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
       sec-mem-desc-line = '165';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2389,7 +2728,7 @@ _EnD_oF_dEf_TeXt_;
 int
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'getXpos';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
       sec-mem-desc-line = '166';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2407,7 +2746,7 @@ _EnD_oF_dEf_TeXt_;
 int
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'getYpos';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
       sec-mem-desc-line = '167';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2431,7 +2770,7 @@ int
 _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'y';
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
       sec-mem-desc-line = '169';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2455,7 +2794,7 @@ int
 _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'x';
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
       sec-mem-desc-line = '170';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2476,7 +2815,7 @@ _EnD_oF_dEf_TeXt_;
 int
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'y_pos';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
       sec-mem-desc-line = '162';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2497,7 +2836,7 @@ _EnD_oF_dEf_TeXt_;
 int
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'x_pos';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
       sec-mem-desc-line = '160';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2507,7 +2846,7 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
   }; /* cp-section */
-  cp-filename  = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+  cp-filename  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
   cp-fileline  = '154';
   cp-briefdesc = <<_EnD_oF_dEf_TeXt_
 
@@ -2517,36 +2856,36 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
   cp-inheritancegraph = <<_EnD_oF_dEf_TeXt_
       node = {
-        node-id    = 38;
+        node-id    = 49;
         node-label = 'Mike::My_fl_button';
         node-link = {
           node-link-id = 'class_mike_1_1_my__fl__button';
         };
         node-child = {
-          child-id = '39';
+          child-id = '50';
           relation = public-inheritance;
         }; /* node-child */
       }; /* node */
       node = {
-        node-id    = 39;
+        node-id    = 50;
         node-label = 'Fl_Button';
       }; /* node */
 
 _EnD_oF_dEf_TeXt_;
   cp-collaborationgraph = <<_EnD_oF_dEf_TeXt_
       node = {
-        node-id    = 40;
+        node-id    = 51;
         node-label = 'Mike::My_fl_button';
         node-link = {
           node-link-id = 'class_mike_1_1_my__fl__button';
         };
         node-child = {
-          child-id = '41';
+          child-id = '52';
           relation = public-inheritance;
         }; /* node-child */
       }; /* node */
       node = {
-        node-id    = 41;
+        node-id    = 52;
         node-label = 'Fl_Button';
       }; /* node */
 
@@ -2605,7 +2944,7 @@ _EnD_oF_dEf_TeXt_;
 5
 _EnD_oF_dEf_TeXt_;
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/UserInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/UserInterface.h';
       sec-mem-desc-line = '178';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2656,7 +2995,7 @@ int
 _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'orderSize';
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/UserInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/UserInterface.h';
       sec-mem-desc-line = '190';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2680,7 +3019,7 @@ BtnPressed
 _EnD_oF_dEf_TeXt_;
         sec-mem-param-defname = 'button';
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/UserInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/UserInterface.h';
       sec-mem-desc-line = '192';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2690,7 +3029,7 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
   }; /* cp-section */
-  cp-filename  = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/UserInterface.h';
+  cp-filename  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/UserInterface.h';
   cp-fileline  = '147';
   cp-briefdesc = <<_EnD_oF_dEf_TeXt_
 
@@ -2700,29 +3039,29 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
   cp-inheritancegraph = <<_EnD_oF_dEf_TeXt_
       node = {
-        node-id    = 42;
+        node-id    = 53;
         node-label = 'Mike::UserInterface';
         node-link = {
           node-link-id = 'class_mike_1_1_user_interface';
         };
         node-child = {
-          child-id = '43';
+          child-id = '54';
           relation = public-inheritance;
         }; /* node-child */
       }; /* node */
       node = {
-        node-id    = 43;
+        node-id    = 54;
         node-label = 'Mike::UserInterfaceBase';
         node-link = {
           node-link-id = 'class_mike_1_1_user_interface_base';
         };
         node-child = {
-          child-id = '44';
+          child-id = '55';
           relation = public-inheritance;
         }; /* node-child */
       }; /* node */
       node = {
-        node-id    = 44;
+        node-id    = 55;
         node-label = 'FluidInterface';
         node-link = {
           node-link-id = 'class_fluid_interface';
@@ -2732,31 +3071,20 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
   cp-collaborationgraph = <<_EnD_oF_dEf_TeXt_
       node = {
-        node-id    = 52;
-        node-label = 'ControlUI';
-        node-link = {
-          node-link-id = 'class_control_u_i';
-        };
-        node-child = {
-          child-id = '53';
-          relation = public-inheritance;
-        }; /* node-child */
-      }; /* node */
-      node = {
-        node-id    = 51;
+        node-id    = 62;
         node-label = 'Mike::Control';
         node-link = {
           node-link-id = 'class_mike_1_1_control';
         };
         node-child = {
-          child-id = '52';
+          child-id = '63';
           relation = usage;
           edgelabel = <<_EnD_oF_dEf_TeXt_
 mptrControlWindow
 _EnD_oF_dEf_TeXt_;
         }; /* node-child */
         node-child = {
-          child-id = '54';
+          child-id = '65';
           relation = usage;
           edgelabel = <<_EnD_oF_dEf_TeXt_
 mptrData
@@ -2764,39 +3092,50 @@ _EnD_oF_dEf_TeXt_;
         }; /* node-child */
       }; /* node */
       node = {
-        node-id    = 50;
+        node-id    = 61;
         node-label = 'Fl_Table_Row';
       }; /* node */
       node = {
-        node-id    = 45;
+        node-id    = 56;
         node-label = 'Mike::UserInterface';
         node-link = {
           node-link-id = 'class_mike_1_1_user_interface';
         };
         node-child = {
-          child-id = '46';
+          child-id = '57';
           relation = public-inheritance;
         }; /* node-child */
       }; /* node */
       node = {
-        node-id    = 46;
+        node-id    = 66;
+        node-label = 'Mike::DataUI';
+        node-link = {
+          node-link-id = 'class_mike_1_1_data_u_i';
+        };
+        node-child = {
+          child-id = '67';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+      node = {
+        node-id    = 57;
         node-label = 'Mike::UserInterfaceBase';
         node-link = {
           node-link-id = 'class_mike_1_1_user_interface_base';
         };
         node-child = {
-          child-id = '47';
+          child-id = '58';
           relation = public-inheritance;
         }; /* node-child */
         node-child = {
-          child-id = '48';
+          child-id = '59';
           relation = usage;
           edgelabel = <<_EnD_oF_dEf_TeXt_
 m_pTable
 _EnD_oF_dEf_TeXt_;
         }; /* node-child */
         node-child = {
-          child-id = '51';
+          child-id = '62';
           relation = usage;
           edgelabel = <<_EnD_oF_dEf_TeXt_
 m_pControl
@@ -2804,56 +3143,67 @@ _EnD_oF_dEf_TeXt_;
         }; /* node-child */
       }; /* node */
       node = {
-        node-id    = 47;
+        node-id    = 58;
         node-label = 'FluidInterface';
         node-link = {
           node-link-id = 'class_fluid_interface';
         };
       }; /* node */
       node = {
-        node-id    = 49;
+        node-id    = 60;
         node-label = 'Mike::WidTableBase';
         node-link = {
           node-link-id = 'class_mike_1_1_wid_table_base';
         };
         node-child = {
-          child-id = '50';
+          child-id = '61';
           relation = public-inheritance;
         }; /* node-child */
       }; /* node */
       node = {
-        node-id    = 55;
+        node-id    = 67;
         node-label = 'FluidPriceControlUI';
         node-link = {
           node-link-id = 'class_fluid_price_control_u_i';
         };
       }; /* node */
       node = {
-        node-id    = 53;
+        node-id    = 64;
         node-label = 'FluidControlInterface';
         node-link = {
           node-link-id = 'class_fluid_control_interface';
         };
       }; /* node */
       node = {
-        node-id    = 48;
+        node-id    = 63;
+        node-label = 'Mike::ControlUI';
+        node-link = {
+          node-link-id = 'class_mike_1_1_control_u_i';
+        };
+        node-child = {
+          child-id = '64';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+      node = {
+        node-id    = 59;
         node-label = 'Mike::WidgetTable';
         node-link = {
           node-link-id = 'class_mike_1_1_widget_table';
         };
         node-child = {
-          child-id = '49';
+          child-id = '60';
           relation = public-inheritance;
         }; /* node-child */
         node-child = {
-          child-id = '46';
+          child-id = '57';
           relation = usage;
           edgelabel = <<_EnD_oF_dEf_TeXt_
 ptr_to_UserInterface
 _EnD_oF_dEf_TeXt_;
         }; /* node-child */
         node-child = {
-          child-id = '51';
+          child-id = '62';
           relation = usage;
           edgelabel = <<_EnD_oF_dEf_TeXt_
 ptrControl
@@ -2861,13 +3211,13 @@ _EnD_oF_dEf_TeXt_;
         }; /* node-child */
       }; /* node */
       node = {
-        node-id    = 54;
+        node-id    = 65;
         node-label = 'Mike::Data';
         node-link = {
           node-link-id = 'class_mike_1_1_data';
         };
         node-child = {
-          child-id = '55';
+          child-id = '66';
           relation = usage;
           edgelabel = <<_EnD_oF_dEf_TeXt_
 dataControlWindow
@@ -2915,7 +3265,7 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'name';
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/UserInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/UserInterface.h';
       sec-mem-desc-line = '65';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -2945,7 +3295,7 @@ long
 _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'ask';
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/UserInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/UserInterface.h';
       sec-mem-desc-line = '66';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -3017,7 +3367,7 @@ double
 _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'averagePrice';
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/UserInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/UserInterface.h';
       sec-mem-desc-line = '67';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -3041,7 +3391,7 @@ long
 _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'bidprice';
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/UserInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/UserInterface.h';
       sec-mem-desc-line = '133';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -3062,7 +3412,7 @@ _EnD_oF_dEf_TeXt_;
 
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'UserInterfaceBase';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/UserInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/UserInterface.h';
       sec-mem-desc-line = '46';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -3080,7 +3430,7 @@ _EnD_oF_dEf_TeXt_;
 virtual Control *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'GetControl';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/UserInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/UserInterface.h';
       sec-mem-desc-line = '55';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -3098,7 +3448,7 @@ _EnD_oF_dEf_TeXt_;
 WidgetTable *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'GetTable';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/UserInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/UserInterface.h';
       sec-mem-desc-line = '56';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -3146,7 +3496,7 @@ int
 _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'orderSize';
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/UserInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/UserInterface.h';
       sec-mem-desc-line = '103';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -3169,7 +3519,7 @@ _EnD_oF_dEf_TeXt_;
 BtnPressed
 _EnD_oF_dEf_TeXt_;
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/UserInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/UserInterface.h';
       sec-mem-desc-line = '105';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -3205,7 +3555,7 @@ long
 _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'price';
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/UserInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/UserInterface.h';
       sec-mem-desc-line = '110';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -3235,7 +3585,7 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'button_names';
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/UserInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/UserInterface.h';
       sec-mem-desc-line = '131';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -3256,7 +3606,7 @@ _EnD_oF_dEf_TeXt_;
 WidgetTable *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'm_pTable';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/UserInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/UserInterface.h';
       sec-mem-desc-line = '84';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -3274,7 +3624,7 @@ _EnD_oF_dEf_TeXt_;
 Control *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'm_pControl';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/UserInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/UserInterface.h';
       sec-mem-desc-line = '85';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -3292,7 +3642,7 @@ _EnD_oF_dEf_TeXt_;
 Fl_Button *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'm_myExtraBtn';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/UserInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/UserInterface.h';
       sec-mem-desc-line = '86';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -3313,7 +3663,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = 20400
 _EnD_oF_dEf_TeXt_;
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/UserInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/UserInterface.h';
       sec-mem-desc-line = '87';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -3331,7 +3681,7 @@ _EnD_oF_dEf_TeXt_;
 ::std::vector<::std::string >
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'col_names';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/UserInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/UserInterface.h';
       sec-mem-desc-line = '89';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -3349,7 +3699,7 @@ _EnD_oF_dEf_TeXt_;
 ::std::vector<::std::string >
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'button_names';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/UserInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/UserInterface.h';
       sec-mem-desc-line = '90';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -3382,7 +3732,7 @@ void *
 _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'p';
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/UserInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/UserInterface.h';
       sec-mem-desc-line = '113';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -3412,7 +3762,7 @@ void *
 _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'p';
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/UserInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/UserInterface.h';
       sec-mem-desc-line = '116';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -3442,7 +3792,7 @@ void *
 _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'p';
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/UserInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/UserInterface.h';
       sec-mem-desc-line = '117';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -3472,7 +3822,7 @@ void *
 _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'p';
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/UserInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/UserInterface.h';
       sec-mem-desc-line = '118';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -3502,7 +3852,7 @@ void *
 _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'p';
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/UserInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/UserInterface.h';
       sec-mem-desc-line = '119';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -3532,7 +3882,7 @@ void *
 _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'p';
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/UserInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/UserInterface.h';
       sec-mem-desc-line = '120';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -3562,7 +3912,7 @@ void *
 _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'p';
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/UserInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/UserInterface.h';
       sec-mem-desc-line = '121';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -3583,7 +3933,7 @@ _EnD_oF_dEf_TeXt_;
 friend class
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'WidgetTable';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/UserInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/UserInterface.h';
       sec-mem-desc-line = '33';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -3601,7 +3951,7 @@ _EnD_oF_dEf_TeXt_;
 friend class
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'Mike::Control';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/UserInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/UserInterface.h';
       sec-mem-desc-line = '34';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -3611,7 +3961,7 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
   }; /* cp-section */
-  cp-filename  = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/UserInterface.h';
+  cp-filename  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/UserInterface.h';
   cp-fileline  = '32';
   cp-briefdesc = <<_EnD_oF_dEf_TeXt_
 
@@ -3621,42 +3971,42 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
   cp-inheritancegraph = <<_EnD_oF_dEf_TeXt_
       node = {
-        node-id    = 58;
+        node-id    = 70;
         node-label = 'Mike::UserInterface';
         node-link = {
           node-link-id = 'class_mike_1_1_user_interface';
         };
         node-child = {
-          child-id = '56';
+          child-id = '68';
           relation = public-inheritance;
         }; /* node-child */
       }; /* node */
       node = {
-        node-id    = 56;
+        node-id    = 68;
         node-label = 'Mike::UserInterfaceBase';
         node-link = {
           node-link-id = 'class_mike_1_1_user_interface_base';
         };
         node-child = {
-          child-id = '57';
+          child-id = '69';
           relation = public-inheritance;
         }; /* node-child */
       }; /* node */
       node = {
-        node-id    = 57;
+        node-id    = 69;
         node-label = 'FluidInterface';
         node-link = {
           node-link-id = 'class_fluid_interface';
         };
       }; /* node */
       node = {
-        node-id    = 59;
+        node-id    = 71;
         node-label = 'Mike::UserInterfaceLinked';
         node-link = {
           node-link-id = 'class_mike_1_1_user_interface_linked';
         };
         node-child = {
-          child-id = '56';
+          child-id = '68';
           relation = public-inheritance;
         }; /* node-child */
       }; /* node */
@@ -3664,31 +4014,20 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
   cp-collaborationgraph = <<_EnD_oF_dEf_TeXt_
       node = {
-        node-id    = 66;
-        node-label = 'ControlUI';
-        node-link = {
-          node-link-id = 'class_control_u_i';
-        };
-        node-child = {
-          child-id = '67';
-          relation = public-inheritance;
-        }; /* node-child */
-      }; /* node */
-      node = {
-        node-id    = 65;
+        node-id    = 77;
         node-label = 'Mike::Control';
         node-link = {
           node-link-id = 'class_mike_1_1_control';
         };
         node-child = {
-          child-id = '66';
+          child-id = '78';
           relation = usage;
           edgelabel = <<_EnD_oF_dEf_TeXt_
 mptrControlWindow
 _EnD_oF_dEf_TeXt_;
         }; /* node-child */
         node-child = {
-          child-id = '68';
+          child-id = '80';
           relation = usage;
           edgelabel = <<_EnD_oF_dEf_TeXt_
 mptrData
@@ -3696,28 +4035,39 @@ _EnD_oF_dEf_TeXt_;
         }; /* node-child */
       }; /* node */
       node = {
-        node-id    = 64;
+        node-id    = 76;
         node-label = 'Fl_Table_Row';
       }; /* node */
       node = {
-        node-id    = 60;
+        node-id    = 81;
+        node-label = 'Mike::DataUI';
+        node-link = {
+          node-link-id = 'class_mike_1_1_data_u_i';
+        };
+        node-child = {
+          child-id = '82';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+      node = {
+        node-id    = 72;
         node-label = 'Mike::UserInterfaceBase';
         node-link = {
           node-link-id = 'class_mike_1_1_user_interface_base';
         };
         node-child = {
-          child-id = '61';
+          child-id = '73';
           relation = public-inheritance;
         }; /* node-child */
         node-child = {
-          child-id = '62';
+          child-id = '74';
           relation = usage;
           edgelabel = <<_EnD_oF_dEf_TeXt_
 m_pTable
 _EnD_oF_dEf_TeXt_;
         }; /* node-child */
         node-child = {
-          child-id = '65';
+          child-id = '77';
           relation = usage;
           edgelabel = <<_EnD_oF_dEf_TeXt_
 m_pControl
@@ -3725,56 +4075,67 @@ _EnD_oF_dEf_TeXt_;
         }; /* node-child */
       }; /* node */
       node = {
-        node-id    = 61;
+        node-id    = 73;
         node-label = 'FluidInterface';
         node-link = {
           node-link-id = 'class_fluid_interface';
         };
       }; /* node */
       node = {
-        node-id    = 63;
+        node-id    = 75;
         node-label = 'Mike::WidTableBase';
         node-link = {
           node-link-id = 'class_mike_1_1_wid_table_base';
         };
         node-child = {
-          child-id = '64';
+          child-id = '76';
           relation = public-inheritance;
         }; /* node-child */
       }; /* node */
       node = {
-        node-id    = 69;
+        node-id    = 82;
         node-label = 'FluidPriceControlUI';
         node-link = {
           node-link-id = 'class_fluid_price_control_u_i';
         };
       }; /* node */
       node = {
-        node-id    = 67;
+        node-id    = 79;
         node-label = 'FluidControlInterface';
         node-link = {
           node-link-id = 'class_fluid_control_interface';
         };
       }; /* node */
       node = {
-        node-id    = 62;
+        node-id    = 78;
+        node-label = 'Mike::ControlUI';
+        node-link = {
+          node-link-id = 'class_mike_1_1_control_u_i';
+        };
+        node-child = {
+          child-id = '79';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+      node = {
+        node-id    = 74;
         node-label = 'Mike::WidgetTable';
         node-link = {
           node-link-id = 'class_mike_1_1_widget_table';
         };
         node-child = {
-          child-id = '63';
+          child-id = '75';
           relation = public-inheritance;
         }; /* node-child */
         node-child = {
-          child-id = '60';
+          child-id = '72';
           relation = usage;
           edgelabel = <<_EnD_oF_dEf_TeXt_
 ptr_to_UserInterface
 _EnD_oF_dEf_TeXt_;
         }; /* node-child */
         node-child = {
-          child-id = '65';
+          child-id = '77';
           relation = usage;
           edgelabel = <<_EnD_oF_dEf_TeXt_
 ptrControl
@@ -3782,13 +4143,13 @@ _EnD_oF_dEf_TeXt_;
         }; /* node-child */
       }; /* node */
       node = {
-        node-id    = 68;
+        node-id    = 80;
         node-label = 'Mike::Data';
         node-link = {
           node-link-id = 'class_mike_1_1_data';
         };
         node-child = {
-          child-id = '69';
+          child-id = '81';
           relation = usage;
           edgelabel = <<_EnD_oF_dEf_TeXt_
 dataControlWindow
@@ -3824,7 +4185,7 @@ IntegratorPosUI *
 _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'ptr';
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/UserInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/UserInterface.h';
       sec-mem-desc-line = '220';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -3842,7 +4203,7 @@ _EnD_oF_dEf_TeXt_;
 
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'UserInterfaceLinked';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/UserInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/UserInterface.h';
       sec-mem-desc-line = '221';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -3893,7 +4254,7 @@ int
 _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'orderSize';
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/UserInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/UserInterface.h';
       sec-mem-desc-line = '230';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -3916,7 +4277,7 @@ _EnD_oF_dEf_TeXt_;
 BtnPressed
 _EnD_oF_dEf_TeXt_;
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/UserInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/UserInterface.h';
       sec-mem-desc-line = '231';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -3940,7 +4301,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = NULL
 _EnD_oF_dEf_TeXt_;
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/UserInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/UserInterface.h';
       sec-mem-desc-line = '226';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -3961,7 +4322,7 @@ _EnD_oF_dEf_TeXt_;
 friend class
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'IntegratorPosUI';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/UserInterface.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/UserInterface.h';
       sec-mem-desc-line = '218';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -3971,7 +4332,7 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
   }; /* cp-section */
-  cp-filename  = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/UserInterface.h';
+  cp-filename  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/UserInterface.h';
   cp-fileline  = '217';
   cp-briefdesc = <<_EnD_oF_dEf_TeXt_
 
@@ -3981,31 +4342,31 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
   cp-inheritancegraph = <<_EnD_oF_dEf_TeXt_
       node = {
-        node-id    = 71;
+        node-id    = 84;
         node-label = 'Mike::UserInterfaceBase';
         node-link = {
           node-link-id = 'class_mike_1_1_user_interface_base';
         };
         node-child = {
-          child-id = '72';
+          child-id = '85';
           relation = public-inheritance;
         }; /* node-child */
       }; /* node */
       node = {
-        node-id    = 72;
+        node-id    = 85;
         node-label = 'FluidInterface';
         node-link = {
           node-link-id = 'class_fluid_interface';
         };
       }; /* node */
       node = {
-        node-id    = 70;
+        node-id    = 83;
         node-label = 'Mike::UserInterfaceLinked';
         node-link = {
           node-link-id = 'class_mike_1_1_user_interface_linked';
         };
         node-child = {
-          child-id = '71';
+          child-id = '84';
           relation = public-inheritance;
         }; /* node-child */
       }; /* node */
@@ -4013,31 +4374,20 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
   cp-collaborationgraph = <<_EnD_oF_dEf_TeXt_
       node = {
-        node-id    = 80;
-        node-label = 'ControlUI';
-        node-link = {
-          node-link-id = 'class_control_u_i';
-        };
-        node-child = {
-          child-id = '81';
-          relation = public-inheritance;
-        }; /* node-child */
-      }; /* node */
-      node = {
-        node-id    = 79;
+        node-id    = 92;
         node-label = 'Mike::Control';
         node-link = {
           node-link-id = 'class_mike_1_1_control';
         };
         node-child = {
-          child-id = '80';
+          child-id = '93';
           relation = usage;
           edgelabel = <<_EnD_oF_dEf_TeXt_
 mptrControlWindow
 _EnD_oF_dEf_TeXt_;
         }; /* node-child */
         node-child = {
-          child-id = '82';
+          child-id = '95';
           relation = usage;
           edgelabel = <<_EnD_oF_dEf_TeXt_
 mptrData
@@ -4045,28 +4395,39 @@ _EnD_oF_dEf_TeXt_;
         }; /* node-child */
       }; /* node */
       node = {
-        node-id    = 78;
+        node-id    = 91;
         node-label = 'Fl_Table_Row';
       }; /* node */
       node = {
-        node-id    = 74;
+        node-id    = 96;
+        node-label = 'Mike::DataUI';
+        node-link = {
+          node-link-id = 'class_mike_1_1_data_u_i';
+        };
+        node-child = {
+          child-id = '97';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+      node = {
+        node-id    = 87;
         node-label = 'Mike::UserInterfaceBase';
         node-link = {
           node-link-id = 'class_mike_1_1_user_interface_base';
         };
         node-child = {
-          child-id = '75';
+          child-id = '88';
           relation = public-inheritance;
         }; /* node-child */
         node-child = {
-          child-id = '76';
+          child-id = '89';
           relation = usage;
           edgelabel = <<_EnD_oF_dEf_TeXt_
 m_pTable
 _EnD_oF_dEf_TeXt_;
         }; /* node-child */
         node-child = {
-          child-id = '79';
+          child-id = '92';
           relation = usage;
           edgelabel = <<_EnD_oF_dEf_TeXt_
 m_pControl
@@ -4074,56 +4435,67 @@ _EnD_oF_dEf_TeXt_;
         }; /* node-child */
       }; /* node */
       node = {
-        node-id    = 75;
+        node-id    = 88;
         node-label = 'FluidInterface';
         node-link = {
           node-link-id = 'class_fluid_interface';
         };
       }; /* node */
       node = {
-        node-id    = 77;
+        node-id    = 90;
         node-label = 'Mike::WidTableBase';
         node-link = {
           node-link-id = 'class_mike_1_1_wid_table_base';
         };
         node-child = {
-          child-id = '78';
+          child-id = '91';
           relation = public-inheritance;
         }; /* node-child */
       }; /* node */
       node = {
-        node-id    = 83;
+        node-id    = 97;
         node-label = 'FluidPriceControlUI';
         node-link = {
           node-link-id = 'class_fluid_price_control_u_i';
         };
       }; /* node */
       node = {
-        node-id    = 81;
+        node-id    = 94;
         node-label = 'FluidControlInterface';
         node-link = {
           node-link-id = 'class_fluid_control_interface';
         };
       }; /* node */
       node = {
-        node-id    = 76;
+        node-id    = 93;
+        node-label = 'Mike::ControlUI';
+        node-link = {
+          node-link-id = 'class_mike_1_1_control_u_i';
+        };
+        node-child = {
+          child-id = '94';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+      node = {
+        node-id    = 89;
         node-label = 'Mike::WidgetTable';
         node-link = {
           node-link-id = 'class_mike_1_1_widget_table';
         };
         node-child = {
-          child-id = '77';
+          child-id = '90';
           relation = public-inheritance;
         }; /* node-child */
         node-child = {
-          child-id = '74';
+          child-id = '87';
           relation = usage;
           edgelabel = <<_EnD_oF_dEf_TeXt_
 ptr_to_UserInterface
 _EnD_oF_dEf_TeXt_;
         }; /* node-child */
         node-child = {
-          child-id = '79';
+          child-id = '92';
           relation = usage;
           edgelabel = <<_EnD_oF_dEf_TeXt_
 ptrControl
@@ -4131,24 +4503,24 @@ _EnD_oF_dEf_TeXt_;
         }; /* node-child */
       }; /* node */
       node = {
-        node-id    = 73;
+        node-id    = 86;
         node-label = 'Mike::UserInterfaceLinked';
         node-link = {
           node-link-id = 'class_mike_1_1_user_interface_linked';
         };
         node-child = {
-          child-id = '74';
+          child-id = '87';
           relation = public-inheritance;
         }; /* node-child */
       }; /* node */
       node = {
-        node-id    = 82;
+        node-id    = 95;
         node-label = 'Mike::Data';
         node-link = {
           node-link-id = 'class_mike_1_1_data';
         };
         node-child = {
-          child-id = '83';
+          child-id = '96';
           relation = usage;
           edgelabel = <<_EnD_oF_dEf_TeXt_
 dataControlWindow
@@ -4259,7 +4631,7 @@ _EnD_oF_dEf_TeXt_;
 { "" }
 _EnD_oF_dEf_TeXt_;
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidgetTable.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidgetTable.h';
       sec-mem-desc-line = '38';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -4307,7 +4679,7 @@ const char *
 _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'l';
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidgetTable.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidgetTable.h';
       sec-mem-desc-line = '59';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -4325,7 +4697,7 @@ _EnD_oF_dEf_TeXt_;
 
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'WidgetTable';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidgetTable.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidgetTable.h';
       sec-mem-desc-line = '60';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -4355,7 +4727,7 @@ long
 _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'ask';
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidgetTable.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidgetTable.h';
       sec-mem-desc-line = '75';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -4379,7 +4751,7 @@ const std::vector< MikePosition > *
 _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'openPositions';
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidgetTable.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidgetTable.h';
       sec-mem-desc-line = '76';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -4409,7 +4781,7 @@ const std::vector< MikeOrdersAtPrice > *
 _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'openOrdersAtPrice';
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidgetTable.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidgetTable.h';
       sec-mem-desc-line = '77';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -4427,7 +4799,7 @@ _EnD_oF_dEf_TeXt_;
 virtual short
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'GetBidCol';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidgetTable.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidgetTable.h';
       sec-mem-desc-line = '87';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -4445,7 +4817,7 @@ _EnD_oF_dEf_TeXt_;
 virtual short
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'GetAskCol';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidgetTable.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidgetTable.h';
       sec-mem-desc-line = '88';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -4469,7 +4841,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = true
 _EnD_oF_dEf_TeXt_;
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidgetTable.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidgetTable.h';
       sec-mem-desc-line = '64';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -4502,7 +4874,7 @@ void *
 _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'p';
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidgetTable.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidgetTable.h';
       sec-mem-desc-line = '99';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -4520,7 +4892,7 @@ _EnD_oF_dEf_TeXt_;
 virtual void
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'setBidAskColumns';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidgetTable.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidgetTable.h';
       sec-mem-desc-line = '110';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -4538,7 +4910,7 @@ _EnD_oF_dEf_TeXt_;
 UserInterfaceBase *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'GetUserInterface';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidgetTable.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidgetTable.h';
       sec-mem-desc-line = '122';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -4556,7 +4928,7 @@ _EnD_oF_dEf_TeXt_;
 Control *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'GetControl';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidgetTable.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidgetTable.h';
       sec-mem-desc-line = '123';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -4574,7 +4946,7 @@ _EnD_oF_dEf_TeXt_;
 void
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'PopPriceCol';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidgetTable.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidgetTable.h';
       sec-mem-desc-line = '147';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -4595,7 +4967,7 @@ _EnD_oF_dEf_TeXt_;
 UserInterfaceBase *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'ptr_to_UserInterface';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidgetTable.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidgetTable.h';
       sec-mem-desc-line = '107';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -4613,7 +4985,7 @@ _EnD_oF_dEf_TeXt_;
 Control *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'ptrControl';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidgetTable.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidgetTable.h';
       sec-mem-desc-line = '108';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -4631,7 +5003,7 @@ _EnD_oF_dEf_TeXt_;
 std::set< long >
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'usedprices';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidgetTable.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidgetTable.h';
       sec-mem-desc-line = '126';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -4649,7 +5021,7 @@ _EnD_oF_dEf_TeXt_;
 std::set< long >
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'notusedprices';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidgetTable.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidgetTable.h';
       sec-mem-desc-line = '127';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -4670,7 +5042,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = 5
 _EnD_oF_dEf_TeXt_;
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidgetTable.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidgetTable.h';
       sec-mem-desc-line = '133';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -4691,7 +5063,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = 6
 _EnD_oF_dEf_TeXt_;
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidgetTable.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidgetTable.h';
       sec-mem-desc-line = '134';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -4712,7 +5084,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = 7
 _EnD_oF_dEf_TeXt_;
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidgetTable.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidgetTable.h';
       sec-mem-desc-line = '135';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -4733,7 +5105,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = 8
 _EnD_oF_dEf_TeXt_;
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidgetTable.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidgetTable.h';
       sec-mem-desc-line = '136';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -4754,7 +5126,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = 9
 _EnD_oF_dEf_TeXt_;
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidgetTable.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidgetTable.h';
       sec-mem-desc-line = '137';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -4775,7 +5147,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = 10
 _EnD_oF_dEf_TeXt_;
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidgetTable.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidgetTable.h';
       sec-mem-desc-line = '138';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -4796,7 +5168,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = 11
 _EnD_oF_dEf_TeXt_;
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidgetTable.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidgetTable.h';
       sec-mem-desc-line = '139';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -4817,7 +5189,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = 12
 _EnD_oF_dEf_TeXt_;
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidgetTable.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidgetTable.h';
       sec-mem-desc-line = '140';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -4838,7 +5210,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = 13
 _EnD_oF_dEf_TeXt_;
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidgetTable.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidgetTable.h';
       sec-mem-desc-line = '141';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -4859,7 +5231,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = 14
 _EnD_oF_dEf_TeXt_;
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidgetTable.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidgetTable.h';
       sec-mem-desc-line = '142';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -4880,7 +5252,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = 15
 _EnD_oF_dEf_TeXt_;
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidgetTable.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidgetTable.h';
       sec-mem-desc-line = '143';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -4901,7 +5273,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = 5
 _EnD_oF_dEf_TeXt_;
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidgetTable.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidgetTable.h';
       sec-mem-desc-line = '144';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -4922,7 +5294,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = 0
 _EnD_oF_dEf_TeXt_;
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidgetTable.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidgetTable.h';
       sec-mem-desc-line = '145';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -4943,7 +5315,7 @@ _EnD_oF_dEf_TeXt_;
 friend class
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'UserInterfaceBase';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidgetTable.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidgetTable.h';
       sec-mem-desc-line = '32';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -4961,7 +5333,7 @@ _EnD_oF_dEf_TeXt_;
 friend class
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'UserInterface';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidgetTable.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidgetTable.h';
       sec-mem-desc-line = '33';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -4971,7 +5343,7 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
   }; /* cp-section */
-  cp-filename  = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidgetTable.h';
+  cp-filename  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidgetTable.h';
   cp-fileline  = '31';
   cp-briefdesc = <<_EnD_oF_dEf_TeXt_
 
@@ -4981,28 +5353,28 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
   cp-inheritancegraph = <<_EnD_oF_dEf_TeXt_
       node = {
-        node-id    = 86;
+        node-id    = 100;
         node-label = 'Fl_Table_Row';
       }; /* node */
       node = {
-        node-id    = 85;
+        node-id    = 99;
         node-label = 'Mike::WidTableBase';
         node-link = {
           node-link-id = 'class_mike_1_1_wid_table_base';
         };
         node-child = {
-          child-id = '86';
+          child-id = '100';
           relation = public-inheritance;
         }; /* node-child */
       }; /* node */
       node = {
-        node-id    = 84;
+        node-id    = 98;
         node-label = 'Mike::WidgetTable';
         node-link = {
           node-link-id = 'class_mike_1_1_widget_table';
         };
         node-child = {
-          child-id = '85';
+          child-id = '99';
           relation = public-inheritance;
         }; /* node-child */
       }; /* node */
@@ -5010,31 +5382,20 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
   cp-collaborationgraph = <<_EnD_oF_dEf_TeXt_
       node = {
-        node-id    = 93;
-        node-label = 'ControlUI';
-        node-link = {
-          node-link-id = 'class_control_u_i';
-        };
-        node-child = {
-          child-id = '94';
-          relation = public-inheritance;
-        }; /* node-child */
-      }; /* node */
-      node = {
-        node-id    = 92;
+        node-id    = 106;
         node-label = 'Mike::Control';
         node-link = {
           node-link-id = 'class_mike_1_1_control';
         };
         node-child = {
-          child-id = '93';
+          child-id = '107';
           relation = usage;
           edgelabel = <<_EnD_oF_dEf_TeXt_
 mptrControlWindow
 _EnD_oF_dEf_TeXt_;
         }; /* node-child */
         node-child = {
-          child-id = '95';
+          child-id = '109';
           relation = usage;
           edgelabel = <<_EnD_oF_dEf_TeXt_
 mptrData
@@ -5042,28 +5403,39 @@ _EnD_oF_dEf_TeXt_;
         }; /* node-child */
       }; /* node */
       node = {
-        node-id    = 89;
+        node-id    = 103;
         node-label = 'Fl_Table_Row';
       }; /* node */
       node = {
-        node-id    = 90;
+        node-id    = 110;
+        node-label = 'Mike::DataUI';
+        node-link = {
+          node-link-id = 'class_mike_1_1_data_u_i';
+        };
+        node-child = {
+          child-id = '111';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+      node = {
+        node-id    = 104;
         node-label = 'Mike::UserInterfaceBase';
         node-link = {
           node-link-id = 'class_mike_1_1_user_interface_base';
         };
         node-child = {
-          child-id = '91';
+          child-id = '105';
           relation = public-inheritance;
         }; /* node-child */
         node-child = {
-          child-id = '87';
+          child-id = '101';
           relation = usage;
           edgelabel = <<_EnD_oF_dEf_TeXt_
 m_pTable
 _EnD_oF_dEf_TeXt_;
         }; /* node-child */
         node-child = {
-          child-id = '92';
+          child-id = '106';
           relation = usage;
           edgelabel = <<_EnD_oF_dEf_TeXt_
 m_pControl
@@ -5071,56 +5443,67 @@ _EnD_oF_dEf_TeXt_;
         }; /* node-child */
       }; /* node */
       node = {
-        node-id    = 91;
+        node-id    = 105;
         node-label = 'FluidInterface';
         node-link = {
           node-link-id = 'class_fluid_interface';
         };
       }; /* node */
       node = {
-        node-id    = 88;
+        node-id    = 102;
         node-label = 'Mike::WidTableBase';
         node-link = {
           node-link-id = 'class_mike_1_1_wid_table_base';
         };
         node-child = {
-          child-id = '89';
+          child-id = '103';
           relation = public-inheritance;
         }; /* node-child */
       }; /* node */
       node = {
-        node-id    = 96;
+        node-id    = 111;
         node-label = 'FluidPriceControlUI';
         node-link = {
           node-link-id = 'class_fluid_price_control_u_i';
         };
       }; /* node */
       node = {
-        node-id    = 94;
+        node-id    = 108;
         node-label = 'FluidControlInterface';
         node-link = {
           node-link-id = 'class_fluid_control_interface';
         };
       }; /* node */
       node = {
-        node-id    = 87;
+        node-id    = 107;
+        node-label = 'Mike::ControlUI';
+        node-link = {
+          node-link-id = 'class_mike_1_1_control_u_i';
+        };
+        node-child = {
+          child-id = '108';
+          relation = public-inheritance;
+        }; /* node-child */
+      }; /* node */
+      node = {
+        node-id    = 101;
         node-label = 'Mike::WidgetTable';
         node-link = {
           node-link-id = 'class_mike_1_1_widget_table';
         };
         node-child = {
-          child-id = '88';
+          child-id = '102';
           relation = public-inheritance;
         }; /* node-child */
         node-child = {
-          child-id = '90';
+          child-id = '104';
           relation = usage;
           edgelabel = <<_EnD_oF_dEf_TeXt_
 ptr_to_UserInterface
 _EnD_oF_dEf_TeXt_;
         }; /* node-child */
         node-child = {
-          child-id = '92';
+          child-id = '106';
           relation = usage;
           edgelabel = <<_EnD_oF_dEf_TeXt_
 ptrControl
@@ -5128,13 +5511,13 @@ _EnD_oF_dEf_TeXt_;
         }; /* node-child */
       }; /* node */
       node = {
-        node-id    = 95;
+        node-id    = 109;
         node-label = 'Mike::Data';
         node-link = {
           node-link-id = 'class_mike_1_1_data';
         };
         node-child = {
-          child-id = '96';
+          child-id = '110';
           relation = usage;
           edgelabel = <<_EnD_oF_dEf_TeXt_
 dataControlWindow
@@ -5170,7 +5553,7 @@ class = {
 int
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'GetRows';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
       sec-mem-desc-line = '58';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -5188,7 +5571,7 @@ _EnD_oF_dEf_TeXt_;
 int
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'GetCols';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
       sec-mem-desc-line = '59';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -5206,7 +5589,7 @@ _EnD_oF_dEf_TeXt_;
 int
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'GetTopRowPrice';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
       sec-mem-desc-line = '60';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -5224,7 +5607,7 @@ _EnD_oF_dEf_TeXt_;
 int
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'GetBottomRowPrice';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
       sec-mem-desc-line = '61';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -5248,7 +5631,7 @@ int
 _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'value';
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
       sec-mem-desc-line = '62';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -5266,7 +5649,7 @@ _EnD_oF_dEf_TeXt_;
 std::vector< std::string > *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'GetColNames';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
       sec-mem-desc-line = '63';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -5290,7 +5673,7 @@ long
 _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'price';
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
       sec-mem-desc-line = '66';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -5314,7 +5697,7 @@ int
 _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'row';
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
       sec-mem-desc-line = '68';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -5338,7 +5721,7 @@ short
 _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'width';
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
       sec-mem-desc-line = '71';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -5389,7 +5772,7 @@ const char *
 _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'l';
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
       sec-mem-desc-line = '39';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -5488,7 +5871,7 @@ _EnD_oF_dEf_TeXt_;
 { "" }
 _EnD_oF_dEf_TeXt_;
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
       sec-mem-desc-line = '40';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -5506,7 +5889,7 @@ _EnD_oF_dEf_TeXt_;
 
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = '~WidTableBase';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
       sec-mem-desc-line = '49';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -5536,7 +5919,7 @@ void *
 _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'p';
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
       sec-mem-desc-line = '81';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -5590,7 +5973,7 @@ _EnD_oF_dEf_TeXt_;
 NULL
 _EnD_oF_dEf_TeXt_;
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
       sec-mem-desc-line = '90';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -5614,7 +5997,7 @@ int
 _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'column';
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
       sec-mem-desc-line = '91';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -5638,7 +6021,7 @@ int
 _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'row';
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
       sec-mem-desc-line = '92';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -5656,7 +6039,7 @@ _EnD_oF_dEf_TeXt_;
 void
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'clearAllButtonLabels';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
       sec-mem-desc-line = '93';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -5686,7 +6069,7 @@ int
 _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'C';
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
       sec-mem-desc-line = '116';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -5710,7 +6093,7 @@ int
 _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'numRows';
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
       sec-mem-desc-line = '117';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -5734,7 +6117,7 @@ int
 _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'numCol';
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
       sec-mem-desc-line = '118';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -5764,7 +6147,7 @@ int
 _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'nCol';
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
       sec-mem-desc-line = '120';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -5842,7 +6225,7 @@ _EnD_oF_dEf_TeXt_;
 0
 _EnD_oF_dEf_TeXt_;
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
       sec-mem-desc-line = '124';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -5887,7 +6270,7 @@ _EnD_oF_dEf_TeXt_;
 { "" }
 _EnD_oF_dEf_TeXt_;
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
       sec-mem-desc-line = '126';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -5908,7 +6291,7 @@ _EnD_oF_dEf_TeXt_;
 int
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'table_rows';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
       sec-mem-desc-line = '101';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -5926,7 +6309,7 @@ _EnD_oF_dEf_TeXt_;
 int
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'table_cols';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
       sec-mem-desc-line = '101';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -5944,7 +6327,7 @@ _EnD_oF_dEf_TeXt_;
 int
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'ButtonColsNumber';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
       sec-mem-desc-line = '102';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -5962,7 +6345,7 @@ _EnD_oF_dEf_TeXt_;
 int
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'TopRowPrice';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
       sec-mem-desc-line = '103';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -5983,7 +6366,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = 0
 _EnD_oF_dEf_TeXt_;
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
       sec-mem-desc-line = '104';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -6001,7 +6384,7 @@ _EnD_oF_dEf_TeXt_;
 std::vector< std::string >
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'col_names';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
       sec-mem-desc-line = '105';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -6022,7 +6405,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
 = 55
 _EnD_oF_dEf_TeXt_;
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
       sec-mem-desc-line = '128';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -6055,7 +6438,7 @@ void *
 _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'p';
       }; /*        sec-mem-param--param */
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
       sec-mem-desc-line = '80';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -6076,7 +6459,7 @@ _EnD_oF_dEf_TeXt_;
 std::stack< Fl_Input * >
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'sharedFlInputPointers';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
       sec-mem-desc-line = '139';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -6097,7 +6480,7 @@ _EnD_oF_dEf_TeXt_;
 friend class
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'SimpleTableWindow';
-      sec-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+      sec-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
       sec-mem-desc-line = '36';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -6107,7 +6490,7 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
   }; /* cp-section */
-  cp-filename  = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+  cp-filename  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
   cp-fileline  = '35';
   cp-briefdesc = <<_EnD_oF_dEf_TeXt_
 
@@ -6117,28 +6500,28 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
   cp-inheritancegraph = <<_EnD_oF_dEf_TeXt_
       node = {
-        node-id    = 98;
+        node-id    = 113;
         node-label = 'Fl_Table_Row';
       }; /* node */
       node = {
-        node-id    = 97;
+        node-id    = 112;
         node-label = 'Mike::WidTableBase';
         node-link = {
           node-link-id = 'class_mike_1_1_wid_table_base';
         };
         node-child = {
-          child-id = '98';
+          child-id = '113';
           relation = public-inheritance;
         }; /* node-child */
       }; /* node */
       node = {
-        node-id    = 99;
+        node-id    = 114;
         node-label = 'Mike::WidgetTable';
         node-link = {
           node-link-id = 'class_mike_1_1_widget_table';
         };
         node-child = {
-          child-id = '97';
+          child-id = '112';
           relation = public-inheritance;
         }; /* node-child */
       }; /* node */
@@ -6146,17 +6529,17 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
   cp-collaborationgraph = <<_EnD_oF_dEf_TeXt_
       node = {
-        node-id    = 101;
+        node-id    = 116;
         node-label = 'Fl_Table_Row';
       }; /* node */
       node = {
-        node-id    = 100;
+        node-id    = 115;
         node-label = 'Mike::WidTableBase';
         node-link = {
           node-link-id = 'class_mike_1_1_wid_table_base';
         };
         node-child = {
-          child-id = '101';
+          child-id = '116';
           relation = public-inheritance;
         }; /* node-child */
       }; /* node */
@@ -6182,8 +6565,8 @@ int
 _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'n';
       }; /*        func-mem-param--param */
-      func-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/Control.cpp';
-      func-mem-desc-line = '9';
+      func-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Control.cpp';
+      func-mem-desc-line = '11';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -6192,7 +6575,7 @@ used for testing purposes to occupy CPU
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     };
-  file-full-name  = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/Control.cpp';
+  file-full-name  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Control.cpp';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 
@@ -6215,9 +6598,9 @@ static const double
 _EnD_oF_dEf_TeXt_;
       var-mem-name = 'SET_MAINLOOP_INTERVAL';
       var-mem-initializer = <<_EnD_oF_dEf_TeXt_
-= 0.01
+= 0.3
 _EnD_oF_dEf_TeXt_;
-      var-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/Control.h';
+      var-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Control.h';
       var-mem-desc-line = '19';
       var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -6227,7 +6610,7 @@ amount of seconds used by mainloopTimeoutCallbackFLTK() to determine how long to
 _EnD_oF_dEf_TeXt_;
     }; /* var-member */
     };
-  file-full-name  = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/Control.h';
+  file-full-name  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Control.h';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 
@@ -6239,7 +6622,7 @@ _EnD_oF_dEf_TeXt_;
 file = {
   file-id   = '_data_8cpp';
   file-name = 'Data.cpp';
-  file-full-name  = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/Data.cpp';
+  file-full-name  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Data.cpp';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 
@@ -6251,7 +6634,28 @@ _EnD_oF_dEf_TeXt_;
 file = {
   file-id   = '_data_8h';
   file-name = 'Data.h';
-  file-full-name  = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/Data.h';
+    enum = {
+    enum-member = {
+      enum-mem-kind = 'enum';
+      enum-mem-id   = 'namespace_mike_1ac75044494e0b43141b5cefbcd63b7dde';
+      enum-mem-virt = normal;
+      enum-mem-prot = public;
+      enum-mem-name = 'DataUIButton';
+      enum-mem-enum = { enum-name = UPBTN; };
+      enum-mem-enum = { enum-name = DWNBTN; };
+      enum-mem-enum = { enum-name = SLIDER; };
+      enum-mem-enum = { enum-name = EMPTY; };
+      enum-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Data.h';
+      enum-mem-desc-line = '6';
+      enum-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      enum-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* enum-member */
+    };
+  file-full-name  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/Data.h';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 
@@ -6263,7 +6667,7 @@ _EnD_oF_dEf_TeXt_;
 file = {
   file-id   = '_fluid_control_interface_8cxx';
   file-name = 'FluidControlInterface.cxx';
-  file-full-name  = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidControlInterface.cxx';
+  file-full-name  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidControlInterface.cxx';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 
@@ -6275,7 +6679,7 @@ _EnD_oF_dEf_TeXt_;
 file = {
   file-id   = '_fluid_control_interface_8h';
   file-name = 'FluidControlInterface.h';
-  file-full-name  = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidControlInterface.h';
+  file-full-name  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidControlInterface.h';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 
@@ -6287,7 +6691,7 @@ _EnD_oF_dEf_TeXt_;
 file = {
   file-id   = '_fluid_interface_8cxx';
   file-name = 'FluidInterface.cxx';
-  file-full-name  = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidInterface.cxx';
+  file-full-name  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidInterface.cxx';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 
@@ -6299,7 +6703,7 @@ _EnD_oF_dEf_TeXt_;
 file = {
   file-id   = '_fluid_interface_8h';
   file-name = 'FluidInterface.h';
-  file-full-name  = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidInterface.h';
+  file-full-name  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidInterface.h';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 
@@ -6311,7 +6715,7 @@ _EnD_oF_dEf_TeXt_;
 file = {
   file-id   = '_fluid_price_control_8cxx';
   file-name = 'FluidPriceControl.cxx';
-  file-full-name  = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidPriceControl.cxx';
+  file-full-name  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidPriceControl.cxx';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 
@@ -6323,7 +6727,7 @@ _EnD_oF_dEf_TeXt_;
 file = {
   file-id   = '_fluid_price_control_8h';
   file-name = 'FluidPriceControl.h';
-  file-full-name  = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/FluidPriceControl.h';
+  file-full-name  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/FluidPriceControl.h';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 
@@ -6335,7 +6739,7 @@ _EnD_oF_dEf_TeXt_;
 file = {
   file-id   = '_mike_u_i_8h';
   file-name = 'MikeUI.h';
-  file-full-name  = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/FLUID/MikeUI.h';
+  file-full-name  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/FLUID/MikeUI.h';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 
@@ -6350,6 +6754,24 @@ file = {
     func = {
     func-member = {
       func-mem-kind = 'function';
+      func-mem-id   = 'namespace_mike_1a11de29a6b789ad768bf74759d81c1957';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+void
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'launchFLTK';
+      func-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/main.cpp';
+      func-mem-desc-line = '58';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
       func-mem-id   = 'main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4';
       func-mem-virt = normal;
       func-mem-prot = public;
@@ -6357,8 +6779,8 @@ file = {
 int
 _EnD_oF_dEf_TeXt_;
       func-mem-name = 'main';
-      func-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/main.cpp';
-      func-mem-desc-line = '57';
+      func-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/main.cpp';
+      func-mem-desc-line = '67';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -6367,7 +6789,7 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     };
-  file-full-name  = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/main.cpp';
+  file-full-name  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/main.cpp';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 
@@ -6391,7 +6813,7 @@ file = {
       enum-mem-enum = { enum-name = BUYSTP; };
       enum-mem-enum = { enum-name = SELLLMT; };
       enum-mem-enum = { enum-name = SELLSTP; };
-      enum-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/MikeEnums.h';
+      enum-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/MikeEnums.h';
       enum-mem-desc-line = '11';
       enum-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -6422,7 +6844,7 @@ _EnD_oF_dEf_TeXt_;
       enum-mem-enum = { enum-name = EXPERIMENT; };
       enum-mem-enum = { enum-name = CANCELALLORDERS; };
       enum-mem-enum = { enum-name = CLEARALLPOSITIONS; };
-      enum-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/MikeEnums.h';
+      enum-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/MikeEnums.h';
       enum-mem-desc-line = '22';
       enum-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -6441,7 +6863,7 @@ _EnD_oF_dEf_TeXt_;
       enum-mem-enum = { enum-name = FILLED; };
       enum-mem-enum = { enum-name = PARTFILL; };
       enum-mem-enum = { enum-name = CANCELLED; };
-      enum-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/MikeEnums.h';
+      enum-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/MikeEnums.h';
       enum-mem-desc-line = '41';
       enum-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -6451,7 +6873,7 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
     }; /* enum-member */
     };
-  file-full-name  = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/MikeEnums.h';
+  file-full-name  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/MikeEnums.h';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 
@@ -6463,7 +6885,7 @@ _EnD_oF_dEf_TeXt_;
 file = {
   file-id   = '_control_u_i_8cpp';
   file-name = 'ControlUI.cpp';
-  file-full-name  = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/UserInterfaces/ControlUI.cpp';
+  file-full-name  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/UserInterfaces/ControlUI.cpp';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 
@@ -6475,7 +6897,28 @@ _EnD_oF_dEf_TeXt_;
 file = {
   file-id   = '_control_u_i_8h';
   file-name = 'ControlUI.h';
-  file-full-name  = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/UserInterfaces/ControlUI.h';
+    enum = {
+    enum-member = {
+      enum-mem-kind = 'enum';
+      enum-mem-id   = 'namespace_mike_1ab036b30a5fb5ef61314086e0c2c5ca6a';
+      enum-mem-virt = normal;
+      enum-mem-prot = public;
+      enum-mem-name = 'ControlUIButton';
+      enum-mem-enum = { enum-name = START_LOOP; };
+      enum-mem-enum = { enum-name = STOP_LOOP; };
+      enum-mem-enum = { enum-name = POSITIONS1; };
+      enum-mem-enum = { enum-name = EMPTY; };
+      enum-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/UserInterfaces/ControlUI.h';
+      enum-mem-desc-line = '8';
+      enum-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      enum-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* enum-member */
+    };
+  file-full-name  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/UserInterfaces/ControlUI.h';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 
@@ -6497,7 +6940,7 @@ file = {
       define-mem-initializer = <<_EnD_oF_dEf_TeXt_
 true
 _EnD_oF_dEf_TeXt_;
-      define-mem-desc-file = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/UserInterface.cpp';
+      define-mem-desc-file = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/UserInterface.cpp';
       define-mem-desc-line = '9';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
@@ -6507,7 +6950,7 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
     }; /* define-member */
     };
-  file-full-name  = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/UserInterface.cpp';
+  file-full-name  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/UserInterface.cpp';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 
@@ -6519,7 +6962,7 @@ _EnD_oF_dEf_TeXt_;
 file = {
   file-id   = '_user_interface_8h';
   file-name = 'UserInterface.h';
-  file-full-name  = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/UserInterface.h';
+  file-full-name  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/UserInterface.h';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 
@@ -6531,7 +6974,7 @@ _EnD_oF_dEf_TeXt_;
 file = {
   file-id   = '_widget_table_8cpp';
   file-name = 'WidgetTable.cpp';
-  file-full-name  = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidgetTable.cpp';
+  file-full-name  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidgetTable.cpp';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 
@@ -6543,7 +6986,7 @@ _EnD_oF_dEf_TeXt_;
 file = {
   file-id   = '_widget_table_8h';
   file-name = 'WidgetTable.h';
-  file-full-name  = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidgetTable.h';
+  file-full-name  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidgetTable.h';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 
@@ -6555,7 +6998,7 @@ _EnD_oF_dEf_TeXt_;
 file = {
   file-id   = '_wid_table_base_8cpp';
   file-name = 'WidTableBase.cpp';
-  file-full-name  = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.cpp';
+  file-full-name  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.cpp';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 
@@ -6567,7 +7010,7 @@ _EnD_oF_dEf_TeXt_;
 file = {
   file-id   = '_wid_table_base_8h';
   file-name = 'WidTableBase.h';
-  file-full-name  = 'D:/MyDocuments/Visual Studio 2015/Projects/MikeSimulator-startingFromScratch/MikeSimulator/src/workInProgress/WidTableBase.h';
+  file-full-name  = 'C:/Users/pytto/Documents/Visual Studio 2015/Projects/MikeSimulator/MikeSimulator/src/workInProgress/WidTableBase.h';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
 
