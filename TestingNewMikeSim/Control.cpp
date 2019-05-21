@@ -62,22 +62,29 @@ Control::Control(MikeSimulator * p, int starting_bid)
 	//   \___|/_/\_\| .__/  \___||_|   |_||_| |_| |_| \___||_| |_| \__|
 	//              |_|                                                
 
-	userInterface = new UserInterface(this, /*p,*/ starting_bid);
+	
 //	userInterface = new Mike::UserInterfaceLinked();
 //	userInterface2 = new Mike::UserInterfaceLinked();
 //	userInterface2->m_window1->label("Developing IntegratorUI");
 
-	integratedPositions = new Mike::IntegratorPosUI();
+	//integratedPositions = new Mike::IntegratorPosUI();
 
-	simpleTableWindow = new SimpleTableWindow(this, 3);
+	//simpleTableWindow = new SimpleTableWindow(this, 3);
 	////////////////////////////////////////////////////////////////////////
 
+	userInterface = new UserInterface(this, /*p,*/ starting_bid);
+	userInterface->m_window1->label("Positions");
 
-	userInterface->m_window1->label("Positions 1");
+
 	data = new Data(this, starting_bid);
 	m_pPriceControlUI = new PriceControlUI(this, starting_bid);
 	manualPositions = new MikePositionOrders("Manual", 1000000);
 	rePriceWidTable(userInterface);
+
+	//work in proggress below:
+	manualPositions2 = new MikePositionOrders("Manual2", 1000000);
+	userInterface2 = new UserInterface(this, starting_bid);
+	userInterface2->m_window1->label("Short Positions");
 	
 	//setting up previous static variables in Control::timeoutfunction(void*p)
 	timer.reset();
@@ -126,6 +133,10 @@ void Control::MainLoop()
 
 	manualPositions->checkFills(data->GetBidPrice(), data->GetAskPrice());
 	manualPositions->updateOpenOrdersByPrice();
+
+	manualPositions2->checkFills(data->GetBidPrice(), data->GetAskPrice());
+	manualPositions2->updateOpenOrdersByPrice();
+
 	
 	//2a check/print current position, profit/loss, etc
 	//3 make decisions	-- now just manual orders
@@ -153,21 +164,21 @@ void Control::MainLoop()
 	mainLoopfinished = true;//to ensure that the timeoutfunction does not call it again while it is executing
 }
 
-void Control::printCurrentAll()
+void Control::printCurrentAll(UserInterface * myInface, MikePositionOrders * myPosOrders)
 {
-	Data * myData = data;
-	UserInterface * myInterface = userInterface;
-	MikePositionOrders * myPositionOrders = manualPositions;
+	Data* myData = data;
+	UserInterface* myInterface = userInterface;
+	MikePositionOrders* myPositionOrders = manualPositions;
 
 	if (myData == nullptr) return;
 	if (myInterface == nullptr) return;
 	if (myPositionOrders == nullptr) return;
 
-	const MikePosVect *constPositions = myPositionOrders->GetMikePositions();
+	const MikePosVect * constPositions = myPositionOrders->GetMikePositions();
 
-	const std::vector<MikeOrdersAtPrice> *ordersAtPrice = myPositionOrders->GetOpOrdersbyPrice();
+	const std::vector<MikeOrdersAtPrice> * ordersAtPrice = myPositionOrders->GetOpOrdersbyPrice();
 
-	long 
+	long
 		totalOpenPos,
 		totalOpenPL,
 		totalClosedPL,
@@ -195,8 +206,15 @@ void Control::printCurrentAll()
 		constPositions,
 		ordersAtPrice,
 		averagePrice
-		);
+	);
+}
 
+void Control::printCurrentAll()
+{
+	UserInterface * myInterface = userInterface;
+	MikePositionOrders * myPositionOrders = manualPositions;
+
+	printCurrentAll(myInterface, myPositionOrders);
 }
 
 
@@ -211,8 +229,7 @@ void Control::printCurrentAll()
 //USERINTERFACE HANDLED HERE:
 //btn chooses what to do, UserInterface *p
 //provides the data, parameters optional
-void Control::CallbkUserInt(UserInterface * p, BtnPressed btn,
-	long parameter1,	long parameter2,	double parameter3)
+void Control::CallbkUserInt(UserInterface * p, BtnPressed btn)
 {
 
 	if (btn == BtnPressed::EXTRABTN)

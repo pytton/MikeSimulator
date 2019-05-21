@@ -68,6 +68,7 @@ public:
 	//THIS NEEDS TO BE DONE!!! CURRENTLY JUST COPY/PASTE FROM uSERINTERFACE!!!
 	//updates WidgetTable so that it shows prices around current bid/ask pulled from Data * data
 	//updates slider in UserInterface the same way
+	void printCurrentAll(UserInterface * myInface, MikePositionOrders * myPosOrders);
 	void printCurrentAll();
 	void printCurrentAll(long totalOpenPos,
 		long totalOpenPL,
@@ -88,10 +89,12 @@ public:
 	//THIS IS WHAT I NEED TO REFACTOR!!!
 	//CALLBACK FUNCTIONS FOR USERINTERFACE:
 	 void CallbkUserInt(UserInterface * p,
-		 BtnPressed btn,
-		 long longparameter1 = 0,
+		 BtnPressed btn /*, MikePositionOrders* manPos = manualPositions*/
+/*		 ,long longparameter1 = 0,
 		 long longparameter2 = 0,
-		 double parameter3 = 0.0);
+		 double parameter3 = 0.0*/);
+	 void CallbkUserInt(UserInterface* p,
+		 BtnPressed btn, MikePositionOrders* manPos);
 	 void CallbkUserInt(UserInterface * p,
 		 long price, 
 		 MikeOrderType OrderTypePressed,
@@ -119,7 +122,9 @@ public:
 	 PriceControlUI * GetPriceControlUI(){ return m_pPriceControlUI; }
 
 	//int GetCurrentBid();	//Used by UserInterface
+
 private:
+
 	//                            _                     
 	//   _ __ ___   ___ _ __ ___ | |__   ___ _ __ ___ _ 
 	//  | '_ ` _ \ / _ \ '_ ` _ \| '_ \ / _ \ '__/ __(_)
@@ -129,9 +134,11 @@ private:
 
 	MikeSimulator * ptr_to_mikesimulator;//ptr to class creating this one
 	UserInterface * userInterface;
+	UserInterface* userInterface2;
 	Data * data;
 	PriceControlUI * m_pPriceControlUI;
 	MikePositionOrders * manualPositions;
+	MikePositionOrders* manualPositions2;
 	SimpleTableWindow * simpleTableWindow;//testing new things
 
 	Mike::PosOrders * prototypePosOrders;//testing new positions class
@@ -176,8 +183,8 @@ public:
 	void callbkControlInterface(int);
 	/////////////////////////////////////////////////////////
 	//developing IntegratorPosUI:
-	UserInterface * userInterface2;
-	Mike::IntegratorPosUI * integratedPositions;
+//	UserInterface * userInterface2;
+//	Mike::IntegratorPosUI * integratedPositions;
 	/////////////////////////////////////////////////////////
 };
 
