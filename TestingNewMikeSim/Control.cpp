@@ -76,15 +76,23 @@ Control::Control(MikeSimulator * p, int starting_bid)
 	userInterface->m_window1->label("Positions");
 
 
+
+
 	data = new Data(this, starting_bid);
 	m_pPriceControlUI = new PriceControlUI(this, starting_bid);
 	manualPositions = new MikePositionOrders("Manual", 1000000);
+	userInterface->setTargetPositions(manualPositions);
 	rePriceWidTable(userInterface);
+
+
 
 	//work in proggress below:
 	manualPositions2 = new MikePositionOrders("Manual2", 1000000);
 	userInterface2 = new UserInterface(this, starting_bid);
 	userInterface2->m_window1->label("Short Positions");
+	userInterface2->setTargetPositions(manualPositions2);
+
+
 	
 	//setting up previous static variables in Control::timeoutfunction(void*p)
 	timer.reset();
@@ -143,11 +151,16 @@ void Control::MainLoop()
 	//4 display results/decisions
 //	data->PrintoutDataInConsole();
 	
-	printCurrentAll();
+
+	//TODO: May 2019 - will this work?
+	//printCurrentAll();
+	printCurrentAll(userInterface, manualPositions);
+	printCurrentAll(userInterface2, manualPositions2);
 	
 	//add other functions as needed
 	//5 send orders		-- for algos - nothing now
 	if (userInterface != nullptr) userInterface->PrintBidAsk(data->GetBidPrice(), data->GetAskPrice());
+	if (userInterface2 != nullptr) userInterface2->PrintBidAsk(data->GetBidPrice(), data->GetAskPrice());
 
 	//print out the size in bytes of positionbook for testing purposes:
 //	cout << sizeof(*(manualPositions->GetMikePositions())) << endl;
@@ -167,8 +180,8 @@ void Control::MainLoop()
 void Control::printCurrentAll(UserInterface * myInface, MikePositionOrders * myPosOrders)
 {
 	Data* myData = data;
-	UserInterface* myInterface = userInterface;
-	MikePositionOrders* myPositionOrders = manualPositions;
+	UserInterface* myInterface = myInface;
+	MikePositionOrders* myPositionOrders = myPosOrders;
 
 	if (myData == nullptr) return;
 	if (myInterface == nullptr) return;
@@ -289,35 +302,20 @@ SUGGESTION - put all of this in one function located in UserInterfaceLinked
 
 
 
-void Control::callbkWidTable(int row, int col, long price, MikeOrderType OrderTypePressed, int orderSize) {
-	using namespace std;
-
-	////PRICE GUARD - make sure orders executed at prices no better than bid/ask:
-	////This is old not needed anymore since CalcAvgPos was modified in PositionBook class
-	////if Order Type was BUY LMT and price was above current ask price, make the price equal to ask price:
-	//if (OrderTypePressed == BUYLMT) {
-	//	if (price > data->GetAskPrice()) price = data->GetAskPrice();	}
-	////if Order Type was BUY STP and price was below current ask price, make the price equal to ask price:
-	//if (OrderTypePressed == BUYSTP) {
-	//	if (price < data->GetAskPrice()) price = data->GetAskPrice();
-	//}
-	////if Order Type was SELL LMT and price was below current bid price, make the price equal to bid price:
-	//if (OrderTypePressed == SELLLMT) {
-	//	if (price < data->GetBidPrice()) price = data->GetBidPrice();
-	//}
-	////if Order Type was SELL STP and price was above current bid price, make the price equal to bid price:
-	//if (OrderTypePressed == SELLSTP) {
-	//	if (price > data->GetBidPrice()) price = data->GetBidPrice();
-	//}
-
+void Control::callbkWidTable(int row, int col, long price, MikeOrderType OrderTypePressed, int orderSize, MikePositionOrders* targetPos)
+{
+	MikePositionOrders* manualPositions = targetPos;
 	//send order to OrderBook if order type is not 'cancel order':	
 	if (OrderTypePressed != CXLORDER) { manualPositions->newOrder(OrderTypePressed, price, orderSize); }
 	if (OrderTypePressed == CXLORDER) { manualPositions->cancelAllOrdAtPrice(price); }
 	//check for fills:
 	manualPositions->checkFills(data->GetBidPrice(), data->GetAskPrice());
 	MainLoop();
-	//printCurrentAll();
+	
+
 }
+
+
 //PRICECONTROLUI
 void Control::CallbkPriceControlUI(PriceControlUI * p, BtnPressed btn, Fl_Widget * widgetPressed, int parameter1, int parameter2, double parameter3)
 {

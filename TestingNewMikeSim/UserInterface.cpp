@@ -403,7 +403,9 @@ void UserInterface::sendWidTableCallback(int rowPressed, int colPressed, long pr
 	using namespace std;
 	if (MIKE_COMMENTSON) { cout << "UserInterface::sendWidTableCallback called." << endl; }
 	if (NULL == GetControl() ) { cout << "Void Pointer in UserInterface::callbkWidTable" << endl; return; }
-	GetControl()->callbkWidTable(rowPressed, colPressed, price, tempOrderType, orderSize);
+	if (NULL != m_pTargetPositions) {
+		GetControl()->callbkWidTable(rowPressed, colPressed, price, tempOrderType, orderSize, m_pTargetPositions);
+	}
 }
 
 

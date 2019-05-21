@@ -100,7 +100,7 @@ public:
 		 MikeOrderType OrderTypePressed,
 		 long orderSize = 100);
 	 //CALLBACKS FROM WIDGETTABLE:
-	 void callbkWidTable(int row, int col, long price, MikeOrderType OrderTypePressed, int orderSize);
+	 void callbkWidTable(int row, int col, long price, MikeOrderType OrderTypePressed, int orderSize, MikePositionOrders * targetPos);
 	//CALLBACKS FROM PRICECONTROLUI:
 	 void CallbkPriceControlUI(PriceControlUI * p,
 		 BtnPressed btn,

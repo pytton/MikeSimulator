@@ -14,6 +14,7 @@ class MikeSimulator;
 class Control;
 class MikePosition;
 class MikeOrdersAtPrice;
+class MikePositionOrders;
 
 namespace Mike {
 	class WidTableBase;
@@ -30,7 +31,7 @@ class UserInterfaceBase : public FluidInterface
 //	friend class UserInterface;
 //	friend class ManualInterface;
 
-protected:
+public:
 	//                           _                       _                  
 	//    ___  ___   _ __   ___ | |_  _ __  _   _   ___ | |_  ___   _ __  _ 
 	//   / __|/ _ \ | '_ \ / __|| __|| '__|| | | | / __|| __|/ _ \ | '__|(_)
@@ -49,6 +50,7 @@ protected:
 	//   |___/                                                                              
 	virtual Control * GetControl() { return m_pControl; }
 	inline WidgetTable *GetTable() { return m_pTable; }
+	void setTargetPositions(MikePositionOrders* target) { m_pTargetPositions = target; }
 	//                _         _                      
 	//   _ __   _ __ (_) _ __  | |_  ___  _ __  ___  _ 
 	//  | '_ \ | '__|| || '_ \ | __|/ _ \| '__|/ __|(_)
@@ -79,6 +81,7 @@ protected:
 	WidgetTable *m_pTable;		//this replaces regular Fl_Table with my custom one	
 	Control * m_pControl;
 	Fl_Button* m_myExtraBtn;
+	MikePositionOrders* m_pTargetPositions = NULL;//this defines which positions orders are sent to
 	int bid_price = 20400;  //used to determine top row price in WidgetTable
 	//these two store the names of columns and buttons:
 	std::vector <std::string> col_names;
