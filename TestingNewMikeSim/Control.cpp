@@ -244,7 +244,7 @@ void Control::printCurrentAll()
 //provides the data, parameters optional
 void Control::CallbkUserInt(UserInterface * p, BtnPressed btn)
 {
-
+	MikePositionOrders * manualPositions = p->m_pTargetPositions;
 	if (btn == BtnPressed::EXTRABTN)
 	{
 	//	cout << "Extra button pressed - implement this!!!!" << endl;
